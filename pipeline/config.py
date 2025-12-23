@@ -1,47 +1,62 @@
 COMMODITIES = {
     "corn": {
-        "esr": "401",
-        "psd": "0440000",
-        "countries": [
-            ("MX", "Mexico"),
-            ("JA", "Japan"),
-            ("CO", "Colombia"),
-            ("KS", "South Korea"),
-            ("CA", "Canada"),
-            ("E4", "European Union"),
-            ("TW", "Taiwan"),
-        ],
+        "esr": {
+            "commodity": "401",
+            "countries": ["1220", "2", "2010", "2050"]
+        },
+        "psd": {
+            "commodity": "0440000",
+            "countries": ["MX", "E4", "JA", "CH"]
+        }
     },
+
     "soybeans": {
-        "esr": "801",
-        "psd": "0810000",
-        "countries": [
-            ("CH", "China"),
-            ("E4", "European Union"),
-            ("MX", "Mexico"),
-            ("ID", "Indonesia"),
-            ("EG", "Egypt"),
-            ("JA", "Japan"),
-            ("TW", "Taiwan"),
-        ],
+        "esr": {
+            "commodity": "801",
+            "countries": ["1220", "2", "2010", "2050"]
+        },
+        "psd": {
+            "commodity": "2222000", # Oilseed, Soybean
+            "countries": ["MX", "E4", "JA", "CH"]
+        }
     },
+
+    "soybean_meal": {
+        "esr": {
+            "commodity": "901", # Soybean cake & meal
+            "countries": ["1220", "2", "2010", "2050"]
+        },
+        "psd": {
+            "commodity": "0813100",
+            "countries": ["MX", "E4", "JA", "CH"]
+        }
+    },
+
+    "soybean_oil": {
+        "esr": {
+            "commodity": "902",
+            "countries": ["1220", "2", "2010", "2050"]
+        },
+        "psd": {
+            "commodity": "4232000",
+            "countries": ["MX", "E4", "JA", "CH"]
+        }
+    },
+
     "wheat": {
-        "esr": "107",
-        "psd": "0410000",
-        "countries": [
-            ("MX", "Mexico"),
-            ("RP", "Philippines"),
-            ("JA", "Japan"),
-            ("KS", "South Korea"),
-            ("CH", "China"),
-            ("TW", "Taiwan"),
-            ("E4", "European Union"),
-        ],
-    },
+        "esr": {
+            "commodity": "107",
+            "countries": ["1220", "2", "2010", "2050"]
+        },
+        "psd": {
+            "commodity": "0410000",
+            "countries": ["MX", "E4", "JA", "CH"]
+        }
+    }
 }
 
-ETHANOL_CONFIG = {
+ETHANOL = {
     "endpoint": "petroleum/sum/sndw/data",
     "product": "EPOOXE",
-    "areas": ["NUS", "NUS-Z00"],
+    "areas": ["NUS", "NUS-Z00"]
 }
