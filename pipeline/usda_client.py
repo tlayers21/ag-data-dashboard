@@ -10,7 +10,7 @@ class USDAClient:
     def _build_url(self, endpoint: str) -> str:
         return f"{USDA_BASE_URL}{endpoint}"
     
-    def _get(self, endpoint: str) -> Dict[str, any]
+    def _get(self, endpoint: str) -> Dict[str, any]:
         usda_url = self._build_url(endpoint)
         params = {"usda_api_key": self.usda_api_key}
 
