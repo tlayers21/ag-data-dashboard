@@ -1,5 +1,5 @@
 import requests
-from typing import Dict, Any
+from typing import Any
 
 USDA_BASE_URL = "https://api.fas.usda.gov"
 
@@ -10,9 +10,9 @@ class USDAClient:
     def _build_url(self, endpoint: str) -> str:
         return f"{USDA_BASE_URL}{endpoint}"
     
-    def _get(self, endpoint: str) -> Dict[str, Any]:
+    def _get(self, endpoint: str) -> dict[str, Any]:
         usda_url = self._build_url(endpoint)
-        params = {"usda_api_key": self.usda_api_key}
+        params = {"api_key": self.usda_api_key}
 
         response = requests.get(usda_url, params=params)
 
@@ -25,19 +25,21 @@ class USDAClient:
         except Exception:
             print("USDA Fetching Error: Response was not valid JSON")
             return {}
-        
-    def esr_all_countries(self, commodity_code: str, market_year: str) -> Dict[str, Any]:
+    
+    # ESR Methods
+    def esr_all_countries(self, commodity_code: str, market_year: str) -> dict[str, Any]:
         endpoint = f"/api/esr/exports/commodityCode/{commodity_code}/allCountries/marketYear/{market_year}"
         return self._get(endpoint)
     
-    def esr_country(self, commodity_code: str, country_code: str, market_year: str) -> Dict[str, Any]:
+    def esr_country(self, commodity_code: str, country_code: str, market_year: str) -> dict[str, Any]:
         endpoint = f"/api/esr/exports/commodityCode/{commodity_code}/countryCode/{country_code}/marketYear/{market_year}"
         return self._get(endpoint)
     
-    def psd_all_countries(self, commodity_code: str, market_year: str) -> Dict[str, Any]:
-        endpoint = f"/api/psd/commodity/{commodity_code}/country/all/year/{market_year}"
+    # PSD Methods
+    def psd_world(self, commodity_code: str, market_year: str) -> dict[str, Any]:
+        endpoint = f"/api/psd/commodity/{commodity_code}/world/year/{market_year}"
         return self._get(endpoint)
     
-    def psd_country(self, commodity_code: str, country_code: str, market_year: str) -> Dict[str, Any]:
+    def psd_country(self, commodity_code: str, country_code: str, market_year: str) -> dict[str, Any]:
         endpoint = f"/api/psd/commodity/{commodity_code}/country/{country_code}/year/{market_year}"
         return self._get(endpoint)
