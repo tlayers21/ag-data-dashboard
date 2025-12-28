@@ -52,5 +52,6 @@ def fetch_all_data(usda_api_key: str, esr_market_year: str, psd_market_year: str
             psd_country_data[country_code] = country_data
 
         total_data[name] = commodity_result
-    
+        
+    print("Done.")
     return total_data

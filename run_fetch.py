@@ -6,5 +6,3 @@ if __name__ == "__main__":
     PSD_MARKET_YEAR = "2025"
 
     data = fetch_all_data(usda_api_key=USDA_API_KEY, esr_market_year=ESR_MARKET_YEAR, psd_market_year=PSD_MARKET_YEAR)
-
-    print("Done.")
