@@ -13,6 +13,7 @@ ESR_RENAME_MAP = {
     "currentMYTotalCommitment": "current_marketing_year_total_commitment",
     "nextMYOutstandingSales": "next_marketing_year_outstanding_sales",
     "nextMYNetSales": "current_marketing_year_net_sales",
+    "unitId": "unit_id",
     "weekEndingDate": "week_ending_date"
 }
 
@@ -58,8 +59,7 @@ PSD_UNIT_MAP = {
     26: "Yield: Metric Tons per Hectare (MT/HA)"
 }
 
-def clean_esr_file(path: Path) -> pd.DataFrame:
-    
+def clean_esr_world_file(path: Path) -> pd.DataFrame:
     with open(path, "r") as file:
         raw_data = json.load(file)
     
@@ -67,4 +67,39 @@ def clean_esr_file(path: Path) -> pd.DataFrame:
 
     df = df.rename(columns=ESR_RENAME_MAP)
     df["week_ending_date"] = pd.to_datetime(df["week_ending_date"])
-    df.drop(columns=["unitId", inplace=True])
+
+    data_columns = [
+        "weekly_exports", "accumulated_exports", "outstanding_sales",
+        "gross_new_sales", "current_marketing_year_net_sales",
+        "current_marketing_year_total_commitment",
+        "next_marketing_year_outstanding_sales",
+        "current_marketing_year_net_sales"
+    ]
+
+    aggregated_data = df.groupby("week_ending_date")[data_columns].sum().reset_index()
+    aggregated_data["unit"] = "metric_tons"
+
+    return aggregated_data
+
+def clean_esr_country_file(path: Path, country_name: str) -> pd.DataFrame:
+    df = clean_esr_world_file(path)
+    df["country"] = country_name
+    return df
+
+def clean_psd_world_file(path: Path) -> pd.DataFrame:
+    with open(path, "r") as file:
+        raw_data = json.load(file)
+    
+    df = pd.DataFrame(raw_data)
+    df = df.rename(columns=PSD_RENAME_MAP)
+
+    df["unit"] = df["unit_id"].map(PSD_ATTRIBUTE_MAP)
+    df["attribute"] = df["attribute_id"].map(PSD_ATTRIBUTE_MAP)
+    df = df.drop(columns=["unit_id", "attribute_id"])
+
+    return df
+
+def clean_psd_country_file(path: Path, country_name: str) -> pd.DataFrame:
+    df = clean_psd_world_file(path)
+    df["country"] = country_name
+    return df
