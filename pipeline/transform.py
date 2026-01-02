@@ -13,7 +13,6 @@ ESR_RENAME_MAP = {
     "currentMYTotalCommitment": "current_marketing_year_total_commitment",
     "nextMYOutstandingSales": "next_marketing_year_outstanding_sales",
     "nextMYNetSales": "current_marketing_year_net_sales",
-    "unitId": "unit_id",
     "weekEndingDate": "week_ending_date"
 }
 
@@ -28,7 +27,7 @@ PSD_RENAME_MAP = {
     "value": "amount"
 }
 
-PSD_ATTRIBUTE_IDS = {
+PSD_ATTRIBUTE_MAP = {
     4: "Area Harvested",
     7: "Crush",
     20: "Beginning Stocks",
@@ -52,13 +51,20 @@ PSD_ATTRIBUTE_IDS = {
     194: "SME"
 }
 
+PSD_UNIT_MAP = {
+    4: "1000 Hectares (HA)",
+    8: "1000 Metric Tons (MT)",
+    23: "Percentage (%)",
+    26: "Yield: Metric Tons per Hectare (MT/HA)"
+}
+
 def clean_esr_file(path: Path) -> pd.DataFrame:
     
     with open(path, "r") as file:
-        raw = json.load(file)
+        raw_data = json.load(file)
     
-    df = pd.DataFrame(raw)
+    df = pd.DataFrame(raw_data)
 
-    df = df.rename(columns={
-        "week"
-    })
+    df = df.rename(columns=ESR_RENAME_MAP)
+    df["week_ending_date"] = pd.to_datetime(df["week_ending_date"])
+    df.drop(columns=["unitId", inplace=True])
