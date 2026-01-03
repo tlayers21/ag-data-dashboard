@@ -11,6 +11,7 @@ def fetch_all_data(usda_api_key: str, esr_market_year: str, psd_market_year: str
     print("==========\nStarting Data Fetching Process...")
     for name, cfg in COMMODITIES.items():
         print(f"Fetching: {name.capitalize()}")
+        underscore_commodity_name = name.replace(" ", "_")
         commodity_result = {}
 
         ## ESR
@@ -19,7 +20,7 @@ def fetch_all_data(usda_api_key: str, esr_market_year: str, psd_market_year: str
 
         # For to all countries
         esr_all_data = usda_data.esr_all_countries(esr_code, esr_market_year)
-        with open(raw_data_path(f"{name}_esr_all_{esr_market_year}.json"), "w") as file:
+        with open(raw_data_path(f"{underscore_commodity_name}_esr_all_{esr_market_year}.json"), "w") as file:
             json.dump(esr_all_data, file, indent=2)
         commodity_result["esr_all"] = esr_all_data
 
@@ -28,9 +29,10 @@ def fetch_all_data(usda_api_key: str, esr_market_year: str, psd_market_year: str
         for country_code in esr_countries:
             country_data = usda_data.esr_country(esr_code, country_code, esr_market_year)
             country_name = ESR_COUNTRY_NAMES.get(country_code, country_code)
+            underscore_country_name = country_name.replace(" ", "_")
 
             if country_data:
-                with open(raw_data_path(f"{name}_esr_to_{country_name}_{esr_market_year}.json"), "w") as file:
+                with open(raw_data_path(f"{underscore_commodity_name}_esr_to_{underscore_country_name}_{esr_market_year}.json"), "w") as file:
                     json.dump(country_data, file, indent=2)
                 esr_country_data[country_code] = country_data
             else:
@@ -42,7 +44,7 @@ def fetch_all_data(usda_api_key: str, esr_market_year: str, psd_market_year: str
 
         # For world data
         psd_world_data = usda_data.psd_world(psd_code, psd_market_year)
-        with open(raw_data_path(f"{name}_psd_world_{psd_market_year}.json"), "w") as file:
+        with open(raw_data_path(f"{underscore_commodity_name}_psd_world_{psd_market_year}.json"), "w") as file:
             json.dump(psd_world_data, file, indent=2)
         commodity_result["psd_world"] = psd_world_data
 
@@ -51,7 +53,9 @@ def fetch_all_data(usda_api_key: str, esr_market_year: str, psd_market_year: str
         for country_code in psd_countries:
             country_data = usda_data.psd_country(psd_code, country_code, psd_market_year)
             country_name = PSD_COUNTRY_NAMES.get(country_code, country_code)
-            with open(raw_data_path(f"{name}_psd_{country_name}_{psd_market_year}.json"), "w") as file:
+            underscore_country_name = country_name.replace(" ", "_")
+
+            with open(raw_data_path(f"{underscore_commodity_name}_psd_{underscore_country_name}_{psd_market_year}.json"), "w") as file:
                 json.dump(country_data, file, indent=2)
             psd_country_data[country_code] = country_data
 

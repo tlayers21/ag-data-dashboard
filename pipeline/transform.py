@@ -4,60 +4,60 @@ from pathlib import Path
 from .config import COMMODITIES
 
 ESR_RENAME_MAP = {
-    "commodityCode": "commodity_code",
-    "countryCode": "country_code",
-    "weeklyExports": "weekly_exports",
-    "accumulatedExports": "accumulated_exports",
-    "outstandingSales": "outstanding_sales",
-    "grossNewSales": "gross_new_sales",
-    "currentMYNetSales": "current_marketing_year_net_sales",
-    "currentMYTotalCommitment": "current_marketing_year_total_commitment",
-    "nextMYOutstandingSales": "next_marketing_year_outstanding_sales",
-    "nextMYNetSales": "current_marketing_year_net_sales",
-    "unitId": "unit_id",
-    "weekEndingDate": "week_ending_date"
+    "commodityCode": "commodity code",
+    "countryCode": "country code",
+    "weeklyExports": "weekly exports",
+    "accumulatedExports": "accumulated exports",
+    "outstandingSales": "outstanding sales",
+    "grossNewSales": "gross new sales",
+    "currentMYNetSales": "current marketing year net sales",
+    "currentMYTotalCommitment": "current marketing year total commitment",
+    "nextMYOutstandingSales": "next marketing year outstanding sales",
+    "nextMYNetSales": "next marketing year net sales",
+    "unitId": "unit id",
+    "weekEndingDate": "week ending date"
 }
 
 PSD_RENAME_MAP = {
-    "commodityCode": "commodity_code",
-    "countryCode": "country_code",
-    "marketYear": "market_year",
-    "calendarYear": "calendar_year",
-    "month": "calendar_month",
-    "attributeId": "attribute_id",
-    "unitId": "unit_id",
+    "commodityCode": "commodity code",
+    "countryCode": "country code",
+    "marketYear": "market year",
+    "calendarYear": "calendar year",
+    "month": "calendar month",
+    "attributeId": "attribute id",
+    "unitId": "unit id",
     "value": "amount"
 }
 
 PSD_ATTRIBUTE_MAP = {
-    4: "Area Harvested",
-    7: "Crush",
-    20: "Beginning Stocks",
-    28: "Production",
-    57: "Imports",
-    81: "TY Imports",
-    84: "TY Imp. from U.S.",
-    86: "Total Supply",
-    88: "Exports",
-    113: "TY Exports",
-    125: "Domestic Consumption",
-    130: "Feed Dom. Consumption",
-    140: "Industrial Dom. Cons.",
-    149: "Food Use Dom. Cons.",
-    161: "Feed Waste Dom. Cons.",
-    176: "Ending Stocks",
-    178: "Total Distribution",
-    181: "Extr. Rate",
-    184: "Yield",
-    192: "FSI Consumption",
-    194: "SME"
+    4: "area harvested",
+    7: "crush",
+    20: "beginning stocks",
+    28: "production",
+    57: "imports",
+    81: "trade year imports",
+    84: "trade year imports from u.s.",
+    86: "total supply",
+    88: "exports",
+    113: "trade year exports",
+    125: "domestic consumption",
+    130: "feed domestic consumption",
+    140: "industrial domestic consumption",
+    149: "food use domestic consumption",
+    161: "feed waste domestic consumption",
+    176: "ending stocks",
+    178: "total distribution",
+    181: "extraction rate",
+    184: "yield",
+    192: "food, seed, and industrial consumption",
+    194: "soybean meal equivalent"
 }
 
 PSD_UNIT_MAP = {
-    4: "1000 Hectares (HA)",
-    8: "1000 Metric Tons (MT)",
-    23: "Percentage (%)",
-    26: "Yield: Metric Tons per Hectare (MT/HA)"
+    4: "1000 hectares",
+    8: "1000 metric tons",
+    23: "percentage",
+    26: "yield (metric tons per hectare)"
 }
 
 ESR_COMMODITY_LOOKUP = {data["esr"]["commodity"]: commodity for commodity, data in COMMODITIES.items()}
@@ -70,28 +70,59 @@ def clean_esr_world_file(path: Path) -> pd.DataFrame:
     df = pd.DataFrame(raw_data)
 
     df = df.rename(columns=ESR_RENAME_MAP)
-    df["week_ending_date"] = pd.to_datetime(df["week_ending_date"])
-    commodity_code = df["commodity_code"].iloc[0]
+    df["week ending date"] = pd.to_datetime(df["week ending date"])
+    commodity_code = str(df["commodity code"].iloc[0])
     commodity_name = ESR_COMMODITY_LOOKUP.get(commodity_code, "unknown")
 
     data_columns = [
-        "weekly_exports", "accumulated_exports", "outstanding_sales",
-        "gross_new_sales", "current_marketing_year_net_sales",
-        "current_marketing_year_total_commitment",
-        "next_marketing_year_outstanding_sales",
-        "current_marketing_year_net_sales"
+        "weekly exports", "accumulated exports", "outstanding sales",
+        "gross new sales", "current marketing year net sales",
+        "current marketing year total commitment",
+        "next marketing year outstanding sales",
+        "next marketing year net sales"
     ]
 
-    aggregated_data = df.groupby("week_ending_date")[data_columns].sum().reset_index()
-    aggregated_data["unit"] = "metric_tons"
-    aggregated_data["commodity_name"] = commodity_name
+    aggregated_data = df.groupby("week ending date")[data_columns].sum().reset_index()
+    aggregated_data["unit"] = "metric tons"
+    aggregated_data["commodity"] = commodity_name
+    
 
-    return aggregated_data
+    column_order = [
+        "week ending date",
+        "commodity",
+        "unit",
+        "weekly exports",
+        "accumulated exports",
+        "outstanding sales",
+        "gross new sales",
+        "current marketing year net sales",
+        "current marketing year total commitment",
+        "next marketing year outstanding sales",
+        "next marketing year net sales"
+    ]
+
+    return aggregated_data[column_order]
 
 def clean_esr_country_file(path: Path, country_name: str) -> pd.DataFrame:
     df = clean_esr_world_file(path)
     df["country"] = country_name
-    return df
+
+    column_order = [
+        "week ending date",
+        "commodity",
+        "country",
+        "unit",
+        "weekly exports",
+        "accumulated exports",
+        "outstanding sales",
+        "gross new sales",
+        "current marketing year net sales",
+        "current marketing year total commitment",
+        "next marketing year outstanding sales",
+        "next marketing year net sales"
+    ]
+
+    return df[column_order]
 
 def clean_psd_world_file(path: Path) -> pd.DataFrame:
     with open(path, "r") as file:
@@ -100,16 +131,26 @@ def clean_psd_world_file(path: Path) -> pd.DataFrame:
     df = pd.DataFrame(raw_data)
 
     df = df.rename(columns=PSD_RENAME_MAP)
-    commodity_code = df["commodity_code"].iloc[0]
+    commodity_code = str(df["commodity code"].iloc[0])
     commodity_name = PSD_COMMODITY_LOOKUP.get(commodity_code, "unknown")
 
 
-    df["unit"] = df["unit_id"].map(PSD_UNIT_MAP)
-    df["attribute"] = df["attribute_id"].map(PSD_ATTRIBUTE_MAP)
-    df = df.drop(columns=["unit_id", "attribute_id"])
-    df["commodity_name"] = commodity_name
+    df["unit"] = df["unit id"].map(PSD_UNIT_MAP)
+    df["attribute"] = df["attribute id"].map(PSD_ATTRIBUTE_MAP)
+    df = df.drop(columns=["commodity code", "country code", "unit id", "attribute id"])
+    df["commodity"] = commodity_name
 
-    return df
+    column_order = [
+        "market year",
+        "calendar year",
+        "calendar month",
+        "commodity",
+        "attribute",
+        "unit",
+        "amount"
+    ]
+
+    return df[column_order]
 
 def clean_psd_country_file(path: Path, country_name: str) -> pd.DataFrame:
     df = clean_psd_world_file(path)

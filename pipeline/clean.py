@@ -35,7 +35,9 @@ def clean_all_esr() -> None:
     for file in country_files:
         parts = file.stem.split("_")
         to_index = parts.index("to")
-        country = parts[to_index + 1]
+        # Accounts for issue with "european_union in file name"
+        country_parts = parts[to_index + 1: -1]
+        country = "_".join(country_parts).replace("_", " ")
         cleaned_df = clean_esr_country_file(file, country)
         country_dfs.append(cleaned_df)
     
