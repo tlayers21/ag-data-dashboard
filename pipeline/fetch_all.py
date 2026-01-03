@@ -8,7 +8,7 @@ def fetch_all_data(usda_api_key: str, esr_market_year: str, psd_market_year: str
 
     total_data = {}
 
-    print("Starting Data Fetching Process...")
+    print("==========\nStarting Data Fetching Process...")
     for name, cfg in COMMODITIES.items():
         print(f"Fetching: {name.capitalize()}")
         commodity_result = {}
@@ -28,9 +28,13 @@ def fetch_all_data(usda_api_key: str, esr_market_year: str, psd_market_year: str
         for country_code in esr_countries:
             country_data = usda_data.esr_country(esr_code, country_code, esr_market_year)
             country_name = ESR_COUNTRY_NAMES.get(country_code, country_code)
-            with open(raw_data_path(f"{name}_esr_to_{country_name}_{esr_market_year}.json"), "w") as file:
-                json.dump(country_data, file, indent=2)
-            esr_country_data[country_code] = country_data
+
+            if country_data:
+                with open(raw_data_path(f"{name}_esr_to_{country_name}_{esr_market_year}.json"), "w") as file:
+                    json.dump(country_data, file, indent=2)
+                esr_country_data[country_code] = country_data
+            else:
+                print(f"----------\nWARNING: No ESR country data for {name} to {country_name.capitalize()}\n----------")
 
         ## PSD
         psd_code = cfg["psd"]["commodity"]
@@ -53,5 +57,5 @@ def fetch_all_data(usda_api_key: str, esr_market_year: str, psd_market_year: str
 
         total_data[name] = commodity_result
         
-    print("Done.")
+    print("Done.\n==========")
     return total_data

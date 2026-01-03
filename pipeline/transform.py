@@ -1,14 +1,15 @@
 import json
 import pandas as pd
 from pathlib import Path
+from .config import COMMODITIES
 
 ESR_RENAME_MAP = {
     "commodityCode": "commodity_code",
     "countryCode": "country_code",
     "weeklyExports": "weekly_exports",
     "accumulatedExports": "accumulated_exports",
-    "outstanding_sales": "outstanding_sales",
-    "GrossNewSales": "gross_new_sales",
+    "outstandingSales": "outstanding_sales",
+    "grossNewSales": "gross_new_sales",
     "currentMYNetSales": "current_marketing_year_net_sales",
     "currentMYTotalCommitment": "current_marketing_year_total_commitment",
     "nextMYOutstandingSales": "next_marketing_year_outstanding_sales",
@@ -59,6 +60,9 @@ PSD_UNIT_MAP = {
     26: "Yield: Metric Tons per Hectare (MT/HA)"
 }
 
+ESR_COMMODITY_LOOKUP = {data["esr"]["commodity"]: commodity for commodity, data in COMMODITIES.items()}
+PSD_COMMODITY_LOOKUP = {data["psd"]["commodity"]: commodity for commodity, data in COMMODITIES.items()}
+
 def clean_esr_world_file(path: Path) -> pd.DataFrame:
     with open(path, "r") as file:
         raw_data = json.load(file)
@@ -67,6 +71,8 @@ def clean_esr_world_file(path: Path) -> pd.DataFrame:
 
     df = df.rename(columns=ESR_RENAME_MAP)
     df["week_ending_date"] = pd.to_datetime(df["week_ending_date"])
+    commodity_code = df["commodity_code"].iloc[0]
+    commodity_name = ESR_COMMODITY_LOOKUP.get(commodity_code, "unknown")
 
     data_columns = [
         "weekly_exports", "accumulated_exports", "outstanding_sales",
@@ -78,6 +84,7 @@ def clean_esr_world_file(path: Path) -> pd.DataFrame:
 
     aggregated_data = df.groupby("week_ending_date")[data_columns].sum().reset_index()
     aggregated_data["unit"] = "metric_tons"
+    aggregated_data["commodity_name"] = commodity_name
 
     return aggregated_data
 
@@ -91,11 +98,16 @@ def clean_psd_world_file(path: Path) -> pd.DataFrame:
         raw_data = json.load(file)
     
     df = pd.DataFrame(raw_data)
-    df = df.rename(columns=PSD_RENAME_MAP)
 
-    df["unit"] = df["unit_id"].map(PSD_ATTRIBUTE_MAP)
+    df = df.rename(columns=PSD_RENAME_MAP)
+    commodity_code = df["commodity_code"].iloc[0]
+    commodity_name = PSD_COMMODITY_LOOKUP.get(commodity_code, "unknown")
+
+
+    df["unit"] = df["unit_id"].map(PSD_UNIT_MAP)
     df["attribute"] = df["attribute_id"].map(PSD_ATTRIBUTE_MAP)
     df = df.drop(columns=["unit_id", "attribute_id"])
+    df["commodity_name"] = commodity_name
 
     return df
 

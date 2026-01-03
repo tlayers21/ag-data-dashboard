@@ -1,0 +1,351 @@
+commodity_code,country_code,market_year,calendar_year,calendar_month,amount,unit,attribute,commodity_name,country
+0440000,CH,2025,2025,12,44300.0,1000 Hectares (HA),Area Harvested,corn,china
+0440000,CH,2025,2025,12,191928.0,1000 Metric Tons (MT),Beginning Stocks,corn,china
+0440000,CH,2025,2025,12,295000.0,1000 Metric Tons (MT),Production,corn,china
+0440000,CH,2025,2025,12,8000.0,1000 Metric Tons (MT),Imports,corn,china
+0440000,CH,2025,2025,12,8000.0,1000 Metric Tons (MT),TY Imports,corn,china
+0440000,CH,2025,2025,12,0.0,1000 Metric Tons (MT),TY Imp. from U.S.,corn,china
+0440000,CH,2025,2025,12,494928.0,1000 Metric Tons (MT),Total Supply,corn,china
+0440000,CH,2025,2025,12,20.0,1000 Metric Tons (MT),Exports,corn,china
+0440000,CH,2025,2025,12,20.0,1000 Metric Tons (MT),TY Exports,corn,china
+0440000,CH,2025,2025,12,239000.0,1000 Metric Tons (MT),Feed Dom. Consumption,corn,china
+0440000,CH,2025,2025,12,82000.0,1000 Metric Tons (MT),FSI Consumption,corn,china
+0440000,CH,2025,2025,12,321000.0,1000 Metric Tons (MT),Domestic Consumption,corn,china
+0440000,CH,2025,2025,12,173908.0,1000 Metric Tons (MT),Ending Stocks,corn,china
+0440000,CH,2025,2025,12,494928.0,1000 Metric Tons (MT),Total Distribution,corn,china
+0440000,CH,2025,2025,12,6.6591,Yield: Metric Tons per Hectare (MT/HA),Yield,corn,china
+4232000,CH,2025,2025,12,108000.0,1000 Metric Tons (MT),Crush,soybean_oil,china
+4232000,CH,2025,2025,12,0.19,Percentage (%),Extr. Rate,soybean_oil,china
+4232000,CH,2025,2025,12,776.0,1000 Metric Tons (MT),Beginning Stocks,soybean_oil,china
+4232000,CH,2025,2025,12,20520.0,1000 Metric Tons (MT),Production,soybean_oil,china
+4232000,CH,2025,2025,12,250.0,1000 Metric Tons (MT),Imports,soybean_oil,china
+4232000,CH,2025,2025,12,21546.0,1000 Metric Tons (MT),Total Supply,soybean_oil,china
+4232000,CH,2025,2025,12,250.0,1000 Metric Tons (MT),Exports,soybean_oil,china
+4232000,CH,2025,2025,12,0.0,1000 Metric Tons (MT),Industrial Dom. Cons.,soybean_oil,china
+4232000,CH,2025,2025,12,20500.0,1000 Metric Tons (MT),Food Use Dom. Cons.,soybean_oil,china
+4232000,CH,2025,2025,12,0.0,1000 Metric Tons (MT),Feed Waste Dom. Cons.,soybean_oil,china
+4232000,CH,2025,2025,12,20500.0,1000 Metric Tons (MT),Domestic Consumption,soybean_oil,china
+4232000,CH,2025,2025,12,796.0,1000 Metric Tons (MT),Ending Stocks,soybean_oil,china
+4232000,CH,2025,2025,12,21546.0,1000 Metric Tons (MT),Total Distribution,soybean_oil,china
+0813100,MX,2025,2025,12,6800.0,1000 Metric Tons (MT),Crush,soybean_meal,mexico
+0813100,MX,2025,2025,12,0.79,Percentage (%),Extr. Rate,soybean_meal,mexico
+0813100,MX,2025,2025,12,307.0,1000 Metric Tons (MT),Beginning Stocks,soybean_meal,mexico
+0813100,MX,2025,2025,12,5372.0,1000 Metric Tons (MT),Production,soybean_meal,mexico
+0813100,MX,2025,2025,12,2550.0,1000 Metric Tons (MT),Imports,soybean_meal,mexico
+0813100,MX,2025,2025,12,8229.0,1000 Metric Tons (MT),Total Supply,soybean_meal,mexico
+0813100,MX,2025,2025,12,1.0,1000 Metric Tons (MT),Exports,soybean_meal,mexico
+0813100,MX,2025,2025,12,0.0,1000 Metric Tons (MT),Industrial Dom. Cons.,soybean_meal,mexico
+0813100,MX,2025,2025,12,50.0,1000 Metric Tons (MT),Food Use Dom. Cons.,soybean_meal,mexico
+0813100,MX,2025,2025,12,7850.0,1000 Metric Tons (MT),Feed Waste Dom. Cons.,soybean_meal,mexico
+0813100,MX,2025,2025,12,7900.0,1000 Metric Tons (MT),Domestic Consumption,soybean_meal,mexico
+0813100,MX,2025,2025,12,328.0,1000 Metric Tons (MT),Ending Stocks,soybean_meal,mexico
+0813100,MX,2025,2025,12,8229.0,1000 Metric Tons (MT),Total Distribution,soybean_meal,mexico
+0813100,MX,2025,2025,12,7850.0,1000 Metric Tons (MT),SME,soybean_meal,mexico
+2222000,E4,2025,2025,12,1070.0,1000 Hectares (HA),Area Harvested,soybeans,european
+2222000,E4,2025,2025,12,1602.0,1000 Metric Tons (MT),Beginning Stocks,soybeans,european
+2222000,E4,2025,2025,12,2785.0,1000 Metric Tons (MT),Production,soybeans,european
+2222000,E4,2025,2025,12,14300.0,1000 Metric Tons (MT),Imports,soybeans,european
+2222000,E4,2025,2025,12,18687.0,1000 Metric Tons (MT),Total Supply,soybeans,european
+2222000,E4,2025,2025,12,300.0,1000 Metric Tons (MT),Exports,soybeans,european
+2222000,E4,2025,2025,12,15300.0,1000 Metric Tons (MT),Crush,soybeans,european
+2222000,E4,2025,2025,12,220.0,1000 Metric Tons (MT),Food Use Dom. Cons.,soybeans,european
+2222000,E4,2025,2025,12,1300.0,1000 Metric Tons (MT),Feed Waste Dom. Cons.,soybeans,european
+2222000,E4,2025,2025,12,16820.0,1000 Metric Tons (MT),Domestic Consumption,soybeans,european
+2222000,E4,2025,2025,12,1567.0,1000 Metric Tons (MT),Ending Stocks,soybeans,european
+2222000,E4,2025,2025,12,18687.0,1000 Metric Tons (MT),Total Distribution,soybeans,european
+2222000,E4,2025,2025,12,2.6028,Yield: Metric Tons per Hectare (MT/HA),Yield,soybeans,european
+0813100,JA,2025,2025,12,2350.0,1000 Metric Tons (MT),Crush,soybean_meal,japan
+0813100,JA,2025,2025,12,0.7511,Percentage (%),Extr. Rate,soybean_meal,japan
+0813100,JA,2025,2025,12,116.0,1000 Metric Tons (MT),Beginning Stocks,soybean_meal,japan
+0813100,JA,2025,2025,12,1765.0,1000 Metric Tons (MT),Production,soybean_meal,japan
+0813100,JA,2025,2025,12,1700.0,1000 Metric Tons (MT),Imports,soybean_meal,japan
+0813100,JA,2025,2025,12,3581.0,1000 Metric Tons (MT),Total Supply,soybean_meal,japan
+0813100,JA,2025,2025,12,1.0,1000 Metric Tons (MT),Exports,soybean_meal,japan
+0813100,JA,2025,2025,12,210.0,1000 Metric Tons (MT),Industrial Dom. Cons.,soybean_meal,japan
+0813100,JA,2025,2025,12,200.0,1000 Metric Tons (MT),Food Use Dom. Cons.,soybean_meal,japan
+0813100,JA,2025,2025,12,3050.0,1000 Metric Tons (MT),Feed Waste Dom. Cons.,soybean_meal,japan
+0813100,JA,2025,2025,12,3460.0,1000 Metric Tons (MT),Domestic Consumption,soybean_meal,japan
+0813100,JA,2025,2025,12,120.0,1000 Metric Tons (MT),Ending Stocks,soybean_meal,japan
+0813100,JA,2025,2025,12,3581.0,1000 Metric Tons (MT),Total Distribution,soybean_meal,japan
+0813100,JA,2025,2025,12,3050.0,1000 Metric Tons (MT),SME,soybean_meal,japan
+0813100,E4,2025,2025,12,15300.0,1000 Metric Tons (MT),Crush,soybean_meal,european
+0813100,E4,2025,2025,12,0.79,Percentage (%),Extr. Rate,soybean_meal,european
+0813100,E4,2025,2025,12,1751.0,1000 Metric Tons (MT),Beginning Stocks,soybean_meal,european
+0813100,E4,2025,2025,12,12087.0,1000 Metric Tons (MT),Production,soybean_meal,european
+0813100,E4,2025,2025,12,17550.0,1000 Metric Tons (MT),Imports,soybean_meal,european
+0813100,E4,2025,2025,12,31388.0,1000 Metric Tons (MT),Total Supply,soybean_meal,european
+0813100,E4,2025,2025,12,600.0,1000 Metric Tons (MT),Exports,soybean_meal,european
+0813100,E4,2025,2025,12,10.0,1000 Metric Tons (MT),Industrial Dom. Cons.,soybean_meal,european
+0813100,E4,2025,2025,12,32.0,1000 Metric Tons (MT),Food Use Dom. Cons.,soybean_meal,european
+0813100,E4,2025,2025,12,29900.0,1000 Metric Tons (MT),Feed Waste Dom. Cons.,soybean_meal,european
+0813100,E4,2025,2025,12,29942.0,1000 Metric Tons (MT),Domestic Consumption,soybean_meal,european
+0813100,E4,2025,2025,12,846.0,1000 Metric Tons (MT),Ending Stocks,soybean_meal,european
+0813100,E4,2025,2025,12,31388.0,1000 Metric Tons (MT),Total Distribution,soybean_meal,european
+0813100,E4,2025,2025,12,29900.0,1000 Metric Tons (MT),SME,soybean_meal,european
+0440000,E4,2025,2025,12,8150.0,1000 Hectares (HA),Area Harvested,corn,european
+0440000,E4,2025,2025,12,6135.0,1000 Metric Tons (MT),Beginning Stocks,corn,european
+0440000,E4,2025,2025,12,56750.0,1000 Metric Tons (MT),Production,corn,european
+0440000,E4,2025,2025,12,20000.0,1000 Metric Tons (MT),Imports,corn,european
+0440000,E4,2025,2025,12,20000.0,1000 Metric Tons (MT),TY Imports,corn,european
+0440000,E4,2025,2025,12,0.0,1000 Metric Tons (MT),TY Imp. from U.S.,corn,european
+0440000,E4,2025,2025,12,82885.0,1000 Metric Tons (MT),Total Supply,corn,european
+0440000,E4,2025,2025,12,1800.0,1000 Metric Tons (MT),Exports,corn,european
+0440000,E4,2025,2025,12,1800.0,1000 Metric Tons (MT),TY Exports,corn,european
+0440000,E4,2025,2025,12,55200.0,1000 Metric Tons (MT),Feed Dom. Consumption,corn,european
+0440000,E4,2025,2025,12,20100.0,1000 Metric Tons (MT),FSI Consumption,corn,european
+0440000,E4,2025,2025,12,75300.0,1000 Metric Tons (MT),Domestic Consumption,corn,european
+0440000,E4,2025,2025,12,5785.0,1000 Metric Tons (MT),Ending Stocks,corn,european
+0440000,E4,2025,2025,12,82885.0,1000 Metric Tons (MT),Total Distribution,corn,european
+0440000,E4,2025,2025,12,6.9632,Yield: Metric Tons per Hectare (MT/HA),Yield,corn,european
+0813100,CH,2025,2025,12,108000.0,1000 Metric Tons (MT),Crush,soybean_meal,china
+0813100,CH,2025,2025,12,0.792,Percentage (%),Extr. Rate,soybean_meal,china
+0813100,CH,2025,2025,12,943.0,1000 Metric Tons (MT),Beginning Stocks,soybean_meal,china
+0813100,CH,2025,2025,12,85536.0,1000 Metric Tons (MT),Production,soybean_meal,china
+0813100,CH,2025,2025,12,50.0,1000 Metric Tons (MT),Imports,soybean_meal,china
+0813100,CH,2025,2025,12,86529.0,1000 Metric Tons (MT),Total Supply,soybean_meal,china
+0813100,CH,2025,2025,12,1200.0,1000 Metric Tons (MT),Exports,soybean_meal,china
+0813100,CH,2025,2025,12,1150.0,1000 Metric Tons (MT),Industrial Dom. Cons.,soybean_meal,china
+0813100,CH,2025,2025,12,0.0,1000 Metric Tons (MT),Food Use Dom. Cons.,soybean_meal,china
+0813100,CH,2025,2025,12,83000.0,1000 Metric Tons (MT),Feed Waste Dom. Cons.,soybean_meal,china
+0813100,CH,2025,2025,12,84150.0,1000 Metric Tons (MT),Domestic Consumption,soybean_meal,china
+0813100,CH,2025,2025,12,1179.0,1000 Metric Tons (MT),Ending Stocks,soybean_meal,china
+0813100,CH,2025,2025,12,86529.0,1000 Metric Tons (MT),Total Distribution,soybean_meal,china
+0813100,CH,2025,2025,12,83000.0,1000 Metric Tons (MT),SME,soybean_meal,china
+0410000,MX,2025,2025,12,320.0,1000 Hectares (HA),Area Harvested,wheat,mexico
+0410000,MX,2025,2025,12,855.0,1000 Metric Tons (MT),Beginning Stocks,wheat,mexico
+0410000,MX,2025,2025,12,1750.0,1000 Metric Tons (MT),Production,wheat,mexico
+0410000,MX,2025,2025,12,6700.0,1000 Metric Tons (MT),Imports,wheat,mexico
+0410000,MX,2025,2025,12,6700.0,1000 Metric Tons (MT),TY Imports,wheat,mexico
+0410000,MX,2025,2025,12,0.0,1000 Metric Tons (MT),TY Imp. from U.S.,wheat,mexico
+0410000,MX,2025,2025,12,9305.0,1000 Metric Tons (MT),Total Supply,wheat,mexico
+0410000,MX,2025,2025,12,100.0,1000 Metric Tons (MT),Exports,wheat,mexico
+0410000,MX,2025,2025,12,100.0,1000 Metric Tons (MT),TY Exports,wheat,mexico
+0410000,MX,2025,2025,12,350.0,1000 Metric Tons (MT),Feed Dom. Consumption,wheat,mexico
+0410000,MX,2025,2025,12,8000.0,1000 Metric Tons (MT),FSI Consumption,wheat,mexico
+0410000,MX,2025,2025,12,8350.0,1000 Metric Tons (MT),Domestic Consumption,wheat,mexico
+0410000,MX,2025,2025,12,855.0,1000 Metric Tons (MT),Ending Stocks,wheat,mexico
+0410000,MX,2025,2025,12,9305.0,1000 Metric Tons (MT),Total Distribution,wheat,mexico
+0410000,MX,2025,2025,12,5.4688,Yield: Metric Tons per Hectare (MT/HA),Yield,wheat,mexico
+4232000,US,2025,2025,12,69536.0,1000 Metric Tons (MT),Crush,soybean_oil,united
+4232000,US,2025,2025,12,0.1967,Percentage (%),Extr. Rate,soybean_oil,united
+4232000,US,2025,2025,12,794.0,1000 Metric Tons (MT),Beginning Stocks,soybean_oil,united
+4232000,US,2025,2025,12,13676.0,1000 Metric Tons (MT),Production,soybean_oil,united
+4232000,US,2025,2025,12,170.0,1000 Metric Tons (MT),Imports,soybean_oil,united
+4232000,US,2025,2025,12,14640.0,1000 Metric Tons (MT),Total Supply,soybean_oil,united
+4232000,US,2025,2025,12,408.0,1000 Metric Tons (MT),Exports,soybean_oil,united
+4232000,US,2025,2025,12,7031.0,1000 Metric Tons (MT),Industrial Dom. Cons.,soybean_oil,united
+4232000,US,2025,2025,12,6418.0,1000 Metric Tons (MT),Food Use Dom. Cons.,soybean_oil,united
+4232000,US,2025,2025,12,0.0,1000 Metric Tons (MT),Feed Waste Dom. Cons.,soybean_oil,united
+4232000,US,2025,2025,12,13449.0,1000 Metric Tons (MT),Domestic Consumption,soybean_oil,united
+4232000,US,2025,2025,12,783.0,1000 Metric Tons (MT),Ending Stocks,soybean_oil,united
+4232000,US,2025,2025,12,14640.0,1000 Metric Tons (MT),Total Distribution,soybean_oil,united
+0440000,MX,2025,2025,12,6800.0,1000 Hectares (HA),Area Harvested,corn,mexico
+0440000,MX,2025,2025,12,5661.0,1000 Metric Tons (MT),Beginning Stocks,corn,mexico
+0440000,MX,2025,2025,12,26000.0,1000 Metric Tons (MT),Production,corn,mexico
+0440000,MX,2025,2025,12,25800.0,1000 Metric Tons (MT),Imports,corn,mexico
+0440000,MX,2025,2025,12,25800.0,1000 Metric Tons (MT),TY Imports,corn,mexico
+0440000,MX,2025,2025,12,0.0,1000 Metric Tons (MT),TY Imp. from U.S.,corn,mexico
+0440000,MX,2025,2025,12,57461.0,1000 Metric Tons (MT),Total Supply,corn,mexico
+0440000,MX,2025,2025,12,30.0,1000 Metric Tons (MT),Exports,corn,mexico
+0440000,MX,2025,2025,12,30.0,1000 Metric Tons (MT),TY Exports,corn,mexico
+0440000,MX,2025,2025,12,29300.0,1000 Metric Tons (MT),Feed Dom. Consumption,corn,mexico
+0440000,MX,2025,2025,12,21700.0,1000 Metric Tons (MT),FSI Consumption,corn,mexico
+0440000,MX,2025,2025,12,51000.0,1000 Metric Tons (MT),Domestic Consumption,corn,mexico
+0440000,MX,2025,2025,12,6431.0,1000 Metric Tons (MT),Ending Stocks,corn,mexico
+0440000,MX,2025,2025,12,57461.0,1000 Metric Tons (MT),Total Distribution,corn,mexico
+0440000,MX,2025,2025,12,3.8235,Yield: Metric Tons per Hectare (MT/HA),Yield,corn,mexico
+2222000,US,2025,2025,12,32502.0,1000 Hectares (HA),Area Harvested,soybeans,united
+2222000,US,2025,2025,12,8614.0,1000 Metric Tons (MT),Beginning Stocks,soybeans,united
+2222000,US,2025,2025,12,115751.0,1000 Metric Tons (MT),Production,soybeans,united
+2222000,US,2025,2025,12,544.0,1000 Metric Tons (MT),Imports,soybeans,united
+2222000,US,2025,2025,12,124909.0,1000 Metric Tons (MT),Total Supply,soybeans,united
+2222000,US,2025,2025,12,44497.0,1000 Metric Tons (MT),Exports,soybeans,united
+2222000,US,2025,2025,12,69536.0,1000 Metric Tons (MT),Crush,soybeans,united
+2222000,US,2025,2025,12,0.0,1000 Metric Tons (MT),Food Use Dom. Cons.,soybeans,united
+2222000,US,2025,2025,12,2991.0,1000 Metric Tons (MT),Feed Waste Dom. Cons.,soybeans,united
+2222000,US,2025,2025,12,72527.0,1000 Metric Tons (MT),Domestic Consumption,soybeans,united
+2222000,US,2025,2025,12,7885.0,1000 Metric Tons (MT),Ending Stocks,soybeans,united
+2222000,US,2025,2025,12,124909.0,1000 Metric Tons (MT),Total Distribution,soybeans,united
+2222000,US,2025,2025,12,3.5614,Yield: Metric Tons per Hectare (MT/HA),Yield,soybeans,united
+4232000,JA,2025,2025,12,2350.0,1000 Metric Tons (MT),Crush,soybean_oil,japan
+4232000,JA,2025,2025,12,0.2047,Percentage (%),Extr. Rate,soybean_oil,japan
+4232000,JA,2025,2025,12,20.0,1000 Metric Tons (MT),Beginning Stocks,soybean_oil,japan
+4232000,JA,2025,2025,12,481.0,1000 Metric Tons (MT),Production,soybean_oil,japan
+4232000,JA,2025,2025,12,2.0,1000 Metric Tons (MT),Imports,soybean_oil,japan
+4232000,JA,2025,2025,12,503.0,1000 Metric Tons (MT),Total Supply,soybean_oil,japan
+4232000,JA,2025,2025,12,1.0,1000 Metric Tons (MT),Exports,soybean_oil,japan
+4232000,JA,2025,2025,12,40.0,1000 Metric Tons (MT),Industrial Dom. Cons.,soybean_oil,japan
+4232000,JA,2025,2025,12,435.0,1000 Metric Tons (MT),Food Use Dom. Cons.,soybean_oil,japan
+4232000,JA,2025,2025,12,0.0,1000 Metric Tons (MT),Feed Waste Dom. Cons.,soybean_oil,japan
+4232000,JA,2025,2025,12,475.0,1000 Metric Tons (MT),Domestic Consumption,soybean_oil,japan
+4232000,JA,2025,2025,12,27.0,1000 Metric Tons (MT),Ending Stocks,soybean_oil,japan
+4232000,JA,2025,2025,12,503.0,1000 Metric Tons (MT),Total Distribution,soybean_oil,japan
+0440000,JA,2025,2025,12,4.0,1000 Hectares (HA),Area Harvested,corn,japan
+0440000,JA,2025,2025,12,1371.0,1000 Metric Tons (MT),Beginning Stocks,corn,japan
+0440000,JA,2025,2025,12,21.0,1000 Metric Tons (MT),Production,corn,japan
+0440000,JA,2025,2025,12,15500.0,1000 Metric Tons (MT),Imports,corn,japan
+0440000,JA,2025,2025,12,15500.0,1000 Metric Tons (MT),TY Imports,corn,japan
+0440000,JA,2025,2025,12,0.0,1000 Metric Tons (MT),TY Imp. from U.S.,corn,japan
+0440000,JA,2025,2025,12,16892.0,1000 Metric Tons (MT),Total Supply,corn,japan
+0440000,JA,2025,2025,12,0.0,1000 Metric Tons (MT),Exports,corn,japan
+0440000,JA,2025,2025,12,0.0,1000 Metric Tons (MT),TY Exports,corn,japan
+0440000,JA,2025,2025,12,12200.0,1000 Metric Tons (MT),Feed Dom. Consumption,corn,japan
+0440000,JA,2025,2025,12,3300.0,1000 Metric Tons (MT),FSI Consumption,corn,japan
+0440000,JA,2025,2025,12,15500.0,1000 Metric Tons (MT),Domestic Consumption,corn,japan
+0440000,JA,2025,2025,12,1392.0,1000 Metric Tons (MT),Ending Stocks,corn,japan
+0440000,JA,2025,2025,12,16892.0,1000 Metric Tons (MT),Total Distribution,corn,japan
+0440000,JA,2025,2025,12,5.25,Yield: Metric Tons per Hectare (MT/HA),Yield,corn,japan
+4232000,E4,2025,2025,12,15300.0,1000 Metric Tons (MT),Crush,soybean_oil,european
+4232000,E4,2025,2025,12,0.19,Percentage (%),Extr. Rate,soybean_oil,european
+4232000,E4,2025,2025,12,596.0,1000 Metric Tons (MT),Beginning Stocks,soybean_oil,european
+4232000,E4,2025,2025,12,2907.0,1000 Metric Tons (MT),Production,soybean_oil,european
+4232000,E4,2025,2025,12,650.0,1000 Metric Tons (MT),Imports,soybean_oil,european
+4232000,E4,2025,2025,12,4153.0,1000 Metric Tons (MT),Total Supply,soybean_oil,european
+4232000,E4,2025,2025,12,850.0,1000 Metric Tons (MT),Exports,soybean_oil,european
+4232000,E4,2025,2025,12,1250.0,1000 Metric Tons (MT),Industrial Dom. Cons.,soybean_oil,european
+4232000,E4,2025,2025,12,1500.0,1000 Metric Tons (MT),Food Use Dom. Cons.,soybean_oil,european
+4232000,E4,2025,2025,12,55.0,1000 Metric Tons (MT),Feed Waste Dom. Cons.,soybean_oil,european
+4232000,E4,2025,2025,12,2805.0,1000 Metric Tons (MT),Domestic Consumption,soybean_oil,european
+4232000,E4,2025,2025,12,498.0,1000 Metric Tons (MT),Ending Stocks,soybean_oil,european
+4232000,E4,2025,2025,12,4153.0,1000 Metric Tons (MT),Total Distribution,soybean_oil,european
+4232000,MX,2025,2025,12,6800.0,1000 Metric Tons (MT),Crush,soybean_oil,mexico
+4232000,MX,2025,2025,12,0.1846,Percentage (%),Extr. Rate,soybean_oil,mexico
+4232000,MX,2025,2025,12,164.0,1000 Metric Tons (MT),Beginning Stocks,soybean_oil,mexico
+4232000,MX,2025,2025,12,1255.0,1000 Metric Tons (MT),Production,soybean_oil,mexico
+4232000,MX,2025,2025,12,200.0,1000 Metric Tons (MT),Imports,soybean_oil,mexico
+4232000,MX,2025,2025,12,1619.0,1000 Metric Tons (MT),Total Supply,soybean_oil,mexico
+4232000,MX,2025,2025,12,40.0,1000 Metric Tons (MT),Exports,soybean_oil,mexico
+4232000,MX,2025,2025,12,0.0,1000 Metric Tons (MT),Industrial Dom. Cons.,soybean_oil,mexico
+4232000,MX,2025,2025,12,1380.0,1000 Metric Tons (MT),Food Use Dom. Cons.,soybean_oil,mexico
+4232000,MX,2025,2025,12,0.0,1000 Metric Tons (MT),Feed Waste Dom. Cons.,soybean_oil,mexico
+4232000,MX,2025,2025,12,1380.0,1000 Metric Tons (MT),Domestic Consumption,soybean_oil,mexico
+4232000,MX,2025,2025,12,199.0,1000 Metric Tons (MT),Ending Stocks,soybean_oil,mexico
+4232000,MX,2025,2025,12,1619.0,1000 Metric Tons (MT),Total Distribution,soybean_oil,mexico
+0410000,US,2025,2025,12,15071.0,1000 Hectares (HA),Area Harvested,wheat,united
+0410000,US,2025,2025,12,23147.0,1000 Metric Tons (MT),Beginning Stocks,wheat,united
+0410000,US,2025,2025,12,54010.0,1000 Metric Tons (MT),Production,wheat,united
+0410000,US,2025,2025,12,3266.0,1000 Metric Tons (MT),Imports,wheat,united
+0410000,US,2025,2025,12,3250.0,1000 Metric Tons (MT),TY Imports,wheat,united
+0410000,US,2025,2025,12,0.0,1000 Metric Tons (MT),TY Imp. from U.S.,wheat,united
+0410000,US,2025,2025,12,80423.0,1000 Metric Tons (MT),Total Supply,wheat,united
+0410000,US,2025,2025,12,24494.0,1000 Metric Tons (MT),Exports,wheat,united
+0410000,US,2025,2025,12,24500.0,1000 Metric Tons (MT),TY Exports,wheat,united
+0410000,US,2025,2025,12,3266.0,1000 Metric Tons (MT),Feed Dom. Consumption,wheat,united
+0410000,US,2025,2025,12,28141.0,1000 Metric Tons (MT),FSI Consumption,wheat,united
+0410000,US,2025,2025,12,31407.0,1000 Metric Tons (MT),Domestic Consumption,wheat,united
+0410000,US,2025,2025,12,24522.0,1000 Metric Tons (MT),Ending Stocks,wheat,united
+0410000,US,2025,2025,12,80423.0,1000 Metric Tons (MT),Total Distribution,wheat,united
+0410000,US,2025,2025,12,3.5837,Yield: Metric Tons per Hectare (MT/HA),Yield,wheat,united
+0410000,CH,2025,2025,12,23600.0,1000 Hectares (HA),Area Harvested,wheat,china
+0410000,CH,2025,2025,12,127777.0,1000 Metric Tons (MT),Beginning Stocks,wheat,china
+0410000,CH,2025,2025,12,140000.0,1000 Metric Tons (MT),Production,wheat,china
+0410000,CH,2025,2025,12,6000.0,1000 Metric Tons (MT),Imports,wheat,china
+0410000,CH,2025,2025,12,6000.0,1000 Metric Tons (MT),TY Imports,wheat,china
+0410000,CH,2025,2025,12,0.0,1000 Metric Tons (MT),TY Imp. from U.S.,wheat,china
+0410000,CH,2025,2025,12,273777.0,1000 Metric Tons (MT),Total Supply,wheat,china
+0410000,CH,2025,2025,12,1000.0,1000 Metric Tons (MT),Exports,wheat,china
+0410000,CH,2025,2025,12,1000.0,1000 Metric Tons (MT),TY Exports,wheat,china
+0410000,CH,2025,2025,12,31000.0,1000 Metric Tons (MT),Feed Dom. Consumption,wheat,china
+0410000,CH,2025,2025,12,117000.0,1000 Metric Tons (MT),FSI Consumption,wheat,china
+0410000,CH,2025,2025,12,148000.0,1000 Metric Tons (MT),Domestic Consumption,wheat,china
+0410000,CH,2025,2025,12,124777.0,1000 Metric Tons (MT),Ending Stocks,wheat,china
+0410000,CH,2025,2025,12,273777.0,1000 Metric Tons (MT),Total Distribution,wheat,china
+0410000,CH,2025,2025,12,5.9322,Yield: Metric Tons per Hectare (MT/HA),Yield,wheat,china
+2222000,JA,2025,2025,12,155.0,1000 Hectares (HA),Area Harvested,soybeans,japan
+2222000,JA,2025,2025,12,201.0,1000 Metric Tons (MT),Beginning Stocks,soybeans,japan
+2222000,JA,2025,2025,12,250.0,1000 Metric Tons (MT),Production,soybeans,japan
+2222000,JA,2025,2025,12,3100.0,1000 Metric Tons (MT),Imports,soybeans,japan
+2222000,JA,2025,2025,12,3551.0,1000 Metric Tons (MT),Total Supply,soybeans,japan
+2222000,JA,2025,2025,12,0.0,1000 Metric Tons (MT),Exports,soybeans,japan
+2222000,JA,2025,2025,12,2350.0,1000 Metric Tons (MT),Crush,soybeans,japan
+2222000,JA,2025,2025,12,900.0,1000 Metric Tons (MT),Food Use Dom. Cons.,soybeans,japan
+2222000,JA,2025,2025,12,100.0,1000 Metric Tons (MT),Feed Waste Dom. Cons.,soybeans,japan
+2222000,JA,2025,2025,12,3350.0,1000 Metric Tons (MT),Domestic Consumption,soybeans,japan
+2222000,JA,2025,2025,12,201.0,1000 Metric Tons (MT),Ending Stocks,soybeans,japan
+2222000,JA,2025,2025,12,3551.0,1000 Metric Tons (MT),Total Distribution,soybeans,japan
+2222000,JA,2025,2025,12,1.6129,Yield: Metric Tons per Hectare (MT/HA),Yield,soybeans,japan
+2222000,MX,2025,2025,12,145.0,1000 Hectares (HA),Area Harvested,soybeans,mexico
+2222000,MX,2025,2025,12,582.0,1000 Metric Tons (MT),Beginning Stocks,soybeans,mexico
+2222000,MX,2025,2025,12,280.0,1000 Metric Tons (MT),Production,soybeans,mexico
+2222000,MX,2025,2025,12,6700.0,1000 Metric Tons (MT),Imports,soybeans,mexico
+2222000,MX,2025,2025,12,7562.0,1000 Metric Tons (MT),Total Supply,soybeans,mexico
+2222000,MX,2025,2025,12,10.0,1000 Metric Tons (MT),Exports,soybeans,mexico
+2222000,MX,2025,2025,12,6800.0,1000 Metric Tons (MT),Crush,soybeans,mexico
+2222000,MX,2025,2025,12,0.0,1000 Metric Tons (MT),Food Use Dom. Cons.,soybeans,mexico
+2222000,MX,2025,2025,12,85.0,1000 Metric Tons (MT),Feed Waste Dom. Cons.,soybeans,mexico
+2222000,MX,2025,2025,12,6885.0,1000 Metric Tons (MT),Domestic Consumption,soybeans,mexico
+2222000,MX,2025,2025,12,667.0,1000 Metric Tons (MT),Ending Stocks,soybeans,mexico
+2222000,MX,2025,2025,12,7562.0,1000 Metric Tons (MT),Total Distribution,soybeans,mexico
+2222000,MX,2025,2025,12,1.931,Yield: Metric Tons per Hectare (MT/HA),Yield,soybeans,mexico
+0440000,US,2025,2025,12,36441.0,1000 Hectares (HA),Area Harvested,corn,united
+0440000,US,2025,2025,12,38905.0,1000 Metric Tons (MT),Beginning Stocks,corn,united
+0440000,US,2025,2025,12,425525.0,1000 Metric Tons (MT),Production,corn,united
+0440000,US,2025,2025,12,635.0,1000 Metric Tons (MT),Imports,corn,united
+0440000,US,2025,2025,12,650.0,1000 Metric Tons (MT),TY Imports,corn,united
+0440000,US,2025,2025,12,0.0,1000 Metric Tons (MT),TY Imp. from U.S.,corn,united
+0440000,US,2025,2025,12,465065.0,1000 Metric Tons (MT),Total Supply,corn,united
+0440000,US,2025,2025,12,81284.0,1000 Metric Tons (MT),Exports,corn,united
+0440000,US,2025,2025,12,80000.0,1000 Metric Tons (MT),TY Exports,corn,united
+0440000,US,2025,2025,12,154947.0,1000 Metric Tons (MT),Feed Dom. Consumption,corn,united
+0440000,US,2025,2025,12,177300.0,1000 Metric Tons (MT),FSI Consumption,corn,united
+0440000,US,2025,2025,12,332247.0,1000 Metric Tons (MT),Domestic Consumption,corn,united
+0440000,US,2025,2025,12,51534.0,1000 Metric Tons (MT),Ending Stocks,corn,united
+0440000,US,2025,2025,12,465065.0,1000 Metric Tons (MT),Total Distribution,corn,united
+0440000,US,2025,2025,12,11.6771,Yield: Metric Tons per Hectare (MT/HA),Yield,corn,united
+2222000,CH,2025,2025,12,10500.0,1000 Hectares (HA),Area Harvested,soybeans,china
+2222000,CH,2025,2025,12,44488.0,1000 Metric Tons (MT),Beginning Stocks,soybeans,china
+2222000,CH,2025,2025,12,21000.0,1000 Metric Tons (MT),Production,soybeans,china
+2222000,CH,2025,2025,12,112000.0,1000 Metric Tons (MT),Imports,soybeans,china
+2222000,CH,2025,2025,12,177488.0,1000 Metric Tons (MT),Total Supply,soybeans,china
+2222000,CH,2025,2025,12,100.0,1000 Metric Tons (MT),Exports,soybeans,china
+2222000,CH,2025,2025,12,108000.0,1000 Metric Tons (MT),Crush,soybeans,china
+2222000,CH,2025,2025,12,18500.0,1000 Metric Tons (MT),Food Use Dom. Cons.,soybeans,china
+2222000,CH,2025,2025,12,6500.0,1000 Metric Tons (MT),Feed Waste Dom. Cons.,soybeans,china
+2222000,CH,2025,2025,12,133000.0,1000 Metric Tons (MT),Domestic Consumption,soybeans,china
+2222000,CH,2025,2025,12,44388.0,1000 Metric Tons (MT),Ending Stocks,soybeans,china
+2222000,CH,2025,2025,12,177488.0,1000 Metric Tons (MT),Total Distribution,soybeans,china
+2222000,CH,2025,2025,12,2.0,Yield: Metric Tons per Hectare (MT/HA),Yield,soybeans,china
+0410000,JA,2025,2025,12,232.0,1000 Hectares (HA),Area Harvested,wheat,japan
+0410000,JA,2025,2025,12,1162.0,1000 Metric Tons (MT),Beginning Stocks,wheat,japan
+0410000,JA,2025,2025,12,1100.0,1000 Metric Tons (MT),Production,wheat,japan
+0410000,JA,2025,2025,12,5450.0,1000 Metric Tons (MT),Imports,wheat,japan
+0410000,JA,2025,2025,12,5450.0,1000 Metric Tons (MT),TY Imports,wheat,japan
+0410000,JA,2025,2025,12,0.0,1000 Metric Tons (MT),TY Imp. from U.S.,wheat,japan
+0410000,JA,2025,2025,12,7712.0,1000 Metric Tons (MT),Total Supply,wheat,japan
+0410000,JA,2025,2025,12,340.0,1000 Metric Tons (MT),Exports,wheat,japan
+0410000,JA,2025,2025,12,340.0,1000 Metric Tons (MT),TY Exports,wheat,japan
+0410000,JA,2025,2025,12,700.0,1000 Metric Tons (MT),Feed Dom. Consumption,wheat,japan
+0410000,JA,2025,2025,12,5500.0,1000 Metric Tons (MT),FSI Consumption,wheat,japan
+0410000,JA,2025,2025,12,6200.0,1000 Metric Tons (MT),Domestic Consumption,wheat,japan
+0410000,JA,2025,2025,12,1172.0,1000 Metric Tons (MT),Ending Stocks,wheat,japan
+0410000,JA,2025,2025,12,7712.0,1000 Metric Tons (MT),Total Distribution,wheat,japan
+0410000,JA,2025,2025,12,4.7414,Yield: Metric Tons per Hectare (MT/HA),Yield,wheat,japan
+0813100,US,2025,2025,12,69536.0,1000 Metric Tons (MT),Crush,soybean_meal,united
+0813100,US,2025,2025,12,0.7857,Percentage (%),Extr. Rate,soybean_meal,united
+0813100,US,2025,2025,12,408.0,1000 Metric Tons (MT),Beginning Stocks,soybean_meal,united
+0813100,US,2025,2025,12,54635.0,1000 Metric Tons (MT),Production,soybean_meal,united
+0813100,US,2025,2025,12,612.0,1000 Metric Tons (MT),Imports,soybean_meal,united
+0813100,US,2025,2025,12,55655.0,1000 Metric Tons (MT),Total Supply,soybean_meal,united
+0813100,US,2025,2025,12,17418.0,1000 Metric Tons (MT),Exports,soybean_meal,united
+0813100,US,2025,2025,12,0.0,1000 Metric Tons (MT),Industrial Dom. Cons.,soybean_meal,united
+0813100,US,2025,2025,12,0.0,1000 Metric Tons (MT),Food Use Dom. Cons.,soybean_meal,united
+0813100,US,2025,2025,12,37806.0,1000 Metric Tons (MT),Feed Waste Dom. Cons.,soybean_meal,united
+0813100,US,2025,2025,12,37806.0,1000 Metric Tons (MT),Domestic Consumption,soybean_meal,united
+0813100,US,2025,2025,12,431.0,1000 Metric Tons (MT),Ending Stocks,soybean_meal,united
+0813100,US,2025,2025,12,55655.0,1000 Metric Tons (MT),Total Distribution,soybean_meal,united
+0813100,US,2025,2025,12,37806.0,1000 Metric Tons (MT),SME,soybean_meal,united
+0410000,E4,2025,2025,12,23965.0,1000 Hectares (HA),Area Harvested,wheat,european
+0410000,E4,2025,2025,12,11714.0,1000 Metric Tons (MT),Beginning Stocks,wheat,european
+0410000,E4,2025,2025,12,144000.0,1000 Metric Tons (MT),Production,wheat,european
+0410000,E4,2025,2025,12,5500.0,1000 Metric Tons (MT),Imports,wheat,european
+0410000,E4,2025,2025,12,5500.0,1000 Metric Tons (MT),TY Imports,wheat,european
+0410000,E4,2025,2025,12,0.0,1000 Metric Tons (MT),TY Imp. from U.S.,wheat,european
+0410000,E4,2025,2025,12,161214.0,1000 Metric Tons (MT),Total Supply,wheat,european
+0410000,E4,2025,2025,12,33000.0,1000 Metric Tons (MT),Exports,wheat,european
+0410000,E4,2025,2025,12,33000.0,1000 Metric Tons (MT),TY Exports,wheat,european
+0410000,E4,2025,2025,12,50000.0,1000 Metric Tons (MT),Feed Dom. Consumption,wheat,european
+0410000,E4,2025,2025,12,64500.0,1000 Metric Tons (MT),FSI Consumption,wheat,european
+0410000,E4,2025,2025,12,114500.0,1000 Metric Tons (MT),Domestic Consumption,wheat,european
+0410000,E4,2025,2025,12,13714.0,1000 Metric Tons (MT),Ending Stocks,wheat,european
+0410000,E4,2025,2025,12,161214.0,1000 Metric Tons (MT),Total Distribution,wheat,european
+0410000,E4,2025,2025,12,6.0088,Yield: Metric Tons per Hectare (MT/HA),Yield,wheat,european

@@ -21,7 +21,7 @@ COMMODITIES = {
         }
     },
 
-    "soybean_meal": {
+    "soybean meal": {
         "esr": {
             "commodity": "901", # Soybean cake & meal
             "countries": ["1220", "2", "2010", "2050"]
@@ -32,7 +32,7 @@ COMMODITIES = {
         }
     },
 
-    "soybean_oil": {
+    "soybean oil": {
         "esr": {
             "commodity": "902",
             "countries": ["1220", "2", "2010", "2050"]
@@ -57,7 +57,7 @@ COMMODITIES = {
 
 ESR_COUNTRY_NAMES = {
     "1220": "mexico",
-    "2": "european_union",
+    "2": "european union",
     "2010": "japan",
     "2050": "china"
 }
@@ -66,7 +66,7 @@ PSD_COUNTRY_NAMES = {
     "00": "world",
     "US": "united_states",
     "MX": "mexico",
-    "E4": "european_union",
+    "E4": "european union",
     "JA": "japan",
     "CH": "china"
 }
