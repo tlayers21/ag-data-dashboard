@@ -1,4 +1,74 @@
 market year,calendar year,calendar month,commodity,country,attribute,amount,unit
+2025,2025,december,soybeans,world,area harvested,143726.0,1000 hectares
+2025,2025,december,soybeans,world,beginning stocks,123235.0,1000 metric tons
+2025,2025,december,soybeans,world,production,422541.0,1000 metric tons
+2025,2025,december,soybeans,world,imports,186144.0,1000 metric tons
+2025,2025,december,soybeans,world,total supply,731920.0,1000 metric tons
+2025,2025,december,soybeans,world,exports,187701.0,1000 metric tons
+2025,2025,december,soybeans,world,crush,365244.0,1000 metric tons
+2025,2025,december,soybeans,world,food use domestic consumption,25876.0,1000 metric tons
+2025,2025,december,soybeans,world,feed waste domestic consumption,30729.0,1000 metric tons
+2025,2025,december,soybeans,world,domestic consumption,421849.0,1000 metric tons
+2025,2025,december,soybeans,world,ending stocks,122370.0,1000 metric tons
+2025,2025,december,soybeans,world,total distribution,731920.0,1000 metric tons
+2025,2025,december,soybeans,world,yield,2.9399,yield (metric tons per hectare)
+2025,2025,december,wheat,world,area harvested,220403.0,1000 hectares
+2025,2025,december,wheat,world,beginning stocks,260033.0,1000 metric tons
+2025,2025,december,wheat,world,production,837807.0,1000 metric tons
+2025,2025,december,wheat,world,imports,214386.0,1000 metric tons
+2025,2025,december,wheat,world,trade year imports,214570.0,1000 metric tons
+2025,2025,december,wheat,world,trade year imports from u.s.,0.0,1000 metric tons
+2025,2025,december,wheat,world,total supply,1312226.0,1000 metric tons
+2025,2025,december,wheat,world,exports,218707.0,1000 metric tons
+2025,2025,december,wheat,world,trade year exports,218663.0,1000 metric tons
+2025,2025,december,wheat,world,feed domestic consumption,165191.0,1000 metric tons
+2025,2025,december,wheat,world,"food, seed, and industrial consumption",653455.0,1000 metric tons
+2025,2025,december,wheat,world,domestic consumption,818646.0,1000 metric tons
+2025,2025,december,wheat,world,ending stocks,274873.0,1000 metric tons
+2025,2025,december,wheat,world,total distribution,1312226.0,1000 metric tons
+2025,2025,december,wheat,world,yield,3.8013,yield (metric tons per hectare)
+2025,2025,december,soybean meal,world,crush,365244.0,1000 metric tons
+2025,2025,december,soybean meal,world,extraction rate,0.7848,percentage
+2025,2025,december,soybean meal,world,beginning stocks,18857.0,1000 metric tons
+2025,2025,december,soybean meal,world,production,286637.0,1000 metric tons
+2025,2025,december,soybean meal,world,imports,78299.0,1000 metric tons
+2025,2025,december,soybean meal,world,total supply,383793.0,1000 metric tons
+2025,2025,december,soybean meal,world,exports,81888.0,1000 metric tons
+2025,2025,december,soybean meal,world,industrial domestic consumption,1370.0,1000 metric tons
+2025,2025,december,soybean meal,world,food use domestic consumption,777.0,1000 metric tons
+2025,2025,december,soybean meal,world,feed waste domestic consumption,280934.0,1000 metric tons
+2025,2025,december,soybean meal,world,domestic consumption,283081.0,1000 metric tons
+2025,2025,december,soybean meal,world,ending stocks,18824.0,1000 metric tons
+2025,2025,december,soybean meal,world,total distribution,383793.0,1000 metric tons
+2025,2025,december,soybean meal,world,soybean meal equivalent,280934.0,1000 metric tons
+2025,2025,december,soybean oil,world,crush,365244.0,1000 metric tons
+2025,2025,december,soybean oil,world,extraction rate,0.1933,percentage
+2025,2025,december,soybean oil,world,beginning stocks,6424.0,1000 metric tons
+2025,2025,december,soybean oil,world,production,70609.0,1000 metric tons
+2025,2025,december,soybean oil,world,imports,12260.0,1000 metric tons
+2025,2025,december,soybean oil,world,total supply,89293.0,1000 metric tons
+2025,2025,december,soybean oil,world,exports,13351.0,1000 metric tons
+2025,2025,december,soybean oil,world,industrial domestic consumption,16974.0,1000 metric tons
+2025,2025,december,soybean oil,world,food use domestic consumption,52992.0,1000 metric tons
+2025,2025,december,soybean oil,world,feed waste domestic consumption,85.0,1000 metric tons
+2025,2025,december,soybean oil,world,domestic consumption,70051.0,1000 metric tons
+2025,2025,december,soybean oil,world,ending stocks,5891.0,1000 metric tons
+2025,2025,december,soybean oil,world,total distribution,89293.0,1000 metric tons
+2025,2025,december,corn,world,area harvested,208988.0,1000 hectares
+2025,2025,december,corn,world,beginning stocks,293369.0,1000 metric tons
+2025,2025,december,corn,world,production,1282962.0,1000 metric tons
+2025,2025,december,corn,world,imports,190368.0,1000 metric tons
+2025,2025,december,corn,world,trade year imports,190273.0,1000 metric tons
+2025,2025,december,corn,world,trade year imports from u.s.,0.0,1000 metric tons
+2025,2025,december,corn,world,total supply,1766699.0,1000 metric tons
+2025,2025,december,corn,world,exports,205101.0,1000 metric tons
+2025,2025,december,corn,world,trade year exports,197917.0,1000 metric tons
+2025,2025,december,corn,world,feed domestic consumption,810363.0,1000 metric tons
+2025,2025,december,corn,world,"food, seed, and industrial consumption",472084.0,1000 metric tons
+2025,2025,december,corn,world,domestic consumption,1282447.0,1000 metric tons
+2025,2025,december,corn,world,ending stocks,279151.0,1000 metric tons
+2025,2025,december,corn,world,total distribution,1766699.0,1000 metric tons
+2025,2025,december,corn,world,yield,6.1389,yield (metric tons per hectare)
 2025,2025,december,corn,china,area harvested,44300.0,1000 hectares
 2025,2025,december,corn,china,beginning stocks,191928.0,1000 metric tons
 2025,2025,december,corn,china,production,295000.0,1000 metric tons

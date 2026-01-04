@@ -1,6 +1,6 @@
 import pandas as pd
 from pathlib import Path
-from .utils import BASE_DIR, processed_data_path
+from .utils import BASE_DIR, cleaned_data_path
 from .transform import (
     clean_esr_world_file,
     clean_esr_country_file,
@@ -27,8 +27,6 @@ def clean_all_esr() -> None:
 
     if len(world_dfs) > 0:
         combined_world_df = pd.concat(world_dfs, ignore_index=True)
-        world_output_path = processed_data_path("esr_world_clean.csv")
-        combined_world_df.to_csv(world_output_path, index=False)
     
     # COUNTRY
     country_dfs = []
@@ -43,8 +41,10 @@ def clean_all_esr() -> None:
     
     if len(country_dfs) > 0:
         combined_country_df = pd.concat(country_dfs, ignore_index=True)
-        country_output_path = processed_data_path("esr_country_clean.csv")
-        combined_country_df.to_csv(country_output_path, index=False)
+    
+    esr_df = pd.concat([combined_world_df, combined_country_df], ignore_index=True)
+    output_path = cleaned_data_path("esr_clean.csv")
+    esr_df.to_csv(output_path, index=False)
     
     print("Done.\n==========")
 
@@ -67,8 +67,6 @@ def clean_all_psd() -> None:
 
     if len(world_dfs) > 0:
         combined_world_df = pd.concat(world_dfs, ignore_index=True)
-        world_output_path = processed_data_path("psd_world_clean.csv")
-        combined_world_df.to_csv(world_output_path, index=False)
     
     # COUNTRY
     country_dfs = []
@@ -83,7 +81,9 @@ def clean_all_psd() -> None:
     
     if len(country_dfs) > 0:
         combined_country_df = pd.concat(country_dfs, ignore_index=True)
-        country_output_path = processed_data_path("psd_country_clean.csv")
-        combined_country_df.to_csv(country_output_path, index=False)
+    
+    psd_df = pd.concat([combined_world_df, combined_country_df], ignore_index=True)
+    output_path = cleaned_data_path("psd_clean.csv")
+    psd_df.to_csv(output_path, index=False)
     
     print("Done.\n==========")

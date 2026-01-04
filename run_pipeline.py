@@ -10,7 +10,7 @@ if __name__ == "__main__":
     # Empty directories every run
     dirs_to_empty = [
         Path("data/raw").resolve(),
-        Path("data/processed").resolve()
+        Path("data/cleaned").resolve()
     ]
     for directory in dirs_to_empty:
         for file in directory.glob("*"):

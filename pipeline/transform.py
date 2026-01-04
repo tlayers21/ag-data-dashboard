@@ -100,11 +100,12 @@ def clean_esr_world_file(path: Path) -> pd.DataFrame:
     aggregated_data = df.groupby("week ending date")[data_columns].sum().reset_index()
     aggregated_data["unit"] = "metric tons"
     aggregated_data["commodity"] = commodity_name
+    aggregated_data["country"] = "world"
     
-
     column_order = [
         "week ending date",
         "commodity",
+        "country",
         "weekly exports",
         "accumulated exports",
         "outstanding sales",
@@ -154,12 +155,14 @@ def clean_psd_world_file(path: Path) -> pd.DataFrame:
     df["attribute"] = df["attribute id"].map(PSD_ATTRIBUTE_MAP)
     df = df.drop(columns=["commodity code", "country code", "unit id", "attribute id"])
     df["commodity"] = commodity_name
+    df["country"] = "world"
 
     column_order = [
         "market year",
         "calendar year",
         "calendar month",
         "commodity",
+        "country",
         "attribute",
         "amount",
         "unit"
