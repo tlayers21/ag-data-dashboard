@@ -63,6 +63,21 @@ PSD_UNIT_MAP = {
 ESR_COMMODITY_LOOKUP = {data["esr"]["commodity"]: commodity for commodity, data in COMMODITIES.items()}
 PSD_COMMODITY_LOOKUP = {data["psd"]["commodity"]: commodity for commodity, data in COMMODITIES.items()}
 
+month_map = {
+    "1": "january",
+    "2": "february",
+    "3": "march",
+    "4": "april",
+    "5": "may",
+    "6": "june",
+    "7": "july",
+    "8": "august",
+    "9": "september",
+    "10": "october",
+    "11": "november",
+    "12": "december"
+}
+
 def clean_esr_world_file(path: Path) -> pd.DataFrame:
     with open(path, "r") as file:
         raw_data = json.load(file)
@@ -90,7 +105,6 @@ def clean_esr_world_file(path: Path) -> pd.DataFrame:
     column_order = [
         "week ending date",
         "commodity",
-        "unit",
         "weekly exports",
         "accumulated exports",
         "outstanding sales",
@@ -98,7 +112,8 @@ def clean_esr_world_file(path: Path) -> pd.DataFrame:
         "current marketing year net sales",
         "current marketing year total commitment",
         "next marketing year outstanding sales",
-        "next marketing year net sales"
+        "next marketing year net sales",
+        "unit"
     ]
 
     return aggregated_data[column_order]
@@ -111,7 +126,6 @@ def clean_esr_country_file(path: Path, country_name: str) -> pd.DataFrame:
         "week ending date",
         "commodity",
         "country",
-        "unit",
         "weekly exports",
         "accumulated exports",
         "outstanding sales",
@@ -119,7 +133,8 @@ def clean_esr_country_file(path: Path, country_name: str) -> pd.DataFrame:
         "current marketing year net sales",
         "current marketing year total commitment",
         "next marketing year outstanding sales",
-        "next marketing year net sales"
+        "next marketing year net sales",
+        "unit"
     ]
 
     return df[column_order]
@@ -133,7 +148,7 @@ def clean_psd_world_file(path: Path) -> pd.DataFrame:
     df = df.rename(columns=PSD_RENAME_MAP)
     commodity_code = str(df["commodity code"].iloc[0])
     commodity_name = PSD_COMMODITY_LOOKUP.get(commodity_code, "unknown")
-
+    df["calendar month"] = df["calendar month"].map(month_map)
 
     df["unit"] = df["unit id"].map(PSD_UNIT_MAP)
     df["attribute"] = df["attribute id"].map(PSD_ATTRIBUTE_MAP)
@@ -146,8 +161,8 @@ def clean_psd_world_file(path: Path) -> pd.DataFrame:
         "calendar month",
         "commodity",
         "attribute",
-        "unit",
-        "amount"
+        "amount",
+        "unit"
     ]
 
     return df[column_order]
@@ -155,4 +170,16 @@ def clean_psd_world_file(path: Path) -> pd.DataFrame:
 def clean_psd_country_file(path: Path, country_name: str) -> pd.DataFrame:
     df = clean_psd_world_file(path)
     df["country"] = country_name
-    return df
+
+    column_order = [
+        "market year",
+        "calendar year",
+        "calendar month",
+        "commodity",
+        "country",
+        "attribute",
+        "amount",
+        "unit"
+    ]
+
+    return df[column_order]

@@ -12,7 +12,7 @@ def clean_all_esr() -> None:
     raw_dir = BASE_DIR / "data" / "raw"
 
     world_files = list(raw_dir.glob("*_esr_all_*.json"))
-    print("Starting ESR Data Cleaning Process")
+    print("Starting ESR Data Cleaning Process...")
     print(f"Processing {len(world_files)} ESR world files:")
     for file in world_files:
         print(f"    - {file.name}")
@@ -52,7 +52,7 @@ def clean_all_psd() -> None:
     raw_dir = BASE_DIR / "data" / "raw"
 
     world_files = list(raw_dir.glob("*_psd_world_*.json"))
-    print("Starting PSD Data Cleaning Process")
+    print("Starting PSD Data Cleaning Process...")
     print(f"Processing {len(world_files)} PSD world files:")
     for file in world_files:
         print(f"    - {file.name}")
@@ -75,7 +75,9 @@ def clean_all_psd() -> None:
     for file in country_files:
         parts = file.stem.split("_")
         psd_index = parts.index("psd")
-        country = parts[psd_index + 1]
+        # Accounts for issue with "european_union or united_states in file name"
+        country_parts = parts[psd_index + 1: -1]
+        country = "_".join(country_parts).replace("_", " ")
         cleaned_df = clean_psd_country_file(file, country)
         country_dfs.append(cleaned_df)
     

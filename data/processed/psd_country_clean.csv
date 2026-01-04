@@ -1,351 +1,351 @@
-market year,calendar year,calendar month,commodity,attribute,unit,amount,country
-2025,2025,12,corn,area harvested,1000 hectares,44300.0,china
-2025,2025,12,corn,beginning stocks,1000 metric tons,191928.0,china
-2025,2025,12,corn,production,1000 metric tons,295000.0,china
-2025,2025,12,corn,imports,1000 metric tons,8000.0,china
-2025,2025,12,corn,trade year imports,1000 metric tons,8000.0,china
-2025,2025,12,corn,trade year imports from u.s.,1000 metric tons,0.0,china
-2025,2025,12,corn,total supply,1000 metric tons,494928.0,china
-2025,2025,12,corn,exports,1000 metric tons,20.0,china
-2025,2025,12,corn,trade year exports,1000 metric tons,20.0,china
-2025,2025,12,corn,feed domestic consumption,1000 metric tons,239000.0,china
-2025,2025,12,corn,"food, seed, and industrial consumption",1000 metric tons,82000.0,china
-2025,2025,12,corn,domestic consumption,1000 metric tons,321000.0,china
-2025,2025,12,corn,ending stocks,1000 metric tons,173908.0,china
-2025,2025,12,corn,total distribution,1000 metric tons,494928.0,china
-2025,2025,12,corn,yield,yield (metric tons per hectare),6.6591,china
-2025,2025,12,soybean oil,crush,1000 metric tons,108000.0,china
-2025,2025,12,soybean oil,extraction rate,percentage,0.19,china
-2025,2025,12,soybean oil,beginning stocks,1000 metric tons,776.0,china
-2025,2025,12,soybean oil,production,1000 metric tons,20520.0,china
-2025,2025,12,soybean oil,imports,1000 metric tons,250.0,china
-2025,2025,12,soybean oil,total supply,1000 metric tons,21546.0,china
-2025,2025,12,soybean oil,exports,1000 metric tons,250.0,china
-2025,2025,12,soybean oil,industrial domestic consumption,1000 metric tons,0.0,china
-2025,2025,12,soybean oil,food use domestic consumption,1000 metric tons,20500.0,china
-2025,2025,12,soybean oil,feed waste domestic consumption,1000 metric tons,0.0,china
-2025,2025,12,soybean oil,domestic consumption,1000 metric tons,20500.0,china
-2025,2025,12,soybean oil,ending stocks,1000 metric tons,796.0,china
-2025,2025,12,soybean oil,total distribution,1000 metric tons,21546.0,china
-2025,2025,12,soybean meal,crush,1000 metric tons,6800.0,mexico
-2025,2025,12,soybean meal,extraction rate,percentage,0.79,mexico
-2025,2025,12,soybean meal,beginning stocks,1000 metric tons,307.0,mexico
-2025,2025,12,soybean meal,production,1000 metric tons,5372.0,mexico
-2025,2025,12,soybean meal,imports,1000 metric tons,2550.0,mexico
-2025,2025,12,soybean meal,total supply,1000 metric tons,8229.0,mexico
-2025,2025,12,soybean meal,exports,1000 metric tons,1.0,mexico
-2025,2025,12,soybean meal,industrial domestic consumption,1000 metric tons,0.0,mexico
-2025,2025,12,soybean meal,food use domestic consumption,1000 metric tons,50.0,mexico
-2025,2025,12,soybean meal,feed waste domestic consumption,1000 metric tons,7850.0,mexico
-2025,2025,12,soybean meal,domestic consumption,1000 metric tons,7900.0,mexico
-2025,2025,12,soybean meal,ending stocks,1000 metric tons,328.0,mexico
-2025,2025,12,soybean meal,total distribution,1000 metric tons,8229.0,mexico
-2025,2025,12,soybean meal,soybean meal equivalent,1000 metric tons,7850.0,mexico
-2025,2025,12,soybeans,area harvested,1000 hectares,1070.0,european
-2025,2025,12,soybeans,beginning stocks,1000 metric tons,1602.0,european
-2025,2025,12,soybeans,production,1000 metric tons,2785.0,european
-2025,2025,12,soybeans,imports,1000 metric tons,14300.0,european
-2025,2025,12,soybeans,total supply,1000 metric tons,18687.0,european
-2025,2025,12,soybeans,exports,1000 metric tons,300.0,european
-2025,2025,12,soybeans,crush,1000 metric tons,15300.0,european
-2025,2025,12,soybeans,food use domestic consumption,1000 metric tons,220.0,european
-2025,2025,12,soybeans,feed waste domestic consumption,1000 metric tons,1300.0,european
-2025,2025,12,soybeans,domestic consumption,1000 metric tons,16820.0,european
-2025,2025,12,soybeans,ending stocks,1000 metric tons,1567.0,european
-2025,2025,12,soybeans,total distribution,1000 metric tons,18687.0,european
-2025,2025,12,soybeans,yield,yield (metric tons per hectare),2.6028,european
-2025,2025,12,soybean meal,crush,1000 metric tons,2350.0,japan
-2025,2025,12,soybean meal,extraction rate,percentage,0.7511,japan
-2025,2025,12,soybean meal,beginning stocks,1000 metric tons,116.0,japan
-2025,2025,12,soybean meal,production,1000 metric tons,1765.0,japan
-2025,2025,12,soybean meal,imports,1000 metric tons,1700.0,japan
-2025,2025,12,soybean meal,total supply,1000 metric tons,3581.0,japan
-2025,2025,12,soybean meal,exports,1000 metric tons,1.0,japan
-2025,2025,12,soybean meal,industrial domestic consumption,1000 metric tons,210.0,japan
-2025,2025,12,soybean meal,food use domestic consumption,1000 metric tons,200.0,japan
-2025,2025,12,soybean meal,feed waste domestic consumption,1000 metric tons,3050.0,japan
-2025,2025,12,soybean meal,domestic consumption,1000 metric tons,3460.0,japan
-2025,2025,12,soybean meal,ending stocks,1000 metric tons,120.0,japan
-2025,2025,12,soybean meal,total distribution,1000 metric tons,3581.0,japan
-2025,2025,12,soybean meal,soybean meal equivalent,1000 metric tons,3050.0,japan
-2025,2025,12,soybean meal,crush,1000 metric tons,15300.0,european
-2025,2025,12,soybean meal,extraction rate,percentage,0.79,european
-2025,2025,12,soybean meal,beginning stocks,1000 metric tons,1751.0,european
-2025,2025,12,soybean meal,production,1000 metric tons,12087.0,european
-2025,2025,12,soybean meal,imports,1000 metric tons,17550.0,european
-2025,2025,12,soybean meal,total supply,1000 metric tons,31388.0,european
-2025,2025,12,soybean meal,exports,1000 metric tons,600.0,european
-2025,2025,12,soybean meal,industrial domestic consumption,1000 metric tons,10.0,european
-2025,2025,12,soybean meal,food use domestic consumption,1000 metric tons,32.0,european
-2025,2025,12,soybean meal,feed waste domestic consumption,1000 metric tons,29900.0,european
-2025,2025,12,soybean meal,domestic consumption,1000 metric tons,29942.0,european
-2025,2025,12,soybean meal,ending stocks,1000 metric tons,846.0,european
-2025,2025,12,soybean meal,total distribution,1000 metric tons,31388.0,european
-2025,2025,12,soybean meal,soybean meal equivalent,1000 metric tons,29900.0,european
-2025,2025,12,corn,area harvested,1000 hectares,8150.0,european
-2025,2025,12,corn,beginning stocks,1000 metric tons,6135.0,european
-2025,2025,12,corn,production,1000 metric tons,56750.0,european
-2025,2025,12,corn,imports,1000 metric tons,20000.0,european
-2025,2025,12,corn,trade year imports,1000 metric tons,20000.0,european
-2025,2025,12,corn,trade year imports from u.s.,1000 metric tons,0.0,european
-2025,2025,12,corn,total supply,1000 metric tons,82885.0,european
-2025,2025,12,corn,exports,1000 metric tons,1800.0,european
-2025,2025,12,corn,trade year exports,1000 metric tons,1800.0,european
-2025,2025,12,corn,feed domestic consumption,1000 metric tons,55200.0,european
-2025,2025,12,corn,"food, seed, and industrial consumption",1000 metric tons,20100.0,european
-2025,2025,12,corn,domestic consumption,1000 metric tons,75300.0,european
-2025,2025,12,corn,ending stocks,1000 metric tons,5785.0,european
-2025,2025,12,corn,total distribution,1000 metric tons,82885.0,european
-2025,2025,12,corn,yield,yield (metric tons per hectare),6.9632,european
-2025,2025,12,soybean meal,crush,1000 metric tons,108000.0,china
-2025,2025,12,soybean meal,extraction rate,percentage,0.792,china
-2025,2025,12,soybean meal,beginning stocks,1000 metric tons,943.0,china
-2025,2025,12,soybean meal,production,1000 metric tons,85536.0,china
-2025,2025,12,soybean meal,imports,1000 metric tons,50.0,china
-2025,2025,12,soybean meal,total supply,1000 metric tons,86529.0,china
-2025,2025,12,soybean meal,exports,1000 metric tons,1200.0,china
-2025,2025,12,soybean meal,industrial domestic consumption,1000 metric tons,1150.0,china
-2025,2025,12,soybean meal,food use domestic consumption,1000 metric tons,0.0,china
-2025,2025,12,soybean meal,feed waste domestic consumption,1000 metric tons,83000.0,china
-2025,2025,12,soybean meal,domestic consumption,1000 metric tons,84150.0,china
-2025,2025,12,soybean meal,ending stocks,1000 metric tons,1179.0,china
-2025,2025,12,soybean meal,total distribution,1000 metric tons,86529.0,china
-2025,2025,12,soybean meal,soybean meal equivalent,1000 metric tons,83000.0,china
-2025,2025,12,wheat,area harvested,1000 hectares,320.0,mexico
-2025,2025,12,wheat,beginning stocks,1000 metric tons,855.0,mexico
-2025,2025,12,wheat,production,1000 metric tons,1750.0,mexico
-2025,2025,12,wheat,imports,1000 metric tons,6700.0,mexico
-2025,2025,12,wheat,trade year imports,1000 metric tons,6700.0,mexico
-2025,2025,12,wheat,trade year imports from u.s.,1000 metric tons,0.0,mexico
-2025,2025,12,wheat,total supply,1000 metric tons,9305.0,mexico
-2025,2025,12,wheat,exports,1000 metric tons,100.0,mexico
-2025,2025,12,wheat,trade year exports,1000 metric tons,100.0,mexico
-2025,2025,12,wheat,feed domestic consumption,1000 metric tons,350.0,mexico
-2025,2025,12,wheat,"food, seed, and industrial consumption",1000 metric tons,8000.0,mexico
-2025,2025,12,wheat,domestic consumption,1000 metric tons,8350.0,mexico
-2025,2025,12,wheat,ending stocks,1000 metric tons,855.0,mexico
-2025,2025,12,wheat,total distribution,1000 metric tons,9305.0,mexico
-2025,2025,12,wheat,yield,yield (metric tons per hectare),5.4688,mexico
-2025,2025,12,soybean oil,crush,1000 metric tons,69536.0,united
-2025,2025,12,soybean oil,extraction rate,percentage,0.1967,united
-2025,2025,12,soybean oil,beginning stocks,1000 metric tons,794.0,united
-2025,2025,12,soybean oil,production,1000 metric tons,13676.0,united
-2025,2025,12,soybean oil,imports,1000 metric tons,170.0,united
-2025,2025,12,soybean oil,total supply,1000 metric tons,14640.0,united
-2025,2025,12,soybean oil,exports,1000 metric tons,408.0,united
-2025,2025,12,soybean oil,industrial domestic consumption,1000 metric tons,7031.0,united
-2025,2025,12,soybean oil,food use domestic consumption,1000 metric tons,6418.0,united
-2025,2025,12,soybean oil,feed waste domestic consumption,1000 metric tons,0.0,united
-2025,2025,12,soybean oil,domestic consumption,1000 metric tons,13449.0,united
-2025,2025,12,soybean oil,ending stocks,1000 metric tons,783.0,united
-2025,2025,12,soybean oil,total distribution,1000 metric tons,14640.0,united
-2025,2025,12,corn,area harvested,1000 hectares,6800.0,mexico
-2025,2025,12,corn,beginning stocks,1000 metric tons,5661.0,mexico
-2025,2025,12,corn,production,1000 metric tons,26000.0,mexico
-2025,2025,12,corn,imports,1000 metric tons,25800.0,mexico
-2025,2025,12,corn,trade year imports,1000 metric tons,25800.0,mexico
-2025,2025,12,corn,trade year imports from u.s.,1000 metric tons,0.0,mexico
-2025,2025,12,corn,total supply,1000 metric tons,57461.0,mexico
-2025,2025,12,corn,exports,1000 metric tons,30.0,mexico
-2025,2025,12,corn,trade year exports,1000 metric tons,30.0,mexico
-2025,2025,12,corn,feed domestic consumption,1000 metric tons,29300.0,mexico
-2025,2025,12,corn,"food, seed, and industrial consumption",1000 metric tons,21700.0,mexico
-2025,2025,12,corn,domestic consumption,1000 metric tons,51000.0,mexico
-2025,2025,12,corn,ending stocks,1000 metric tons,6431.0,mexico
-2025,2025,12,corn,total distribution,1000 metric tons,57461.0,mexico
-2025,2025,12,corn,yield,yield (metric tons per hectare),3.8235,mexico
-2025,2025,12,soybeans,area harvested,1000 hectares,32502.0,united
-2025,2025,12,soybeans,beginning stocks,1000 metric tons,8614.0,united
-2025,2025,12,soybeans,production,1000 metric tons,115751.0,united
-2025,2025,12,soybeans,imports,1000 metric tons,544.0,united
-2025,2025,12,soybeans,total supply,1000 metric tons,124909.0,united
-2025,2025,12,soybeans,exports,1000 metric tons,44497.0,united
-2025,2025,12,soybeans,crush,1000 metric tons,69536.0,united
-2025,2025,12,soybeans,food use domestic consumption,1000 metric tons,0.0,united
-2025,2025,12,soybeans,feed waste domestic consumption,1000 metric tons,2991.0,united
-2025,2025,12,soybeans,domestic consumption,1000 metric tons,72527.0,united
-2025,2025,12,soybeans,ending stocks,1000 metric tons,7885.0,united
-2025,2025,12,soybeans,total distribution,1000 metric tons,124909.0,united
-2025,2025,12,soybeans,yield,yield (metric tons per hectare),3.5614,united
-2025,2025,12,soybean oil,crush,1000 metric tons,2350.0,japan
-2025,2025,12,soybean oil,extraction rate,percentage,0.2047,japan
-2025,2025,12,soybean oil,beginning stocks,1000 metric tons,20.0,japan
-2025,2025,12,soybean oil,production,1000 metric tons,481.0,japan
-2025,2025,12,soybean oil,imports,1000 metric tons,2.0,japan
-2025,2025,12,soybean oil,total supply,1000 metric tons,503.0,japan
-2025,2025,12,soybean oil,exports,1000 metric tons,1.0,japan
-2025,2025,12,soybean oil,industrial domestic consumption,1000 metric tons,40.0,japan
-2025,2025,12,soybean oil,food use domestic consumption,1000 metric tons,435.0,japan
-2025,2025,12,soybean oil,feed waste domestic consumption,1000 metric tons,0.0,japan
-2025,2025,12,soybean oil,domestic consumption,1000 metric tons,475.0,japan
-2025,2025,12,soybean oil,ending stocks,1000 metric tons,27.0,japan
-2025,2025,12,soybean oil,total distribution,1000 metric tons,503.0,japan
-2025,2025,12,corn,area harvested,1000 hectares,4.0,japan
-2025,2025,12,corn,beginning stocks,1000 metric tons,1371.0,japan
-2025,2025,12,corn,production,1000 metric tons,21.0,japan
-2025,2025,12,corn,imports,1000 metric tons,15500.0,japan
-2025,2025,12,corn,trade year imports,1000 metric tons,15500.0,japan
-2025,2025,12,corn,trade year imports from u.s.,1000 metric tons,0.0,japan
-2025,2025,12,corn,total supply,1000 metric tons,16892.0,japan
-2025,2025,12,corn,exports,1000 metric tons,0.0,japan
-2025,2025,12,corn,trade year exports,1000 metric tons,0.0,japan
-2025,2025,12,corn,feed domestic consumption,1000 metric tons,12200.0,japan
-2025,2025,12,corn,"food, seed, and industrial consumption",1000 metric tons,3300.0,japan
-2025,2025,12,corn,domestic consumption,1000 metric tons,15500.0,japan
-2025,2025,12,corn,ending stocks,1000 metric tons,1392.0,japan
-2025,2025,12,corn,total distribution,1000 metric tons,16892.0,japan
-2025,2025,12,corn,yield,yield (metric tons per hectare),5.25,japan
-2025,2025,12,soybean oil,crush,1000 metric tons,15300.0,european
-2025,2025,12,soybean oil,extraction rate,percentage,0.19,european
-2025,2025,12,soybean oil,beginning stocks,1000 metric tons,596.0,european
-2025,2025,12,soybean oil,production,1000 metric tons,2907.0,european
-2025,2025,12,soybean oil,imports,1000 metric tons,650.0,european
-2025,2025,12,soybean oil,total supply,1000 metric tons,4153.0,european
-2025,2025,12,soybean oil,exports,1000 metric tons,850.0,european
-2025,2025,12,soybean oil,industrial domestic consumption,1000 metric tons,1250.0,european
-2025,2025,12,soybean oil,food use domestic consumption,1000 metric tons,1500.0,european
-2025,2025,12,soybean oil,feed waste domestic consumption,1000 metric tons,55.0,european
-2025,2025,12,soybean oil,domestic consumption,1000 metric tons,2805.0,european
-2025,2025,12,soybean oil,ending stocks,1000 metric tons,498.0,european
-2025,2025,12,soybean oil,total distribution,1000 metric tons,4153.0,european
-2025,2025,12,soybean oil,crush,1000 metric tons,6800.0,mexico
-2025,2025,12,soybean oil,extraction rate,percentage,0.1846,mexico
-2025,2025,12,soybean oil,beginning stocks,1000 metric tons,164.0,mexico
-2025,2025,12,soybean oil,production,1000 metric tons,1255.0,mexico
-2025,2025,12,soybean oil,imports,1000 metric tons,200.0,mexico
-2025,2025,12,soybean oil,total supply,1000 metric tons,1619.0,mexico
-2025,2025,12,soybean oil,exports,1000 metric tons,40.0,mexico
-2025,2025,12,soybean oil,industrial domestic consumption,1000 metric tons,0.0,mexico
-2025,2025,12,soybean oil,food use domestic consumption,1000 metric tons,1380.0,mexico
-2025,2025,12,soybean oil,feed waste domestic consumption,1000 metric tons,0.0,mexico
-2025,2025,12,soybean oil,domestic consumption,1000 metric tons,1380.0,mexico
-2025,2025,12,soybean oil,ending stocks,1000 metric tons,199.0,mexico
-2025,2025,12,soybean oil,total distribution,1000 metric tons,1619.0,mexico
-2025,2025,12,wheat,area harvested,1000 hectares,15071.0,united
-2025,2025,12,wheat,beginning stocks,1000 metric tons,23147.0,united
-2025,2025,12,wheat,production,1000 metric tons,54010.0,united
-2025,2025,12,wheat,imports,1000 metric tons,3266.0,united
-2025,2025,12,wheat,trade year imports,1000 metric tons,3250.0,united
-2025,2025,12,wheat,trade year imports from u.s.,1000 metric tons,0.0,united
-2025,2025,12,wheat,total supply,1000 metric tons,80423.0,united
-2025,2025,12,wheat,exports,1000 metric tons,24494.0,united
-2025,2025,12,wheat,trade year exports,1000 metric tons,24500.0,united
-2025,2025,12,wheat,feed domestic consumption,1000 metric tons,3266.0,united
-2025,2025,12,wheat,"food, seed, and industrial consumption",1000 metric tons,28141.0,united
-2025,2025,12,wheat,domestic consumption,1000 metric tons,31407.0,united
-2025,2025,12,wheat,ending stocks,1000 metric tons,24522.0,united
-2025,2025,12,wheat,total distribution,1000 metric tons,80423.0,united
-2025,2025,12,wheat,yield,yield (metric tons per hectare),3.5837,united
-2025,2025,12,wheat,area harvested,1000 hectares,23600.0,china
-2025,2025,12,wheat,beginning stocks,1000 metric tons,127777.0,china
-2025,2025,12,wheat,production,1000 metric tons,140000.0,china
-2025,2025,12,wheat,imports,1000 metric tons,6000.0,china
-2025,2025,12,wheat,trade year imports,1000 metric tons,6000.0,china
-2025,2025,12,wheat,trade year imports from u.s.,1000 metric tons,0.0,china
-2025,2025,12,wheat,total supply,1000 metric tons,273777.0,china
-2025,2025,12,wheat,exports,1000 metric tons,1000.0,china
-2025,2025,12,wheat,trade year exports,1000 metric tons,1000.0,china
-2025,2025,12,wheat,feed domestic consumption,1000 metric tons,31000.0,china
-2025,2025,12,wheat,"food, seed, and industrial consumption",1000 metric tons,117000.0,china
-2025,2025,12,wheat,domestic consumption,1000 metric tons,148000.0,china
-2025,2025,12,wheat,ending stocks,1000 metric tons,124777.0,china
-2025,2025,12,wheat,total distribution,1000 metric tons,273777.0,china
-2025,2025,12,wheat,yield,yield (metric tons per hectare),5.9322,china
-2025,2025,12,soybeans,area harvested,1000 hectares,155.0,japan
-2025,2025,12,soybeans,beginning stocks,1000 metric tons,201.0,japan
-2025,2025,12,soybeans,production,1000 metric tons,250.0,japan
-2025,2025,12,soybeans,imports,1000 metric tons,3100.0,japan
-2025,2025,12,soybeans,total supply,1000 metric tons,3551.0,japan
-2025,2025,12,soybeans,exports,1000 metric tons,0.0,japan
-2025,2025,12,soybeans,crush,1000 metric tons,2350.0,japan
-2025,2025,12,soybeans,food use domestic consumption,1000 metric tons,900.0,japan
-2025,2025,12,soybeans,feed waste domestic consumption,1000 metric tons,100.0,japan
-2025,2025,12,soybeans,domestic consumption,1000 metric tons,3350.0,japan
-2025,2025,12,soybeans,ending stocks,1000 metric tons,201.0,japan
-2025,2025,12,soybeans,total distribution,1000 metric tons,3551.0,japan
-2025,2025,12,soybeans,yield,yield (metric tons per hectare),1.6129,japan
-2025,2025,12,soybeans,area harvested,1000 hectares,145.0,mexico
-2025,2025,12,soybeans,beginning stocks,1000 metric tons,582.0,mexico
-2025,2025,12,soybeans,production,1000 metric tons,280.0,mexico
-2025,2025,12,soybeans,imports,1000 metric tons,6700.0,mexico
-2025,2025,12,soybeans,total supply,1000 metric tons,7562.0,mexico
-2025,2025,12,soybeans,exports,1000 metric tons,10.0,mexico
-2025,2025,12,soybeans,crush,1000 metric tons,6800.0,mexico
-2025,2025,12,soybeans,food use domestic consumption,1000 metric tons,0.0,mexico
-2025,2025,12,soybeans,feed waste domestic consumption,1000 metric tons,85.0,mexico
-2025,2025,12,soybeans,domestic consumption,1000 metric tons,6885.0,mexico
-2025,2025,12,soybeans,ending stocks,1000 metric tons,667.0,mexico
-2025,2025,12,soybeans,total distribution,1000 metric tons,7562.0,mexico
-2025,2025,12,soybeans,yield,yield (metric tons per hectare),1.931,mexico
-2025,2025,12,corn,area harvested,1000 hectares,36441.0,united
-2025,2025,12,corn,beginning stocks,1000 metric tons,38905.0,united
-2025,2025,12,corn,production,1000 metric tons,425525.0,united
-2025,2025,12,corn,imports,1000 metric tons,635.0,united
-2025,2025,12,corn,trade year imports,1000 metric tons,650.0,united
-2025,2025,12,corn,trade year imports from u.s.,1000 metric tons,0.0,united
-2025,2025,12,corn,total supply,1000 metric tons,465065.0,united
-2025,2025,12,corn,exports,1000 metric tons,81284.0,united
-2025,2025,12,corn,trade year exports,1000 metric tons,80000.0,united
-2025,2025,12,corn,feed domestic consumption,1000 metric tons,154947.0,united
-2025,2025,12,corn,"food, seed, and industrial consumption",1000 metric tons,177300.0,united
-2025,2025,12,corn,domestic consumption,1000 metric tons,332247.0,united
-2025,2025,12,corn,ending stocks,1000 metric tons,51534.0,united
-2025,2025,12,corn,total distribution,1000 metric tons,465065.0,united
-2025,2025,12,corn,yield,yield (metric tons per hectare),11.6771,united
-2025,2025,12,soybeans,area harvested,1000 hectares,10500.0,china
-2025,2025,12,soybeans,beginning stocks,1000 metric tons,44488.0,china
-2025,2025,12,soybeans,production,1000 metric tons,21000.0,china
-2025,2025,12,soybeans,imports,1000 metric tons,112000.0,china
-2025,2025,12,soybeans,total supply,1000 metric tons,177488.0,china
-2025,2025,12,soybeans,exports,1000 metric tons,100.0,china
-2025,2025,12,soybeans,crush,1000 metric tons,108000.0,china
-2025,2025,12,soybeans,food use domestic consumption,1000 metric tons,18500.0,china
-2025,2025,12,soybeans,feed waste domestic consumption,1000 metric tons,6500.0,china
-2025,2025,12,soybeans,domestic consumption,1000 metric tons,133000.0,china
-2025,2025,12,soybeans,ending stocks,1000 metric tons,44388.0,china
-2025,2025,12,soybeans,total distribution,1000 metric tons,177488.0,china
-2025,2025,12,soybeans,yield,yield (metric tons per hectare),2.0,china
-2025,2025,12,wheat,area harvested,1000 hectares,232.0,japan
-2025,2025,12,wheat,beginning stocks,1000 metric tons,1162.0,japan
-2025,2025,12,wheat,production,1000 metric tons,1100.0,japan
-2025,2025,12,wheat,imports,1000 metric tons,5450.0,japan
-2025,2025,12,wheat,trade year imports,1000 metric tons,5450.0,japan
-2025,2025,12,wheat,trade year imports from u.s.,1000 metric tons,0.0,japan
-2025,2025,12,wheat,total supply,1000 metric tons,7712.0,japan
-2025,2025,12,wheat,exports,1000 metric tons,340.0,japan
-2025,2025,12,wheat,trade year exports,1000 metric tons,340.0,japan
-2025,2025,12,wheat,feed domestic consumption,1000 metric tons,700.0,japan
-2025,2025,12,wheat,"food, seed, and industrial consumption",1000 metric tons,5500.0,japan
-2025,2025,12,wheat,domestic consumption,1000 metric tons,6200.0,japan
-2025,2025,12,wheat,ending stocks,1000 metric tons,1172.0,japan
-2025,2025,12,wheat,total distribution,1000 metric tons,7712.0,japan
-2025,2025,12,wheat,yield,yield (metric tons per hectare),4.7414,japan
-2025,2025,12,soybean meal,crush,1000 metric tons,69536.0,united
-2025,2025,12,soybean meal,extraction rate,percentage,0.7857,united
-2025,2025,12,soybean meal,beginning stocks,1000 metric tons,408.0,united
-2025,2025,12,soybean meal,production,1000 metric tons,54635.0,united
-2025,2025,12,soybean meal,imports,1000 metric tons,612.0,united
-2025,2025,12,soybean meal,total supply,1000 metric tons,55655.0,united
-2025,2025,12,soybean meal,exports,1000 metric tons,17418.0,united
-2025,2025,12,soybean meal,industrial domestic consumption,1000 metric tons,0.0,united
-2025,2025,12,soybean meal,food use domestic consumption,1000 metric tons,0.0,united
-2025,2025,12,soybean meal,feed waste domestic consumption,1000 metric tons,37806.0,united
-2025,2025,12,soybean meal,domestic consumption,1000 metric tons,37806.0,united
-2025,2025,12,soybean meal,ending stocks,1000 metric tons,431.0,united
-2025,2025,12,soybean meal,total distribution,1000 metric tons,55655.0,united
-2025,2025,12,soybean meal,soybean meal equivalent,1000 metric tons,37806.0,united
-2025,2025,12,wheat,area harvested,1000 hectares,23965.0,european
-2025,2025,12,wheat,beginning stocks,1000 metric tons,11714.0,european
-2025,2025,12,wheat,production,1000 metric tons,144000.0,european
-2025,2025,12,wheat,imports,1000 metric tons,5500.0,european
-2025,2025,12,wheat,trade year imports,1000 metric tons,5500.0,european
-2025,2025,12,wheat,trade year imports from u.s.,1000 metric tons,0.0,european
-2025,2025,12,wheat,total supply,1000 metric tons,161214.0,european
-2025,2025,12,wheat,exports,1000 metric tons,33000.0,european
-2025,2025,12,wheat,trade year exports,1000 metric tons,33000.0,european
-2025,2025,12,wheat,feed domestic consumption,1000 metric tons,50000.0,european
-2025,2025,12,wheat,"food, seed, and industrial consumption",1000 metric tons,64500.0,european
-2025,2025,12,wheat,domestic consumption,1000 metric tons,114500.0,european
-2025,2025,12,wheat,ending stocks,1000 metric tons,13714.0,european
-2025,2025,12,wheat,total distribution,1000 metric tons,161214.0,european
-2025,2025,12,wheat,yield,yield (metric tons per hectare),6.0088,european
+market year,calendar year,calendar month,commodity,country,attribute,amount,unit
+2025,2025,december,corn,china,area harvested,44300.0,1000 hectares
+2025,2025,december,corn,china,beginning stocks,191928.0,1000 metric tons
+2025,2025,december,corn,china,production,295000.0,1000 metric tons
+2025,2025,december,corn,china,imports,8000.0,1000 metric tons
+2025,2025,december,corn,china,trade year imports,8000.0,1000 metric tons
+2025,2025,december,corn,china,trade year imports from u.s.,0.0,1000 metric tons
+2025,2025,december,corn,china,total supply,494928.0,1000 metric tons
+2025,2025,december,corn,china,exports,20.0,1000 metric tons
+2025,2025,december,corn,china,trade year exports,20.0,1000 metric tons
+2025,2025,december,corn,china,feed domestic consumption,239000.0,1000 metric tons
+2025,2025,december,corn,china,"food, seed, and industrial consumption",82000.0,1000 metric tons
+2025,2025,december,corn,china,domestic consumption,321000.0,1000 metric tons
+2025,2025,december,corn,china,ending stocks,173908.0,1000 metric tons
+2025,2025,december,corn,china,total distribution,494928.0,1000 metric tons
+2025,2025,december,corn,china,yield,6.6591,yield (metric tons per hectare)
+2025,2025,december,soybean oil,china,crush,108000.0,1000 metric tons
+2025,2025,december,soybean oil,china,extraction rate,0.19,percentage
+2025,2025,december,soybean oil,china,beginning stocks,776.0,1000 metric tons
+2025,2025,december,soybean oil,china,production,20520.0,1000 metric tons
+2025,2025,december,soybean oil,china,imports,250.0,1000 metric tons
+2025,2025,december,soybean oil,china,total supply,21546.0,1000 metric tons
+2025,2025,december,soybean oil,china,exports,250.0,1000 metric tons
+2025,2025,december,soybean oil,china,industrial domestic consumption,0.0,1000 metric tons
+2025,2025,december,soybean oil,china,food use domestic consumption,20500.0,1000 metric tons
+2025,2025,december,soybean oil,china,feed waste domestic consumption,0.0,1000 metric tons
+2025,2025,december,soybean oil,china,domestic consumption,20500.0,1000 metric tons
+2025,2025,december,soybean oil,china,ending stocks,796.0,1000 metric tons
+2025,2025,december,soybean oil,china,total distribution,21546.0,1000 metric tons
+2025,2025,december,soybean meal,mexico,crush,6800.0,1000 metric tons
+2025,2025,december,soybean meal,mexico,extraction rate,0.79,percentage
+2025,2025,december,soybean meal,mexico,beginning stocks,307.0,1000 metric tons
+2025,2025,december,soybean meal,mexico,production,5372.0,1000 metric tons
+2025,2025,december,soybean meal,mexico,imports,2550.0,1000 metric tons
+2025,2025,december,soybean meal,mexico,total supply,8229.0,1000 metric tons
+2025,2025,december,soybean meal,mexico,exports,1.0,1000 metric tons
+2025,2025,december,soybean meal,mexico,industrial domestic consumption,0.0,1000 metric tons
+2025,2025,december,soybean meal,mexico,food use domestic consumption,50.0,1000 metric tons
+2025,2025,december,soybean meal,mexico,feed waste domestic consumption,7850.0,1000 metric tons
+2025,2025,december,soybean meal,mexico,domestic consumption,7900.0,1000 metric tons
+2025,2025,december,soybean meal,mexico,ending stocks,328.0,1000 metric tons
+2025,2025,december,soybean meal,mexico,total distribution,8229.0,1000 metric tons
+2025,2025,december,soybean meal,mexico,soybean meal equivalent,7850.0,1000 metric tons
+2025,2025,december,soybeans,european union,area harvested,1070.0,1000 hectares
+2025,2025,december,soybeans,european union,beginning stocks,1602.0,1000 metric tons
+2025,2025,december,soybeans,european union,production,2785.0,1000 metric tons
+2025,2025,december,soybeans,european union,imports,14300.0,1000 metric tons
+2025,2025,december,soybeans,european union,total supply,18687.0,1000 metric tons
+2025,2025,december,soybeans,european union,exports,300.0,1000 metric tons
+2025,2025,december,soybeans,european union,crush,15300.0,1000 metric tons
+2025,2025,december,soybeans,european union,food use domestic consumption,220.0,1000 metric tons
+2025,2025,december,soybeans,european union,feed waste domestic consumption,1300.0,1000 metric tons
+2025,2025,december,soybeans,european union,domestic consumption,16820.0,1000 metric tons
+2025,2025,december,soybeans,european union,ending stocks,1567.0,1000 metric tons
+2025,2025,december,soybeans,european union,total distribution,18687.0,1000 metric tons
+2025,2025,december,soybeans,european union,yield,2.6028,yield (metric tons per hectare)
+2025,2025,december,soybean meal,japan,crush,2350.0,1000 metric tons
+2025,2025,december,soybean meal,japan,extraction rate,0.7511,percentage
+2025,2025,december,soybean meal,japan,beginning stocks,116.0,1000 metric tons
+2025,2025,december,soybean meal,japan,production,1765.0,1000 metric tons
+2025,2025,december,soybean meal,japan,imports,1700.0,1000 metric tons
+2025,2025,december,soybean meal,japan,total supply,3581.0,1000 metric tons
+2025,2025,december,soybean meal,japan,exports,1.0,1000 metric tons
+2025,2025,december,soybean meal,japan,industrial domestic consumption,210.0,1000 metric tons
+2025,2025,december,soybean meal,japan,food use domestic consumption,200.0,1000 metric tons
+2025,2025,december,soybean meal,japan,feed waste domestic consumption,3050.0,1000 metric tons
+2025,2025,december,soybean meal,japan,domestic consumption,3460.0,1000 metric tons
+2025,2025,december,soybean meal,japan,ending stocks,120.0,1000 metric tons
+2025,2025,december,soybean meal,japan,total distribution,3581.0,1000 metric tons
+2025,2025,december,soybean meal,japan,soybean meal equivalent,3050.0,1000 metric tons
+2025,2025,december,soybean meal,european union,crush,15300.0,1000 metric tons
+2025,2025,december,soybean meal,european union,extraction rate,0.79,percentage
+2025,2025,december,soybean meal,european union,beginning stocks,1751.0,1000 metric tons
+2025,2025,december,soybean meal,european union,production,12087.0,1000 metric tons
+2025,2025,december,soybean meal,european union,imports,17550.0,1000 metric tons
+2025,2025,december,soybean meal,european union,total supply,31388.0,1000 metric tons
+2025,2025,december,soybean meal,european union,exports,600.0,1000 metric tons
+2025,2025,december,soybean meal,european union,industrial domestic consumption,10.0,1000 metric tons
+2025,2025,december,soybean meal,european union,food use domestic consumption,32.0,1000 metric tons
+2025,2025,december,soybean meal,european union,feed waste domestic consumption,29900.0,1000 metric tons
+2025,2025,december,soybean meal,european union,domestic consumption,29942.0,1000 metric tons
+2025,2025,december,soybean meal,european union,ending stocks,846.0,1000 metric tons
+2025,2025,december,soybean meal,european union,total distribution,31388.0,1000 metric tons
+2025,2025,december,soybean meal,european union,soybean meal equivalent,29900.0,1000 metric tons
+2025,2025,december,corn,european union,area harvested,8150.0,1000 hectares
+2025,2025,december,corn,european union,beginning stocks,6135.0,1000 metric tons
+2025,2025,december,corn,european union,production,56750.0,1000 metric tons
+2025,2025,december,corn,european union,imports,20000.0,1000 metric tons
+2025,2025,december,corn,european union,trade year imports,20000.0,1000 metric tons
+2025,2025,december,corn,european union,trade year imports from u.s.,0.0,1000 metric tons
+2025,2025,december,corn,european union,total supply,82885.0,1000 metric tons
+2025,2025,december,corn,european union,exports,1800.0,1000 metric tons
+2025,2025,december,corn,european union,trade year exports,1800.0,1000 metric tons
+2025,2025,december,corn,european union,feed domestic consumption,55200.0,1000 metric tons
+2025,2025,december,corn,european union,"food, seed, and industrial consumption",20100.0,1000 metric tons
+2025,2025,december,corn,european union,domestic consumption,75300.0,1000 metric tons
+2025,2025,december,corn,european union,ending stocks,5785.0,1000 metric tons
+2025,2025,december,corn,european union,total distribution,82885.0,1000 metric tons
+2025,2025,december,corn,european union,yield,6.9632,yield (metric tons per hectare)
+2025,2025,december,soybean meal,china,crush,108000.0,1000 metric tons
+2025,2025,december,soybean meal,china,extraction rate,0.792,percentage
+2025,2025,december,soybean meal,china,beginning stocks,943.0,1000 metric tons
+2025,2025,december,soybean meal,china,production,85536.0,1000 metric tons
+2025,2025,december,soybean meal,china,imports,50.0,1000 metric tons
+2025,2025,december,soybean meal,china,total supply,86529.0,1000 metric tons
+2025,2025,december,soybean meal,china,exports,1200.0,1000 metric tons
+2025,2025,december,soybean meal,china,industrial domestic consumption,1150.0,1000 metric tons
+2025,2025,december,soybean meal,china,food use domestic consumption,0.0,1000 metric tons
+2025,2025,december,soybean meal,china,feed waste domestic consumption,83000.0,1000 metric tons
+2025,2025,december,soybean meal,china,domestic consumption,84150.0,1000 metric tons
+2025,2025,december,soybean meal,china,ending stocks,1179.0,1000 metric tons
+2025,2025,december,soybean meal,china,total distribution,86529.0,1000 metric tons
+2025,2025,december,soybean meal,china,soybean meal equivalent,83000.0,1000 metric tons
+2025,2025,december,wheat,mexico,area harvested,320.0,1000 hectares
+2025,2025,december,wheat,mexico,beginning stocks,855.0,1000 metric tons
+2025,2025,december,wheat,mexico,production,1750.0,1000 metric tons
+2025,2025,december,wheat,mexico,imports,6700.0,1000 metric tons
+2025,2025,december,wheat,mexico,trade year imports,6700.0,1000 metric tons
+2025,2025,december,wheat,mexico,trade year imports from u.s.,0.0,1000 metric tons
+2025,2025,december,wheat,mexico,total supply,9305.0,1000 metric tons
+2025,2025,december,wheat,mexico,exports,100.0,1000 metric tons
+2025,2025,december,wheat,mexico,trade year exports,100.0,1000 metric tons
+2025,2025,december,wheat,mexico,feed domestic consumption,350.0,1000 metric tons
+2025,2025,december,wheat,mexico,"food, seed, and industrial consumption",8000.0,1000 metric tons
+2025,2025,december,wheat,mexico,domestic consumption,8350.0,1000 metric tons
+2025,2025,december,wheat,mexico,ending stocks,855.0,1000 metric tons
+2025,2025,december,wheat,mexico,total distribution,9305.0,1000 metric tons
+2025,2025,december,wheat,mexico,yield,5.4688,yield (metric tons per hectare)
+2025,2025,december,soybean oil,united states,crush,69536.0,1000 metric tons
+2025,2025,december,soybean oil,united states,extraction rate,0.1967,percentage
+2025,2025,december,soybean oil,united states,beginning stocks,794.0,1000 metric tons
+2025,2025,december,soybean oil,united states,production,13676.0,1000 metric tons
+2025,2025,december,soybean oil,united states,imports,170.0,1000 metric tons
+2025,2025,december,soybean oil,united states,total supply,14640.0,1000 metric tons
+2025,2025,december,soybean oil,united states,exports,408.0,1000 metric tons
+2025,2025,december,soybean oil,united states,industrial domestic consumption,7031.0,1000 metric tons
+2025,2025,december,soybean oil,united states,food use domestic consumption,6418.0,1000 metric tons
+2025,2025,december,soybean oil,united states,feed waste domestic consumption,0.0,1000 metric tons
+2025,2025,december,soybean oil,united states,domestic consumption,13449.0,1000 metric tons
+2025,2025,december,soybean oil,united states,ending stocks,783.0,1000 metric tons
+2025,2025,december,soybean oil,united states,total distribution,14640.0,1000 metric tons
+2025,2025,december,corn,mexico,area harvested,6800.0,1000 hectares
+2025,2025,december,corn,mexico,beginning stocks,5661.0,1000 metric tons
+2025,2025,december,corn,mexico,production,26000.0,1000 metric tons
+2025,2025,december,corn,mexico,imports,25800.0,1000 metric tons
+2025,2025,december,corn,mexico,trade year imports,25800.0,1000 metric tons
+2025,2025,december,corn,mexico,trade year imports from u.s.,0.0,1000 metric tons
+2025,2025,december,corn,mexico,total supply,57461.0,1000 metric tons
+2025,2025,december,corn,mexico,exports,30.0,1000 metric tons
+2025,2025,december,corn,mexico,trade year exports,30.0,1000 metric tons
+2025,2025,december,corn,mexico,feed domestic consumption,29300.0,1000 metric tons
+2025,2025,december,corn,mexico,"food, seed, and industrial consumption",21700.0,1000 metric tons
+2025,2025,december,corn,mexico,domestic consumption,51000.0,1000 metric tons
+2025,2025,december,corn,mexico,ending stocks,6431.0,1000 metric tons
+2025,2025,december,corn,mexico,total distribution,57461.0,1000 metric tons
+2025,2025,december,corn,mexico,yield,3.8235,yield (metric tons per hectare)
+2025,2025,december,soybeans,united states,area harvested,32502.0,1000 hectares
+2025,2025,december,soybeans,united states,beginning stocks,8614.0,1000 metric tons
+2025,2025,december,soybeans,united states,production,115751.0,1000 metric tons
+2025,2025,december,soybeans,united states,imports,544.0,1000 metric tons
+2025,2025,december,soybeans,united states,total supply,124909.0,1000 metric tons
+2025,2025,december,soybeans,united states,exports,44497.0,1000 metric tons
+2025,2025,december,soybeans,united states,crush,69536.0,1000 metric tons
+2025,2025,december,soybeans,united states,food use domestic consumption,0.0,1000 metric tons
+2025,2025,december,soybeans,united states,feed waste domestic consumption,2991.0,1000 metric tons
+2025,2025,december,soybeans,united states,domestic consumption,72527.0,1000 metric tons
+2025,2025,december,soybeans,united states,ending stocks,7885.0,1000 metric tons
+2025,2025,december,soybeans,united states,total distribution,124909.0,1000 metric tons
+2025,2025,december,soybeans,united states,yield,3.5614,yield (metric tons per hectare)
+2025,2025,december,soybean oil,japan,crush,2350.0,1000 metric tons
+2025,2025,december,soybean oil,japan,extraction rate,0.2047,percentage
+2025,2025,december,soybean oil,japan,beginning stocks,20.0,1000 metric tons
+2025,2025,december,soybean oil,japan,production,481.0,1000 metric tons
+2025,2025,december,soybean oil,japan,imports,2.0,1000 metric tons
+2025,2025,december,soybean oil,japan,total supply,503.0,1000 metric tons
+2025,2025,december,soybean oil,japan,exports,1.0,1000 metric tons
+2025,2025,december,soybean oil,japan,industrial domestic consumption,40.0,1000 metric tons
+2025,2025,december,soybean oil,japan,food use domestic consumption,435.0,1000 metric tons
+2025,2025,december,soybean oil,japan,feed waste domestic consumption,0.0,1000 metric tons
+2025,2025,december,soybean oil,japan,domestic consumption,475.0,1000 metric tons
+2025,2025,december,soybean oil,japan,ending stocks,27.0,1000 metric tons
+2025,2025,december,soybean oil,japan,total distribution,503.0,1000 metric tons
+2025,2025,december,corn,japan,area harvested,4.0,1000 hectares
+2025,2025,december,corn,japan,beginning stocks,1371.0,1000 metric tons
+2025,2025,december,corn,japan,production,21.0,1000 metric tons
+2025,2025,december,corn,japan,imports,15500.0,1000 metric tons
+2025,2025,december,corn,japan,trade year imports,15500.0,1000 metric tons
+2025,2025,december,corn,japan,trade year imports from u.s.,0.0,1000 metric tons
+2025,2025,december,corn,japan,total supply,16892.0,1000 metric tons
+2025,2025,december,corn,japan,exports,0.0,1000 metric tons
+2025,2025,december,corn,japan,trade year exports,0.0,1000 metric tons
+2025,2025,december,corn,japan,feed domestic consumption,12200.0,1000 metric tons
+2025,2025,december,corn,japan,"food, seed, and industrial consumption",3300.0,1000 metric tons
+2025,2025,december,corn,japan,domestic consumption,15500.0,1000 metric tons
+2025,2025,december,corn,japan,ending stocks,1392.0,1000 metric tons
+2025,2025,december,corn,japan,total distribution,16892.0,1000 metric tons
+2025,2025,december,corn,japan,yield,5.25,yield (metric tons per hectare)
+2025,2025,december,soybean oil,european union,crush,15300.0,1000 metric tons
+2025,2025,december,soybean oil,european union,extraction rate,0.19,percentage
+2025,2025,december,soybean oil,european union,beginning stocks,596.0,1000 metric tons
+2025,2025,december,soybean oil,european union,production,2907.0,1000 metric tons
+2025,2025,december,soybean oil,european union,imports,650.0,1000 metric tons
+2025,2025,december,soybean oil,european union,total supply,4153.0,1000 metric tons
+2025,2025,december,soybean oil,european union,exports,850.0,1000 metric tons
+2025,2025,december,soybean oil,european union,industrial domestic consumption,1250.0,1000 metric tons
+2025,2025,december,soybean oil,european union,food use domestic consumption,1500.0,1000 metric tons
+2025,2025,december,soybean oil,european union,feed waste domestic consumption,55.0,1000 metric tons
+2025,2025,december,soybean oil,european union,domestic consumption,2805.0,1000 metric tons
+2025,2025,december,soybean oil,european union,ending stocks,498.0,1000 metric tons
+2025,2025,december,soybean oil,european union,total distribution,4153.0,1000 metric tons
+2025,2025,december,soybean oil,mexico,crush,6800.0,1000 metric tons
+2025,2025,december,soybean oil,mexico,extraction rate,0.1846,percentage
+2025,2025,december,soybean oil,mexico,beginning stocks,164.0,1000 metric tons
+2025,2025,december,soybean oil,mexico,production,1255.0,1000 metric tons
+2025,2025,december,soybean oil,mexico,imports,200.0,1000 metric tons
+2025,2025,december,soybean oil,mexico,total supply,1619.0,1000 metric tons
+2025,2025,december,soybean oil,mexico,exports,40.0,1000 metric tons
+2025,2025,december,soybean oil,mexico,industrial domestic consumption,0.0,1000 metric tons
+2025,2025,december,soybean oil,mexico,food use domestic consumption,1380.0,1000 metric tons
+2025,2025,december,soybean oil,mexico,feed waste domestic consumption,0.0,1000 metric tons
+2025,2025,december,soybean oil,mexico,domestic consumption,1380.0,1000 metric tons
+2025,2025,december,soybean oil,mexico,ending stocks,199.0,1000 metric tons
+2025,2025,december,soybean oil,mexico,total distribution,1619.0,1000 metric tons
+2025,2025,december,wheat,united states,area harvested,15071.0,1000 hectares
+2025,2025,december,wheat,united states,beginning stocks,23147.0,1000 metric tons
+2025,2025,december,wheat,united states,production,54010.0,1000 metric tons
+2025,2025,december,wheat,united states,imports,3266.0,1000 metric tons
+2025,2025,december,wheat,united states,trade year imports,3250.0,1000 metric tons
+2025,2025,december,wheat,united states,trade year imports from u.s.,0.0,1000 metric tons
+2025,2025,december,wheat,united states,total supply,80423.0,1000 metric tons
+2025,2025,december,wheat,united states,exports,24494.0,1000 metric tons
+2025,2025,december,wheat,united states,trade year exports,24500.0,1000 metric tons
+2025,2025,december,wheat,united states,feed domestic consumption,3266.0,1000 metric tons
+2025,2025,december,wheat,united states,"food, seed, and industrial consumption",28141.0,1000 metric tons
+2025,2025,december,wheat,united states,domestic consumption,31407.0,1000 metric tons
+2025,2025,december,wheat,united states,ending stocks,24522.0,1000 metric tons
+2025,2025,december,wheat,united states,total distribution,80423.0,1000 metric tons
+2025,2025,december,wheat,united states,yield,3.5837,yield (metric tons per hectare)
+2025,2025,december,wheat,china,area harvested,23600.0,1000 hectares
+2025,2025,december,wheat,china,beginning stocks,127777.0,1000 metric tons
+2025,2025,december,wheat,china,production,140000.0,1000 metric tons
+2025,2025,december,wheat,china,imports,6000.0,1000 metric tons
+2025,2025,december,wheat,china,trade year imports,6000.0,1000 metric tons
+2025,2025,december,wheat,china,trade year imports from u.s.,0.0,1000 metric tons
+2025,2025,december,wheat,china,total supply,273777.0,1000 metric tons
+2025,2025,december,wheat,china,exports,1000.0,1000 metric tons
+2025,2025,december,wheat,china,trade year exports,1000.0,1000 metric tons
+2025,2025,december,wheat,china,feed domestic consumption,31000.0,1000 metric tons
+2025,2025,december,wheat,china,"food, seed, and industrial consumption",117000.0,1000 metric tons
+2025,2025,december,wheat,china,domestic consumption,148000.0,1000 metric tons
+2025,2025,december,wheat,china,ending stocks,124777.0,1000 metric tons
+2025,2025,december,wheat,china,total distribution,273777.0,1000 metric tons
+2025,2025,december,wheat,china,yield,5.9322,yield (metric tons per hectare)
+2025,2025,december,soybeans,japan,area harvested,155.0,1000 hectares
+2025,2025,december,soybeans,japan,beginning stocks,201.0,1000 metric tons
+2025,2025,december,soybeans,japan,production,250.0,1000 metric tons
+2025,2025,december,soybeans,japan,imports,3100.0,1000 metric tons
+2025,2025,december,soybeans,japan,total supply,3551.0,1000 metric tons
+2025,2025,december,soybeans,japan,exports,0.0,1000 metric tons
+2025,2025,december,soybeans,japan,crush,2350.0,1000 metric tons
+2025,2025,december,soybeans,japan,food use domestic consumption,900.0,1000 metric tons
+2025,2025,december,soybeans,japan,feed waste domestic consumption,100.0,1000 metric tons
+2025,2025,december,soybeans,japan,domestic consumption,3350.0,1000 metric tons
+2025,2025,december,soybeans,japan,ending stocks,201.0,1000 metric tons
+2025,2025,december,soybeans,japan,total distribution,3551.0,1000 metric tons
+2025,2025,december,soybeans,japan,yield,1.6129,yield (metric tons per hectare)
+2025,2025,december,soybeans,mexico,area harvested,145.0,1000 hectares
+2025,2025,december,soybeans,mexico,beginning stocks,582.0,1000 metric tons
+2025,2025,december,soybeans,mexico,production,280.0,1000 metric tons
+2025,2025,december,soybeans,mexico,imports,6700.0,1000 metric tons
+2025,2025,december,soybeans,mexico,total supply,7562.0,1000 metric tons
+2025,2025,december,soybeans,mexico,exports,10.0,1000 metric tons
+2025,2025,december,soybeans,mexico,crush,6800.0,1000 metric tons
+2025,2025,december,soybeans,mexico,food use domestic consumption,0.0,1000 metric tons
+2025,2025,december,soybeans,mexico,feed waste domestic consumption,85.0,1000 metric tons
+2025,2025,december,soybeans,mexico,domestic consumption,6885.0,1000 metric tons
+2025,2025,december,soybeans,mexico,ending stocks,667.0,1000 metric tons
+2025,2025,december,soybeans,mexico,total distribution,7562.0,1000 metric tons
+2025,2025,december,soybeans,mexico,yield,1.931,yield (metric tons per hectare)
+2025,2025,december,corn,united states,area harvested,36441.0,1000 hectares
+2025,2025,december,corn,united states,beginning stocks,38905.0,1000 metric tons
+2025,2025,december,corn,united states,production,425525.0,1000 metric tons
+2025,2025,december,corn,united states,imports,635.0,1000 metric tons
+2025,2025,december,corn,united states,trade year imports,650.0,1000 metric tons
+2025,2025,december,corn,united states,trade year imports from u.s.,0.0,1000 metric tons
+2025,2025,december,corn,united states,total supply,465065.0,1000 metric tons
+2025,2025,december,corn,united states,exports,81284.0,1000 metric tons
+2025,2025,december,corn,united states,trade year exports,80000.0,1000 metric tons
+2025,2025,december,corn,united states,feed domestic consumption,154947.0,1000 metric tons
+2025,2025,december,corn,united states,"food, seed, and industrial consumption",177300.0,1000 metric tons
+2025,2025,december,corn,united states,domestic consumption,332247.0,1000 metric tons
+2025,2025,december,corn,united states,ending stocks,51534.0,1000 metric tons
+2025,2025,december,corn,united states,total distribution,465065.0,1000 metric tons
+2025,2025,december,corn,united states,yield,11.6771,yield (metric tons per hectare)
+2025,2025,december,soybeans,china,area harvested,10500.0,1000 hectares
+2025,2025,december,soybeans,china,beginning stocks,44488.0,1000 metric tons
+2025,2025,december,soybeans,china,production,21000.0,1000 metric tons
+2025,2025,december,soybeans,china,imports,112000.0,1000 metric tons
+2025,2025,december,soybeans,china,total supply,177488.0,1000 metric tons
+2025,2025,december,soybeans,china,exports,100.0,1000 metric tons
+2025,2025,december,soybeans,china,crush,108000.0,1000 metric tons
+2025,2025,december,soybeans,china,food use domestic consumption,18500.0,1000 metric tons
+2025,2025,december,soybeans,china,feed waste domestic consumption,6500.0,1000 metric tons
+2025,2025,december,soybeans,china,domestic consumption,133000.0,1000 metric tons
+2025,2025,december,soybeans,china,ending stocks,44388.0,1000 metric tons
+2025,2025,december,soybeans,china,total distribution,177488.0,1000 metric tons
+2025,2025,december,soybeans,china,yield,2.0,yield (metric tons per hectare)
+2025,2025,december,wheat,japan,area harvested,232.0,1000 hectares
+2025,2025,december,wheat,japan,beginning stocks,1162.0,1000 metric tons
+2025,2025,december,wheat,japan,production,1100.0,1000 metric tons
+2025,2025,december,wheat,japan,imports,5450.0,1000 metric tons
+2025,2025,december,wheat,japan,trade year imports,5450.0,1000 metric tons
+2025,2025,december,wheat,japan,trade year imports from u.s.,0.0,1000 metric tons
+2025,2025,december,wheat,japan,total supply,7712.0,1000 metric tons
+2025,2025,december,wheat,japan,exports,340.0,1000 metric tons
+2025,2025,december,wheat,japan,trade year exports,340.0,1000 metric tons
+2025,2025,december,wheat,japan,feed domestic consumption,700.0,1000 metric tons
+2025,2025,december,wheat,japan,"food, seed, and industrial consumption",5500.0,1000 metric tons
+2025,2025,december,wheat,japan,domestic consumption,6200.0,1000 metric tons
+2025,2025,december,wheat,japan,ending stocks,1172.0,1000 metric tons
+2025,2025,december,wheat,japan,total distribution,7712.0,1000 metric tons
+2025,2025,december,wheat,japan,yield,4.7414,yield (metric tons per hectare)
+2025,2025,december,soybean meal,united states,crush,69536.0,1000 metric tons
+2025,2025,december,soybean meal,united states,extraction rate,0.7857,percentage
+2025,2025,december,soybean meal,united states,beginning stocks,408.0,1000 metric tons
+2025,2025,december,soybean meal,united states,production,54635.0,1000 metric tons
+2025,2025,december,soybean meal,united states,imports,612.0,1000 metric tons
+2025,2025,december,soybean meal,united states,total supply,55655.0,1000 metric tons
+2025,2025,december,soybean meal,united states,exports,17418.0,1000 metric tons
+2025,2025,december,soybean meal,united states,industrial domestic consumption,0.0,1000 metric tons
+2025,2025,december,soybean meal,united states,food use domestic consumption,0.0,1000 metric tons
+2025,2025,december,soybean meal,united states,feed waste domestic consumption,37806.0,1000 metric tons
+2025,2025,december,soybean meal,united states,domestic consumption,37806.0,1000 metric tons
+2025,2025,december,soybean meal,united states,ending stocks,431.0,1000 metric tons
+2025,2025,december,soybean meal,united states,total distribution,55655.0,1000 metric tons
+2025,2025,december,soybean meal,united states,soybean meal equivalent,37806.0,1000 metric tons
+2025,2025,december,wheat,european union,area harvested,23965.0,1000 hectares
+2025,2025,december,wheat,european union,beginning stocks,11714.0,1000 metric tons
+2025,2025,december,wheat,european union,production,144000.0,1000 metric tons
+2025,2025,december,wheat,european union,imports,5500.0,1000 metric tons
+2025,2025,december,wheat,european union,trade year imports,5500.0,1000 metric tons
+2025,2025,december,wheat,european union,trade year imports from u.s.,0.0,1000 metric tons
+2025,2025,december,wheat,european union,total supply,161214.0,1000 metric tons
+2025,2025,december,wheat,european union,exports,33000.0,1000 metric tons
+2025,2025,december,wheat,european union,trade year exports,33000.0,1000 metric tons
+2025,2025,december,wheat,european union,feed domestic consumption,50000.0,1000 metric tons
+2025,2025,december,wheat,european union,"food, seed, and industrial consumption",64500.0,1000 metric tons
+2025,2025,december,wheat,european union,domestic consumption,114500.0,1000 metric tons
+2025,2025,december,wheat,european union,ending stocks,13714.0,1000 metric tons
+2025,2025,december,wheat,european union,total distribution,161214.0,1000 metric tons
+2025,2025,december,wheat,european union,yield,6.0088,yield (metric tons per hectare)
