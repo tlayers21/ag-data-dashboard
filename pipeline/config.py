@@ -79,3 +79,5 @@ ETHANOL = {
     "areas": ["NUS", "NUS-Z00"]
 }
 """
+
+DATA_BASE_URL = "postgresql://tlayers21:mustard33@localhost:5432/commodity_data"

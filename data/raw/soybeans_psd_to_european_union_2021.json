@@ -1,0 +1,132 @@
+[
+  {
+    "commodityCode": "2222000",
+    "countryCode": "E4",
+    "marketYear": "2021",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 4,
+    "unitId": 4,
+    "value": 1005.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "E4",
+    "marketYear": "2021",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 20,
+    "unitId": 8,
+    "value": 1455.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "E4",
+    "marketYear": "2021",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 28,
+    "unitId": 8,
+    "value": 2833.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "E4",
+    "marketYear": "2021",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 57,
+    "unitId": 8,
+    "value": 14545.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "E4",
+    "marketYear": "2021",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 86,
+    "unitId": 8,
+    "value": 18833.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "E4",
+    "marketYear": "2021",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 88,
+    "unitId": 8,
+    "value": 291.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "E4",
+    "marketYear": "2021",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 7,
+    "unitId": 8,
+    "value": 15400.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "E4",
+    "marketYear": "2021",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 149,
+    "unitId": 8,
+    "value": 220.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "E4",
+    "marketYear": "2021",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 161,
+    "unitId": 8,
+    "value": 1350.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "E4",
+    "marketYear": "2021",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 125,
+    "unitId": 8,
+    "value": 16970.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "E4",
+    "marketYear": "2021",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 176,
+    "unitId": 8,
+    "value": 1572.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "E4",
+    "marketYear": "2021",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 178,
+    "unitId": 8,
+    "value": 18833.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "E4",
+    "marketYear": "2021",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 184,
+    "unitId": 26,
+    "value": 2.8189
+  }
+]

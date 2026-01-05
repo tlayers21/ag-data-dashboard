@@ -1,0 +1,152 @@
+[
+  {
+    "commodityCode": "0410000",
+    "countryCode": "US",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "11",
+    "attributeId": 4,
+    "unitId": 4,
+    "value": 14360.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "US",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "11",
+    "attributeId": 20,
+    "unitId": 8,
+    "value": 18355.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "US",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "11",
+    "attributeId": 28,
+    "unitId": 8,
+    "value": 44898.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "US",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "11",
+    "attributeId": 57,
+    "unitId": 8,
+    "value": 3309.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "US",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "11",
+    "attributeId": 81,
+    "unitId": 8,
+    "value": 3269.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "US",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "11",
+    "attributeId": 84,
+    "unitId": 8,
+    "value": 0.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "US",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "11",
+    "attributeId": 86,
+    "unitId": 8,
+    "value": 66562.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "US",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "11",
+    "attributeId": 88,
+    "unitId": 8,
+    "value": 20700.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "US",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "11",
+    "attributeId": 113,
+    "unitId": 8,
+    "value": 20250.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "US",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "11",
+    "attributeId": 130,
+    "unitId": 8,
+    "value": 2056.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "US",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "11",
+    "attributeId": 192,
+    "unitId": 8,
+    "value": 28305.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "US",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "11",
+    "attributeId": 125,
+    "unitId": 8,
+    "value": 30361.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "US",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "11",
+    "attributeId": 176,
+    "unitId": 8,
+    "value": 15501.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "US",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "11",
+    "attributeId": 178,
+    "unitId": 8,
+    "value": 66562.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "US",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "11",
+    "attributeId": 184,
+    "unitId": 26,
+    "value": 3.1266
+  }
+]

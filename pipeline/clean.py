@@ -9,18 +9,21 @@ from .transform import (
 )
 
 def clean_all_esr() -> None:
+    print("Starting ESR Data Cleaning Process...")
     raw_dir = BASE_DIR / "data" / "raw"
 
     world_files = list(raw_dir.glob("*_esr_all_*.json"))
-    print("Starting ESR Data Cleaning Process...")
-    print(f"Processing {len(world_files)} ESR world files:")
-    for file in world_files:
-        print(f"    - {file.name}")
+    
+    if not world_files:
+        raise FileNotFoundError("No ESR world files found in data/raw")
+    
+    print(f"Processing {len(world_files)} ESR world files")
 
     country_files = list(raw_dir.glob("*_esr_to_*.json"))
-    print(f"Processing {len(country_files)} ESR country files:")
-    for file in country_files:
-        print(f"    - {file.name}")
+    print(f"Processing {len(country_files)} ESR country files")
+
+    if not country_files:
+        raise FileNotFoundError("No ESR country files found in data/raw")
 
     # WORLD
     world_dfs = [clean_esr_world_file(file) for file in world_files]
@@ -49,18 +52,22 @@ def clean_all_esr() -> None:
     print("Done.\n==========")
 
 def clean_all_psd() -> None:
-    raw_dir = BASE_DIR / "data" / "raw"
-
-    world_files = list(raw_dir.glob("*_psd_world_*.json"))
     print("Starting PSD Data Cleaning Process...")
-    print(f"Processing {len(world_files)} PSD world files:")
-    for file in world_files:
-        print(f"    - {file.name}")
+
+    raw_dir = BASE_DIR / "data" / "raw"
+    world_files = list(raw_dir.glob("*_psd_world_*.json"))
+
+    if not world_files:
+        raise FileNotFoundError("No PSD world files found in data/raw")
+
+    print(f"Processing {len(world_files)} PSD world files")
 
     country_files = [file for file in raw_dir.glob("*_psd_*_*.json") if "world" not in file.name]
-    print(f"Processing {len(country_files)} PSD country files:")
-    for file in country_files:
-        print(f"    - {file.name}")
+
+    if not country_files:
+        raise FileNotFoundError("No PSD country files found in data/raw")
+    
+    print(f"Processing {len(country_files)} PSD country files")
 
     # WORLD
     world_dfs = [clean_psd_world_file(file) for file in world_files]
