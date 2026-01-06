@@ -1,0 +1,142 @@
+[
+  {
+    "commodityCode": "0813100",
+    "countryCode": "MX",
+    "marketYear": "2018",
+    "calendarYear": "2022",
+    "month": "09",
+    "attributeId": 7,
+    "unitId": 8,
+    "value": 6150.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "MX",
+    "marketYear": "2018",
+    "calendarYear": "2022",
+    "month": "09",
+    "attributeId": 181,
+    "unitId": 23,
+    "value": 0.7902
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "MX",
+    "marketYear": "2018",
+    "calendarYear": "2022",
+    "month": "09",
+    "attributeId": 20,
+    "unitId": 8,
+    "value": 161.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "MX",
+    "marketYear": "2018",
+    "calendarYear": "2022",
+    "month": "09",
+    "attributeId": 28,
+    "unitId": 8,
+    "value": 4860.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "MX",
+    "marketYear": "2018",
+    "calendarYear": "2022",
+    "month": "09",
+    "attributeId": 57,
+    "unitId": 8,
+    "value": 1887.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "MX",
+    "marketYear": "2018",
+    "calendarYear": "2022",
+    "month": "09",
+    "attributeId": 86,
+    "unitId": 8,
+    "value": 6908.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "MX",
+    "marketYear": "2018",
+    "calendarYear": "2022",
+    "month": "09",
+    "attributeId": 88,
+    "unitId": 8,
+    "value": 8.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "MX",
+    "marketYear": "2018",
+    "calendarYear": "2022",
+    "month": "09",
+    "attributeId": 140,
+    "unitId": 8,
+    "value": 0.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "MX",
+    "marketYear": "2018",
+    "calendarYear": "2022",
+    "month": "09",
+    "attributeId": 149,
+    "unitId": 8,
+    "value": 50.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "MX",
+    "marketYear": "2018",
+    "calendarYear": "2022",
+    "month": "09",
+    "attributeId": 161,
+    "unitId": 8,
+    "value": 6575.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "MX",
+    "marketYear": "2018",
+    "calendarYear": "2022",
+    "month": "09",
+    "attributeId": 125,
+    "unitId": 8,
+    "value": 6625.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "MX",
+    "marketYear": "2018",
+    "calendarYear": "2022",
+    "month": "09",
+    "attributeId": 176,
+    "unitId": 8,
+    "value": 275.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "MX",
+    "marketYear": "2018",
+    "calendarYear": "2022",
+    "month": "09",
+    "attributeId": 178,
+    "unitId": 8,
+    "value": 6908.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "MX",
+    "marketYear": "2018",
+    "calendarYear": "2022",
+    "month": "09",
+    "attributeId": 194,
+    "unitId": 8,
+    "value": 6575.0
+  }
+]

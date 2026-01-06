@@ -11,7 +11,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2024-01-25T00:00:00"
+    "weekEndingDate": "2024-01-25T00:00:00",
+    "marketYear": 2024
   },
   {
     "commodityCode": 801,
@@ -25,7 +26,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2024-02-01T00:00:00"
+    "weekEndingDate": "2024-02-01T00:00:00",
+    "marketYear": 2024
   },
   {
     "commodityCode": 801,
@@ -39,7 +41,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2024-02-08T00:00:00"
+    "weekEndingDate": "2024-02-08T00:00:00",
+    "marketYear": 2024
   },
   {
     "commodityCode": 801,
@@ -53,7 +56,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2024-02-15T00:00:00"
+    "weekEndingDate": "2024-02-15T00:00:00",
+    "marketYear": 2024
   },
   {
     "commodityCode": 801,
@@ -67,7 +71,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2024-02-22T00:00:00"
+    "weekEndingDate": "2024-02-22T00:00:00",
+    "marketYear": 2024
   },
   {
     "commodityCode": 801,
@@ -81,7 +86,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2024-02-29T00:00:00"
+    "weekEndingDate": "2024-02-29T00:00:00",
+    "marketYear": 2024
   },
   {
     "commodityCode": 801,
@@ -95,7 +101,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2024-03-07T00:00:00"
+    "weekEndingDate": "2024-03-07T00:00:00",
+    "marketYear": 2024
   },
   {
     "commodityCode": 801,
@@ -109,7 +116,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2024-03-14T00:00:00"
+    "weekEndingDate": "2024-03-14T00:00:00",
+    "marketYear": 2024
   },
   {
     "commodityCode": 801,
@@ -123,7 +131,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2024-03-21T00:00:00"
+    "weekEndingDate": "2024-03-21T00:00:00",
+    "marketYear": 2024
   },
   {
     "commodityCode": 801,
@@ -137,7 +146,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2024-03-28T00:00:00"
+    "weekEndingDate": "2024-03-28T00:00:00",
+    "marketYear": 2024
   },
   {
     "commodityCode": 801,
@@ -151,6 +161,7 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2024-04-04T00:00:00"
+    "weekEndingDate": "2024-04-04T00:00:00",
+    "marketYear": 2024
   }
 ]

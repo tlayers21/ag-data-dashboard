@@ -9,7 +9,13 @@ def get_engine() -> Engine:
 
 CREATE_ESR_TABLE = """
 CREATE TABLE IF NOT EXISTS esr (
-    week_ending_date DATE,
+    week_ending_date TIMESTAMP,
+    calendar_year INTEGER,
+    marketing_year INTEGER,
+    calendar_month INTEGER,
+    marketing_year_month INTEGER,
+    calendar_week INTEGER,
+    marketing_year_week INTEGER,
     commodity TEXT,
     country TEXT,
     weekly_exports NUMERIC,
@@ -26,9 +32,10 @@ CREATE TABLE IF NOT EXISTS esr (
 
 CREATE_PSD_TABLE = """
 CREATE TABLE IF NOT EXISTS psd (
-    market_year INTEGER,
+    marketing_year INTEGER,
     calendar_year INTEGER,
-    calendar_month TEXT,
+    calendar_month INTEGER,
+    marketing_year_month INTEGER,
     commodity TEXT,
     country TEXT,
     attribute TEXT,
@@ -44,7 +51,7 @@ CREATE_ESR_INDEXES = [
 ]
 
 CREATE_PSD_INDEXES = [
-    "CREATE INDEX IF NOT EXISTS idx_psd_market_year ON psd(market_year);",
+    "CREATE INDEX IF NOT EXISTS idx_psd_marketing_year ON psd(marketing_year);",
     "CREATE INDEX IF NOT EXISTS idx_psd_commodity ON psd(commodity);",
     "CREATE INDEX IF NOT EXISTS idx_psd_country ON psd(country);"
 ]
@@ -94,8 +101,10 @@ def init_database() -> None:
     with engine.begin() as connection:
         for statement in CREATE_ESR_INDEXES:
             connection.execute(text(statement))
+        connection.execute(text("CLUSTER esr USING idx_esr_week_ending_date;"))
         for statement in CREATE_PSD_INDEXES:
             connection.execute(text(statement))
+        connection.execute(text("CLUSTER psd USING idx_psd_marketing_year;"))
     
-    print("Done.")
+    print("Done.\n==========")
 

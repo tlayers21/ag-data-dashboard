@@ -11,7 +11,8 @@
     "nextMYOutstandingSales": 2891,
     "nextMYNetSales": 2380,
     "unitId": 1,
-    "weekEndingDate": "2025-10-02T00:00:00"
+    "weekEndingDate": "2025-10-02T00:00:00",
+    "marketYear": 2026
   },
   {
     "commodityCode": 901,
@@ -25,7 +26,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": -2891,
     "unitId": 1,
-    "weekEndingDate": "2025-10-09T00:00:00"
+    "weekEndingDate": "2025-10-09T00:00:00",
+    "marketYear": 2026
   },
   {
     "commodityCode": 901,
@@ -39,7 +41,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-10-16T00:00:00"
+    "weekEndingDate": "2025-10-16T00:00:00",
+    "marketYear": 2026
   },
   {
     "commodityCode": 901,
@@ -53,7 +56,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-10-23T00:00:00"
+    "weekEndingDate": "2025-10-23T00:00:00",
+    "marketYear": 2026
   },
   {
     "commodityCode": 901,
@@ -67,7 +71,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-10-30T00:00:00"
+    "weekEndingDate": "2025-10-30T00:00:00",
+    "marketYear": 2026
   },
   {
     "commodityCode": 901,
@@ -81,7 +86,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-11-06T00:00:00"
+    "weekEndingDate": "2025-11-06T00:00:00",
+    "marketYear": 2026
   },
   {
     "commodityCode": 901,
@@ -95,7 +101,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-11-13T00:00:00"
+    "weekEndingDate": "2025-11-13T00:00:00",
+    "marketYear": 2026
   },
   {
     "commodityCode": 901,
@@ -109,7 +116,8 @@
     "nextMYOutstandingSales": 488,
     "nextMYNetSales": 488,
     "unitId": 1,
-    "weekEndingDate": "2025-11-20T00:00:00"
+    "weekEndingDate": "2025-11-20T00:00:00",
+    "marketYear": 2026
   },
   {
     "commodityCode": 901,
@@ -123,7 +131,8 @@
     "nextMYOutstandingSales": 488,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-11-27T00:00:00"
+    "weekEndingDate": "2025-11-27T00:00:00",
+    "marketYear": 2026
   },
   {
     "commodityCode": 901,
@@ -137,7 +146,8 @@
     "nextMYOutstandingSales": 488,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-12-04T00:00:00"
+    "weekEndingDate": "2025-12-04T00:00:00",
+    "marketYear": 2026
   },
   {
     "commodityCode": 901,
@@ -151,7 +161,8 @@
     "nextMYOutstandingSales": 488,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-12-11T00:00:00"
+    "weekEndingDate": "2025-12-11T00:00:00",
+    "marketYear": 2026
   },
   {
     "commodityCode": 901,
@@ -165,6 +176,22 @@
     "nextMYOutstandingSales": 488,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-12-18T00:00:00"
+    "weekEndingDate": "2025-12-18T00:00:00",
+    "marketYear": 2026
+  },
+  {
+    "commodityCode": 901,
+    "countryCode": 1220,
+    "weeklyExports": 11257,
+    "accumulatedExports": 260233,
+    "outstandingSales": 373790,
+    "grossNewSales": 2584,
+    "currentMYNetSales": 2584,
+    "currentMYTotalCommitment": 634023,
+    "nextMYOutstandingSales": 488,
+    "nextMYNetSales": 0,
+    "unitId": 1,
+    "weekEndingDate": "2025-12-25T00:00:00",
+    "marketYear": 2026
   }
 ]

@@ -11,7 +11,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-06-05T00:00:00"
+    "weekEndingDate": "2025-06-05T00:00:00",
+    "marketYear": 2026
   },
   {
     "commodityCode": 107,
@@ -25,7 +26,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-06-12T00:00:00"
+    "weekEndingDate": "2025-06-12T00:00:00",
+    "marketYear": 2026
   },
   {
     "commodityCode": 107,
@@ -39,7 +41,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-06-19T00:00:00"
+    "weekEndingDate": "2025-06-19T00:00:00",
+    "marketYear": 2026
   },
   {
     "commodityCode": 107,
@@ -53,7 +56,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-06-26T00:00:00"
+    "weekEndingDate": "2025-06-26T00:00:00",
+    "marketYear": 2026
   },
   {
     "commodityCode": 107,
@@ -67,7 +71,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-07-03T00:00:00"
+    "weekEndingDate": "2025-07-03T00:00:00",
+    "marketYear": 2026
   },
   {
     "commodityCode": 107,
@@ -81,7 +86,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-07-10T00:00:00"
+    "weekEndingDate": "2025-07-10T00:00:00",
+    "marketYear": 2026
   },
   {
     "commodityCode": 107,
@@ -95,7 +101,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-07-17T00:00:00"
+    "weekEndingDate": "2025-07-17T00:00:00",
+    "marketYear": 2026
   },
   {
     "commodityCode": 107,
@@ -109,7 +116,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-07-24T00:00:00"
+    "weekEndingDate": "2025-07-24T00:00:00",
+    "marketYear": 2026
   },
   {
     "commodityCode": 107,
@@ -123,7 +131,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-07-31T00:00:00"
+    "weekEndingDate": "2025-07-31T00:00:00",
+    "marketYear": 2026
   },
   {
     "commodityCode": 107,
@@ -137,7 +146,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-08-07T00:00:00"
+    "weekEndingDate": "2025-08-07T00:00:00",
+    "marketYear": 2026
   },
   {
     "commodityCode": 107,
@@ -151,7 +161,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-08-14T00:00:00"
+    "weekEndingDate": "2025-08-14T00:00:00",
+    "marketYear": 2026
   },
   {
     "commodityCode": 107,
@@ -165,7 +176,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-08-21T00:00:00"
+    "weekEndingDate": "2025-08-21T00:00:00",
+    "marketYear": 2026
   },
   {
     "commodityCode": 107,
@@ -179,7 +191,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-08-28T00:00:00"
+    "weekEndingDate": "2025-08-28T00:00:00",
+    "marketYear": 2026
   },
   {
     "commodityCode": 107,
@@ -193,7 +206,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-09-04T00:00:00"
+    "weekEndingDate": "2025-09-04T00:00:00",
+    "marketYear": 2026
   },
   {
     "commodityCode": 107,
@@ -207,7 +221,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-09-11T00:00:00"
+    "weekEndingDate": "2025-09-11T00:00:00",
+    "marketYear": 2026
   },
   {
     "commodityCode": 107,
@@ -221,7 +236,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-09-18T00:00:00"
+    "weekEndingDate": "2025-09-18T00:00:00",
+    "marketYear": 2026
   },
   {
     "commodityCode": 107,
@@ -235,7 +251,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-09-25T00:00:00"
+    "weekEndingDate": "2025-09-25T00:00:00",
+    "marketYear": 2026
   },
   {
     "commodityCode": 107,
@@ -249,7 +266,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-10-02T00:00:00"
+    "weekEndingDate": "2025-10-02T00:00:00",
+    "marketYear": 2026
   },
   {
     "commodityCode": 107,
@@ -263,7 +281,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-10-09T00:00:00"
+    "weekEndingDate": "2025-10-09T00:00:00",
+    "marketYear": 2026
   },
   {
     "commodityCode": 107,
@@ -277,7 +296,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-10-16T00:00:00"
+    "weekEndingDate": "2025-10-16T00:00:00",
+    "marketYear": 2026
   },
   {
     "commodityCode": 107,
@@ -291,7 +311,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-10-23T00:00:00"
+    "weekEndingDate": "2025-10-23T00:00:00",
+    "marketYear": 2026
   },
   {
     "commodityCode": 107,
@@ -305,7 +326,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-10-30T00:00:00"
+    "weekEndingDate": "2025-10-30T00:00:00",
+    "marketYear": 2026
   },
   {
     "commodityCode": 107,
@@ -319,7 +341,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-11-06T00:00:00"
+    "weekEndingDate": "2025-11-06T00:00:00",
+    "marketYear": 2026
   },
   {
     "commodityCode": 107,
@@ -333,7 +356,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-11-13T00:00:00"
+    "weekEndingDate": "2025-11-13T00:00:00",
+    "marketYear": 2026
   },
   {
     "commodityCode": 107,
@@ -347,7 +371,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-11-20T00:00:00"
+    "weekEndingDate": "2025-11-20T00:00:00",
+    "marketYear": 2026
   },
   {
     "commodityCode": 107,
@@ -361,7 +386,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-11-27T00:00:00"
+    "weekEndingDate": "2025-11-27T00:00:00",
+    "marketYear": 2026
   },
   {
     "commodityCode": 107,
@@ -375,7 +401,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-12-04T00:00:00"
+    "weekEndingDate": "2025-12-04T00:00:00",
+    "marketYear": 2026
   },
   {
     "commodityCode": 107,
@@ -389,7 +416,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-12-11T00:00:00"
+    "weekEndingDate": "2025-12-11T00:00:00",
+    "marketYear": 2026
   },
   {
     "commodityCode": 107,
@@ -403,6 +431,22 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-12-18T00:00:00"
+    "weekEndingDate": "2025-12-18T00:00:00",
+    "marketYear": 2026
+  },
+  {
+    "commodityCode": 107,
+    "countryCode": 2050,
+    "weeklyExports": 0,
+    "accumulatedExports": 227255,
+    "outstandingSales": 9928,
+    "grossNewSales": 0,
+    "currentMYNetSales": 0,
+    "currentMYTotalCommitment": 237183,
+    "nextMYOutstandingSales": 0,
+    "nextMYNetSales": 0,
+    "unitId": 1,
+    "weekEndingDate": "2025-12-25T00:00:00",
+    "marketYear": 2026
   }
 ]

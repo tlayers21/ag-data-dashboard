@@ -11,7 +11,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-01-23T00:00:00"
+    "weekEndingDate": "2025-01-23T00:00:00",
+    "marketYear": 2025
   },
   {
     "commodityCode": 801,
@@ -25,7 +26,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-01-30T00:00:00"
+    "weekEndingDate": "2025-01-30T00:00:00",
+    "marketYear": 2025
   },
   {
     "commodityCode": 801,
@@ -39,7 +41,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-02-06T00:00:00"
+    "weekEndingDate": "2025-02-06T00:00:00",
+    "marketYear": 2025
   },
   {
     "commodityCode": 801,
@@ -53,7 +56,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-02-13T00:00:00"
+    "weekEndingDate": "2025-02-13T00:00:00",
+    "marketYear": 2025
   },
   {
     "commodityCode": 801,
@@ -67,7 +71,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-02-20T00:00:00"
+    "weekEndingDate": "2025-02-20T00:00:00",
+    "marketYear": 2025
   },
   {
     "commodityCode": 801,
@@ -81,7 +86,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-02-27T00:00:00"
+    "weekEndingDate": "2025-02-27T00:00:00",
+    "marketYear": 2025
   },
   {
     "commodityCode": 801,
@@ -95,7 +101,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-03-06T00:00:00"
+    "weekEndingDate": "2025-03-06T00:00:00",
+    "marketYear": 2025
   },
   {
     "commodityCode": 801,
@@ -109,7 +116,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-03-13T00:00:00"
+    "weekEndingDate": "2025-03-13T00:00:00",
+    "marketYear": 2025
   },
   {
     "commodityCode": 801,
@@ -123,7 +131,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-03-20T00:00:00"
+    "weekEndingDate": "2025-03-20T00:00:00",
+    "marketYear": 2025
   },
   {
     "commodityCode": 801,
@@ -137,7 +146,8 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-03-27T00:00:00"
+    "weekEndingDate": "2025-03-27T00:00:00",
+    "marketYear": 2025
   },
   {
     "commodityCode": 801,
@@ -151,6 +161,7 @@
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
-    "weekEndingDate": "2025-04-03T00:00:00"
+    "weekEndingDate": "2025-04-03T00:00:00",
+    "marketYear": 2025
   }
 ]

@@ -4,79 +4,74 @@ from pathlib import Path
 from .config import COMMODITIES
 
 ESR_RENAME_MAP = {
-    "commodityCode": "commodity code",
-    "countryCode": "country code",
-    "weeklyExports": "weekly exports",
-    "accumulatedExports": "accumulated exports",
-    "outstandingSales": "outstanding sales",
-    "grossNewSales": "gross new sales",
-    "currentMYNetSales": "current marketing year net sales",
-    "currentMYTotalCommitment": "current marketing year total commitment",
-    "nextMYOutstandingSales": "next marketing year outstanding sales",
-    "nextMYNetSales": "next marketing year net sales",
-    "unitId": "unit id",
-    "weekEndingDate": "week ending date"
+    "commodityCode": "commodity_code",
+    "countryCode": "country_code",
+    "weeklyExports": "weekly_exports",
+    "accumulatedExports": "accumulated_exports",
+    "outstandingSales": "outstanding_sales",
+    "grossNewSales": "gross_new_sales",
+    "currentMYNetSales": "current_marketing_year_net_sales",
+    "currentMYTotalCommitment": "current_marketing_year_total_commitment",
+    "nextMYOutstandingSales": "next_marketing_year_outstanding_sales",
+    "nextMYNetSales": "next_marketing_year_net_sales",
+    "unitId": "unit_id",
+    "weekEndingDate": "week_ending_date",
+    "marketYear": "marketing_year"
 }
 
+MARKETING_YEAR_START = {
+    "corn": 9,
+    "soybeans": 9,
+    "wheat": 6,
+    "soybean oil": 10,
+    "soybean meal": 10
+}
+
+ESR_COMMODITY_LOOKUP = {data["esr"]["commodity"]: commodity for commodity, data in COMMODITIES.items()}
+
 PSD_RENAME_MAP = {
-    "commodityCode": "commodity code",
-    "countryCode": "country code",
-    "marketYear": "market year",
-    "calendarYear": "calendar year",
-    "month": "calendar month",
-    "attributeId": "attribute id",
-    "unitId": "unit id",
+    "commodityCode": "commodity_code",
+    "countryCode": "country_code",
+    "marketYear": "marketing_year",
+    "calendarYear": "calendar_year",
+    "month": "calendar_month",
+    "attributeId": "attribute_id",
+    "unitId": "unit_id",
     "value": "amount"
 }
 
 PSD_ATTRIBUTE_MAP = {
-    4: "area harvested",
-    7: "crush",
-    20: "beginning stocks",
-    28: "production",
-    57: "imports",
-    81: "trade year imports",
-    84: "trade year imports from u.s.",
-    86: "total supply",
-    88: "exports",
-    113: "trade year exports",
-    125: "domestic consumption",
-    130: "feed domestic consumption",
-    140: "industrial domestic consumption",
-    149: "food use domestic consumption",
-    161: "feed waste domestic consumption",
-    176: "ending stocks",
-    178: "total distribution",
-    181: "extraction rate",
-    184: "yield",
-    192: "food, seed, and industrial consumption",
-    194: "soybean meal equivalent"
+    4: "Area Harvested",
+    7: "Crush",
+    20: "Beginning Stocks",
+    28: "Production",
+    57: "Imports",
+    81: "Trade Year Imports",
+    84: "Trade Year Imports from U.S.",
+    86: "Total Supply",
+    88: "Exports",
+    113: "Trade Year Exports",
+    125: "Domestic Consumption",
+    130: "Feed Domestic Consumption",
+    140: "Industrial Domestic Consumption",
+    149: "Food Use Domestic Consumption",
+    161: "Feed Waste Domestic Consumption",
+    176: "Ending Stocks",
+    178: "Total Distribution",
+    181: "Extraction Rate",
+    184: "Yield",
+    192: "Food, Seed, and Industrial Consumption",
+    194: "Soybean Meal Equivalent"
 }
 
 PSD_UNIT_MAP = {
-    4: "1000 hectares",
-    8: "1000 metric tons",
-    23: "percentage",
-    26: "yield (metric tons per hectare)"
+    4: "1000 Hectares",
+    8: "1000 Metric Tons",
+    23: "Percentage",
+    26: "Yield (Metric Tons per Hectare)"
 }
 
-ESR_COMMODITY_LOOKUP = {data["esr"]["commodity"]: commodity for commodity, data in COMMODITIES.items()}
 PSD_COMMODITY_LOOKUP = {data["psd"]["commodity"]: commodity for commodity, data in COMMODITIES.items()}
-
-month_map = {
-    "1": "january",
-    "2": "february",
-    "3": "march",
-    "4": "april",
-    "5": "may",
-    "6": "june",
-    "7": "july",
-    "8": "august",
-    "9": "september",
-    "10": "october",
-    "11": "november",
-    "12": "december"
-}
 
 def clean_esr_world_file(path: Path) -> pd.DataFrame:
     with open(path, "r") as file:
@@ -85,35 +80,53 @@ def clean_esr_world_file(path: Path) -> pd.DataFrame:
     df = pd.DataFrame(raw_data)
 
     df = df.rename(columns=ESR_RENAME_MAP)
-    df["week ending date"] = pd.to_datetime(df["week ending date"])
-    commodity_code = str(df["commodity code"].iloc[0])
-    commodity_name = ESR_COMMODITY_LOOKUP.get(commodity_code, "unknown")
+    df["week_ending_date"] = pd.to_datetime(df["week_ending_date"])
+    commodity_code = str(df["commodity_code"].iloc[0])
+
+    commodity_name = ESR_COMMODITY_LOOKUP.get(commodity_code)
+    marketing_year = df["marketing_year"].iloc[0]
 
     data_columns = [
-        "weekly exports", "accumulated exports", "outstanding sales",
-        "gross new sales", "current marketing year net sales",
-        "current marketing year total commitment",
-        "next marketing year outstanding sales",
-        "next marketing year net sales"
+        "weekly_exports", "accumulated_exports", "outstanding_sales",
+        "gross_new_sales", "current_marketing_year_net_sales",
+        "current_marketing_year_total_commitment",
+        "next_marketing_year_outstanding_sales",
+        "next_marketing_year_net_sales"
     ]
 
-    aggregated_data = df.groupby("week ending date")[data_columns].sum().reset_index()
-    aggregated_data["unit"] = "metric tons"
+    aggregated_data = df.groupby("week_ending_date")[data_columns].sum().reset_index()
+    aggregated_data["unit"] = "Metric Tons"
     aggregated_data["commodity"] = commodity_name
     aggregated_data["country"] = "world"
-    
+    aggregated_data["marketing_year"] = marketing_year
+
+    # Extract calendar week, month, and year then assign marketing year weeks and months
+    aggregated_data["calendar_week"] = aggregated_data["week_ending_date"].dt.isocalendar().week
+    aggregated_data["calendar_month"] = aggregated_data["week_ending_date"].dt.month
+    aggregated_data["calendar_year"] = aggregated_data["week_ending_date"].dt.year
+
+    marketing_year_start_week = marketing_year_start
+    aggregated_data["marketing_year_week"] = ((aggregated_data["calendar_week"] - marketing_year_start_week) % 52) + 1
+    aggregated_data["marketing_year_month"] = ((aggregated_data["calendar_month"] - marketing_year_start_month) % 12) + 1
+
     column_order = [
-        "week ending date",
+        "week_ending_date",
+        "calendar_year",
+        "marketing_year",
+        "calendar_month",
+        "marketing_year_month",
+        "calendar_week",
+        "marketing_year_week",
         "commodity",
         "country",
-        "weekly exports",
-        "accumulated exports",
-        "outstanding sales",
-        "gross new sales",
-        "current marketing year net sales",
-        "current marketing year total commitment",
-        "next marketing year outstanding sales",
-        "next marketing year net sales",
+        "weekly_exports",
+        "accumulated_exports",
+        "outstanding_sales",
+        "gross_new_sales",
+        "current_marketing_year_net_sales",
+        "current_marketing_year_total_commitment",
+        "next_marketing_year_outstanding_sales",
+        "next_marketing_year_net_sales",
         "unit"
     ]
 
@@ -124,17 +137,23 @@ def clean_esr_country_file(path: Path, country_name: str) -> pd.DataFrame:
     df["country"] = country_name
 
     column_order = [
-        "week ending date",
+        "week_ending_date",
+        "calendar_year",
+        "marketing_year",
+        "calendar_month",
+        "marketing_year_month",
+        "calendar_week",
+        "marketing_year_week",
         "commodity",
         "country",
-        "weekly exports",
-        "accumulated exports",
-        "outstanding sales",
-        "gross new sales",
-        "current marketing year net sales",
-        "current marketing year total commitment",
-        "next marketing year outstanding sales",
-        "next marketing year net sales",
+        "weekly_exports",
+        "accumulated_exports",
+        "outstanding_sales",
+        "gross_new_sales",
+        "current_marketing_year_net_sales",
+        "current_marketing_year_total_commitment",
+        "next_marketing_year_outstanding_sales",
+        "next_marketing_year_net_sales",
         "unit"
     ]
 
@@ -147,20 +166,24 @@ def clean_psd_world_file(path: Path) -> pd.DataFrame:
     df = pd.DataFrame(raw_data)
 
     df = df.rename(columns=PSD_RENAME_MAP)
-    commodity_code = str(df["commodity code"].iloc[0])
-    commodity_name = PSD_COMMODITY_LOOKUP.get(commodity_code, "unknown")
-    df["calendar month"] = df["calendar month"].map(month_map)
+    commodity_code = str(df["commodity_code"].iloc[0])
+    commodity_name = PSD_COMMODITY_LOOKUP.get(commodity_code)
+    df["calendar_month"] = df["calendar_month"].astype(int)
 
-    df["unit"] = df["unit id"].map(PSD_UNIT_MAP)
-    df["attribute"] = df["attribute id"].map(PSD_ATTRIBUTE_MAP)
-    df = df.drop(columns=["commodity code", "country code", "unit id", "attribute id"])
+    df["unit"] = df["unit_id"].map(PSD_UNIT_MAP)
+    df["attribute"] = df["attribute_id"].map(PSD_ATTRIBUTE_MAP)
+    df = df.drop(columns=["commodity_code", "country_code", "unit_id", "attribute_id"])
     df["commodity"] = commodity_name
     df["country"] = "world"
 
+    marketing_year_start = MARKETING_YEAR_START.get(commodity_name)
+    df["marketing_year_month"] = ((df["calendar_month"] - marketing_year_start) % 12) + 1
+
     column_order = [
-        "market year",
-        "calendar year",
-        "calendar month",
+        "marketing_year",
+        "calendar_year",
+        "calendar_month",
+        "marketing_year_month",
         "commodity",
         "country",
         "attribute",
@@ -175,9 +198,10 @@ def clean_psd_country_file(path: Path, country_name: str) -> pd.DataFrame:
     df["country"] = country_name
 
     column_order = [
-        "market year",
-        "calendar year",
-        "calendar month",
+        "marketing_year",
+        "calendar_year",
+        "calendar_month",
+        "marketing_year_month",
         "commodity",
         "country",
         "attribute",
