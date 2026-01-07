@@ -46,18 +46,19 @@ def generate_weekly_chart_calendar_year(commodity: str, country: str, value_colu
         }
     )
 
-    out_dir = Path("dashboard/figures").resolve()
+    json_dir = Path("dashboard/json").resolve()
+    figure_dir = Path("dashboard/figures").resolve()
 
     json_path = (
-        out_dir
-         / f"united_states_{value_column}_{commodity.lower()}_{country.lower()}_last_5_years_cal.json"
+        json_dir
+         / f"us_{commodity.lower()}_to_{country.lower()}_{value_column}_last_5_years_cal.json"
     )
 
     pio.write_json(figure, str(json_path))
 
     png_path = (
-        out_dir
-         / f"united_states_{value_column}_{commodity.lower()}_{country.lower()}_last_5_years_cal.png"
+        figure_dir
+         / f"us_{commodity.lower()}_to_{country.lower()}_{value_column}_last_5_years_cal.png"
     )
 
     pio.write_image(figure, str(png_path))
@@ -82,18 +83,19 @@ def generate_weekly_chart_marketing_year(commodity: str, country: str, value_col
         }
     )
 
-    out_dir = Path("dashboard/figures").resolve()
+    json_dir = Path("dashboard/json").resolve()
+    figure_dir = Path("dashboard/figures").resolve()
 
     json_path = (
-        out_dir
-         / f"united_states_{value_column}_{commodity.lower()}_{country.lower()}_last_5_years_my.json"
+        json_dir
+         / f"us_{commodity.lower()}_to_{country.lower()}_{value_column}_last_5_years_my.json"
     )
 
     pio.write_json(figure, str(json_path))
 
     png_path = (
-        out_dir
-         / f"united_states_{value_column}_{commodity.lower()}_{country.lower()}_last_5_years_my.png"
+        figure_dir
+         / f"us_{commodity.lower()}_to_{country.lower()}_{value_column}_last_5_years_my.png"
     )
 
     pio.write_image(figure, str(png_path))
