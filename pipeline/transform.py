@@ -105,8 +105,24 @@ def clean_esr_world_file(path: Path) -> pd.DataFrame:
     aggregated_data["calendar_month"] = aggregated_data["week_ending_date"].dt.month
     aggregated_data["calendar_year"] = aggregated_data["week_ending_date"].dt.year
 
-    marketing_year_start_week = marketing_year_start
-    aggregated_data["marketing_year_week"] = ((aggregated_data["calendar_week"] - marketing_year_start_week) % 52) + 1
+    aggregated_data = aggregated_data.sort_values("week_ending_date").reset_index(drop=True)
+    marketing_year_start_month = MARKETING_YEAR_START.get(commodity_name)
+    start_dates = aggregated_data.loc[
+        (aggregated_data["calendar_month"] == marketing_year_start_month) &
+        (aggregated_data["commodity"] == commodity_name),
+        "week_ending_date"
+    ].dropna()
+
+    if start_dates.empty:
+        fallback_year = aggregated_data["calendar_year"].iloc[0]
+        fallback_date = pd.Timestamp(year=fallback_year, month=marketing_year_start_month, day=1)
+        start_dates = pd.Series([fallback_date])
+    
+    first_week_date = start_dates.min()
+
+    aggregated_data["marketing_year_week"] = (
+        (aggregated_data["week_ending_date"] - first_week_date).dt.days // 7 + 1
+    )
     aggregated_data["marketing_year_month"] = ((aggregated_data["calendar_month"] - marketing_year_start_month) % 12) + 1
 
     column_order = [

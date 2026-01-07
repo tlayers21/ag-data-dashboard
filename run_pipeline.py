@@ -2,12 +2,12 @@ from pathlib import Path
 from pipeline.fetch_all import fetch_esr_data, fetch_psd_data
 from pipeline.clean import clean_all_esr, clean_all_psd
 from pipeline.database import init_database
-from pipeline.chart_generator import generate_weekly_exports_chart_calendar_year, generate_weekly_exports_chart_marketing_year
+from pipeline.chart_generator import generate_charts
 
 if __name__ == "__main__":
     USDA_API_KEY = "GA0LAyk7zcLgEjKMdSfOIOl7GJmL4wRleIlflcfp"
-    ESR_YEARS = [2026, 2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017]
-    PSD_YEARS = [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016]
+    ESR_YEARS = [2026, 2025, 2024, 2023, 2022]
+    PSD_YEARS = [2025, 2024, 2023, 2022, 2021]
 
     while True:
         answer = input("Restart entire pipeline process? (y/n)\n").strip().lower()
@@ -41,5 +41,4 @@ if __name__ == "__main__":
     cleaned_esr = clean_all_esr()
     cleaned_psd = clean_all_psd()
     database = init_database()
-    figure1 = generate_weekly_exports_chart_calendar_year("corn", "world")
-    figure1 = generate_weekly_exports_chart_marketing_year("corn", "world")
+    charts = generate_charts()

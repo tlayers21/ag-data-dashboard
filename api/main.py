@@ -12,10 +12,10 @@ engine = create_engine(DATA_BASE_URL)
 def health() -> dict:
     return {"status": "ok"}
 
-@app.get("/exports/weekly/last5years")
-def get_last_5_years_exports(commodity: str, country: str) -> list:
-    five_years_ago = datetime.now() - timedelta(days=5*365 + 1)
-    cutoff = five_years_ago.strftime("%Y-%m-%d")
+@app.get("/esr/weekly/last5years")
+def get_last_5_years_esr(commodity: str, country: str) -> list:
+    ten_years_ago = datetime.now() - timedelta(days=5*365 + 1)
+    cutoff = ten_years_ago.strftime("%Y-%m-%d")
     
     query = f"""
         SELECT *
