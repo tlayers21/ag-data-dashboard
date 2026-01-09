@@ -1,6 +1,6 @@
 from pathlib import Path
-from pipeline.fetch_all import fetch_esr_data, fetch_psd_data
-from pipeline.clean import clean_all_esr, clean_all_psd
+from pipeline.fetch_all import fetch_esr_data, fetch_psd_data, fetch_inspections
+from pipeline.clean import clean_all_esr, clean_all_psd, clean_all_inspections
 from pipeline.database import init_database
 from pipeline.chart_generator import generate_charts
 
@@ -25,7 +25,8 @@ if __name__ == "__main__":
         dirs_to_empty = [
             Path("data/raw").resolve(),
             Path("data/cleaned").resolve(),
-            Path("dashboard/figures").resolve()
+            Path("frontend/json").resolve(),
+            Path("frontend/figures").resolve()
         ]
         for directory in dirs_to_empty:
             for file in directory.glob("*"):
@@ -37,8 +38,11 @@ if __name__ == "__main__":
             fetch_esr_data(usda_api_key=USDA_API_KEY, marketing_year=year)
         for year in PSD_YEARS:
             fetch_psd_data(usda_api_key=USDA_API_KEY, marketing_year=year) 
+        fetch_inspections()
 
-    cleaned_esr = clean_all_esr()
-    cleaned_psd = clean_all_psd()
-    database = init_database()
-    charts = generate_charts()
+    clean_all_esr()
+    clean_all_psd()
+    fetch_inspections()
+    clean_all_inspections()
+    # init_database()
+   #  generate_charts()

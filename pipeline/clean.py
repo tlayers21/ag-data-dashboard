@@ -1,11 +1,11 @@
 import pandas as pd
-from pathlib import Path
 from .utils import BASE_DIR, cleaned_data_path
 from .transform import (
     clean_esr_world_file,
     clean_esr_country_file,
     clean_psd_world_file,
-    clean_psd_country_file
+    clean_psd_country_file,
+    clean_inspections_file
 )
 
 def clean_all_esr() -> None:
@@ -17,10 +17,10 @@ def clean_all_esr() -> None:
     if not world_files:
         raise FileNotFoundError("No ESR world files found in data/raw")
     
-    print(f"Processing {len(world_files)} ESR world files")
+    print(f"Processing {len(world_files)} ESR world files...")
 
     country_files = list(raw_dir.glob("*_esr_to_*.json"))
-    print(f"Processing {len(country_files)} ESR country files")
+    print(f"Processing {len(country_files)} ESR country file...")
 
     if not country_files:
         raise FileNotFoundError("No ESR country files found in data/raw")
@@ -60,14 +60,14 @@ def clean_all_psd() -> None:
     if not world_files:
         raise FileNotFoundError("No PSD world files found in data/raw")
 
-    print(f"Processing {len(world_files)} PSD world files")
+    print(f"Processing {len(world_files)} PSD world files...")
 
     country_files = [file for file in raw_dir.glob("*_psd_*_*.json") if "world" not in file.name]
 
     if not country_files:
         raise FileNotFoundError("No PSD country files found in data/raw")
     
-    print(f"Processing {len(country_files)} PSD country files")
+    print(f"Processing {len(country_files)} PSD country files...")
 
     # WORLD
     world_dfs = [clean_psd_world_file(file) for file in world_files]
@@ -94,3 +94,25 @@ def clean_all_psd() -> None:
     psd_df.to_csv(output_path, index=False)
     
     print("Done.\n==========")
+
+def clean_all_inspections() -> None:
+    print("Starting Inspections Data Cleaning Process...")
+    inspections_dir = BASE_DIR / "data" / "inspections"
+    inspections_files = list(inspections_dir.glob("*"))
+    print(f"Processing {len(inspections_files)} Inspections files...")
+
+    inspections_dfs = []
+    for file in inspections_files:
+        df = clean_inspections_file(file)
+        inspections_dfs.append(df)
+        
+    
+    combined_inspections_df = pd.concat(inspections_dfs, ignore_index=True)
+    output_path = cleaned_data_path("inspections_clean.csv")
+    combined_inspections_df = combined_inspections_df.sort_values(by="week_ending_date", ascending=False)
+    combined_inspections_df.to_csv(output_path, index=False)
+    # TODO: SORT ALL THE OTHER FILES HERE INSTEAD OF IN POSTGRESQL IN DESCENDING, NOT ASCENDING ORDER
+    # TODO: FIGURE OUT MARKETING YEAR WEEK STUFF WITH GRAPHING I DON'T LIKE IT (and it's broken) (it should be uniform in a 365 day year not depedent on day of week (iso)), try messing with plotting before this
+
+    print("Done.\n==========")
+

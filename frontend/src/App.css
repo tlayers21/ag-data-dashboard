@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+header {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2a4d69;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;   /* centers all nav buttons */
+  align-items: center;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0.5rem 1rem;
+  gap: 2rem;                 /* more spacing between buttons */
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-center {
+  display: flex;
+  gap: 2rem;                 /* spacing between buttons */
+  align-items: center;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  color: #2a4d69;
+}
+
+.nav-button:hover {
+  background-color: #e8eef3;
+  border-radius: 4px;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;          /* sits directly under the button */
+  left: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  min-width: 160px;
+  z-index: 20;
+  padding: 0.25rem 0;
+}
+
+.dropdown-item {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f4f7;
+}
+
+.main-content {
+  padding: 2rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}

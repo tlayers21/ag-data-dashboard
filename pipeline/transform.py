@@ -1,6 +1,7 @@
 import json
 import pandas as pd
 from pathlib import Path
+import re
 from .config import COMMODITIES
 
 ESR_RENAME_MAP = {
@@ -226,3 +227,83 @@ def clean_psd_country_file(path: Path, country_name: str) -> pd.DataFrame:
     ]
 
     return df[column_order]
+
+def clean_inspections_file(path: Path) -> pd.DataFrame:
+    text = path.read_text(encoding="latin-1")
+
+    # Example: REPORTED IN WEEK ENDING DEC 25, 2025
+    date_pattern = r"WEEK ENDING ([A-Z]{3} \d{2}, \d{4})"
+    date_match = re.search(date_pattern, text)
+
+    # Files can contain date but say 'sorry it's delayed or something' so much check in extract_value too
+    if not date_match:
+        print(f"'{path.name}' Does Not Contain Inspections Data")
+        return
+    
+    week_ending_date = pd.to_datetime(date_match.group(1))
+
+    def extract_value(grain_name: str) -> int:
+        # Example: CORN          *457,366*     672,835...
+        amount_pattern = rf"{grain_name}\s+([\d,]+)"
+        amount_match = re.search(amount_pattern, text)
+        if not amount_match:
+            print(f"'{path.name}' Does Not Contain Inspections Data")
+            return
+        
+        number = amount_match.group(1).replace(",", "")
+        return int(number)
+    
+    corn = extract_value("CORN")
+    soybeans = extract_value("SOYBEANS")
+    wheat = extract_value("WHEAT")
+
+    df = pd.DataFrame([{
+        "week_ending_date": week_ending_date,
+        "corn_amount": corn,
+        "wheat_amount": wheat,
+        "soybeans_amount": soybeans,
+        "unit": "Metric Tons"
+    }])
+
+    df["calendar_week"] = df["week_ending_date"].dt.isocalendar().week
+    df["calendar_month"] = df["week_ending_date"].dt.month
+    df["calendar_year"] = df["week_ending_date"].dt.year
+
+    for grain in ["corn", "wheat", "soybeans"]:
+        start_month = MARKETING_YEAR_START[grain]
+
+        df[f"{grain}_marketing_year"] = df["calendar_year"].where(
+            df["calendar_month"] >= start_month,
+            df["calendar_year"] - 1
+        )
+
+        df[f"{grain}_marketing_year_month"] = ((df["calendar_month"] - start_month) % 12) + 1
+        first_week_date = df.loc[df["calendar_month"] >= start_month, "week_ending_date"].min()
+        if pd.isna(first_week_date):
+            first_week_date = df["week_ending_date"].iloc[0]
+        df[f"{grain}_marketing_year_week"] = ((df["week_ending_date"] - first_week_date).dt.days // 7 + 1)
+
+    column_order = [
+        "week_ending_date",
+        "calendar_year",
+        "corn_marketing_year",
+        "wheat_marketing_year",
+        "soybeans_marketing_year",
+        "calendar_month",
+        "corn_marketing_year_month",
+        "wheat_marketing_year_month",
+        "soybeans_marketing_year_month",
+        "calendar_week",
+        "corn_marketing_year_week",
+        "wheat_marketing_year_week",
+        "soybeans_marketing_year_week",
+        "corn_amount",
+        "wheat_amount",
+        "soybeans_amount",
+        "unit"
+    ]
+
+    return df[column_order]
+
+
+

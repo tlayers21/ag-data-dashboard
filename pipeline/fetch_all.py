@@ -1,7 +1,9 @@
 import json
+import requests
 from .config import COMMODITIES, ESR_COUNTRY_NAMES, PSD_COUNTRY_NAMES
 from .usda_client import USDAClient
-from .utils import raw_data_path
+from .utils import raw_data_path, inspections_data_path
+from datetime import datetime
 import time
     
 def fetch_esr_data(usda_api_key: str, marketing_year: int) -> None:
@@ -87,3 +89,17 @@ def fetch_psd_data(usda_api_key: str, marketing_year: int) -> None:
                 )
                 
     print("Done.\n==========")
+    
+def fetch_inspections() -> None:
+    print("Fetching latest inspections data...")
+
+    url = "https://www.ams.usda.gov/mnreports/wa_gr101.txt"
+    timestamp = datetime.now().strftime("%Y_%m_%d")
+    filename = f"WA_GR101_{timestamp}.txt"
+    filepath = inspections_data_path(filename)
+
+    response = requests.get(url)
+    if response.status_code == 200:
+        filepath.write_bytes(response.content)
+    else:
+        print("Failed to Download Weekly Inspections File")
