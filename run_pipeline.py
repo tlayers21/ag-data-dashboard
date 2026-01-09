@@ -23,8 +23,8 @@ if __name__ == "__main__":
     if restart:
         # Empty directories every run
         dirs_to_empty = [
-            Path("data/raw").resolve(),
-            Path("data/cleaned").resolve(),
+            Path("data/raw/fas").resolve(),
+            Path("data/clean").resolve(),
             Path("frontend/json").resolve(),
             Path("frontend/figures").resolve()
         ]
@@ -42,7 +42,6 @@ if __name__ == "__main__":
 
     clean_all_esr()
     clean_all_psd()
-    fetch_inspections()
     clean_all_inspections()
-    # init_database()
+    init_database()
    #  generate_charts()

@@ -2,6 +2,7 @@ import pandas as pd
 from sqlalchemy import create_engine, text
 from sqlalchemy.engine import Engine
 from pathlib import Path
+from .utils import BASE_DIR, clean_data_path
 from .config import DATA_BASE_URL
 
 def get_engine() -> Engine:
@@ -32,8 +33,8 @@ CREATE TABLE IF NOT EXISTS esr (
 
 CREATE_PSD_TABLE = """
 CREATE TABLE IF NOT EXISTS psd (
-    marketing_year INTEGER,
     calendar_year INTEGER,
+    marketing_year INTEGER,
     calendar_month INTEGER,
     marketing_year_month INTEGER,
     commodity TEXT,
@@ -44,45 +45,46 @@ CREATE TABLE IF NOT EXISTS psd (
     );
 """
 
+CREATE_INSPECTIONS_TABLE = """
+CREATE TABLE IF NOT EXISTS inspections (
+    week_ending_date TIMESTAMP,
+    calendar_year INTEGER,
+    marketing_year INTEGER,
+    calendar_month INTEGER,
+    marketing_year_month INTEGER,
+    calendar_week INTEGER,
+    marketing_year_week INTEGER,
+    commodity TEXT,
+    amount INTEGER,
+    unit TEXT
+    );
+"""
+
 CREATE_ESR_INDEXES = [
-    "CREATE INDEX IF NOT EXISTS idx_esr_week_ending_date ON esr(week_ending_date);",
+    "CREATE INDEX IF NOT EXISTS idx_esr_calendar_week ON esr(calendar_week);",
+    "CREATE INDEX IF NOT EXISTS idx_esr_marketing_year_week ON esr(marketing_year_week);",
     "CREATE INDEX IF NOT EXISTS idx_esr_commodity ON esr(commodity);",
     "CREATE INDEX IF NOT EXISTS idx_esr_country ON esr(country);"
 ]
 
 CREATE_PSD_INDEXES = [
+    "CREATE INDEX IF NOT EXISTS idx_psd_calendar_year ON psd(calendar_year);",
     "CREATE INDEX IF NOT EXISTS idx_psd_marketing_year ON psd(marketing_year);",
     "CREATE INDEX IF NOT EXISTS idx_psd_commodity ON psd(commodity);",
     "CREATE INDEX IF NOT EXISTS idx_psd_country ON psd(country);"
 ]
 
-def load_esr(engine: Engine):
-    csv_path = Path("data/cleaned/esr_clean.csv")
-    df = pd.read_csv(csv_path)
+CREATE_INSPECTIONS_INDEXES = [
+    "CREATE INDEX IF NOT EXISTS idx_inspections_calendar_week ON esr(calendar_week);",
+    "CREATE INDEX IF NOT EXISTS idx_inspections_marketing_year_week ON esr(marketing_year_week);",
+    "CREATE INDEX IF NOT EXISTS idx_inspections_commodity ON esr(commodity);"
+]
 
-    df.columns = (
-        df.columns
-        .str.strip()
-        .str.lower()
-        .str.replace(" ", "_")
-    )
-
-    df.to_sql("esr", engine, if_exists="append", index=False)
-    print("ESR Table is Loaded into PostgreSQL")
-
-def load_psd(engine: Engine):
-    csv_path = Path("data/cleaned/psd_clean.csv")
-    df = pd.read_csv(csv_path)
-
-    df.columns = (
-        df.columns
-        .str.strip()
-        .str.lower()
-        .str.replace(" ", "_")
-    )
-    
-    df.to_sql("psd", engine, if_exists="append", index=False)
-    print("PSD Table is Loaded into PostgreSQL")
+def load_csv(engine: Engine, path: Path) -> None:
+    filename = path.name
+    df = pd.read_csv(path)
+    df.to_sql(filename, engine, if_exists="append", index=False)
+    print(f"{filename} is loaded into PostgreSQL")
 
 def init_database() -> None:
     print("Creating PostgreSQL Database...")
@@ -92,19 +94,23 @@ def init_database() -> None:
     with engine.begin() as connection:
         connection.execute(text("DROP TABLE IF EXISTS esr;"))
         connection.execute(text("DROP TABLE IF EXISTS psd;"))
+        connection.execute(text("DROP TABLE IF EXISTS inspections;"))
         connection.execute(text(CREATE_ESR_TABLE))
         connection.execute(text(CREATE_PSD_TABLE))
-        
-    load_esr(engine)
-    load_psd(engine)
+        connection.execute(text(CREATE_INSPECTIONS_TABLE))
+    
+    csv_path = BASE_DIR / "data" / "clean"
+    csv_files = list(csv_path.glob("*"))
+    for file in csv_files:
+        load_csv(engine, file)
 
     with engine.begin() as connection:
         for statement in CREATE_ESR_INDEXES:
             connection.execute(text(statement))
-        connection.execute(text("CLUSTER esr USING idx_esr_week_ending_date;"))
         for statement in CREATE_PSD_INDEXES:
             connection.execute(text(statement))
-        connection.execute(text("CLUSTER psd USING idx_psd_marketing_year;"))
+        for statement in CREATE_INSPECTIONS_INDEXES:
+            connection.execute(text(statement))
     
     print("Done.\n==========")
 

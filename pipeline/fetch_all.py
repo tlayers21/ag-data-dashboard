@@ -2,8 +2,8 @@ import json
 import requests
 from .config import COMMODITIES, ESR_COUNTRY_NAMES, PSD_COUNTRY_NAMES
 from .usda_client import USDAClient
-from .utils import raw_data_path, inspections_data_path
-from datetime import datetime
+from .utils import fas_data_path, inspections_data_path
+from datetime import datetime, timedelta
 import time
     
 def fetch_esr_data(usda_api_key: str, marketing_year: int) -> None:
@@ -22,7 +22,7 @@ def fetch_esr_data(usda_api_key: str, marketing_year: int) -> None:
         time.sleep(1)
 
         if esr_all_data:   
-            with open(raw_data_path(f"{underscore_commodity_name}_esr_all_{marketing_year}.json"), "w") as file:
+            with open(fas_data_path(f"{underscore_commodity_name}_esr_all_{marketing_year}.json"), "w") as file:
                 json.dump(esr_all_data, file, indent=2)
         else:
             print(
@@ -38,7 +38,7 @@ def fetch_esr_data(usda_api_key: str, marketing_year: int) -> None:
             underscore_country_name = country_name.replace(" ", "_")
 
             if country_data:
-                with open(raw_data_path(f"{underscore_commodity_name}_esr_to_{underscore_country_name}_{marketing_year}.json"), "w") as file:
+                with open(fas_data_path(f"{underscore_commodity_name}_esr_to_{underscore_country_name}_{marketing_year}.json"), "w") as file:
                     json.dump(country_data, file, indent=2)
             else:
                 print(
@@ -64,7 +64,7 @@ def fetch_psd_data(usda_api_key: str, marketing_year: int) -> None:
         time.sleep(1)
 
         if psd_world_data:   
-            with open(raw_data_path(f"{underscore_commodity_name}_psd_world_{marketing_year}.json"), "w") as file:
+            with open(fas_data_path(f"{underscore_commodity_name}_psd_world_{marketing_year}.json"), "w") as file:
                 json.dump(psd_world_data, file, indent=2)
         else:
             print(
@@ -80,7 +80,7 @@ def fetch_psd_data(usda_api_key: str, marketing_year: int) -> None:
             underscore_country_name = country_name.replace(" ", "_")
 
             if country_data:
-                with open(raw_data_path(f"{underscore_commodity_name}_psd_to_{underscore_country_name}_{marketing_year}.json"), "w") as file:
+                with open(fas_data_path(f"{underscore_commodity_name}_psd_to_{underscore_country_name}_{marketing_year}.json"), "w") as file:
                     json.dump(country_data, file, indent=2)
             else:
                 print(
@@ -94,7 +94,10 @@ def fetch_inspections() -> None:
     print("Fetching latest inspections data...")
 
     url = "https://www.ams.usda.gov/mnreports/wa_gr101.txt"
-    timestamp = datetime.now().strftime("%Y_%m_%d")
+
+    now = datetime.now()
+    monday = now - timedelta(days=now.weekday())
+    timestamp = monday.strftime("%Y_%m_%d")
     filename = f"WA_GR101_{timestamp}.txt"
     filepath = inspections_data_path(filename)
 

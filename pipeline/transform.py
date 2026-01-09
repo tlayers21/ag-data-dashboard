@@ -190,8 +190,8 @@ def clean_psd_world_file(path: Path) -> pd.DataFrame:
     df["marketing_year_month"] = ((df["calendar_month"] - marketing_year_start) % 12) + 1
 
     column_order = [
-        "marketing_year",
         "calendar_year",
+        "marketing_year",
         "calendar_month",
         "marketing_year_month",
         "commodity",
@@ -208,8 +208,8 @@ def clean_psd_country_file(path: Path, country_name: str) -> pd.DataFrame:
     df["country"] = country_name
 
     column_order = [
-        "marketing_year",
         "calendar_year",
+        "marketing_year",
         "calendar_month",
         "marketing_year_month",
         "commodity",
