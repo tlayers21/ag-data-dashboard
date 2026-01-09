@@ -111,6 +111,7 @@ def clean_all_inspections() -> None:
     output_path = cleaned_data_path("inspections_clean.csv")
     combined_inspections_df = combined_inspections_df.sort_values(by="week_ending_date", ascending=False)
     combined_inspections_df.to_csv(output_path, index=False)
+    # TODO: add system that checks for duplicate files in inspections folder
     # TODO: SORT ALL THE OTHER FILES HERE INSTEAD OF IN POSTGRESQL IN DESCENDING, NOT ASCENDING ORDER
     # TODO: FIGURE OUT MARKETING YEAR WEEK STUFF WITH GRAPHING I DON'T LIKE IT (and it's broken) (it should be uniform in a 365 day year not depedent on day of week (iso)), try messing with plotting before this
 

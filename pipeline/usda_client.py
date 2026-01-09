@@ -29,24 +29,12 @@ class USDAClient:
     # ESR Methods
     def esr_all_countries(self, commodity_code: str, marketing_year: int) -> list[dict[str, Any]]:
         endpoint = f"/api/esr/exports/commodityCode/{commodity_code}/allCountries/marketYear/{marketing_year}"
-        data = self._get(endpoint)
-
-        if isinstance(data, list):
-            for record in data:
-                record["marketYear"] = marketing_year
-        
-        return data
+        return self._get(endpoint)
     
     def esr_country(self, commodity_code: str, country_code: str, marketing_year: int) -> list[dict[str, Any]]:
         endpoint = f"/api/esr/exports/commodityCode/{commodity_code}/countryCode/{country_code}/marketYear/{marketing_year}"
-        data = self._get(endpoint)
+        return self._get(endpoint)
 
-        if isinstance(data, list):
-            for record in data:
-                record["marketYear"] = marketing_year
-        
-        return data
-    
     # PSD Methods
     def psd_world(self, commodity_code: str, market_year: str) -> list[dict[str, Any]]:
         endpoint = f"/api/psd/commodity/{commodity_code}/world/year/{market_year}"

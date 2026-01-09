@@ -3,6 +3,14 @@ import pandas as pd
 from pathlib import Path
 import re
 from .config import COMMODITIES
+from .marketing_year import (
+    MARKETING_YEAR_START,
+    compute_marketing_year,
+    compute_marketing_year_start_date,
+    compute_first_week_ending,
+    compute_marketing_year_week,
+    compute_marketing_year_month
+)
 
 ESR_RENAME_MAP = {
     "commodityCode": "commodity_code",
@@ -16,16 +24,7 @@ ESR_RENAME_MAP = {
     "nextMYOutstandingSales": "next_marketing_year_outstanding_sales",
     "nextMYNetSales": "next_marketing_year_net_sales",
     "unitId": "unit_id",
-    "weekEndingDate": "week_ending_date",
-    "marketYear": "marketing_year"
-}
-
-MARKETING_YEAR_START = {
-    "corn": 9,
-    "soybeans": 9,
-    "wheat": 6,
-    "soybean oil": 10,
-    "soybean meal": 10
+    "weekEndingDate": "week_ending_date"
 }
 
 ESR_COMMODITY_LOOKUP = {data["esr"]["commodity"]: commodity for commodity, data in COMMODITIES.items()}
@@ -85,7 +84,7 @@ def clean_esr_world_file(path: Path) -> pd.DataFrame:
     commodity_code = str(df["commodity_code"].iloc[0])
 
     commodity_name = ESR_COMMODITY_LOOKUP.get(commodity_code)
-    marketing_year = df["marketing_year"].iloc[0]
+    start_month = MARKETING_YEAR_START[commodity_name]
 
     data_columns = [
         "weekly_exports", "accumulated_exports", "outstanding_sales",
@@ -99,32 +98,26 @@ def clean_esr_world_file(path: Path) -> pd.DataFrame:
     aggregated_data["unit"] = "Metric Tons"
     aggregated_data["commodity"] = commodity_name
     aggregated_data["country"] = "world"
-    aggregated_data["marketing_year"] = marketing_year
 
-    # Extract calendar week, month, and year then assign marketing year weeks and months
-    aggregated_data["calendar_week"] = aggregated_data["week_ending_date"].dt.isocalendar().week
-    aggregated_data["calendar_month"] = aggregated_data["week_ending_date"].dt.month
+    # Determine calendar year, month, and week
     aggregated_data["calendar_year"] = aggregated_data["week_ending_date"].dt.year
+    aggregated_data["calendar_month"] = aggregated_data["week_ending_date"].dt.month
+    aggregated_data["calendar_week"] = aggregated_data["week_ending_date"].dt.isocalendar().week
 
-    aggregated_data = aggregated_data.sort_values("week_ending_date").reset_index(drop=True)
-    marketing_year_start_month = MARKETING_YEAR_START.get(commodity_name)
-    start_dates = aggregated_data.loc[
-        (aggregated_data["calendar_month"] == marketing_year_start_month) &
-        (aggregated_data["commodity"] == commodity_name),
-        "week_ending_date"
-    ].dropna()
+    # Determine marketing year, month, and week
+    aggregated_data["marketing_year"] = compute_marketing_year(aggregated_data["week_ending_date"], start_month)
+    aggregated_data["marketing_year_start_date"] = compute_marketing_year_start_date(aggregated_data["week_ending_date"], start_month)
+    # ESR weeks end on Tuesday
+    aggregated_data["first_week_ending"] = compute_first_week_ending(aggregated_data["marketing_year_start_date"], weekday=1)
 
-    if start_dates.empty:
-        fallback_year = aggregated_data["calendar_year"].iloc[0]
-        fallback_date = pd.Timestamp(year=fallback_year, month=marketing_year_start_month, day=1)
-        start_dates = pd.Series([fallback_date])
-    
-    first_week_date = start_dates.min()
-
-    aggregated_data["marketing_year_week"] = (
-        (aggregated_data["week_ending_date"] - first_week_date).dt.days // 7 + 1
+    aggregated_data["marketing_year_month"] = compute_marketing_year_month(
+        aggregated_data["week_ending_date"], start_month
     )
-    aggregated_data["marketing_year_month"] = ((aggregated_data["calendar_month"] - marketing_year_start_month) % 12) + 1
+    aggregated_data["marketing_year_week"] = compute_marketing_year_week(
+        aggregated_data["week_ending_date"], aggregated_data["first_week_ending"]
+    )
+
+    aggregated_data = aggregated_data.drop(columns=["marketing_year_start_date", "first_week_ending"])
 
     column_order = [
         "week_ending_date",
@@ -250,56 +243,68 @@ def clean_inspections_file(path: Path) -> pd.DataFrame:
             print(f"'{path.name}' Does Not Contain Inspections Data")
             return
         
-        number = amount_match.group(1).replace(",", "")
-        return int(number)
+        amount = amount_match.group(1).replace(",", "")
+        return int(amount)
     
-    corn = extract_value("CORN")
-    soybeans = extract_value("SOYBEANS")
-    wheat = extract_value("WHEAT")
+    amounts = {
+        "corn": extract_value("CORN"),
+        "wheat": extract_value("WHEAT"),
+        "soybeans": extract_value("SOYBEANS")
+    }
 
-    df = pd.DataFrame([{
-        "week_ending_date": week_ending_date,
-        "corn_amount": corn,
-        "wheat_amount": wheat,
-        "soybeans_amount": soybeans,
-        "unit": "Metric Tons"
-    }])
+    rows = []
+    for commodity, amount in amounts.items():
+        if amount is None:
+            continue
+        rows.append({
+            "commodity": commodity,
+            "week_ending_date": week_ending_date,
+            "amount": amount,
+            "unit": "Metric Tons"
+        })
+    
+    df = pd.DataFrame(rows)
 
-    df["calendar_week"] = df["week_ending_date"].dt.isocalendar().week
-    df["calendar_month"] = df["week_ending_date"].dt.month
+    # Determine calendar year, month, and week
     df["calendar_year"] = df["week_ending_date"].dt.year
+    df["calendar_month"] = df["week_ending_date"].dt.month
+    df["calendar_week"] = df["week_ending_date"].dt.isocalendar().week
 
-    for grain in ["corn", "wheat", "soybeans"]:
-        start_month = MARKETING_YEAR_START[grain]
+    # Determine marketing year, month, and week (per commodity)
+    df["start_month"] = df["commodity"].map(MARKETING_YEAR_START)
 
-        df[f"{grain}_marketing_year"] = df["calendar_year"].where(
-            df["calendar_month"] >= start_month,
-            df["calendar_year"] - 1
-        )
+    df["marketing_year"] = compute_marketing_year(
+        df["week_ending_date"], df["start_month"]
+    )
 
-        df[f"{grain}_marketing_year_month"] = ((df["calendar_month"] - start_month) % 12) + 1
-        first_week_date = df.loc[df["calendar_month"] >= start_month, "week_ending_date"].min()
-        if pd.isna(first_week_date):
-            first_week_date = df["week_ending_date"].iloc[0]
-        df[f"{grain}_marketing_year_week"] = ((df["week_ending_date"] - first_week_date).dt.days // 7 + 1)
+    df["marketing_year_start_date"] = compute_marketing_year_start_date(
+        df["week_ending_date"], df["start_month"]
+    )
+
+    df["first_week_ending"] = compute_first_week_ending(
+        df["marketing_year_start_date"], weekday=3
+    )
+
+    df["marketing_year_month"] = compute_marketing_year_month(
+        df["week_ending_date"], df["start_month"]
+    )
+
+    df["marketing_year_week"] = compute_marketing_year_week(
+        df["week_ending_date"], df["first_week_ending"]
+    )
+
+    df = df.drop(columns=["start_month", "marketing_year_start_date", "first_week_ending"])
 
     column_order = [
         "week_ending_date",
         "calendar_year",
-        "corn_marketing_year",
-        "wheat_marketing_year",
-        "soybeans_marketing_year",
+        "marketing_year",
         "calendar_month",
-        "corn_marketing_year_month",
-        "wheat_marketing_year_month",
-        "soybeans_marketing_year_month",
+        "marketing_year_month",
         "calendar_week",
-        "corn_marketing_year_week",
-        "wheat_marketing_year_week",
-        "soybeans_marketing_year_week",
-        "corn_amount",
-        "wheat_amount",
-        "soybeans_amount",
+        "marketing_year_week",
+        "commodity",
+        "amount",
         "unit"
     ]
 
