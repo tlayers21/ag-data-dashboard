@@ -11,22 +11,25 @@ export default function Navbar() {
   const isActive = (path) => location.pathname.startsWith(path);
 
   const menuItems = {
-    corn: [
-      { label: "ESR Data", to: "/corn/esr" },
-      { label: "PSD Data", to: "/corn/psd" },
-      { label: "Forecasts", to: "/corn/forecasts" }
-    ],
-    wheat: [
-      { label: "ESR Data", to: "/wheat/esr" },
-      { label: "PSD Data", to: "/wheat/psd" },
-      { label: "Forecasts", to: "/wheat/forecasts" }
-    ],
-    soybeans: [
-      { label: "ESR Data", to: "/soybeans/esr" },
-      { label: "PSD Data", to: "/soybeans/psd" },
-      { label: "Forecasts", to: "/soybeans/forecasts" }
-    ]
-  };
+  corn: [
+    { label: "Inspections", to: "/corn/inspections" },
+    { label: "ESR Data", to: "/corn/esr" },
+    { label: "PSD Data", to: "/corn/psd" },
+    { label: "Forecasts", to: "/corn/forecasts" }
+  ],
+  wheat: [
+    { label: "Inspections", to: "/wheat/inspections" },
+    { label: "ESR Data", to: "/wheat/esr" },
+    { label: "PSD Data", to: "/wheat/psd" },
+    { label: "Forecasts", to: "/wheat/forecasts" }
+  ],
+  soybeans: [
+    { label: "Inspections", to: "/soybeans/inspections" },
+    { label: "ESR Data", to: "/soybeans/esr" },
+    { label: "PSD Data", to: "/soybeans/psd" },
+    { label: "Forecasts", to: "/soybeans/forecasts" }
+  ]
+};
 
   return (
     <nav className="navbar">

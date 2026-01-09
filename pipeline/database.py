@@ -55,7 +55,8 @@ CREATE TABLE IF NOT EXISTS inspections (
     calendar_week INTEGER,
     marketing_year_week INTEGER,
     commodity TEXT,
-    amount INTEGER,
+    country TEXT,
+    inspections INTEGER,
     unit TEXT
     );
 """
@@ -81,10 +82,11 @@ CREATE_INSPECTIONS_INDEXES = [
 ]
 
 def load_csv(engine: Engine, path: Path) -> None:
-    filename = path.name
+    filename = path.stem
+    filename = filename.replace("_clean", "")
     df = pd.read_csv(path)
     df.to_sql(filename, engine, if_exists="append", index=False)
-    print(f"{filename} is loaded into PostgreSQL")
+    print(f"{filename}.csv is loaded into PostgreSQL")
 
 def init_database() -> None:
     print("Creating PostgreSQL Database...")

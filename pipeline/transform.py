@@ -258,8 +258,9 @@ def clean_inspections_file(path: Path) -> pd.DataFrame:
             continue
         rows.append({
             "commodity": commodity,
+            "country": "world",
             "week_ending_date": week_ending_date,
-            "amount": amount,
+            "inspections": amount,
             "unit": "Metric Tons"
         })
     
@@ -304,7 +305,8 @@ def clean_inspections_file(path: Path) -> pd.DataFrame:
         "calendar_week",
         "marketing_year_week",
         "commodity",
-        "amount",
+        "country",
+        "inspections",
         "unit"
     ]
 
