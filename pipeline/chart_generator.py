@@ -61,6 +61,8 @@ def generate_weekly_chart(
         raise ValueError("year_type must be either 'calendar' or 'marketing'")
 
     unit = df["unit"].iloc[0]
+    latest_date = df["week_ending_date"].iloc[0]
+    latest_date = pd.to_datetime(latest_date).strftime("%Y-%m-%d")
 
     figure = px.line(
         df,
@@ -68,9 +70,10 @@ def generate_weekly_chart(
         y=value_column,
         color=color_axis,
         markers=True,
+        custom_data=["week_ending_date", value_column],
         title=(
             f"Weekly U.S. {commodity.title()} {value_column.replace("_", " ").title()}<br>"
-            f"to {country.title()}"
+            f"to {country.title()} (as of {latest_date})"
         ),
         labels={
             x_axis: f"{title_year} Week",
@@ -140,6 +143,16 @@ def generate_weekly_chart(
 
     for i, trace in enumerate(figure.data):
         trace.update(legendrank=len(figure.data) - i)
+
+    figure.update_xaxes(showgrid=True, gridcolor="lightgray", gridwidth=0.5)
+    figure.update_yaxes(showgrid=True, gridcolor="lightgray", gridwidth=0.5, tickfont=dict(size=11))
+    figure.update_layout(plot_bgcolor="white", paper_bgcolor="white")
+
+    figure.update_traces(
+        hovertemplate=
+        f"{commodity.title()}: %{{customdata[1]:,}}<br>"
+        f"Week ending: %{{customdata[0]|%b-%d-%Y}}<extra></extra>"
+    )
 
     json_dir = Path("frontend/public").resolve()
     figure_dir = Path("frontend/figures").resolve()

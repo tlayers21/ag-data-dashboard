@@ -1,3 +1,7 @@
+/* ------------------------------
+   GLOBAL
+------------------------------ */
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -15,71 +19,113 @@ header {
   color: #2a4d69;
 }
 
+.page-wrapper {
+  padding: 1.5rem 2rem;
+}
+
+
+/* ------------------------------
+   NAVBAR
+------------------------------ */
+
 .navbar {
   display: flex;
-  justify-content: center;   /* centers all nav buttons */
+  justify-content: center;
   align-items: center;
   background-color: #ffffff;
   border-bottom: 1px solid #e0e0e0;
-  padding: 0.5rem 1rem;
-  gap: 2rem;                 /* more spacing between buttons */
+  padding: 0.75rem 1rem;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
 }
 
 .nav-item {
   position: relative;
 }
 
-.nav-center {
-  display: flex;
-  gap: 2rem;                 /* spacing between buttons */
-  align-items: center;
-}
-
-.nav-button {
-  background: none;
-  border: none;
-  font-size: 1rem;
+.nav-label {
   cursor: pointer;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.75rem;
   color: #2a4d69;
+  font-size: 1rem;
 }
 
-.nav-button:hover {
+.nav-label:hover {
   background-color: #e8eef3;
   border-radius: 4px;
 }
 
+
+/* ------------------------------
+   DROPDOWN MENUS
+------------------------------ */
+
 .dropdown {
   position: absolute;
-  top: 100%;          /* sits directly under the button */
+  top: 100%;
   left: 0;
   background: white;
   border: 1px solid #ddd;
-  border-radius: 4px;
-  min-width: 160px;
-  z-index: 20;
+  border-radius: 6px;
+  min-width: 180px;
+  z-index: 50;
   padding: 0.25rem 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+
+  display: none; /* hide by default */
+}
+
+.dropdown {
+  list-style: none;
+  padding-left: 0;
+}
+.dropdown-item {
+  list-style: none;
+}
+
+.nav-item:hover .dropdown {
+  display: block; /* show on hover */
 }
 
 .dropdown-item {
-  padding: 0.5rem 1rem;
-  cursor: pointer;
+  padding: 0.6rem 1rem;
   white-space: nowrap;
+}
+
+.dropdown-item a {
+  text-decoration: none;
+  color: #333;
 }
 
 .dropdown-item:hover {
   background-color: #f0f4f7;
 }
 
-.main-content {
-  padding: 2rem;
+/* Highlight parent commodity */
+.dropdown-item.special {
+  background: #f7f7f7;
+  font-weight: 600;
 }
 
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+
+/* ------------------------------
+   MAIN CONTENT
+------------------------------ */
+
+.main-content {
+  padding: 2rem 0;
 }
+
+
+/* ------------------------------
+   CHART CARDS
+------------------------------ */
 
 .card {
   background: white;
@@ -89,18 +135,87 @@ header {
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-/* Full-width chart card */
-.card-full {
-  width: 100%;
-  margin-bottom: 2rem;
-}
-
 .card-grid-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .card .js-plotly-plot {
   height: 400px !important;
+}
+
+
+/* ------------------------------
+   COMMENTARY BOX
+------------------------------ */
+
+.commentary-box {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.commentary-box h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+
+/* ------------------------------
+   SUBNAV (Commodity tabs)
+------------------------------ */
+
+.subnav {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0 2rem 0;
+}
+
+.subnav a {
+  padding: 0.5rem 1rem;
+  background: #f2f2f2;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.subnav a:hover {
+  background: #e0e0e0;
+}
+
+
+/* ------------------------------
+   BACK ARROW
+------------------------------ */
+
+.back-arrow {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.back-arrow:hover {
+  opacity: 0.7;
+}
+
+.nav-link {
+  padding: 0.5rem 0.75rem;
+  color: #2a4d69;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.nav-link:hover {
+  background-color: #e8eef3;
+  border-radius: 4px;
 }

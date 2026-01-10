@@ -24,10 +24,10 @@ def compute_marketing_year_start_date(date: pd.Series, start_month: int) -> pd.S
     return pd.to_datetime(start_year + "-" + start_month_str + "-01")
 
 def first_weekday_on_or_after(date: pd.Timestamp, weekday: int) -> pd.Timestamp:
-    # Inspections weeks end on thursdays, esr weeks end on tuesdays
     offset = (weekday - date.weekday()) % 7
     return date + pd.Timedelta(days=offset)
 
+# TODO: Confirm that both week ending dates are on tuesdays
 def compute_first_week_ending(start_dates: pd.Series, weekday: int) -> pd.Series:
     return start_dates.apply(lambda d: first_weekday_on_or_after(d, weekday))
 

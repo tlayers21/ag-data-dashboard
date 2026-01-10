@@ -108,8 +108,8 @@ def clean_esr_world_file(path: Path) -> pd.DataFrame:
     # Determine marketing year, month, and week
     aggregated_data["marketing_year"] = compute_marketing_year(aggregated_data["week_ending_date"], start_month)
     aggregated_data["marketing_year_start_date"] = compute_marketing_year_start_date(aggregated_data["week_ending_date"], start_month)
-    # ESR weeks end on Tuesday
-    aggregated_data["first_week_ending"] = compute_first_week_ending(aggregated_data["marketing_year_start_date"], weekday=1)
+    # ESR weeks end on tuesday
+    aggregated_data["first_week_ending"] = compute_first_week_ending(aggregated_data["marketing_year_start_date"], weekday=3)
 
     aggregated_data["marketing_year_month"] = compute_marketing_year_month(
         aggregated_data["week_ending_date"], start_month

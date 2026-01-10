@@ -1,85 +1,64 @@
-import React, { useState } from "react";
-import DropdownMenu from "./DropdownMenu";
-import { useNavigate, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
+import "../App.css";
+
+/* Explicit parent labels so all top buttons look the same */
+const menuItems = [
+  {
+    label: "Corn",
+    items: [
+      { label: "Corn", to: "/corn" },
+      { label: "Ethanol", to: "/ethanol" }
+    ]
+  },
+  {
+    label: "Wheat",
+    items: [
+      { label: "Wheat", to: "/wheat" },
+      { label: "SRW Wheat", to: "/srw-wheat" },
+      { label: "HRW Wheat", to: "/hrw-wheat" }
+    ]
+  },
+  {
+    label: "Soybeans",
+    items: [
+      { label: "Soybeans", to: "/soybeans" },
+      { label: "Soybean Meal", to: "/soybean-meal" },
+      { label: "Soybean Oil", to: "/soybean-oil" }
+    ]
+  }
+];
 
 export default function Navbar() {
-  const [openMenu, setOpenMenu] = useState(null);
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  // Helper: check if current path starts with something
-  const isActive = (path) => location.pathname.startsWith(path);
-
-  const menuItems = {
-  corn: [
-    { label: "Inspections", to: "/corn/inspections" },
-    { label: "ESR Data", to: "/corn/esr" },
-    { label: "PSD Data", to: "/corn/psd" },
-    { label: "Forecasts", to: "/corn/forecasts" }
-  ],
-  wheat: [
-    { label: "Inspections", to: "/wheat/inspections" },
-    { label: "ESR Data", to: "/wheat/esr" },
-    { label: "PSD Data", to: "/wheat/psd" },
-    { label: "Forecasts", to: "/wheat/forecasts" }
-  ],
-  soybeans: [
-    { label: "Inspections", to: "/soybeans/inspections" },
-    { label: "ESR Data", to: "/soybeans/esr" },
-    { label: "PSD Data", to: "/soybeans/psd" },
-    { label: "Forecasts", to: "/soybeans/forecasts" }
-  ]
-};
-
   return (
     <nav className="navbar">
-      <div className="nav-center">
+      <ul className="nav-list">
 
         {/* HOME BUTTON */}
-        <button
-          className="nav-button"
-          onClick={() => navigate("/")}
-          style={{
-            fontWeight: location.pathname === "/" ? "bold" : "normal"
-          }}
-        >
-          Home
-        </button>
+        <li className="nav-item">
+          <Link to="/" className="nav-link">Home</Link>
+        </li>
 
-        {/* CORN / WHEAT / SOYBEANS */}
-        {["corn", "wheat", "soybeans"].map((commodity) => (
-          <div
-            key={commodity}
-            className="nav-item"
-            onMouseEnter={() => setOpenMenu(commodity)}
-            onMouseLeave={() => setOpenMenu(null)}
-          >
-            <button
-              className="nav-button"
-              style={{
-                fontWeight: isActive(`/${commodity}`) ? "bold" : "normal"
-              }}
-            >
-              {commodity.charAt(0).toUpperCase() + commodity.slice(1)}
-            </button>
+        {/* COMMODITY FAMILIES */}
+        {menuItems.map((group) => (
+          <li className="nav-item" key={group.label}>
+            <span className="nav-label">{group.label} ▾</span>
 
-            {openMenu === commodity && (
-              <DropdownMenu items={menuItems[commodity]} />
-            )}
-          </div>
+            <ul className="dropdown">
+              {group.items.map((item) => (
+                <li className="dropdown-item" key={item.label}>
+                  <Link to={item.to}>{item.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </li>
         ))}
 
-        {/* ABOUT ME */}
-        <button
-          className="nav-button"
-          onClick={() => navigate("/about")}
-          style={{
-            fontWeight: location.pathname === "/about" ? "bold" : "normal"
-          }}
-        >
-          About Me
-        </button>
-      </div>
+        {/* ABOUT BUTTON */}
+        <li className="nav-item">
+          <Link to="/about" className="nav-link">About</Link>
+        </li>
+
+      </ul>
     </nav>
   );
 }
