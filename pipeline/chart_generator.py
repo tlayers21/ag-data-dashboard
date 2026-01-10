@@ -40,11 +40,23 @@ def generate_weekly_chart(
         color_axis = "calendar_year"
         file_suffix = "cal"
         title_year = "Calendar Year"
+
+        df[color_axis] = df[color_axis].astype(str)
     elif year_type == "marketing":
         x_axis = "marketing_year_week"
         color_axis = "marketing_year"
         file_suffix = "my"
         title_year = "Marketing Year"
+
+        mapping = {
+            2026: "2025/2026",
+            2025: "2024/2025",
+            2024: "2023/2024",
+            2023: "2022/2023",
+            2022: "2021/2022",
+            2021: "2020/2021",
+        }
+        df[color_axis] = df[color_axis].map(mapping)
     else:
         raise ValueError("year_type must be either 'calendar' or 'marketing'")
 
@@ -56,13 +68,78 @@ def generate_weekly_chart(
         y=value_column,
         color=color_axis,
         markers=True,
-        title=f"Weekly U.S. {commodity.title()} {value_column} to {country.title()} ({title_year})",
+        title=(
+            f"Weekly U.S. {commodity.title()} {value_column.replace("_", " ").title()}<br>"
+            f"to {country.title()}"
+        ),
         labels={
             x_axis: f"{title_year} Week",
             value_column: f"{unit}",
             color_axis: title_year
         }
     )
+
+    # Format x-axis
+    df["week_ending_date"] = pd.to_datetime(df["week_ending_date"])
+    tick_weeks = [2, 9, 16, 23, 30, 37, 44, 51]
+    tick_rows = df[df["marketing_year_week"].isin(tick_weeks)]
+    tick_map = dict(zip(
+        tick_rows["marketing_year_week"],
+        tick_rows["week_ending_date"].dt.strftime("%b-%d")
+    ))
+
+    figure.update_xaxes(
+        tickmode="array",
+        tickvals=list(tick_map.keys()),
+        ticktext=list(tick_map.values()),
+        tickangle=0,
+        tickfont=dict(size=10)
+    )
+
+    latest_year_raw= df[color_axis].max()
+    latest_year_key = str(latest_year_raw).split("/")[0]
+
+    latest_trace = None
+
+    for trace in figure.data:
+        trace_label = str(trace.name)
+        trace_first = trace_label.split("/")[0]
+
+        if trace_first == latest_year_key:
+            trace.update(
+                line=dict(width=4, color="red"),
+                marker=dict(size=7),
+                name=f"<b>{trace_label}</b>"
+            )
+            latest_trace = trace
+        else:
+            trace.update(
+                line=dict(width=2),
+                marker=dict(size=6),
+                opacity=0.6
+            )
+    if latest_trace is not None:
+        figure.data = tuple(reversed(figure.data))
+
+    figure.update_layout(
+        title={
+            "text": figure.layout.title.text,
+            "x": 0.5,
+            "xanchor": "center"
+        },
+        legend=dict(
+            title_text="",
+            orientation="h",
+            yanchor="bottom",
+            y=-0.5,
+            xanchor="center",
+            x=0.5,
+            entrywidth=100
+        )
+    )
+
+    for i, trace in enumerate(figure.data):
+        trace.update(legendrank=len(figure.data) - i)
 
     json_dir = Path("frontend/public").resolve()
     figure_dir = Path("frontend/figures").resolve()
@@ -74,12 +151,14 @@ def generate_weekly_chart(
 
     pio.write_json(figure, str(json_path))
 
+    """
     png_path = (
         figure_dir
          / f"us_{commodity.lower()}_to_{country.lower()}_{value_column}_last_5_years_{file_suffix}.png"
     )
 
     pio.write_image(figure, str(png_path))
+    """
 
 """
 def generate_charts() -> None:

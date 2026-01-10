@@ -6,8 +6,8 @@ from pipeline.chart_generator import generate_home_page_charts
 
 if __name__ == "__main__":
     USDA_API_KEY = "GA0LAyk7zcLgEjKMdSfOIOl7GJmL4wRleIlflcfp"
-    ESR_YEARS = [2026, 2025, 2024, 2023, 2022]
-    PSD_YEARS = [2025, 2024, 2023, 2022, 2021]
+    ESR_YEARS = [2026, 2025, 2024, 2023, 2022, 2021]
+    PSD_YEARS = [2025, 2024, 2023, 2022, 2021, 2020]
 
     while True:
         answer = input("Restart entire pipeline process? (y/n)\n").strip().lower()
@@ -24,12 +24,10 @@ if __name__ == "__main__":
         # Empty directories every run
         dirs_to_empty = [
             Path("data/raw/fas").resolve(),
-            Path("data/clean").resolve(),
-            Path("frontend/public/*.json").resolve(),
-            Path("frontend/figures").resolve()
+            Path("frontend/public/").resolve(),
         ]
         for directory in dirs_to_empty:
-            for file in directory.glob("*"):
+            for file in directory.glob("*.json"):
                 if file.is_file():
                     file.unlink()
 

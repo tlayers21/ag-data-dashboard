@@ -12,7 +12,7 @@ def health() -> dict:
     return {"status": "ok"}
 
 def fetch_last_5_years(data: str, commodity: str, country: str) -> list[dict]:
-    five_years_ago = datetime.now() - timedelta(days=5*365 + 1)
+    five_years_ago = datetime.now() - timedelta(days=5*365 + 134)
     cutoff = five_years_ago.strftime("%Y-%m-%d")
     
     query = f"""
