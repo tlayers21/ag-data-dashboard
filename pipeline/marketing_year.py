@@ -31,8 +31,18 @@ def first_weekday_on_or_after(date: pd.Timestamp, weekday: int) -> pd.Timestamp:
 def compute_first_week_ending(start_dates: pd.Series, weekday: int) -> pd.Series:
     return start_dates.apply(lambda d: first_weekday_on_or_after(d, weekday))
 
-def compute_marketing_year_week(week_ending: pd.Series, first_week_ending: pd.Series) -> pd.Series:
-    return (((week_ending - first_week_ending).dt.days // 7) + 1).astype(int)
+def compute_marketing_year_week_esr(week_ending: pd.Series, first_week_ending: pd.Series) -> pd.Series:
+    weeks = ((week_ending - first_week_ending).dt.days // 7) + 1
+    #TODO: Figure out how to fix edge cases for marketing year weeks (esr) to account for edge cases
+    """
+    Some of the week data from previous year gets pushed to the next year, causing discrepancies.
+    Since these charts are more used as a comparison to previous years, this solution
+    fixes this issue, however loses a bit of data.
+    """
+    return weeks.where(weeks > 1)
+
+def compute_marketing_year_week_inspections(week_ending: pd.Series, first_week_ending: pd.Series) -> pd.Series:
+    return ((week_ending - first_week_ending).dt.days // 7) + 1
 
 def compute_marketing_year_month(date: pd.Series, start_month: int) -> pd.Series:
     return (((date.dt.month - start_month) % 12) + 1).astype(int)

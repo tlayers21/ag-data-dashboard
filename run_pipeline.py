@@ -25,7 +25,7 @@ if __name__ == "__main__":
         dirs_to_empty = [
             Path("data/raw/fas").resolve(),
             Path("data/clean").resolve(),
-            Path("frontend/json").resolve(),
+            Path("frontend/public/*.json").resolve(),
             Path("frontend/figures").resolve()
         ]
         for directory in dirs_to_empty:

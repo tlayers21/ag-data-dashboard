@@ -8,7 +8,8 @@ from .marketing_year import (
     compute_marketing_year,
     compute_marketing_year_start_date,
     compute_first_week_ending,
-    compute_marketing_year_week,
+    compute_marketing_year_week_esr,
+    compute_marketing_year_week_inspections,
     compute_marketing_year_month
 )
 
@@ -113,9 +114,11 @@ def clean_esr_world_file(path: Path) -> pd.DataFrame:
     aggregated_data["marketing_year_month"] = compute_marketing_year_month(
         aggregated_data["week_ending_date"], start_month
     )
-    aggregated_data["marketing_year_week"] = compute_marketing_year_week(
+    aggregated_data["marketing_year_week"] = compute_marketing_year_week_esr(
         aggregated_data["week_ending_date"], aggregated_data["first_week_ending"]
     )
+    #TODO: Fix marketing year week logic to not lose edge case data (see comment in marketing_year.py) so this line can be removed
+    aggregated_data = aggregated_data[aggregated_data["marketing_year_week"].notna()]
 
     aggregated_data = aggregated_data.drop(columns=["marketing_year_start_date", "first_week_ending"])
 
@@ -290,7 +293,7 @@ def clean_inspections_file(path: Path) -> pd.DataFrame:
         df["week_ending_date"], df["start_month"]
     )
 
-    df["marketing_year_week"] = compute_marketing_year_week(
+    df["marketing_year_week"] = compute_marketing_year_week_inspections(
         df["week_ending_date"], df["first_week_ending"]
     )
 

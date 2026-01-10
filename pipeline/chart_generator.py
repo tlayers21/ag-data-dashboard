@@ -59,7 +59,7 @@ def generate_weekly_chart(
         title=f"Weekly U.S. {commodity.title()} {value_column} to {country.title()} ({title_year})",
         labels={
             x_axis: f"{title_year} Week",
-            value_column: f"{value_column.title()} ({unit})",
+            value_column: f"{unit}",
             color_axis: title_year
         }
     )
@@ -108,14 +108,19 @@ def generate_home_page_charts() -> None:
     print("Generating home page charts...")
 
     generate_weekly_chart("inspections", "corn", "world", "inspections", "marketing")
-    generate_weekly_chart("esr", "corn", "world", "accumulated_exports", "marketing")
+    generate_weekly_chart("esr", "corn", "world", "weekly_exports", "marketing")
     generate_weekly_chart("esr", "corn", "world", "current_marketing_year_total_commitment", "marketing")
+    generate_weekly_chart("esr", "corn", "world", "next_marketing_year_outstanding_sales", "marketing")
 
     generate_weekly_chart("inspections", "wheat", "world", "inspections", "marketing")
-    generate_weekly_chart("esr", "wheat", "world", "accumulated_exports", "marketing")
+    generate_weekly_chart("esr", "wheat", "world", "weekly_exports", "marketing")
     generate_weekly_chart("esr", "wheat", "world", "current_marketing_year_total_commitment", "marketing")
+    generate_weekly_chart("esr", "wheat", "world", "next_marketing_year_outstanding_sales", "marketing")
 
     generate_weekly_chart("inspections", "soybeans", "world", "inspections", "marketing")
-    generate_weekly_chart("esr", "soybeans", "world", "accumulated_exports", "marketing")
+    generate_weekly_chart("esr", "soybeans", "world", "weekly_exports", "marketing")
     generate_weekly_chart("esr", "soybeans", "world", "current_marketing_year_total_commitment", "marketing")
+    generate_weekly_chart("esr", "soybeans", "world", "next_marketing_year_outstanding_sales", "marketing")
+
+    print("Done.")
     
