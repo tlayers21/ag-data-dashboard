@@ -2,6 +2,7 @@ import json
 import pandas as pd
 from pathlib import Path
 import re
+from datetime import datetime
 from .config import COMMODITIES
 from .marketing_year import (
     MARKETING_YEAR_START,
@@ -121,8 +122,10 @@ def clean_esr_world_file(path: Path) -> pd.DataFrame:
     aggregated_data = aggregated_data[aggregated_data["marketing_year_week"].notna()]
 
     aggregated_data = aggregated_data.drop(columns=["marketing_year_start_date", "first_week_ending"])
+    aggregated_data["date_collected"] = datetime.now().strftime("%m-%d-%Y")
 
     column_order = [
+        "date_collected",
         "week_ending_date",
         "calendar_year",
         "marketing_year",
@@ -150,6 +153,7 @@ def clean_esr_country_file(path: Path, country_name: str) -> pd.DataFrame:
     df["country"] = country_name
 
     column_order = [
+        "date_collected",
         "week_ending_date",
         "calendar_year",
         "marketing_year",
@@ -191,8 +195,10 @@ def clean_psd_world_file(path: Path) -> pd.DataFrame:
 
     marketing_year_start = MARKETING_YEAR_START.get(commodity_name)
     df["marketing_year_month"] = ((df["calendar_month"] - marketing_year_start) % 12) + 1
+    df["date_collected"] = datetime.now().strftime("%m-%d-%Y")
 
     column_order = [
+        "date_collected",
         "calendar_year",
         "marketing_year",
         "calendar_month",
@@ -211,6 +217,7 @@ def clean_psd_country_file(path: Path, country_name: str) -> pd.DataFrame:
     df["country"] = country_name
 
     column_order = [
+        "date_collected",
         "calendar_year",
         "marketing_year",
         "calendar_month",
@@ -263,7 +270,7 @@ def clean_inspections_file(path: Path) -> pd.DataFrame:
             "commodity": commodity,
             "country": "world",
             "week_ending_date": week_ending_date,
-            "inspections": amount,
+            "export_inspections": amount,
             "unit": "Metric Tons"
         })
     
@@ -299,7 +306,10 @@ def clean_inspections_file(path: Path) -> pd.DataFrame:
 
     df = df.drop(columns=["start_month", "marketing_year_start_date", "first_week_ending"])
 
+    df["date_collected"] = datetime.now().strftime("%m-%d-%Y")
+
     column_order = [
+        "date_collected",
         "week_ending_date",
         "calendar_year",
         "marketing_year",
@@ -309,7 +319,7 @@ def clean_inspections_file(path: Path) -> pd.DataFrame:
         "marketing_year_week",
         "commodity",
         "country",
-        "inspections",
+        "export_inspections",
         "unit"
     ]
 

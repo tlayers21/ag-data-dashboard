@@ -39,7 +39,7 @@ def compute_marketing_year_week_esr(week_ending: pd.Series, first_week_ending: p
     Since these charts are more used as a comparison to previous years, this solution
     fixes this issue, however loses a bit of data.
     """
-    return weeks.where(weeks > 1)
+    return weeks.where(weeks > 1).astype("Int64")
 
 def compute_marketing_year_week_inspections(week_ending: pd.Series, first_week_ending: pd.Series) -> pd.Series:
     return ((week_ending - first_week_ending).dt.days // 7) + 1

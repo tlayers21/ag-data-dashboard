@@ -10,6 +10,7 @@ def get_engine() -> Engine:
 
 CREATE_ESR_TABLE = """
 CREATE TABLE IF NOT EXISTS esr (
+    date_collected TIMESTAMP,
     week_ending_date TIMESTAMP,
     calendar_year INTEGER,
     marketing_year INTEGER,
@@ -33,6 +34,7 @@ CREATE TABLE IF NOT EXISTS esr (
 
 CREATE_PSD_TABLE = """
 CREATE TABLE IF NOT EXISTS psd (
+    date_collected TIMESTAMP,
     calendar_year INTEGER,
     marketing_year INTEGER,
     calendar_month INTEGER,
@@ -47,6 +49,7 @@ CREATE TABLE IF NOT EXISTS psd (
 
 CREATE_INSPECTIONS_TABLE = """
 CREATE TABLE IF NOT EXISTS inspections (
+    date_collected TIMESTAMP,
     week_ending_date TIMESTAMP,
     calendar_year INTEGER,
     marketing_year INTEGER,
@@ -56,7 +59,7 @@ CREATE TABLE IF NOT EXISTS inspections (
     marketing_year_week INTEGER,
     commodity TEXT,
     country TEXT,
-    inspections INTEGER,
+    export_inspections INTEGER,
     unit TEXT
     );
 """

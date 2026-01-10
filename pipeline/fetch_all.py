@@ -97,8 +97,8 @@ def fetch_inspections() -> None:
 
     now = datetime.now()
     monday = now - timedelta(days=now.weekday())
-    timestamp = monday.strftime("%Y_%m_%d")
-    filename = f"WA_GR101_{timestamp}.txt"
+    timestamp = monday.strftime("%Y-%m-%d")
+    filename = f"{timestamp}_WA_GR101_.txt"
     filepath = inspections_data_path(filename)
 
     response = requests.get(url)

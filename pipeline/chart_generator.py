@@ -1,29 +1,8 @@
-import requests
 import pandas as pd
 import plotly.express as px
 import plotly.io as pio
 from pathlib import Path
-
-API_BASE = "http://localhost:8000"
-
-def fetch_data_last5years(data: str, commodity: str, country: str) -> list:
-    params = {
-        "commodity": commodity.lower(),
-        "country": country.lower()
-    }
-
-    url = f"{API_BASE}/{data}/weekly/last5years"
-    response = requests.get(url, params=params)
-
-    if response.status_code != 200:
-        print(f"Error: {response.status_code}, {response.text}")
-        return []
-        
-    try:
-        return response.json()
-    except Exception:
-        print("Database Fetching Error: Response was not valid JSON")
-        return []
+from .api_client import fetch_data_last5years
 
 def generate_weekly_chart(
         data: str,
@@ -61,8 +40,8 @@ def generate_weekly_chart(
         raise ValueError("year_type must be either 'calendar' or 'marketing'")
 
     unit = df["unit"].iloc[0]
-    latest_date = df["week_ending_date"].iloc[0]
-    latest_date = pd.to_datetime(latest_date).strftime("%Y-%m-%d")
+    latest_date = df["date_collected"].iloc[0]
+    latest_date = pd.to_datetime(latest_date).strftime("%m/%d/%Y")
 
     figure = px.line(
         df,
@@ -199,20 +178,20 @@ def generate_charts() -> None:
 def generate_home_page_charts() -> None:
     print("Generating home page charts...")
 
-    generate_weekly_chart("inspections", "corn", "world", "inspections", "marketing")
-    generate_weekly_chart("esr", "corn", "world", "weekly_exports", "marketing")
+    generate_weekly_chart("inspections", "corn", "world", "export_inspections", "marketing")
+    generate_weekly_chart("esr", "corn", "world", "gross_new_sales", "marketing")
     generate_weekly_chart("esr", "corn", "world", "current_marketing_year_total_commitment", "marketing")
     generate_weekly_chart("esr", "corn", "world", "next_marketing_year_outstanding_sales", "marketing")
 
-    generate_weekly_chart("inspections", "wheat", "world", "inspections", "marketing")
-    generate_weekly_chart("esr", "wheat", "world", "weekly_exports", "marketing")
+    generate_weekly_chart("inspections", "wheat", "world", "export_inspections", "marketing")
+    generate_weekly_chart("esr", "wheat", "world", "gross_new_sales", "marketing")
     generate_weekly_chart("esr", "wheat", "world", "current_marketing_year_total_commitment", "marketing")
     generate_weekly_chart("esr", "wheat", "world", "next_marketing_year_outstanding_sales", "marketing")
 
-    generate_weekly_chart("inspections", "soybeans", "world", "inspections", "marketing")
-    generate_weekly_chart("esr", "soybeans", "world", "weekly_exports", "marketing")
+    generate_weekly_chart("inspections", "soybeans", "world", "export_inspections", "marketing")
+    generate_weekly_chart("esr", "soybeans", "world", "gross_new_sales", "marketing")
     generate_weekly_chart("esr", "soybeans", "world", "current_marketing_year_total_commitment", "marketing")
     generate_weekly_chart("esr", "soybeans", "world", "next_marketing_year_outstanding_sales", "marketing")
 
-    print("Done.")
+    print("Done.\n==========")
     
