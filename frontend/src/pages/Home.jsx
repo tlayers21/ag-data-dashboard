@@ -19,37 +19,19 @@ import soyCommit from "../commentary/us_soybeans_to_world_current_marketing_year
 import soySales from "../commentary/us_soybeans_to_world_gross_new_sales_commentary.txt";
 import soyNextMY from "../commentary/us_soybeans_to_world_next_marketing_year_outstanding_sales_commentary.txt";
 
-// Remove date for non-inspection files
-function stripDate(text) {
-  return text.replace(/^[A-Z]{3}-\d{1,2}:\s*/g, "");
-}
-
-// Bold date for inspections
-function boldDate(text) {
-  return text.replace(
-    /^([A-Z]{3}-\d{1,2}:)/,
-    "<strong>$1</strong> "
-  );
-}
-
 async function combineCommodity(files) {
   const [inspect, commit, sales, nextMY] = await Promise.all(
     files.map((f) => fetch(f).then((r) => r.text()))
   );
 
-  // Bold date for inspections
   const part1 = inspect.trim().replace(
     /^([A-Z]{3}-\d{1,2}:)/,
     "<strong>$1</strong>"
   );
 
-  // Remove date for all others
-  const part2 = commit.trim().replace(/^[A-Z]{3}-\d{1,2}:\s*/g, "");
-  const part3 = sales.trim().replace(/^[A-Z]{3}-\d{1,2}:\s*/g, "");
-  const part4 = nextMY.trim().replace(/^[A-Z]{3}-\d{1,2}:\s*/g, "");
+  const strip = (t) => t.trim().replace(/^[A-Z]{3}-\d{1,2}:\s*/g, "");
 
-  // Join into ONE paragraph
-  return [part1, part2, part3, part4].join(" ");
+  return [part1, strip(commit), strip(sales), strip(nextMY)].join(" ");
 }
 
 export default function Home() {
@@ -93,32 +75,30 @@ export default function Home() {
   return (
     <div className="main-content">
 
-      {/* CORN SECTION */}
       <h2>Recent Corn Charts</h2>
 
       <div className="card-grid-2">
         <div className="card">
           <h3>Export Inspections</h3>
-          <ChartViewer jsonPath="/us_corn_to_world_inspections_last_5_years_my.json" />
+          <ChartViewer jsonPath="/us_corn_to_world_export_inspections_last_5_years_my_home.json" />
         </div>
 
         <div className="card">
-          <h3>Current Marketing Year Total Commitment</h3>
-          <ChartViewer jsonPath="/us_corn_to_world_current_marketing_year_total_commitment_last_5_years_my.json" />
+          <h3>Total Commitment</h3>
+          <ChartViewer jsonPath="/us_corn_to_world_current_marketing_year_total_commitment_last_5_years_my_home.json" />
         </div>
 
         <div className="card">
           <h3>Gross New Sales</h3>
-          <ChartViewer jsonPath="/us_corn_to_world_gross_new_sales_last_5_years_my.json" />
+          <ChartViewer jsonPath="/us_corn_to_world_gross_new_sales_last_5_years_my_home.json" />
         </div>
 
         <div className="card">
-          <h3>Next Marketing Year Outstanding Sales</h3>
-          <ChartViewer jsonPath="/us_corn_to_world_next_marketing_year_outstanding_sales_last_5_years_my.json" />
+          <h3>Next MY Outstanding Sales</h3>
+          <ChartViewer jsonPath="/us_corn_to_world_next_marketing_year_outstanding_sales_last_5_years_my_home.json" />
         </div>
       </div>
 
-      {/* CORN COMMENTARY */}
       <div className="commentary-box">
         <h3>Commentary:</h3>
         <div
@@ -127,32 +107,30 @@ export default function Home() {
         />
       </div>
 
-      {/* WHEAT SECTION */}
       <h2 style={{ marginTop: "3rem" }}>Recent Wheat Charts</h2>
 
       <div className="card-grid-2">
         <div className="card">
           <h3>Export Inspections</h3>
-          <ChartViewer jsonPath="/us_wheat_to_world_inspections_last_5_years_my.json" />
+          <ChartViewer jsonPath="/us_wheat_to_world_export_inspections_last_5_years_my_home.json" />
         </div>
 
         <div className="card">
-          <h3>Current Marketing Year Total Commitment</h3>
-          <ChartViewer jsonPath="/us_wheat_to_world_current_marketing_year_total_commitment_last_5_years_my.json" />
+          <h3>Total Commitment</h3>
+          <ChartViewer jsonPath="/us_wheat_to_world_current_marketing_year_total_commitment_last_5_years_my_home.json" />
         </div>
 
         <div className="card">
           <h3>Gross New Sales</h3>
-          <ChartViewer jsonPath="/us_wheat_to_world_gross_new_sales_last_5_years_my.json" />
+          <ChartViewer jsonPath="/us_wheat_to_world_gross_new_sales_last_5_years_my_home.json" />
         </div>
 
         <div className="card">
-          <h3>Next Marketing Year Outstanding Sales</h3>
-          <ChartViewer jsonPath="/us_wheat_to_world_next_marketing_year_outstanding_sales_last_5_years_my.json" />
+          <h3>Next MY Outstanding Sales</h3>
+          <ChartViewer jsonPath="/us_wheat_to_world_next_marketing_year_outstanding_sales_last_5_years_my_home.json" />
         </div>
       </div>
 
-      {/* WHEAT COMMENTARY */}
       <div className="commentary-box">
         <h3>Commentary:</h3>
         <div
@@ -161,32 +139,30 @@ export default function Home() {
         />
       </div>
 
-      {/* SOYBEAN SECTION */}
       <h2 style={{ marginTop: "3rem" }}>Recent Soybean Charts</h2>
 
       <div className="card-grid-2">
         <div className="card">
           <h3>Export Inspections</h3>
-          <ChartViewer jsonPath="/us_soybeans_to_world_inspections_last_5_years_my.json" />
+          <ChartViewer jsonPath="/us_soybeans_to_world_export_inspections_last_5_years_my_home.json" />
         </div>
 
         <div className="card">
-          <h3>Current Marketing Year Total Commitment</h3>
-          <ChartViewer jsonPath="/us_soybeans_to_world_current_marketing_year_total_commitment_last_5_years_my.json" />
+          <h3>Total Commitment</h3>
+          <ChartViewer jsonPath="/us_soybeans_to_world_current_marketing_year_total_commitment_last_5_years_my_home.json" />
         </div>
 
         <div className="card">
           <h3>Gross New Sales</h3>
-          <ChartViewer jsonPath="/us_soybeans_to_world_gross_new_sales_last_5_years_my.json" />
+          <ChartViewer jsonPath="/us_soybeans_to_world_gross_new_sales_last_5_years_my_home.json" />
         </div>
 
         <div className="card">
-          <h3>Next Marketing Year Outstanding Sales</h3>
-          <ChartViewer jsonPath="/us_soybeans_to_world_next_marketing_year_outstanding_sales_last_5_years_my.json" />
+          <h3>Next MY Outstanding Sales</h3>
+          <ChartViewer jsonPath="/us_soybeans_to_world_next_marketing_year_outstanding_sales_last_5_years_my_home.json" />
         </div>
       </div>
 
-      {/* SOYBEAN COMMENTARY */}
       <div className="commentary-box">
         <h3>Commentary:</h3>
         <div

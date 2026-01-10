@@ -13,7 +13,7 @@ const menuItems = [
   {
     label: "Wheat",
     items: [
-      { label: "Wheat", to: "/wheat" },
+      { label: "Wheat (All)", to: "/wheat" },
       { label: "SRW Wheat", to: "/srw-wheat" },
       { label: "HRW Wheat", to: "/hrw-wheat" }
     ]

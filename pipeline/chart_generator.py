@@ -55,7 +55,7 @@ def generate_weekly_chart(
             f"to {country.title()} (as of {latest_date})"
         ),
         labels={
-            x_axis: f"{title_year} Week",
+            x_axis: f"Week Ending Date",
             value_column: f"{unit}",
             color_axis: title_year
         }
@@ -138,7 +138,7 @@ def generate_weekly_chart(
 
     json_path = (
         json_dir
-         / f"us_{commodity.lower()}_to_{country.lower()}_{value_column}_last_5_years_{file_suffix}.json"
+         / f"us_{commodity.lower()}_to_{country.lower()}_{value_column}_last_5_years_{file_suffix}_home.json"
     )
 
     pio.write_json(figure, str(json_path))

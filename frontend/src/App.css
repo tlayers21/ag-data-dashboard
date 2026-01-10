@@ -78,7 +78,7 @@ header {
   padding: 0.25rem 0;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 
-  display: none; /* hide by default */
+  display: none;
 }
 
 .dropdown {
@@ -90,7 +90,7 @@ header {
 }
 
 .nav-item:hover .dropdown {
-  display: block; /* show on hover */
+  display: block;
 }
 
 .dropdown-item {
@@ -142,8 +142,29 @@ header {
   margin-bottom: 1.5rem;
 }
 
+/* Default height for Home charts */
 .card .js-plotly-plot {
   height: 400px !important;
+}
+
+/* Corn page taller chart */
+.corn-chart .js-plotly-plot {
+  height: 700px !important;
+}
+
+/* Centered card for Corn */
+.card-centered {
+  width: 100%;
+  max-width: 1350px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.5rem;
+  padding: 1rem 1.5rem;
+}
+
+/* Taller chart ONLY on Corn page */
+.corn-chart .js-plotly-plot {
+  height: 700px !important;
 }
 
 
@@ -218,4 +239,48 @@ header {
 .nav-link:hover {
   background-color: #e8eef3;
   border-radius: 4px;
+}
+
+
+/* ------------------------------
+   FILTER BAR
+------------------------------ */
+
+.filter-bar-wrapper {
+  width: 100%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem 1.5rem;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  background-color: #f9fafb;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.filter-item {
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+}
+
+.filter-item label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 0.25rem;
+}
+
+.filter-item select {
+  padding: 0.35rem 0.5rem;
+  font-size: 0.95rem;
+  border: 1px solid #c7ccd1;
+  border-radius: 4px;
+  background-color: #ffffff;
 }
