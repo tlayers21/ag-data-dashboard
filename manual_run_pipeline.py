@@ -34,7 +34,6 @@ if __name__ == "__main__":
                     if file.is_file():
                         file.unlink()
 
-        # Running the pipeline process
         for year in ESR_YEARS:
             fetch_esr_data(usda_api_key=USDA_API_KEY, marketing_year=year)
         for year in PSD_YEARS:
