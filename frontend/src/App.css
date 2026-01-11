@@ -147,24 +147,31 @@ header {
   height: 400px !important;
 }
 
-/* Corn page taller chart */
-.corn-chart .js-plotly-plot {
+/* -----------------------------------------
+   UNIVERSAL COMMODITY CHART HEIGHT (700px)
+   Applies to: corn, wheat, soybeans, soybean oil, soybean meal
+------------------------------------------ */
+
+.corn-chart .js-plotly-plot,
+.wheat-chart .js-plotly-plot,
+.soybeans-chart .js-plotly-plot,
+.soybean_oil-chart .js-plotly-plot,
+.soybean_meal-chart .js-plotly-plot {
   height: 700px !important;
 }
 
-/* Centered card for Corn */
-.card-centered {
+/* Centered card for all commodity pages */
+.corn-chart.card-centered,
+.wheat-chart.card-centered,
+.soybeans-chart.card-centered,
+.soybean_oil-chart.card-centered,
+.soybean_meal-chart.card-centered {
   width: 100%;
   max-width: 1350px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1.5rem;
   padding: 1rem 1.5rem;
-}
-
-/* Taller chart ONLY on Corn page */
-.corn-chart .js-plotly-plot {
-  height: 700px !important;
 }
 
 

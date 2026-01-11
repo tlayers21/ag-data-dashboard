@@ -41,10 +41,10 @@ const ESR_TYPES = [
   { key: "accumulated_exports", label: "Accumulated Exports" },
   { key: "outstanding_sales", label: "Outstanding Sales" },
   { key: "gross_new_sales", label: "Gross New Sales" },
-  { key: "current_marketing_year_net_sales", label: "Current MY Net Sales" },
-  { key: "current_marketing_year_total_commitment", label: "Current MY Total Commitment" },
-  { key: "next_marketing_year_net_sales", label: "Next MY Net Sales" },
-  { key: "next_marketing_year_outstanding_sales", label: "Next MY Outstanding Sales" }
+  { key: "current_marketing_year_net_sales", label: "Current Marketing Year Net Sales" },
+  { key: "current_marketing_year_total_commitment", label: "Current Marketing Year Total Commitment" },
+  { key: "next_marketing_year_net_sales", label: "Next Marketing Year Net Sales" },
+  { key: "next_marketing_year_outstanding_sales", label: "Next Marketing Year Outstanding Sales" }
 ];
 
 // -----------------------------
@@ -55,11 +55,11 @@ const PSD_ATTRIBUTES = [
   { key: "beginning_stocks", label: "Beginning Stocks" },
   { key: "production", label: "Production" },
   { key: "imports", label: "Imports" },
-  { key: "trade_year_imports", label: "TY Imports" },
-  { key: "trade_year_imports_from_united_states", label: "TY Imports From U.S." },
+  { key: "trade_year_imports", label: "Trade Year Imports" },
+  { key: "trade_year_imports_from_united_states", label: "Trade Year Imports From U.S." },
   { key: "total_supply", label: "Total Supply" },
   { key: "exports", label: "Exports" },
-  { key: "trade_year_exports", label: "TY Exports" },
+  { key: "trade_year_exports", label: "Trade Year Exports" },
   { key: "domestic_consumption", label: "Domestic Consumption" },
   { key: "feed_domestic_consumption", label: "Feed Domestic Consumption" },
   { key: "ending_stocks", label: "Ending Stocks" },

@@ -72,7 +72,7 @@ PSD_COUNTRY_NAMES = {
 }
 
 """
-DO LATER
+UNDER CONSTRUCTION
 ETHANOL = {
     "endpoint": "petroleum/sum/sndw/data",
     "product": "EPOOXE",

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Plot from "react-plotly.js";
 
-// variant = "home" or "corn"
+// variant = "home" or any commodity: "corn", "wheat", "soybeans", "soybean_oil", "soybean_meal"
 export default function ChartViewer({ jsonPath, variant = "home" }) {
   const [figure, setFigure] = useState(null);
   const [error, setError] = useState(false);
@@ -26,8 +26,16 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
       });
   }, [jsonPath]);
 
-  // ⭐ If Corn chart fails → show message
-  if (error && variant === "corn") {
+  // -----------------------------
+  // ERROR STATE (commodity pages)
+  // -----------------------------
+  const isCommodityPage =
+    variant !== "home" &&
+    ["corn", "wheat", "soybeans", "soybean_oil", "soybean_meal"].includes(
+      variant
+    );
+
+  if (error && isCommodityPage) {
     return (
       <div
         style={{
@@ -47,7 +55,9 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
     );
   }
 
-  // Normal loading state
+  // -----------------------------
+  // LOADING STATE
+  // -----------------------------
   if (!figure) {
     return (
       <div
@@ -64,10 +74,12 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
     );
   }
 
-  // Legend logic
+  // -----------------------------
+  // LEGEND LOGIC (all commodities)
+  // -----------------------------
   let layout = { ...figure.layout };
 
-  if (variant === "corn") {
+  if (isCommodityPage) {
     layout = {
       ...layout,
       legend: {
@@ -76,6 +88,10 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
         y: -0.2,
         x: 0.5,
         xanchor: "center"
+      },
+      margin: {
+        ...(layout.margin || {}),
+        b: 120 // ensures space for horizontal legend
       }
     };
   }
