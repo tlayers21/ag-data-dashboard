@@ -3,9 +3,9 @@ import plotly.express as px
 import plotly.io as pio
 from pathlib import Path
 from .api_client import fetch_data_last5years
-from .config import COMMODITIES, ESR_COUNTRY_NAMES
+from .config import COMMODITIES, ESR_COUNTRY_NAMES, PSD_COUNTRY_NAMES
 
-def generate_weekly_chart(
+def generate_weekly_inspections_or_esr_chart(
         data: str,
         commodity: str,
         country: str,
@@ -14,6 +14,10 @@ def generate_weekly_chart(
         home: bool
 ) -> None:
     df_data = fetch_data_last5years(data, commodity, country)
+
+    if df_data is None:
+        return
+    
     df = pd.DataFrame(df_data)
 
     if year_type == "calendar":
@@ -61,6 +65,16 @@ def generate_weekly_chart(
             value_column: f"{unit}",
             color_axis: title_year
         }
+    )
+
+    figure.add_annotation(
+        text=f"<b>Source: {"USDA<b>" if data == "inspections" else "<b>USDA ESR API<b>"}",
+        xref="paper", yref="paper",
+        x=1,
+        y=1.05,
+        yanchor="top",
+        showarrow=False,
+        font=dict(size=12, color="grey")
     )
 
     # Format x-axis
@@ -157,74 +171,238 @@ def generate_weekly_chart(
 
     pio.write_json(figure, str(json_path))
 
+def generate_weekly_psd_chart(
+        data: str,
+        commodity: str,
+        country: str,
+        attribute: str,
+) -> None:
+    df_data = fetch_data_last5years(data, commodity, country)
+    if df_data is None:
+        return
+
+    df = pd.DataFrame(df_data)
+
+    df["attribute_norm"] = (
+    df["attribute"]
+    .str.lower()
+    .str.replace(" ", "_")
+    )
+
+    df = df[df["attribute_norm"] == attribute]
+
+    if df.empty:
+        return
+
+    df = df.drop(columns=["attribute_norm"])
+
+    mapping = {
+        2026: "2025/2026",
+        2025: "2024/2025",
+        2024: "2023/2024",
+        2023: "2022/2023",
+        2022: "2021/2022",
+        2021: "2020/2021",
+    }
+        
+    df["marketing_year"] = df["marketing_year"].map(mapping)
+    df = df.dropna(subset=["marketing_year"])
+    df["marketing_year"] = df["marketing_year"].astype(str)
+
+    df = df.sort_values(by="marketing_year")
+
+    unit = df["unit"].iloc[0]
+    latest_date = pd.to_datetime(df["date_collected"].iloc[0]).strftime("%m/%d/%Y")
+
+    figure = px.bar(
+        df,
+        x="marketing_year",
+        y="amount",
+        color="marketing_year",
+        title=(
+            f"{country.title()} {commodity.title()} {attribute.replace('_', ' ').title()} "
+            f"(as of {latest_date})"
+        ),
+        labels={
+            "marketing_year": "Marketing Year",
+            "amount": unit
+        },
+        text="amount"
+    )
+
+    figure.add_annotation(
+        text=f"Source: <b>USDA PSD API<b>",
+        xref="paper", yref="paper",
+        x=1,
+        y=1.05,
+        yanchor="top",
+        showarrow=False,
+        font=dict(size=12, color="grey")
+    )
+
+    max_val = df["amount"].max()
+    figure.update_yaxes(range=[0, max_val * 1.15])
+
+    latest_year_raw = df["marketing_year"].max()
+    latest_year_key = str(latest_year_raw).split("/")[0]
+
+    for trace in figure.data:
+        trace_label = str(trace.name)
+        trace_first = trace_label.split("/")[0]
+
+        if trace_first == latest_year_key:
+            trace.update(marker=dict(color="red"))
+        else:
+            trace.update(opacity=0.7)
+
+    if attribute == "yield":
+        figure.update_traces(texttemplate="%{text:,.3f}", textposition="outside")
+    else:
+        figure.update_traces(texttemplate="%{text:,.0f}", textposition="outside")
+
+    figure.update_layout(
+        showlegend=False,
+        plot_bgcolor="white",
+        paper_bgcolor="white",
+        yaxis=dict(showgrid=True, gridcolor="lightgray", gridwidth=0.5),
+        xaxis=dict(showgrid=False)
+    )
+
+    figure.update_traces(
+        hovertemplate=
+        f"{commodity.title()}: %{{y:,}} {unit}<br>"
+        f"{"Marketing Year"}: %{{x}}<extra></extra>"
+    )
+
+    json_dir = Path("frontend/public").resolve()
+    commodity_slug = commodity.lower().replace(" ", "_")
+    country_slug = country.lower().replace(" ", "_")
+
+    json_path = (
+        json_dir
+         / f"{data}_{commodity_slug}_for_{country_slug}_{attribute}_last_5_years_my.json"
+    )
+
+    pio.write_json(figure, str(json_path))
+
 def generate_charts() -> None:
-    print("Creating all charts...")
+    print("Generating all specific page charts...")
 
-    for name, cfg in COMMODITIES.items():
-        esr_info = cfg.get("esr")
-    
-        countries = esr_info["countries"]
+    esr_value_columns = [
+        "weekly_exports",
+        "accumulated_exports",
+        "outstanding_sales",
+        "gross_new_sales",
+        "current_marketing_year_net_sales",
+        "current_marketing_year_total_commitment",
+        "next_marketing_year_outstanding_sales",
+        "next_marketing_year_net_sales",
+    ]
 
-        generate_weekly_chart("esr", name, "world", value_column="weekly_exports", year_type="marketing", home=False)
-        generate_weekly_chart("esr", name, "world", value_column="accumulated_exports", year_type="marketing", home=False)
-        generate_weekly_chart("esr", name, "world", value_column="outstanding_sales", year_type="marketing", home=False)
-        generate_weekly_chart("esr", name, "world", value_column="gross_new_sales", year_type="marketing", home=False)
-        generate_weekly_chart("esr", name, "world", value_column="current_marketing_year_net_sales", year_type="marketing", home=False)
-        generate_weekly_chart("esr", name, "world", value_column="current_marketing_year_total_commitment", year_type="marketing", home=False)
-        generate_weekly_chart("esr", name, "world", value_column="next_marketing_year_outstanding_sales", year_type="marketing", home=False)
-        generate_weekly_chart("esr", name, "world", value_column="next_marketing_year_net_sales", year_type="marketing", home=False)
-        generate_weekly_chart("esr", name, "world", value_column="weekly_exports", year_type="calendar", home=False)
-        generate_weekly_chart("esr", name, "world", value_column="accumulated_exports", year_type="calendar", home=False)
-        generate_weekly_chart("esr", name, "world", value_column="outstanding_sales", year_type="calendar", home=False)
-        generate_weekly_chart("esr", name, "world", value_column="gross_new_sales", year_type="calendar", home=False)
-        generate_weekly_chart("esr", name, "world", value_column="current_marketing_year_net_sales", year_type="calendar", home=False)
-        generate_weekly_chart("esr", name, "world", value_column="current_marketing_year_total_commitment", year_type="calendar", home=False)
-        generate_weekly_chart("esr", name, "world", value_column="next_marketing_year_outstanding_sales", year_type="calendar", home=False)
-        generate_weekly_chart("esr", name, "world", value_column="next_marketing_year_net_sales", year_type="calendar", home=False)
-        if name not in ["soybean oil", "soybean meal"]:
-            generate_weekly_chart("inspections", name, "world", "export_inspections", "marketing", home=False)
-            generate_weekly_chart("inspections", name, "world", "export_inspections", "calendar", home=False)
+    psd_attributes = [
+        "area_harvested",
+        "crush",
+        "beginning_stocks",
+        "production",
+        "imports",
+        "trade_year_imports",
+        "trade_year_imports_from_united_states",
+        "total_supply",
+        "exports",
+        "trade_year_exports",
+        "domestic_consumption",
+        "feed_domestic_consumption",
+        "industrial_feed_domestic_consumption",
+        "food_use_feed_domestic_consumption",
+        "food_waste_feed_domestic_consumption",
+        "ending_stocks",
+        "total_distribution",
+        "extraction_rate",
+        "yield",
+        "food_seed_and_industrial_consumption",
+        "soybean_meal_equivalent",
+    ]
 
-        for country_code in countries:
-            country = ESR_COUNTRY_NAMES.get(country_code)
+    for commodity in COMMODITIES.keys():
+        esr_countries = ESR_COUNTRY_NAMES.values()
+        psd_countries = PSD_COUNTRY_NAMES.values()
 
-            generate_weekly_chart("esr", name, country, value_column="weekly_exports", year_type="marketing", home=False)
-            generate_weekly_chart("esr", name, country, value_column="accumulated_exports", year_type="marketing", home=False)
-            generate_weekly_chart("esr", name, country, value_column="outstanding_sales", year_type="marketing", home=False)
-            generate_weekly_chart("esr", name, country, value_column="gross_new_sales", year_type="marketing", home=False)
-            generate_weekly_chart("esr", name, country, value_column="current_marketing_year_net_sales", year_type="marketing", home=False)
-            generate_weekly_chart("esr", name, country, value_column="current_marketing_year_total_commitment", year_type="marketing", home=False)
-            generate_weekly_chart("esr", name, country, value_column="next_marketing_year_outstanding_sales", year_type="marketing", home=False)
-            generate_weekly_chart("esr", name, country, value_column="next_marketing_year_net_sales", year_type="marketing", home=False)
+        for year_type in ["marketing", "calendar"]:
+            if commodity not in ["soybean meal", "soybean oil"]:
+                generate_weekly_inspections_or_esr_chart(
+                data="inspections",
+                commodity=commodity,
+                country="world",
+                value_column="export_inspections",
+                year_type=year_type,
+                home=False
+                )
 
-            generate_weekly_chart("esr", name, country, value_column="weekly_exports", year_type="calendar", home=False)
-            generate_weekly_chart("esr", name, country, value_column="accumulated_exports", year_type="calendar", home=False)
-            generate_weekly_chart("esr", name, country, value_column="outstanding_sales", year_type="calendar", home=False)
-            generate_weekly_chart("esr", name, country, value_column="gross_new_sales", year_type="calendar", home=False)
-            generate_weekly_chart("esr", name, country, value_column="current_marketing_year_net_sales", year_type="calendar", home=False)
-            generate_weekly_chart("esr", name, country, value_column="current_marketing_year_total_commitment", year_type="calendar", home=False)
-            generate_weekly_chart("esr", name, country, value_column="next_marketing_year_outstanding_sales", year_type="calendar", home=False)
-            generate_weekly_chart("esr", name, country, value_column="next_marketing_year_net_sales", year_type="calendar", home=False)
+            for val_col in esr_value_columns:
+                    generate_weekly_inspections_or_esr_chart(
+                        data="esr",
+                        commodity=commodity,
+                        country="world",
+                        value_column=val_col,
+                        year_type=year_type,
+                        home=False
+                    )
 
-    print("Done.")
+                    for country in esr_countries:
+                        generate_weekly_inspections_or_esr_chart(
+                            data="esr",
+                            commodity=commodity,
+                            country=country,
+                            value_column=val_col,
+                            year_type=year_type,
+                            home=False
+                        )
+        
+        for attribute in psd_attributes:
+            for country in psd_countries:
+                generate_weekly_psd_chart(
+                "psd",
+                commodity=commodity,
+                country=country,
+                attribute=attribute
+            )
+        
+    print("Done.\n==========")
 
 def generate_home_page_charts() -> None:
     print("Generating home page charts...")
 
-    generate_weekly_chart("inspections", "corn", "world", "export_inspections", "marketing", home=True)
-    generate_weekly_chart("esr", "corn", "world", "gross_new_sales", "marketing", home=True)
-    generate_weekly_chart("esr", "corn", "world", "current_marketing_year_total_commitment", "marketing", home=True)
-    generate_weekly_chart("esr", "corn", "world", "next_marketing_year_outstanding_sales", "marketing", home=True)
+    home_page_commodities = [
+        "corn",
+        "wheat",
+        "soybeans"
+    ]
 
-    generate_weekly_chart("inspections", "wheat", "world", "export_inspections", "marketing", home=True)
-    generate_weekly_chart("esr", "wheat", "world", "gross_new_sales", "marketing", home=True)
-    generate_weekly_chart("esr", "wheat", "world", "current_marketing_year_total_commitment", "marketing", home=True)
-    generate_weekly_chart("esr", "wheat", "world", "next_marketing_year_outstanding_sales", "marketing", home=True)
+    home_page_esr_value_columns = [
+        "gross_new_sales",
+        "current_marketing_year_total_commitment",
+        "next_marketing_year_outstanding_sales"
+    ]
 
-    generate_weekly_chart("inspections", "soybeans", "world", "export_inspections", "marketing", home=True)
-    generate_weekly_chart("esr", "soybeans", "world", "gross_new_sales", "marketing", home=True)
-    generate_weekly_chart("esr", "soybeans", "world", "current_marketing_year_total_commitment", "marketing", home=True)
-    generate_weekly_chart("esr", "soybeans", "world", "next_marketing_year_outstanding_sales", "marketing", home=True)
+    for commodity in home_page_commodities:
+        generate_weekly_inspections_or_esr_chart(
+            data="inspections",
+            commodity=commodity,
+            country="world",
+            value_column="export_inspections",
+            year_type="marketing",
+            home=True
+        )
+
+        for val_col in home_page_esr_value_columns:
+            generate_weekly_inspections_or_esr_chart(
+                data="esr",
+                commodity=commodity,
+                country="world",
+                value_column=val_col,
+                year_type="marketing",
+                home=True
+            )
 
     print("Done.\n==========")
     

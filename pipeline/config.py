@@ -64,7 +64,7 @@ ESR_COUNTRY_NAMES = {
 
 PSD_COUNTRY_NAMES = {
     "00": "world",
-    "US": "united_states",
+    "US": "united states",
     "MX": "mexico",
     "E4": "european union",
     "JA": "japan",

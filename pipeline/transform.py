@@ -49,7 +49,7 @@ PSD_ATTRIBUTE_MAP = {
     28: "Production",
     57: "Imports",
     81: "Trade Year Imports",
-    84: "Trade Year Imports from U.S.",
+    84: "Trade Year Imports from United States",
     86: "Total Supply",
     88: "Exports",
     113: "Trade Year Exports",
@@ -62,7 +62,7 @@ PSD_ATTRIBUTE_MAP = {
     178: "Total Distribution",
     181: "Extraction Rate",
     184: "Yield",
-    192: "Food, Seed, and Industrial Consumption",
+    192: "Food Seed and Industrial Consumption",
     194: "Soybean Meal Equivalent"
 }
 

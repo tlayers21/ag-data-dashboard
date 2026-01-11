@@ -26,11 +26,13 @@ if __name__ == "__main__":
         dirs_to_empty = [
             Path("data/raw/fas").resolve(),
             Path("frontend/public/").resolve(),
+            Path("frontend/src/commentary").resolve(),
         ]
         for directory in dirs_to_empty:
-            for file in directory.glob("*.json"):
-                if file.is_file():
-                    file.unlink()
+            for extension in ["*.json", "*.txt"]:
+                for file in directory.glob(extension):
+                    if file.is_file():
+                        file.unlink()
 
         # Running the pipeline process
         for year in ESR_YEARS:

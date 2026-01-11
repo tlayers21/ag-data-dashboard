@@ -1,8 +1,14 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import ChartViewer from "../components/ChartViewer";
 
+// -----------------------------
+// DATA SOURCE OPTIONS
+// -----------------------------
 const DATA_SOURCES = ["Inspections", "ESR", "PSD", "Forecasts"];
 
+// -----------------------------
+// COUNTRY OPTIONS
+// -----------------------------
 const BASE_COUNTRIES = [
   { label: "World", slug: "world" },
   { label: "Mexico", slug: "mexico" },
@@ -11,12 +17,25 @@ const BASE_COUNTRIES = [
   { label: "Japan", slug: "japan" }
 ];
 
-const PSD_ONLY_COUNTRY = { label: "United States", slug: "united_states" };
+const PSD_COUNTRIES = [
+  { label: "World", slug: "world" },
+  { label: "United States", slug: "united_states" },
+  { label: "Mexico", slug: "mexico" },
+  { label: "European Union", slug: "european_union" },
+  { label: "China", slug: "china" },
+  { label: "Japan", slug: "japan" }
+];
 
+// -----------------------------
+// INSPECTIONS TYPES
+// -----------------------------
 const INSPECTIONS_TYPES = [
   { key: "export_inspections", label: "Export Inspections" }
 ];
 
+// -----------------------------
+// ESR TYPES
+// -----------------------------
 const ESR_TYPES = [
   { key: "weekly_exports", label: "Weekly Exports" },
   { key: "accumulated_exports", label: "Accumulated Exports" },
@@ -28,30 +47,53 @@ const ESR_TYPES = [
   { key: "next_marketing_year_outstanding_sales", label: "Next MY Outstanding Sales" }
 ];
 
+// -----------------------------
+// PSD ATTRIBUTES
+// -----------------------------
 const PSD_ATTRIBUTES = [
   { key: "area_harvested", label: "Area Harvested" },
+  { key: "beginning_stocks", label: "Beginning Stocks" },
   { key: "production", label: "Production" },
   { key: "imports", label: "Imports" },
+  { key: "trade_year_imports", label: "TY Imports" },
+  { key: "trade_year_imports_from_united_states", label: "TY Imports From U.S." },
+  { key: "total_supply", label: "Total Supply" },
   { key: "exports", label: "Exports" },
-  { key: "ending_stocks", label: "Ending Stocks" }
+  { key: "trade_year_exports", label: "TY Exports" },
+  { key: "domestic_consumption", label: "Domestic Consumption" },
+  { key: "feed_domestic_consumption", label: "Feed Domestic Consumption" },
+  { key: "ending_stocks", label: "Ending Stocks" },
+  { key: "total_distribution", label: "Total Distribution" },
+  { key: "yield", label: "Yield" }
 ];
 
+// -----------------------------
+// YEAR TYPE OPTIONS
+// -----------------------------
 const YEAR_TYPES = [
   { key: "my", label: "Marketing Year" },
   { key: "cal", label: "Calendar Year" }
 ];
 
-// ⭐ NEW UNIVERSAL JSON PATH BUILDER
+// -----------------------------
+// UNIVERSAL JSON PATH BUILDER
+// -----------------------------
 function buildJsonPath(dataSource, commodity, countrySlug, dataTypeKey, yearType) {
   const fileSuffix = yearType === "cal" ? "cal" : "my";
-  const dataPrefix = dataSource.toLowerCase(); // esr, psd, inspections, forecasts
+  const dataPrefix = dataSource.toLowerCase();
 
-  // Forecasts → no file exists yet
   if (dataPrefix === "forecasts") return null;
+
+  if (dataPrefix === "psd") {
+    return `/${dataPrefix}_${commodity}_for_${countrySlug}_${dataTypeKey}_last_5_years_${fileSuffix}.json`;
+  }
 
   return `/${dataPrefix}_us_${commodity}_to_${countrySlug}_${dataTypeKey}_last_5_years_${fileSuffix}.json`;
 }
 
+// -----------------------------
+// MAIN COMPONENT
+// -----------------------------
 export default function Corn() {
   const commodity = "corn";
 
@@ -60,25 +102,45 @@ export default function Corn() {
   const [dataTypeKey, setDataTypeKey] = useState("export_inspections");
   const [yearType, setYearType] = useState("my");
 
+  // Force Marketing Year when PSD is selected
+  useEffect(() => {
+    if (dataSource === "PSD" && yearType === "cal") {
+      setYearType("my");
+    }
+  }, [dataSource, yearType]);
+
+  // Country list logic
   const countries = useMemo(() => {
-    return dataSource === "PSD"
-      ? [...BASE_COUNTRIES, PSD_ONLY_COUNTRY]
-      : BASE_COUNTRIES;
+    if (dataSource === "Inspections") {
+      return [{ label: "World", slug: "world" }];
+    }
+    return dataSource === "PSD" ? PSD_COUNTRIES : BASE_COUNTRIES;
   }, [dataSource]);
 
+  // Data type list logic
   const dataTypes = useMemo(() => {
     if (dataSource === "Inspections") return INSPECTIONS_TYPES;
     if (dataSource === "ESR") return ESR_TYPES;
-    if (dataSource === "PSD") return PSD_ATTRIBUTES;
-    if (dataSource === "Forecasts") return []; // no types yet
-    return [];
-  }, [dataSource]);
 
+    if (dataSource === "PSD") {
+      if (countrySlug === "united_states") {
+        return PSD_ATTRIBUTES.filter(
+          (attr) => attr.key !== "trade_year_imports_from_united_states"
+        );
+      }
+      return PSD_ATTRIBUTES;
+    }
+
+    return [];
+  }, [dataSource, countrySlug]);
+
+  // Ensure valid data type
   const effectiveDataTypeKey = useMemo(() => {
     const exists = dataTypes.some((t) => t.key === dataTypeKey);
     return exists ? dataTypeKey : dataTypes[0]?.key || "";
   }, [dataTypes, dataTypeKey]);
 
+  // Build JSON path
   const jsonPath = buildJsonPath(
     dataSource,
     commodity,
@@ -87,23 +149,32 @@ export default function Corn() {
     yearType
   );
 
+  // Handle data source switching
   function handleDataSourceChange(e) {
     const next = e.target.value;
     setDataSource(next);
 
-    if (next === "Inspections") setDataTypeKey("export_inspections");
-    else if (next === "ESR") setDataTypeKey("gross_new_sales");
-    else if (next === "PSD") setDataTypeKey(PSD_ATTRIBUTES[0].key);
-    else if (next === "Forecasts") setDataTypeKey(""); // no types yet
+    if (next === "Inspections") {
+      setCountrySlug("world");
+      setDataTypeKey("export_inspections");
+    } else if (next === "ESR") {
+      setDataTypeKey(ESR_TYPES[0].key);
+    } else if (next === "PSD") {
+      setDataTypeKey(PSD_ATTRIBUTES[0].key);
+    } else if (next === "Forecasts") {
+      setDataTypeKey("");
+    }
   }
 
   return (
     <div className="main-content">
       <h2>Corn</h2>
 
+      {/* FILTER BAR */}
       <div className="filter-bar-wrapper">
         <div className="filter-bar">
 
+          {/* Data Source */}
           <div className="filter-item">
             <label>Data Source</label>
             <select value={dataSource} onChange={handleDataSourceChange}>
@@ -113,15 +184,20 @@ export default function Corn() {
             </select>
           </div>
 
+          {/* Country */}
           <div className="filter-item">
             <label>Country</label>
-            <select value={countrySlug} onChange={(e) => setCountrySlug(e.target.value)}>
+            <select
+              value={countrySlug}
+              onChange={(e) => setCountrySlug(e.target.value)}
+            >
               {countries.map((c) => (
                 <option key={c.slug} value={c.slug}>{c.label}</option>
               ))}
             </select>
           </div>
 
+          {/* Data Type */}
           {dataSource !== "Forecasts" && (
             <div className="filter-item">
               <label>Data Type</label>
@@ -136,19 +212,25 @@ export default function Corn() {
             </div>
           )}
 
+          {/* Year Type */}
           <div className="filter-item">
             <label>Year Type</label>
-            <select value={yearType} onChange={(e) => setYearType(e.target.value)}>
-              {YEAR_TYPES.map((y) => (
-                <option key={y.key} value={y.key}>{y.label}</option>
-              ))}
+            <select
+              value={yearType}
+              onChange={(e) => setYearType(e.target.value)}
+            >
+              {YEAR_TYPES
+                .filter((y) => !(dataSource === "PSD" && y.key === "cal"))
+                .map((y) => (
+                  <option key={y.key} value={y.key}>{y.label}</option>
+                ))}
             </select>
           </div>
 
         </div>
       </div>
 
-      {/* ⭐ FORECASTS MODE */}
+      {/* FORECASTS MODE */}
       {dataSource === "Forecasts" && (
         <div className="card card-centered corn-chart">
           <h3>Forecasts – Under Construction</h3>
@@ -170,7 +252,7 @@ export default function Corn() {
         </div>
       )}
 
-      {/* ⭐ NORMAL CHART MODE */}
+      {/* NORMAL CHART MODE */}
       {dataSource !== "Forecasts" && jsonPath && (
         <div className="card card-centered corn-chart">
           <h3>

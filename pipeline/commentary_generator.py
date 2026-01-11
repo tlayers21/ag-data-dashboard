@@ -1,6 +1,7 @@
 import pandas as pd
 from .api_client import fetch_data_last5years
 from pathlib import Path
+from datetime import datetime
 
 def generate_weekly_commentary(
     data: str,
@@ -20,9 +21,20 @@ def generate_weekly_commentary(
         df["date_collected"].iloc[0].strftime("%b").upper() +
         df["date_collected"].iloc[0].strftime("-%d")
     )
+
+    df["week_ending_date"] = pd.to_datetime(df["week_ending_date"])
     df = df.sort_values("week_ending_date", ascending=False)
+
+    latest_week_ending = df["week_ending_date"].iloc[0]
+    day = latest_week_ending.day
+
     latest_value = df[value_column].iloc[0]
     unit = df["unit"].iloc[0]
+    if 4 <= day <= 20 or 24 <= day <= 30:
+        suffix = "th"
+    else:
+        suffix = ["st", "nd", "rd"][day % 10 - 1]
+    latest_week_ending = f"{latest_week_ending.strftime("%B")} {day}{suffix}"
 
     # WoW
     if len(df) > 1:
@@ -60,7 +72,8 @@ def generate_weekly_commentary(
     commentary = (
         f"{latest_date}: {commodity.capitalize()} {value_column.replace("_", " ")} to " 
         f"{"the world" if country == "world" else country.title()} "
-        f"this week {"was" if "commitment" in value_column else "were"}"
+        f"for the week ending on {latest_week_ending} "
+        f"{"was" if "commitment" in value_column else "were"}"
         f" {int(latest_value):,} {unit.replace("_", " ").lower()} ("
     )
 
