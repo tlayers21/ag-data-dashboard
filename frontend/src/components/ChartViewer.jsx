@@ -4,22 +4,55 @@ import Plot from "react-plotly.js";
 // variant = "home" or "corn"
 export default function ChartViewer({ jsonPath, variant = "home" }) {
   const [figure, setFigure] = useState(null);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
+    setError(false);
+    setFigure(null);
+
     fetch(jsonPath)
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("File not found");
+        }
+        return res.json();
+      })
       .then((data) => {
         const fig = data.figure || data;
         setFigure(fig);
       })
-      .catch((err) => console.error("Error loading chart JSON:", err));
+      .catch(() => {
+        setError(true);
+      });
   }, [jsonPath]);
 
+  // ⭐ If Corn chart fails → show message
+  if (error && variant === "corn") {
+    return (
+      <div
+        style={{
+          height: "100%",
+          width: "100%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          fontSize: "1.1rem",
+          color: "#666",
+          textAlign: "center",
+          padding: "1rem"
+        }}
+      >
+        Data for this selection is not available.
+      </div>
+    );
+  }
+
+  // Normal loading state
   if (!figure) {
     return (
       <div
         style={{
-          height: "200px",
+          height: "100%",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -31,6 +64,7 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
     );
   }
 
+  // Legend logic
   let layout = { ...figure.layout };
 
   if (variant === "corn") {

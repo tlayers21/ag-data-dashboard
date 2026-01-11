@@ -1,7 +1,7 @@
 import { useState, useMemo } from "react";
 import ChartViewer from "../components/ChartViewer";
 
-const DATA_SOURCES = ["Inspections", "ESR", "PSD"];
+const DATA_SOURCES = ["Inspections", "ESR", "PSD", "Forecasts"];
 
 const BASE_COUNTRIES = [
   { label: "World", slug: "world" },
@@ -14,7 +14,7 @@ const BASE_COUNTRIES = [
 const PSD_ONLY_COUNTRY = { label: "United States", slug: "united_states" };
 
 const INSPECTIONS_TYPES = [
-  { key: "inspections", label: "Export Inspections" }
+  { key: "export_inspections", label: "Export Inspections" }
 ];
 
 const ESR_TYPES = [
@@ -22,54 +22,43 @@ const ESR_TYPES = [
   { key: "accumulated_exports", label: "Accumulated Exports" },
   { key: "outstanding_sales", label: "Outstanding Sales" },
   { key: "gross_new_sales", label: "Gross New Sales" },
-  { key: "current_marketing_year_net_sales", label: "Current Marketing Year Net Sales" },
-  { key: "current_marketing_year_total_commitment", label: "Current Marketing Year Total Commitment" },
-  { key: "next_marketing_year_outstanding_sales", label: "Next Marketing Year Outstanding Sales" },
-  { key: "next_marketing_year_net_sales", label: "Next Marketing Year Net Sales" }
+  { key: "current_marketing_year_net_sales", label: "Current MY Net Sales" },
+  { key: "current_marketing_year_total_commitment", label: "Current MY Total Commitment" },
+  { key: "next_marketing_year_net_sales", label: "Next MY Net Sales" },
+  { key: "next_marketing_year_outstanding_sales", label: "Next MY Outstanding Sales" }
 ];
 
 const PSD_ATTRIBUTES = [
   { key: "area_harvested", label: "Area Harvested" },
-  { key: "crush", label: "Crush" },
-  { key: "beginning_stocks", label: "Beginning Stocks" },
   { key: "production", label: "Production" },
   { key: "imports", label: "Imports" },
-  { key: "trade_year_imports", label: "Trade Year Imports" },
-  { key: "trade_year_imports_from_us", label: "Trade Year Imports from U.S." },
-  { key: "total_supply", label: "Total Supply" },
   { key: "exports", label: "Exports" },
-  { key: "trade_year_exports", label: "Trade Year Exports" },
-  { key: "domestic_consumption", label: "Domestic Consumption" },
-  { key: "feed_domestic_consumption", label: "Feed Domestic Consumption" },
-  { key: "industrial_domestic_consumption", label: "Industrial Domestic Consumption" },
-  { key: "food_use_domestic_consumption", label: "Food Use Domestic Consumption" },
-  { key: "feed_waste_domestic_consumption", label: "Feed Waste Domestic Consumption" },
-  { key: "ending_stocks", label: "Ending Stocks" },
-  { key: "total_distribution", label: "Total Distribution" },
-  { key: "extraction_rate", label: "Extraction Rate" },
-  { key: "yield", label: "Yield" },
-  { key: "food_seed_industrial_consumption", label: "Food, Seed, and Industrial Consumption" },
-  { key: "soybean_meal_equivalent", label: "Soybean Meal Equivalent" }
+  { key: "ending_stocks", label: "Ending Stocks" }
 ];
 
-function buildJsonPath(dataSource, countrySlug, dataTypeKey) {
-  if (!dataSource || !countrySlug || !dataTypeKey) return "";
+const YEAR_TYPES = [
+  { key: "my", label: "Marketing Year" },
+  { key: "cal", label: "Calendar Year" }
+];
 
-  if (dataSource === "Inspections" || dataSource === "ESR") {
-    return `/us_corn_to_${countrySlug}_${dataTypeKey}_last_5_years_my.json`;
-  }
+// ⭐ NEW UNIVERSAL JSON PATH BUILDER
+function buildJsonPath(dataSource, commodity, countrySlug, dataTypeKey, yearType) {
+  const fileSuffix = yearType === "cal" ? "cal" : "my";
+  const dataPrefix = dataSource.toLowerCase(); // esr, psd, inspections, forecasts
 
-  if (dataSource === "PSD") {
-    return `/us_corn_psd_${countrySlug}_${dataTypeKey}.json`;
-  }
+  // Forecasts → no file exists yet
+  if (dataPrefix === "forecasts") return null;
 
-  return "";
+  return `/${dataPrefix}_us_${commodity}_to_${countrySlug}_${dataTypeKey}_last_5_years_${fileSuffix}.json`;
 }
 
 export default function Corn() {
+  const commodity = "corn";
+
   const [dataSource, setDataSource] = useState("Inspections");
   const [countrySlug, setCountrySlug] = useState("world");
-  const [dataTypeKey, setDataTypeKey] = useState("inspections");
+  const [dataTypeKey, setDataTypeKey] = useState("export_inspections");
+  const [yearType, setYearType] = useState("my");
 
   const countries = useMemo(() => {
     return dataSource === "PSD"
@@ -81,6 +70,7 @@ export default function Corn() {
     if (dataSource === "Inspections") return INSPECTIONS_TYPES;
     if (dataSource === "ESR") return ESR_TYPES;
     if (dataSource === "PSD") return PSD_ATTRIBUTES;
+    if (dataSource === "Forecasts") return []; // no types yet
     return [];
   }, [dataSource]);
 
@@ -89,15 +79,22 @@ export default function Corn() {
     return exists ? dataTypeKey : dataTypes[0]?.key || "";
   }, [dataTypes, dataTypeKey]);
 
-  const jsonPath = buildJsonPath(dataSource, countrySlug, effectiveDataTypeKey);
+  const jsonPath = buildJsonPath(
+    dataSource,
+    commodity,
+    countrySlug,
+    effectiveDataTypeKey,
+    yearType
+  );
 
   function handleDataSourceChange(e) {
-    const nextSource = e.target.value;
-    setDataSource(nextSource);
+    const next = e.target.value;
+    setDataSource(next);
 
-    if (nextSource === "Inspections") setDataTypeKey("inspections");
-    else if (nextSource === "ESR") setDataTypeKey("gross_new_sales");
-    else if (nextSource === "PSD") setDataTypeKey(PSD_ATTRIBUTES[0].key);
+    if (next === "Inspections") setDataTypeKey("export_inspections");
+    else if (next === "ESR") setDataTypeKey("gross_new_sales");
+    else if (next === "PSD") setDataTypeKey(PSD_ATTRIBUTES[0].key);
+    else if (next === "Forecasts") setDataTypeKey(""); // no types yet
   }
 
   return (
@@ -106,6 +103,7 @@ export default function Corn() {
 
       <div className="filter-bar-wrapper">
         <div className="filter-bar">
+
           <div className="filter-item">
             <label>Data Source</label>
             <select value={dataSource} onChange={handleDataSourceChange}>
@@ -117,44 +115,78 @@ export default function Corn() {
 
           <div className="filter-item">
             <label>Country</label>
-            <select
-              value={countrySlug}
-              onChange={(e) => setCountrySlug(e.target.value)}
-            >
+            <select value={countrySlug} onChange={(e) => setCountrySlug(e.target.value)}>
               {countries.map((c) => (
                 <option key={c.slug} value={c.slug}>{c.label}</option>
               ))}
             </select>
           </div>
 
+          {dataSource !== "Forecasts" && (
+            <div className="filter-item">
+              <label>Data Type</label>
+              <select
+                value={effectiveDataTypeKey}
+                onChange={(e) => setDataTypeKey(e.target.value)}
+              >
+                {dataTypes.map((t) => (
+                  <option key={t.key} value={t.key}>{t.label}</option>
+                ))}
+              </select>
+            </div>
+          )}
+
           <div className="filter-item">
-            <label>Data Type</label>
-            <select
-              value={effectiveDataTypeKey}
-              onChange={(e) => setDataTypeKey(e.target.value)}
-            >
-              {dataTypes.map((t) => (
-                <option key={t.key} value={t.key}>{t.label}</option>
+            <label>Year Type</label>
+            <select value={yearType} onChange={(e) => setYearType(e.target.value)}>
+              {YEAR_TYPES.map((y) => (
+                <option key={y.key} value={y.key}>{y.label}</option>
               ))}
             </select>
           </div>
+
         </div>
       </div>
 
-      {jsonPath && (
+      {/* ⭐ FORECASTS MODE */}
+      {dataSource === "Forecasts" && (
+        <div className="card card-centered corn-chart">
+          <h3>Forecasts – Under Construction</h3>
+          <div
+            style={{
+              height: "700px",
+              width: "100%",
+              maxWidth: "95%",
+              margin: "0 auto",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              fontSize: "1.2rem",
+              color: "#666"
+            }}
+          >
+            Forecasts are under construction.
+          </div>
+        </div>
+      )}
+
+      {/* ⭐ NORMAL CHART MODE */}
+      {dataSource !== "Forecasts" && jsonPath && (
         <div className="card card-centered corn-chart">
           <h3>
             {dataSource} – {countries.find((c) => c.slug === countrySlug)?.label} –{" "}
-            {dataTypes.find((t) => t.key === effectiveDataTypeKey)?.label}
+            {dataTypes.find((t) => t.key === effectiveDataTypeKey)?.label} –{" "}
+            {YEAR_TYPES.find((y) => y.key === yearType)?.label}
           </h3>
 
-          <div style={{
-                 height: "700px",
-                 width: "100%",
-                 maxwidth: "95%",
-                 margin: "0 auto",
-                 overflow: "hidden"
-              }}
+          <div
+            style={{
+              height: "700px",
+              width: "100%",
+              maxWidth: "95%",
+              margin: "0 auto",
+              overflow: "hidden"
+            }}
           >
             <ChartViewer jsonPath={jsonPath} variant="corn" />
           </div>

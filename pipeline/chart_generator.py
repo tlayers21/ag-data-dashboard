@@ -3,13 +3,15 @@ import plotly.express as px
 import plotly.io as pio
 from pathlib import Path
 from .api_client import fetch_data_last5years
+from .config import COMMODITIES, ESR_COUNTRY_NAMES
 
 def generate_weekly_chart(
         data: str,
         commodity: str,
         country: str,
         value_column: str,
-        year_type: str
+        year_type: str,
+        home: bool
 ) -> None:
     df_data = fetch_data_last5years(data, commodity, country)
     df = pd.DataFrame(df_data)
@@ -64,11 +66,18 @@ def generate_weekly_chart(
     # Format x-axis
     df["week_ending_date"] = pd.to_datetime(df["week_ending_date"])
     tick_weeks = [2, 9, 16, 23, 30, 37, 44, 51]
-    tick_rows = df[df["marketing_year_week"].isin(tick_weeks)]
-    tick_map = dict(zip(
-        tick_rows["marketing_year_week"],
-        tick_rows["week_ending_date"].dt.strftime("%b-%d")
-    ))
+    if year_type == "marketing":
+        tick_rows = df[df["marketing_year_week"].isin(tick_weeks)]
+        tick_map = dict(zip(
+            tick_rows["marketing_year_week"],
+            tick_rows["week_ending_date"].dt.strftime("%b-%d")
+        ))
+    else:
+        tick_rows = df[df["calendar_week"].isin(tick_weeks)]
+        tick_map = dict(zip(
+            tick_rows["calendar_week"],
+            tick_rows["week_ending_date"].dt.strftime("%b-%d")
+        ))
 
     figure.update_xaxes(
         tickmode="array",
@@ -134,64 +143,88 @@ def generate_weekly_chart(
     )
 
     json_dir = Path("frontend/public").resolve()
-    figure_dir = Path("frontend/figures").resolve()
 
-    json_path = (
-        json_dir
-         / f"us_{commodity.lower()}_to_{country.lower()}_{value_column}_last_5_years_{file_suffix}_home.json"
-    )
+    if home:
+        json_path = (
+            json_dir
+             / f"{data}_us_{commodity.lower().replace(" ", "_")}_to_{country.lower().replace(" ", "_")}_{value_column}_last_5_years_{file_suffix}_home.json"
+        )
+    else:
+        json_path = (
+            json_dir
+             / f"{data}_us_{commodity.lower().replace(" ", "_")}_to_{country.lower().replace(" ", "_")}_{value_column}_last_5_years_{file_suffix}.json"
+        )
 
     pio.write_json(figure, str(json_path))
 
-    """
-    png_path = (
-        figure_dir
-         / f"us_{commodity.lower()}_to_{country.lower()}_{value_column}_last_5_years_{file_suffix}.png"
-    )
-
-    pio.write_image(figure, str(png_path))
-    """
-
-"""
 def generate_charts() -> None:
     print("Creating all charts...")
-    generate_weekly_chart("esr", "corn", "world", "weekly_exports", "calendar")
-    generate_weekly_chart("esr", "corn", "world", "weekly_exports", "marketing")
-    generate_weekly_chart("inspections", "corn", "world", "inspections", "calendar")
-    generate_weekly_chart("inspections", "corn", "world", "inspections", "marketing")
 
     for name, cfg in COMMODITIES.items():
         esr_info = cfg.get("esr")
     
         countries = esr_info["countries"]
 
-        generate_weekly_chart_calendar_year(name, "world", value_column="current_marketing_year_total_commitment")
-        generate_weekly_chart_marketing_year(name, "world", value_column="current_marketing_year_total_commitment")
+        generate_weekly_chart("esr", name, "world", value_column="weekly_exports", year_type="marketing", home=False)
+        generate_weekly_chart("esr", name, "world", value_column="accumulated_exports", year_type="marketing", home=False)
+        generate_weekly_chart("esr", name, "world", value_column="outstanding_sales", year_type="marketing", home=False)
+        generate_weekly_chart("esr", name, "world", value_column="gross_new_sales", year_type="marketing", home=False)
+        generate_weekly_chart("esr", name, "world", value_column="current_marketing_year_net_sales", year_type="marketing", home=False)
+        generate_weekly_chart("esr", name, "world", value_column="current_marketing_year_total_commitment", year_type="marketing", home=False)
+        generate_weekly_chart("esr", name, "world", value_column="next_marketing_year_outstanding_sales", year_type="marketing", home=False)
+        generate_weekly_chart("esr", name, "world", value_column="next_marketing_year_net_sales", year_type="marketing", home=False)
+        generate_weekly_chart("esr", name, "world", value_column="weekly_exports", year_type="calendar", home=False)
+        generate_weekly_chart("esr", name, "world", value_column="accumulated_exports", year_type="calendar", home=False)
+        generate_weekly_chart("esr", name, "world", value_column="outstanding_sales", year_type="calendar", home=False)
+        generate_weekly_chart("esr", name, "world", value_column="gross_new_sales", year_type="calendar", home=False)
+        generate_weekly_chart("esr", name, "world", value_column="current_marketing_year_net_sales", year_type="calendar", home=False)
+        generate_weekly_chart("esr", name, "world", value_column="current_marketing_year_total_commitment", year_type="calendar", home=False)
+        generate_weekly_chart("esr", name, "world", value_column="next_marketing_year_outstanding_sales", year_type="calendar", home=False)
+        generate_weekly_chart("esr", name, "world", value_column="next_marketing_year_net_sales", year_type="calendar", home=False)
+        if name not in ["soybean oil", "soybean meal"]:
+            generate_weekly_chart("inspections", name, "world", "export_inspections", "marketing", home=False)
+            generate_weekly_chart("inspections", name, "world", "export_inspections", "calendar", home=False)
 
         for country_code in countries:
             country = ESR_COUNTRY_NAMES.get(country_code)
-            generate_weekly_chart_calendar_year(name, country, value_column="current_marketing_year_total_commitment")
-            generate_weekly_chart_marketing_year(name, country, value_column="current_marketing_year_total_commitment")
+
+            generate_weekly_chart("esr", name, country, value_column="weekly_exports", year_type="marketing", home=False)
+            generate_weekly_chart("esr", name, country, value_column="accumulated_exports", year_type="marketing", home=False)
+            generate_weekly_chart("esr", name, country, value_column="outstanding_sales", year_type="marketing", home=False)
+            generate_weekly_chart("esr", name, country, value_column="gross_new_sales", year_type="marketing", home=False)
+            generate_weekly_chart("esr", name, country, value_column="current_marketing_year_net_sales", year_type="marketing", home=False)
+            generate_weekly_chart("esr", name, country, value_column="current_marketing_year_total_commitment", year_type="marketing", home=False)
+            generate_weekly_chart("esr", name, country, value_column="next_marketing_year_outstanding_sales", year_type="marketing", home=False)
+            generate_weekly_chart("esr", name, country, value_column="next_marketing_year_net_sales", year_type="marketing", home=False)
+
+            generate_weekly_chart("esr", name, country, value_column="weekly_exports", year_type="calendar", home=False)
+            generate_weekly_chart("esr", name, country, value_column="accumulated_exports", year_type="calendar", home=False)
+            generate_weekly_chart("esr", name, country, value_column="outstanding_sales", year_type="calendar", home=False)
+            generate_weekly_chart("esr", name, country, value_column="gross_new_sales", year_type="calendar", home=False)
+            generate_weekly_chart("esr", name, country, value_column="current_marketing_year_net_sales", year_type="calendar", home=False)
+            generate_weekly_chart("esr", name, country, value_column="current_marketing_year_total_commitment", year_type="calendar", home=False)
+            generate_weekly_chart("esr", name, country, value_column="next_marketing_year_outstanding_sales", year_type="calendar", home=False)
+            generate_weekly_chart("esr", name, country, value_column="next_marketing_year_net_sales", year_type="calendar", home=False)
+
     print("Done.")
-"""
 
 def generate_home_page_charts() -> None:
     print("Generating home page charts...")
 
-    generate_weekly_chart("inspections", "corn", "world", "export_inspections", "marketing")
-    generate_weekly_chart("esr", "corn", "world", "gross_new_sales", "marketing")
-    generate_weekly_chart("esr", "corn", "world", "current_marketing_year_total_commitment", "marketing")
-    generate_weekly_chart("esr", "corn", "world", "next_marketing_year_outstanding_sales", "marketing")
+    generate_weekly_chart("inspections", "corn", "world", "export_inspections", "marketing", home=True)
+    generate_weekly_chart("esr", "corn", "world", "gross_new_sales", "marketing", home=True)
+    generate_weekly_chart("esr", "corn", "world", "current_marketing_year_total_commitment", "marketing", home=True)
+    generate_weekly_chart("esr", "corn", "world", "next_marketing_year_outstanding_sales", "marketing", home=True)
 
-    generate_weekly_chart("inspections", "wheat", "world", "export_inspections", "marketing")
-    generate_weekly_chart("esr", "wheat", "world", "gross_new_sales", "marketing")
-    generate_weekly_chart("esr", "wheat", "world", "current_marketing_year_total_commitment", "marketing")
-    generate_weekly_chart("esr", "wheat", "world", "next_marketing_year_outstanding_sales", "marketing")
+    generate_weekly_chart("inspections", "wheat", "world", "export_inspections", "marketing", home=True)
+    generate_weekly_chart("esr", "wheat", "world", "gross_new_sales", "marketing", home=True)
+    generate_weekly_chart("esr", "wheat", "world", "current_marketing_year_total_commitment", "marketing", home=True)
+    generate_weekly_chart("esr", "wheat", "world", "next_marketing_year_outstanding_sales", "marketing", home=True)
 
-    generate_weekly_chart("inspections", "soybeans", "world", "export_inspections", "marketing")
-    generate_weekly_chart("esr", "soybeans", "world", "gross_new_sales", "marketing")
-    generate_weekly_chart("esr", "soybeans", "world", "current_marketing_year_total_commitment", "marketing")
-    generate_weekly_chart("esr", "soybeans", "world", "next_marketing_year_outstanding_sales", "marketing")
+    generate_weekly_chart("inspections", "soybeans", "world", "export_inspections", "marketing", home=True)
+    generate_weekly_chart("esr", "soybeans", "world", "gross_new_sales", "marketing", home=True)
+    generate_weekly_chart("esr", "soybeans", "world", "current_marketing_year_total_commitment", "marketing", home=True)
+    generate_weekly_chart("esr", "soybeans", "world", "next_marketing_year_outstanding_sales", "marketing", home=True)
 
     print("Done.\n==========")
     

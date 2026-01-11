@@ -80,7 +80,7 @@ def clean_all_psd() -> None:
     country_dfs = []
     for file in country_files:
         parts = file.stem.split("_")
-        psd_index = parts.index("psd")
+        psd_index = parts.index("to")
         # Accounts for issue with "european_union or united_states in file name"
         country_parts = parts[psd_index + 1: -1]
         country = "_".join(country_parts).replace("_", " ")
