@@ -1,19 +1,22 @@
 import pandas as pd
-from .api_client import fetch_data_last5years
+from .agdata_api_client import AgDataClient
 from pathlib import Path
 from datetime import datetime
 
+# Generates weekly commentary for all page charts (calculates WoW, YoY, and comparison to 5-year average metrics)
 def generate_weekly_commentary(
-    data: str,
+    data_type: str,
     commodity: str,
     country: str,
     value_column: str,
 ) -> str:
-    df_data = fetch_data_last5years(data, commodity, country)
+    database_data = AgDataClient()
+    df_data = database_data.get(data_type, commodity, country)
+
     df = pd.DataFrame(df_data)
 
     if df.empty:
-        return f"There is no {data} data available for {commodity} {value_column.replace("_", " ")} to {country}."
+        return f"There is no {data_type} data available for {commodity} {value_column.replace("_", " ")} to {country}."
     
     df["date_collected"] = pd.to_datetime(df["date_collected"])
     df = df.sort_values("date_collected", ascending=False)
@@ -104,7 +107,8 @@ def generate_weekly_commentary(
         f.write(commentary)
     
 def generate_home_page_commentary() -> None:
-    print("Generating home page commentary...")
+    print("Generating Home Page commentary...")
+
     generate_weekly_commentary("inspections", "corn", "world", "export_inspections")
     generate_weekly_commentary("esr", "corn", "world", "gross_new_sales")
     generate_weekly_commentary("esr", "corn", "world", "current_marketing_year_total_commitment")
@@ -121,3 +125,37 @@ def generate_home_page_commentary() -> None:
     generate_weekly_commentary("esr", "soybeans", "world", "next_marketing_year_outstanding_sales")
 
     print("Done.")
+
+# Generates commentary for all home page charts
+def generate_home_page_charts() -> None:
+    print("Generating All Home Page Commentary...")
+
+    home_page_commodities = [
+        "corn",
+        "wheat",
+        "soybeans"
+    ]
+
+    home_page_esr_value_columns = [
+        "gross_new_sales",
+        "current_marketing_year_total_commitment",
+        "next_marketing_year_outstanding_sales"
+    ]
+
+    for commodity in home_page_commodities:
+        generate_home_page_commentary(
+            data_type="inspections",
+            commodity=commodity,
+            country="world",
+            value_column="export_inspections"
+        )
+
+        for val_col in home_page_esr_value_columns:
+            generate_home_page_commentary(
+                data_type="esr",
+                commodity=commodity,
+                country="world",
+                value_column=val_col
+            )
+
+    print("Done.\n==========")

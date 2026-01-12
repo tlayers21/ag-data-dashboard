@@ -2,18 +2,20 @@ import pandas as pd
 import plotly.express as px
 import plotly.io as pio
 from pathlib import Path
-from .api_client import fetch_data_last5years
+from .agdata_api_client import AgDataClient
 from .config import COMMODITIES, ESR_COUNTRY_NAMES, PSD_COUNTRY_NAMES
 
-def generate_weekly_inspections_or_esr_chart(
-        data: str,
+# Generates a weekly ESR or inspections chart for a given data set
+def generate_weekly_esr_or_inspections_chart(
+        data_type: str,
         commodity: str,
         country: str,
         value_column: str,
         year_type: str,
         home: bool
 ) -> None:
-    df_data = fetch_data_last5years(data, commodity, country)
+    database_data = AgDataClient()
+    df_data = database_data.get(data_type, commodity, country)
 
     if df_data is None:
         return
@@ -68,7 +70,7 @@ def generate_weekly_inspections_or_esr_chart(
     )
 
     figure.add_annotation(
-        text=f"<b>Source: {"USDA<b>" if data == "inspections" else "<b>USDA ESR API<b>"}",
+        text=f"<b>Source: {"USDA<b>" if data_type == "inspections" else "<b>USDA ESR API<b>"}",
         xref="paper", yref="paper",
         x=1,
         y=1.05,
@@ -143,6 +145,7 @@ def generate_weekly_inspections_or_esr_chart(
         )
     )
 
+    # Makes sure more recent years have prioritized z-order
     for i, trace in enumerate(figure.data):
         trace.update(legendrank=len(figure.data) - i)
 
@@ -161,23 +164,26 @@ def generate_weekly_inspections_or_esr_chart(
     if home:
         json_path = (
             json_dir
-             / f"{data}_us_{commodity.lower().replace(" ", "_")}_to_{country.lower().replace(" ", "_")}_{value_column}_last_5_years_{file_suffix}_home.json"
+             / f"{data_type}_us_{commodity.lower().replace(" ", "_")}_to_{country.lower().replace(" ", "_")}_{value_column}_last_5_years_{file_suffix}_home.json"
         )
     else:
         json_path = (
             json_dir
-             / f"{data}_us_{commodity.lower().replace(" ", "_")}_to_{country.lower().replace(" ", "_")}_{value_column}_last_5_years_{file_suffix}.json"
+             / f"{data_type}_us_{commodity.lower().replace(" ", "_")}_to_{country.lower().replace(" ", "_")}_{value_column}_last_5_years_{file_suffix}.json"
         )
 
     pio.write_json(figure, str(json_path))
 
+# Generates a weekly ESR or inspections chart for a given data set
 def generate_weekly_psd_chart(
-        data: str,
+        data_type: str,
         commodity: str,
         country: str,
         attribute: str,
 ) -> None:
-    df_data = fetch_data_last5years(data, commodity, country)
+    database_data = AgDataClient()
+    df_data = database_data.get(data_type, commodity, country)
+
     if df_data is None:
         return
 
@@ -280,13 +286,14 @@ def generate_weekly_psd_chart(
 
     json_path = (
         json_dir
-         / f"{data}_{commodity_slug}_for_{country_slug}_{attribute}_last_5_years_my.json"
+         / f"{data_type}_{commodity_slug}_for_{country_slug}_{attribute}_last_5_years_my.json"
     )
 
     pio.write_json(figure, str(json_path))
 
+# Generates every single chart possible for all commodities and marketing/calendar years if applicable
 def generate_charts() -> None:
-    print("Generating all specific page charts...")
+    print("Generating All Specific Page Charts...")
 
     esr_value_columns = [
         "weekly_exports",
@@ -329,8 +336,8 @@ def generate_charts() -> None:
 
         for year_type in ["marketing", "calendar"]:
             if commodity not in ["soybean meal", "soybean oil"]:
-                generate_weekly_inspections_or_esr_chart(
-                data="inspections",
+                generate_weekly_esr_or_inspections_chart(
+                data_type="inspections",
                 commodity=commodity,
                 country="world",
                 value_column="export_inspections",
@@ -339,8 +346,8 @@ def generate_charts() -> None:
                 )
 
             for val_col in esr_value_columns:
-                    generate_weekly_inspections_or_esr_chart(
-                        data="esr",
+                    generate_weekly_esr_or_inspections_chart(
+                        data_type="esr",
                         commodity=commodity,
                         country="world",
                         value_column=val_col,
@@ -349,8 +356,8 @@ def generate_charts() -> None:
                     )
 
                     for country in esr_countries:
-                        generate_weekly_inspections_or_esr_chart(
-                            data="esr",
+                        generate_weekly_esr_or_inspections_chart(
+                            data_type="esr",
                             commodity=commodity,
                             country=country,
                             value_column=val_col,
@@ -358,10 +365,11 @@ def generate_charts() -> None:
                             home=False
                         )
         
+        # PSD data only releases once per marketing year, so plotting by calendar year doesn't make sense
         for attribute in psd_attributes:
             for country in psd_countries:
                 generate_weekly_psd_chart(
-                "psd",
+                data_type="psd",
                 commodity=commodity,
                 country=country,
                 attribute=attribute
@@ -369,8 +377,9 @@ def generate_charts() -> None:
         
     print("Done.\n==========")
 
+# Specifically generates every single home page chart (makes it easier to format charts in JavaScript)
 def generate_home_page_charts() -> None:
-    print("Generating home page charts...")
+    print("Generating All Home Page Charts...")
 
     home_page_commodities = [
         "corn",
@@ -385,8 +394,8 @@ def generate_home_page_charts() -> None:
     ]
 
     for commodity in home_page_commodities:
-        generate_weekly_inspections_or_esr_chart(
-            data="inspections",
+        generate_weekly_esr_or_inspections_chart(
+            data_type="inspections",
             commodity=commodity,
             country="world",
             value_column="export_inspections",
@@ -395,8 +404,8 @@ def generate_home_page_charts() -> None:
         )
 
         for val_col in home_page_esr_value_columns:
-            generate_weekly_inspections_or_esr_chart(
-                data="esr",
+            generate_weekly_esr_or_inspections_chart(
+                data_type="esr",
                 commodity=commodity,
                 country="world",
                 value_column=val_col,

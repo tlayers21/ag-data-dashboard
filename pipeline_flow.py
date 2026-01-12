@@ -10,6 +10,7 @@ USDA_API_KEY = "GA0LAyk7zcLgEjKMdSfOIOl7GJmL4wRleIlflcfp"
 ESR_YEARS = [2026, 2025, 2024, 2023, 2022, 2021]
 PSD_YEARS = [2025, 2024, 2023, 2022, 2021, 2020]
 
+# Same code from manual_run_pipeline.py for Prefect to run
 @task
 def run_pipeline(restart: bool = False):
     if restart:

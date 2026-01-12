@@ -38,16 +38,16 @@ def fetch_last_5_years(data: str, commodity: str, country: str) -> list[dict]:
     return df.to_dict(orient="records")
 
 # Fetches ESR data from last 5 years
-@app.get("/esr/weekly/last5years")
+@app.get("/esr/last5years")
 def get_last_5_years_esr(commodity: str, country: str) -> list[dict]:
     return fetch_last_5_years("esr", commodity, country)
 
 # Fetches PSD data from last 5 years
-@app.get("/psd/weekly/last5years")
+@app.get("/psd/last5years")
 def get_last_5_years_esr(commodity: str, country: str) -> list[dict]:
     return fetch_last_5_years("psd", commodity, country)
 
 # Fetches export inspections data from last 5 years
-@app.get("/inspections/weekly/last5years")
+@app.get("/inspections/last5years")
 def get_last_5_years_esr(commodity: str, country: str) -> list[dict]:
     return fetch_last_5_years("inspections", commodity, country)
