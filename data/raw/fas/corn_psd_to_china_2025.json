@@ -3,18 +3,18 @@
     "commodityCode": "0440000",
     "countryCode": "CH",
     "marketYear": "2025",
-    "calendarYear": "2025",
-    "month": "12",
+    "calendarYear": "2026",
+    "month": "01",
     "attributeId": 4,
     "unitId": 4,
-    "value": 44300.0
+    "value": 44960.0
   },
   {
     "commodityCode": "0440000",
     "countryCode": "CH",
     "marketYear": "2025",
-    "calendarYear": "2025",
-    "month": "12",
+    "calendarYear": "2026",
+    "month": "01",
     "attributeId": 20,
     "unitId": 8,
     "value": 191928.0
@@ -23,18 +23,18 @@
     "commodityCode": "0440000",
     "countryCode": "CH",
     "marketYear": "2025",
-    "calendarYear": "2025",
-    "month": "12",
+    "calendarYear": "2026",
+    "month": "01",
     "attributeId": 28,
     "unitId": 8,
-    "value": 295000.0
+    "value": 301240.0
   },
   {
     "commodityCode": "0440000",
     "countryCode": "CH",
     "marketYear": "2025",
-    "calendarYear": "2025",
-    "month": "12",
+    "calendarYear": "2026",
+    "month": "01",
     "attributeId": 57,
     "unitId": 8,
     "value": 8000.0
@@ -43,8 +43,8 @@
     "commodityCode": "0440000",
     "countryCode": "CH",
     "marketYear": "2025",
-    "calendarYear": "2025",
-    "month": "12",
+    "calendarYear": "2026",
+    "month": "01",
     "attributeId": 81,
     "unitId": 8,
     "value": 8000.0
@@ -53,8 +53,8 @@
     "commodityCode": "0440000",
     "countryCode": "CH",
     "marketYear": "2025",
-    "calendarYear": "2025",
-    "month": "12",
+    "calendarYear": "2026",
+    "month": "01",
     "attributeId": 84,
     "unitId": 8,
     "value": 0.0
@@ -63,18 +63,18 @@
     "commodityCode": "0440000",
     "countryCode": "CH",
     "marketYear": "2025",
-    "calendarYear": "2025",
-    "month": "12",
+    "calendarYear": "2026",
+    "month": "01",
     "attributeId": 86,
     "unitId": 8,
-    "value": 494928.0
+    "value": 501168.0
   },
   {
     "commodityCode": "0440000",
     "countryCode": "CH",
     "marketYear": "2025",
-    "calendarYear": "2025",
-    "month": "12",
+    "calendarYear": "2026",
+    "month": "01",
     "attributeId": 88,
     "unitId": 8,
     "value": 20.0
@@ -83,8 +83,8 @@
     "commodityCode": "0440000",
     "countryCode": "CH",
     "marketYear": "2025",
-    "calendarYear": "2025",
-    "month": "12",
+    "calendarYear": "2026",
+    "month": "01",
     "attributeId": 113,
     "unitId": 8,
     "value": 20.0
@@ -93,8 +93,8 @@
     "commodityCode": "0440000",
     "countryCode": "CH",
     "marketYear": "2025",
-    "calendarYear": "2025",
-    "month": "12",
+    "calendarYear": "2026",
+    "month": "01",
     "attributeId": 130,
     "unitId": 8,
     "value": 239000.0
@@ -103,8 +103,8 @@
     "commodityCode": "0440000",
     "countryCode": "CH",
     "marketYear": "2025",
-    "calendarYear": "2025",
-    "month": "12",
+    "calendarYear": "2026",
+    "month": "01",
     "attributeId": 192,
     "unitId": 8,
     "value": 82000.0
@@ -113,8 +113,8 @@
     "commodityCode": "0440000",
     "countryCode": "CH",
     "marketYear": "2025",
-    "calendarYear": "2025",
-    "month": "12",
+    "calendarYear": "2026",
+    "month": "01",
     "attributeId": 125,
     "unitId": 8,
     "value": 321000.0
@@ -123,30 +123,30 @@
     "commodityCode": "0440000",
     "countryCode": "CH",
     "marketYear": "2025",
-    "calendarYear": "2025",
-    "month": "12",
+    "calendarYear": "2026",
+    "month": "01",
     "attributeId": 176,
     "unitId": 8,
-    "value": 173908.0
+    "value": 180148.0
   },
   {
     "commodityCode": "0440000",
     "countryCode": "CH",
     "marketYear": "2025",
-    "calendarYear": "2025",
-    "month": "12",
+    "calendarYear": "2026",
+    "month": "01",
     "attributeId": 178,
     "unitId": 8,
-    "value": 494928.0
+    "value": 501168.0
   },
   {
     "commodityCode": "0440000",
     "countryCode": "CH",
     "marketYear": "2025",
-    "calendarYear": "2025",
-    "month": "12",
+    "calendarYear": "2026",
+    "month": "01",
     "attributeId": 184,
     "unitId": 26,
-    "value": 6.6591
+    "value": 6.7002
   }
 ]

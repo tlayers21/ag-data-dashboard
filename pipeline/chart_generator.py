@@ -314,7 +314,7 @@ def generate_charts() -> None:
         "feed_domestic_consumption",
         "industrial_feed_domestic_consumption",
         "food_use_feed_domestic_consumption",
-        "food_waste_feed_domestic_consumption",
+        "feed_waste_feed_domestic_consumption",
         "ending_stocks",
         "total_distribution",
         "extraction_rate",
