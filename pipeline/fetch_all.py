@@ -6,12 +6,13 @@ from .utils import fas_data_path, inspections_data_path
 from datetime import datetime, timedelta
 import time
     
+# Fetches both esr all and country data for each commodity
 def fetch_esr_data(usda_api_key: str, marketing_year: int) -> None:
     usda_data = USDAClient(usda_api_key)
 
     print(f"Starting ESR Data Fetching Process For Marketing Year {marketing_year}...")
     for name, cfg in COMMODITIES.items():
-        print(f"Fetching: {name.capitalize()} For Marketing Year {marketing_year}")
+        print(f"Fetching: {name.title()} For Marketing Year {marketing_year}")
         underscore_commodity_name = name.replace(" ", "_")
 
         esr_code = cfg["esr"]["commodity"]
@@ -26,7 +27,7 @@ def fetch_esr_data(usda_api_key: str, marketing_year: int) -> None:
                 json.dump(esr_all_data, file, indent=2)
         else:
             print(
-                f"----------\nWARNING: No ESR All Data For {name} " 
+                f"----------\nWARNING: No ESR All Data For {name.title()} " 
                 f"For {marketing_year} Marketing Year\n----------"
             )
 
@@ -42,18 +43,19 @@ def fetch_esr_data(usda_api_key: str, marketing_year: int) -> None:
                     json.dump(country_data, file, indent=2)
             else:
                 print(
-                    f"----------\nWARNING: No ESR country data for {name} to {country_name.capitalize()} "
-                    f"for {marketing_year} Marketing Year\n----------"
+                    f"----------\nWARNING: No ESR Country Data For {name.title()} To {country_name.title()} "
+                    f"For {marketing_year} Marketing Year\n----------"
                 )
    
     print("Done.\n==========")
 
+# Fetches both psd world and country data for each commodity
 def fetch_psd_data(usda_api_key: str, marketing_year: int) -> None:
     usda_data = USDAClient(usda_api_key)
 
-    print(f"Starting PSD Data Fetching Process for Marketing Year {marketing_year}...")
+    print(f"Starting PSD Data Fetching Process For Marketing Year {marketing_year}...")
     for name, cfg in COMMODITIES.items():
-        print(f"Fetching: {name.capitalize()} for Marketing Year {marketing_year}")
+        print(f"Fetching: {name.title()} For Marketing Year {marketing_year}")
         underscore_commodity_name = name.replace(" ", "_")
 
         psd_code = cfg["psd"]["commodity"]
@@ -68,8 +70,8 @@ def fetch_psd_data(usda_api_key: str, marketing_year: int) -> None:
                 json.dump(psd_world_data, file, indent=2)
         else:
             print(
-                f"----------\nWARNING: No PSD world data for {name} " 
-                f"for {marketing_year} Marketing Year\n----------"
+                f"----------\nWARNING: No PSD World Data For {name.title()} " 
+                f"For {marketing_year} Marketing Year\n----------"
             )
 
         # For to individual countries
@@ -84,14 +86,15 @@ def fetch_psd_data(usda_api_key: str, marketing_year: int) -> None:
                     json.dump(country_data, file, indent=2)
             else:
                 print(
-                    f"----------\nWARNING: No PSD country data for {name} to {country_name.capitalize()} "
-                    f"for {marketing_year} Marketing Year\n----------"
+                    f"----------\nWARNING: No PSD Country Data For {name.title()} To {country_name.title()} "
+                    f"For {marketing_year} Marketing Year\n----------"
                 )
                 
     print("Done.\n==========")
-    
+
+# Fetches export inspections data using the URL that the USDA dynamically updates each week
 def fetch_inspections() -> None:
-    print("Fetching latest inspections data...")
+    print("Fetching Latest Export Inspections Data...")
 
     url = "https://www.ams.usda.gov/mnreports/wa_gr101.txt"
 
@@ -105,4 +108,4 @@ def fetch_inspections() -> None:
     if response.status_code == 200:
         filepath.write_bytes(response.content)
     else:
-        print("Failed to Download Weekly Inspections File")
+        print("WARNING: Failed To Download Weekly Export Inspections File")
