@@ -49,5 +49,5 @@ deployments:
     parameters:
       restart: true
     schedules:
-      - cron: "0 0 * * MON"
+      - cron: "0 0 * * SUN"
         timezone: "America/New_York"
