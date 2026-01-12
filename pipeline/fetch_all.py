@@ -9,9 +9,9 @@ import time
 def fetch_esr_data(usda_api_key: str, marketing_year: int) -> None:
     usda_data = USDAClient(usda_api_key)
 
-    print(f"Starting ESR Data Fetching Process for Marketing Year {marketing_year}...")
+    print(f"Starting ESR Data Fetching Process For Marketing Year {marketing_year}...")
     for name, cfg in COMMODITIES.items():
-        print(f"Fetching: {name.capitalize()} for Marketing Year {marketing_year}")
+        print(f"Fetching: {name.capitalize()} For Marketing Year {marketing_year}")
         underscore_commodity_name = name.replace(" ", "_")
 
         esr_code = cfg["esr"]["commodity"]
@@ -26,8 +26,8 @@ def fetch_esr_data(usda_api_key: str, marketing_year: int) -> None:
                 json.dump(esr_all_data, file, indent=2)
         else:
             print(
-                f"----------\nWARNING: No ESR all data for {name} " 
-                f"for {marketing_year} Marketing Year\n----------"
+                f"----------\nWARNING: No ESR All Data For {name} " 
+                f"For {marketing_year} Marketing Year\n----------"
             )
 
         # For to individual countries
