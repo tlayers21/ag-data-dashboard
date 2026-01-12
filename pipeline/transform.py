@@ -4,6 +4,8 @@ from pathlib import Path
 import re
 from datetime import datetime
 from .config import COMMODITIES
+
+# Mainly used to figure out calendar and marketing year week logic for graphing
 from .marketing_year import (
     MARKETING_YEAR_START,
     compute_marketing_year,
@@ -27,6 +29,10 @@ ESR_RENAME_MAP = {
     "nextMYNetSales": "next_marketing_year_net_sales",
     "unitId": "unit_id",
     "weekEndingDate": "week_ending_date"
+}
+
+ESR_UNIT_MAP = {
+    1: "Metric Tons"
 }
 
 ESR_COMMODITY_LOOKUP = {data["esr"]["commodity"]: commodity for commodity, data in COMMODITIES.items()}
@@ -75,13 +81,15 @@ PSD_UNIT_MAP = {
 
 PSD_COMMODITY_LOOKUP = {data["psd"]["commodity"]: commodity for commodity, data in COMMODITIES.items()}
 
-def clean_esr_world_file(path: Path) -> pd.DataFrame:
+# Cleans an ESR all file, aggregates data in order to produce ESR world data
+def clean_esr_all_file(path: Path) -> pd.DataFrame:
     with open(path, "r") as file:
         raw_data = json.load(file)
     
     df = pd.DataFrame(raw_data)
 
     df = df.rename(columns=ESR_RENAME_MAP)
+
     df["week_ending_date"] = pd.to_datetime(df["week_ending_date"])
     commodity_code = str(df["commodity_code"].iloc[0])
 
@@ -97,7 +105,7 @@ def clean_esr_world_file(path: Path) -> pd.DataFrame:
     ]
 
     aggregated_data = df.groupby("week_ending_date")[data_columns].sum().reset_index()
-    aggregated_data["unit"] = "Metric Tons"
+    aggregated_data["unit"] = df["unit_id"].map(ESR_UNIT_MAP)
     aggregated_data["commodity"] = commodity_name
     aggregated_data["country"] = "world"
 
@@ -109,7 +117,8 @@ def clean_esr_world_file(path: Path) -> pd.DataFrame:
     # Determine marketing year, month, and week
     aggregated_data["marketing_year"] = compute_marketing_year(aggregated_data["week_ending_date"], start_month)
     aggregated_data["marketing_year_start_date"] = compute_marketing_year_start_date(aggregated_data["week_ending_date"], start_month)
-    # ESR weeks end on tuesday
+
+    # ESR weeks end on Thursdays
     aggregated_data["first_week_ending"] = compute_first_week_ending(aggregated_data["marketing_year_start_date"], weekday=3)
 
     aggregated_data["marketing_year_month"] = compute_marketing_year_month(
@@ -118,6 +127,7 @@ def clean_esr_world_file(path: Path) -> pd.DataFrame:
     aggregated_data["marketing_year_week"] = compute_marketing_year_week_esr(
         aggregated_data["week_ending_date"], aggregated_data["first_week_ending"]
     )
+
     #TODO: Fix marketing year week logic to not lose edge case data (see comment in marketing_year.py) so this line can be removed
     aggregated_data = aggregated_data[aggregated_data["marketing_year_week"].notna()]
 
@@ -148,8 +158,9 @@ def clean_esr_world_file(path: Path) -> pd.DataFrame:
 
     return aggregated_data[column_order]
 
+# Cleans an ESR country file by using same logic in ESR all file (aggregates data for marketing year)
 def clean_esr_country_file(path: Path, country_name: str) -> pd.DataFrame:
-    df = clean_esr_world_file(path)
+    df = clean_esr_all_file(path)
     df["country"] = country_name
 
     column_order = [
@@ -176,6 +187,7 @@ def clean_esr_country_file(path: Path, country_name: str) -> pd.DataFrame:
 
     return df[column_order]
 
+# Cleans a PSD world file, maps it's attribute and unit ids to their corresponding attributes
 def clean_psd_world_file(path: Path) -> pd.DataFrame:
     with open(path, "r") as file:
         raw_data = json.load(file)
@@ -183,6 +195,7 @@ def clean_psd_world_file(path: Path) -> pd.DataFrame:
     df = pd.DataFrame(raw_data)
 
     df = df.rename(columns=PSD_RENAME_MAP)
+
     commodity_code = str(df["commodity_code"].iloc[0])
     commodity_name = PSD_COMMODITY_LOOKUP.get(commodity_code)
     df["calendar_month"] = df["calendar_month"].astype(int)
@@ -231,6 +244,7 @@ def clean_psd_country_file(path: Path, country_name: str) -> pd.DataFrame:
 
     return df[column_order]
 
+# Cleans an inspections file, parses file to determine relevant data
 def clean_inspections_file(path: Path) -> pd.DataFrame:
     text = path.read_text(encoding="latin-1")
 
@@ -238,7 +252,7 @@ def clean_inspections_file(path: Path) -> pd.DataFrame:
     date_pattern = r"WEEK ENDING ([A-Z]{3} \d{2}, \d{4})"
     date_match = re.search(date_pattern, text)
 
-    # Files can contain date but say 'sorry it's delayed or something' so much check in extract_value too
+    # Files can contain date but say 'sorry it's delayed or something' so must check in extract_value too
     if not date_match:
         print(f"'{path.name}' Does Not Contain Inspections Data")
         return
@@ -292,6 +306,7 @@ def clean_inspections_file(path: Path) -> pd.DataFrame:
         df["week_ending_date"], df["start_month"]
     )
 
+    # Export inspections weeks end on Thursdays
     df["first_week_ending"] = compute_first_week_ending(
         df["marketing_year_start_date"], weekday=3
     )
@@ -324,6 +339,3 @@ def clean_inspections_file(path: Path) -> pd.DataFrame:
     ]
 
     return df[column_order]
-
-
-

@@ -23,7 +23,7 @@ def fetch_esr_data(usda_api_key: str, marketing_year: int) -> None:
         time.sleep(1)
 
         if esr_all_data:   
-            with open(fas_data_path(f"{underscore_commodity_name}_esr_all_{marketing_year}.json"), "w") as file:
+            with open(fas_data_path(f"{underscore_commodity_name}_esr_all_{marketing_year}my.json"), "w") as file:
                 json.dump(esr_all_data, file, indent=2)
         else:
             print(
@@ -39,7 +39,7 @@ def fetch_esr_data(usda_api_key: str, marketing_year: int) -> None:
             underscore_country_name = country_name.replace(" ", "_")
 
             if country_data:
-                with open(fas_data_path(f"{underscore_commodity_name}_esr_to_{underscore_country_name}_{marketing_year}.json"), "w") as file:
+                with open(fas_data_path(f"{underscore_commodity_name}_esr_to_{underscore_country_name}_{marketing_year}my.json"), "w") as file:
                     json.dump(country_data, file, indent=2)
             else:
                 print(
@@ -66,7 +66,7 @@ def fetch_psd_data(usda_api_key: str, marketing_year: int) -> None:
         time.sleep(1)
 
         if psd_world_data:   
-            with open(fas_data_path(f"{underscore_commodity_name}_psd_world_{marketing_year}.json"), "w") as file:
+            with open(fas_data_path(f"{underscore_commodity_name}_psd_world_{marketing_year}my.json"), "w") as file:
                 json.dump(psd_world_data, file, indent=2)
         else:
             print(
@@ -82,7 +82,7 @@ def fetch_psd_data(usda_api_key: str, marketing_year: int) -> None:
             underscore_country_name = country_name.replace(" ", "_")
 
             if country_data:
-                with open(fas_data_path(f"{underscore_commodity_name}_psd_to_{underscore_country_name}_{marketing_year}.json"), "w") as file:
+                with open(fas_data_path(f"{underscore_commodity_name}_psd_to_{underscore_country_name}_{marketing_year}my.json"), "w") as file:
                     json.dump(country_data, file, indent=2)
             else:
                 print(

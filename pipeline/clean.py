@@ -1,13 +1,14 @@
 import pandas as pd
 from .utils import BASE_DIR, clean_data_path
 from .transform import (
-    clean_esr_world_file,
+    clean_esr_all_file,
     clean_esr_country_file,
     clean_psd_world_file,
     clean_psd_country_file,
     clean_inspections_file
 )
 
+# Cleans all ESR files and combines the result into 1 CSV file
 def clean_all_esr() -> None:
     print("Starting ESR Data Cleaning Process...")
     fas_dir = BASE_DIR / "data" / "raw" / "fas"
@@ -15,28 +16,29 @@ def clean_all_esr() -> None:
     world_files = list(fas_dir.glob("*_esr_all_*.json"))
     
     if not world_files:
-        raise FileNotFoundError("No ESR world files found in data/raw/fas")
+        raise FileNotFoundError("No ESR Eorld Files Found In data/raw/fas")
     
-    print(f"Processing {len(world_files)} ESR world files...")
+    print(f"Processing {len(world_files)} ESR World Files...")
 
     country_files = list(fas_dir.glob("*_esr_to_*.json"))
-    print(f"Processing {len(country_files)} ESR country file...")
+    print(f"Processing {len(country_files)} ESR Country Files...")
 
     if not country_files:
-        raise FileNotFoundError("No ESR country files found in data/raw/fas")
+        raise FileNotFoundError("No ESR Country Files Found In data/raw/fas")
 
-    # WORLD
-    world_dfs = [clean_esr_world_file(file) for file in world_files]
+    # ESR world files
+    world_dfs = [clean_esr_all_file(file) for file in world_files]
 
     if len(world_dfs) > 0:
         combined_world_df = pd.concat(world_dfs, ignore_index=True)
     
-    # COUNTRY
+    # ESR country files
     country_dfs = []
     for file in country_files:
         parts = file.stem.split("_")
         to_index = parts.index("to")
-        # Accounts for issue with "european_union in file name"
+
+        # Accounts for scenario with 'european_union' in file name
         country_parts = parts[to_index + 1: -1]
         country = "_".join(country_parts).replace("_", " ")
         cleaned_df = clean_esr_country_file(file, country)
@@ -47,11 +49,13 @@ def clean_all_esr() -> None:
     
     esr_df = pd.concat([combined_world_df, combined_country_df], ignore_index=True)
     esr_df = esr_df.sort_values(by="week_ending_date", ascending=False)
+    
     output_path = clean_data_path("esr_clean.csv")
     esr_df.to_csv(output_path, index=False)
     
     print("Done.\n==========")
 
+# Cleans all PSD files and combines the result into 1 CSV file
 def clean_all_psd() -> None:
     print("Starting PSD Data Cleaning Process...")
 
@@ -59,29 +63,30 @@ def clean_all_psd() -> None:
     world_files = list(fas_dir.glob("*_psd_world_*.json"))
 
     if not world_files:
-        raise FileNotFoundError("No PSD world files found in data/raw/fas")
+        raise FileNotFoundError("No PSD World Files Found in data/raw/fas")
 
-    print(f"Processing {len(world_files)} PSD world files...")
+    print(f"Processing {len(world_files)} PSD World Files...")
 
     country_files = [file for file in fas_dir.glob("*_psd_*_*.json") if "world" not in file.name]
 
     if not country_files:
-        raise FileNotFoundError("No PSD country files found in data/raw/fas")
+        raise FileNotFoundError("No PSD Country Files found in data/raw/fas")
     
-    print(f"Processing {len(country_files)} PSD country files...")
+    print(f"Processing {len(country_files)} PSD Country Files...")
 
-    # WORLD
+    # PSD world files
     world_dfs = [clean_psd_world_file(file) for file in world_files]
 
     if len(world_dfs) > 0:
         combined_world_df = pd.concat(world_dfs, ignore_index=True)
     
-    # COUNTRY
+    # PSD country files
     country_dfs = []
     for file in country_files:
         parts = file.stem.split("_")
         psd_index = parts.index("to")
-        # Accounts for issue with "european_union or united_states in file name"
+
+        # Accounts for scenarios with 'european_union' or 'united_states' in file name
         country_parts = parts[psd_index + 1: -1]
         country = "_".join(country_parts).replace("_", " ")
         cleaned_df = clean_psd_country_file(file, country)
@@ -91,21 +96,23 @@ def clean_all_psd() -> None:
         combined_country_df = pd.concat(country_dfs, ignore_index=True)
     
     psd_df = pd.concat([combined_world_df, combined_country_df], ignore_index=True)
-    psd_df = psd_df.sort_values(by="calendar_year", ascending=False)
+    psd_df = psd_df.sort_values(by="marketing_year", ascending=False)
+
     output_path = clean_data_path("psd_clean.csv")
     psd_df.to_csv(output_path, index=False)
     
     print("Done.\n==========")
 
+# Cleans all export inspections files and combines the result into 1 CSV file
 def clean_all_inspections() -> None:
     print("Starting Inspections Data Cleaning Process...")
     inspections_dir = BASE_DIR / "data" / "raw" / "inspections"
     inspections_files = list(inspections_dir.glob("*"))
 
     if not inspections_files:
-        raise FileNotFoundError("No Inspections files found in data/raw/inspections")
+        raise FileNotFoundError("No Export Inspections Files Found in data/raw/inspections")
 
-    print(f"Processing {len(inspections_files)} Inspections files...")
+    print(f"Processing {len(inspections_files)} Inspections Files...")
 
     inspections_dfs = []
     for file in inspections_files:
@@ -117,7 +124,4 @@ def clean_all_inspections() -> None:
     output_path = clean_data_path("inspections_clean.csv")
     combined_inspections_df = combined_inspections_df.sort_values(by="week_ending_date", ascending=False)
     combined_inspections_df.to_csv(output_path, index=False)
-    # TODO: add system that checks for duplicate files in inspections folder
-    # TODO: SORT ALL THE OTHER FILES HERE INSTEAD OF IN POSTGRESQL IN DESCENDING, NOT ASCENDING ORDER
     print("Done.\n==========")
-

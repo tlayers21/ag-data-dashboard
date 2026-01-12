@@ -405,4 +405,3 @@ def generate_home_page_charts() -> None:
             )
 
     print("Done.\n==========")
-    

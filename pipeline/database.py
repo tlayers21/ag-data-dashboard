@@ -2,9 +2,10 @@ import pandas as pd
 from sqlalchemy import create_engine, text
 from sqlalchemy.engine import Engine
 from pathlib import Path
-from .utils import BASE_DIR, clean_data_path
+from .utils import BASE_DIR
 from .config import DATA_BASE_URL
 
+# Creates SQLAlchemy engine to communicate to PostgreSQL database
 def get_engine() -> Engine:
     return create_engine(DATA_BASE_URL)
 
@@ -84,13 +85,15 @@ CREATE_INSPECTIONS_INDEXES = [
     "CREATE INDEX IF NOT EXISTS idx_inspections_commodity ON esr(commodity);"
 ]
 
+# Loads CSV file into PostgreSQL Database
 def load_csv(engine: Engine, path: Path) -> None:
     filename = path.stem
     filename = filename.replace("_clean", "")
     df = pd.read_csv(path)
     df.to_sql(filename, engine, if_exists="append", index=False)
-    print(f"{filename}.csv is loaded into PostgreSQL")
+    print(f"{filename}.csv Is Loaded Into PostgreSQL")
 
+# Initializes PostgreSQL Database
 def init_database() -> None:
     print("Creating PostgreSQL Database...")
 
@@ -118,4 +121,3 @@ def init_database() -> None:
             connection.execute(text(statement))
     
     print("Done.\n==========")
-
