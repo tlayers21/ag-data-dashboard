@@ -11,6 +11,7 @@ engine = create_engine(DATA_BASE_URL)
 def health() -> dict:
     return {"status": "ok"}
 
+# Fetches data from last 5 years dependent on the 3 types of data: ESR, PSD, and inspections (allows for some leeway)
 def fetch_last_5_years(data: str, commodity: str, country: str) -> list[dict]:
     cutoff_year = datetime.now().year - 6
     
@@ -36,14 +37,17 @@ def fetch_last_5_years(data: str, commodity: str, country: str) -> list[dict]:
     df = pd.read_sql(query, engine)
     return df.to_dict(orient="records")
 
+# Fetches ESR data from last 5 years
 @app.get("/esr/weekly/last5years")
 def get_last_5_years_esr(commodity: str, country: str) -> list[dict]:
     return fetch_last_5_years("esr", commodity, country)
 
+# Fetches PSD data from last 5 years
 @app.get("/psd/weekly/last5years")
 def get_last_5_years_esr(commodity: str, country: str) -> list[dict]:
     return fetch_last_5_years("psd", commodity, country)
 
+# Fetches export inspections data from last 5 years
 @app.get("/inspections/weekly/last5years")
 def get_last_5_years_esr(commodity: str, country: str) -> list[dict]:
     return fetch_last_5_years("inspections", commodity, country)
