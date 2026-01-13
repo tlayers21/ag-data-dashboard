@@ -39,6 +39,8 @@ export default function Home() {
   const [wheatCommentary, setWheatCommentary] = useState("");
   const [soyCommentary, setSoyCommentary] = useState("");
 
+  const BASE = process.env.PUBLIC_URL || "";
+
   useEffect(() => {
     async function loadAll() {
       setCornCommentary(
@@ -81,22 +83,22 @@ export default function Home() {
       <div className="card-grid-2">
         <div className="card">
           <h3>Export Inspections</h3>
-          <ChartViewer jsonPath="/inspections_us_corn_to_world_export_inspections_last_5_years_my_home.json" />
+          <ChartViewer jsonPath={`${BASE}/inspections_us_corn_to_world_export_inspections_last_5_years_my_home.json`} />
         </div>
 
         <div className="card">
           <h3>Total Commitment</h3>
-          <ChartViewer jsonPath="/esr_us_corn_to_world_current_marketing_year_total_commitment_last_5_years_my_home.json" />
+          <ChartViewer jsonPath={`${BASE}/esr_us_corn_to_world_current_marketing_year_total_commitment_last_5_years_my_home.json`} />
         </div>
 
         <div className="card">
           <h3>Gross New Sales</h3>
-          <ChartViewer jsonPath="/esr_us_corn_to_world_gross_new_sales_last_5_years_my_home.json" />
+          <ChartViewer jsonPath={`${BASE}/esr_us_corn_to_world_gross_new_sales_last_5_years_my_home.json`} />
         </div>
 
         <div className="card">
           <h3>Next Marketing Year Outstanding Sales</h3>
-          <ChartViewer jsonPath="/esr_us_corn_to_world_next_marketing_year_outstanding_sales_last_5_years_my_home.json" />
+          <ChartViewer jsonPath={`${BASE}/esr_us_corn_to_world_next_marketing_year_outstanding_sales_last_5_years_my_home.json`} />
         </div>
       </div>
 
@@ -114,22 +116,22 @@ export default function Home() {
       <div className="card-grid-2">
         <div className="card">
           <h3>Export Inspections</h3>
-          <ChartViewer jsonPath="/inspections_us_wheat_to_world_export_inspections_last_5_years_my_home.json" />
+          <ChartViewer jsonPath={`${BASE}/inspections_us_wheat_to_world_export_inspections_last_5_years_my_home.json`} />
         </div>
 
         <div className="card">
           <h3>Total Commitment</h3>
-          <ChartViewer jsonPath="/esr_us_wheat_to_world_current_marketing_year_total_commitment_last_5_years_my_home.json" />
+          <ChartViewer jsonPath={`${BASE}/esr_us_wheat_to_world_current_marketing_year_total_commitment_last_5_years_my_home.json`} />
         </div>
 
         <div className="card">
           <h3>Gross New Sales</h3>
-          <ChartViewer jsonPath="/esr_us_wheat_to_world_gross_new_sales_last_5_years_my_home.json" />
+          <ChartViewer jsonPath={`${BASE}/esr_us_wheat_to_world_gross_new_sales_last_5_years_my_home.json`} />
         </div>
 
         <div className="card">
           <h3>Next Marketing Year Outstanding Sales</h3>
-          <ChartViewer jsonPath="/esr_us_wheat_to_world_next_marketing_year_outstanding_sales_last_5_years_my_home.json" />
+          <ChartViewer jsonPath={`${BASE}/esr_us_wheat_to_world_next_marketing_year_outstanding_sales_last_5_years_my_home.json`} />
         </div>
       </div>
 
@@ -147,22 +149,22 @@ export default function Home() {
       <div className="card-grid-2">
         <div className="card">
           <h3>Export Inspections</h3>
-          <ChartViewer jsonPath="/inspections_us_soybeans_to_world_export_inspections_last_5_years_my_home.json" />
+          <ChartViewer jsonPath={`${BASE}/inspections_us_soybeans_to_world_export_inspections_last_5_years_my_home.json`} />
         </div>
 
         <div className="card">
           <h3>Total Commitment</h3>
-          <ChartViewer jsonPath="/esr_us_soybeans_to_world_current_marketing_year_total_commitment_last_5_years_my_home.json" />
+          <ChartViewer jsonPath={`${BASE}/esr_us_soybeans_to_world_current_marketing_year_total_commitment_last_5_years_my_home.json`} />
         </div>
 
         <div className="card">
           <h3>Gross New Sales</h3>
-          <ChartViewer jsonPath="/esr_us_soybeans_to_world_gross_new_sales_last_5_years_my_home.json" />
+          <ChartViewer jsonPath={`${BASE}/esr_us_soybeans_to_world_gross_new_sales_last_5_years_my_home.json`} />
         </div>
 
         <div className="card">
           <h3>Next Marketing Year Outstanding Sales</h3>
-          <ChartViewer jsonPath="/esr_us_soybeans_to_world_next_marketing_year_outstanding_sales_last_5_years_my_home.json" />
+          <ChartViewer jsonPath={`${BASE}/esr_us_soybeans_to_world_next_marketing_year_outstanding_sales_last_5_years_my_home.json`} />
         </div>
       </div>
 

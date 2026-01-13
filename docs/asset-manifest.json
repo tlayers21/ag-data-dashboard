@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ag-data-dashboard/static/css/main.003ad960.css",
-    "main.js": "/ag-data-dashboard/static/js/main.568ab954.js",
+    "main.js": "/ag-data-dashboard/static/js/main.ca14b07d.js",
     "index.html": "/ag-data-dashboard/index.html",
     "static/media/us_soybeans_to_world_current_marketing_year_total_commitment_commentary.txt": "/ag-data-dashboard/static/media/us_soybeans_to_world_current_marketing_year_total_commitment_commentary.e00c6aeebd05efc39dea.txt",
     "static/media/us_wheat_to_world_current_marketing_year_total_commitment_commentary.txt": "/ag-data-dashboard/static/media/us_wheat_to_world_current_marketing_year_total_commitment_commentary.0f4f030cd806f59d73eb.txt",
@@ -16,10 +16,10 @@
     "static/media/us_wheat_to_world_gross_new_sales_commentary.txt": "/ag-data-dashboard/static/media/us_wheat_to_world_gross_new_sales_commentary.67ee1a9655a830c9ee87.txt",
     "static/media/us_corn_to_world_gross_new_sales_commentary.txt": "/ag-data-dashboard/static/media/us_corn_to_world_gross_new_sales_commentary.1b086bbb346ba09df736.txt",
     "main.003ad960.css.map": "/ag-data-dashboard/static/css/main.003ad960.css.map",
-    "main.568ab954.js.map": "/ag-data-dashboard/static/js/main.568ab954.js.map"
+    "main.ca14b07d.js.map": "/ag-data-dashboard/static/js/main.ca14b07d.js.map"
   },
   "entrypoints": [
     "static/css/main.003ad960.css",
-    "static/js/main.568ab954.js"
+    "static/js/main.ca14b07d.js"
   ]
 }
