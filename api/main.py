@@ -1,6 +1,8 @@
 from fastapi import FastAPI
+from fastapi.responses import FileResponse
 from dotenv import load_dotenv
 import os
+from pathlib import Path
 from typing import List, Dict, Any
 from sqlalchemy import create_engine
 import pandas as pd
@@ -8,6 +10,8 @@ from datetime import datetime, timedelta
 
 load_dotenv()
 POSTGRES_URL = os.getenv("POSTGRES_URL")
+
+CHART_DIR = Path(__file__).parent / "charts"
 
 app = FastAPI()
 engine = create_engine(POSTGRES_URL)
@@ -60,3 +64,11 @@ def get_last_5_years_esr(commodity: str, country: str) -> List[Dict[str, Any]]:
 @app.get("/inspections/last5years")
 def get_last_5_years_esr(commodity: str, country: str) -> List[Dict[str, Any]]:
     return fetch_last_5_years("inspections", commodity, country)
+
+# Fetches JSON flie to build Plotly chart
+@app.get("api/chart/{filename}")
+def get_chart(filename: str):
+    file_path = CHART_DIR / filename
+    if not file_path.exists():
+        return {"error": "chart not found"}
+    return FileResponse(file_path)

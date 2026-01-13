@@ -1,7 +1,10 @@
 import requests
 from typing import List, Dict, Any
+import os
+from dotenv import load_dotenv
 
-AGDATA_BASE_URL = "https://ag-data-dashboard-6908.onrender.com"
+load_dotenv()
+API_BASE = os.getenv("AGDATA_BASE_URL")
 
 class AgDataClient:
     def __init__(self) -> None:
@@ -9,7 +12,7 @@ class AgDataClient:
 
     # Builds URL
     def _build_url(self, endpoint: str) -> str:
-        return f"{AGDATA_BASE_URL}{endpoint}"
+        return f"{API_BASE}{endpoint}"
     
     # Fetches specified data from API which communicates with database
     def get(self, data_type, commodity: str, country: str) -> List[Dict[str, Any]]:

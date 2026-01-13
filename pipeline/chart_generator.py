@@ -162,7 +162,7 @@ def generate_weekly_esr_or_inspections_chart(
         f"Week ending: %{{customdata[0]|%b-%d-%Y}}<extra></extra>"
     )
 
-    json_dir = Path("frontend/public").resolve()
+    json_dir = Path("api/charts").resolve()
 
     if home:
         json_path = (
@@ -286,7 +286,7 @@ def generate_weekly_psd_chart(
         f"{"Marketing Year"}: %{{x}}<extra></extra>"
     )
 
-    json_dir = Path("frontend/public").resolve()
+    json_dir = Path("api/charts").resolve()
     commodity_slug = commodity.lower().replace(" ", "_")
     country_slug = country.lower().replace(" ", "_")
 

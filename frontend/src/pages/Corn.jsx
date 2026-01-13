@@ -76,19 +76,15 @@ const YEAR_TYPES = [
 ];
 
 // -----------------------------
-// UNIVERSAL JSON PATH BUILDER
+// API URL BUILDER (NEW)
 // -----------------------------
-function buildJsonPath(dataSource, commodity, countrySlug, dataTypeKey, yearType) {
-  const fileSuffix = yearType === "cal" ? "cal" : "my";
-  const dataPrefix = dataSource.toLowerCase();
+const API_BASE = process.env.REACT_APP_API_BASE;
 
-  if (dataPrefix === "forecasts") return null;
+function buildApiUrl(dataSource, commodity, countrySlug, dataTypeKey, yearType) {
+  const ds = dataSource.toLowerCase();
+  if (ds === "forecasts") return null;
 
-  if (dataPrefix === "psd") {
-    return `/${dataPrefix}_${commodity}_for_${countrySlug}_${dataTypeKey}_last_5_years_${fileSuffix}.json`;
-  }
-
-  return `/${dataPrefix}_us_${commodity}_to_${countrySlug}_${dataTypeKey}_last_5_years_${fileSuffix}.json`;
+  return `${API_BASE}/${commodity}/${ds}/${countrySlug}/${dataTypeKey}/${yearType}`;
 }
 
 // -----------------------------
@@ -140,8 +136,8 @@ export default function Corn() {
     return exists ? dataTypeKey : dataTypes[0]?.key || "";
   }, [dataTypes, dataTypeKey]);
 
-  // Build JSON path
-  const jsonPath = buildJsonPath(
+  // Build API URL
+  const jsonPath = buildApiUrl(
     dataSource,
     commodity,
     countrySlug,

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Plot from "react-plotly.js";
 
-// variant = "home" or any commodity: "corn", "wheat", "soybeans", "soybean_oil", "soybean_meal"
 export default function ChartViewer({ jsonPath, variant = "home" }) {
   const [figure, setFigure] = useState(null);
   const [error, setError] = useState(false);
@@ -12,23 +11,16 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
 
     fetch(jsonPath)
       .then((res) => {
-        if (!res.ok) {
-          throw new Error("File not found");
-        }
+        if (!res.ok) throw new Error("API returned error");
         return res.json();
       })
       .then((data) => {
         const fig = data.figure || data;
         setFigure(fig);
       })
-      .catch(() => {
-        setError(true);
-      });
+      .catch(() => setError(true));
   }, [jsonPath]);
 
-  // -----------------------------
-  // ERROR STATE (commodity pages)
-  // -----------------------------
   const isCommodityPage =
     variant !== "home" &&
     ["corn", "wheat", "soybeans", "soybean_oil", "soybean_meal"].includes(
@@ -55,9 +47,6 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
     );
   }
 
-  // -----------------------------
-  // LOADING STATE
-  // -----------------------------
   if (!figure) {
     return (
       <div
@@ -74,9 +63,6 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
     );
   }
 
-  // -----------------------------
-  // LEGEND LOGIC (all commodities)
-  // -----------------------------
   let layout = { ...figure.layout };
 
   if (isCommodityPage) {

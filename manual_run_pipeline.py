@@ -32,15 +32,9 @@ if __name__ == "__main__":
         
         if restart:
             print("--------------------")
-            # Empty directories every run
-            dirs_to_empty = [
-                Path("data/raw/fas").resolve(),
-                Path("frontend/public/").resolve()
-            ]
-            for directory in dirs_to_empty:
-                for file in directory.glob("*.json"):
-                    if file.is_file():
-                        file.unlink()
+            for file in Path("data/raw/fas").resolve().glob("*.json"):
+                if file.is_file():
+                    file.unlink()
 
             for year in ESR_YEARS:
                 fetch_esr_data(usda_api_key=USDA_API_KEY, marketing_year=year)
