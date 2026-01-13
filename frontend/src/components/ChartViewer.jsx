@@ -91,7 +91,7 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
       },
       margin: {
         ...(layout.margin || {}),
-        b: 120 // ensures space for horizontal legend
+        b: 120
       }
     };
   }
