@@ -65,18 +65,43 @@ def get_last_5_years_esr(commodity: str, country: str) -> List[Dict[str, Any]]:
 def get_last_5_years_esr(commodity: str, country: str) -> List[Dict[str, Any]]:
     return fetch_last_5_years("inspections", commodity, country)
 
-# Fetches JSON flie to build Plotly chart
+# Fetches JSON flie to build Plotly chart for specific commodity page
 @app.get("/api/{commodity}/{source}/{country}/{datatype}/{year}")
 def get_chart(commodity: str, source: str, country: str, datatype: str, year: str):
     source = source.lower()
-    filename = ""
+    commodity = commodity.lower()
+    country = country.lower()
+    datatype = datatype.lower()
+    year = year.lower()
 
+    # PSD pattern
     if source == "psd":
-        filename = f"psd_{commodity}_for_{country}_{datatype}_last_5_years_{year}.json"
+        filename = (
+            f"{source}_{commodity}_for_{country}_{datatype}_last_5_years_{year}.json"
+        )
+
+    # ESR or Inspections pattern
     else:
-        filename = f"{source}_us_{commodity}_to_{country}_{datatype}_last_5_years_{year}.json"
+        filename = (
+            f"{source}_us_{commodity}_to_{country}_{datatype}_last_5_years_{year}.json"
+        )
 
     file_path = CHART_DIR / filename
+
     if not file_path.exists():
-        return {"error": "Chart not found"}
+        return {"error": f"Chart not found: {filename}"}
+
+    return FileResponse(file_path)
+
+# Fetches JSON flie to build Plotly chart for specific home page
+@app.get("/api/home/{commodity}/{source}/{country}/{datatype}/{year}")
+def get_home_chart(commodity: str, source: str, country: str, datatype: str, year: str):
+    filename = (
+        f"{source}_us_{commodity}_to_{country}_{datatype}_last_5_years_{year}_home.json"
+    )
+    file_path = CHART_DIR / filename
+
+    if not file_path.exists():
+        return {"error": f"Chart not found: {filename}"}
+
     return FileResponse(file_path)
