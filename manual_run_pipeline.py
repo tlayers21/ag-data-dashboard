@@ -22,6 +22,7 @@ if __name__ == "__main__":
             print("Invalid input. Input must be 'y' or 'n'")
     
     if restart:
+        print("--------------------")
         # Empty directories every run
         dirs_to_empty = [
             Path("data/raw/fas").resolve(),
@@ -39,7 +40,9 @@ if __name__ == "__main__":
         for year in PSD_YEARS:
             fetch_psd_data(usda_api_key=USDA_API_KEY, marketing_year=year) 
         fetch_inspections()
-   
+    
+    if not restart:
+        print("--------------------")
     clean_all_esr()
     clean_all_psd()
     clean_all_inspections()
@@ -47,3 +50,4 @@ if __name__ == "__main__":
     generate_charts()
     generate_home_page_charts()
     generate_home_page_commentary()
+    print("--------------------")

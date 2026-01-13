@@ -14,6 +14,7 @@ PSD_YEARS = [2025, 2024, 2023, 2022, 2021, 2020]
 @task
 def run_pipeline(restart: bool = False):
     if restart:
+        print("--------------------")
         dirs_to_empty = [
             Path("data/raw/fas").resolve(),
             Path("frontend/public/").resolve(),
@@ -29,7 +30,9 @@ def run_pipeline(restart: bool = False):
             fetch_esr_data(usda_api_key=USDA_API_KEY, marketing_year=year)
         for year in PSD_YEARS:
             fetch_psd_data(usda_api_key=USDA_API_KEY, marketing_year=year)
-
+    
+    if not restart:
+        print("--------------------")
     fetch_inspections()
     clean_all_esr()
     clean_all_psd()
@@ -38,6 +41,7 @@ def run_pipeline(restart: bool = False):
     generate_charts()
     generate_home_page_charts()
     generate_home_page_commentary()
+    print("--------------------")
 
 @flow(name="agdatavault-pipeline")
 def agdatavault_pipeline(restart: bool = False):

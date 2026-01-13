@@ -95,7 +95,7 @@ export default function Home() {
         </div>
 
         <div className="card">
-          <h3>Next MY Outstanding Sales</h3>
+          <h3>Next Marketing Year Outstanding Sales</h3>
           <ChartViewer jsonPath="/esr_us_corn_to_world_next_marketing_year_outstanding_sales_last_5_years_my_home.json" />
         </div>
       </div>
@@ -128,7 +128,7 @@ export default function Home() {
         </div>
 
         <div className="card">
-          <h3>Next MY Outstanding Sales</h3>
+          <h3>Next Marketing Year Outstanding Sales</h3>
           <ChartViewer jsonPath="/esr_us_wheat_to_world_next_marketing_year_outstanding_sales_last_5_years_my_home.json" />
         </div>
       </div>
@@ -161,7 +161,7 @@ export default function Home() {
         </div>
 
         <div className="card">
-          <h3>Next MY Outstanding Sales</h3>
+          <h3>Next Marketing Year Outstanding Sales</h3>
           <ChartViewer jsonPath="/esr_us_soybeans_to_world_next_marketing_year_outstanding_sales_last_5_years_my_home.json" />
         </div>
       </div>

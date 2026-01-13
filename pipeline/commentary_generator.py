@@ -106,28 +106,8 @@ def generate_weekly_commentary(
     with open(commentary_path, "w", encoding="utf-8") as f:
         f.write(commentary)
     
-def generate_home_page_commentary() -> None:
-    print("Generating Home Page commentary...")
-
-    generate_weekly_commentary("inspections", "corn", "world", "export_inspections")
-    generate_weekly_commentary("esr", "corn", "world", "gross_new_sales")
-    generate_weekly_commentary("esr", "corn", "world", "current_marketing_year_total_commitment")
-    generate_weekly_commentary("esr", "corn", "world", "next_marketing_year_outstanding_sales")
-
-    generate_weekly_commentary("inspections", "wheat", "world", "export_inspections")
-    generate_weekly_commentary("esr", "wheat", "world", "gross_new_sales")
-    generate_weekly_commentary("esr", "wheat", "world", "current_marketing_year_total_commitment")
-    generate_weekly_commentary("esr", "wheat", "world", "next_marketing_year_outstanding_sales")
-
-    generate_weekly_commentary("inspections", "soybeans", "world", "export_inspections")
-    generate_weekly_commentary("esr", "soybeans", "world", "gross_new_sales")
-    generate_weekly_commentary("esr", "soybeans", "world", "current_marketing_year_total_commitment")
-    generate_weekly_commentary("esr", "soybeans", "world", "next_marketing_year_outstanding_sales")
-
-    print("Done.")
-
 # Generates commentary for all home page charts
-def generate_home_page_charts() -> None:
+def generate_home_page_commentary() -> None:
     print("Generating All Home Page Commentary...")
 
     home_page_commodities = [
@@ -143,7 +123,7 @@ def generate_home_page_charts() -> None:
     ]
 
     for commodity in home_page_commodities:
-        generate_home_page_commentary(
+        generate_weekly_commentary(
             data_type="inspections",
             commodity=commodity,
             country="world",
@@ -151,11 +131,11 @@ def generate_home_page_charts() -> None:
         )
 
         for val_col in home_page_esr_value_columns:
-            generate_home_page_commentary(
+            generate_weekly_commentary(
                 data_type="esr",
                 commodity=commodity,
                 country="world",
                 value_column=val_col
             )
 
-    print("Done.\n==========")
+    print("Done.")

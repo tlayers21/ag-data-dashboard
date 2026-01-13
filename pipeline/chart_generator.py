@@ -22,6 +22,9 @@ def generate_weekly_esr_or_inspections_chart(
     
     df = pd.DataFrame(df_data)
 
+    if (df[value_column] == 0).all():
+        return
+
     if year_type == "calendar":
         x_axis = "calendar_week"
         color_axis = "calendar_year"
@@ -202,6 +205,9 @@ def generate_weekly_psd_chart(
 
     df = df.drop(columns=["attribute_norm"])
 
+    if (df["amount"] == 0).all():
+        return
+
     mapping = {
         2026: "2025/2026",
         2025: "2024/2025",
@@ -261,7 +267,7 @@ def generate_weekly_psd_chart(
         else:
             trace.update(opacity=0.7)
 
-    if attribute == "yield":
+    if attribute in ["yield", "extraction_rate"]:
         figure.update_traces(texttemplate="%{text:,.3f}", textposition="outside")
     else:
         figure.update_traces(texttemplate="%{text:,.0f}", textposition="outside")
@@ -319,16 +325,17 @@ def generate_charts() -> None:
         "trade_year_exports",
         "domestic_consumption",
         "feed_domestic_consumption",
-        "industrial_feed_domestic_consumption",
-        "food_use_feed_domestic_consumption",
-        "feed_waste_feed_domestic_consumption",
+        "industrial_domestic_consumption",
+        "food_use_domestic_consumption",
+        "feed_waste_domestic_consumption",
         "ending_stocks",
         "total_distribution",
         "extraction_rate",
         "yield",
         "food_seed_and_industrial_consumption",
-        "soybean_meal_equivalent",
+        "soybean_meal_equivalent"
     ]
+
 
     for commodity in COMMODITIES.keys():
         esr_countries = ESR_COUNTRY_NAMES.values()
@@ -366,7 +373,15 @@ def generate_charts() -> None:
                         )
         
         # PSD data only releases once per marketing year, so plotting by calendar year doesn't make sense
+        
         for attribute in psd_attributes:
+            generate_weekly_psd_chart(
+                data_type="psd",
+                commodity=commodity,
+                country="world",
+                attribute=attribute
+            )
+
             for country in psd_countries:
                 generate_weekly_psd_chart(
                 data_type="psd",

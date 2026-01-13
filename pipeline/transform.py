@@ -55,7 +55,7 @@ PSD_ATTRIBUTE_MAP = {
     28: "Production",
     57: "Imports",
     81: "Trade Year Imports",
-    84: "Trade Year Imports from United States",
+    84: "Trade Year Imports From United States",
     86: "Total Supply",
     88: "Exports",
     113: "Trade Year Exports",
@@ -75,7 +75,7 @@ PSD_ATTRIBUTE_MAP = {
 PSD_UNIT_MAP = {
     4: "1000 Hectares",
     8: "1000 Metric Tons",
-    23: "Percentage",
+    23: "Percentage (%)",
     26: "Yield (Metric Tons per Hectare)"
 }
 

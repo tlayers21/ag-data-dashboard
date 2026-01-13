@@ -8,7 +8,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2025,1,8,wheat,japan,Total Distribution,7772.0,1000 Metric Tons
 01-12-2026,2026,2025,1,8,wheat,japan,Yield,4.4,Yield (Metric Tons per Hectare)
 01-12-2026,2026,2025,1,4,soybean meal,mexico,Crush,6800.0,1000 Metric Tons
-01-12-2026,2026,2025,1,4,soybean meal,mexico,Extraction Rate,0.79,Percentage
+01-12-2026,2026,2025,1,4,soybean meal,mexico,Extraction Rate,0.79,Percentage (%)
 01-12-2026,2026,2025,1,4,soybean meal,mexico,Beginning Stocks,307.0,1000 Metric Tons
 01-12-2026,2026,2025,1,4,soybean meal,mexico,Production,5372.0,1000 Metric Tons
 01-12-2026,2026,2025,1,5,soybeans,united states,Ending Stocks,9517.0,1000 Metric Tons
@@ -27,13 +27,13 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2025,1,8,wheat,china,Production,140070.0,1000 Metric Tons
 01-12-2026,2026,2025,1,8,wheat,china,Imports,6000.0,1000 Metric Tons
 01-12-2026,2026,2025,1,8,wheat,china,Trade Year Imports,6000.0,1000 Metric Tons
-01-12-2026,2026,2025,1,8,wheat,china,Trade Year Imports from United States,0.0,1000 Metric Tons
+01-12-2026,2026,2025,1,8,wheat,china,Trade Year Imports From United States,0.0,1000 Metric Tons
 01-12-2026,2026,2025,1,8,wheat,china,Total Supply,273847.0,1000 Metric Tons
 01-12-2026,2026,2025,1,8,wheat,china,Exports,1000.0,1000 Metric Tons
 01-12-2026,2026,2025,1,8,wheat,china,Trade Year Exports,1000.0,1000 Metric Tons
 01-12-2026,2026,2025,1,8,wheat,china,Feed Domestic Consumption,31000.0,1000 Metric Tons
 01-12-2026,2026,2025,1,8,wheat,china,Domestic Consumption,148000.0,1000 Metric Tons
-01-12-2026,2026,2025,1,8,wheat,japan,Trade Year Imports from United States,0.0,1000 Metric Tons
+01-12-2026,2026,2025,1,8,wheat,japan,Trade Year Imports From United States,0.0,1000 Metric Tons
 01-12-2026,2026,2025,1,8,wheat,china,Ending Stocks,124847.0,1000 Metric Tons
 01-12-2026,2026,2025,1,8,wheat,china,Total Distribution,273847.0,1000 Metric Tons
 01-12-2026,2026,2025,1,8,wheat,china,Yield,5.9402,Yield (Metric Tons per Hectare)
@@ -51,7 +51,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2025,1,4,soybean meal,china,Total Distribution,86529.0,1000 Metric Tons
 01-12-2026,2026,2025,1,4,soybean meal,china,Soybean Meal Equivalent,83000.0,1000 Metric Tons
 01-12-2026,2026,2025,1,4,soybean meal,japan,Crush,2350.0,1000 Metric Tons
-01-12-2026,2026,2025,1,4,soybean meal,japan,Extraction Rate,0.7511,Percentage
+01-12-2026,2026,2025,1,4,soybean meal,japan,Extraction Rate,0.7511,Percentage (%)
 01-12-2026,2026,2025,1,4,soybean meal,japan,Beginning Stocks,116.0,1000 Metric Tons
 01-12-2026,2026,2025,1,4,soybean meal,japan,Production,1765.0,1000 Metric Tons
 01-12-2026,2026,2025,1,4,soybean meal,japan,Total Supply,3581.0,1000 Metric Tons
@@ -70,7 +70,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2025,1,5,corn,united states,Domestic Consumption,334533.0,1000 Metric Tons
 01-12-2026,2026,2025,1,5,corn,united states,Imports,635.0,1000 Metric Tons
 01-12-2026,2026,2025,1,5,corn,united states,Trade Year Imports,650.0,1000 Metric Tons
-01-12-2026,2026,2025,1,5,corn,united states,Trade Year Imports from United States,0.0,1000 Metric Tons
+01-12-2026,2026,2025,1,5,corn,united states,Trade Year Imports From United States,0.0,1000 Metric Tons
 01-12-2026,2026,2025,1,5,corn,united states,Total Supply,472381.0,1000 Metric Tons
 01-12-2026,2026,2025,1,5,corn,united states,Exports,81284.0,1000 Metric Tons
 01-12-2026,2026,2025,1,5,corn,united states,Trade Year Exports,80000.0,1000 Metric Tons
@@ -81,14 +81,14 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2025,1,5,corn,united states,Total Distribution,472381.0,1000 Metric Tons
 01-12-2026,2026,2025,1,5,corn,united states,Yield,11.7068,Yield (Metric Tons per Hectare)
 01-12-2026,2026,2025,1,4,soybean meal,china,Crush,108000.0,1000 Metric Tons
-01-12-2026,2026,2025,1,4,soybean meal,china,Extraction Rate,0.792,Percentage
+01-12-2026,2026,2025,1,4,soybean meal,china,Extraction Rate,0.792,Percentage (%)
 01-12-2026,2026,2025,1,4,soybean meal,china,Beginning Stocks,943.0,1000 Metric Tons
 01-12-2026,2026,2025,1,4,soybean meal,china,Production,85536.0,1000 Metric Tons
 01-12-2026,2026,2025,1,4,soybean meal,china,Imports,50.0,1000 Metric Tons
 01-12-2026,2026,2025,1,4,soybean meal,china,Total Supply,86529.0,1000 Metric Tons
 01-12-2026,2026,2025,1,8,wheat,china,Beginning Stocks,127777.0,1000 Metric Tons
 01-12-2026,2026,2025,1,4,soybean meal,united states,Soybean Meal Equivalent,38125.0,1000 Metric Tons
-01-12-2026,2026,2025,1,5,corn,world,Trade Year Imports from United States,0.0,1000 Metric Tons
+01-12-2026,2026,2025,1,5,corn,world,Trade Year Imports From United States,0.0,1000 Metric Tons
 01-12-2026,2026,2025,1,4,soybean meal,united states,Total Distribution,56132.0,1000 Metric Tons
 01-12-2026,2026,2025,1,5,corn,china,Yield,6.7002,Yield (Metric Tons per Hectare)
 01-12-2026,2026,2025,1,5,corn,japan,Area Harvested,3.0,1000 Hectares
@@ -96,7 +96,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2025,1,5,corn,japan,Production,16.0,1000 Metric Tons
 01-12-2026,2026,2025,1,5,corn,japan,Imports,15500.0,1000 Metric Tons
 01-12-2026,2026,2025,1,5,corn,japan,Trade Year Imports,15500.0,1000 Metric Tons
-01-12-2026,2026,2025,1,5,corn,japan,Trade Year Imports from United States,0.0,1000 Metric Tons
+01-12-2026,2026,2025,1,5,corn,japan,Trade Year Imports From United States,0.0,1000 Metric Tons
 01-12-2026,2026,2025,1,5,corn,japan,Total Supply,16888.0,1000 Metric Tons
 01-12-2026,2026,2025,1,5,corn,japan,Exports,0.0,1000 Metric Tons
 01-12-2026,2026,2025,1,5,corn,japan,Trade Year Exports,0.0,1000 Metric Tons
@@ -126,7 +126,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2025,1,5,corn,china,Production,301240.0,1000 Metric Tons
 01-12-2026,2026,2025,1,5,corn,china,Imports,8000.0,1000 Metric Tons
 01-12-2026,2026,2025,1,5,corn,china,Trade Year Imports,8000.0,1000 Metric Tons
-01-12-2026,2026,2025,1,5,corn,china,Trade Year Imports from United States,0.0,1000 Metric Tons
+01-12-2026,2026,2025,1,5,corn,china,Trade Year Imports From United States,0.0,1000 Metric Tons
 01-12-2026,2026,2025,1,5,corn,china,Total Supply,501168.0,1000 Metric Tons
 01-12-2026,2026,2025,1,5,corn,china,Exports,20.0,1000 Metric Tons
 01-12-2026,2026,2025,1,5,corn,china,Trade Year Exports,20.0,1000 Metric Tons
@@ -142,7 +142,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2025,1,5,soybeans,european union,Beginning Stocks,1600.0,1000 Metric Tons
 01-12-2026,2026,2025,1,5,soybeans,european union,Area Harvested,1070.0,1000 Hectares
 01-12-2026,2026,2025,1,4,soybean meal,united states,Crush,69944.0,1000 Metric Tons
-01-12-2026,2026,2025,1,4,soybean meal,united states,Extraction Rate,0.788,Percentage
+01-12-2026,2026,2025,1,4,soybean meal,united states,Extraction Rate,0.788,Percentage (%)
 01-12-2026,2026,2025,1,4,soybean meal,united states,Production,55113.0,1000 Metric Tons
 01-12-2026,2026,2025,1,5,soybeans,european union,Food Use Domestic Consumption,220.0,1000 Metric Tons
 01-12-2026,2026,2025,1,4,soybean meal,united states,Imports,658.0,1000 Metric Tons
@@ -180,7 +180,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2025,1,5,corn,european union,Production,56750.0,1000 Metric Tons
 01-12-2026,2026,2025,1,5,corn,european union,Imports,20000.0,1000 Metric Tons
 01-12-2026,2026,2025,1,8,wheat,european union,Trade Year Imports,5500.0,1000 Metric Tons
-01-12-2026,2026,2025,1,8,wheat,european union,Trade Year Imports from United States,0.0,1000 Metric Tons
+01-12-2026,2026,2025,1,8,wheat,european union,Trade Year Imports From United States,0.0,1000 Metric Tons
 01-12-2026,2026,2025,1,8,wheat,european union,Total Supply,161214.0,1000 Metric Tons
 01-12-2026,2026,2025,1,8,wheat,european union,Exports,32500.0,1000 Metric Tons
 01-12-2026,2026,2025,1,8,wheat,european union,Trade Year Exports,32500.0,1000 Metric Tons
@@ -191,7 +191,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2025,1,8,wheat,european union,Total Distribution,161214.0,1000 Metric Tons
 01-12-2026,2026,2025,1,8,wheat,european union,Yield,6.0088,Yield (Metric Tons per Hectare)
 01-12-2026,2026,2025,1,4,soybean meal,european union,Crush,15000.0,1000 Metric Tons
-01-12-2026,2026,2025,1,4,soybean meal,european union,Extraction Rate,0.79,Percentage
+01-12-2026,2026,2025,1,4,soybean meal,european union,Extraction Rate,0.79,Percentage (%)
 01-12-2026,2026,2025,1,4,soybean meal,european union,Beginning Stocks,1758.0,1000 Metric Tons
 01-12-2026,2026,2025,1,4,soybean meal,european union,Production,11850.0,1000 Metric Tons
 01-12-2026,2026,2025,1,4,soybean meal,european union,Imports,18450.0,1000 Metric Tons
@@ -242,7 +242,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2025,1,5,soybeans,united states,Crush,69944.0,1000 Metric Tons
 01-12-2026,2026,2025,1,5,soybeans,united states,Food Use Domestic Consumption,0.0,1000 Metric Tons
 01-12-2026,2026,2025,1,5,soybeans,united states,Feed Waste Domestic Consumption,3048.0,1000 Metric Tons
-01-12-2026,2026,2025,1,8,wheat,mexico,Trade Year Imports from United States,0.0,1000 Metric Tons
+01-12-2026,2026,2025,1,8,wheat,mexico,Trade Year Imports From United States,0.0,1000 Metric Tons
 01-12-2026,2026,2025,1,8,wheat,mexico,Imports,6700.0,1000 Metric Tons
 01-12-2026,2026,2025,1,4,soybean meal,european union,Ending Stocks,1016.0,1000 Metric Tons
 01-12-2026,2026,2025,1,4,soybean oil,european union,Total Supply,4132.0,1000 Metric Tons
@@ -258,7 +258,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2025,1,8,wheat,mexico,Production,1750.0,1000 Metric Tons
 01-12-2026,2026,2025,1,4,soybean oil,european union,Production,2850.0,1000 Metric Tons
 01-12-2026,2026,2025,1,4,soybean oil,european union,Beginning Stocks,632.0,1000 Metric Tons
-01-12-2026,2026,2025,1,4,soybean oil,european union,Extraction Rate,0.19,Percentage
+01-12-2026,2026,2025,1,4,soybean oil,european union,Extraction Rate,0.19,Percentage (%)
 01-12-2026,2026,2025,1,4,soybean oil,european union,Crush,15000.0,1000 Metric Tons
 01-12-2026,2026,2025,1,5,soybeans,united states,Yield,3.5632,Yield (Metric Tons per Hectare)
 01-12-2026,2026,2025,1,5,soybeans,united states,Total Distribution,125373.0,1000 Metric Tons
@@ -270,7 +270,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2025,1,4,soybean oil,united states,Industrial Domestic Consumption,6713.0,1000 Metric Tons
 01-12-2026,2026,2025,1,4,soybean oil,japan,Total Distribution,503.0,1000 Metric Tons
 01-12-2026,2026,2025,1,4,soybean oil,united states,Crush,69944.0,1000 Metric Tons
-01-12-2026,2026,2025,1,4,soybean oil,united states,Extraction Rate,0.1942,Percentage
+01-12-2026,2026,2025,1,4,soybean oil,united states,Extraction Rate,0.1942,Percentage (%)
 01-12-2026,2026,2025,1,4,soybean oil,united states,Beginning Stocks,792.0,1000 Metric Tons
 01-12-2026,2026,2025,1,4,soybean oil,united states,Production,13581.0,1000 Metric Tons
 01-12-2026,2026,2025,1,4,soybean oil,united states,Imports,166.0,1000 Metric Tons
@@ -283,7 +283,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2025,1,4,soybean oil,united states,Ending Stocks,795.0,1000 Metric Tons
 01-12-2026,2026,2025,1,4,soybean oil,united states,Total Distribution,14539.0,1000 Metric Tons
 01-12-2026,2026,2025,1,4,soybean oil,china,Crush,108000.0,1000 Metric Tons
-01-12-2026,2026,2025,1,4,soybean oil,china,Extraction Rate,0.1942,Percentage
+01-12-2026,2026,2025,1,4,soybean oil,china,Extraction Rate,0.1942,Percentage (%)
 01-12-2026,2026,2025,1,4,soybean oil,china,Beginning Stocks,776.0,1000 Metric Tons
 01-12-2026,2026,2025,1,4,soybean oil,china,Production,20974.0,1000 Metric Tons
 01-12-2026,2026,2025,1,4,soybean oil,japan,Ending Stocks,27.0,1000 Metric Tons
@@ -291,7 +291,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2025,1,4,soybean oil,china,Total Supply,22050.0,1000 Metric Tons
 01-12-2026,2026,2025,1,5,corn,european union,Ending Stocks,5864.0,1000 Metric Tons
 01-12-2026,2026,2025,1,5,corn,european union,Trade Year Imports,20000.0,1000 Metric Tons
-01-12-2026,2026,2025,1,5,corn,european union,Trade Year Imports from United States,0.0,1000 Metric Tons
+01-12-2026,2026,2025,1,5,corn,european union,Trade Year Imports From United States,0.0,1000 Metric Tons
 01-12-2026,2026,2025,1,5,corn,european union,Total Supply,82964.0,1000 Metric Tons
 01-12-2026,2026,2025,1,5,corn,european union,Exports,1800.0,1000 Metric Tons
 01-12-2026,2026,2025,1,5,corn,european union,Trade Year Exports,1800.0,1000 Metric Tons
@@ -301,7 +301,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2025,1,5,corn,european union,Total Distribution,82964.0,1000 Metric Tons
 01-12-2026,2026,2025,1,4,soybean oil,japan,Food Use Domestic Consumption,435.0,1000 Metric Tons
 01-12-2026,2026,2025,1,4,soybean oil,japan,Crush,2350.0,1000 Metric Tons
-01-12-2026,2026,2025,1,4,soybean oil,japan,Extraction Rate,0.2047,Percentage
+01-12-2026,2026,2025,1,4,soybean oil,japan,Extraction Rate,0.2047,Percentage (%)
 01-12-2026,2026,2025,1,4,soybean oil,japan,Beginning Stocks,20.0,1000 Metric Tons
 01-12-2026,2026,2025,1,4,soybean oil,japan,Production,481.0,1000 Metric Tons
 01-12-2026,2026,2025,1,4,soybean oil,japan,Imports,2.0,1000 Metric Tons
@@ -315,7 +315,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2025,1,5,corn,mexico,Production,26000.0,1000 Metric Tons
 01-12-2026,2026,2025,1,5,corn,mexico,Imports,25800.0,1000 Metric Tons
 01-12-2026,2026,2025,1,5,corn,mexico,Trade Year Imports,25800.0,1000 Metric Tons
-01-12-2026,2026,2025,1,5,corn,mexico,Trade Year Imports from United States,0.0,1000 Metric Tons
+01-12-2026,2026,2025,1,5,corn,mexico,Trade Year Imports From United States,0.0,1000 Metric Tons
 01-12-2026,2026,2025,1,5,corn,mexico,Total Supply,57691.0,1000 Metric Tons
 01-12-2026,2026,2025,1,5,corn,mexico,Exports,30.0,1000 Metric Tons
 01-12-2026,2026,2025,1,5,corn,mexico,Trade Year Exports,30.0,1000 Metric Tons
@@ -326,7 +326,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2025,1,5,corn,mexico,Total Distribution,57691.0,1000 Metric Tons
 01-12-2026,2026,2025,1,5,corn,mexico,Yield,3.8235,Yield (Metric Tons per Hectare)
 01-12-2026,2026,2025,1,4,soybean oil,mexico,Crush,6800.0,1000 Metric Tons
-01-12-2026,2026,2025,1,4,soybean oil,mexico,Extraction Rate,0.1846,Percentage
+01-12-2026,2026,2025,1,4,soybean oil,mexico,Extraction Rate,0.1846,Percentage (%)
 01-12-2026,2026,2025,1,4,soybean oil,mexico,Beginning Stocks,164.0,1000 Metric Tons
 01-12-2026,2026,2025,1,4,soybean oil,mexico,Production,1255.0,1000 Metric Tons
 01-12-2026,2026,2025,1,4,soybean oil,mexico,Imports,200.0,1000 Metric Tons
@@ -344,7 +344,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2025,1,8,wheat,united states,Production,54010.0,1000 Metric Tons
 01-12-2026,2026,2025,1,8,wheat,united states,Trade Year Imports,3250.0,1000 Metric Tons
 01-12-2026,2026,2025,1,8,wheat,united states,Total Distribution,80538.0,1000 Metric Tons
-01-12-2026,2026,2025,1,8,wheat,united states,Trade Year Imports from United States,0.0,1000 Metric Tons
+01-12-2026,2026,2025,1,8,wheat,united states,Trade Year Imports From United States,0.0,1000 Metric Tons
 01-12-2026,2026,2025,1,8,wheat,united states,Total Supply,80538.0,1000 Metric Tons
 01-12-2026,2026,2025,1,8,wheat,united states,Exports,24494.0,1000 Metric Tons
 01-12-2026,2026,2025,1,8,wheat,united states,Trade Year Exports,24500.0,1000 Metric Tons
@@ -371,7 +371,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2025,1,8,wheat,world,Production,842167.0,1000 Metric Tons
 01-12-2026,2026,2025,1,8,wheat,world,Imports,215536.0,1000 Metric Tons
 01-12-2026,2026,2025,1,8,wheat,world,Trade Year Imports,215720.0,1000 Metric Tons
-01-12-2026,2026,2025,1,8,wheat,world,Trade Year Imports from United States,0.0,1000 Metric Tons
+01-12-2026,2026,2025,1,8,wheat,world,Trade Year Imports From United States,0.0,1000 Metric Tons
 01-12-2026,2026,2025,1,8,wheat,world,Total Supply,1317698.0,1000 Metric Tons
 01-12-2026,2026,2025,1,8,wheat,world,Exports,219757.0,1000 Metric Tons
 01-12-2026,2026,2025,1,8,wheat,world,Trade Year Exports,219713.0,1000 Metric Tons
@@ -384,7 +384,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2025,1,5,soybeans,european union,Yield,2.6028,Yield (Metric Tons per Hectare)
 01-12-2026,2026,2025,1,5,soybeans,european union,Total Distribution,18385.0,1000 Metric Tons
 01-12-2026,2026,2025,1,4,soybean oil,world,Production,71130.0,1000 Metric Tons
-01-12-2026,2026,2025,1,4,soybean oil,world,Extraction Rate,0.1941,Percentage
+01-12-2026,2026,2025,1,4,soybean oil,world,Extraction Rate,0.1941,Percentage (%)
 01-12-2026,2026,2025,1,5,soybeans,european union,Domestic Consumption,16520.0,1000 Metric Tons
 01-12-2026,2026,2025,1,4,soybean oil,world,Crush,366432.0,1000 Metric Tons
 01-12-2026,2026,2025,1,5,soybeans,world,Area Harvested,143776.0,1000 Hectares
@@ -401,7 +401,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2025,1,5,soybeans,world,Total Distribution,735117.0,1000 Metric Tons
 01-12-2026,2026,2025,1,5,soybeans,world,Yield,2.9607,Yield (Metric Tons per Hectare)
 01-12-2026,2026,2025,1,4,soybean meal,world,Crush,366432.0,1000 Metric Tons
-01-12-2026,2026,2025,1,4,soybean meal,world,Extraction Rate,0.7852,Percentage
+01-12-2026,2026,2025,1,4,soybean meal,world,Extraction Rate,0.7852,Percentage (%)
 01-12-2026,2026,2025,1,4,soybean meal,world,Beginning Stocks,18800.0,1000 Metric Tons
 01-12-2026,2026,2025,1,4,soybean meal,world,Production,287714.0,1000 Metric Tons
 01-12-2026,2026,2025,1,4,soybean meal,world,Imports,79135.0,1000 Metric Tons
@@ -437,12 +437,12 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2024,12,3,soybean oil,mexico,Imports,173.0,1000 Metric Tons
 01-12-2026,2025,2024,12,3,soybean oil,mexico,Production,1227.0,1000 Metric Tons
 01-12-2026,2025,2024,12,3,soybean oil,mexico,Beginning Stocks,114.0,1000 Metric Tons
-01-12-2026,2025,2024,12,3,soybean oil,mexico,Extraction Rate,0.1845,Percentage
+01-12-2026,2025,2024,12,3,soybean oil,mexico,Extraction Rate,0.1845,Percentage (%)
 01-12-2026,2025,2024,12,3,soybean oil,mexico,Crush,6650.0,1000 Metric Tons
 01-12-2026,2026,2024,1,5,soybeans,mexico,Yield,2.0593,Yield (Metric Tons per Hectare)
 01-12-2026,2026,2024,1,5,soybeans,mexico,Total Distribution,7327.0,1000 Metric Tons
 01-12-2026,2026,2024,1,5,soybeans,mexico,Ending Stocks,592.0,1000 Metric Tons
-01-12-2026,2026,2024,1,5,corn,mexico,Trade Year Imports from United States,25809.0,1000 Metric Tons
+01-12-2026,2026,2024,1,5,corn,mexico,Trade Year Imports From United States,25809.0,1000 Metric Tons
 01-12-2026,2026,2024,1,5,corn,mexico,Exports,25.0,1000 Metric Tons
 01-12-2026,2026,2024,1,5,soybeans,mexico,Feed Waste Domestic Consumption,85.0,1000 Metric Tons
 01-12-2026,2026,2024,1,5,soybeans,european union,Exports,333.0,1000 Metric Tons
@@ -450,7 +450,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2024,1,4,soybean oil,european union,Imports,757.0,1000 Metric Tons
 01-12-2026,2026,2024,1,4,soybean oil,european union,Production,2926.0,1000 Metric Tons
 01-12-2026,2026,2024,1,4,soybean oil,european union,Beginning Stocks,655.0,1000 Metric Tons
-01-12-2026,2026,2024,1,4,soybean oil,european union,Extraction Rate,0.19,Percentage
+01-12-2026,2026,2024,1,4,soybean oil,european union,Extraction Rate,0.19,Percentage (%)
 01-12-2026,2026,2024,1,4,soybean oil,european union,Crush,15400.0,1000 Metric Tons
 01-12-2026,2026,2024,1,5,soybeans,european union,Area Harvested,1127.0,1000 Hectares
 01-12-2026,2026,2024,1,5,soybeans,european union,Beginning Stocks,1288.0,1000 Metric Tons
@@ -479,7 +479,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2024,1,5,soybeans,mexico,Beginning Stocks,615.0,1000 Metric Tons
 01-12-2026,2026,2024,1,5,soybeans,mexico,Area Harvested,135.0,1000 Hectares
 01-12-2026,2026,2024,1,4,soybean meal,world,Crush,358685.0,1000 Metric Tons
-01-12-2026,2026,2024,1,4,soybean meal,world,Extraction Rate,0.7852,Percentage
+01-12-2026,2026,2024,1,4,soybean meal,world,Extraction Rate,0.7852,Percentage (%)
 01-12-2026,2026,2024,1,4,soybean meal,world,Beginning Stocks,14686.0,1000 Metric Tons
 01-12-2026,2026,2024,1,4,soybean meal,world,Production,281629.0,1000 Metric Tons
 01-12-2026,2026,2024,1,4,soybean meal,world,Imports,78244.0,1000 Metric Tons
@@ -492,7 +492,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2024,1,4,soybean meal,world,Total Distribution,374559.0,1000 Metric Tons
 01-12-2026,2026,2024,1,4,soybean meal,world,Soybean Meal Equivalent,270896.0,1000 Metric Tons
 01-12-2026,2026,2024,1,4,soybean oil,world,Crush,358685.0,1000 Metric Tons
-01-12-2026,2026,2024,1,4,soybean oil,world,Extraction Rate,0.1951,Percentage
+01-12-2026,2026,2024,1,4,soybean oil,world,Extraction Rate,0.1951,Percentage (%)
 01-12-2026,2026,2024,1,4,soybean oil,world,Beginning Stocks,5756.0,1000 Metric Tons
 01-12-2026,2026,2024,1,4,soybean oil,world,Production,69991.0,1000 Metric Tons
 01-12-2026,2026,2024,1,4,soybean oil,world,Imports,13959.0,1000 Metric Tons
@@ -511,7 +511,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2024,1,8,wheat,japan,Trade Year Exports,335.0,1000 Metric Tons
 01-12-2026,2026,2024,1,8,wheat,japan,Exports,335.0,1000 Metric Tons
 01-12-2026,2026,2024,1,8,wheat,japan,Total Supply,7747.0,1000 Metric Tons
-01-12-2026,2026,2024,1,8,wheat,japan,Trade Year Imports from United States,2148.0,1000 Metric Tons
+01-12-2026,2026,2024,1,8,wheat,japan,Trade Year Imports From United States,2148.0,1000 Metric Tons
 01-12-2026,2026,2024,1,8,wheat,japan,Trade Year Imports,5573.0,1000 Metric Tons
 01-12-2026,2026,2024,1,8,wheat,japan,Production,1080.0,1000 Metric Tons
 01-12-2026,2025,2024,11,3,soybeans,japan,Total Distribution,3681.0,1000 Metric Tons
@@ -552,7 +552,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2024,12,7,wheat,european union,Trade Year Exports,27869.0,1000 Metric Tons
 01-12-2026,2025,2024,12,7,wheat,european union,Exports,27869.0,1000 Metric Tons
 01-12-2026,2025,2024,12,7,wheat,european union,Total Supply,148583.0,1000 Metric Tons
-01-12-2026,2025,2024,12,7,wheat,european union,Trade Year Imports from United States,631.0,1000 Metric Tons
+01-12-2026,2025,2024,12,7,wheat,european union,Trade Year Imports From United States,631.0,1000 Metric Tons
 01-12-2026,2026,2024,1,5,corn,world,Area Harvested,203562.0,1000 Hectares
 01-12-2026,2026,2024,1,5,corn,world,Production,1230863.0,1000 Metric Tons
 01-12-2026,2025,2024,12,7,wheat,european union,Imports,10646.0,1000 Metric Tons
@@ -562,7 +562,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2024,11,6,wheat,mexico,Production,2648.0,1000 Metric Tons
 01-12-2026,2025,2024,11,6,wheat,mexico,Imports,5567.0,1000 Metric Tons
 01-12-2026,2025,2024,11,6,wheat,mexico,Trade Year Imports,5567.0,1000 Metric Tons
-01-12-2026,2025,2024,11,6,wheat,mexico,Trade Year Imports from United States,4175.0,1000 Metric Tons
+01-12-2026,2025,2024,11,6,wheat,mexico,Trade Year Imports From United States,4175.0,1000 Metric Tons
 01-12-2026,2025,2024,11,6,wheat,mexico,Total Supply,8990.0,1000 Metric Tons
 01-12-2026,2025,2024,11,6,wheat,mexico,Exports,135.0,1000 Metric Tons
 01-12-2026,2025,2024,11,6,wheat,mexico,Trade Year Exports,135.0,1000 Metric Tons
@@ -578,7 +578,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2024,1,5,corn,world,Trade Year Exports,190993.0,1000 Metric Tons
 01-12-2026,2026,2024,1,5,corn,world,Exports,186640.0,1000 Metric Tons
 01-12-2026,2026,2024,1,5,corn,world,Total Supply,1732385.0,1000 Metric Tons
-01-12-2026,2026,2024,1,5,corn,world,Trade Year Imports from United States,75124.0,1000 Metric Tons
+01-12-2026,2026,2024,1,5,corn,world,Trade Year Imports From United States,75124.0,1000 Metric Tons
 01-12-2026,2026,2024,1,5,corn,world,Trade Year Imports,187005.0,1000 Metric Tons
 01-12-2026,2025,2024,12,7,wheat,european union,Trade Year Imports,10646.0,1000 Metric Tons
 01-12-2026,2025,2024,12,7,wheat,european union,Production,122147.0,1000 Metric Tons
@@ -598,7 +598,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2024,11,2,soybean oil,japan,Ending Stocks,20.0,1000 Metric Tons
 01-12-2026,2025,2024,11,2,soybean oil,japan,Total Distribution,519.0,1000 Metric Tons
 01-12-2026,2025,2024,11,2,soybean oil,china,Crush,103500.0,1000 Metric Tons
-01-12-2026,2025,2024,11,2,soybean oil,china,Extraction Rate,0.1942,Percentage
+01-12-2026,2025,2024,11,2,soybean oil,china,Extraction Rate,0.1942,Percentage (%)
 01-12-2026,2025,2024,11,2,soybean oil,china,Beginning Stocks,1198.0,1000 Metric Tons
 01-12-2026,2025,2024,11,2,soybean oil,china,Production,20100.0,1000 Metric Tons
 01-12-2026,2025,2024,11,2,soybean oil,china,Imports,296.0,1000 Metric Tons
@@ -624,7 +624,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2024,1,4,soybean meal,european union,Imports,20609.0,1000 Metric Tons
 01-12-2026,2026,2024,1,4,soybean meal,european union,Production,12166.0,1000 Metric Tons
 01-12-2026,2026,2024,1,4,soybean meal,european union,Beginning Stocks,877.0,1000 Metric Tons
-01-12-2026,2026,2024,1,4,soybean meal,european union,Extraction Rate,0.79,Percentage
+01-12-2026,2026,2024,1,4,soybean meal,european union,Extraction Rate,0.79,Percentage (%)
 01-12-2026,2026,2024,1,4,soybean meal,european union,Crush,15400.0,1000 Metric Tons
 01-12-2026,2026,2024,1,5,soybeans,united states,Production,119047.0,1000 Metric Tons
 01-12-2026,2026,2024,1,5,soybeans,world,Yield,2.9151,Yield (Metric Tons per Hectare)
@@ -639,7 +639,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2024,11,3,soybeans,china,Beginning Stocks,43310.0,1000 Metric Tons
 01-12-2026,2025,2024,11,2,soybean meal,china,Crush,103500.0,1000 Metric Tons
 01-12-2026,2026,2024,1,5,corn,united states,Total Supply,423610.0,1000 Metric Tons
-01-12-2026,2026,2024,1,5,corn,united states,Trade Year Imports from United States,0.0,1000 Metric Tons
+01-12-2026,2026,2024,1,5,corn,united states,Trade Year Imports From United States,0.0,1000 Metric Tons
 01-12-2026,2026,2024,1,5,corn,united states,Trade Year Imports,520.0,1000 Metric Tons
 01-12-2026,2026,2024,1,5,corn,united states,Imports,550.0,1000 Metric Tons
 01-12-2026,2026,2024,1,5,corn,united states,Production,378268.0,1000 Metric Tons
@@ -649,7 +649,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2024,1,8,wheat,world,Total Distribution,1271156.0,1000 Metric Tons
 01-12-2026,2026,2024,1,8,wheat,world,Ending Stocks,259995.0,1000 Metric Tons
 01-12-2026,2026,2024,1,8,wheat,world,Domestic Consumption,800669.0,1000 Metric Tons
-01-12-2026,2025,2024,11,2,soybean meal,china,Extraction Rate,0.792,Percentage
+01-12-2026,2025,2024,11,2,soybean meal,china,Extraction Rate,0.792,Percentage (%)
 01-12-2026,2026,2024,1,5,corn,united states,Trade Year Exports,75246.0,1000 Metric Tons
 01-12-2026,2025,2024,11,2,soybean meal,china,Beginning Stocks,794.0,1000 Metric Tons
 01-12-2026,2025,2024,11,2,soybean meal,china,Production,81972.0,1000 Metric Tons
@@ -684,7 +684,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2024,12,3,soybean meal,mexico,Imports,2345.0,1000 Metric Tons
 01-12-2026,2025,2024,12,3,soybean meal,mexico,Production,5255.0,1000 Metric Tons
 01-12-2026,2025,2024,12,3,soybean meal,mexico,Beginning Stocks,157.0,1000 Metric Tons
-01-12-2026,2025,2024,12,3,soybean meal,mexico,Extraction Rate,0.7902,Percentage
+01-12-2026,2025,2024,12,3,soybean meal,mexico,Extraction Rate,0.7902,Percentage (%)
 01-12-2026,2025,2024,12,3,soybean meal,mexico,Crush,6650.0,1000 Metric Tons
 01-12-2026,2026,2024,1,5,corn,united states,Yield,11.2553,Yield (Metric Tons per Hectare)
 01-12-2026,2026,2024,1,5,corn,united states,Total Distribution,423610.0,1000 Metric Tons
@@ -693,8 +693,8 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2024,1,4,soybean oil,united states,Domestic Consumption,12197.0,1000 Metric Tons
 01-12-2026,2026,2024,1,4,soybean oil,united states,Feed Waste Domestic Consumption,0.0,1000 Metric Tons
 01-12-2026,2026,2024,1,4,soybean oil,united states,Food Use Domestic Consumption,6864.0,1000 Metric Tons
-01-12-2026,2025,2024,11,2,soybean meal,japan,Extraction Rate,0.7501,Percentage
-01-12-2026,2026,2024,1,5,corn,european union,Trade Year Imports from United States,3824.0,1000 Metric Tons
+01-12-2026,2025,2024,11,2,soybean meal,japan,Extraction Rate,0.7501,Percentage (%)
+01-12-2026,2026,2024,1,5,corn,european union,Trade Year Imports From United States,3824.0,1000 Metric Tons
 01-12-2026,2026,2024,1,5,corn,european union,Total Supply,85075.0,1000 Metric Tons
 01-12-2026,2026,2024,1,5,corn,european union,Exports,2761.0,1000 Metric Tons
 01-12-2026,2026,2024,1,5,corn,european union,Trade Year Exports,2761.0,1000 Metric Tons
@@ -727,7 +727,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2024,1,4,soybean oil,united states,Imports,164.0,1000 Metric Tons
 01-12-2026,2026,2024,1,4,soybean oil,united states,Production,13253.0,1000 Metric Tons
 01-12-2026,2026,2024,1,4,soybean oil,united states,Beginning Stocks,703.0,1000 Metric Tons
-01-12-2026,2026,2024,1,4,soybean oil,united states,Extraction Rate,0.1992,Percentage
+01-12-2026,2026,2024,1,4,soybean oil,united states,Extraction Rate,0.1992,Percentage (%)
 01-12-2026,2026,2024,1,4,soybean oil,united states,Crush,66546.0,1000 Metric Tons
 01-12-2026,2025,2024,11,2,soybean meal,china,Ending Stocks,943.0,1000 Metric Tons
 01-12-2026,2025,2024,11,2,soybean meal,china,Total Distribution,82811.0,1000 Metric Tons
@@ -737,7 +737,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2024,1,8,wheat,world,Trade Year Exports,204434.0,1000 Metric Tons
 01-12-2026,2026,2024,1,8,wheat,world,Exports,210492.0,1000 Metric Tons
 01-12-2026,2026,2024,1,8,wheat,world,Total Supply,1271156.0,1000 Metric Tons
-01-12-2026,2026,2024,1,8,wheat,world,Trade Year Imports from United States,22552.0,1000 Metric Tons
+01-12-2026,2026,2024,1,8,wheat,world,Trade Year Imports From United States,22552.0,1000 Metric Tons
 01-12-2026,2026,2024,1,8,wheat,world,Trade Year Imports,200365.0,1000 Metric Tons
 01-12-2026,2026,2024,1,8,wheat,world,Imports,200303.0,1000 Metric Tons
 01-12-2026,2026,2024,1,8,wheat,world,Production,800807.0,1000 Metric Tons
@@ -747,7 +747,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2024,1,5,corn,european union,Area Harvested,8680.0,1000 Hectares
 01-12-2026,2026,2024,1,4,soybean meal,united states,Industrial Domestic Consumption,0.0,1000 Metric Tons
 01-12-2026,2025,2024,12,3,soybean meal,mexico,Domestic Consumption,7450.0,1000 Metric Tons
-01-12-2026,2026,2024,1,8,wheat,united states,Trade Year Imports from United States,0.0,1000 Metric Tons
+01-12-2026,2026,2024,1,8,wheat,united states,Trade Year Imports From United States,0.0,1000 Metric Tons
 01-12-2026,2025,2024,8,3,wheat,china,Total Supply,278793.0,1000 Metric Tons
 01-12-2026,2026,2024,1,5,corn,china,Feed Domestic Consumption,234000.0,1000 Metric Tons
 01-12-2026,2025,2024,8,3,wheat,china,Yield,5.9397,Yield (Metric Tons per Hectare)
@@ -758,14 +758,14 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2024,8,3,wheat,china,Feed Domestic Consumption,33000.0,1000 Metric Tons
 01-12-2026,2025,2024,8,3,wheat,china,Trade Year Exports,1016.0,1000 Metric Tons
 01-12-2026,2025,2024,8,3,wheat,china,Exports,1016.0,1000 Metric Tons
-01-12-2026,2025,2024,8,3,wheat,china,Trade Year Imports from United States,160.0,1000 Metric Tons
+01-12-2026,2025,2024,8,3,wheat,china,Trade Year Imports From United States,160.0,1000 Metric Tons
 01-12-2026,2025,2024,11,2,soybean oil,japan,Production,497.0,1000 Metric Tons
 01-12-2026,2026,2024,1,5,corn,japan,Area Harvested,3.0,1000 Hectares
 01-12-2026,2026,2024,1,5,corn,japan,Beginning Stocks,1299.0,1000 Metric Tons
 01-12-2026,2026,2024,1,5,corn,china,Trade Year Exports,4.0,1000 Metric Tons
 01-12-2026,2026,2024,1,5,corn,china,Exports,4.0,1000 Metric Tons
 01-12-2026,2026,2024,1,5,corn,china,Total Supply,507932.0,1000 Metric Tons
-01-12-2026,2026,2024,1,5,corn,china,Trade Year Imports from United States,27.0,1000 Metric Tons
+01-12-2026,2026,2024,1,5,corn,china,Trade Year Imports From United States,27.0,1000 Metric Tons
 01-12-2026,2026,2024,1,5,corn,china,Trade Year Imports,1823.0,1000 Metric Tons
 01-12-2026,2026,2024,1,4,soybean oil,world,Food Use Domestic Consumption,52645.0,1000 Metric Tons
 01-12-2026,2025,2024,11,2,soybean oil,japan,Beginning Stocks,21.0,1000 Metric Tons
@@ -793,7 +793,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2024,11,2,soybean oil,japan,Food Use Domestic Consumption,464.0,1000 Metric Tons
 01-12-2026,2025,2024,11,2,soybean oil,japan,Industrial Domestic Consumption,35.0,1000 Metric Tons
 01-12-2026,2025,2024,11,2,soybean oil,japan,Exports,0.0,1000 Metric Tons
-01-12-2026,2025,2024,11,2,soybean oil,japan,Extraction Rate,0.2,Percentage
+01-12-2026,2025,2024,11,2,soybean oil,japan,Extraction Rate,0.2,Percentage (%)
 01-12-2026,2026,2024,1,5,corn,japan,Production,17.0,1000 Metric Tons
 01-12-2026,2026,2024,1,5,corn,japan,Imports,15456.0,1000 Metric Tons
 01-12-2026,2025,2024,11,3,soybeans,china,Total Distribution,171960.0,1000 Metric Tons
@@ -810,7 +810,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2024,11,3,soybeans,china,Exports,72.0,1000 Metric Tons
 01-12-2026,2025,2024,11,3,soybeans,china,Total Supply,171960.0,1000 Metric Tons
 01-12-2026,2026,2024,1,4,soybean meal,united states,Crush,66546.0,1000 Metric Tons
-01-12-2026,2026,2024,1,4,soybean meal,united states,Extraction Rate,0.7967,Percentage
+01-12-2026,2026,2024,1,4,soybean meal,united states,Extraction Rate,0.7967,Percentage (%)
 01-12-2026,2026,2024,1,4,soybean meal,united states,Beginning Stocks,411.0,1000 Metric Tons
 01-12-2026,2026,2024,1,4,soybean meal,united states,Production,53019.0,1000 Metric Tons
 01-12-2026,2026,2024,1,4,soybean meal,united states,Imports,732.0,1000 Metric Tons
@@ -825,7 +825,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2024,1,5,corn,china,Beginning Stocks,211192.0,1000 Metric Tons
 01-12-2026,2026,2024,1,5,corn,china,Area Harvested,44741.0,1000 Hectares
 01-12-2026,2025,2024,8,3,wheat,china,Beginning Stocks,134523.0,1000 Metric Tons
-01-12-2026,2026,2024,1,5,corn,japan,Trade Year Imports from United States,14124.0,1000 Metric Tons
+01-12-2026,2026,2024,1,5,corn,japan,Trade Year Imports From United States,14124.0,1000 Metric Tons
 01-12-2026,2026,2024,1,5,corn,japan,Total Supply,16772.0,1000 Metric Tons
 01-12-2026,2026,2024,1,5,corn,japan,Exports,0.0,1000 Metric Tons
 01-12-2026,2025,2024,11,3,soybeans,china,Yield,1.9985,Yield (Metric Tons per Hectare)
@@ -841,7 +841,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2024,1,5,corn,japan,Domestic Consumption,15400.0,1000 Metric Tons
 01-12-2026,2025,2023,9,1,corn,china,Food Seed and Industrial Consumption,82000.0,1000 Metric Tons
 01-12-2026,2025,2023,9,1,corn,china,Exports,3.0,1000 Metric Tons
-01-12-2026,2025,2023,9,1,corn,china,Trade Year Imports from United States,2301.0,1000 Metric Tons
+01-12-2026,2025,2023,9,1,corn,china,Trade Year Imports From United States,2301.0,1000 Metric Tons
 01-12-2026,2025,2023,9,1,corn,china,Trade Year Imports,23330.0,1000 Metric Tons
 01-12-2026,2025,2023,9,1,corn,china,Imports,23330.0,1000 Metric Tons
 01-12-2026,2025,2023,9,1,corn,china,Production,288842.0,1000 Metric Tons
@@ -857,7 +857,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2023,1,4,soybean meal,european union,Feed Waste Domestic Consumption,26900.0,1000 Metric Tons
 01-12-2026,2026,2023,1,4,soybean meal,european union,Food Use Domestic Consumption,32.0,1000 Metric Tons
 01-12-2026,2025,2023,5,9,soybeans,japan,Crush,2364.0,1000 Metric Tons
-01-12-2026,2026,2023,1,4,soybean meal,european union,Extraction Rate,0.79,Percentage
+01-12-2026,2026,2023,1,4,soybean meal,european union,Extraction Rate,0.79,Percentage (%)
 01-12-2026,2026,2023,1,4,soybean meal,european union,Beginning Stocks,473.0,1000 Metric Tons
 01-12-2026,2026,2023,1,4,soybean meal,european union,Imports,16542.0,1000 Metric Tons
 01-12-2026,2025,2023,4,8,soybeans,china,Total Distribution,165180.0,1000 Metric Tons
@@ -922,7 +922,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2023,7,11,soybeans,mexico,Total Distribution,7218.0,1000 Metric Tons
 01-12-2026,2025,2023,7,11,soybeans,mexico,Yield,2.1868,Yield (Metric Tons per Hectare)
 01-12-2026,2026,2023,1,4,soybean oil,european union,Crush,14500.0,1000 Metric Tons
-01-12-2026,2026,2023,1,4,soybean oil,european union,Extraction Rate,0.19,Percentage
+01-12-2026,2026,2023,1,4,soybean oil,european union,Extraction Rate,0.19,Percentage (%)
 01-12-2026,2026,2023,1,4,soybean oil,european union,Beginning Stocks,601.0,1000 Metric Tons
 01-12-2026,2025,2023,7,11,soybeans,united states,Domestic Consumption,65445.0,1000 Metric Tons
 01-12-2026,2025,2023,7,11,soybeans,united states,Total Distribution,121030.0,1000 Metric Tons
@@ -952,7 +952,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2023,8,3,wheat,mexico,Production,3476.0,1000 Metric Tons
 01-12-2026,2025,2023,8,3,wheat,mexico,Imports,5292.0,1000 Metric Tons
 01-12-2026,2025,2023,8,3,wheat,mexico,Trade Year Imports,5292.0,1000 Metric Tons
-01-12-2026,2025,2023,8,3,wheat,mexico,Trade Year Imports from United States,3493.0,1000 Metric Tons
+01-12-2026,2025,2023,8,3,wheat,mexico,Trade Year Imports From United States,3493.0,1000 Metric Tons
 01-12-2026,2025,2023,8,3,wheat,mexico,Exports,850.0,1000 Metric Tons
 01-12-2026,2025,2023,8,3,wheat,mexico,Yield,6.2071,Yield (Metric Tons per Hectare)
 01-12-2026,2025,2023,8,3,wheat,mexico,Trade Year Exports,850.0,1000 Metric Tons
@@ -973,7 +973,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2023,1,4,soybean oil,world,Imports,10544.0,1000 Metric Tons
 01-12-2026,2026,2023,1,4,soybean oil,world,Production,63993.0,1000 Metric Tons
 01-12-2026,2026,2023,1,4,soybean oil,world,Beginning Stocks,5904.0,1000 Metric Tons
-01-12-2026,2026,2023,1,4,soybean oil,world,Extraction Rate,0.1932,Percentage
+01-12-2026,2026,2023,1,4,soybean oil,world,Extraction Rate,0.1932,Percentage (%)
 01-12-2026,2026,2023,1,4,soybean oil,world,Crush,331164.0,1000 Metric Tons
 01-12-2026,2026,2023,1,4,soybean meal,world,Soybean Meal Equivalent,252701.0,1000 Metric Tons
 01-12-2026,2026,2023,1,4,soybean meal,world,Total Distribution,343722.0,1000 Metric Tons
@@ -1004,7 +1004,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2023,7,10,soybean meal,united states,Total Supply,50043.0,1000 Metric Tons
 01-12-2026,2026,2023,1,4,soybean meal,world,Crush,331164.0,1000 Metric Tons
 01-12-2026,2025,2023,7,10,soybean meal,united states,Crush,62196.0,1000 Metric Tons
-01-12-2026,2025,2023,7,10,soybean meal,united states,Extraction Rate,0.7892,Percentage
+01-12-2026,2025,2023,7,10,soybean meal,united states,Extraction Rate,0.7892,Percentage (%)
 01-12-2026,2025,2023,7,10,soybean meal,united states,Beginning Stocks,336.0,1000 Metric Tons
 01-12-2026,2025,2023,7,10,soybean meal,united states,Production,49084.0,1000 Metric Tons
 01-12-2026,2025,2023,7,10,soybean meal,united states,Imports,623.0,1000 Metric Tons
@@ -1016,11 +1016,11 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2023,7,10,soybean meal,united states,Domestic Consumption,35068.0,1000 Metric Tons
 01-12-2026,2025,2023,7,10,soybean meal,united states,Ending Stocks,411.0,1000 Metric Tons
 01-12-2026,2025,2023,7,10,soybean meal,united states,Total Distribution,50043.0,1000 Metric Tons
-01-12-2026,2026,2023,1,4,soybean meal,world,Extraction Rate,0.785,Percentage
+01-12-2026,2026,2023,1,4,soybean meal,world,Extraction Rate,0.785,Percentage (%)
 01-12-2026,2026,2023,1,4,soybean meal,world,Production,259979.0,1000 Metric Tons
 01-12-2026,2025,2023,7,11,corn,japan,Trade Year Imports,15290.0,1000 Metric Tons
 01-12-2026,2025,2023,7,11,corn,japan,Domestic Consumption,15300.0,1000 Metric Tons
-01-12-2026,2025,2023,7,11,corn,japan,Trade Year Imports from United States,11245.0,1000 Metric Tons
+01-12-2026,2025,2023,7,11,corn,japan,Trade Year Imports From United States,11245.0,1000 Metric Tons
 01-12-2026,2025,2023,7,11,corn,japan,Total Supply,16599.0,1000 Metric Tons
 01-12-2026,2025,2023,7,11,corn,japan,Exports,0.0,1000 Metric Tons
 01-12-2026,2025,2023,7,11,corn,japan,Trade Year Exports,0.0,1000 Metric Tons
@@ -1045,9 +1045,9 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2023,12,4,corn,european union,Total Distribution,89783.0,1000 Metric Tons
 01-12-2026,2025,2023,12,4,corn,european union,Ending Stocks,7294.0,1000 Metric Tons
 01-12-2026,2025,2023,7,11,corn,mexico,Imports,24222.0,1000 Metric Tons
-01-12-2026,2026,2023,1,5,corn,united states,Trade Year Imports from United States,0.0,1000 Metric Tons
+01-12-2026,2026,2023,1,5,corn,united states,Trade Year Imports From United States,0.0,1000 Metric Tons
 01-12-2026,2025,2023,7,11,corn,mexico,Trade Year Imports,24222.0,1000 Metric Tons
-01-12-2026,2025,2023,7,11,corn,mexico,Trade Year Imports from United States,23945.0,1000 Metric Tons
+01-12-2026,2025,2023,7,11,corn,mexico,Trade Year Imports From United States,23945.0,1000 Metric Tons
 01-12-2026,2025,2023,7,11,corn,mexico,Total Supply,52809.0,1000 Metric Tons
 01-12-2026,2025,2023,7,11,corn,mexico,Exports,23.0,1000 Metric Tons
 01-12-2026,2025,2023,7,11,corn,mexico,Trade Year Exports,23.0,1000 Metric Tons
@@ -1063,7 +1063,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2024,2023,12,3,soybean oil,mexico,Imports,100.0,1000 Metric Tons
 01-12-2026,2024,2023,12,3,soybean oil,mexico,Production,1205.0,1000 Metric Tons
 01-12-2026,2024,2023,12,3,soybean oil,mexico,Beginning Stocks,173.0,1000 Metric Tons
-01-12-2026,2024,2023,12,3,soybean oil,mexico,Extraction Rate,0.1845,Percentage
+01-12-2026,2024,2023,12,3,soybean oil,mexico,Extraction Rate,0.1845,Percentage (%)
 01-12-2026,2024,2023,12,3,soybean oil,mexico,Crush,6530.0,1000 Metric Tons
 01-12-2026,2026,2023,1,5,corn,united states,Area Harvested,35008.0,1000 Hectares
 01-12-2026,2026,2023,1,5,corn,united states,Beginning Stocks,34551.0,1000 Metric Tons
@@ -1080,7 +1080,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2023,12,4,corn,european union,Production,61947.0,1000 Metric Tons
 01-12-2026,2025,2023,12,4,corn,european union,Imports,19812.0,1000 Metric Tons
 01-12-2026,2025,2023,12,4,corn,european union,Trade Year Imports,19812.0,1000 Metric Tons
-01-12-2026,2025,2023,12,4,corn,european union,Trade Year Imports from United States,1333.0,1000 Metric Tons
+01-12-2026,2025,2023,12,4,corn,european union,Trade Year Imports From United States,1333.0,1000 Metric Tons
 01-12-2026,2025,2023,11,6,wheat,united states,Yield,3.2719,Yield (Metric Tons per Hectare)
 01-12-2026,2025,2023,11,6,wheat,united states,Total Distribution,68346.0,1000 Metric Tons
 01-12-2026,2025,2023,11,6,wheat,united states,Ending Stocks,18954.0,1000 Metric Tons
@@ -1090,7 +1090,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2023,11,6,wheat,united states,Exports,19212.0,1000 Metric Tons
 01-12-2026,2025,2023,7,11,corn,mexico,Total Distribution,52809.0,1000 Metric Tons
 01-12-2026,2025,2023,11,6,wheat,united states,Total Supply,68346.0,1000 Metric Tons
-01-12-2026,2025,2023,11,6,wheat,united states,Trade Year Imports from United States,0.0,1000 Metric Tons
+01-12-2026,2025,2023,11,6,wheat,united states,Trade Year Imports From United States,0.0,1000 Metric Tons
 01-12-2026,2025,2023,11,6,wheat,united states,Trade Year Imports,3769.0,1000 Metric Tons
 01-12-2026,2025,2023,11,6,wheat,united states,Imports,3750.0,1000 Metric Tons
 01-12-2026,2025,2023,11,6,wheat,united states,Production,49095.0,1000 Metric Tons
@@ -1108,7 +1108,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2023,5,8,soybean meal,japan,Domestic Consumption,3521.0,1000 Metric Tons
 01-12-2026,2025,2023,4,7,soybean meal,mexico,Feed Waste Domestic Consumption,7030.0,1000 Metric Tons
 01-12-2026,2025,2023,8,3,wheat,japan,Trade Year Imports,5346.0,1000 Metric Tons
-01-12-2026,2025,2023,8,3,wheat,japan,Trade Year Imports from United States,2029.0,1000 Metric Tons
+01-12-2026,2025,2023,8,3,wheat,japan,Trade Year Imports From United States,2029.0,1000 Metric Tons
 01-12-2026,2025,2023,4,7,soybean meal,mexico,Soybean Meal Equivalent,7030.0,1000 Metric Tons
 01-12-2026,2025,2023,4,7,soybean meal,mexico,Total Distribution,7241.0,1000 Metric Tons
 01-12-2026,2025,2023,4,7,soybean meal,mexico,Ending Stocks,157.0,1000 Metric Tons
@@ -1137,8 +1137,8 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2023,8,3,wheat,china,Trade Year Exports,1012.0,1000 Metric Tons
 01-12-2026,2025,2023,8,3,wheat,china,Exports,1012.0,1000 Metric Tons
 01-12-2026,2025,2023,8,3,wheat,china,Total Supply,289035.0,1000 Metric Tons
-01-12-2026,2025,2023,8,3,wheat,china,Trade Year Imports from United States,2179.0,1000 Metric Tons
-01-12-2026,2025,2023,4,7,soybean meal,mexico,Extraction Rate,0.79,Percentage
+01-12-2026,2025,2023,8,3,wheat,china,Trade Year Imports From United States,2179.0,1000 Metric Tons
+01-12-2026,2025,2023,4,7,soybean meal,mexico,Extraction Rate,0.79,Percentage (%)
 01-12-2026,2025,2023,8,3,wheat,japan,Total Supply,7633.0,1000 Metric Tons
 01-12-2026,2025,2023,8,3,wheat,japan,Exports,309.0,1000 Metric Tons
 01-12-2026,2026,2023,1,5,corn,world,Exports,192654.0,1000 Metric Tons
@@ -1158,7 +1158,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2023,1,5,corn,world,Trade Year Exports,197457.0,1000 Metric Tons
 01-12-2026,2026,2023,1,5,corn,world,Total Supply,1733693.0,1000 Metric Tons
 01-12-2026,2025,2023,8,3,wheat,japan,Trade Year Exports,309.0,1000 Metric Tons
-01-12-2026,2026,2023,1,5,corn,world,Trade Year Imports from United States,58434.0,1000 Metric Tons
+01-12-2026,2026,2023,1,5,corn,world,Trade Year Imports From United States,58434.0,1000 Metric Tons
 01-12-2026,2026,2023,1,5,corn,world,Trade Year Imports,199167.0,1000 Metric Tons
 01-12-2026,2026,2023,1,5,corn,world,Imports,197623.0,1000 Metric Tons
 01-12-2026,2026,2023,1,5,corn,world,Production,1230707.0,1000 Metric Tons
@@ -1182,7 +1182,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2023,1,8,wheat,world,Trade Year Exports,225221.0,1000 Metric Tons
 01-12-2026,2026,2023,1,8,wheat,world,Exports,222239.0,1000 Metric Tons
 01-12-2026,2026,2023,1,8,wheat,world,Total Supply,1290241.0,1000 Metric Tons
-01-12-2026,2026,2023,1,8,wheat,world,Trade Year Imports from United States,19544.0,1000 Metric Tons
+01-12-2026,2026,2023,1,8,wheat,world,Trade Year Imports From United States,19544.0,1000 Metric Tons
 01-12-2026,2026,2023,1,8,wheat,world,Trade Year Imports,221526.0,1000 Metric Tons
 01-12-2026,2026,2023,1,8,wheat,world,Imports,223240.0,1000 Metric Tons
 01-12-2026,2026,2023,1,8,wheat,world,Production,792350.0,1000 Metric Tons
@@ -1190,7 +1190,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2023,4,7,soybean oil,china,Feed Waste Domestic Consumption,0.0,1000 Metric Tons
 01-12-2026,2025,2023,4,7,soybean meal,china,Ending Stocks,794.0,1000 Metric Tons
 01-12-2026,2025,2023,4,7,soybean oil,china,Crush,99000.0,1000 Metric Tons
-01-12-2026,2025,2023,4,7,soybean oil,china,Extraction Rate,0.19,Percentage
+01-12-2026,2025,2023,4,7,soybean oil,china,Extraction Rate,0.19,Percentage (%)
 01-12-2026,2025,2023,4,7,soybean oil,china,Beginning Stocks,1011.0,1000 Metric Tons
 01-12-2026,2025,2023,5,8,soybean meal,japan,Crush,2364.0,1000 Metric Tons
 01-12-2026,2025,2023,4,7,soybean oil,china,Production,18810.0,1000 Metric Tons
@@ -1198,7 +1198,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2023,4,7,soybean oil,china,Total Supply,20202.0,1000 Metric Tons
 01-12-2026,2025,2023,4,7,soybean oil,china,Exports,104.0,1000 Metric Tons
 01-12-2026,2025,2023,4,7,soybean oil,china,Industrial Domestic Consumption,0.0,1000 Metric Tons
-01-12-2026,2025,2023,5,8,soybean oil,japan,Extraction Rate,0.195,Percentage
+01-12-2026,2025,2023,5,8,soybean oil,japan,Extraction Rate,0.195,Percentage (%)
 01-12-2026,2025,2023,5,8,soybean oil,japan,Beginning Stocks,28.0,1000 Metric Tons
 01-12-2026,2025,2023,5,8,soybean oil,japan,Production,461.0,1000 Metric Tons
 01-12-2026,2025,2023,5,8,soybean oil,japan,Imports,2.0,1000 Metric Tons
@@ -1220,7 +1220,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2023,9,12,soybean oil,united states,Imports,282.0,1000 Metric Tons
 01-12-2026,2025,2023,9,12,soybean oil,united states,Production,12289.0,1000 Metric Tons
 01-12-2026,2025,2023,9,12,soybean oil,united states,Beginning Stocks,729.0,1000 Metric Tons
-01-12-2026,2025,2023,9,12,soybean oil,united states,Extraction Rate,0.1976,Percentage
+01-12-2026,2025,2023,9,12,soybean oil,united states,Extraction Rate,0.1976,Percentage (%)
 01-12-2026,2025,2023,9,12,soybean oil,united states,Crush,62196.0,1000 Metric Tons
 01-12-2026,2025,2023,5,8,soybean oil,japan,Total Supply,491.0,1000 Metric Tons
 01-12-2026,2025,2023,4,7,soybean oil,china,Food Use Domestic Consumption,18900.0,1000 Metric Tons
@@ -1228,9 +1228,9 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2023,4,7,soybean oil,china,Domestic Consumption,18900.0,1000 Metric Tons
 01-12-2026,2025,2023,5,8,soybean meal,japan,Exports,1.0,1000 Metric Tons
 01-12-2026,2025,2023,5,8,soybean meal,japan,Food Use Domestic Consumption,190.0,1000 Metric Tons
-01-12-2026,2025,2023,4,7,soybean meal,china,Extraction Rate,0.792,Percentage
+01-12-2026,2025,2023,4,7,soybean meal,china,Extraction Rate,0.792,Percentage (%)
 01-12-2026,2025,2023,12,7,wheat,european union,Imports,12659.0,1000 Metric Tons
-01-12-2026,2025,2023,12,7,wheat,european union,Trade Year Imports from United States,337.0,1000 Metric Tons
+01-12-2026,2025,2023,12,7,wheat,european union,Trade Year Imports From United States,337.0,1000 Metric Tons
 01-12-2026,2025,2023,12,7,wheat,european union,Total Supply,164302.0,1000 Metric Tons
 01-12-2026,2025,2023,4,7,soybean meal,china,Crush,99000.0,1000 Metric Tons
 01-12-2026,2025,2023,12,7,wheat,european union,Exports,38012.0,1000 Metric Tons
@@ -1257,7 +1257,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2023,4,7,soybean meal,china,Beginning Stocks,937.0,1000 Metric Tons
 01-12-2026,2025,2023,5,8,soybean meal,japan,Imports,1822.0,1000 Metric Tons
 01-12-2026,2025,2023,5,8,soybean meal,japan,Production,1769.0,1000 Metric Tons
-01-12-2026,2025,2023,5,8,soybean meal,japan,Extraction Rate,0.7483,Percentage
+01-12-2026,2025,2023,5,8,soybean meal,japan,Extraction Rate,0.7483,Percentage (%)
 01-12-2026,2025,2023,5,8,soybean meal,japan,Beginning Stocks,43.0,1000 Metric Tons
 01-12-2026,2025,2022,2,6,corn,european union,Domestic Consumption,74700.0,1000 Metric Tons
 01-12-2026,2025,2022,2,6,corn,european union,Food Seed and Industrial Consumption,19200.0,1000 Metric Tons
@@ -1269,14 +1269,14 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2022,5,8,soybean meal,japan,Total Supply,3594.0,1000 Metric Tons
 01-12-2026,2025,2022,2,6,corn,european union,Trade Year Exports,4198.0,1000 Metric Tons
 01-12-2026,2025,2022,2,6,corn,european union,Feed Domestic Consumption,55500.0,1000 Metric Tons
-01-12-2026,2025,2022,2,6,corn,european union,Trade Year Imports from United States,174.0,1000 Metric Tons
+01-12-2026,2025,2022,2,6,corn,european union,Trade Year Imports From United States,174.0,1000 Metric Tons
 01-12-2026,2025,2022,2,6,corn,european union,Ending Stocks,8024.0,1000 Metric Tons
 01-12-2026,2025,2022,5,8,soybean meal,japan,Ending Stocks,43.0,1000 Metric Tons
 01-12-2026,2025,2022,5,8,soybean meal,japan,Imports,1540.0,1000 Metric Tons
 01-12-2026,2025,2022,5,8,soybean meal,japan,Production,1962.0,1000 Metric Tons
 01-12-2026,2025,2022,2,6,corn,european union,Total Supply,86922.0,1000 Metric Tons
 01-12-2026,2025,2022,5,8,soybean meal,japan,Beginning Stocks,92.0,1000 Metric Tons
-01-12-2026,2025,2022,5,8,soybean meal,japan,Extraction Rate,0.7546,Percentage
+01-12-2026,2025,2022,5,8,soybean meal,japan,Extraction Rate,0.7546,Percentage (%)
 01-12-2026,2025,2022,5,8,soybean meal,japan,Crush,2600.0,1000 Metric Tons
 01-12-2026,2025,2022,2,6,corn,european union,Yield,5.9185,Yield (Metric Tons per Hectare)
 01-12-2026,2025,2022,2,6,corn,european union,Total Distribution,86922.0,1000 Metric Tons
@@ -1285,7 +1285,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2022,5,8,soybean meal,japan,Total Distribution,3594.0,1000 Metric Tons
 01-12-2026,2025,2022,5,8,soybean oil,japan,Exports,1.0,1000 Metric Tons
 01-12-2026,2025,2022,5,8,soybean oil,japan,Crush,2600.0,1000 Metric Tons
-01-12-2026,2025,2022,5,8,soybean oil,japan,Extraction Rate,0.1965,Percentage
+01-12-2026,2025,2022,5,8,soybean oil,japan,Extraction Rate,0.1965,Percentage (%)
 01-12-2026,2025,2022,5,8,soybean oil,japan,Beginning Stocks,18.0,1000 Metric Tons
 01-12-2026,2025,2022,5,8,soybean oil,japan,Production,511.0,1000 Metric Tons
 01-12-2026,2025,2022,5,8,soybean oil,japan,Imports,7.0,1000 Metric Tons
@@ -1310,7 +1310,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2022,1,4,soybean meal,world,Food Use Domestic Consumption,796.0,1000 Metric Tons
 01-12-2026,2026,2022,1,4,soybean meal,world,Industrial Domestic Consumption,1362.0,1000 Metric Tons
 01-12-2026,2024,2022,9,12,soybean oil,united states,Crush,60199.0,1000 Metric Tons
-01-12-2026,2024,2022,9,12,soybean oil,united states,Extraction Rate,0.1976,Percentage
+01-12-2026,2024,2022,9,12,soybean oil,united states,Extraction Rate,0.1976,Percentage (%)
 01-12-2026,2024,2022,9,12,soybean oil,united states,Beginning Stocks,903.0,1000 Metric Tons
 01-12-2026,2024,2022,9,12,soybean oil,united states,Production,11897.0,1000 Metric Tons
 01-12-2026,2024,2022,9,12,soybean oil,united states,Imports,170.0,1000 Metric Tons
@@ -1322,7 +1322,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2022,7,11,corn,united states,Trade Year Exports,42774.0,1000 Metric Tons
 01-12-2026,2025,2022,7,11,corn,united states,Exports,42214.0,1000 Metric Tons
 01-12-2026,2025,2022,7,11,corn,united states,Total Supply,382696.0,1000 Metric Tons
-01-12-2026,2025,2022,7,11,corn,united states,Trade Year Imports from United States,0.0,1000 Metric Tons
+01-12-2026,2025,2022,7,11,corn,united states,Trade Year Imports From United States,0.0,1000 Metric Tons
 01-12-2026,2025,2022,7,11,corn,united states,Trade Year Imports,1021.0,1000 Metric Tons
 01-12-2026,2025,2022,7,11,corn,united states,Imports,982.0,1000 Metric Tons
 01-12-2026,2025,2022,7,11,corn,united states,Production,346739.0,1000 Metric Tons
@@ -1366,7 +1366,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2022,4,7,soybean meal,china,Imports,40.0,1000 Metric Tons
 01-12-2026,2025,2022,4,7,soybean meal,china,Production,76032.0,1000 Metric Tons
 01-12-2026,2025,2022,4,7,soybean meal,china,Beginning Stocks,710.0,1000 Metric Tons
-01-12-2026,2025,2022,4,7,soybean meal,china,Extraction Rate,0.792,Percentage
+01-12-2026,2025,2022,4,7,soybean meal,china,Extraction Rate,0.792,Percentage (%)
 01-12-2026,2025,2022,4,7,soybean meal,china,Crush,96000.0,1000 Metric Tons
 01-12-2026,2024,2022,1,5,corn,japan,Yield,4.5,Yield (Metric Tons per Hectare)
 01-12-2026,2025,2022,3,10,wheat,mexico,Total Distribution,9357.0,1000 Metric Tons
@@ -1377,7 +1377,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2022,3,10,wheat,mexico,Trade Year Exports,800.0,1000 Metric Tons
 01-12-2026,2025,2022,3,10,wheat,mexico,Exports,800.0,1000 Metric Tons
 01-12-2026,2025,2022,3,10,wheat,mexico,Total Supply,9357.0,1000 Metric Tons
-01-12-2026,2025,2022,3,10,wheat,mexico,Trade Year Imports from United States,3621.0,1000 Metric Tons
+01-12-2026,2025,2022,3,10,wheat,mexico,Trade Year Imports From United States,3621.0,1000 Metric Tons
 01-12-2026,2024,2022,9,12,soybean oil,united states,Industrial Domestic Consumption,5675.0,1000 Metric Tons
 01-12-2026,2025,2022,3,10,wheat,mexico,Imports,5232.0,1000 Metric Tons
 01-12-2026,2025,2022,7,11,corn,united states,Yield,10.8863,Yield (Metric Tons per Hectare)
@@ -1426,10 +1426,10 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2022,9,1,corn,china,Trade Year Exports,8.0,1000 Metric Tons
 01-12-2026,2025,2022,9,1,corn,china,Exports,8.0,1000 Metric Tons
 01-12-2026,2025,2022,9,1,corn,china,Total Supply,505031.0,1000 Metric Tons
-01-12-2026,2025,2022,9,1,corn,china,Trade Year Imports from United States,7490.0,1000 Metric Tons
+01-12-2026,2025,2022,9,1,corn,china,Trade Year Imports From United States,7490.0,1000 Metric Tons
 01-12-2026,2026,2022,1,4,soybean meal,world,Production,248180.0,1000 Metric Tons
 01-12-2026,2026,2022,1,4,soybean meal,world,Beginning Stocks,16683.0,1000 Metric Tons
-01-12-2026,2026,2022,1,4,soybean meal,world,Extraction Rate,0.7864,Percentage
+01-12-2026,2026,2022,1,4,soybean meal,world,Extraction Rate,0.7864,Percentage (%)
 01-12-2026,2023,2022,12,3,soybean oil,mexico,Total Distribution,1515.0,1000 Metric Tons
 01-12-2026,2023,2022,12,3,soybean oil,mexico,Imports,97.0,1000 Metric Tons
 01-12-2026,2023,2022,12,3,soybean oil,mexico,Total Supply,1515.0,1000 Metric Tons
@@ -1444,13 +1444,13 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2022,1,5,corn,world,Trade Year Exports,180657.0,1000 Metric Tons
 01-12-2026,2026,2022,1,5,corn,world,Exports,180389.0,1000 Metric Tons
 01-12-2026,2026,2022,1,5,corn,world,Total Supply,1653253.0,1000 Metric Tons
-01-12-2026,2026,2022,1,5,corn,world,Trade Year Imports from United States,42659.0,1000 Metric Tons
+01-12-2026,2026,2022,1,5,corn,world,Trade Year Imports From United States,42659.0,1000 Metric Tons
 01-12-2026,2026,2022,1,5,corn,world,Trade Year Imports,173253.0,1000 Metric Tons
 01-12-2026,2026,2022,1,5,corn,world,Imports,173416.0,1000 Metric Tons
 01-12-2026,2026,2022,1,5,corn,world,Production,1165718.0,1000 Metric Tons
 01-12-2026,2026,2022,1,5,corn,world,Beginning Stocks,314119.0,1000 Metric Tons
 01-12-2026,2023,2022,12,3,soybean oil,mexico,Production,1227.0,1000 Metric Tons
-01-12-2026,2023,2022,12,3,soybean oil,mexico,Extraction Rate,0.1845,Percentage
+01-12-2026,2023,2022,12,3,soybean oil,mexico,Extraction Rate,0.1845,Percentage (%)
 01-12-2026,2026,2022,1,4,soybean meal,world,Crush,315591.0,1000 Metric Tons
 01-12-2026,2026,2022,1,5,soybeans,world,Total Supply,640399.0,1000 Metric Tons
 01-12-2026,2026,2022,1,5,soybeans,world,Yield,2.7545,Yield (Metric Tons per Hectare)
@@ -1472,13 +1472,13 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2022,1,5,corn,world,Domestic Consumption,1167501.0,1000 Metric Tons
 01-12-2026,2026,2022,1,5,corn,world,Food Seed and Industrial Consumption,436223.0,1000 Metric Tons
 01-12-2026,2025,2022,7,11,corn,mexico,Total Supply,50527.0,1000 Metric Tons
-01-12-2026,2025,2022,7,11,corn,mexico,Trade Year Imports from United States,16454.0,1000 Metric Tons
+01-12-2026,2025,2022,7,11,corn,mexico,Trade Year Imports From United States,16454.0,1000 Metric Tons
 01-12-2026,2025,2022,7,11,corn,mexico,Trade Year Imports,19325.0,1000 Metric Tons
 01-12-2026,2025,2022,4,7,soybean oil,china,Exports,111.0,1000 Metric Tons
 01-12-2026,2025,2022,7,11,soybeans,united states,Crush,60199.0,1000 Metric Tons
 01-12-2026,2025,2022,7,11,soybeans,united states,Exports,53864.0,1000 Metric Tons
 01-12-2026,2025,2022,4,7,soybean oil,china,Crush,96000.0,1000 Metric Tons
-01-12-2026,2025,2022,4,7,soybean oil,china,Extraction Rate,0.19,Percentage
+01-12-2026,2025,2022,4,7,soybean oil,china,Extraction Rate,0.19,Percentage (%)
 01-12-2026,2025,2022,4,7,soybean oil,china,Beginning Stocks,387.0,1000 Metric Tons
 01-12-2026,2025,2022,4,7,soybean oil,china,Production,18240.0,1000 Metric Tons
 01-12-2026,2025,2022,4,7,soybean oil,china,Imports,395.0,1000 Metric Tons
@@ -1511,12 +1511,12 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2022,1,4,soybean oil,european union,Imports,641.0,1000 Metric Tons
 01-12-2026,2026,2022,1,4,soybean oil,european union,Production,2717.0,1000 Metric Tons
 01-12-2026,2026,2022,1,5,corn,world,Area Harvested,202739.0,1000 Hectares
-01-12-2026,2026,2022,1,4,soybean oil,european union,Extraction Rate,0.19,Percentage
+01-12-2026,2026,2022,1,4,soybean oil,european union,Extraction Rate,0.19,Percentage (%)
 01-12-2026,2026,2022,1,4,soybean oil,european union,Crush,14300.0,1000 Metric Tons
 01-12-2026,2025,2022,7,11,soybeans,united states,Yield,3.3327,Yield (Metric Tons per Hectare)
 01-12-2026,2025,2022,7,11,soybeans,united states,Total Distribution,124356.0,1000 Metric Tons
 01-12-2026,2026,2022,1,8,wheat,united states,Imports,3309.0,1000 Metric Tons
-01-12-2026,2026,2022,1,8,wheat,united states,Trade Year Imports from United States,0.0,1000 Metric Tons
+01-12-2026,2026,2022,1,8,wheat,united states,Trade Year Imports From United States,0.0,1000 Metric Tons
 01-12-2026,2025,2022,7,11,corn,mexico,Imports,19325.0,1000 Metric Tons
 01-12-2026,2025,2022,4,8,soybeans,china,Feed Waste Domestic Consumption,5500.0,1000 Metric Tons
 01-12-2026,2024,2022,1,5,corn,japan,Imports,14927.0,1000 Metric Tons
@@ -1528,7 +1528,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2022,4,8,soybeans,china,Ending Stocks,32340.0,1000 Metric Tons
 01-12-2026,2025,2022,4,8,soybeans,china,Domestic Consumption,117500.0,1000 Metric Tons
 01-12-2026,2025,2022,4,8,soybeans,china,Food Use Domestic Consumption,16000.0,1000 Metric Tons
-01-12-2026,2024,2022,1,5,corn,japan,Trade Year Imports from United States,6869.0,1000 Metric Tons
+01-12-2026,2024,2022,1,5,corn,japan,Trade Year Imports From United States,6869.0,1000 Metric Tons
 01-12-2026,2025,2022,4,8,soybeans,china,Crush,96000.0,1000 Metric Tons
 01-12-2026,2025,2022,4,8,soybeans,china,Exports,90.0,1000 Metric Tons
 01-12-2026,2025,2022,4,8,soybeans,china,Total Supply,149930.0,1000 Metric Tons
@@ -1562,7 +1562,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2022,4,8,soybeans,china,Imports,104500.0,1000 Metric Tons
 01-12-2026,2026,2022,1,4,soybean oil,world,Domestic Consumption,59478.0,1000 Metric Tons
 01-12-2026,2025,2022,4,7,soybean meal,european union,Exports,737.0,1000 Metric Tons
-01-12-2026,2025,2022,4,11,wheat,china,Trade Year Imports from United States,1480.0,1000 Metric Tons
+01-12-2026,2025,2022,4,11,wheat,china,Trade Year Imports From United States,1480.0,1000 Metric Tons
 01-12-2026,2025,2022,4,11,wheat,china,Domestic Consumption,148000.0,1000 Metric Tons
 01-12-2026,2025,2022,4,11,wheat,china,Food Seed and Industrial Consumption,115000.0,1000 Metric Tons
 01-12-2026,2025,2022,4,11,wheat,china,Feed Domestic Consumption,33000.0,1000 Metric Tons
@@ -1595,7 +1595,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2024,2022,9,4,wheat,japan,Trade Year Exports,293.0,1000 Metric Tons
 01-12-2026,2024,2022,9,4,wheat,japan,Exports,293.0,1000 Metric Tons
 01-12-2026,2024,2022,9,4,wheat,japan,Total Supply,7685.0,1000 Metric Tons
-01-12-2026,2024,2022,9,4,wheat,japan,Trade Year Imports from United States,2070.0,1000 Metric Tons
+01-12-2026,2024,2022,9,4,wheat,japan,Trade Year Imports From United States,2070.0,1000 Metric Tons
 01-12-2026,2024,2022,9,4,wheat,japan,Imports,5452.0,1000 Metric Tons
 01-12-2026,2024,2022,9,4,wheat,japan,Production,1057.0,1000 Metric Tons
 01-12-2026,2024,2022,9,4,wheat,japan,Beginning Stocks,1176.0,1000 Metric Tons
@@ -1610,7 +1610,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2022,1,8,wheat,world,Beginning Stocks,275273.0,1000 Metric Tons
 01-12-2026,2026,2022,1,8,wheat,world,Production,790475.0,1000 Metric Tons
 01-12-2026,2026,2022,1,8,wheat,world,Imports,212798.0,1000 Metric Tons
-01-12-2026,2026,2022,1,8,wheat,world,Trade Year Imports from United States,20113.0,1000 Metric Tons
+01-12-2026,2026,2022,1,8,wheat,world,Trade Year Imports From United States,20113.0,1000 Metric Tons
 01-12-2026,2025,2022,12,7,wheat,european union,Trade Year Imports,12228.0,1000 Metric Tons
 01-12-2026,2026,2022,1,8,wheat,world,Total Supply,1278546.0,1000 Metric Tons
 01-12-2026,2026,2022,1,8,wheat,world,Exports,221952.0,1000 Metric Tons
@@ -1620,7 +1620,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2022,1,8,wheat,world,Domestic Consumption,781943.0,1000 Metric Tons
 01-12-2026,2026,2022,1,8,wheat,world,Ending Stocks,274651.0,1000 Metric Tons
 01-12-2026,2025,2022,12,7,wheat,european union,Imports,12228.0,1000 Metric Tons
-01-12-2026,2025,2022,12,7,wheat,european union,Trade Year Imports from United States,381.0,1000 Metric Tons
+01-12-2026,2025,2022,12,7,wheat,european union,Trade Year Imports From United States,381.0,1000 Metric Tons
 01-12-2026,2025,2022,4,7,soybean meal,european union,Food Use Domestic Consumption,32.0,1000 Metric Tons
 01-12-2026,2025,2022,4,7,soybean meal,european union,Crush,14300.0,1000 Metric Tons
 01-12-2026,2025,2022,4,7,soybean meal,european union,Industrial Domestic Consumption,10.0,1000 Metric Tons
@@ -1629,7 +1629,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2022,4,7,soybean meal,european union,Imports,15997.0,1000 Metric Tons
 01-12-2026,2025,2022,4,7,soybean meal,european union,Production,11297.0,1000 Metric Tons
 01-12-2026,2025,2022,4,7,soybean meal,european union,Beginning Stocks,658.0,1000 Metric Tons
-01-12-2026,2025,2022,4,7,soybean meal,european union,Extraction Rate,0.79,Percentage
+01-12-2026,2025,2022,4,7,soybean meal,european union,Extraction Rate,0.79,Percentage (%)
 01-12-2026,2025,2022,12,7,wheat,european union,Yield,5.5041,Yield (Metric Tons per Hectare)
 01-12-2026,2025,2022,12,7,wheat,european union,Total Supply,160351.0,1000 Metric Tons
 01-12-2026,2025,2022,12,7,wheat,european union,Total Distribution,160351.0,1000 Metric Tons
@@ -1641,7 +1641,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2022,12,7,wheat,european union,Exports,35083.0,1000 Metric Tons
 01-12-2026,2024,2022,7,10,soybean meal,united states,Exports,13196.0,1000 Metric Tons
 01-12-2026,2024,2022,9,4,wheat,japan,Trade Year Imports,5452.0,1000 Metric Tons
-01-12-2026,2026,2022,1,4,soybean oil,world,Extraction Rate,0.1923,Percentage
+01-12-2026,2026,2022,1,4,soybean oil,world,Extraction Rate,0.1923,Percentage (%)
 01-12-2026,2025,2022,4,7,soybean meal,mexico,Feed Waste Domestic Consumption,6880.0,1000 Metric Tons
 01-12-2026,2025,2022,4,8,soybeans,european union,Total Supply,17309.0,1000 Metric Tons
 01-12-2026,2025,2022,4,8,soybeans,european union,Exports,230.0,1000 Metric Tons
@@ -1664,7 +1664,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2022,4,7,soybean meal,mexico,Imports,1670.0,1000 Metric Tons
 01-12-2026,2025,2022,4,7,soybean meal,mexico,Production,5255.0,1000 Metric Tons
 01-12-2026,2025,2022,4,7,soybean meal,mexico,Beginning Stocks,153.0,1000 Metric Tons
-01-12-2026,2025,2022,4,7,soybean meal,mexico,Extraction Rate,0.7902,Percentage
+01-12-2026,2025,2022,4,7,soybean meal,mexico,Extraction Rate,0.7902,Percentage (%)
 01-12-2026,2025,2022,4,7,soybean meal,mexico,Crush,6650.0,1000 Metric Tons
 01-12-2026,2024,2022,7,10,soybean meal,united states,Feed Waste Domestic Consumption,34946.0,1000 Metric Tons
 01-12-2026,2026,2022,1,4,soybean oil,world,Total Supply,77124.0,1000 Metric Tons
@@ -1678,13 +1678,13 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2022,4,8,soybeans,european union,Area Harvested,1116.0,1000 Hectares
 01-12-2026,2025,2022,4,8,soybeans,european union,Beginning Stocks,1572.0,1000 Metric Tons
 01-12-2026,2024,2022,7,10,soybean meal,united states,Beginning Stocks,282.0,1000 Metric Tons
-01-12-2026,2024,2022,7,10,soybean meal,united states,Extraction Rate,0.7911,Percentage
+01-12-2026,2024,2022,7,10,soybean meal,united states,Extraction Rate,0.7911,Percentage (%)
 01-12-2026,2025,2021,4,7,soybean meal,mexico,Industrial Domestic Consumption,0.0,1000 Metric Tons
 01-12-2026,2025,2021,4,11,wheat,china,Ending Stocks,136759.0,1000 Metric Tons
 01-12-2026,2025,2021,4,11,wheat,china,Total Distribution,285634.0,1000 Metric Tons
 01-12-2026,2025,2021,4,11,wheat,china,Yield,5.8107,Yield (Metric Tons per Hectare)
 01-12-2026,2023,2021,11,2,soybean meal,japan,Crush,2640.0,1000 Metric Tons
-01-12-2026,2023,2021,11,2,soybean meal,japan,Extraction Rate,0.7371,Percentage
+01-12-2026,2023,2021,11,2,soybean meal,japan,Extraction Rate,0.7371,Percentage (%)
 01-12-2026,2025,2021,4,11,wheat,china,Trade Year Imports,9568.0,1000 Metric Tons
 01-12-2026,2025,2021,4,7,soybean meal,mexico,Food Use Domestic Consumption,50.0,1000 Metric Tons
 01-12-2026,2025,2021,4,11,wheat,china,Food Seed and Industrial Consumption,113000.0,1000 Metric Tons
@@ -1698,13 +1698,13 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2021,4,11,wheat,china,Domestic Consumption,148000.0,1000 Metric Tons
 01-12-2026,2025,2021,4,11,wheat,china,Trade Year Exports,875.0,1000 Metric Tons
 01-12-2026,2025,2021,4,11,wheat,china,Feed Domestic Consumption,35000.0,1000 Metric Tons
-01-12-2026,2025,2021,4,11,wheat,china,Trade Year Imports from United States,1075.0,1000 Metric Tons
+01-12-2026,2025,2021,4,11,wheat,china,Trade Year Imports From United States,1075.0,1000 Metric Tons
 01-12-2026,2025,2021,4,11,wheat,china,Total Supply,285634.0,1000 Metric Tons
 01-12-2026,2025,2021,4,7,soybean meal,mexico,Total Supply,7045.0,1000 Metric Tons
 01-12-2026,2025,2021,4,7,soybean meal,mexico,Imports,1827.0,1000 Metric Tons
 01-12-2026,2025,2021,4,7,soybean meal,mexico,Production,5020.0,1000 Metric Tons
 01-12-2026,2025,2021,4,7,soybean meal,mexico,Beginning Stocks,198.0,1000 Metric Tons
-01-12-2026,2025,2021,4,7,soybean meal,mexico,Extraction Rate,0.7906,Percentage
+01-12-2026,2025,2021,4,7,soybean meal,mexico,Extraction Rate,0.7906,Percentage (%)
 01-12-2026,2025,2021,4,7,soybean meal,mexico,Crush,6350.0,1000 Metric Tons
 01-12-2026,2025,2021,4,11,wheat,china,Imports,9568.0,1000 Metric Tons
 01-12-2026,2025,2021,4,11,wheat,china,Production,136946.0,1000 Metric Tons
@@ -1722,7 +1722,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2021,3,10,wheat,mexico,Imports,5326.0,1000 Metric Tons
 01-12-2026,2025,2021,3,10,wheat,mexico,Trade Year Imports,5326.0,1000 Metric Tons
 01-12-2026,2023,2021,11,2,soybean meal,japan,Total Supply,3703.0,1000 Metric Tons
-01-12-2026,2025,2021,3,10,wheat,mexico,Trade Year Imports from United States,4305.0,1000 Metric Tons
+01-12-2026,2025,2021,3,10,wheat,mexico,Trade Year Imports From United States,4305.0,1000 Metric Tons
 01-12-2026,2025,2021,3,10,wheat,mexico,Total Supply,8863.0,1000 Metric Tons
 01-12-2026,2025,2021,3,10,wheat,mexico,Exports,924.0,1000 Metric Tons
 01-12-2026,2025,2021,3,10,wheat,mexico,Trade Year Exports,924.0,1000 Metric Tons
@@ -1737,7 +1737,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2023,2021,8,3,wheat,japan,Trade Year Exports,302.0,1000 Metric Tons
 01-12-2026,2023,2021,8,3,wheat,japan,Exports,302.0,1000 Metric Tons
 01-12-2026,2023,2021,8,3,wheat,japan,Total Supply,7778.0,1000 Metric Tons
-01-12-2026,2023,2021,8,3,wheat,japan,Trade Year Imports from United States,2311.0,1000 Metric Tons
+01-12-2026,2023,2021,8,3,wheat,japan,Trade Year Imports From United States,2311.0,1000 Metric Tons
 01-12-2026,2023,2021,8,3,wheat,japan,Trade Year Imports,5605.0,1000 Metric Tons
 01-12-2026,2023,2021,8,3,wheat,japan,Imports,5605.0,1000 Metric Tons
 01-12-2026,2023,2021,8,3,wheat,japan,Production,1130.0,1000 Metric Tons
@@ -1750,7 +1750,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2023,2021,8,3,wheat,japan,Total Distribution,7778.0,1000 Metric Tons
 01-12-2026,2026,2021,1,8,wheat,united states,Feed Domestic Consumption,2402.0,1000 Metric Tons
 01-12-2026,2026,2021,1,8,wheat,united states,Food Seed and Industrial Consumption,28009.0,1000 Metric Tons
-01-12-2026,2026,2021,1,8,wheat,world,Trade Year Imports from United States,21252.0,1000 Metric Tons
+01-12-2026,2026,2021,1,8,wheat,world,Trade Year Imports From United States,21252.0,1000 Metric Tons
 01-12-2026,2024,2021,7,11,soybeans,china,Area Harvested,8415.0,1000 Hectares
 01-12-2026,2024,2021,7,11,soybeans,china,Beginning Stocks,28856.0,1000 Metric Tons
 01-12-2026,2024,2021,7,11,soybeans,china,Production,16395.0,1000 Metric Tons
@@ -1758,7 +1758,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2021,1,8,wheat,united states,Production,44804.0,1000 Metric Tons
 01-12-2026,2026,2021,1,8,wheat,united states,Imports,2617.0,1000 Metric Tons
 01-12-2026,2026,2021,1,8,wheat,united states,Trade Year Imports,2731.0,1000 Metric Tons
-01-12-2026,2026,2021,1,8,wheat,united states,Trade Year Imports from United States,0.0,1000 Metric Tons
+01-12-2026,2026,2021,1,8,wheat,united states,Trade Year Imports From United States,0.0,1000 Metric Tons
 01-12-2026,2024,2021,7,11,soybeans,china,Imports,90297.0,1000 Metric Tons
 01-12-2026,2024,2021,7,11,soybeans,china,Total Supply,135548.0,1000 Metric Tons
 01-12-2026,2026,2021,1,8,wheat,united states,Trade Year Exports,21347.0,1000 Metric Tons
@@ -1784,7 +1784,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2021,7,11,corn,united states,Beginning Stocks,31358.0,1000 Metric Tons
 01-12-2026,2025,2021,7,11,corn,united states,Area Harvested,34394.0,1000 Hectares
 01-12-2026,2024,2021,7,10,soybean meal,united states,Crush,59980.0,1000 Metric Tons
-01-12-2026,2024,2021,7,10,soybean meal,united states,Extraction Rate,0.7837,Percentage
+01-12-2026,2024,2021,7,10,soybean meal,united states,Extraction Rate,0.7837,Percentage (%)
 01-12-2026,2024,2021,7,10,soybean meal,united states,Beginning Stocks,309.0,1000 Metric Tons
 01-12-2026,2024,2021,7,10,soybean meal,united states,Production,47005.0,1000 Metric Tons
 01-12-2026,2024,2021,7,10,soybean meal,united states,Imports,594.0,1000 Metric Tons
@@ -1803,7 +1803,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2021,1,8,wheat,world,Domestic Consumption,787612.0,1000 Metric Tons
 01-12-2026,2026,2021,1,8,wheat,world,Food Seed and Industrial Consumption,628216.0,1000 Metric Tons
 01-12-2026,2025,2021,7,11,corn,united states,Trade Year Imports,607.0,1000 Metric Tons
-01-12-2026,2025,2021,7,11,corn,united states,Trade Year Imports from United States,0.0,1000 Metric Tons
+01-12-2026,2025,2021,7,11,corn,united states,Trade Year Imports From United States,0.0,1000 Metric Tons
 01-12-2026,2025,2021,7,11,corn,united states,Total Supply,413442.0,1000 Metric Tons
 01-12-2026,2026,2021,1,5,corn,world,Trade Year Imports,186759.0,1000 Metric Tons
 01-12-2026,2026,2021,1,5,corn,world,Yield,5.8787,Yield (Metric Tons per Hectare)
@@ -1815,7 +1815,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2021,1,5,corn,world,Trade Year Exports,193566.0,1000 Metric Tons
 01-12-2026,2026,2021,1,5,corn,world,Exports,206443.0,1000 Metric Tons
 01-12-2026,2026,2021,1,5,corn,world,Total Supply,1702880.0,1000 Metric Tons
-01-12-2026,2026,2021,1,5,corn,world,Trade Year Imports from United States,62841.0,1000 Metric Tons
+01-12-2026,2026,2021,1,5,corn,world,Trade Year Imports From United States,62841.0,1000 Metric Tons
 01-12-2026,2026,2021,1,5,corn,world,Imports,184472.0,1000 Metric Tons
 01-12-2026,2025,2021,7,11,corn,united states,Exports,62802.0,1000 Metric Tons
 01-12-2026,2026,2021,1,5,corn,world,Production,1221050.0,1000 Metric Tons
@@ -1843,7 +1843,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2021,2,6,corn,european union,Trade Year Exports,6027.0,1000 Metric Tons
 01-12-2026,2025,2021,2,6,corn,european union,Exports,6027.0,1000 Metric Tons
 01-12-2026,2025,2021,2,6,corn,european union,Total Supply,99082.0,1000 Metric Tons
-01-12-2026,2025,2021,2,6,corn,european union,Trade Year Imports from United States,747.0,1000 Metric Tons
+01-12-2026,2025,2021,2,6,corn,european union,Trade Year Imports From United States,747.0,1000 Metric Tons
 01-12-2026,2025,2021,2,6,corn,european union,Trade Year Imports,19521.0,1000 Metric Tons
 01-12-2026,2025,2021,2,6,corn,european union,Imports,19521.0,1000 Metric Tons
 01-12-2026,2025,2021,2,6,corn,european union,Production,71672.0,1000 Metric Tons
@@ -1855,7 +1855,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2023,2021,11,2,soybean meal,japan,Domestic Consumption,3610.0,1000 Metric Tons
 01-12-2026,2023,2021,11,2,soybean meal,japan,Feed Waste Domestic Consumption,3200.0,1000 Metric Tons
 01-12-2026,2023,2021,11,2,soybean meal,japan,Food Use Domestic Consumption,200.0,1000 Metric Tons
-01-12-2026,2025,2021,4,7,soybean meal,china,Extraction Rate,0.792,Percentage
+01-12-2026,2025,2021,4,7,soybean meal,china,Extraction Rate,0.792,Percentage (%)
 01-12-2026,2025,2021,4,7,soybean meal,china,Beginning Stocks,958.0,1000 Metric Tons
 01-12-2026,2025,2021,4,7,soybean meal,china,Production,71280.0,1000 Metric Tons
 01-12-2026,2025,2021,4,8,soybeans,mexico,Yield,1.5652,Yield (Metric Tons per Hectare)
@@ -1908,12 +1908,12 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2021,12,7,wheat,european union,Production,138479.0,1000 Metric Tons
 01-12-2026,2025,2021,12,7,wheat,european union,Imports,4631.0,1000 Metric Tons
 01-12-2026,2023,2021,9,12,soybean oil,united states,Crush,59980.0,1000 Metric Tons
-01-12-2026,2023,2021,9,12,soybean oil,united states,Extraction Rate,0.1978,Percentage
+01-12-2026,2023,2021,9,12,soybean oil,united states,Extraction Rate,0.1978,Percentage (%)
 01-12-2026,2023,2021,9,12,soybean oil,united states,Beginning Stocks,967.0,1000 Metric Tons
 01-12-2026,2023,2021,9,12,soybean oil,united states,Production,11864.0,1000 Metric Tons
 01-12-2026,2023,2021,4,7,soybean oil,japan,Production,519.0,1000 Metric Tons
 01-12-2026,2023,2021,4,7,soybean oil,japan,Beginning Stocks,23.0,1000 Metric Tons
-01-12-2026,2023,2021,4,7,soybean oil,japan,Extraction Rate,0.1966,Percentage
+01-12-2026,2023,2021,4,7,soybean oil,japan,Extraction Rate,0.1966,Percentage (%)
 01-12-2026,2023,2021,4,7,soybean oil,japan,Crush,2640.0,1000 Metric Tons
 01-12-2026,2024,2021,5,9,corn,china,Ending Stocks,209137.0,1000 Metric Tons
 01-12-2026,2024,2021,5,9,corn,china,Total Distribution,500140.0,1000 Metric Tons
@@ -1921,7 +1921,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2021,4,7,soybean oil,china,Total Distribution,17599.0,1000 Metric Tons
 01-12-2026,2024,2021,5,9,corn,china,Yield,6.291,Yield (Metric Tons per Hectare)
 01-12-2026,2025,2021,4,7,soybean meal,european union,Crush,15400.0,1000 Metric Tons
-01-12-2026,2025,2021,4,7,soybean meal,european union,Extraction Rate,0.79,Percentage
+01-12-2026,2025,2021,4,7,soybean meal,european union,Extraction Rate,0.79,Percentage (%)
 01-12-2026,2025,2021,4,7,soybean meal,european union,Beginning Stocks,462.0,1000 Metric Tons
 01-12-2026,2025,2021,4,7,soybean meal,european union,Production,12166.0,1000 Metric Tons
 01-12-2026,2025,2021,4,7,soybean meal,european union,Imports,16536.0,1000 Metric Tons
@@ -1936,7 +1936,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2021,1,4,soybean oil,world,Imports,11646.0,1000 Metric Tons
 01-12-2026,2026,2021,1,4,soybean oil,world,Production,60000.0,1000 Metric Tons
 01-12-2026,2026,2021,1,4,soybean oil,world,Beginning Stocks,5957.0,1000 Metric Tons
-01-12-2026,2026,2021,1,4,soybean oil,world,Extraction Rate,0.1896,Percentage
+01-12-2026,2026,2021,1,4,soybean oil,world,Extraction Rate,0.1896,Percentage (%)
 01-12-2026,2026,2021,1,4,soybean oil,world,Crush,316440.0,1000 Metric Tons
 01-12-2026,2026,2021,1,8,wheat,world,Trade Year Imports,202210.0,1000 Metric Tons
 01-12-2026,2026,2021,1,8,wheat,world,Imports,200540.0,1000 Metric Tons
@@ -1965,7 +1965,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2021,5,9,corn,mexico,Trade Year Exports,250.0,1000 Metric Tons
 01-12-2026,2025,2021,5,9,corn,mexico,Exports,250.0,1000 Metric Tons
 01-12-2026,2025,2021,5,9,corn,mexico,Total Supply,47675.0,1000 Metric Tons
-01-12-2026,2025,2021,5,9,corn,mexico,Trade Year Imports from United States,16803.0,1000 Metric Tons
+01-12-2026,2025,2021,5,9,corn,mexico,Trade Year Imports From United States,16803.0,1000 Metric Tons
 01-12-2026,2025,2021,5,9,corn,mexico,Trade Year Imports,17584.0,1000 Metric Tons
 01-12-2026,2025,2021,5,9,corn,mexico,Imports,17584.0,1000 Metric Tons
 01-12-2026,2025,2021,5,9,corn,mexico,Production,26762.0,1000 Metric Tons
@@ -1988,7 +1988,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2021,4,8,soybeans,european union,Beginning Stocks,1455.0,1000 Metric Tons
 01-12-2026,2025,2021,4,8,soybeans,european union,Area Harvested,1005.0,1000 Hectares
 01-12-2026,2025,2021,12,7,wheat,european union,Trade Year Imports,4631.0,1000 Metric Tons
-01-12-2026,2025,2021,12,7,wheat,european union,Trade Year Imports from United States,285.0,1000 Metric Tons
+01-12-2026,2025,2021,12,7,wheat,european union,Trade Year Imports From United States,285.0,1000 Metric Tons
 01-12-2026,2025,2021,12,7,wheat,european union,Total Supply,153808.0,1000 Metric Tons
 01-12-2026,2025,2021,12,7,wheat,european union,Exports,31927.0,1000 Metric Tons
 01-12-2026,2025,2021,12,7,wheat,european union,Trade Year Exports,31927.0,1000 Metric Tons
@@ -2007,7 +2007,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2021,1,4,soybean oil,european union,Imports,458.0,1000 Metric Tons
 01-12-2026,2026,2021,1,4,soybean oil,european union,Production,2926.0,1000 Metric Tons
 01-12-2026,2026,2021,1,4,soybean oil,european union,Beginning Stocks,443.0,1000 Metric Tons
-01-12-2026,2026,2021,1,4,soybean oil,european union,Extraction Rate,0.19,Percentage
+01-12-2026,2026,2021,1,4,soybean oil,european union,Extraction Rate,0.19,Percentage (%)
 01-12-2026,2026,2021,1,4,soybean oil,european union,Crush,15400.0,1000 Metric Tons
 01-12-2026,2023,2021,4,8,soybeans,japan,Imports,3455.0,1000 Metric Tons
 01-12-2026,2023,2021,4,8,soybeans,japan,Total Supply,3859.0,1000 Metric Tons
@@ -2025,7 +2025,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2023,2021,8,12,corn,japan,Production,6.0,1000 Metric Tons
 01-12-2026,2023,2021,8,12,corn,japan,Imports,15003.0,1000 Metric Tons
 01-12-2026,2023,2021,8,12,corn,japan,Trade Year Imports,15003.0,1000 Metric Tons
-01-12-2026,2023,2021,8,12,corn,japan,Trade Year Imports from United States,10099.0,1000 Metric Tons
+01-12-2026,2023,2021,8,12,corn,japan,Trade Year Imports From United States,10099.0,1000 Metric Tons
 01-12-2026,2023,2021,8,12,corn,japan,Total Supply,16400.0,1000 Metric Tons
 01-12-2026,2026,2021,1,4,soybean oil,european union,Industrial Domestic Consumption,1100.0,1000 Metric Tons
 01-12-2026,2026,2021,1,4,soybean oil,european union,Feed Waste Domestic Consumption,55.0,1000 Metric Tons
@@ -2057,7 +2057,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2021,1,4,soybean oil,european union,Total Distribution,3827.0,1000 Metric Tons
 01-12-2026,2026,2021,1,4,soybean oil,european union,Ending Stocks,563.0,1000 Metric Tons
 01-12-2026,2023,2021,8,12,corn,japan,Exports,0.0,1000 Metric Tons
-01-12-2026,2023,2021,8,11,soybean oil,mexico,Extraction Rate,0.1844,Percentage
+01-12-2026,2023,2021,8,11,soybean oil,mexico,Extraction Rate,0.1844,Percentage (%)
 01-12-2026,2026,2021,1,4,soybean meal,world,Industrial Domestic Consumption,1322.0,1000 Metric Tons
 01-12-2026,2026,2021,1,4,soybean meal,world,Feed Waste Domestic Consumption,243716.0,1000 Metric Tons
 01-12-2026,2025,2021,4,7,soybean oil,china,Total Supply,17599.0,1000 Metric Tons
@@ -2075,10 +2075,10 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2021,1,4,soybean meal,world,Imports,67273.0,1000 Metric Tons
 01-12-2026,2026,2021,1,4,soybean meal,world,Production,247972.0,1000 Metric Tons
 01-12-2026,2026,2021,1,4,soybean meal,world,Beginning Stocks,16111.0,1000 Metric Tons
-01-12-2026,2026,2021,1,4,soybean meal,world,Extraction Rate,0.7836,Percentage
+01-12-2026,2026,2021,1,4,soybean meal,world,Extraction Rate,0.7836,Percentage (%)
 01-12-2026,2024,2021,5,9,corn,china,Trade Year Imports,21884.0,1000 Metric Tons
 01-12-2026,2024,2021,5,9,corn,china,Exports,3.0,1000 Metric Tons
-01-12-2026,2024,2021,5,9,corn,china,Trade Year Imports from United States,15075.0,1000 Metric Tons
+01-12-2026,2024,2021,5,9,corn,china,Trade Year Imports From United States,15075.0,1000 Metric Tons
 01-12-2026,2024,2021,5,9,corn,china,Total Supply,500140.0,1000 Metric Tons
 01-12-2026,2024,2021,5,9,corn,china,Area Harvested,43324.0,1000 Hectares
 01-12-2026,2024,2021,5,9,corn,china,Beginning Stocks,205704.0,1000 Metric Tons
@@ -2086,7 +2086,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2023,2021,8,12,corn,japan,Feed Domestic Consumption,11700.0,1000 Metric Tons
 01-12-2026,2023,2021,8,12,corn,japan,Food Seed and Industrial Consumption,3340.0,1000 Metric Tons
 01-12-2026,2025,2021,4,7,soybean oil,china,Crush,90000.0,1000 Metric Tons
-01-12-2026,2025,2021,4,7,soybean oil,china,Extraction Rate,0.1792,Percentage
+01-12-2026,2025,2021,4,7,soybean oil,china,Extraction Rate,0.1792,Percentage (%)
 01-12-2026,2025,2021,4,7,soybean oil,china,Beginning Stocks,1180.0,1000 Metric Tons
 01-12-2026,2025,2021,4,7,soybean oil,china,Production,16128.0,1000 Metric Tons
 01-12-2026,2024,2021,5,9,corn,china,Production,272552.0,1000 Metric Tons
@@ -2124,7 +2124,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2023,2020,8,12,corn,japan,Production,5.0,1000 Metric Tons
 01-12-2026,2023,2020,8,12,corn,japan,Imports,15471.0,1000 Metric Tons
 01-12-2026,2023,2020,8,12,corn,japan,Trade Year Imports,15471.0,1000 Metric Tons
-01-12-2026,2023,2020,8,12,corn,japan,Trade Year Imports from United States,11053.0,1000 Metric Tons
+01-12-2026,2023,2020,8,12,corn,japan,Trade Year Imports From United States,11053.0,1000 Metric Tons
 01-12-2026,2023,2020,8,12,corn,japan,Total Supply,16841.0,1000 Metric Tons
 01-12-2026,2023,2020,8,12,corn,japan,Exports,0.0,1000 Metric Tons
 01-12-2026,2024,2020,3,7,soybeans,china,Domestic Consumption,114900.0,1000 Metric Tons
@@ -2144,13 +2144,13 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2024,2020,5,9,corn,china,Production,260670.0,1000 Metric Tons
 01-12-2026,2024,2020,5,9,corn,china,Imports,29512.0,1000 Metric Tons
 01-12-2026,2024,2020,5,9,corn,china,Trade Year Imports,29512.0,1000 Metric Tons
-01-12-2026,2024,2020,5,9,corn,china,Trade Year Imports from United States,20869.0,1000 Metric Tons
+01-12-2026,2024,2020,5,9,corn,china,Trade Year Imports From United States,20869.0,1000 Metric Tons
 01-12-2026,2024,2020,5,9,corn,china,Total Supply,490708.0,1000 Metric Tons
 01-12-2026,2024,2020,5,9,corn,china,Exports,4.0,1000 Metric Tons
 01-12-2026,2024,2020,5,9,corn,china,Domestic Consumption,285000.0,1000 Metric Tons
 01-12-2026,2024,2020,5,9,corn,china,Food Seed and Industrial Consumption,82000.0,1000 Metric Tons
 01-12-2026,2023,2020,8,12,corn,japan,Ending Stocks,1391.0,1000 Metric Tons
-01-12-2026,2023,2020,4,7,soybean meal,united states,Extraction Rate,0.7874,Percentage
+01-12-2026,2023,2020,4,7,soybean meal,united states,Extraction Rate,0.7874,Percentage (%)
 01-12-2026,2023,2020,4,8,soybeans,japan,Area Harvested,142.0,1000 Hectares
 01-12-2026,2023,2020,4,7,soybean meal,united states,Food Use Domestic Consumption,0.0,1000 Metric Tons
 01-12-2026,2024,2020,3,7,soybeans,china,Yield,1.9834,Yield (Metric Tons per Hectare)
@@ -2184,7 +2184,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2024,2020,1,5,soybeans,united states,Total Distribution,129945.0,1000 Metric Tons
 01-12-2026,2024,2020,1,5,soybeans,united states,Yield,3.4327,Yield (Metric Tons per Hectare)
 01-12-2026,2025,2020,1,4,soybean oil,european union,Crush,15800.0,1000 Metric Tons
-01-12-2026,2025,2020,1,4,soybean oil,european union,Extraction Rate,0.19,Percentage
+01-12-2026,2025,2020,1,4,soybean oil,european union,Extraction Rate,0.19,Percentage (%)
 01-12-2026,2025,2020,1,4,soybean oil,european union,Beginning Stocks,439.0,1000 Metric Tons
 01-12-2026,2025,2020,1,4,soybean oil,european union,Production,3002.0,1000 Metric Tons
 01-12-2026,2025,2020,1,4,soybean oil,european union,Imports,493.0,1000 Metric Tons
@@ -2204,7 +2204,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2020,3,10,wheat,mexico,Imports,4724.0,1000 Metric Tons
 01-12-2026,2025,2020,3,10,wheat,mexico,Ending Stocks,253.0,1000 Metric Tons
 01-12-2026,2025,2020,3,10,wheat,mexico,Trade Year Imports,4724.0,1000 Metric Tons
-01-12-2026,2025,2020,3,10,wheat,mexico,Trade Year Imports from United States,3861.0,1000 Metric Tons
+01-12-2026,2025,2020,3,10,wheat,mexico,Trade Year Imports From United States,3861.0,1000 Metric Tons
 01-12-2026,2025,2020,3,10,wheat,mexico,Total Supply,8015.0,1000 Metric Tons
 01-12-2026,2025,2020,3,10,wheat,mexico,Exports,612.0,1000 Metric Tons
 01-12-2026,2025,2020,3,10,wheat,mexico,Trade Year Exports,612.0,1000 Metric Tons
@@ -2231,12 +2231,12 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2020,5,9,corn,mexico,Production,27346.0,1000 Metric Tons
 01-12-2026,2025,2020,5,9,corn,mexico,Imports,16498.0,1000 Metric Tons
 01-12-2026,2025,2020,5,9,corn,mexico,Trade Year Imports,16498.0,1000 Metric Tons
-01-12-2026,2025,2020,5,9,corn,mexico,Trade Year Imports from United States,15674.0,1000 Metric Tons
+01-12-2026,2025,2020,5,9,corn,mexico,Trade Year Imports From United States,15674.0,1000 Metric Tons
 01-12-2026,2025,2020,5,9,corn,mexico,Total Supply,48009.0,1000 Metric Tons
 01-12-2026,2024,2020,4,7,soybean meal,european union,Production,12482.0,1000 Metric Tons
-01-12-2026,2024,2020,4,7,soybean meal,european union,Extraction Rate,0.79,Percentage
+01-12-2026,2024,2020,4,7,soybean meal,european union,Extraction Rate,0.79,Percentage (%)
 01-12-2026,2025,2020,1,4,soybean oil,european union,Feed Waste Domestic Consumption,55.0,1000 Metric Tons
-01-12-2026,2025,2020,12,7,wheat,european union,Trade Year Imports from United States,645.0,1000 Metric Tons
+01-12-2026,2025,2020,12,7,wheat,european union,Trade Year Imports From United States,645.0,1000 Metric Tons
 01-12-2026,2025,2020,1,4,soybean oil,european union,Domestic Consumption,2430.0,1000 Metric Tons
 01-12-2026,2025,2020,1,4,soybean oil,european union,Ending Stocks,443.0,1000 Metric Tons
 01-12-2026,2025,2020,1,4,soybean oil,european union,Total Distribution,3934.0,1000 Metric Tons
@@ -2284,13 +2284,13 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2020,1,5,corn,world,Production,1134439.0,1000 Metric Tons
 01-12-2026,2026,2020,1,5,corn,world,Imports,185027.0,1000 Metric Tons
 01-12-2026,2026,2020,1,5,corn,world,Trade Year Imports,179937.0,1000 Metric Tons
-01-12-2026,2026,2020,1,5,corn,world,Trade Year Imports from United States,68222.0,1000 Metric Tons
+01-12-2026,2026,2020,1,5,corn,world,Trade Year Imports From United States,68222.0,1000 Metric Tons
 01-12-2026,2026,2020,1,5,corn,world,Total Supply,1634008.0,1000 Metric Tons
 01-12-2026,2026,2020,1,5,corn,world,Exports,182926.0,1000 Metric Tons
 01-12-2026,2026,2020,1,5,corn,world,Trade Year Exports,184402.0,1000 Metric Tons
 01-12-2026,2026,2020,1,5,corn,world,Feed Domestic Consumption,728557.0,1000 Metric Tons
 01-12-2026,2026,2020,1,5,corn,world,Domestic Consumption,1153724.0,1000 Metric Tons
-01-12-2026,2026,2020,1,8,wheat,world,Trade Year Imports from United States,26499.0,1000 Metric Tons
+01-12-2026,2026,2020,1,8,wheat,world,Trade Year Imports From United States,26499.0,1000 Metric Tons
 01-12-2026,2026,2020,1,5,corn,world,Ending Stocks,297358.0,1000 Metric Tons
 01-12-2026,2026,2020,1,5,corn,world,Total Distribution,1634008.0,1000 Metric Tons
 01-12-2026,2026,2020,1,5,corn,world,Yield,5.65,Yield (Metric Tons per Hectare)
@@ -2300,7 +2300,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2020,1,8,wheat,world,Imports,194694.0,1000 Metric Tons
 01-12-2026,2026,2020,1,8,wheat,world,Trade Year Imports,194797.0,1000 Metric Tons
 01-12-2026,2026,2020,1,5,soybeans,world,Yield,2.8383,Yield (Metric Tons per Hectare)
-01-12-2026,2026,2020,1,4,soybean oil,world,Extraction Rate,0.1888,Percentage
+01-12-2026,2026,2020,1,4,soybean oil,world,Extraction Rate,0.1888,Percentage (%)
 01-12-2026,2025,2020,4,8,soybeans,mexico,Imports,6088.0,1000 Metric Tons
 01-12-2026,2025,2020,4,8,soybeans,european union,Crush,15800.0,1000 Metric Tons
 01-12-2026,2026,2020,1,4,soybean meal,world,Total Distribution,331668.0,1000 Metric Tons
@@ -2336,7 +2336,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2026,2020,1,4,soybean oil,world,Total Distribution,77710.0,1000 Metric Tons
 01-12-2026,2026,2020,1,4,soybean meal,world,Food Use Domestic Consumption,741.0,1000 Metric Tons
 01-12-2026,2026,2020,1,4,soybean meal,world,Crush,318398.0,1000 Metric Tons
-01-12-2026,2026,2020,1,4,soybean meal,world,Extraction Rate,0.785,Percentage
+01-12-2026,2026,2020,1,4,soybean meal,world,Extraction Rate,0.785,Percentage (%)
 01-12-2026,2026,2020,1,4,soybean meal,world,Beginning Stocks,16079.0,1000 Metric Tons
 01-12-2026,2026,2020,1,4,soybean meal,world,Production,249932.0,1000 Metric Tons
 01-12-2026,2026,2020,1,4,soybean meal,world,Imports,65657.0,1000 Metric Tons
@@ -2354,7 +2354,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2023,2020,11,2,soybean meal,japan,Total Distribution,3674.0,1000 Metric Tons
 01-12-2026,2023,2020,11,2,soybean meal,japan,Soybean Meal Equivalent,3185.0,1000 Metric Tons
 01-12-2026,2024,2020,3,6,soybean meal,china,Crush,95000.0,1000 Metric Tons
-01-12-2026,2024,2020,3,6,soybean meal,china,Extraction Rate,0.792,Percentage
+01-12-2026,2024,2020,3,6,soybean meal,china,Extraction Rate,0.792,Percentage (%)
 01-12-2026,2024,2020,3,6,soybean meal,china,Production,75240.0,1000 Metric Tons
 01-12-2026,2023,2020,11,2,soybean meal,japan,Exports,1.0,1000 Metric Tons
 01-12-2026,2024,2020,3,6,soybean meal,china,Imports,74.0,1000 Metric Tons
@@ -2373,7 +2373,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2020,2,6,corn,european union,Production,67440.0,1000 Metric Tons
 01-12-2026,2025,2020,2,6,corn,european union,Imports,14496.0,1000 Metric Tons
 01-12-2026,2025,2020,2,6,corn,european union,Trade Year Imports,14496.0,1000 Metric Tons
-01-12-2026,2025,2020,2,6,corn,european union,Trade Year Imports from United States,3.0,1000 Metric Tons
+01-12-2026,2025,2020,2,6,corn,european union,Trade Year Imports From United States,3.0,1000 Metric Tons
 01-12-2026,2025,2020,2,6,corn,european union,Total Supply,89329.0,1000 Metric Tons
 01-12-2026,2025,2020,2,6,corn,european union,Exports,3740.0,1000 Metric Tons
 01-12-2026,2025,2020,2,6,corn,european union,Trade Year Exports,3740.0,1000 Metric Tons
@@ -2384,7 +2384,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2020,2,6,corn,european union,Total Distribution,89329.0,1000 Metric Tons
 01-12-2026,2025,2020,2,6,corn,european union,Yield,7.2979,Yield (Metric Tons per Hectare)
 01-12-2026,2023,2020,11,2,soybean meal,japan,Crush,2300.0,1000 Metric Tons
-01-12-2026,2023,2020,11,2,soybean meal,japan,Extraction Rate,0.7752,Percentage
+01-12-2026,2023,2020,11,2,soybean meal,japan,Extraction Rate,0.7752,Percentage (%)
 01-12-2026,2023,2020,11,2,soybean meal,japan,Beginning Stocks,52.0,1000 Metric Tons
 01-12-2026,2023,2020,11,2,soybean meal,japan,Production,1783.0,1000 Metric Tons
 01-12-2026,2024,2020,3,6,soybean meal,china,Total Distribution,76435.0,1000 Metric Tons
@@ -2398,7 +2398,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2020,4,11,wheat,china,Total Distribution,294883.0,1000 Metric Tons
 01-12-2026,2025,2020,4,11,wheat,china,Yield,5.7421,Yield (Metric Tons per Hectare)
 01-12-2026,2023,2020,4,7,soybean meal,mexico,Crush,6200.0,1000 Metric Tons
-01-12-2026,2023,2020,4,7,soybean meal,mexico,Extraction Rate,0.7903,Percentage
+01-12-2026,2023,2020,4,7,soybean meal,mexico,Extraction Rate,0.7903,Percentage (%)
 01-12-2026,2023,2020,4,7,soybean meal,mexico,Production,4900.0,1000 Metric Tons
 01-12-2026,2025,2020,4,11,wheat,china,Exports,763.0,1000 Metric Tons
 01-12-2026,2023,2020,4,7,soybean meal,mexico,Imports,1854.0,1000 Metric Tons
@@ -2416,13 +2416,13 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2022,2020,10,5,wheat,japan,Production,1000.0,1000 Metric Tons
 01-12-2026,2022,2020,10,5,wheat,japan,Imports,5493.0,1000 Metric Tons
 01-12-2026,2022,2020,10,5,wheat,japan,Trade Year Imports,5493.0,1000 Metric Tons
-01-12-2026,2022,2020,10,5,wheat,japan,Trade Year Imports from United States,2429.0,1000 Metric Tons
+01-12-2026,2022,2020,10,5,wheat,japan,Trade Year Imports From United States,2429.0,1000 Metric Tons
 01-12-2026,2022,2020,10,5,wheat,japan,Total Supply,7593.0,1000 Metric Tons
 01-12-2026,2022,2020,10,5,wheat,japan,Exports,300.0,1000 Metric Tons
 01-12-2026,2022,2020,10,5,wheat,japan,Trade Year Exports,300.0,1000 Metric Tons
 01-12-2026,2022,2020,10,5,wheat,japan,Feed Domestic Consumption,650.0,1000 Metric Tons
 01-12-2026,2022,2020,10,5,wheat,japan,Domestic Consumption,6250.0,1000 Metric Tons
-01-12-2026,2025,2020,4,11,wheat,china,Trade Year Imports from United States,3301.0,1000 Metric Tons
+01-12-2026,2025,2020,4,11,wheat,china,Trade Year Imports From United States,3301.0,1000 Metric Tons
 01-12-2026,2022,2020,10,5,wheat,japan,Ending Stocks,1043.0,1000 Metric Tons
 01-12-2026,2022,2020,10,5,wheat,japan,Total Distribution,7593.0,1000 Metric Tons
 01-12-2026,2022,2020,10,5,wheat,japan,Yield,4.6948,Yield (Metric Tons per Hectare)
@@ -2443,7 +2443,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2024,2020,3,6,soybean oil,china,Domestic Consumption,17800.0,1000 Metric Tons
 01-12-2026,2024,2020,3,6,soybean oil,china,Ending Stocks,1180.0,1000 Metric Tons
 01-12-2026,2024,2020,3,6,soybean oil,china,Total Distribution,19022.0,1000 Metric Tons
-01-12-2026,2023,2020,7,10,soybean oil,united states,Extraction Rate,0.1948,Percentage
+01-12-2026,2023,2020,7,10,soybean oil,united states,Extraction Rate,0.1948,Percentage (%)
 01-12-2026,2024,2020,3,6,soybean oil,china,Production,17024.0,1000 Metric Tons
 01-12-2026,2023,2020,7,10,soybean oil,united states,Beginning Stocks,840.0,1000 Metric Tons
 01-12-2026,2023,2020,7,10,soybean oil,united states,Production,11350.0,1000 Metric Tons
@@ -2462,11 +2462,11 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2020,5,9,corn,mexico,Total Distribution,48009.0,1000 Metric Tons
 01-12-2026,2025,2020,5,9,corn,mexico,Yield,3.8284,Yield (Metric Tons per Hectare)
 01-12-2026,2023,2020,8,11,soybean oil,mexico,Crush,6200.0,1000 Metric Tons
-01-12-2026,2023,2020,8,11,soybean oil,mexico,Extraction Rate,0.1847,Percentage
+01-12-2026,2023,2020,8,11,soybean oil,mexico,Extraction Rate,0.1847,Percentage (%)
 01-12-2026,2023,2020,8,11,soybean oil,mexico,Beginning Stocks,252.0,1000 Metric Tons
 01-12-2026,2023,2020,8,11,soybean oil,mexico,Production,1145.0,1000 Metric Tons
 01-12-2026,2023,2020,8,11,soybean oil,mexico,Total Supply,1483.0,1000 Metric Tons
-01-12-2026,2024,2020,3,6,soybean oil,china,Extraction Rate,0.1792,Percentage
+01-12-2026,2024,2020,3,6,soybean oil,china,Extraction Rate,0.1792,Percentage (%)
 01-12-2026,2023,2020,8,11,soybean oil,mexico,Exports,35.0,1000 Metric Tons
 01-12-2026,2023,2020,8,11,soybean oil,mexico,Industrial Domestic Consumption,0.0,1000 Metric Tons
 01-12-2026,2023,2020,8,11,soybean oil,mexico,Food Use Domestic Consumption,1290.0,1000 Metric Tons
@@ -2490,7 +2490,7 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2020,7,11,corn,united states,Imports,616.0,1000 Metric Tons
 01-12-2026,2023,2020,9,12,soybean oil,japan,Crush,2300.0,1000 Metric Tons
 01-12-2026,2025,2020,7,11,corn,united states,Trade Year Imports,629.0,1000 Metric Tons
-01-12-2026,2025,2020,7,11,corn,united states,Trade Year Imports from United States,0.0,1000 Metric Tons
+01-12-2026,2025,2020,7,11,corn,united states,Trade Year Imports From United States,0.0,1000 Metric Tons
 01-12-2026,2025,2020,7,11,corn,united states,Total Supply,409348.0,1000 Metric Tons
 01-12-2026,2025,2020,7,11,corn,united states,Exports,69775.0,1000 Metric Tons
 01-12-2026,2025,2020,7,11,corn,united states,Trade Year Exports,68293.0,1000 Metric Tons
@@ -2500,8 +2500,8 @@ date_collected,calendar_year,marketing_year,calendar_month,marketing_year_month,
 01-12-2026,2025,2020,11,6,wheat,united states,Trade Year Exports,26636.0,1000 Metric Tons
 01-12-2026,2025,2020,11,6,wheat,united states,Exports,27048.0,1000 Metric Tons
 01-12-2026,2025,2020,11,6,wheat,united states,Total Supply,80234.0,1000 Metric Tons
-01-12-2026,2025,2020,11,6,wheat,united states,Trade Year Imports from United States,0.0,1000 Metric Tons
-01-12-2026,2023,2020,9,12,soybean oil,japan,Extraction Rate,0.2009,Percentage
+01-12-2026,2025,2020,11,6,wheat,united states,Trade Year Imports From United States,0.0,1000 Metric Tons
+01-12-2026,2023,2020,9,12,soybean oil,japan,Extraction Rate,0.2009,Percentage (%)
 01-12-2026,2023,2020,9,12,soybean oil,japan,Beginning Stocks,16.0,1000 Metric Tons
 01-12-2026,2023,2020,9,12,soybean oil,japan,Production,462.0,1000 Metric Tons
 01-12-2026,2023,2020,9,12,soybean oil,japan,Imports,3.0,1000 Metric Tons
