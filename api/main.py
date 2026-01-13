@@ -7,7 +7,7 @@ import pandas as pd
 from datetime import datetime, timedelta
 
 load_dotenv()
-POSTGRES_URL = os.getenv("POSTSGRES_URL")
+POSTGRES_URL = os.getenv("POSTGRES_URL")
 
 app = FastAPI()
 engine = create_engine(POSTGRES_URL)
