@@ -18,7 +18,7 @@ function About() {
         </p>
 
         <p>
-          To learn more about the data used throughout the site, visit the{" "}
+          To learn more about the data used throughout the site, visit this{" "}
           <Link to="/data-overview" className="about-link">
             Data Overview
           </Link>{" "}
