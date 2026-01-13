@@ -112,25 +112,6 @@ This ensures:
 
 ---
 
-## 👤 About the Developer
-
-**Thomas Ayers**  
-Undergraduate at Virginia Tech  
-
-- **Major:** Computer Science  
-- **Minors:** Mathematics & Commodity Market Analytics  
-- **Member of COINS** (Commodity Investing by Students), a student-run commodity trading group focused on futures-based ETF strategies  
-
-This project was built to give the COINS agriculture division — and anyone interested in commodity markets — a fast, intuitive way to access and analyze USDA data without digging through spreadsheets or raw APIs.
-
-**📬 Contact**
-
-- Email: [tlayers21@gmail.com](mailto:tlayers21@gmail.com)  
-- Phone: (571) 510‑5440  
-- LinkedIn: [https://www.linkedin.com/in/thomas-l-ayers](https://www.linkedin.com/in/thomas-l-ayers)
-
----
-
 ## USDA Data Attribution
 
 Data sourced from the USDA Foreign Agricultural Service (FAS) Open Data Portal:  
