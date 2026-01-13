@@ -66,9 +66,17 @@ def get_last_5_years_esr(commodity: str, country: str) -> List[Dict[str, Any]]:
     return fetch_last_5_years("inspections", commodity, country)
 
 # Fetches JSON flie to build Plotly chart
-@app.get("api/chart/{filename}")
-def get_chart(filename: str):
+@app.get("/api/{commodity}/{source}/{country}/{datatype}/{year}")
+def get_chart(commodity: str, source: str, country: str, datatype: str, year: str):
+    source = source.lower()
+    filename = ""
+
+    if source == "psd":
+        filename = f"psd_{commodity}_for_{country}_{datatype}_last_5_years_{year}.json"
+    else:
+        filename = f"{source}_us_{commodity}_to_{country}_{datatype}_last_5_years_{year}.json"
+
     file_path = CHART_DIR / filename
     if not file_path.exists():
-        return {"error": "chart not found"}
+        return {"error": "Chart not found"}
     return FileResponse(file_path)
