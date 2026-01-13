@@ -6,6 +6,7 @@ import BackArrow from "./components/BackArrow";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
+import DataOverview from "./pages/DataOverview";
 import Placeholder from "./pages/Placeholder";
 
 import Corn from "./pages/Corn";
@@ -20,7 +21,6 @@ import SoybeanMeal from "./pages/SoybeanMeal";
 import SoybeanOil from "./pages/SoybeanOil";
 
 function App() {
-  // Maintenance redirect check
   useEffect(() => {
     fetch("/maintenance")
       .then(res => res.json())
@@ -41,6 +41,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/data-overview" element={<DataOverview />} />
 
           {/* Corn */}
           <Route path="/corn" element={<Corn />} />

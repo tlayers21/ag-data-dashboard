@@ -1,0 +1,45 @@
+.about-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.about-card h2 {
+  margin-bottom: 1rem;
+}
+
+.about-link {
+  color: #0077cc;
+  text-decoration: underline;
+}
+
+.contact-info p {
+  margin: 0.3rem 0;
+}
+
+.learn-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.learn-table th,
+.learn-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.learn-table th {
+  background: #f2f2f2;
+  text-align: left;
+}
