@@ -1,13 +1,17 @@
 import pandas as pd
+import os
+from dotenv import load_dotenv
 from sqlalchemy import create_engine, text
 from sqlalchemy.engine import Engine
 from pathlib import Path
 from .utils import BASE_DIR
-from .config import DATA_BASE_URL
+
+load_dotenv()
+POSTGRES_URL = os.getenv("POSTGRES_URL")
 
 # Creates SQLAlchemy engine to communicate to PostgreSQL database
 def get_engine() -> Engine:
-    return create_engine(DATA_BASE_URL)
+    return create_engine(POSTGRES_URL)
 
 CREATE_ESR_TABLE = """
 CREATE TABLE IF NOT EXISTS esr (

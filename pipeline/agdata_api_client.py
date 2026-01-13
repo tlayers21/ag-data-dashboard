@@ -1,11 +1,11 @@
 import requests
 from typing import List, Dict, Any
 
-AGDATA_BASE_URL = "http://localhost:8000"
+AGDATA_BASE_URL = "http://127.0.0.1:8000"
 
 class AgDataClient:
     def __init__(self) -> None:
-        pass
+        pass    
 
     # Builds URL
     def _build_url(self, endpoint: str) -> str:
