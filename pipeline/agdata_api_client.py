@@ -1,7 +1,7 @@
 import requests
 from typing import List, Dict, Any
 
-AGDATA_BASE_URL = "http://127.0.0.1:8000"
+AGDATA_BASE_URL = "https://ag-data-dashboard-6908.onrender.com"
 
 class AgDataClient:
     def __init__(self) -> None:
