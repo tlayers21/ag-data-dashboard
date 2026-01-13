@@ -95,7 +95,7 @@ def load_csv(engine: Engine, path: Path) -> None:
 
 # Initializes PostgreSQL Database
 def init_database() -> None:
-    print("Creating PostgreSQL Database...")
+    print("Initializing PostgreSQL Database...")
 
     engine = get_engine()
 

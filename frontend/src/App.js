@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
@@ -20,6 +20,18 @@ import SoybeanMeal from "./pages/SoybeanMeal";
 import SoybeanOil from "./pages/SoybeanOil";
 
 function App() {
+  // Maintenance redirect check
+  useEffect(() => {
+    fetch("/maintenance")
+      .then(res => res.json())
+      .then(data => {
+        if (data.active) {
+          window.location.href = "/maintenance.html";
+        }
+      })
+      .catch(() => {});
+  }, []);
+
   return (
     <>
       <Header />

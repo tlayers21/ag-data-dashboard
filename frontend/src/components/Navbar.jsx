@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import "../App.css";
 
-/* Explicit parent labels so all top buttons look the same */
 const menuItems = [
   {
     label: "Corn",

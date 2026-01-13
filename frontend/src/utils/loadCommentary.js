@@ -3,5 +3,5 @@ export async function loadCommentary(files) {
     files.map((file) => fetch(file).then((r) => r.text()))
   );
 
-  return texts.join("\n\n"); // raw, spaced, unchanged
+  return texts.join("\n\n");
 }
