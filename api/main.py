@@ -1,13 +1,16 @@
 from fastapi import FastAPI
+from dotenv import load_dotenv
 import os
 from typing import List, Dict, Any
 from sqlalchemy import create_engine
 import pandas as pd
 from datetime import datetime, timedelta
-from pipeline.config import DATA_BASE_URL
+
+load_dotenv()
+POSTGRES_URL = os.getenv("POSTSGRES_URL")
 
 app = FastAPI()
-engine = create_engine(DATA_BASE_URL)
+engine = create_engine(POSTGRES_URL)
 
 @app.get("/health")
 def health() -> Dict[str, str]:

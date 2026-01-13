@@ -1,0 +1,16 @@
+# Environment files
+.env
+
+# Python cache
+__pycache__/
+api/__pycache__/
+pipeline/__pycache__
+
+# Data
+data/
+
+# Commentary
+frontend/src/commentary
+
+# Graph JSON
+frontend/public/*.json
