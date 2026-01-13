@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/ag-data-dashboard/static/css/main.003ad960.css",
+    "main.js": "/ag-data-dashboard/static/js/main.7e312f25.js",
+    "index.html": "/ag-data-dashboard/index.html",
+    "static/media/us_soybeans_to_world_current_marketing_year_total_commitment_commentary.txt": "/ag-data-dashboard/static/media/us_soybeans_to_world_current_marketing_year_total_commitment_commentary.e00c6aeebd05efc39dea.txt",
+    "static/media/us_wheat_to_world_current_marketing_year_total_commitment_commentary.txt": "/ag-data-dashboard/static/media/us_wheat_to_world_current_marketing_year_total_commitment_commentary.0f4f030cd806f59d73eb.txt",
+    "static/media/us_corn_to_world_current_marketing_year_total_commitment_commentary.txt": "/ag-data-dashboard/static/media/us_corn_to_world_current_marketing_year_total_commitment_commentary.980e15efb010e9d4b201.txt",
+    "static/media/us_soybeans_to_world_next_marketing_year_outstanding_sales_commentary.txt": "/ag-data-dashboard/static/media/us_soybeans_to_world_next_marketing_year_outstanding_sales_commentary.107a072f01c72cc1370b.txt",
+    "static/media/us_wheat_to_world_next_marketing_year_outstanding_sales_commentary.txt": "/ag-data-dashboard/static/media/us_wheat_to_world_next_marketing_year_outstanding_sales_commentary.e01516ad123d948a5b86.txt",
+    "static/media/us_corn_to_world_next_marketing_year_outstanding_sales_commentary.txt": "/ag-data-dashboard/static/media/us_corn_to_world_next_marketing_year_outstanding_sales_commentary.8745f2007c5cc2964654.txt",
+    "static/media/us_soybeans_to_world_export_inspections_commentary.txt": "/ag-data-dashboard/static/media/us_soybeans_to_world_export_inspections_commentary.115a808bfa5a237f1f34.txt",
+    "static/media/us_soybeans_to_world_gross_new_sales_commentary.txt": "/ag-data-dashboard/static/media/us_soybeans_to_world_gross_new_sales_commentary.1e1fd159dbb37797b871.txt",
+    "static/media/us_corn_to_world_export_inspections_commentary.txt": "/ag-data-dashboard/static/media/us_corn_to_world_export_inspections_commentary.d65ffe0b4615b23800b7.txt",
+    "static/media/us_wheat_to_world_export_inspections_commentary.txt": "/ag-data-dashboard/static/media/us_wheat_to_world_export_inspections_commentary.2a7dfc66fdc59d66363d.txt",
+    "static/media/us_wheat_to_world_gross_new_sales_commentary.txt": "/ag-data-dashboard/static/media/us_wheat_to_world_gross_new_sales_commentary.67ee1a9655a830c9ee87.txt",
+    "static/media/us_corn_to_world_gross_new_sales_commentary.txt": "/ag-data-dashboard/static/media/us_corn_to_world_gross_new_sales_commentary.1b086bbb346ba09df736.txt",
+    "main.003ad960.css.map": "/ag-data-dashboard/static/css/main.003ad960.css.map",
+    "main.7e312f25.js.map": "/ag-data-dashboard/static/js/main.7e312f25.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.003ad960.css",
+    "static/js/main.7e312f25.js"
+  ]
+}
