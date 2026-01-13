@@ -4,7 +4,7 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-API_BASE = os.getenv("AGDATA_BASE_URL")
+API_BASE = os.getenv("API_BASE")
 
 class AgDataClient:
     def __init__(self) -> None:
