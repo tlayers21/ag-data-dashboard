@@ -98,7 +98,7 @@ def get_last_5_years_inspections(commodity: str, country: str) -> List[Dict[str,
 def get_chart(commodity: str, source: str, country: str, datatype: str, year: str):
     source = source.lower()
     commodity = commodity.lower()
-    country = country.lower().replace('_', ' ')
+    country = country.lower()
     datatype = datatype.lower()
     year = year.lower()
     year_type = "marketing" if year == "my" else "calendar"
@@ -112,7 +112,7 @@ def get_chart(commodity: str, source: str, country: str, datatype: str, year: st
             datatype
         )
         filename = (
-            f"{source}_{commodity}_for_{country.replace(' ', '_')}_{datatype}_last_5_years_{year}.json"
+            f"{source}_{commodity}_for_{country}_{datatype}_last_5_years_{year}.json"
         )
 
     # ESR or Inspections pattern
@@ -126,7 +126,7 @@ def get_chart(commodity: str, source: str, country: str, datatype: str, year: st
             home=False
         )
         filename = (
-            f"{source}_us_{commodity.replace(' ', '_')}_to_{country.replace(' ', '_')}_{datatype}_last_5_years_{year}.json"
+            f"{source}_us_{commodity}_to_{country}_{datatype}_last_5_years_{year}.json"
         )
 
     file_path = CHART_DIR / filename
@@ -140,7 +140,7 @@ def get_chart(commodity: str, source: str, country: str, datatype: str, year: st
 @app.get("/api/home/{commodity}/{source}/{country}/{datatype}/{year}")
 def get_home_chart(commodity: str, source: str, country: str, datatype: str, year: str):
     filename = (
-        f"{source}_us_{commodity.replace(' ', '_')}_to_{country.replace(' ', '_')}_{datatype}_last_5_years_{year}_home.json"
+        f"{source}_us_{commodity}_to_{country}_{datatype}_last_5_years_{year}_home.json"
     )
     file_path = CHART_DIR / filename
 

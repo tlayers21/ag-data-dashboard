@@ -37,10 +37,7 @@ def clean_all_esr() -> None:
     for file in country_files:
         parts = file.stem.split('_')
         to_index = parts.index("to")
-
-        # Accounts for scenario with 'european_union' in file name
-        country_parts = parts[to_index + 1: -1]
-        country = "_".join(country_parts).replace('_', ' ')
+        country = parts[to_index + 1]
         cleaned_df = clean_esr_country_file(file, country)
         country_dfs.append(cleaned_df)
     
@@ -84,11 +81,8 @@ def clean_all_psd() -> None:
     country_dfs = []
     for file in country_files:
         parts = file.stem.split('_')
-        psd_index = parts.index("to")
-
-        # Accounts for scenarios with 'european_union' or 'united_states' in file name
-        country_parts = parts[psd_index + 1: -1]
-        country = "_".join(country_parts).replace('_', ' ')
+        psd_index = parts.index("psd")
+        country = parts[psd_index + 1]
         cleaned_df = clean_psd_country_file(file, country)
         country_dfs.append(cleaned_df)
     

@@ -77,10 +77,6 @@ const YEAR_TYPES = [
 // -----------------------------
 // API URL BUILDER
 // -----------------------------
-function slugToSpaced(slug) {
-  return slug.replace(/_/g, " ");
-}
-
 const API_BASE = process.env.REACT_APP_API_BASE;
 
 function buildApiUrl(dataSource, commodity, countrySlug, dataTypeKey, yearType) {
@@ -142,8 +138,8 @@ export default function Soybeans() {
   // Build API URL
   const jsonPath = buildApiUrl(
     dataSource,
-    slugToSpaced(commodity),
-    slugToSpaced(countrySlug),
+    commodity,
+    countrySlug,
     effectiveDataTypeKey,
     yearType
   );

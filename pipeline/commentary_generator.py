@@ -16,7 +16,7 @@ def generate_weekly_commentary(
     df = pd.DataFrame(df_data)
 
     if df.empty:
-        return f"There is no {data_type} data available for {commodity} {value_column.replace("_", " ")} to {country}."
+        return f"There is no {data_type} data available for {commodity.replace("-", " ")} {value_column.replace('_', ' ')} to {country.replace("-", " ")}."
     
     df["date_collected"] = pd.to_datetime(df["date_collected"])
     df = df.sort_values("date_collected", ascending=False)
@@ -73,11 +73,11 @@ def generate_weekly_commentary(
 
     # Actual commentary
     commentary = (
-        f"{latest_date}: {commodity.capitalize()} {value_column.replace("_", " ")} to " 
+        f"{latest_date}: {commodity.replace("-", " ").capitalize()} {value_column.replace('_', ' ')} to " 
         f"{"the world" if country == "world" else country.title()} "
         f"for the week ending on {latest_week_ending} "
         f"{"was" if "commitment" in value_column else "were"}"
-        f" {int(latest_value):,} {unit.replace("_", " ").lower()} ("
+        f" {int(latest_value):,} {unit.replace('_', ' ').lower()} ("
     )
 
     # WoW

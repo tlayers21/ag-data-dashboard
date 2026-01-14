@@ -68,26 +68,20 @@ const YEAR_TYPES = [
 ];
 
 // -----------------------------
-// JSON PATH BUILDER
+// API URL BUILDER (correct one)
 // -----------------------------
-function buildJsonPath(dataSource, commodity, countrySlug, dataTypeKey, yearType) {
-  const fileSuffix = yearType === "cal" ? "cal" : "my";
-  const dataPrefix = dataSource.toLowerCase();
+function buildApiUrl(dataSource, commodity, countrySlug, dataTypeKey, yearType) {
+  const ds = dataSource.toLowerCase();
+  if (ds === "forecasts") return null;
 
-  if (dataPrefix === "forecasts") return null;
-
-  if (dataPrefix === "psd") {
-    return `/${dataPrefix}_${commodity}_for_${countrySlug}_${dataTypeKey}_last_5_years_${fileSuffix}.json`;
-  }
-
-  return `/${dataPrefix}_us_${commodity}_to_${countrySlug}_${dataTypeKey}_last_5_years_${fileSuffix}.json`;
+  return `${process.env.REACT_APP_API_BASE}/${commodity}/${ds}/${countrySlug}/${dataTypeKey}/${yearType}`;
 }
 
 // -----------------------------
 // MAIN COMPONENT
 // -----------------------------
 export default function SoybeanOil() {
-  const commodity = "soybean_oil";
+  const commodity = "soybean-oil";
 
   const [dataSource, setDataSource] = useState("ESR");
   const [countrySlug, setCountrySlug] = useState("world");
@@ -115,7 +109,7 @@ export default function SoybeanOil() {
     return exists ? dataTypeKey : dataTypes[0]?.key || "";
   }, [dataTypes, dataTypeKey]);
 
-  const jsonPath = buildJsonPath(
+  const jsonPath = buildApiUrl(
     dataSource,
     commodity,
     countrySlug,
@@ -140,7 +134,6 @@ export default function SoybeanOil() {
     <div className="main-content">
       <h2>Soybean Oil</h2>
 
-      {/* FILTER BAR */}
       <div className="filter-bar-wrapper">
         <div className="filter-bar">
 
@@ -196,9 +189,8 @@ export default function SoybeanOil() {
         </div>
       </div>
 
-      {/* FORECASTS MODE */}
       {dataSource === "Forecasts" && (
-        <div className="card card-centered soybean_oil-chart">
+        <div className="card card-centered soybean-oil-chart">
           <h3>Forecasts – Under Construction</h3>
           <div
             style={{
@@ -218,9 +210,8 @@ export default function SoybeanOil() {
         </div>
       )}
 
-      {/* NORMAL CHART MODE */}
       {dataSource !== "Forecasts" && jsonPath && (
-        <div className="card card-centered soybean_oil-chart">
+        <div className="card card-centered soybean-oil-chart">
           <h3>
             {dataSource} – {countries.find((c) => c.slug === countrySlug)?.label} –{" "}
             {dataTypes.find((t) => t.key === effectiveDataTypeKey)?.label} –{" "}
@@ -236,7 +227,7 @@ export default function SoybeanOil() {
               overflow: "hidden"
             }}
           >
-            <ChartViewer jsonPath={jsonPath} variant="soybean_oil" />
+            <ChartViewer jsonPath={jsonPath} variant="soybean-oil" />
           </div>
         </div>
       )}

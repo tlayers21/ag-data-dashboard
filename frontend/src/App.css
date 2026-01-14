@@ -148,16 +148,16 @@ header {
 .corn-chart .js-plotly-plot,
 .wheat-chart .js-plotly-plot,
 .soybeans-chart .js-plotly-plot,
-.soybean_oil-chart .js-plotly-plot,
-.soybean_meal-chart .js-plotly-plot {
+.soybean-oil-chart .js-plotly-plot,
+.soybean-meal-chart .js-plotly-plot {
   height: 700px !important;
 }
 
 .corn-chart.card-centered,
 .wheat-chart.card-centered,
 .soybeans-chart.card-centered,
-.soybean_oil-chart.card-centered,
-.soybean_meal-chart.card-centered {
+.soybean-oil-chart.card-centered,
+.soybean-meal-chart.card-centered {
   width: 100%;
   max-width: 1350px;
   margin-left: auto;
@@ -295,7 +295,7 @@ header {
   content: "▾";
   position: absolute;
   right: 12px;
-  bottom: 6px;
+  bottom: 5px;
   pointer-events: none;
   font-size: 1rem;
   color: #2a4d69;

@@ -26,9 +26,13 @@ if __name__ == "__main__":
         
     if restart:
         print("--------------------")
-        for file in Path("data/raw/fas").resolve().glob("*.json"):
-            if file.is_file():
-                file.unlink()
+        dirs_to_empty = ["data/raw/fas", "data/clean", "api/charts", "frontend/src/commentary"]
+        extensions = ["*.json", "*.csv", "*.txt"]
+        for directory in dirs_to_empty:
+            for extension in extensions:
+                for file in Path(directory).resolve().glob(extensions):
+                    if file.is_file():
+                        file.unlink()
 
         for year in ESR_YEARS:
             fetch_esr_data(usda_api_key=USDA_API_KEY, marketing_year=year)

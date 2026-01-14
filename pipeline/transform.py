@@ -133,6 +133,7 @@ def clean_esr_all_file(path: Path) -> pd.DataFrame:
 
     aggregated_data = aggregated_data.drop(columns=["marketing_year_start_date", "first_week_ending"])
     aggregated_data["date_collected"] = datetime.now().strftime("%m-%d-%Y")
+    aggregated_data["commodity"] = aggregated_data["commodity"].str.replace(" ", "-")
 
     column_order = [
         "date_collected",
@@ -209,6 +210,7 @@ def clean_psd_world_file(path: Path) -> pd.DataFrame:
     marketing_year_start = MARKETING_YEAR_START.get(commodity_name)
     df["marketing_year_month"] = ((df["calendar_month"] - marketing_year_start) % 12) + 1
     df["date_collected"] = datetime.now().strftime("%m-%d-%Y")
+    df["commodity"] = df["commodity"].str.replace(" ", "-")
 
     column_order = [
         "date_collected",
@@ -322,6 +324,7 @@ def clean_inspections_file(path: Path) -> pd.DataFrame:
     df = df.drop(columns=["start_month", "marketing_year_start_date", "first_week_ending"])
 
     df["date_collected"] = datetime.now().strftime("%m-%d-%Y")
+    df["commodity"] = df["commodity"].str.replace(" ", "-")
 
     column_order = [
         "date_collected",
