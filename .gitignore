@@ -11,3 +11,6 @@ data/
 
 # Commentary
 frontend/src/commentary
+
+# JSON files for charts
+api/charts

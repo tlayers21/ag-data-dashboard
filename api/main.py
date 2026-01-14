@@ -7,13 +7,27 @@ from typing import List, Dict, Any
 from sqlalchemy import create_engine
 import pandas as pd
 from datetime import datetime, timedelta
+from contextlib import asynccontextmanager
 
 load_dotenv()
 POSTGRES_URL = os.getenv("POSTGRES_URL")
 
 CHART_DIR = Path(__file__).parent / "charts"
 
-app = FastAPI()
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    from pipeline.chart_generator import generate_charts
+    import threading
+
+    threading.Thread(
+        target=generate_charts,
+        daemon=True
+    ).start()
+
+    yield
+    
+app = FastAPI(lifespan=lifespan)
+
 engine = create_engine(POSTGRES_URL)
 
 @app.get("/health")
