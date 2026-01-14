@@ -57,12 +57,12 @@ def get_last_5_years_esr(commodity: str, country: str) -> List[Dict[str, Any]]:
 
 # Fetches PSD data from last 5 years
 @app.get("/psd/last5years")
-def get_last_5_years_esr(commodity: str, country: str) -> List[Dict[str, Any]]:
+def get_last_5_years_psd(commodity: str, country: str) -> List[Dict[str, Any]]:
     return fetch_last_5_years("psd", commodity, country)
 
 # Fetches export inspections data from last 5 years
 @app.get("/inspections/last5years")
-def get_last_5_years_esr(commodity: str, country: str) -> List[Dict[str, Any]]:
+def get_last_5_years_inspections(commodity: str, country: str) -> List[Dict[str, Any]]:
     return fetch_last_5_years("inspections", commodity, country)
 
 # Fetches JSON flie to build Plotly chart for specific commodity page
