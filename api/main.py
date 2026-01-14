@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.responses import FileResponse
+import asyncio
 from dotenv import load_dotenv
 import os
 from pathlib import Path
@@ -20,7 +21,7 @@ CHART_DIR.mkdir(parents=True, exist_ok=True)
 async def lifespan(app: FastAPI):
     from pipeline.chart_generator import generate_charts
 
-    # Run chart generation synchronously
+    await asyncio.sleep(1)
     generate_charts()
 
     yield
