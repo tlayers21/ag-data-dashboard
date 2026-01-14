@@ -88,7 +88,7 @@ function buildJsonPath(dataSource, commodity, countrySlug, dataTypeKey, yearType
 // MAIN COMPONENT
 // -----------------------------
 export default function SoybeanMeal() {
-  const commodity = "soybean meal";
+  const commodity = "soybean_meal";
 
   const [dataSource, setDataSource] = useState("ESR");
   const [countrySlug, setCountrySlug] = useState("world");
@@ -237,7 +237,7 @@ export default function SoybeanMeal() {
               overflow: "hidden"
             }}
           >
-            <ChartViewer jsonPath={jsonPath} variant="soybean meal" />
+            <ChartViewer jsonPath={jsonPath} variant="soybean_meal" />
           </div>
         </div>
       )}

@@ -295,18 +295,21 @@ header {
   content: "▾";
   position: absolute;
   right: 12px;
-  top: calc(50% + 1px);
-  transform: translateY(-50%);
+  bottom: 6px;
   pointer-events: none;
-  font-size: 0.9rem;
-  color: #444;
+  font-size: 1rem;
+  color: #2a4d69;
 }
 
 .select-wrapper select {
-  appearance: none;
-  padding: 0.35rem 2rem 0.35rem 0.5rem;
-  font-size: 0.95rem;
+  padding: 0.45rem 2rem 0.55rem 0.5rem;
   border: 1px solid #c7ccd1;
   border-radius: 4px;
   background-color: #ffffff;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.select-wrapper select:hover {
+  background-color: #eef3f7;
+  cursor: pointer;
 }
