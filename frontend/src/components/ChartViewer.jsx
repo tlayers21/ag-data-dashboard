@@ -60,7 +60,7 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
 
   const isCommodityPage =
     variant !== "home" &&
-    ["corn", "wheat", "soybeans", "soybean_oil", "soybean_meal"].includes(
+    ["corn", "wheat", "soybeans", "soybean-oil", "soybean-meal"].includes(
       variant
     );
 

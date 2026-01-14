@@ -295,7 +295,7 @@ header {
   content: "▾";
   position: absolute;
   right: 12px;
-  bottom: 5px;
+  bottom: 4px;
   pointer-events: none;
   font-size: 1rem;
   color: #2a4d69;

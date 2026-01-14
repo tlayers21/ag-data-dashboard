@@ -164,7 +164,7 @@ def generate_weekly_esr_or_inspections_chart(
 
     figure.update_traces(
         hovertemplate=
-        f"{commodity.title()}: %{{customdata[1]:,}}<br>"
+        f"{commodity.replace("-", " ").title()}: %{{customdata[1]:,}}<br>"
         f"Week ending: %{{customdata[0]|%b-%d-%Y}}<extra></extra>"
     )
 
@@ -289,7 +289,7 @@ def generate_weekly_psd_chart(
 
     figure.update_traces(
         hovertemplate=
-        f"{commodity.title()}: %{{y:,}} {unit}<br>"
+        f"{commodity.replace("-", " ").title()}: %{{y:,}} {unit}<br>"
         f"{"Marketing Year"}: %{{x}}<extra></extra>"
     )
 
