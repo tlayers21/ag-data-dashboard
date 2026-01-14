@@ -12,7 +12,7 @@ from contextlib import asynccontextmanager
 load_dotenv()
 POSTGRES_URL = os.getenv("POSTGRES_URL")
 
-CHART_DIR = Path(__file__).parent / "charts"
+CHART_DIR = Path(__file__).parent.parent / "api" / "charts"
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
