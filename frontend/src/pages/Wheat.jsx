@@ -48,7 +48,7 @@ const ESR_TYPES = [
 ];
 
 // -----------------------------
-// PSD ATTRIBUTES (WHEAT VERSION)
+// PSD ATTRIBUTES
 // -----------------------------
 const PSD_ATTRIBUTES = [
   { key: "area_harvested", label: "Area Harvested" },
@@ -56,13 +56,13 @@ const PSD_ATTRIBUTES = [
   { key: "production", label: "Production" },
   { key: "imports", label: "Imports" },
   { key: "trade_year_imports", label: "Trade Year Imports" },
-  { key: "trade_year_imports_from_united_states", label: "Trade Year Imports from U.S." },
+  { key: "trade_year_imports_from_united_states", label: "Trade Year Imports From U.S." },
   { key: "total_supply", label: "Total Supply" },
   { key: "exports", label: "Exports" },
   { key: "trade_year_exports", label: "Trade Year Exports" },
   { key: "feed_domestic_consumption", label: "Feed Domestic Consumption" },
   { key: "food_seed_and_industrial_consumption", label: "Food Seed and Industrial Consumption" },
-  { key: "domestic_consumption", label: "Domestic Consumption" },
+  { key: "feed_domestic_consumption", label: "Feed Domestic Consumption" },
   { key: "ending_stocks", label: "Ending Stocks" },
   { key: "total_distribution", label: "Total Distribution" },
   { key: "yield", label: "Yield" }
@@ -77,7 +77,7 @@ const YEAR_TYPES = [
 ];
 
 // -----------------------------
-// API URL BUILDER (Corn-style)
+// API URL BUILDER
 // -----------------------------
 function slugToSpaced(slug) {
   return slug.replace(/_/g, " ");
@@ -95,7 +95,7 @@ function buildApiUrl(dataSource, commodity, countrySlug, dataTypeKey, yearType) 
 // -----------------------------
 // MAIN COMPONENT
 // -----------------------------
-export default function Wheat() {
+export default function Corn() {
   const commodity = "wheat";
 
   const [dataSource, setDataSource] = useState("Inspections");
@@ -169,14 +169,14 @@ export default function Wheat() {
 
   return (
     <div className="main-content">
-      <h2>Wheat (All)</h2>
+      <h2>Corn</h2>
 
       {/* FILTER BAR */}
       <div className="filter-bar-wrapper">
         <div className="filter-bar">
 
           {/* Data Source */}
-          <div className="filter-item">
+          <div className="filter-item select-wrapper">
             <label>Data Source</label>
             <select value={dataSource} onChange={handleDataSourceChange}>
               {DATA_SOURCES.map((src) => (
@@ -186,7 +186,7 @@ export default function Wheat() {
           </div>
 
           {/* Country */}
-          <div className="filter-item">
+          <div className="filter-item select-wrapper">
             <label>Country</label>
             <select
               value={countrySlug}
@@ -200,7 +200,7 @@ export default function Wheat() {
 
           {/* Data Type */}
           {dataSource !== "Forecasts" && (
-            <div className="filter-item">
+            <div className="filter-item select-wrapper">
               <label>Data Type</label>
               <select
                 value={effectiveDataTypeKey}
@@ -214,7 +214,7 @@ export default function Wheat() {
           )}
 
           {/* Year Type */}
-          <div className="filter-item">
+          <div className="filter-item select-wrapper">
             <label>Year Type</label>
             <select
               value={yearType}
@@ -233,7 +233,7 @@ export default function Wheat() {
 
       {/* FORECASTS MODE */}
       {dataSource === "Forecasts" && (
-        <div className="card card-centered wheat-chart">
+        <div className="card card-centered corn-chart">
           <h3>Forecasts – Under Construction</h3>
           <div
             style={{
@@ -255,7 +255,7 @@ export default function Wheat() {
 
       {/* NORMAL CHART MODE */}
       {dataSource !== "Forecasts" && jsonPath && (
-        <div className="card card-centered wheat-chart">
+        <div className="card card-centered corn-chart">
           <h3>
             {dataSource} – {countries.find((c) => c.slug === countrySlug)?.label} –{" "}
             {dataTypes.find((t) => t.key === effectiveDataTypeKey)?.label} –{" "}

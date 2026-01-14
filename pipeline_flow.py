@@ -16,40 +16,26 @@ FLAG_PATH = Path("maintenance.flag").resolve()
 # Same code from manual_run_pipeline.py for Prefect to run
 @task
 def run_pipeline(restart: bool = False):
-    try:
-        if restart:
-            # Turn on maintenance mode
-            FLAG_PATH.touch()
-
-            print("--------------------")
-            dirs_to_empty = [
-                Path("data/raw/fas").resolve(),
-                Path("frontend/public/").resolve()
-            ]
-            for directory in dirs_to_empty:
-                for file in directory.glob("*.json"):
-                        if file.is_file():
-                            file.unlink()
-
-            for year in ESR_YEARS:
-                fetch_esr_data(usda_api_key=USDA_API_KEY, marketing_year=year)
-            for year in PSD_YEARS:
-                fetch_psd_data(usda_api_key=USDA_API_KEY, marketing_year=year)
-        
-        if not restart:
-            print("--------------------")
-        fetch_inspections()
-        clean_all_esr()
-        clean_all_psd()
-        clean_all_inspections()
-        init_database()
-        generate_home_page_commentary()
+    if restart:
         print("--------------------")
+        for file in Path("data/raw/fas").resolve().glob("*.json"):
+            if file.is_file():
+                file.unlink()
 
-    finally:
-        # Turn off maintenance mode
-        if FLAG_PATH.exists():
-            FLAG_PATH.unlink()
+        for year in ESR_YEARS:
+            fetch_esr_data(usda_api_key=USDA_API_KEY, marketing_year=year)
+        for year in PSD_YEARS:
+            fetch_psd_data(usda_api_key=USDA_API_KEY, marketing_year=year) 
+        fetch_inspections()
+        
+    if not restart:
+        print("--------------------")
+    clean_all_esr()
+    clean_all_psd()
+    clean_all_inspections()
+    init_database()
+    generate_home_page_commentary()
+    print("--------------------")
 
 @flow(name="agdatavault-pipeline")
 def agdatavault_pipeline(restart: bool = False):

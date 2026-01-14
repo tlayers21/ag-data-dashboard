@@ -175,7 +175,7 @@ export default function Corn() {
         <div className="filter-bar">
 
           {/* Data Source */}
-          <div className="filter-item">
+          <div className="filter-item select-wrapper">
             <label>Data Source</label>
             <select value={dataSource} onChange={handleDataSourceChange}>
               {DATA_SOURCES.map((src) => (
@@ -185,7 +185,7 @@ export default function Corn() {
           </div>
 
           {/* Country */}
-          <div className="filter-item">
+          <div className="filter-item select-wrapper">
             <label>Country</label>
             <select
               value={countrySlug}
@@ -199,7 +199,7 @@ export default function Corn() {
 
           {/* Data Type */}
           {dataSource !== "Forecasts" && (
-            <div className="filter-item">
+            <div className="filter-item select-wrapper">
               <label>Data Type</label>
               <select
                 value={effectiveDataTypeKey}
@@ -213,7 +213,7 @@ export default function Corn() {
           )}
 
           {/* Year Type */}
-          <div className="filter-item">
+          <div className="filter-item select-wrapper">
             <label>Year Type</label>
             <select
               value={yearType}

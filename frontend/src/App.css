@@ -77,7 +77,6 @@ header {
   z-index: 50;
   padding: 0.25rem 0;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-
   display: none;
 }
 
@@ -85,6 +84,7 @@ header {
   list-style: none;
   padding-left: 0;
 }
+
 .dropdown-item {
   list-style: none;
 }
@@ -107,7 +107,6 @@ header {
   background-color: #f0f4f7;
 }
 
-/* Highlight parent commodity */
 .dropdown-item.special {
   background: #f7f7f7;
   font-weight: 600;
@@ -142,15 +141,9 @@ header {
   margin-bottom: 1.5rem;
 }
 
-/* Default height for Home charts */
 .card .js-plotly-plot {
   height: 400px !important;
 }
-
-/* -----------------------------------------
-   UNIVERSAL COMMODITY CHART HEIGHT (700px)
-   Applies to: corn, wheat, soybeans, soybean oil, soybean meal
------------------------------------------- */
 
 .corn-chart .js-plotly-plot,
 .wheat-chart .js-plotly-plot,
@@ -160,7 +153,6 @@ header {
   height: 700px !important;
 }
 
-/* Centered card for all commodity pages */
 .corn-chart.card-centered,
 .wheat-chart.card-centered,
 .soybeans-chart.card-centered,
@@ -290,21 +282,29 @@ header {
   border: 1px solid #c7ccd1;
   border-radius: 4px;
   background-color: #ffffff;
-
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-/* Remove native arrow */
-.filter-item select {
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper::after {
+  content: "▾";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 0.8rem;
+  color: #444;
+}
+
+.select-wrapper select {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background-color: #fff;
-  padding-right: 2rem; /* space for arrow */
-  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='12' width='12' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'><polygon points='0,0 20,0 10,10'/></svg>");
-  background-repeat: no-repeat;
-  background-position: right 0.6rem center;
-  background-size: 10px;
+  padding-right: 2rem;
 }
