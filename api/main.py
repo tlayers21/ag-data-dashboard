@@ -7,6 +7,7 @@ from typing import List, Dict, Any
 from sqlalchemy import create_engine
 import pandas as pd
 from datetime import datetime, timedelta
+from pipeline.chart_generator import generate_weekly_esr_or_inspections_chart, generate_weekly_psd_chart
 
 load_dotenv()
 POSTGRES_URL = os.getenv("POSTGRES_URL")
@@ -27,11 +28,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+"""
 @app.get("/generate-charts")
 def generate_charts_endpoint():
     from pipeline.chart_generator import generate_charts
     generate_charts()
     return {"status": "ok"}
+"""
 
 @app.get("/debug/charts")
 def debug_charts():
@@ -107,6 +110,14 @@ def get_chart(commodity: str, source: str, country: str, datatype: str, year: st
 
     # ESR or Inspections pattern
     else:
+        generate_weekly_esr_or_inspections_chart(
+            source,
+            commodity,
+            country,
+            datatype,
+            year,
+            home=False
+        )
         filename = (
             f"{source}_us_{commodity}_to_{country}_{datatype}_last_5_years_{year}.json"
         )
