@@ -15,8 +15,38 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
         return res.json();
       })
       .then((data) => {
-        const fig = data.figure || data;
-        setFigure(fig);
+        // Case 1: Full Plotly figure { data, layout }
+        if (data.data && data.layout) {
+          setFigure({
+            data: data.data,
+            layout: data.layout,
+            config: data.config || {}
+          });
+          return;
+        }
+
+        // Case 2: Array of traces
+        if (Array.isArray(data)) {
+          setFigure({
+            data: data,
+            layout: {},
+            config: {}
+          });
+          return;
+        }
+
+        // Case 3: Single trace object (your backend case)
+        if (!data.data && !data.layout) {
+          setFigure({
+            data: [data],
+            layout: data.layout || {},
+            config: data.config || {}
+          });
+          return;
+        }
+
+        // Fallback
+        setFigure(data);
       })
       .catch(() => setError(true));
   }, [jsonPath]);
