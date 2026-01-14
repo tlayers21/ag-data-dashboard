@@ -17,16 +17,17 @@ CHART_DIR = Path(__file__).parent / "charts"
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     from pipeline.chart_generator import generate_charts
-    import threading
 
-    threading.Thread(
-        target=generate_charts,
-        daemon=True
-    ).start()
+    # Run chart generation synchronously
+    generate_charts()
 
     yield
-    
+
 app = FastAPI(lifespan=lifespan)
+
+@app.get("/debug/charts")
+def debug_charts():
+    return [f.name for f in CHART_DIR.glob("*.json")]
 
 engine = create_engine(POSTGRES_URL)
 
