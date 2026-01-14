@@ -22,6 +22,12 @@ def generate_weekly_esr_or_inspections_chart(
     
     df = pd.DataFrame(df_data)
 
+    # Debugging
+    if value_column not in df.columns:
+        print(f"Missing column: {value_column} for {data_type}, {commodity}, {country}")
+        print("Columns returned:", df.columns.tolist())
+        return
+
     if (df[value_column] == 0).all():
         return
 
