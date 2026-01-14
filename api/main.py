@@ -98,7 +98,7 @@ def get_last_5_years_inspections(commodity: str, country: str) -> List[Dict[str,
 def get_chart(commodity: str, source: str, country: str, datatype: str, year: str):
     source = source.lower()
     commodity = commodity.lower()
-    country = country.lower()
+    country = country.lower().replace("_", " ")
     datatype = datatype.lower()
     year = year.lower()
     year_type = "marketing" if year == "my" else "calendar"
