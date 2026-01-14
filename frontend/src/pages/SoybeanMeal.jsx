@@ -1,5 +1,6 @@
 import { useState, useMemo, useEffect } from "react";
 import ChartViewer from "../components/ChartViewer";
+import Dropdown from "../components/Dropdown";
 
 // -----------------------------
 // DATA SOURCE OPTIONS
@@ -12,16 +13,16 @@ const DATA_SOURCES = ["ESR", "PSD", "Forecasts"];
 const BASE_COUNTRIES = [
   { label: "World", slug: "world" },
   { label: "Mexico", slug: "mexico" },
-  { label: "European Union", slug: "european_union" },
+  { label: "European Union", slug: "european-union" },
   { label: "China", slug: "china" },
   { label: "Japan", slug: "japan" }
 ];
 
 const PSD_COUNTRIES = [
   { label: "World", slug: "world" },
-  { label: "United States", slug: "united_states" },
+  { label: "United States", slug: "united-states" },
   { label: "Mexico", slug: "mexico" },
-  { label: "European Union", slug: "european_union" },
+  { label: "European Union", slug: "european-union" },
   { label: "China", slug: "china" },
   { label: "Japan", slug: "japan" }
 ];

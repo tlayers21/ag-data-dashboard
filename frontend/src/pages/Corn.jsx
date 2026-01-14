@@ -1,5 +1,6 @@
 import { useState, useMemo, useEffect } from "react";
 import ChartViewer from "../components/ChartViewer";
+import Dropdown from "../components/Dropdown";
 
 // -----------------------------
 // DATA SOURCE OPTIONS
@@ -12,16 +13,16 @@ const DATA_SOURCES = ["Inspections", "ESR", "PSD", "Forecasts"];
 const BASE_COUNTRIES = [
   { label: "World", slug: "world" },
   { label: "Mexico", slug: "mexico" },
-  { label: "European Union", slug: "european_union" },
+  { label: "European Union", slug: "european-union" },
   { label: "China", slug: "china" },
   { label: "Japan", slug: "japan" }
 ];
 
 const PSD_COUNTRIES = [
   { label: "World", slug: "world" },
-  { label: "United States", slug: "united_states" },
+  { label: "United States", slug: "united-states" },
   { label: "Mexico", slug: "mexico" },
-  { label: "European Union", slug: "european_union" },
+  { label: "European Union", slug: "european-union" },
   { label: "China", slug: "china" },
   { label: "Japan", slug: "japan" }
 ];
@@ -172,56 +173,63 @@ export default function Corn() {
         <div className="filter-bar">
 
           {/* Data Source */}
-          <div className="filter-item select-wrapper">
+          <div className="filter-item">
             <label>Data Source</label>
-            <select value={dataSource} onChange={handleDataSourceChange}>
-              {DATA_SOURCES.map((src) => (
-                <option key={src} value={src}>{src}</option>
-              ))}
-            </select>
+            <Dropdown
+              label={dataSource}
+              items={DATA_SOURCES.map((src) => ({
+                label: src,
+                value: src
+              }))}
+              onSelect={(value) =>
+                handleDataSourceChange({ target: { value } })
+              }
+            />
           </div>
 
           {/* Country */}
-          <div className="filter-item select-wrapper">
+          <div className="filter-item">
             <label>Country</label>
-            <select
-              value={countrySlug}
-              onChange={(e) => setCountrySlug(e.target.value)}
-            >
-              {countries.map((c) => (
-                <option key={c.slug} value={c.slug}>{c.label}</option>
-              ))}
-            </select>
+            <Dropdown
+              label={countries.find((c) => c.slug === countrySlug)?.label}
+              items={countries.map((c) => ({
+                label: c.label,
+                value: c.slug
+              }))}
+              onSelect={(value) => setCountrySlug(value)}
+            />
           </div>
 
           {/* Data Type */}
           {dataSource !== "Forecasts" && (
-            <div className="filter-item select-wrapper">
+            <div className="filter-item">
               <label>Data Type</label>
-              <select
-                value={effectiveDataTypeKey}
-                onChange={(e) => setDataTypeKey(e.target.value)}
-              >
-                {dataTypes.map((t) => (
-                  <option key={t.key} value={t.key}>{t.label}</option>
-                ))}
-              </select>
+              <Dropdown
+                label={
+                  dataTypes.find((t) => t.key === effectiveDataTypeKey)?.label
+                }
+                items={dataTypes.map((t) => ({
+                  label: t.label,
+                  value: t.key
+                }))}
+                onSelect={(value) => setDataTypeKey(value)}
+              />
             </div>
           )}
 
           {/* Year Type */}
-          <div className="filter-item select-wrapper">
+          <div className="filter-item">
             <label>Year Type</label>
-            <select
-              value={yearType}
-              onChange={(e) => setYearType(e.target.value)}
-            >
-              {YEAR_TYPES
-                .filter((y) => !(dataSource === "PSD" && y.key === "cal"))
-                .map((y) => (
-                  <option key={y.key} value={y.key}>{y.label}</option>
-                ))}
-            </select>
+            <Dropdown
+              label={YEAR_TYPES.find((y) => y.key === yearType)?.label}
+              items={YEAR_TYPES.filter(
+                (y) => !(dataSource === "PSD" && y.key === "cal")
+              ).map((y) => ({
+                label: y.label,
+                value: y.key
+              }))}
+              onSelect={(value) => setYearType(value)}
+            />
           </div>
 
         </div>

@@ -313,3 +313,25 @@ header {
   background-color: #eef3f7;
   cursor: pointer;
 }
+
+
+/* ------------------------------
+   CUSTOM DROPDOWNS (Filter bar)
+------------------------------ */
+
+.filter-dropdown {
+  margin-right: 1rem;
+}
+
+.filter-label {
+  border: 1px solid #c7ccd1;
+  border-radius: 4px;
+  padding: 0.35rem 1.75rem 0.35rem 0.5rem;
+  background: #fff;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.filter-label:hover {
+  background-color: #e8eef3;
+}
