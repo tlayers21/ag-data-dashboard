@@ -17,6 +17,16 @@ CHART_DIR.mkdir(parents=True, exist_ok=True)
 
 app = FastAPI()
 
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["https://tlayers21.github.io"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 @app.get("/generate-charts")
 def generate_charts_endpoint():
     from pipeline.chart_generator import generate_charts
