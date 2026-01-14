@@ -5,7 +5,6 @@ from dotenv import load_dotenv
 from pipeline.fetch_all import fetch_esr_data, fetch_psd_data, fetch_inspections
 from pipeline.clean import clean_all_esr, clean_all_psd, clean_all_inspections
 from pipeline.database import init_database
-from pipeline.chart_generator import generate_charts, generate_home_page_charts
 from pipeline.commentary_generator import generate_home_page_commentary
 
 load_dotenv()
@@ -44,8 +43,6 @@ def run_pipeline(restart: bool = False):
         clean_all_psd()
         clean_all_inspections()
         init_database()
-        generate_charts()
-        generate_home_page_charts()
         generate_home_page_commentary()
         print("--------------------")
 

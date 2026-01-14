@@ -305,6 +305,8 @@ def generate_weekly_psd_chart(
 
     pio.write_json(figure, str(json_path))
 
+# TODO: Possibly rework API so instead these are called instead of each individual country to remove chart loading delay
+"""
 # Generates every single chart possible for all commodities and marketing/calendar years if applicable
 def generate_charts() -> None:
     print("Generating All Specific Page Charts...")
@@ -437,3 +439,4 @@ def generate_home_page_charts() -> None:
             )
 
     print("Done.\n==========")
+    """
