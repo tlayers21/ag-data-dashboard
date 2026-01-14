@@ -47,7 +47,9 @@ def fetch_last_5_years(data: str, commodity: str, country: str) -> List[Dict[str
         ORDER BY {data_column} DESC;
     """
 
-    df = pd.read_sql(query, engine)
+    with engine.begin() as conn:
+        df = pd.read_sql(query, conn)
+
     return df.to_dict(orient="records")
 
 # Fetches ESR data from last 5 years
