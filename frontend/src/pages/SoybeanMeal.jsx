@@ -4,7 +4,6 @@ import ChartViewer from "../components/ChartViewer";
 // -----------------------------
 // DATA SOURCE OPTIONS
 // -----------------------------
-// Inspections removed
 const DATA_SOURCES = ["ESR", "PSD", "Forecasts"];
 
 // -----------------------------
@@ -42,22 +41,22 @@ const ESR_TYPES = [
 ];
 
 // -----------------------------
-// PSD ATTRIBUTES (SOYBEAN MEAL)
+// PSD ATTRIBUTES
 // -----------------------------
 const PSD_ATTRIBUTES = [
   { key: "crush", label: "Crush" },
-  { key: "extraction_rate", label: "Extraction Rate" },
   { key: "beginning_stocks", label: "Beginning Stocks" },
   { key: "production", label: "Production" },
   { key: "imports", label: "Imports" },
   { key: "total_supply", label: "Total Supply" },
   { key: "exports", label: "Exports" },
+  { key: "domestic_consumption", label: "Domestic Consumption" },
   { key: "industrial_domestic_consumption", label: "Industrial Domestic Consumption" },
   { key: "food_use_domestic_consumption", label: "Food Use Domestic Consumption" },
   { key: "feed_waste_domestic_consumption", label: "Feed Waste Domestic Consumption" },
-  { key: "domestic_consumption", label: "Domestic Consumption" },
   { key: "ending_stocks", label: "Ending Stocks" },
   { key: "total_distribution", label: "Total Distribution" },
+  { key: "extraction_rate", label: "Extraction Rate" },
   { key: "soybean_meal_equivalent", label: "Soybean Meal Equivalent" }
 ];
 
@@ -70,7 +69,7 @@ const YEAR_TYPES = [
 ];
 
 // -----------------------------
-// UNIVERSAL JSON PATH BUILDER
+// JSON PATH BUILDER
 // -----------------------------
 function buildJsonPath(dataSource, commodity, countrySlug, dataTypeKey, yearType) {
   const fileSuffix = yearType === "cal" ? "cal" : "my";
@@ -89,49 +88,34 @@ function buildJsonPath(dataSource, commodity, countrySlug, dataTypeKey, yearType
 // MAIN COMPONENT
 // -----------------------------
 export default function SoybeanMeal() {
-  const commodity = "soybean_meal";
+  const commodity = "soybean meal";
 
-  // Default source is ESR since Inspections is removed
   const [dataSource, setDataSource] = useState("ESR");
   const [countrySlug, setCountrySlug] = useState("world");
   const [dataTypeKey, setDataTypeKey] = useState(ESR_TYPES[0].key);
   const [yearType, setYearType] = useState("my");
 
-  // Force Marketing Year when PSD is selected
   useEffect(() => {
     if (dataSource === "PSD" && yearType === "cal") {
       setYearType("my");
     }
   }, [dataSource, yearType]);
 
-  // Country list logic
   const countries = useMemo(() => {
     return dataSource === "PSD" ? PSD_COUNTRIES : BASE_COUNTRIES;
   }, [dataSource]);
 
-  // Data type list logic
   const dataTypes = useMemo(() => {
     if (dataSource === "ESR") return ESR_TYPES;
-
-    if (dataSource === "PSD") {
-      if (countrySlug === "united_states") {
-        return PSD_ATTRIBUTES.filter(
-          (attr) => attr.key !== "trade_year_imports_from_united_states"
-        );
-      }
-      return PSD_ATTRIBUTES;
-    }
-
+    if (dataSource === "PSD") return PSD_ATTRIBUTES;
     return [];
   }, [dataSource, countrySlug]);
 
-  // Ensure valid data type
   const effectiveDataTypeKey = useMemo(() => {
     const exists = dataTypes.some((t) => t.key === dataTypeKey);
     return exists ? dataTypeKey : dataTypes[0]?.key || "";
   }, [dataTypes, dataTypeKey]);
 
-  // Build JSON path
   const jsonPath = buildJsonPath(
     dataSource,
     commodity,
@@ -140,7 +124,6 @@ export default function SoybeanMeal() {
     yearType
   );
 
-  // Handle data source switching
   function handleDataSourceChange(e) {
     const next = e.target.value;
     setDataSource(next);
@@ -162,8 +145,7 @@ export default function SoybeanMeal() {
       <div className="filter-bar-wrapper">
         <div className="filter-bar">
 
-          {/* Data Source */}
-          <div className="filter-item">
+          <div className="filter-item select-wrapper">
             <label>Data Source</label>
             <select value={dataSource} onChange={handleDataSourceChange}>
               {DATA_SOURCES.map((src) => (
@@ -172,8 +154,7 @@ export default function SoybeanMeal() {
             </select>
           </div>
 
-          {/* Country */}
-          <div className="filter-item">
+          <div className="filter-item select-wrapper">
             <label>Country</label>
             <select
               value={countrySlug}
@@ -185,9 +166,8 @@ export default function SoybeanMeal() {
             </select>
           </div>
 
-          {/* Data Type */}
           {dataSource !== "Forecasts" && (
-            <div className="filter-item">
+            <div className="filter-item select-wrapper">
               <label>Data Type</label>
               <select
                 value={effectiveDataTypeKey}
@@ -200,8 +180,7 @@ export default function SoybeanMeal() {
             </div>
           )}
 
-          {/* Year Type */}
-          <div className="filter-item">
+          <div className="filter-item select-wrapper">
             <label>Year Type</label>
             <select
               value={yearType}
@@ -258,7 +237,7 @@ export default function SoybeanMeal() {
               overflow: "hidden"
             }}
           >
-            <ChartViewer jsonPath={jsonPath} variant="soybean_meal" />
+            <ChartViewer jsonPath={jsonPath} variant="soybean meal" />
           </div>
         </div>
       )}

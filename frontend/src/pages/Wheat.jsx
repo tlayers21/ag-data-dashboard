@@ -60,12 +60,12 @@ const PSD_ATTRIBUTES = [
   { key: "total_supply", label: "Total Supply" },
   { key: "exports", label: "Exports" },
   { key: "trade_year_exports", label: "Trade Year Exports" },
-  { key: "feed_domestic_consumption", label: "Feed Domestic Consumption" },
-  { key: "food_seed_and_industrial_consumption", label: "Food Seed and Industrial Consumption" },
+  { key: "domestic_consumption", label: "Domestic Consumption" },
   { key: "feed_domestic_consumption", label: "Feed Domestic Consumption" },
   { key: "ending_stocks", label: "Ending Stocks" },
   { key: "total_distribution", label: "Total Distribution" },
-  { key: "yield", label: "Yield" }
+  { key: "yield", label: "Yield" },
+  { key: "food_seed_and_industrial_consumption", label: "Food Seed and Industrial Consumption" }
 ];
 
 // -----------------------------
@@ -95,7 +95,7 @@ function buildApiUrl(dataSource, commodity, countrySlug, dataTypeKey, yearType) 
 // -----------------------------
 // MAIN COMPONENT
 // -----------------------------
-export default function Corn() {
+export default function Wheat() {
   const commodity = "wheat";
 
   const [dataSource, setDataSource] = useState("Inspections");
@@ -169,7 +169,7 @@ export default function Corn() {
 
   return (
     <div className="main-content">
-      <h2>Corn</h2>
+      <h2>Wheat</h2>
 
       {/* FILTER BAR */}
       <div className="filter-bar-wrapper">
@@ -233,7 +233,7 @@ export default function Corn() {
 
       {/* FORECASTS MODE */}
       {dataSource === "Forecasts" && (
-        <div className="card card-centered corn-chart">
+        <div className="card card-centered wheat-chart">
           <h3>Forecasts – Under Construction</h3>
           <div
             style={{
@@ -255,7 +255,7 @@ export default function Corn() {
 
       {/* NORMAL CHART MODE */}
       {dataSource !== "Forecasts" && jsonPath && (
-        <div className="card card-centered corn-chart">
+        <div className="card card-centered wheat-chart">
           <h3>
             {dataSource} – {countries.find((c) => c.slug === countrySlug)?.label} –{" "}
             {dataTypes.find((t) => t.key === effectiveDataTypeKey)?.label} –{" "}

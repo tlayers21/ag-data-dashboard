@@ -41,26 +41,26 @@ const ESR_TYPES = [
   { key: "accumulated_exports", label: "Accumulated Exports" },
   { key: "outstanding_sales", label: "Outstanding Sales" },
   { key: "gross_new_sales", label: "Gross New Sales" },
-  { key: "current_marketing_year_net_sales", label: "Current MY Net Sales" },
-  { key: "current_marketing_year_total_commitment", label: "Current MY Total Commitment" },
-  { key: "next_marketing_year_net_sales", label: "Next MY Net Sales" },
-  { key: "next_marketing_year_outstanding_sales", label: "Next MY Outstanding Sales" }
+  { key: "current_marketing_year_net_sales", label: "Current Marketing Year Net Sales" },
+  { key: "current_marketing_year_total_commitment", label: "Current Marketing Year Total Commitment" },
+  { key: "next_marketing_year_net_sales", label: "Next Marketing Year Net Sales" },
+  { key: "next_marketing_year_outstanding_sales", label: "Next Marketing Year Outstanding Sales" }
 ];
 
 // -----------------------------
-// PSD ATTRIBUTES (SOYBEANS)
+// PSD ATTRIBUTES
 // -----------------------------
 const PSD_ATTRIBUTES = [
   { key: "area_harvested", label: "Area Harvested" },
+  { key: "crush", label: "Crush" },
   { key: "beginning_stocks", label: "Beginning Stocks" },
   { key: "production", label: "Production" },
   { key: "imports", label: "Imports" },
   { key: "total_supply", label: "Total Supply" },
   { key: "exports", label: "Exports" },
-  { key: "crush", label: "Crush" },
+  { key: "domestic_consumption", label: "Domestic Consumption" },
   { key: "food_use_domestic_consumption", label: "Food Use Domestic Consumption" },
   { key: "feed_waste_domestic_consumption", label: "Feed Waste Domestic Consumption" },
-  { key: "domestic_consumption", label: "Domestic Consumption" },
   { key: "ending_stocks", label: "Ending Stocks" },
   { key: "total_distribution", label: "Total Distribution" },
   { key: "yield", label: "Yield" }
@@ -75,19 +75,19 @@ const YEAR_TYPES = [
 ];
 
 // -----------------------------
-// UNIVERSAL JSON PATH BUILDER
+// API URL BUILDER
 // -----------------------------
-function buildJsonPath(dataSource, commodity, countrySlug, dataTypeKey, yearType) {
-  const fileSuffix = yearType === "cal" ? "cal" : "my";
-  const dataPrefix = dataSource.toLowerCase();
+function slugToSpaced(slug) {
+  return slug.replace(/_/g, " ");
+}
 
-  if (dataPrefix === "forecasts") return null;
+const API_BASE = process.env.REACT_APP_API_BASE;
 
-  if (dataPrefix === "psd") {
-    return `/${dataPrefix}_${commodity}_for_${countrySlug}_${dataTypeKey}_last_5_years_${fileSuffix}.json`;
-  }
+function buildApiUrl(dataSource, commodity, countrySlug, dataTypeKey, yearType) {
+  const ds = dataSource.toLowerCase();
+  if (ds === "forecasts") return null;
 
-  return `/${dataPrefix}_us_${commodity}_to_${countrySlug}_${dataTypeKey}_last_5_years_${fileSuffix}.json`;
+  return `${API_BASE}/${commodity}/${ds}/${countrySlug}/${dataTypeKey}/${yearType}`;
 }
 
 // -----------------------------
@@ -139,11 +139,11 @@ export default function Soybeans() {
     return exists ? dataTypeKey : dataTypes[0]?.key || "";
   }, [dataTypes, dataTypeKey]);
 
-  // Build JSON path
-  const jsonPath = buildJsonPath(
+  // Build API URL
+  const jsonPath = buildApiUrl(
     dataSource,
-    commodity,
-    countrySlug,
+    slugToSpaced(commodity),
+    slugToSpaced(countrySlug),
     effectiveDataTypeKey,
     yearType
   );
@@ -174,7 +174,7 @@ export default function Soybeans() {
         <div className="filter-bar">
 
           {/* Data Source */}
-          <div className="filter-item">
+          <div className="filter-item select-wrapper">
             <label>Data Source</label>
             <select value={dataSource} onChange={handleDataSourceChange}>
               {DATA_SOURCES.map((src) => (
@@ -184,7 +184,7 @@ export default function Soybeans() {
           </div>
 
           {/* Country */}
-          <div className="filter-item">
+          <div className="filter-item select-wrapper">
             <label>Country</label>
             <select
               value={countrySlug}
@@ -198,7 +198,7 @@ export default function Soybeans() {
 
           {/* Data Type */}
           {dataSource !== "Forecasts" && (
-            <div className="filter-item">
+            <div className="filter-item select-wrapper">
               <label>Data Type</label>
               <select
                 value={effectiveDataTypeKey}
@@ -212,7 +212,7 @@ export default function Soybeans() {
           )}
 
           {/* Year Type */}
-          <div className="filter-item">
+          <div className="filter-item select-wrapper">
             <label>Year Type</label>
             <select
               value={yearType}

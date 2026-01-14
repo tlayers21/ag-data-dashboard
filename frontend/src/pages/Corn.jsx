@@ -64,7 +64,8 @@ const PSD_ATTRIBUTES = [
   { key: "feed_domestic_consumption", label: "Feed Domestic Consumption" },
   { key: "ending_stocks", label: "Ending Stocks" },
   { key: "total_distribution", label: "Total Distribution" },
-  { key: "yield", label: "Yield" }
+  { key: "yield", label: "Yield" },
+  { key: "food_seed_and_industrial_consumption", label: "Food Seed and Industrial Consumption" }
 ];
 
 // -----------------------------
