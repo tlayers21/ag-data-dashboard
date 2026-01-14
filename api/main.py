@@ -17,7 +17,7 @@ CHART_DIR.mkdir(parents=True, exist_ok=True)
 
 app = FastAPI()
 
-@app.post("/generate-charts")
+@app.get("/generate-charts")
 def generate_charts_endpoint():
     from pipeline.chart_generator import generate_charts
     generate_charts()
