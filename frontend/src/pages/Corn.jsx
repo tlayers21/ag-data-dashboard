@@ -100,12 +100,23 @@ export default function Corn() {
   const [dataTypeKey, setDataTypeKey] = useState("export_inspections");
   const [yearType, setYearType] = useState("my");
 
+  // PSD fix: remove invalid attribute for United States
+  useEffect(() => {
+    if (dataSource === "PSD" && countrySlug === "united-states") {
+      if (dataTypeKey === "trade_year_imports_from_united_states") {
+        setDataTypeKey("area_harvested");
+      }
+    }
+  }, [dataSource, countrySlug, dataTypeKey]);
+
+  // Force Marketing Year when PSD is selected
   useEffect(() => {
     if (dataSource === "PSD" && yearType === "cal") {
       setYearType("my");
     }
   }, [dataSource, yearType]);
 
+  // Country list logic
   const countries = useMemo(() => {
     if (dataSource === "Inspections") {
       return [{ label: "World", slug: "world" }];
@@ -113,12 +124,13 @@ export default function Corn() {
     return dataSource === "PSD" ? PSD_COUNTRIES : BASE_COUNTRIES;
   }, [dataSource]);
 
+  // Data type list logic
   const dataTypes = useMemo(() => {
     if (dataSource === "Inspections") return INSPECTIONS_TYPES;
     if (dataSource === "ESR") return ESR_TYPES;
 
     if (dataSource === "PSD") {
-      if (countrySlug === "united_states") {
+      if (countrySlug === "united-states") {
         return PSD_ATTRIBUTES.filter(
           (attr) => attr.key !== "trade_year_imports_from_united_states"
         );
@@ -129,11 +141,13 @@ export default function Corn() {
     return [];
   }, [dataSource, countrySlug]);
 
+  // Ensure valid data type
   const effectiveDataTypeKey = useMemo(() => {
     const exists = dataTypes.some((t) => t.key === dataTypeKey);
     return exists ? dataTypeKey : dataTypes[0]?.key || "";
   }, [dataTypes, dataTypeKey]);
 
+  // Build API URL
   const jsonPath = buildApiUrl(
     dataSource,
     commodity,
@@ -142,6 +156,7 @@ export default function Corn() {
     yearType
   );
 
+  // Handle data source switching
   function handleDataSourceChange(e) {
     const next = e.target.value;
     setDataSource(next);
@@ -171,7 +186,7 @@ export default function Corn() {
             <label>Data Source</label>
             <Dropdown
               label={dataSource}
-              fixedWidth
+              className="filter-dropdown"
               items={DATA_SOURCES.map((src) => ({
                 label: src,
                 value: src
@@ -187,7 +202,7 @@ export default function Corn() {
             <label>Country</label>
             <Dropdown
               label={countries.find((c) => c.slug === countrySlug)?.label}
-              fixedWidth
+              className="filter-dropdown"
               items={countries.map((c) => ({
                 label: c.label,
                 value: c.slug
@@ -204,7 +219,7 @@ export default function Corn() {
                 label={
                   dataTypes.find((t) => t.key === effectiveDataTypeKey)?.label
                 }
-                fixedWidth
+                className="filter-dropdown"
                 items={dataTypes.map((t) => ({
                   label: t.label,
                   value: t.key
@@ -219,7 +234,7 @@ export default function Corn() {
             <label>Year Type</label>
             <Dropdown
               label={YEAR_TYPES.find((y) => y.key === yearType)?.label}
-              fixedWidth
+              className="filter-dropdown"
               items={YEAR_TYPES.filter(
                 (y) => !(dataSource === "PSD" && y.key === "cal")
               ).map((y) => ({
