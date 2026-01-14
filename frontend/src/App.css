@@ -290,4 +290,24 @@ header {
   border: 1px solid #c7ccd1;
   border-radius: 4px;
   background-color: #ffffff;
+  cursor: pointer;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='14' viewBox='0 0 20 20' width='14' xmlns='http://www.w3.org/2000/svg'><path d='M5.516 7.548a.625.625 0 0 1 .884 0L10 11.148l3.6-3.6a.625.625 0 1 1 .884.884l-4.042 4.042a.625.625 0 0 1-.884 0L5.516 8.432a.625.625 0 0 1 0-.884z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 0.8rem;
+}
+
+.filter-item select:hover {
+  border-color: #999;
+}
+
+.filter-item select:focus {
+  outline: none;
+  border-color: #2a4d69;
+  box-shadow: 0 0 0 2px rgba(42, 77, 105, 0.2);
 }
