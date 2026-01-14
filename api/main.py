@@ -101,9 +101,16 @@ def get_chart(commodity: str, source: str, country: str, datatype: str, year: st
     country = country.lower()
     datatype = datatype.lower()
     year = year.lower()
+    year_type = "marketing" if year == "my" else "calendar"
 
     # PSD pattern
     if source == "psd":
+        generate_weekly_psd_chart(
+            source,
+            commodity,
+            country,
+            datatype
+        )
         filename = (
             f"{source}_{commodity}_for_{country}_{datatype}_last_5_years_{year}.json"
         )
@@ -115,7 +122,7 @@ def get_chart(commodity: str, source: str, country: str, datatype: str, year: st
             commodity,
             country,
             datatype,
-            year,
+            year_type,
             home=False
         )
         filename = (
