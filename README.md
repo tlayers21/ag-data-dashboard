@@ -31,11 +31,10 @@ The frontend is a **React-based dashboard** designed for clarity, speed, and eas
 - Built with **React**, **React Router**, and **Plotly**
 - Commodity-specific pages for:
   - Corn
-  - Wheat (including SRW & HRW)
+  - Wheat
   - Soybeans
   - Soybean Meal
   - Soybean Oil
-  - Ethanol
 - Dynamic chart rendering with multiple data sources
 - Country and metric selectors
 - Clean, mobile-friendly layout
@@ -125,4 +124,4 @@ Data sourced from the USDA Foreign Agricultural Service (FAS) Open Data Portal:
 - More Countries
 - Forecasting
 - Ethanol and other biofuels using an EIA API
-- More years of data
+- More years of past data
