@@ -17,6 +17,12 @@ CHART_DIR.mkdir(parents=True, exist_ok=True)
 
 app = FastAPI()
 
+@app.post("/generate-charts")
+def generate_charts_endpoint():
+    from pipeline.chart_generator import generate_charts
+    generate_charts()
+    return {"status": "ok"}
+
 @app.get("/debug/charts")
 def debug_charts():
     return [f.name for f in CHART_DIR.glob("*.json")]
