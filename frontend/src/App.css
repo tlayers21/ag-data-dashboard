@@ -295,3 +295,16 @@ header {
   -moz-appearance: none;
   appearance: none;
 }
+
+/* Remove native arrow */
+.filter-item select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #fff;
+  padding-right: 2rem; /* space for arrow */
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='12' width='12' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'><polygon points='0,0 20,0 10,10'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 0.6rem center;
+  background-size: 10px;
+}
