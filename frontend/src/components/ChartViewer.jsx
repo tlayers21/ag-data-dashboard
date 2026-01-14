@@ -15,38 +15,40 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
         return res.json();
       })
       .then((data) => {
-        // Case 1: Full Plotly figure { data, layout }
-        if (data.data && data.layout) {
+        let fig = data;
+
+        // Full Plotly figure { data, layout }
+        if (fig.data && fig.layout) {
           setFigure({
-            data: data.data,
-            layout: data.layout,
-            config: data.config || {}
+            data: fig.data,
+            layout: fig.layout,
+            config: fig.config || {}
           });
           return;
         }
 
-        // Case 2: Array of traces
-        if (Array.isArray(data)) {
+        // Array of traces
+        if (Array.isArray(fig)) {
           setFigure({
-            data: data,
+            data: fig,
             layout: {},
             config: {}
           });
           return;
         }
 
-        // Case 3: Single trace object (your backend case)
-        if (!data.data && !data.layout) {
+        // Single trace object (your backend case)
+        if (!fig.data && !fig.layout) {
           setFigure({
-            data: [data],
-            layout: data.layout || {},
-            config: data.config || {}
+            data: [fig],
+            layout: {},
+            config: {}
           });
           return;
         }
 
         // Fallback
-        setFigure(data);
+        setFigure(fig);
       })
       .catch(() => setError(true));
   }, [jsonPath]);
