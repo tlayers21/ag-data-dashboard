@@ -13,6 +13,8 @@ load_dotenv()
 POSTGRES_URL = os.getenv("POSTGRES_URL")
 
 CHART_DIR = Path(__file__).parent / "charts"
+# For Render
+CHART_DIR.mkdir(parents=True, exist_ok=True)
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
