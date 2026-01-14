@@ -1,6 +1,5 @@
 import { useState, useMemo, useEffect } from "react";
 import ChartViewer from "../components/ChartViewer";
-import "../App.css";
 
 // -----------------------------
 // DATA SOURCE OPTIONS
