@@ -81,8 +81,8 @@ def clean_all_psd() -> None:
     country_dfs = []
     for file in country_files:
         parts = file.stem.split('_')
-        psd_index = parts.index("psd")
-        country = parts[psd_index + 1]
+        to_index = parts.index("to")
+        country = parts[to_index + 1]
         cleaned_df = clean_psd_country_file(file, country)
         country_dfs.append(cleaned_df)
     

@@ -176,7 +176,7 @@ export default function Corn() {
           <div className="filter-item">
             <label>Data Source</label>
             <Dropdown
-              label={dataSource}
+              label="Data Source"
               items={DATA_SOURCES.map((src) => ({
                 label: src,
                 value: src
@@ -191,7 +191,7 @@ export default function Corn() {
           <div className="filter-item">
             <label>Country</label>
             <Dropdown
-              label={countries.find((c) => c.slug === countrySlug)?.label}
+              label="Country"
               items={countries.map((c) => ({
                 label: c.label,
                 value: c.slug
@@ -205,9 +205,7 @@ export default function Corn() {
             <div className="filter-item">
               <label>Data Type</label>
               <Dropdown
-                label={
-                  dataTypes.find((t) => t.key === effectiveDataTypeKey)?.label
-                }
+                label="Data Type"
                 items={dataTypes.map((t) => ({
                   label: t.label,
                   value: t.key
@@ -221,7 +219,7 @@ export default function Corn() {
           <div className="filter-item">
             <label>Year Type</label>
             <Dropdown
-              label={YEAR_TYPES.find((y) => y.key === yearType)?.label}
+              label="Year Type"
               items={YEAR_TYPES.filter(
                 (y) => !(dataSource === "PSD" && y.key === "cal")
               ).map((y) => ({

@@ -319,6 +319,8 @@ header {
    CUSTOM DROPDOWNS (Filter bar)
 ------------------------------ */
 
+/* Commodity page custom dropdowns */
+
 .filter-dropdown {
   margin-right: 1rem;
 }
@@ -330,8 +332,21 @@ header {
   background: #fff;
   display: inline-block;
   cursor: pointer;
+  color: #000000; /* black text */
 }
 
 .filter-label:hover {
   background-color: #e8eef3;
+  color: #000000; /* keep text black on hover */
+}
+
+/* Dropdown menu text (commodity pages only) */
+.filter-dropdown .dropdown-item,
+.filter-dropdown .dropdown-item a {
+  color: #000000;
+}
+
+.filter-dropdown .dropdown-item:hover {
+  background-color: #f0f4f7;
+  color: #000000;
 }
