@@ -68,7 +68,7 @@ def generate_weekly_esr_or_inspections_chart(
         markers=True,
         custom_data=["week_ending_date", value_column],
         title=(
-            f"Weekly U.S. {commodity.title()} {value_column.replace("_", " ").title()}<br>"
+            f"Weekly U.S. {commodity.title()} {value_column.replace('_', ' ').title()}<br>"
             f"to {country.title()} (as of {latest_date})"
         ),
         labels={
@@ -174,12 +174,12 @@ def generate_weekly_esr_or_inspections_chart(
     if home:
         json_path = (
             json_dir
-             / f"{data_type}_us_{commodity.lower().replace(" ", "_")}_to_{country.lower().replace(" ", "_")}_{value_column}_last_5_years_{file_suffix}_home.json"
+             / f"{data_type}_us_{commodity.lower().replace(' ', '_')}_to_{country.lower().replace(' ', '_')}_{value_column}_last_5_years_{file_suffix}_home.json"
         )
     else:
         json_path = (
             json_dir
-             / f"{data_type}_us_{commodity.lower().replace(" ", "_")}_to_{country.lower().replace(" ", "_")}_{value_column}_last_5_years_{file_suffix}.json"
+             / f"{data_type}_us_{commodity.lower().replace(' ', '_')}_to_{country.lower().replace(' ', '_')}_{value_column}_last_5_years_{file_suffix}.json"
         )
 
     pio.write_json(figure, str(json_path))
@@ -202,7 +202,7 @@ def generate_weekly_psd_chart(
     df["attribute_norm"] = (
     df["attribute"]
     .str.lower()
-    .str.replace(" ", "_")
+    .str.replace(' ', '_')
     )
 
     df = df[df["attribute_norm"] == attribute]
@@ -295,8 +295,8 @@ def generate_weekly_psd_chart(
 
     json_dir = Path("api/charts").resolve()
     json_dir.mkdir(parents=True, exist_ok=True)
-    commodity_slug = commodity.lower().replace(" ", "_")
-    country_slug = country.lower().replace(" ", "_")
+    commodity_slug = commodity.lower().replace(' ', '_')
+    country_slug = country.lower().replace(' ', '_')
 
     json_path = (
         json_dir

@@ -13,7 +13,7 @@ def fetch_esr_data(usda_api_key: str, marketing_year: int) -> None:
     print(f"Starting ESR Data Fetching Process For Marketing Year {marketing_year}...")
     for name, cfg in COMMODITIES.items():
         print(f"Fetching: {name.title()} For Marketing Year {marketing_year}")
-        underscore_commodity_name = name.replace(" ", "_")
+        underscore_commodity_name = name.replace(' ', '_')
 
         esr_code = cfg["esr"]["commodity"]
         esr_countries = cfg["esr"]["countries"]
@@ -36,7 +36,7 @@ def fetch_esr_data(usda_api_key: str, marketing_year: int) -> None:
             country_data = usda_data.esr_country(esr_code, country_code, marketing_year)
             time.sleep(1)
             country_name = ESR_COUNTRY_NAMES.get(country_code, country_code)
-            underscore_country_name = country_name.replace(" ", "_")
+            underscore_country_name = country_name.replace(' ', '_')
 
             if country_data:
                 with open(fas_data_path(f"{underscore_commodity_name}_esr_to_{underscore_country_name}_{marketing_year}my.json"), "w") as file:
@@ -56,7 +56,7 @@ def fetch_psd_data(usda_api_key: str, marketing_year: int) -> None:
     print(f"Starting PSD Data Fetching Process For Marketing Year {marketing_year}...")
     for name, cfg in COMMODITIES.items():
         print(f"Fetching: {name.title()} For Marketing Year {marketing_year}")
-        underscore_commodity_name = name.replace(" ", "_")
+        underscore_commodity_name = name.replace(' ', '_')
 
         psd_code = cfg["psd"]["commodity"]
         psd_countries = cfg["psd"]["countries"]
@@ -79,7 +79,7 @@ def fetch_psd_data(usda_api_key: str, marketing_year: int) -> None:
             country_data = usda_data.psd_country(psd_code, country_code, marketing_year)
             time.sleep(1)
             country_name = PSD_COUNTRY_NAMES.get(country_code, country_code)
-            underscore_country_name = country_name.replace(" ", "_")
+            underscore_country_name = country_name.replace(' ', '_')
 
             if country_data:
                 with open(fas_data_path(f"{underscore_commodity_name}_psd_to_{underscore_country_name}_{marketing_year}my.json"), "w") as file:

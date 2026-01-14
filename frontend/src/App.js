@@ -20,6 +20,8 @@ import Soybeans from "./pages/Soybeans";
 import SoybeanMeal from "./pages/SoybeanMeal";
 import SoybeanOil from "./pages/SoybeanOil";
 
+import "./App.css";
+
 function App() {
   useEffect(() => {
     fetch("/maintenance")

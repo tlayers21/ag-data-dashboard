@@ -143,7 +143,7 @@ export default function Corn() {
   // Build API URL
   const jsonPath = buildApiUrl(
     dataSource,
-    commodity,
+    slugToSpaced(commodity),
     slugToSpaced(countrySlug),
     effectiveDataTypeKey,
     yearType
