@@ -15,6 +15,11 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
         return res.json();
       })
       .then((data) => {
+        if (data.error) {
+          setError(true);
+          return;
+        }
+
         let fig = data;
 
         // Full Plotly figure { data, layout }
@@ -37,7 +42,7 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
           return;
         }
 
-        // Single trace object (your backend case)
+        // Single trace object (backend case)
         if (!fig.data && !fig.layout) {
           setFigure({
             data: [fig],
@@ -59,6 +64,7 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
       variant
     );
 
+  // Error message for commodity pages
   if (error && isCommodityPage) {
     return (
       <div
@@ -79,6 +85,7 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
     );
   }
 
+  // Loading state
   if (!figure) {
     return (
       <div
@@ -95,6 +102,7 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
     );
   }
 
+  // Apply commodity-specific layout adjustments
   let layout = { ...figure.layout };
 
   if (isCommodityPage) {

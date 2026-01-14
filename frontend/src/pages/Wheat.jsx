@@ -1,5 +1,6 @@
 import { useState, useMemo, useEffect } from "react";
 import ChartViewer from "../components/ChartViewer";
+import "../App.css";
 
 // -----------------------------
 // DATA SOURCE OPTIONS
@@ -77,19 +78,19 @@ const YEAR_TYPES = [
 ];
 
 // -----------------------------
-// UNIVERSAL JSON PATH BUILDER
+// API URL BUILDER (Corn-style)
 // -----------------------------
-function buildJsonPath(dataSource, commodity, countrySlug, dataTypeKey, yearType) {
-  const fileSuffix = yearType === "cal" ? "cal" : "my";
-  const dataPrefix = dataSource.toLowerCase();
+function slugToSpaced(slug) {
+  return slug.replace(/_/g, " ");
+}
 
-  if (dataPrefix === "forecasts") return null;
+const API_BASE = process.env.REACT_APP_API_BASE;
 
-  if (dataPrefix === "psd") {
-    return `/${dataPrefix}_${commodity}_for_${countrySlug}_${dataTypeKey}_last_5_years_${fileSuffix}.json`;
-  }
+function buildApiUrl(dataSource, commodity, countrySlug, dataTypeKey, yearType) {
+  const ds = dataSource.toLowerCase();
+  if (ds === "forecasts") return null;
 
-  return `/${dataPrefix}_us_${commodity}_to_${countrySlug}_${dataTypeKey}_last_5_years_${fileSuffix}.json`;
+  return `${API_BASE}/${commodity}/${ds}/${countrySlug}/${dataTypeKey}/${yearType}`;
 }
 
 // -----------------------------
@@ -141,11 +142,11 @@ export default function Wheat() {
     return exists ? dataTypeKey : dataTypes[0]?.key || "";
   }, [dataTypes, dataTypeKey]);
 
-  // Build JSON path
-  const jsonPath = buildJsonPath(
+  // Build API URL
+  const jsonPath = buildApiUrl(
     dataSource,
-    commodity,
-    countrySlug,
+    slugToSpaced(commodity),
+    slugToSpaced(countrySlug),
     effectiveDataTypeKey,
     yearType
   );
