@@ -147,8 +147,8 @@ html {
 }
 
 .card .js-plotly-plot {
-  height: 500px !important;
-  min-width: 650px;
+  height: 450px !important;
+  min-width: 700px;
 }
 
 .corn-chart .js-plotly-plot,
