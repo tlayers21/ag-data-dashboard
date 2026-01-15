@@ -3,14 +3,18 @@ import ChartViewer from "../components/ChartViewer";
 import { loadCommentary } from "../utils/loadCommentary";
 
 export default function Home() {
-  const [commentary, setCommentary] = useState("");
+  const [cornCommentary, setCornCommentary] = useState([]);
+  const [wheatCommentary, setWheatCommentary] = useState([]);
+  const [soyCommentary, setSoyCommentary] = useState([]);
 
   const API = process.env.REACT_APP_API_BASE;
 
   useEffect(() => {
     async function load() {
-      const html = await loadCommentary();
-      setCommentary(html);
+      const { corn, wheat, soybeans } = await loadCommentary();
+      setCornCommentary(corn);
+      setWheatCommentary(wheat);
+      setSoyCommentary(soybeans);
     }
     load();
   }, []);
@@ -52,10 +56,11 @@ export default function Home() {
       </div>
 
       <div className="commentary-box">
-        <h3>Commentary:</h3>
+        <h3>Corn Commentary:</h3>
         <div
-          style={{ whiteSpace: "pre-line" }}
-          dangerouslySetInnerHTML={{ __html: commentary }}
+          dangerouslySetInnerHTML={{
+            __html: cornCommentary.join("<br><br>")
+          }}
         />
       </div>
 
@@ -93,10 +98,11 @@ export default function Home() {
       </div>
 
       <div className="commentary-box">
-        <h3>Commentary:</h3>
+        <h3>Wheat Commentary:</h3>
         <div
-          style={{ whiteSpace: "pre-line" }}
-          dangerouslySetInnerHTML={{ __html: commentary }}
+          dangerouslySetInnerHTML={{
+            __html: wheatCommentary.join("<br><br>")
+          }}
         />
       </div>
 
@@ -134,10 +140,11 @@ export default function Home() {
       </div>
 
       <div className="commentary-box">
-        <h3>Commentary:</h3>
+        <h3>Soybean Commentary:</h3>
         <div
-          style={{ whiteSpace: "pre-line" }}
-          dangerouslySetInnerHTML={{ __html: commentary }}
+          dangerouslySetInnerHTML={{
+            __html: soyCommentary.join("<br><br>")
+          }}
         />
       </div>
 
