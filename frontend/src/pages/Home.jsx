@@ -25,24 +25,28 @@ export default function Home() {
           <h3>Export Inspections</h3>
           <ChartViewer
             jsonPath={`${API}/home/corn/inspections/world/export_inspections/my`}
+            variant="home"
           />
         </div>
         <div className="card">
           <h3>Total Commitment</h3>
           <ChartViewer
             jsonPath={`${API}/home/corn/esr/world/current_marketing_year_total_commitment/my`}
+            variant="home"
           />
         </div>
         <div className="card">
           <h3>Gross New Sales</h3>
           <ChartViewer
             jsonPath={`${API}/home/corn/esr/world/gross_new_sales/my`}
+            variant="home"
           />
         </div>
         <div className="card">
           <h3>Next Marketing Year Outstanding Sales</h3>
           <ChartViewer
             jsonPath={`${API}/home/corn/esr/world/next_marketing_year_outstanding_sales/my`}
+            variant="home"
           />
         </div>
       </div>
@@ -62,24 +66,28 @@ export default function Home() {
           <h3>Export Inspections</h3>
           <ChartViewer
             jsonPath={`${API}/home/wheat/inspections/world/export_inspections/my`}
+            variant="home"
           />
         </div>
         <div className="card">
           <h3>Total Commitment</h3>
           <ChartViewer
             jsonPath={`${API}/home/wheat/esr/world/current_marketing_year_total_commitment/my`}
+            variant="home"
           />
         </div>
         <div className="card">
           <h3>Gross New Sales</h3>
           <ChartViewer
             jsonPath={`${API}/home/wheat/esr/world/gross_new_sales/my`}
+            variant="home"
           />
         </div>
         <div className="card">
           <h3>Next Marketing Year Outstanding Sales</h3>
           <ChartViewer
             jsonPath={`${API}/home/wheat/esr/world/next_marketing_year_outstanding_sales/my`}
+            variant="home"
           />
         </div>
       </div>
@@ -99,24 +107,28 @@ export default function Home() {
           <h3>Export Inspections</h3>
           <ChartViewer
             jsonPath={`${API}/home/soybeans/inspections/world/export_inspections/my`}
+            variant="home"
           />
         </div>
         <div className="card">
           <h3>Total Commitment</h3>
           <ChartViewer
             jsonPath={`${API}/home/soybeans/esr/world/current_marketing_year_total_commitment/my`}
+            variant="home"
           />
         </div>
         <div className="card">
           <h3>Gross New Sales</h3>
           <ChartViewer
             jsonPath={`${API}/home/soybeans/esr/world/gross_new_sales/my`}
+            variant="home"
           />
         </div>
         <div className="card">
           <h3>Next Marketing Year Outstanding Sales</h3>
           <ChartViewer
             jsonPath={`${API}/home/soybeans/esr/world/next_marketing_year_outstanding_sales/my`}
+            variant="home"
           />
         </div>
       </div>
