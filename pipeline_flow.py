@@ -18,7 +18,7 @@ FLAG_PATH = Path("maintenance.flag").resolve()
 def run_pipeline(restart: bool = False):
     if restart:
         print("--------------------")
-        dirs_to_empty = ["data/raw/fas", "data/clean", "api/charts", "frontend/src/commentary"]
+        dirs_to_empty = ["data/raw/fas", "data/clean", "api/charts", "api/commentary"]
         extensions = ["*.json", "*.csv", "*.txt"]
         for directory in dirs_to_empty:
             for extension in extensions:

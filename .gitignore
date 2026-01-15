@@ -14,3 +14,6 @@ frontend/src/commentary
 
 # JSON files for charts
 api/charts
+
+# Commentary TXT files
+api/commentary

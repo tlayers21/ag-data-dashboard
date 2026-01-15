@@ -1,7 +1,5 @@
-export async function loadCommentary(files) {
-  const texts = await Promise.all(
-    files.map((file) => fetch(file).then((r) => r.text()))
-  );
-
-  return texts.join("\n\n");
+export async function loadCommentary() {
+  const res = await fetch(`${process.env.REACT_APP_API_BASE}/commentary/home`);
+  const text = await res.text();
+  return text;
 }

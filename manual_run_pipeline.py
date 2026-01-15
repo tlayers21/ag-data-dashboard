@@ -26,7 +26,7 @@ if __name__ == "__main__":
         
     if restart:
         print("--------------------")
-        dirs_to_empty = ["data/raw/fas", "data/clean", "api/charts", "frontend/src/commentary"]
+        dirs_to_empty = ["data/raw/fas", "data/clean", "api/charts", "api/commentary"]
         extensions = ["*.json", "*.csv", "*.txt"]
         for directory in dirs_to_empty:
             for extension in extensions:

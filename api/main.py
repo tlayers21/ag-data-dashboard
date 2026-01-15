@@ -1,24 +1,24 @@
 from fastapi import FastAPI
 from fastapi.responses import FileResponse
+from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 import os
 from pathlib import Path
-from typing import List, Dict, Any
 from sqlalchemy import create_engine
 import pandas as pd
 from datetime import datetime, timedelta
 from pipeline.chart_generator import generate_weekly_esr_or_inspections_chart, generate_weekly_psd_chart
+from pipeline.commentary_generator import generate_home_page_commentary
 
 load_dotenv()
 POSTGRES_URL = os.getenv("POSTGRES_URL")
 
-CHART_DIR = Path(__file__).parent / "charts"
 # For Render
+CHART_DIR = Path(__file__).parent / "charts"
 CHART_DIR.mkdir(parents=True, exist_ok=True)
+COMMENTARY_DIR = Path(__file__).parent / "commentary"
 
 app = FastAPI()
-
-from fastapi.middleware.cors import CORSMiddleware
 
 app.add_middleware(
     CORSMiddleware,
@@ -43,15 +43,15 @@ def debug_charts():
 engine = create_engine(POSTGRES_URL)
 
 @app.get("/health")
-def health() -> Dict[str, str]:
+def health():
     return {"status": "ok"}
 
 @app.get("/maintenance")
-def maintenance_status() -> Dict[str, bool]:
+def maintenance_status():
     return {"active": os.path.exists("maintenance.flag")}
 
 # Fetches data from last 5 years dependent on the 3 types of data: ESR, PSD, and inspections (allows for some leeway)
-def fetch_last_5_years(data: str, commodity: str, country: str) -> List[Dict[str, Any]]:
+def fetch_last_5_years(data: str, commodity: str, country: str):
     cutoff_year = datetime.now().year - 6
     
     if data == "psd":
@@ -80,17 +80,17 @@ def fetch_last_5_years(data: str, commodity: str, country: str) -> List[Dict[str
 
 # Fetches ESR data from last 5 years
 @app.get("/esr/last5years")
-def get_last_5_years_esr(commodity: str, country: str) -> List[Dict[str, Any]]:
+def get_last_5_years_esr(commodity: str, country: str):
     return fetch_last_5_years("esr", commodity, country)
 
 # Fetches PSD data from last 5 years
 @app.get("/psd/last5years")
-def get_last_5_years_psd(commodity: str, country: str) -> List[Dict[str, Any]]:
+def get_last_5_years_psd(commodity: str, country: str):
     return fetch_last_5_years("psd", commodity, country)
 
 # Fetches export inspections data from last 5 years
 @app.get("/inspections/last5years")
-def get_last_5_years_inspections(commodity: str, country: str) -> List[Dict[str, Any]]:
+def get_last_5_years_inspections(commodity: str, country: str):
     return fetch_last_5_years("inspections", commodity, country)
 
 # Fetches JSON flie to build Plotly chart for specific commodity page
@@ -148,3 +148,18 @@ def get_home_chart(commodity: str, source: str, country: str, datatype: str, yea
         return {"error": f"Chart not found: {filename}"}
 
     return FileResponse(file_path)
+
+# Fetches commentary for home page
+@app.get("/commentary")
+@app.get("/commentary/home")
+def get_home_commentary():
+    generate_home_page_commentary()
+
+    texts = []
+    for file in sorted(COMMENTARY_DIR.glob("*.txt")):
+        with open(file, "r", encoding="utf-8") as f:
+            texts.append(f.read())
+
+    combined = "\n\n".join(texts)
+
+    return combined

@@ -1,7 +1,6 @@
 import pandas as pd
 from .agdata_api_client import AgDataClient
 from pathlib import Path
-from datetime import datetime
 
 # Generates weekly commentary for all page charts (calculates WoW, YoY, and comparison to 5-year average metrics)
 def generate_weekly_commentary(
@@ -98,7 +97,8 @@ def generate_weekly_commentary(
         commentary += f"{"above" if avg_change >= 0 else "below"}"
         commentary += " the 5-year average)."
     
-    commentary_dir = Path("frontend/src/commentary/").resolve()
+    commentary_dir = Path("api/commentary").resolve()
+    commentary_dir.mkdir(parents=True, exist_ok=True)
     commentary_path = (
         commentary_dir
          / f"us_{commodity.lower()}_to_{country.lower()}_{value_column}_commentary.txt"
