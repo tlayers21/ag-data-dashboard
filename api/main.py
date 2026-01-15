@@ -139,12 +139,13 @@ def get_chart(commodity: str, source: str, country: str, datatype: str, year: st
 # Fetches JSON file to build Plotly chart for specific home page
 @app.get("/api/home/{commodity}/{source}/{country}/{datatype}/{year}")
 def get_home_chart(commodity: str, source: str, country: str, datatype: str, year: str):
+    year_type = "marketing" if year == "my" else "calendar"
     generate_weekly_esr_or_inspections_chart(
             source,
             commodity,
             country,
             datatype,
-            year,
+            year_type,
             home=True
         )
     filename = (
