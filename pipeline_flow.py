@@ -31,14 +31,15 @@ def run_pipeline(restart: bool = False):
             fetch_esr_data(usda_api_key=USDA_API_KEY, marketing_year=year)
         for year in PSD_YEARS:
             fetch_psd_data(usda_api_key=USDA_API_KEY, marketing_year=year) 
+
         fetch_inspections()
+        clean_all_esr()
+        clean_all_psd()
+        clean_all_inspections()
+        init_database()
         
     if not restart:
         print("--------------------")
-    clean_all_esr()
-    clean_all_psd()
-    clean_all_inspections()
-    init_database()
     generate_charts()
     generate_home_page_charts()
     generate_home_page_commentary()
