@@ -359,12 +359,14 @@ html {
   width: 0%;
   background: linear-gradient(90deg, #4a90e2, #6ab0ff);
   border-radius: 6px;
-  animation: fillProgress var(--loading-duration, 30s) linear forwards;
+  animation: fillProgress var(--loading-duration, 30s) cubic-bezier(0.1, 0.9, 0.3, 1) forwards;
 }
 
 @keyframes fillProgress {
-  from { width: 0% }
-  to { width: 100% }
+  0%   { width: 0% }
+  70%  { width: 85% }
+  90%  { width: 90% }
+  100% { width: 100% }
 }
 
 @keyframes fadeIn {
