@@ -13,10 +13,10 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
       .then(async (res) => {
         if (!res.ok) throw new Error("Bad response");
 
-        // Try to parse JSON safely
-        const text = await res.text();
+        const raw = await res.text();
+
         try {
-          return JSON.parse(text);
+          return JSON.parse(raw);
         } catch {
           throw new Error("Invalid JSON");
         }
