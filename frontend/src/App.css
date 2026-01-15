@@ -63,7 +63,7 @@ header {
 
 
 /* ------------------------------
-   DROPDOWN MENUS
+   DROPDOWN MENUS (MAIN NAV)
 ------------------------------ */
 
 .dropdown {
@@ -87,17 +87,11 @@ header {
 
 .dropdown-item {
   list-style: none;
-}
-
-.nav-item:hover .dropdown {
-  display: block;
-}
-
-.dropdown-item {
   padding: 0.6rem 1rem;
   white-space: nowrap;
 }
 
+/* RESTORED ORIGINAL NAVBAR DROPDOWN TEXT COLOR */
 .dropdown-item a {
   text-decoration: none;
   color: #333;
@@ -107,9 +101,8 @@ header {
   background-color: #f0f4f7;
 }
 
-.dropdown-item.special {
-  background: #f7f7f7;
-  font-weight: 600;
+.nav-item:hover .dropdown {
+  display: block;
 }
 
 
@@ -153,11 +146,7 @@ header {
   height: 700px !important;
 }
 
-.corn-chart.card-centered,
-.wheat-chart.card-centered,
-.soybeans-chart.card-centered,
-.soybean-oil-chart.card-centered,
-.soybean-meal-chart.card-centered {
+.card-centered {
   width: 100%;
   max-width: 1350px;
   margin-left: auto;
@@ -186,7 +175,7 @@ header {
 
 
 /* ------------------------------
-   SUBNAV (Commodity tabs)
+   SUBNAV
 ------------------------------ */
 
 .subnav {
@@ -276,50 +265,10 @@ header {
   margin-bottom: 0.25rem;
 }
 
-.filter-item select {
-  padding: 0.35rem 0.5rem;
-  font-size: 0.95rem;
-  border: 1px solid #c7ccd1;
-  border-radius: 4px;
-  background-color: #ffffff;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.select-wrapper {
-  position: relative;
-}
-
-.select-wrapper::after {
-  content: "▾";
-  position: absolute;
-  right: 12px;
-  bottom: 4px;
-  pointer-events: none;
-  font-size: 1rem;
-  color: #2a4d69;
-}
-
-.select-wrapper select {
-  padding: 0.45rem 2rem 0.55rem 0.5rem;
-  border: 1px solid #c7ccd1;
-  border-radius: 4px;
-  background-color: #ffffff;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-}
-
-.select-wrapper select:hover {
-  background-color: #eef3f7;
-  cursor: pointer;
-}
-
 
 /* ------------------------------
-   CUSTOM DROPDOWNS (Filter bar)
+   CUSTOM DROPDOWNS (Commodity pages)
 ------------------------------ */
-
-/* Commodity page custom dropdowns */
 
 .filter-dropdown {
   margin-right: 1rem;
@@ -332,15 +281,16 @@ header {
   background: #fff;
   display: inline-block;
   cursor: pointer;
-  color: #000000; /* black text */
+  color: #000000;
+  width: 220px;
+  white-space: nowrap;
 }
 
 .filter-label:hover {
   background-color: #e8eef3;
-  color: #000000; /* keep text black on hover */
+  color: #000000;
 }
 
-/* Dropdown menu text (commodity pages only) */
 .filter-dropdown .dropdown-item,
 .filter-dropdown .dropdown-item a {
   color: #000000;
