@@ -15,7 +15,7 @@ POSTGRES_URL = os.getenv("POSTGRES_URL")
 
 # For Render
 CHART_DIR = Path(__file__).parent / "charts"
-CHART_DIR.mkdir(parents=True, exist_ok=True)
+CHART_DIR.mkdir(parents=True, exist_ok=True )
 COMMENTARY_DIR = Path(__file__).parent / "commentary"
 
 app = FastAPI()
