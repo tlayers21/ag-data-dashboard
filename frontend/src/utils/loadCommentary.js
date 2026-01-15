@@ -6,10 +6,8 @@ export async function loadCommentary() {
     const res = await fetch(`${ROOT}/commentary/home`);
     let text = await res.text();
 
-    // Fix escaped newlines and stray quotes
     text = text.replace(/\\n/g, "\n").replace(/^"+|"+$/g, "");
 
-    // Split into paragraphs
     const paragraphs = text.split(/\n\s*\n/).filter(Boolean);
 
     const groups = { corn: [], soybeans: [], wheat: [] };
@@ -51,7 +49,7 @@ export async function loadCommentary() {
       const date = items[0].date || "";
 
       const ordered = orderSentences(items);
-      if (ordered.length === 0) return ""; // prevent crash
+      if (ordered.length === 0) return "";
 
       const first = ordered[0] || "";
       const rest = ordered.slice(1).map(s => s.replace(dateRegex, "").trim());

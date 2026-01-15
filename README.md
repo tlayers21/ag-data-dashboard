@@ -25,7 +25,6 @@ The frontend is a **React-based dashboard** designed for clarity, speed, and eas
 - Parses historical Export Inspections reports
 - Cleans, normalizes, and stores all data in a SQL database
 - Generates charts and homepage summaries automatically
-- Runs on a scheduled basis with a maintenance-mode flag for safe updates
 
 ### Interactive Dashboard
 - Built with **React**, **React Router**, and **Plotly**
@@ -85,7 +84,6 @@ Fetched via USDA API. Includes:
 - SQLAlchemy
 - Pandas
 - Automated ETL pipeline
-- Maintenance-mode flag system
 - Chart generation engine
 
 **Frontend**
@@ -94,20 +92,6 @@ Fetched via USDA API. Includes:
 - React Router
 - Plotly.js
 - Custom UI components
-- Mobile-friendly table wrappers
-
----
-
-## Maintenance Mode
-
-During automated updates, the backend creates a `maintenance.flag` file.  
-The frontend checks `/maintenance` on load and redirects users to a clean **“System Updating”** page until the pipeline finishes.  
-
-This ensures:
-
-- No partial data loads
-- No broken charts
-- No inconsistent states
 
 ---
 

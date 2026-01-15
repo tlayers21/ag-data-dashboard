@@ -3,7 +3,11 @@ import ChartViewer from "../components/ChartViewer";
 import { loadCommentary } from "../utils/loadCommentary";
 
 export default function Home() {
-  const [loading, setLoading] = useState(true);
+  // Only show loading screen on first visit
+  const [loading, setLoading] = useState(() => {
+    const hasVisited = localStorage.getItem("hasVisitedHome");
+    return !hasVisited;
+  });
 
   const [cornCommentary, setCornCommentary] = useState("");
   const [wheatCommentary, setWheatCommentary] = useState("");
@@ -18,18 +22,27 @@ export default function Home() {
       setWheatCommentary(wheat);
       setSoyCommentary(soybeans);
 
-      // Give Render time to wake up
-      setTimeout(() => setLoading(false), 20000); // 20 seconds
+      const hasVisited = localStorage.getItem("hasVisitedHome");
+
+      if (!hasVisited) {
+        setTimeout(() => {
+          localStorage.setItem("hasVisitedHome", "true");
+          setLoading(false);
+        }, 45000);
+      } else {
+
+        setLoading(false);
+      }
     }
+
     load();
   }, []);
 
-  // Loading overlay
   if (loading) {
     return (
       <div className="loading-overlay">
         <div className="loader"></div>
-        <p>Warming up the data engine…</p>
+        <p>Warming up the data engine - Please Wait ~30 Seconds...</p>
       </div>
     );
   }
