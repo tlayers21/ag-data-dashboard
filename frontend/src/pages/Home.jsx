@@ -13,9 +13,27 @@ export default function Home() {
   useEffect(() => {
     async function load() {
       const res = await fetch(`${ROOT}/commentary/home`);
-      const text = await res.text();
-      setCommentary(text);
+      let text = await res.text();
+
+      // Split into lines
+      let lines = text.split("\n").filter(Boolean);
+
+      if (lines.length > 0) {
+        // Bold the first date prefix
+        lines[0] = lines[0].replace(
+          /^([A-Z]{3}-\d{1,2}:)/,
+          "<strong>$1</strong>"
+        );
+
+        // Strip date prefixes from all other lines
+        for (let i = 1; i < lines.length; i++) {
+          lines[i] = lines[i].replace(/^[A-Z]{3}-\d{1,2}:\s*/, "");
+        }
+      }
+
+      setCommentary(lines.join(" "));
     }
+
     load();
   }, [ROOT]);
 
@@ -61,7 +79,10 @@ export default function Home() {
 
       <div className="commentary-box">
         <h3>Commentary:</h3>
-        <div style={{ whiteSpace: "pre-line" }}>{commentary}</div>
+        <div
+          style={{ whiteSpace: "pre-line" }}
+          dangerouslySetInnerHTML={{ __html: commentary }}
+        />
       </div>
 
 
@@ -104,7 +125,10 @@ export default function Home() {
 
       <div className="commentary-box">
         <h3>Commentary:</h3>
-        <div style={{ whiteSpace: "pre-line" }}>{commentary}</div>
+        <div
+          style={{ whiteSpace: "pre-line" }}
+          dangerouslySetInnerHTML={{ __html: commentary }}
+        />
       </div>
 
 
@@ -147,7 +171,10 @@ export default function Home() {
 
       <div className="commentary-box">
         <h3>Commentary:</h3>
-        <div style={{ whiteSpace: "pre-line" }}>{commentary}</div>
+        <div
+          style={{ whiteSpace: "pre-line" }}
+          dangerouslySetInnerHTML={{ __html: commentary }}
+        />
       </div>
 
     </div>

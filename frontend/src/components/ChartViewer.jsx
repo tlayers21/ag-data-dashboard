@@ -10,42 +10,47 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
     setFigure(null);
 
     fetch(jsonPath)
-      .then((res) => {
-        if (!res.ok) throw new Error("API returned error");
-        return res.json();
+      .then(async (res) => {
+        if (!res.ok) throw new Error("Bad response");
+
+        // Try to parse JSON safely
+        const text = await res.text();
+        try {
+          return JSON.parse(text);
+        } catch {
+          throw new Error("Invalid JSON");
+        }
       })
       .then((data) => {
-        if (data.error) {
+        if (!data || data.error) {
           setError(true);
           return;
         }
 
-        let fig = data;
-
-        // Full Plotly figure { data, layout }
-        if (fig.data && fig.layout) {
+        // Full Plotly figure
+        if (data.data && data.layout) {
           setFigure({
-            data: fig.data,
-            layout: fig.layout,
-            config: fig.config || {}
+            data: data.data,
+            layout: data.layout,
+            config: data.config || {}
           });
           return;
         }
 
         // Array of traces
-        if (Array.isArray(fig)) {
+        if (Array.isArray(data)) {
           setFigure({
-            data: fig,
+            data: data,
             layout: {},
             config: {}
           });
           return;
         }
 
-        // Single trace object (backend case)
-        if (!fig.data && !fig.layout) {
+        // Single trace object
+        if (typeof data === "object" && !data.data && !data.layout) {
           setFigure({
-            data: [fig],
+            data: [data],
             layout: {},
             config: {}
           });
@@ -53,7 +58,7 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
         }
 
         // Fallback
-        setFigure(fig);
+        setFigure(data);
       })
       .catch(() => setError(true));
   }, [jsonPath]);
@@ -64,7 +69,7 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
       variant
     );
 
-  // Error message for commodity pages
+  // Commodity page error message
   if (error && isCommodityPage) {
     return (
       <div
@@ -85,7 +90,26 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
     );
   }
 
-  // Loading state
+  // Home page error message
+  if (error && !isCommodityPage) {
+    return (
+      <div
+        style={{
+          height: "100%",
+          width: "100%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          fontSize: "1rem",
+          color: "#999"
+        }}
+      >
+        Chart unavailable.
+      </div>
+    );
+  }
+
+  // Loading
   if (!figure) {
     return (
       <div
@@ -102,7 +126,7 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
     );
   }
 
-  // Apply commodity-specific layout adjustments
+  // Layout adjustments
   let layout = { ...figure.layout };
 
   if (isCommodityPage) {
