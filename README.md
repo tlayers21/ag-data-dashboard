@@ -1,6 +1,6 @@
 # Agricultural Commodity Data Dashboard
 
-A fully automated analytics platform for exploring USDA export and supply‑demand data across major U.S. agricultural commodities.
+A fully automated analytics platform for exploring USDA supply‑demand data across major U.S. agricultural commodities.
 
 ---
 
@@ -82,9 +82,10 @@ Fetched via USDA API. Includes:
 
 - FastAPI
 - SQLAlchemy
+- PostgreSQL
 - Pandas
 - Automated ETL pipeline
-- Chart generation engine
+- Chart and Commentary generation engine
 
 **Frontend**
 
@@ -105,7 +106,7 @@ Data sourced from the USDA Foreign Agricultural Service (FAS) Open Data Portal:
 ## Future Improvements
 
 - Additional commodities
-- More Countries
+- More countries
 - Forecasting
 - Ethanol and other biofuels using an EIA API
 - More years of past data

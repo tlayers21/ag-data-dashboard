@@ -98,6 +98,8 @@ def generate_weekly_commentary(
         commentary += " the 5-year average)."
     
     commentary_dir = Path("api/commentary").resolve()
+    
+    # For Render
     commentary_dir.mkdir(parents=True, exist_ok=True)
     commentary_path = (
         commentary_dir

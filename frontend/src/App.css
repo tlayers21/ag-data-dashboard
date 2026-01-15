@@ -147,7 +147,8 @@ html {
 }
 
 .card .js-plotly-plot {
-  height: 400px !important;
+  height: 500px !important;
+  min-width: 650px;
 }
 
 .corn-chart .js-plotly-plot,
@@ -339,6 +340,8 @@ html {
   margin-top: 0.75rem;
   height: 1.25rem;
   transition: opacity 0.3s ease;
+  text-align: center;
+  display: block;
 }
 
 .progress-container {

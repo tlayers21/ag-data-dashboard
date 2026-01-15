@@ -3,10 +3,9 @@ import ChartViewer from "../components/ChartViewer";
 import { loadCommentary } from "../utils/loadCommentary";
 
 export default function Home() {
-  // Determine if this is the user's first visit
   const [loading, setLoading] = useState(() => {
     const hasVisited = localStorage.getItem("hasVisitedHome");
-    return !hasVisited; // true if first visit
+    return !hasVisited;
   });
 
   const [loadingMessage, setLoadingMessage] = useState("Warming up the data engine…");
@@ -19,13 +18,13 @@ export default function Home() {
 
   const messages = [
   "Warming up the data engine…",
-  "Retrieving Export Sales Report metrics…",
-  "Loading Production, Supply and Distribution numbers…",
-  "Parsing the latest Inspections data…",
+  "Retrieving export sales report metrics…",
+  "Loading production, supply and distribution numbers…",
+  "Parsing the latest inspections data…",
   "Processing and transforming raw datasets…",
   "Merging multi‑commodity analytics…",
   "Generating charts and commentary…",
-  "Almost ready - charts may take 1–2 minutes to fully render"
+  "Almost ready. charts may take 1-2 minutes to fully render…"
   ];
 
   useEffect(() => {
@@ -34,7 +33,7 @@ export default function Home() {
     const messageInterval = setInterval(() => {
       messageIndex = (messageIndex + 1) % messages.length;
       setLoadingMessage(messages[messageIndex]);
-    }, 3000);
+    }, 5000);
 
     return () => clearInterval(messageInterval);
   }, []);
@@ -52,11 +51,11 @@ export default function Home() {
         setTimeout(() => {
           localStorage.setItem("hasVisitedHome", "true");
           setLoading(false);
-        }, 30000);
+        }, 40000);
       } else {
         setTimeout(() => {
           setLoading(false);
-        }, 10000);
+        }, 15000);
       }
     }
 

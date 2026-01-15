@@ -23,7 +23,7 @@ def run_pipeline(restart: bool = False):
         extensions = ["*.json", "*.csv", "*.txt"]
         for directory in dirs_to_empty:
             for extension in extensions:
-                for file in Path(directory).resolve().glob(extensions):
+                for file in Path(directory).resolve().glob(extension):
                     if file.is_file():
                         file.unlink()
 

@@ -22,7 +22,7 @@ def generate_weekly_esr_or_inspections_chart(
     
     df = pd.DataFrame(df_data)
 
-    # Debugging
+    # For debugging
     if value_column not in df.columns:
         print(f"Missing column: {value_column} for {data_type}, {commodity}, {country}")
         print("Columns returned:", df.columns.tolist())
@@ -169,6 +169,8 @@ def generate_weekly_esr_or_inspections_chart(
     )
 
     json_dir = Path("api/charts").resolve()
+
+    # For Render
     json_dir.mkdir(parents=True, exist_ok=True)
 
     if home:
@@ -294,6 +296,8 @@ def generate_weekly_psd_chart(
     )
 
     json_dir = Path("api/charts").resolve()
+
+    # For Render
     json_dir.mkdir(parents=True, exist_ok=True)
     commodity_slug = commodity.lower()
     country_slug = country.lower()
@@ -304,8 +308,6 @@ def generate_weekly_psd_chart(
     )
 
     pio.write_json(figure, str(json_path))
-
-# TODO: Possibly rework API so instead these are called instead of each individual country to remove chart loading delay
 
 # Generates every single chart possible for all commodities and marketing/calendar years if applicable
 def generate_charts() -> None:
@@ -346,13 +348,13 @@ def generate_charts() -> None:
         "soybean_meal_equivalent"
     ]
 
-
-    for commodity in COMMODITIES.keys():
-        esr_countries = ESR_COUNTRY_NAMES.values()
-        psd_countries = PSD_COUNTRY_NAMES.values()
+    commodities = [commodity.replace(" ", "-") for commodity in COMMODITIES.keys()]
+    for commodity in commodities:
+        esr_countries = [country.replace(" ", "-") for country in ESR_COUNTRY_NAMES.values()]
+        psd_countries = [country.replace(" ", "-") for country in PSD_COUNTRY_NAMES.values()]
 
         for year_type in ["marketing", "calendar"]:
-            if commodity not in ["soybean meal", "soybean oil"]:
+            if commodity not in ["soybean-meal", "soybean-oil"]:
                 generate_weekly_esr_or_inspections_chart(
                 data_type="inspections",
                 commodity=commodity,
