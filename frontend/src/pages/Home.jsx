@@ -17,16 +17,17 @@ export default function Home() {
   const API = process.env.REACT_APP_API_BASE;
 
   const messages = [
-  "Warming up the data engine…",
-  "Retrieving export sales report metrics…",
-  "Loading production, supply and distribution numbers…",
-  "Parsing the latest inspections data…",
-  "Processing and transforming raw datasets…",
-  "Merging multi‑commodity analytics…",
-  "Generating charts and commentary…",
-  "Almost ready. charts may take 1-2 minutes to fully render…"
+    "Warming up the data engine…",
+    "Retrieving export sales report metrics…",
+    "Loading production, supply and distribution numbers…",
+    "Parsing the latest inspections data…",
+    "Processing and transforming raw datasets…",
+    "Merging multi‑commodity analytics…",
+    "Generating charts and commentary…",
+    "Almost ready. Charts may take 1-2 minutes to fully render…"
   ];
 
+  // Rotate loading messages
   useEffect(() => {
     let messageIndex = 0;
 
@@ -40,12 +41,21 @@ export default function Home() {
 
   useEffect(() => {
     async function load() {
-      const { corn, wheat, soybeans } = await loadCommentary();
-      setCornCommentary(corn);
-      setWheatCommentary(wheat);
-      setSoyCommentary(soybeans);
-
       const hasVisited = localStorage.getItem("hasVisitedHome");
+
+      document.documentElement.style.setProperty(
+        "--loading-duration",
+        hasVisited ? "15s" : "40s"
+      );
+
+      try {
+        const { corn, wheat, soybeans } = await loadCommentary();
+        setCornCommentary(corn);
+        setWheatCommentary(wheat);
+        setSoyCommentary(soybeans);
+      } catch (err) {
+        console.error("Commentary failed:", err);
+      }
 
       if (!hasVisited) {
         setTimeout(() => {

@@ -359,7 +359,7 @@ html {
   width: 0%;
   background: linear-gradient(90deg, #4a90e2, #6ab0ff);
   border-radius: 6px;
-  animation: fillProgress 40s linear forwards;
+  animation: fillProgress var(--loading-duration, 40s) linear forwards;
 }
 
 @keyframes fillProgress {

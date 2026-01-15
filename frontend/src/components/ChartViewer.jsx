@@ -9,15 +9,11 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
     setError(false);
     setFigure(null);
 
-    // 🔥 DEBUG: SHOW EXACT URL BEING FETCHED
-    console.log("ChartViewer fetching:", jsonPath, "variant:", variant);
-
     fetch(jsonPath)
       .then(async (res) => {
         if (!res.ok) throw new Error("Bad response");
 
         const raw = await res.text();
-
         try {
           return JSON.parse(raw);
         } catch {
@@ -30,7 +26,6 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
           return;
         }
 
-        // Full Plotly figure
         if (data.data && data.layout) {
           setFigure({
             data: data.data,
@@ -40,7 +35,6 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
           return;
         }
 
-        // Array of traces
         if (Array.isArray(data)) {
           setFigure({
             data: data,
@@ -49,8 +43,6 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
           });
           return;
         }
-
-        // Single trace object
         if (typeof data === "object" && !data.data && !data.layout) {
           setFigure({
             data: [data],
@@ -60,7 +52,6 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
           return;
         }
 
-        // Fallback
         setFigure(data);
       })
       .catch(() => setError(true));
@@ -126,7 +117,31 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
     );
   }
 
-  let layout = { ...figure.layout };
+  let layout = {
+    ...figure.layout,
+    hovermode: "x unified",
+    hoverlabel: {
+      ...(figure.layout?.hoverlabel || {}),
+      namelength: -1
+    }
+  };
+
+  if (variant === "home") {
+    layout = {
+      ...layout,
+      legend: {
+        ...(layout.legend || {}),
+        orientation: "h",
+        y: -0.25,
+        x: 0.5,
+        xanchor: "center"
+      },
+      margin: {
+        ...(layout.margin || {}),
+        b: 120
+      }
+    };
+  }
 
   if (isCommodityPage) {
     layout = {
