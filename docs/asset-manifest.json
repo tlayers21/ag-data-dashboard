@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/ag-data-dashboard/static/css/main.dc598c1a.css",
-    "main.js": "/ag-data-dashboard/static/js/main.4a92a7b1.js",
+    "main.css": "/ag-data-dashboard/static/css/main.a4cf416a.css",
+    "main.js": "/ag-data-dashboard/static/js/main.a76e9387.js",
     "index.html": "/ag-data-dashboard/index.html",
-    "main.dc598c1a.css.map": "/ag-data-dashboard/static/css/main.dc598c1a.css.map",
-    "main.4a92a7b1.js.map": "/ag-data-dashboard/static/js/main.4a92a7b1.js.map"
+    "main.a4cf416a.css.map": "/ag-data-dashboard/static/css/main.a4cf416a.css.map",
+    "main.a76e9387.js.map": "/ag-data-dashboard/static/js/main.a76e9387.js.map"
   },
   "entrypoints": [
-    "static/css/main.dc598c1a.css",
-    "static/js/main.4a92a7b1.js"
+    "static/css/main.a4cf416a.css",
+    "static/js/main.a76e9387.js"
   ]
 }

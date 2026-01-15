@@ -124,6 +124,7 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
     layout = {
       ...layout,
       hovermode: "closest",
+      dragmode: false,
       legend: {
         ...(layout.legend || {}),
         orientation: "h",

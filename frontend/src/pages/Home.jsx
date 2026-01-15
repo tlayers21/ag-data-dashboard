@@ -21,9 +21,8 @@ export default function Home() {
     "Loading production, supply and distribution numbers…",
     "Parsing the latest inspections data…",
     "Processing and transforming raw datasets…",
-    "Merging multi‑commodity analytics…",
     "Generating charts and commentary…",
-    "Almost ready. Charts may take 1-2 minutes to fully render…"
+    "Almost ready. Charts may take 1-2 minutes to fully load…"
   ];
 
   useEffect(() => {
@@ -39,7 +38,7 @@ export default function Home() {
     }
 
     setLoadingMessage(messages[messageIndex]);
-  }, 3750);
+  }, 2000);
 
   return () => clearInterval(interval);
   }, []);
@@ -53,7 +52,7 @@ export default function Home() {
 
       firstLoadRef.current = false;
 
-      document.documentElement.style.setProperty("--loading-duration", "30s");
+      document.documentElement.style.setProperty("--loading-duration", "18s");
 
       try {
         const { corn, wheat, soybeans } = await loadCommentary();
@@ -66,7 +65,7 @@ export default function Home() {
 
       setTimeout(() => {
         setLoading(false);
-      }, 24000);
+      }, 10900);
     }
 
     load();
