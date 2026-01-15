@@ -282,7 +282,8 @@ header {
   display: inline-block;
   cursor: pointer;
   color: #000000;
-  width: 220px;
+  width: 300px;
+  font-size: 0.95rem;
   white-space: nowrap;
 }
 
