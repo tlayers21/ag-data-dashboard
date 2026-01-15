@@ -17,3 +17,8 @@ api/charts
 
 # Commentary TXT files
 api/commentary
+
+# Deploy my using Prefect
+deploy_from_github.py
+apply_deployments.py
+prefect.yaml

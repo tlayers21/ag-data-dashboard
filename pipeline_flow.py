@@ -44,6 +44,6 @@ def run_pipeline(restart: bool = False):
     generate_home_page_commentary()
     print("--------------------")
 
-@flow(name="agdatavault-pipeline")
+@flow(name="agdatadashboard-pipeline")
 def agdatavault_pipeline(restart: bool = False):
     run_pipeline(restart)
