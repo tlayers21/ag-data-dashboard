@@ -66,7 +66,7 @@ export default function Home() {
 
       setTimeout(() => {
         setLoading(false);
-      }, 30000);
+      }, 24000);
     }
 
     load();
