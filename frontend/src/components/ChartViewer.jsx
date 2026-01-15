@@ -123,6 +123,7 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
   if (variant === "home") {
     layout = {
       ...layout,
+      hovermode: "closest",
       legend: {
         ...(layout.legend || {}),
         orientation: "h",
@@ -149,6 +150,7 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
   if (isCommodityPage) {
     layout = {
       ...layout,
+      hovermode: "closest",
       legend: {
         ...(layout.legend || {}),
         orientation: "h",
@@ -167,7 +169,12 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
     <Plot
       data={figure.data}
       layout={layout}
-      config={figure.config || {}}
+      config={{
+        ...figure.config,
+        displayModeBar: false,
+        scrollZoom: false,
+        staticPlot: false
+      }}
       style={{ width: "100%", height: "100%" }}
       useResizeHandler={true}
     />
