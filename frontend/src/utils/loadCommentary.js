@@ -12,19 +12,12 @@ export async function loadCommentary() {
     // Split into paragraphs
     const paragraphs = text.split(/\n\s*\n/).filter(Boolean);
 
-    const groups = {
-      corn: [],
-      soybeans: [],
-      wheat: []
-    };
+    const groups = { corn: [], soybeans: [], wheat: [] };
 
     const dateRegex = /^([A-Z]{3}-\d{1,2}):\s*/;
 
     for (let p of paragraphs) {
-      p = p.trim();
-
-      // Strip leading/trailing quotes on each paragraph
-      p = p.replace(/^"+|"+$/g, "");
+      p = p.trim().replace(/^"+|"+$/g, "");
 
       const match = p.match(dateRegex);
       const datePrefix = match ? match[1] : null;
@@ -32,23 +25,14 @@ export async function loadCommentary() {
 
       const lower = p.toLowerCase();
 
-      if (lower.includes("corn")) {
-        groups.corn.push({ date: datePrefix, text: cleaned });
-      } else if (lower.includes("soybeans")) {
-        groups.soybeans.push({ date: datePrefix, text: cleaned });
-      } else if (lower.includes("wheat")) {
-        groups.wheat.push({ date: datePrefix, text: cleaned });
-      }
+      if (lower.includes("corn")) groups.corn.push({ date: datePrefix, text: cleaned });
+      else if (lower.includes("soybeans")) groups.soybeans.push({ date: datePrefix, text: cleaned });
+      else if (lower.includes("wheat")) groups.wheat.push({ date: datePrefix, text: cleaned });
     }
 
-    // Helper to order sentences within a commodity
+    // Order sentences safely
     const orderSentences = (items) => {
-      const buckets = {
-        inspections: null,
-        total: null,
-        gross: null,
-        next: null
-      };
+      const buckets = { inspections: null, total: null, gross: null, next: null };
 
       for (const item of items) {
         const t = item.text.toLowerCase();
@@ -58,25 +42,23 @@ export async function loadCommentary() {
         else if (t.includes("next marketing year outstanding sales")) buckets.next = item.text;
       }
 
-      return [buckets.inspections, buckets.total, buckets.gross, buckets.next]
-        .filter(Boolean);
+      return [buckets.inspections, buckets.total, buckets.gross, buckets.next].filter(Boolean);
     };
 
     const buildBlock = (items) => {
-      if (items.length === 0) return "";
+      if (!items || items.length === 0) return "";
 
       const date = items[0].date || "";
-      const ordered = orderSentences(items);
 
-      // First sentence keeps the date, others drop it
-      const first = ordered[0];
-      const rest = ordered.slice(1).map(s =>
-        s.replace(dateRegex, "").trim()
-      );
+      const ordered = orderSentences(items);
+      if (ordered.length === 0) return ""; // prevent crash
+
+      const first = ordered[0] || "";
+      const rest = ordered.slice(1).map(s => s.replace(dateRegex, "").trim());
 
       const body = [first.replace(dateRegex, "").trim(), ...rest].join(" ");
 
-      return `<strong>${date}:</strong> ${body}`;
+      return date ? `<strong>${date}:</strong> ${body}` : body;
     };
 
     return {

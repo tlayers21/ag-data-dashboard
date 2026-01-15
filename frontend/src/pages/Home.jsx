@@ -3,13 +3,13 @@ import ChartViewer from "../components/ChartViewer";
 import { loadCommentary } from "../utils/loadCommentary";
 
 export default function Home() {
-  const [cornCommentary, setCornCommentary] = useState([]);
-  const [wheatCommentary, setWheatCommentary] = useState([]);
-  const [soyCommentary, setSoyCommentary] = useState([]);
+  const [cornCommentary, setCornCommentary] = useState("");
+  const [wheatCommentary, setWheatCommentary] = useState("");
+  const [soyCommentary, setSoyCommentary] = useState("");
 
   const API = process.env.REACT_APP_API_BASE;
 
-  useEffect(() => { 
+  useEffect(() => {
     async function load() {
       const { corn, wheat, soybeans } = await loadCommentary();
       setCornCommentary(corn);
@@ -57,11 +57,7 @@ export default function Home() {
 
       <div className="commentary-box">
         <h3>Corn Commentary:</h3>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: cornCommentary.join("<br><br>")
-          }}
-        />
+        <div dangerouslySetInnerHTML={{ __html: cornCommentary }} />
       </div>
 
       {/* WHEAT */}
@@ -99,11 +95,7 @@ export default function Home() {
 
       <div className="commentary-box">
         <h3>Wheat Commentary:</h3>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: wheatCommentary.join("<br><br>")
-          }}
-        />
+        <div dangerouslySetInnerHTML={{ __html: wheatCommentary }} />
       </div>
 
       {/* SOYBEANS */}
@@ -141,11 +133,7 @@ export default function Home() {
 
       <div className="commentary-box">
         <h3>Soybean Commentary:</h3>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: soyCommentary.join("<br><br>")
-          }}
-        />
+        <div dangerouslySetInnerHTML={{ __html: soyCommentary }} />
       </div>
 
     </div>
