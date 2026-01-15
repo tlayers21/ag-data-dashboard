@@ -3,7 +3,10 @@ import ChartViewer from "../components/ChartViewer";
 import { loadCommentary } from "../utils/loadCommentary";
 
 export default function Home() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(() => {
+    const hasVisited = localStorage.getItem("hasVisitedHome");
+    return !hasVisited;
+  });
 
   const [loadingMessage, setLoadingMessage] = useState("Warming up the data engine…");
 
@@ -30,7 +33,7 @@ export default function Home() {
     const messageInterval = setInterval(() => {
       messageIndex = (messageIndex + 1) % messages.length;
       setLoadingMessage(messages[messageIndex]);
-    }, 5000);
+    }, 3750); // 8 messages × 3.75s = 30s
 
     return () => clearInterval(messageInterval);
   }, []);
@@ -39,10 +42,8 @@ export default function Home() {
     async function load() {
       const hasVisited = localStorage.getItem("hasVisitedHome");
 
-      document.documentElement.style.setProperty(
-        "--loading-duration",
-        hasVisited ? "15s" : "40s"
-      );
+      // Set progress bar animation duration
+      document.documentElement.style.setProperty("--loading-duration", "30s");
 
       try {
         const { corn, wheat, soybeans } = await loadCommentary();
@@ -57,11 +58,9 @@ export default function Home() {
         setTimeout(() => {
           localStorage.setItem("hasVisitedHome", "true");
           setLoading(false);
-        }, 40000);
+        }, 30000); // 30s
       } else {
-        setTimeout(() => {
-          setLoading(false);
-        }, 15000);
+        setLoading(false); // no loading screen on return
       }
     }
 
@@ -84,7 +83,6 @@ export default function Home() {
 
   return (
     <div className="main-content">
-
       {/* CORN */}
       <h2>Recent Corn Charts</h2>
       <div className="card-grid-2">
@@ -198,7 +196,6 @@ export default function Home() {
         <h3>Soybean Commentary:</h3>
         <div dangerouslySetInnerHTML={{ __html: soyCommentary }} />
       </div>
-
     </div>
   );
 }
