@@ -147,8 +147,8 @@ html {
 }
 
 .card .js-plotly-plot {
-  height: 450px !important;
-  min-width: 700px;
+  height: 400px !important;
+  min-width: 750px;
 }
 
 .corn-chart .js-plotly-plot,
@@ -359,7 +359,7 @@ html {
   width: 0%;
   background: linear-gradient(90deg, #4a90e2, #6ab0ff);
   border-radius: 6px;
-  animation: fillProgress 20s linear forwards;
+  animation: fillProgress 40s linear forwards;
 }
 
 @keyframes fillProgress {
