@@ -1,26 +1,31 @@
-const API = process.env.REACT_APP_API_BASE;
-const ROOT = API.replace("/api", "");
-
 export async function loadCommentary() {
-  const res = await fetch(`${ROOT}/commentary/home`);
-  let text = await res.text();
+  try {
+    const API = process.env.REACT_APP_API_BASE || "";
+    const ROOT = API.replace("/api", "");
 
-  // Split on double newlines (your backend uses \n\n between items)
-  let parts = text.split(/\n\s*\n/).filter(Boolean);
+    const res = await fetch(`${ROOT}/commentary/home`);
+    const text = await res.text();
 
-  if (parts.length === 0) return "";
+    // Split into paragraphs on blank lines
+    let parts = text.split(/\n\s*\n/).filter(Boolean);
 
-  // Bold the first date prefix in the first item
-  parts[0] = parts[0].replace(
-    /^([A-Z]{3}-\d{1,2}:)/,
-    "<strong>$1</strong>"
-  );
+    const cleaned = parts.map((p, idx) => {
+      // Bold the first date prefix (e.g., JAN-14:)
+      if (idx === 0) {
+        return p.replace(
+          /^([A-Z]{3}-\d{1,2}:)/,
+          "<strong>$1</strong>"
+        );
+      }
 
-  // Strip date prefixes from all subsequent items
-  for (let i = 1; i < parts.length; i++) {
-    parts[i] = parts[i].replace(/^[A-Z]{3}-\d{1,2}:\s*/, "");
+      // Remove repeated date prefixes for subsequent paragraphs
+      return p.replace(/^[A-Z]{3}-\d{1,2}:\s*/, "");
+    });
+
+    // Join paragraphs with <br><br>
+    return cleaned.join("<br><br>");
+  } catch (err) {
+    console.error("Commentary load failed:", err);
+    return "Commentary unavailable.";
   }
-
-  // Join into one paragraph
-  return parts.join(" ");
 }
