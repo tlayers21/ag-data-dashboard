@@ -14,14 +14,13 @@ ESR_YEARS = [2026, 2025, 2024, 2023, 2022, 2021]
 PSD_YEARS = [2025, 2024, 2023, 2022, 2021, 2020]
 FLAG_PATH = Path("maintenance.flag").resolve()
 
-# Same code from manual_run_pipeline.py for Prefect to run (it must run the whole thing)
 @task
-def run_pipeline(restart: bool = False):
+def run_pipeline():
     for year in ESR_YEARS:
         fetch_esr_data(usda_api_key=USDA_API_KEY, marketing_year=year)
     for year in PSD_YEARS:
         fetch_psd_data(usda_api_key=USDA_API_KEY, marketing_year=year) 
-    
+
     print("--------------------")
     fetch_inspections()
     clean_all_esr()
@@ -34,5 +33,5 @@ def run_pipeline(restart: bool = False):
     print("--------------------")
 
 @flow(name="agdatadashboard-pipeline")
-def agdatavault_pipeline(restart: bool = False):
-    run_pipeline(restart)
+def agdatadashboard_pipeline():
+    run_pipeline()

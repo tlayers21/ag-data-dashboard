@@ -13,14 +13,12 @@ from pipeline.commentary_generator import generate_home_page_commentary
 load_dotenv()
 POSTGRES_URL = os.getenv("POSTGRES_URL")
 
-# For Render
 CHART_DIR = Path(__file__).parent / "charts"
-CHART_DIR.mkdir(parents=True, exist_ok=True )
+CHART_DIR.mkdir(parents=True, exist_ok=True)
 COMMENTARY_DIR = Path(__file__).parent / "commentary"
 
 app = FastAPI()
 
-# Grants access for site to use API
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["https://tlayers21.github.io"],
@@ -78,37 +76,40 @@ def get_last_5_years_psd(commodity: str, country: str):
 def get_last_5_years_inspections(commodity: str, country: str):
     return fetch_last_5_years("inspections", commodity, country)
 
-# TODO: Make these more efficient so users don't have to wait as long for API to communicate chart and commentary information
-
-# Fetches JSON file to build Plotly chart for specific commodity page
+# Fetches JSON flie to build Plotly chart for specific commodity page
 @app.get("/api/{commodity}/{source}/{country}/{datatype}/{year}")
-def get_chart(commodity: str, source: str, country: str, data_type: str, year_type: str):
-    year = "marketing" if year_type == "my" else "calendar"
+def get_chart(commodity: str, source: str, country: str, datatype: str, year: str):
+    source = source.lower()
+    commodity = commodity.lower()
+    country = country.lower()
+    datatype = datatype.lower()
+    year = year.lower()
+    year_type = "marketing" if year == "my" else "calendar"
 
-    # PSD
+    # PSD pattern
     if source == "psd":
         generate_weekly_psd_chart(
             source,
             commodity,
             country,
-            data_type
+            datatype
         )
         filename = (
-            f"{source}_{commodity}_for_{country}_{data_type}_last_5_years_{year_type}.json"
+            f"{source}_{commodity}_for_{country}_{datatype}_last_5_years_{year}.json"
         )
 
-    # ESR or inspections
+    # ESR or Inspections pattern
     else:
         generate_weekly_esr_or_inspections_chart(
             source,
             commodity,
             country,
-            data_type,
-            year,
+            datatype,
+            year_type,
             home=False
         )
         filename = (
-            f"{source}_us_{commodity}_to_{country}_{data_type}_last_5_years_{year_type}.json"
+            f"{source}_us_{commodity}_to_{country}_{datatype}_last_5_years_{year}.json"
         )
 
     file_path = CHART_DIR / filename
@@ -120,19 +121,18 @@ def get_chart(commodity: str, source: str, country: str, data_type: str, year_ty
 
 # Fetches JSON file to build Plotly chart for specific home page
 @app.get("/api/home/{commodity}/{source}/{country}/{datatype}/{year}")
-def get_home_chart(commodity: str, source: str, country: str, data_type: str, year_type: str):
-    year = "marketing" if year == "my" else "calendar"
-    
+def get_home_chart(commodity: str, source: str, country: str, datatype: str, year: str):
+    year_type = "marketing" if year == "my" else "calendar"
     generate_weekly_esr_or_inspections_chart(
             source,
             commodity,
             country,
-            data_type,
-            year,
+            datatype,
+            year_type,
             home=True
         )
     filename = (
-        f"{source}_us_{commodity}_to_{country}_{data_type}_last_5_years_{year_type}_home.json"
+        f"{source}_us_{commodity}_to_{country}_{datatype}_last_5_years_{year}_home.json"
     )
     file_path = CHART_DIR / filename
 
