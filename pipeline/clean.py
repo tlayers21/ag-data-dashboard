@@ -16,7 +16,7 @@ def clean_all_esr() -> None:
     world_files = list(fas_dir.glob("*_esr_all_*.json"))
     
     if not world_files:
-        raise FileNotFoundError("No ESR Eorld Files Found In data/raw/fas")
+        raise FileNotFoundError("No ESR World Files Found In data/raw/fas")
     
     print(f"Processing {len(world_files)} ESR World Files...")
 
