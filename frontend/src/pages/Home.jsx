@@ -3,17 +3,41 @@ import ChartViewer from "../components/ChartViewer";
 import { loadCommentary } from "../utils/loadCommentary";
 
 export default function Home() {
-  // Only show loading screen on first visit
+  // Determine if this is the user's first visit
   const [loading, setLoading] = useState(() => {
     const hasVisited = localStorage.getItem("hasVisitedHome");
-    return !hasVisited;
+    return !hasVisited; // true if first visit
   });
+
+  const [loadingMessage, setLoadingMessage] = useState("Warming up the data engine…");
 
   const [cornCommentary, setCornCommentary] = useState("");
   const [wheatCommentary, setWheatCommentary] = useState("");
   const [soyCommentary, setSoyCommentary] = useState("");
 
   const API = process.env.REACT_APP_API_BASE;
+
+  const messages = [
+  "Warming up the data engine…",
+  "Retrieving Export Sales Report metrics…",
+  "Loading Production, Supply and Distribution numbers…",
+  "Parsing the latest Inspections data…",
+  "Processing and transforming raw datasets…",
+  "Merging multi‑commodity analytics…",
+  "Generating charts and commentary…",
+  "Almost ready - charts may take 1–2 minutes to fully render"
+  ];
+
+  useEffect(() => {
+    let messageIndex = 0;
+
+    const messageInterval = setInterval(() => {
+      messageIndex = (messageIndex + 1) % messages.length;
+      setLoadingMessage(messages[messageIndex]);
+    }, 3000);
+
+    return () => clearInterval(messageInterval);
+  }, []);
 
   useEffect(() => {
     async function load() {
@@ -28,10 +52,11 @@ export default function Home() {
         setTimeout(() => {
           localStorage.setItem("hasVisitedHome", "true");
           setLoading(false);
-        }, 45000);
+        }, 30000);
       } else {
-
-        setLoading(false);
+        setTimeout(() => {
+          setLoading(false);
+        }, 10000);
       }
     }
 
@@ -41,8 +66,13 @@ export default function Home() {
   if (loading) {
     return (
       <div className="loading-overlay">
-        <div className="loader"></div>
-        <p>Warming up the data engine - Please Wait ~30 Seconds...</p>
+        <div className="loading-title">Loading Dashboard</div>
+
+        <div className="progress-container">
+          <div className="progress-bar"></div>
+        </div>
+
+        <p className="loading-message">{loadingMessage}</p>
       </div>
     );
   }
