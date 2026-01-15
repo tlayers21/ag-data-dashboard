@@ -9,7 +9,7 @@ export default function Home() {
 
   const API = process.env.REACT_APP_API_BASE;
 
-  useEffect(() => {
+  useEffect(() => { 
     async function load() {
       const { corn, wheat, soybeans } = await loadCommentary();
       setCornCommentary(corn);

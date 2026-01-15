@@ -16,18 +16,22 @@ export async function loadCommentary() {
 
     for (const p of paragraphs) {
       const lower = p.toLowerCase();
-
       if (lower.includes("corn")) {
-        groups.corn.push(p);
+        groups.corn.push(p.replace(/^JAN-\d{1,2}:\s*/, ""));
       } else if (lower.includes("soybeans")) {
-        groups.soybeans.push(p);
+        groups.soybeans.push(p.replace(/^JAN-\d{1,2}:\s*/, ""));
       } else if (lower.includes("wheat")) {
-        groups.wheat.push(p);
+        groups.wheat.push(p.replace(/^JAN-\d{1,2}:\s*/, ""));
+      }
+    }
+
+    for (const key of Object.keys(groups)) {
+      if (groups[key].length > 0) {
+        groups[key][0] = `<strong>JAN-14:</strong> ${groups[key][0]}`;
       }
     }
 
     return groups;
-
   } catch (err) {
     console.error("Commentary load failed:", err);
     return {
