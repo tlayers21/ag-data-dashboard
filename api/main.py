@@ -136,7 +136,7 @@ def get_chart(commodity: str, source: str, country: str, datatype: str, year: st
 
     return FileResponse(file_path)
 
-# Fetches JSON flie to build Plotly chart for specific home page
+# Fetches JSON file to build Plotly chart for specific home page
 @app.get("/api/home/{commodity}/{source}/{country}/{datatype}/{year}")
 def get_home_chart(commodity: str, source: str, country: str, datatype: str, year: str):
     filename = (
