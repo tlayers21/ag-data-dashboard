@@ -43,6 +43,7 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
           });
           return;
         }
+
         if (typeof data === "object" && !data.data && !data.layout) {
           setFigure({
             data: [data],
@@ -117,14 +118,7 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
     );
   }
 
-  let layout = {
-    ...figure.layout,
-    hovermode: "x unified",
-    hoverlabel: {
-      ...(figure.layout?.hoverlabel || {}),
-      namelength: -1
-    }
-  };
+  let layout = { ...figure.layout };
 
   if (variant === "home") {
     layout = {

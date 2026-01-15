@@ -3,10 +3,7 @@ import ChartViewer from "../components/ChartViewer";
 import { loadCommentary } from "../utils/loadCommentary";
 
 export default function Home() {
-  const [loading, setLoading] = useState(() => {
-    const hasVisited = localStorage.getItem("hasVisitedHome");
-    return !hasVisited;
-  });
+  const [loading, setLoading] = useState(true);
 
   const [loadingMessage, setLoadingMessage] = useState("Warming up the data engine…");
 
@@ -27,7 +24,6 @@ export default function Home() {
     "Almost ready. Charts may take 1-2 minutes to fully render…"
   ];
 
-  // Rotate loading messages
   useEffect(() => {
     let messageIndex = 0;
 
