@@ -126,7 +126,8 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
       legend: {
         ...(layout.legend || {}),
         orientation: "h",
-        y: -0.35,
+        y: -0.34,
+        yanchor: "top",
         x: 0.5,
         xanchor: "center"
       },

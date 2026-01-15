@@ -1,12 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import ChartViewer from "../components/ChartViewer";
 import { loadCommentary } from "../utils/loadCommentary";
 
 export default function Home() {
-  const [loading, setLoading] = useState(() => {
-    const hasVisited = localStorage.getItem("hasVisitedHome");
-    return !hasVisited;
-  });
+  const firstLoadRef = useRef(true);
+
+  const [loading, setLoading] = useState(true);
 
   const [loadingMessage, setLoadingMessage] = useState("Warming up the data engine…");
 
@@ -27,24 +26,33 @@ export default function Home() {
     "Almost ready. Charts may take 1-2 minutes to fully render…"
   ];
 
+  // Rotate loading messages evenly across 30 seconds
   useEffect(() => {
     let messageIndex = 0;
 
-    const messageInterval = setInterval(() => {
+    const interval = setInterval(() => {
       messageIndex = (messageIndex + 1) % messages.length;
       setLoadingMessage(messages[messageIndex]);
     }, 3750); // 8 messages × 3.75s = 30s
 
-    return () => clearInterval(messageInterval);
+    return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
     async function load() {
-      const hasVisited = localStorage.getItem("hasVisitedHome");
+      // If this is NOT the first load in this tab → skip loading screen
+      if (!firstLoadRef.current) {
+        setLoading(false);
+        return;
+      }
+
+      // Mark that we've now shown the loading screen once
+      firstLoadRef.current = false;
 
       // Set progress bar animation duration
       document.documentElement.style.setProperty("--loading-duration", "30s");
 
+      // Load commentary safely
       try {
         const { corn, wheat, soybeans } = await loadCommentary();
         setCornCommentary(corn);
@@ -54,19 +62,16 @@ export default function Home() {
         console.error("Commentary failed:", err);
       }
 
-      if (!hasVisited) {
-        setTimeout(() => {
-          localStorage.setItem("hasVisitedHome", "true");
-          setLoading(false);
-        }, 30000); // 30s
-      } else {
-        setLoading(false); // no loading screen on return
-      }
+      // 30-second loading screen
+      setTimeout(() => {
+        setLoading(false);
+      }, 30000);
     }
 
     load();
   }, []);
 
+  // Loading overlay
   if (loading) {
     return (
       <div className="loading-overlay">
@@ -83,6 +88,7 @@ export default function Home() {
 
   return (
     <div className="main-content">
+
       {/* CORN */}
       <h2>Recent Corn Charts</h2>
       <div className="card-grid-2">
@@ -196,6 +202,7 @@ export default function Home() {
         <h3>Soybean Commentary:</h3>
         <div dangerouslySetInnerHTML={{ __html: soyCommentary }} />
       </div>
+
     </div>
   );
 }
