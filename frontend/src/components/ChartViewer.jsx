@@ -9,6 +9,9 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
     setError(false);
     setFigure(null);
 
+    // 🔥 DEBUG: SHOW EXACT URL BEING FETCHED
+    console.log("ChartViewer fetching:", jsonPath, "variant:", variant);
+
     fetch(jsonPath)
       .then(async (res) => {
         if (!res.ok) throw new Error("Bad response");
@@ -61,7 +64,7 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
         setFigure(data);
       })
       .catch(() => setError(true));
-  }, [jsonPath]);
+  }, [jsonPath, variant]);
 
   const isCommodityPage =
     variant !== "home" &&
@@ -69,7 +72,6 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
       variant
     );
 
-  // Commodity page error message
   if (error && isCommodityPage) {
     return (
       <div
@@ -90,7 +92,6 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
     );
   }
 
-  // Home page error message
   if (error && !isCommodityPage) {
     return (
       <div
@@ -109,7 +110,6 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
     );
   }
 
-  // Loading
   if (!figure) {
     return (
       <div
@@ -126,7 +126,6 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
     );
   }
 
-  // Layout adjustments
   let layout = { ...figure.layout };
 
   if (isCommodityPage) {
