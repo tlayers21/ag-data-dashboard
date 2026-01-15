@@ -69,7 +69,7 @@ const YEAR_TYPES = [
 ];
 
 // -----------------------------
-// API URL BUILDER (correct one)
+// API URL BUILDER
 // -----------------------------
 function buildApiUrl(dataSource, commodity, countrySlug, dataTypeKey, yearType) {
   const ds = dataSource.toLowerCase();
@@ -89,27 +89,32 @@ export default function SoybeanOil() {
   const [dataTypeKey, setDataTypeKey] = useState(ESR_TYPES[0].key);
   const [yearType, setYearType] = useState("my");
 
+  // PSD forces Marketing Year
   useEffect(() => {
     if (dataSource === "PSD" && yearType === "cal") {
       setYearType("my");
     }
   }, [dataSource, yearType]);
 
+  // Country list logic
   const countries = useMemo(() => {
     return dataSource === "PSD" ? PSD_COUNTRIES : BASE_COUNTRIES;
   }, [dataSource]);
 
+  // Data type list logic
   const dataTypes = useMemo(() => {
     if (dataSource === "ESR") return ESR_TYPES;
     if (dataSource === "PSD") return PSD_ATTRIBUTES;
     return [];
   }, [dataSource, countrySlug]);
 
+  // Ensure valid data type
   const effectiveDataTypeKey = useMemo(() => {
     const exists = dataTypes.some((t) => t.key === dataTypeKey);
     return exists ? dataTypeKey : dataTypes[0]?.key || "";
   }, [dataTypes, dataTypeKey]);
 
+  // Build API URL
   const jsonPath = buildApiUrl(
     dataSource,
     commodity,
@@ -118,15 +123,15 @@ export default function SoybeanOil() {
     yearType
   );
 
-  function handleDataSourceChange(e) {
-    const next = e.target.value;
-    setDataSource(next);
+  // Handle data source switching
+  function handleDataSourceChange(value) {
+    setDataSource(value);
 
-    if (next === "ESR") {
+    if (value === "ESR") {
       setDataTypeKey(ESR_TYPES[0].key);
-    } else if (next === "PSD") {
+    } else if (value === "PSD") {
       setDataTypeKey(PSD_ATTRIBUTES[0].key);
-    } else if (next === "Forecasts") {
+    } else if (value === "Forecasts") {
       setDataTypeKey("");
     }
   }
@@ -138,58 +143,72 @@ export default function SoybeanOil() {
       <div className="filter-bar-wrapper">
         <div className="filter-bar">
 
-          <div className="filter-item select-wrapper">
+          {/* Data Source */}
+          <div className="filter-item">
             <label>Data Source</label>
-            <select value={dataSource} onChange={handleDataSourceChange}>
-              {DATA_SOURCES.map((src) => (
-                <option key={src} value={src}>{src}</option>
-              ))}
-            </select>
+            <Dropdown
+              label={dataSource}
+              className="filter-dropdown"
+              items={DATA_SOURCES.map((src) => ({
+                label: src,
+                value: src
+              }))}
+              onSelect={(value) => handleDataSourceChange(value)}
+            />
           </div>
 
-          <div className="filter-item select-wrapper">
+          {/* Country */}
+          <div className="filter-item">
             <label>Country</label>
-            <select
-              value={countrySlug}
-              onChange={(e) => setCountrySlug(e.target.value)}
-            >
-              {countries.map((c) => (
-                <option key={c.slug} value={c.slug}>{c.label}</option>
-              ))}
-            </select>
+            <Dropdown
+              label={countries.find((c) => c.slug === countrySlug)?.label}
+              className="filter-dropdown"
+              items={countries.map((c) => ({
+                label: c.label,
+                value: c.slug
+              }))}
+              onSelect={(value) => setCountrySlug(value)}
+            />
           </div>
 
+          {/* Data Type */}
           {dataSource !== "Forecasts" && (
-            <div className="filter-item select-wrapper">
+            <div className="filter-item">
               <label>Data Type</label>
-              <select
-                value={effectiveDataTypeKey}
-                onChange={(e) => setDataTypeKey(e.target.value)}
-              >
-                {dataTypes.map((t) => (
-                  <option key={t.key} value={t.key}>{t.label}</option>
-                ))}
-              </select>
+              <Dropdown
+                label={
+                  dataTypes.find((t) => t.key === effectiveDataTypeKey)?.label
+                }
+                className="filter-dropdown"
+                items={dataTypes.map((t) => ({
+                  label: t.label,
+                  value: t.key
+                }))}
+                onSelect={(value) => setDataTypeKey(value)}
+              />
             </div>
           )}
 
-          <div className="filter-item select-wrapper">
+          {/* Year Type */}
+          <div className="filter-item">
             <label>Year Type</label>
-            <select
-              value={yearType}
-              onChange={(e) => setYearType(e.target.value)}
-            >
-              {YEAR_TYPES
-                .filter((y) => !(dataSource === "PSD" && y.key === "cal"))
-                .map((y) => (
-                  <option key={y.key} value={y.key}>{y.label}</option>
-                ))}
-            </select>
+            <Dropdown
+              label={YEAR_TYPES.find((y) => y.key === yearType)?.label}
+              className="filter-dropdown"
+              items={YEAR_TYPES.filter(
+                (y) => !(dataSource === "PSD" && y.key === "cal")
+              ).map((y) => ({
+                label: y.label,
+                value: y.key
+              }))}
+              onSelect={(value) => setYearType(value)}
+            />
           </div>
 
         </div>
       </div>
 
+      {/* FORECASTS MODE */}
       {dataSource === "Forecasts" && (
         <div className="card card-centered soybean-oil-chart">
           <h3>Forecasts – Under Construction</h3>
@@ -211,6 +230,7 @@ export default function SoybeanOil() {
         </div>
       )}
 
+      {/* NORMAL CHART MODE */}
       {dataSource !== "Forecasts" && jsonPath && (
         <div className="card card-centered soybean-oil-chart">
           <h3>

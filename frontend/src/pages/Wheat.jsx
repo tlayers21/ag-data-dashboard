@@ -100,6 +100,15 @@ export default function Wheat() {
   const [dataTypeKey, setDataTypeKey] = useState("export_inspections");
   const [yearType, setYearType] = useState("my");
 
+  // PSD fix: remove invalid attribute for United States
+  useEffect(() => {
+    if (dataSource === "PSD" && countrySlug === "united-states") {
+      if (dataTypeKey === "trade_year_imports_from_united_states") {
+        setDataTypeKey("area_harvested");
+      }
+    }
+  }, [dataSource, countrySlug, dataTypeKey]);
+
   // Force Marketing Year when PSD is selected
   useEffect(() => {
     if (dataSource === "PSD" && yearType === "cal") {
@@ -121,7 +130,7 @@ export default function Wheat() {
     if (dataSource === "ESR") return ESR_TYPES;
 
     if (dataSource === "PSD") {
-      if (countrySlug === "united_states") {
+      if (countrySlug === "united-states") {
         return PSD_ATTRIBUTES.filter(
           (attr) => attr.key !== "trade_year_imports_from_united_states"
         );
@@ -148,18 +157,17 @@ export default function Wheat() {
   );
 
   // Handle data source switching
-  function handleDataSourceChange(e) {
-    const next = e.target.value;
-    setDataSource(next);
+  function handleDataSourceChange(value) {
+    setDataSource(value);
 
-    if (next === "Inspections") {
+    if (value === "Inspections") {
       setCountrySlug("world");
       setDataTypeKey("export_inspections");
-    } else if (next === "ESR") {
+    } else if (value === "ESR") {
       setDataTypeKey(ESR_TYPES[0].key);
-    } else if (next === "PSD") {
+    } else if (value === "PSD") {
       setDataTypeKey(PSD_ATTRIBUTES[0].key);
-    } else if (next === "Forecasts") {
+    } else if (value === "Forecasts") {
       setDataTypeKey("");
     }
   }
@@ -173,56 +181,65 @@ export default function Wheat() {
         <div className="filter-bar">
 
           {/* Data Source */}
-          <div className="filter-item select-wrapper">
+          <div className="filter-item">
             <label>Data Source</label>
-            <select value={dataSource} onChange={handleDataSourceChange}>
-              {DATA_SOURCES.map((src) => (
-                <option key={src} value={src}>{src}</option>
-              ))}
-            </select>
+            <Dropdown
+              label={dataSource}
+              className="filter-dropdown"
+              items={DATA_SOURCES.map((src) => ({
+                label: src,
+                value: src
+              }))}
+              onSelect={(value) => handleDataSourceChange(value)}
+            />
           </div>
 
           {/* Country */}
-          <div className="filter-item select-wrapper">
+          <div className="filter-item">
             <label>Country</label>
-            <select
-              value={countrySlug}
-              onChange={(e) => setCountrySlug(e.target.value)}
-            >
-              {countries.map((c) => (
-                <option key={c.slug} value={c.slug}>{c.label}</option>
-              ))}
-            </select>
+            <Dropdown
+              label={countries.find((c) => c.slug === countrySlug)?.label}
+              className="filter-dropdown"
+              items={countries.map((c) => ({
+                label: c.label,
+                value: c.slug
+              }))}
+              onSelect={(value) => setCountrySlug(value)}
+            />
           </div>
 
           {/* Data Type */}
           {dataSource !== "Forecasts" && (
-            <div className="filter-item select-wrapper">
+            <div className="filter-item">
               <label>Data Type</label>
-              <select
-                value={effectiveDataTypeKey}
-                onChange={(e) => setDataTypeKey(e.target.value)}
-              >
-                {dataTypes.map((t) => (
-                  <option key={t.key} value={t.key}>{t.label}</option>
-                ))}
-              </select>
+              <Dropdown
+                label={
+                  dataTypes.find((t) => t.key === effectiveDataTypeKey)?.label
+                }
+                className="filter-dropdown"
+                items={dataTypes.map((t) => ({
+                  label: t.label,
+                  value: t.key
+                }))}
+                onSelect={(value) => setDataTypeKey(value)}
+              />
             </div>
           )}
 
           {/* Year Type */}
-          <div className="filter-item select-wrapper">
+          <div className="filter-item">
             <label>Year Type</label>
-            <select
-              value={yearType}
-              onChange={(e) => setYearType(e.target.value)}
-            >
-              {YEAR_TYPES
-                .filter((y) => !(dataSource === "PSD" && y.key === "cal"))
-                .map((y) => (
-                  <option key={y.key} value={y.key}>{y.label}</option>
-                ))}
-            </select>
+            <Dropdown
+              label={YEAR_TYPES.find((y) => y.key === yearType)?.label}
+              className="filter-dropdown"
+              items={YEAR_TYPES.filter(
+                (y) => !(dataSource === "PSD" && y.key === "cal")
+              ).map((y) => ({
+                label: y.label,
+                value: y.key
+              }))}
+              onSelect={(value) => setYearType(value)}
+            />
           </div>
 
         </div>
