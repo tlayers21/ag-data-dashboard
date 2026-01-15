@@ -169,8 +169,6 @@ def generate_weekly_esr_or_inspections_chart(
     )
 
     json_dir = Path("api/charts").resolve()
-
-    # For Render
     json_dir.mkdir(parents=True, exist_ok=True)
 
     if home:
@@ -296,8 +294,6 @@ def generate_weekly_psd_chart(
     )
 
     json_dir = Path("api/charts").resolve()
-
-    # For Render
     json_dir.mkdir(parents=True, exist_ok=True)
     commodity_slug = commodity.lower()
     country_slug = country.lower()

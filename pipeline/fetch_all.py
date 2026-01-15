@@ -2,13 +2,18 @@ import json
 import requests
 from .config import COMMODITIES, ESR_COUNTRY_NAMES, PSD_COUNTRY_NAMES
 from .usda_client import USDAClient
+from pathlib import Path
 from .utils import fas_data_path, inspections_data_path
 from datetime import datetime, timedelta
 import time
+
+FAS_DIR = Path(__file__).parent / "data" / "raw" / "fas"
+INSPECTIONS_DIR = Path(__file__).parent / "data" / "raw" / "inspections"
     
 # Fetches both esr all and country data for each commodity
 def fetch_esr_data(usda_api_key: str, marketing_year: int) -> None:
     usda_data = USDAClient(usda_api_key)
+    FAS_DIR.mkdir(parents=True, exist_ok=True)
 
     print(f"Starting ESR Data Fetching Process For Marketing Year {marketing_year}...")
     for name, cfg in COMMODITIES.items():
@@ -52,6 +57,7 @@ def fetch_esr_data(usda_api_key: str, marketing_year: int) -> None:
 # Fetches both psd world and country data for each commodity
 def fetch_psd_data(usda_api_key: str, marketing_year: int) -> None:
     usda_data = USDAClient(usda_api_key)
+    FAS_DIR.mkdir(parents=True, exist_ok=True)
 
     print(f"Starting PSD Data Fetching Process For Marketing Year {marketing_year}...")
     for name, cfg in COMMODITIES.items():
@@ -94,6 +100,8 @@ def fetch_psd_data(usda_api_key: str, marketing_year: int) -> None:
 
 # Fetches export inspections data using the URL that the USDA dynamically updates each week
 def fetch_inspections() -> None:
+    INSPECTIONS_DIR.mkdir(parents=True, exist_ok=True)
+
     print("Fetching Latest Export Inspections Data...")
 
     url = "https://www.ams.usda.gov/mnreports/wa_gr101.txt"

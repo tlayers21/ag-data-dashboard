@@ -14,32 +14,20 @@ ESR_YEARS = [2026, 2025, 2024, 2023, 2022, 2021]
 PSD_YEARS = [2025, 2024, 2023, 2022, 2021, 2020]
 FLAG_PATH = Path("maintenance.flag").resolve()
 
-# Same code from manual_run_pipeline.py for Prefect to run
+# Same code from manual_run_pipeline.py for Prefect to run (it must run the whole thing)
 @task
 def run_pipeline(restart: bool = False):
-    if restart:
-        print("--------------------")
-        dirs_to_empty = ["data/raw/fas", "data/clean", "api/charts", "api/commentary"]
-        extensions = ["*.json", "*.csv", "*.txt"]
-        for directory in dirs_to_empty:
-            for extension in extensions:
-                for file in Path(directory).resolve().glob(extension):
-                    if file.is_file():
-                        file.unlink()
-
-        for year in ESR_YEARS:
-            fetch_esr_data(usda_api_key=USDA_API_KEY, marketing_year=year)
-        for year in PSD_YEARS:
-            fetch_psd_data(usda_api_key=USDA_API_KEY, marketing_year=year) 
-
-        fetch_inspections()
-        clean_all_esr()
-        clean_all_psd()
-        clean_all_inspections()
-        init_database()
-        
-    if not restart:
-        print("--------------------")
+    for year in ESR_YEARS:
+        fetch_esr_data(usda_api_key=USDA_API_KEY, marketing_year=year)
+    for year in PSD_YEARS:
+        fetch_psd_data(usda_api_key=USDA_API_KEY, marketing_year=year) 
+    
+    print("--------------------")
+    fetch_inspections()
+    clean_all_esr()
+    clean_all_psd()
+    clean_all_inspections()
+    init_database()
     generate_charts()
     generate_home_page_charts()
     generate_home_page_commentary()

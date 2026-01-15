@@ -1,4 +1,5 @@
 import pandas as pd
+from pathlib import Path
 from .utils import BASE_DIR, clean_data_path
 from .transform import (
     clean_esr_all_file,
@@ -8,8 +9,12 @@ from .transform import (
     clean_inspections_file
 )
 
+CLEAN_DIR = Path(__file__).parent / "data" / "clean"
+
 # Cleans all ESR files and combines the result into 1 CSV file
 def clean_all_esr() -> None:
+    CLEAN_DIR.mkdir(parents=True, exist_ok=True)
+
     print("Starting ESR Data Cleaning Process...")
     fas_dir = BASE_DIR / "data" / "raw" / "fas"
 
@@ -54,6 +59,8 @@ def clean_all_esr() -> None:
 
 # Cleans all PSD files and combines the result into 1 CSV file
 def clean_all_psd() -> None:
+    CLEAN_DIR.mkdir(parents=True, exist_ok=True)
+
     print("Starting PSD Data Cleaning Process...")
 
     fas_dir = BASE_DIR / "data" / "raw" / "fas"
@@ -99,6 +106,8 @@ def clean_all_psd() -> None:
 
 # Cleans all export inspections files and combines the result into 1 CSV file
 def clean_all_inspections() -> None:
+    CLEAN_DIR.mkdir(parents=True, exist_ok=True)
+
     print("Starting Inspections Data Cleaning Process...")
     inspections_dir = BASE_DIR / "data" / "raw" / "inspections"
     inspections_files = list(inspections_dir.glob("*"))
