@@ -36,7 +36,6 @@ The frontend is a **React-based dashboard** designed for clarity, speed, and eas
   - Soybean Oil
 - Dynamic chart rendering with multiple data sources
 - Country and metric selectors
-- Clean, mobile-friendly layout
 
 ### Data Overview Page
 - A dedicated page explaining all ESR, PSD, and Inspections fields
