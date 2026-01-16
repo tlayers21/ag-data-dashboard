@@ -146,21 +146,21 @@ html {
   min-width: 1200px;
 }
 
-.card .js-plotly-plot {
-  height: 400px !important;
-  min-width: 750px;
-}
-
-.corn-chart .js-plotly-plot,
-.wheat-chart .js-plotly-plot,
-.soybeans-chart .js-plotly-plot,
-.soybean-oil-chart .js-plotly-plot,
-.soybean-meal-chart .js-plotly-plot {
-  height: 700px !important;
-}
-
 .js-plotly-plot {
-  min-width: 550px !important;
+  min-width: 0 !important;
+  height: 100% !important;
+}
+
+.card {
+  min-height: 480px;
+}
+
+.corn-chart,
+.wheat-chart,
+.soybeans-chart,
+.soybean-oil-chart,
+.soybean-meal-chart {
+  min-height: 700px;
 }
 
 .card-centered {

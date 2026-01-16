@@ -3,10 +3,9 @@ import ChartViewer from "../components/ChartViewer";
 import { loadCommentary } from "../utils/loadCommentary";
 
 export default function Home() {
-  const firstLoadRef = useRef(true);
+  const firstLoadRef = useRef(sessionStorage.getItem("homeLoaded") !== "true");
 
   const [loading, setLoading] = useState(true);
-
   const [loadingMessage, setLoadingMessage] = useState("Warming up the data engine…");
 
   const [cornCommentary, setCornCommentary] = useState("");
@@ -25,22 +24,23 @@ export default function Home() {
     "Almost ready. Charts may take 1-2 minutes to fully load…"
   ];
 
+  // Rotating loading messages
   useEffect(() => {
-  let messageIndex = 0;
+    let messageIndex = 0;
 
-  const interval = setInterval(() => {
-    messageIndex++;
+    const interval = setInterval(() => {
+      messageIndex++;
 
-    if (messageIndex >= messages.length - 1) {
-      setLoadingMessage(messages[messages.length - 1]);
-      clearInterval(interval);
-      return;
-    }
+      if (messageIndex >= messages.length - 1) {
+        setLoadingMessage(messages[messages.length - 1]);
+        clearInterval(interval);
+        return;
+      }
 
-    setLoadingMessage(messages[messageIndex]);
-  }, 2000);
+      setLoadingMessage(messages[messageIndex]);
+    }, 2000);
 
-  return () => clearInterval(interval);
+    return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
@@ -51,6 +51,7 @@ export default function Home() {
       }
 
       firstLoadRef.current = false;
+      sessionStorage.setItem("homeLoaded", "true");
 
       document.documentElement.style.setProperty("--loading-duration", "18s");
 
