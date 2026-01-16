@@ -117,12 +117,8 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
       </div>
     );
   }
-  
-  let layout = {
-    ...figure.layout,
-    hovermode: "closest",
-    dragmode: false
-  };
+
+  let layout = { ...figure.layout };
 
   if (variant === "home") {
     layout = {
@@ -171,12 +167,7 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
     <Plot
       data={figure.data}
       layout={layout}
-      config={{
-        ...figure.config,
-        displayModeBar: false,
-        scrollZoom: false,
-        staticPlot: false
-      }}
+      config={figure.config || {}}
       style={{ width: "100%", height: "100%" }}
       useResizeHandler={true}
     />
