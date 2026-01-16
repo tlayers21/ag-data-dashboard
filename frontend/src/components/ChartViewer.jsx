@@ -159,6 +159,11 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
       margin: {
         ...(layout.margin || {}),
         b: 120
+      },
+      xaxis: {
+        ...(layout.xaxis || {}),
+        tickangle: -45,
+        automargin: true
       }
     };
   }
