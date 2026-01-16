@@ -14,7 +14,7 @@ This project provides a unified, modern interface for analyzing key USDA dataset
 
 The platform automatically fetches, cleans, stores, and visualizes these datasets, updating charts and commentary daily and accommodating new USDA releases as they occur.
 
-The frontend is a **React-based dashboard** designed for clarity, speed, and ease of use. Users can explore commodities, switch between data sources, compare countries, and view multi-year historical trends.
+The frontend is a **React-based dashboard** designed for clarity, speed, and ease of use. Users can explore commodities, switch between data sources, compare countries, and view multi-year historical and seasonal trends.
 
 ---
 
