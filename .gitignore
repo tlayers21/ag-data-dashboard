@@ -6,8 +6,9 @@ __pycache__/
 api/__pycache__/
 pipeline/__pycache__
 
-# Data
-data/
+# Data (excluding inspections which must be there)
+data/clean
+data/raw/fas
 
 # Commentary
 frontend/src/commentary

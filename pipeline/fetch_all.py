@@ -98,6 +98,8 @@ def fetch_psd_data(usda_api_key: str, marketing_year: int) -> None:
                 
     print("Done.\n==========")
 
+# TODO: Find a way to fetch inspections data so I don't have to store actual files
+
 # Fetches export inspections data using the URL that the USDA dynamically updates each week
 def fetch_inspections() -> None:
     INSPECTIONS_DIR.mkdir(parents=True, exist_ok=True)
