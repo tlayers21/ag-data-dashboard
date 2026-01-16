@@ -117,14 +117,16 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
       </div>
     );
   }
-
-  let layout = { ...figure.layout };
+  
+  let layout = {
+    ...figure.layout,
+    hovermode: "closest",
+    dragmode: false
+  };
 
   if (variant === "home") {
     layout = {
       ...layout,
-      hovermode: "closest",
-      dragmode: false,
       legend: {
         ...(layout.legend || {}),
         orientation: "h",
@@ -151,8 +153,6 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
   if (isCommodityPage) {
     layout = {
       ...layout,
-      hovermode: "closest",
-      dragmode: false,
       legend: {
         ...(layout.legend || {}),
         orientation: "h",
