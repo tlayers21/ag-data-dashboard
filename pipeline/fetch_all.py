@@ -7,8 +7,8 @@ from .utils import fas_data_path, inspections_data_path
 from datetime import datetime, timedelta
 import time
 
-FAS_DIR = Path(__file__).parent / "data" / "raw" / "fas"
-INSPECTIONS_DIR = Path(__file__).parent / "data" / "raw" / "inspections"
+FAS_DIR = Path(__file__).parent.parent / "data" / "raw" / "fas"
+INSPECTIONS_DIR = Path(__file__).parent.parent / "data" / "raw" / "inspections"
     
 # Fetches both esr all and country data for each commodity
 def fetch_esr_data(usda_api_key: str, marketing_year: int) -> None:

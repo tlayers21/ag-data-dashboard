@@ -9,7 +9,7 @@ from .transform import (
     clean_inspections_file
 )
 
-CLEAN_DIR = Path(__file__).parent / "data" / "clean"
+CLEAN_DIR = Path(__file__).parent.parent / "data" / "clean"
 
 # Cleans all ESR files and combines the result into 1 CSV file
 def clean_all_esr() -> None:
