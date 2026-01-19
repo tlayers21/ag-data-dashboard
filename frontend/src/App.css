@@ -188,6 +188,18 @@ html {
   margin-bottom: 0.75rem;
 }
 
+.commentary-loading {
+  color: #777;
+  font-style: italic;
+  animation: pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.4; }
+  50% { opacity: 1; }
+  100% { opacity: 0.4; }
+}
+
 
 /* ------------------------------
    SUBNAV

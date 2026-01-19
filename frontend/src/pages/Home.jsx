@@ -11,9 +11,9 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const [loadingMessage, setLoadingMessage] = useState("Warming up the data engine…");
 
-  const [cornCommentary, setCornCommentary] = useState("");
-  const [wheatCommentary, setWheatCommentary] = useState("");
-  const [soyCommentary, setSoyCommentary] = useState("");
+  const [cornCommentary, setCornCommentary] = useState(null);
+  const [wheatCommentary, setWheatCommentary] = useState(null);
+  const [soyCommentary, setSoyCommentary] = useState(null);
 
   const API = process.env.REACT_APP_API_BASE;
 
@@ -45,6 +45,7 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
+  // First-load-only loading animation
   useEffect(() => {
     if (!firstLoadRef.current) {
       setLoading(false);
@@ -63,6 +64,10 @@ export default function Home() {
 
   useEffect(() => {
     async function fetchCommentary() {
+      setCornCommentary(null);
+      setWheatCommentary(null);
+      setSoyCommentary(null);
+
       try {
         const { corn, wheat, soybeans } = await loadCommentary();
         setCornCommentary(corn);
@@ -130,7 +135,11 @@ export default function Home() {
 
       <div className="commentary-box">
         <h3>Corn Commentary:</h3>
-        <div dangerouslySetInnerHTML={{ __html: cornCommentary }} />
+        {cornCommentary === null ? (
+          <p className="commentary-loading">Loading commentary…</p>
+        ) : (
+          <div dangerouslySetInnerHTML={{ __html: cornCommentary }} />
+        )}
       </div>
 
       {/* WHEAT */}
@@ -168,7 +177,11 @@ export default function Home() {
 
       <div className="commentary-box">
         <h3>Wheat Commentary:</h3>
-        <div dangerouslySetInnerHTML={{ __html: wheatCommentary }} />
+        {wheatCommentary === null ? (
+          <p className="commentary-loading">Loading commentary…</p>
+        ) : (
+          <div dangerouslySetInnerHTML={{ __html: wheatCommentary }} />
+        )}
       </div>
 
       {/* SOYBEANS */}
@@ -206,7 +219,11 @@ export default function Home() {
 
       <div className="commentary-box">
         <h3>Soybean Commentary:</h3>
-        <div dangerouslySetInnerHTML={{ __html: soyCommentary }} />
+        {soyCommentary === null ? (
+          <p className="commentary-loading">Loading commentary…</p>
+        ) : (
+          <div dangerouslySetInnerHTML={{ __html: soyCommentary }} />
+        )}
       </div>
 
     </div>
