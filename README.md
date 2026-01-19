@@ -39,7 +39,6 @@ The frontend is a **React-based dashboard** designed for clarity, speed, and eas
 
 ### Data Overview Page
 - A dedicated page explaining all ESR, PSD, and Inspections fields
-- Clear definitions with professional table layout
 
 ---
 
