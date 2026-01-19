@@ -1,10 +1,12 @@
 import { useEffect, useState, useRef } from "react";
+import { useLocation } from "react-router-dom";
 import ChartViewer from "../components/ChartViewer";
 import { loadCommentary } from "../utils/loadCommentary";
 
 export default function Home() {
-  // First-load-only flag for this browser tab
   const firstLoadRef = useRef(sessionStorage.getItem("homeLoaded") !== "true");
+
+  const location = useLocation();
 
   const [loading, setLoading] = useState(true);
   const [loadingMessage, setLoadingMessage] = useState("Warming up the data engine…");
@@ -25,7 +27,6 @@ export default function Home() {
     "Almost ready. Charts may take 1-2 minutes to fully load…"
   ];
 
-  // Rotating loading messages
   useEffect(() => {
     let messageIndex = 0;
 
@@ -44,7 +45,6 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
-  // First-load-only loading animation
   useEffect(() => {
     if (!firstLoadRef.current) {
       setLoading(false);
@@ -61,7 +61,6 @@ export default function Home() {
     }, 10900);
   }, []);
 
-  // Commentary loads EVERY time Home mounts
   useEffect(() => {
     async function fetchCommentary() {
       try {
@@ -74,8 +73,10 @@ export default function Home() {
       }
     }
 
-    fetchCommentary();
-  }, []);
+    if (location.pathname === "/") {
+      fetchCommentary();
+    }
+  }, [location.pathname]);
 
   if (loading) {
     return (

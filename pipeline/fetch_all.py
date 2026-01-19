@@ -116,6 +116,13 @@ def fetch_inspections() -> None:
 
     response = requests.get(url)
     if response.status_code == 200:
+        new_content = response.content
+
+        for file in INSPECTIONS_DIR.iterdir():
+            if file.read_bytes() == new_content:
+                print(f"File with identical content already exists: {file.name}")
+                return
+            
         filepath.write_bytes(response.content)
     else:
         print("WARNING: Failed To Download Weekly Export Inspections File")

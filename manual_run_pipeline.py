@@ -39,10 +39,10 @@ if __name__ == "__main__":
             fetch_esr_data(usda_api_key=USDA_API_KEY, marketing_year=year)
         for year in PSD_YEARS:
             fetch_psd_data(usda_api_key=USDA_API_KEY, marketing_year=year) 
-        fetch_inspections()
         
     if not restart:
         print("--------------------")
+    fetch_inspections()
     clean_all_esr()
     clean_all_psd()
     clean_all_inspections()

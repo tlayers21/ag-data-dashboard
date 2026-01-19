@@ -16,15 +16,15 @@ FLAG_PATH = Path("maintenance.flag").resolve()
 
 @task
 def run_pipeline():
+    print("--------------------")
     for year in ESR_YEARS:
         fetch_esr_data(usda_api_key=USDA_API_KEY, marketing_year=year)
     for year in PSD_YEARS:
-        fetch_psd_data(usda_api_key=USDA_API_KEY, marketing_year=year) 
+        fetch_psd_data(usda_api_key=USDA_API_KEY, marketing_year=year)
 
-    print("--------------------")
+    fetch_inspections()
     clean_all_esr()
     clean_all_psd()
-    fetch_inspections()
     clean_all_inspections()
     init_database()
     generate_charts()
