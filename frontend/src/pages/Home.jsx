@@ -3,6 +3,7 @@ import ChartViewer from "../components/ChartViewer";
 import { loadCommentary } from "../utils/loadCommentary";
 
 export default function Home() {
+  // First-load-only flag for this browser tab
   const firstLoadRef = useRef(sessionStorage.getItem("homeLoaded") !== "true");
 
   const [loading, setLoading] = useState(true);
@@ -43,18 +44,26 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
+  // First-load-only loading animation
   useEffect(() => {
-    async function load() {
-      if (!firstLoadRef.current) {
-        setLoading(false);
-        return;
-      }
+    if (!firstLoadRef.current) {
+      setLoading(false);
+      return;
+    }
 
-      firstLoadRef.current = false;
-      sessionStorage.setItem("homeLoaded", "true");
+    firstLoadRef.current = false;
+    sessionStorage.setItem("homeLoaded", "true");
 
-      document.documentElement.style.setProperty("--loading-duration", "18s");
+    document.documentElement.style.setProperty("--loading-duration", "18s");
 
+    setTimeout(() => {
+      setLoading(false);
+    }, 10900);
+  }, []);
+
+  // Commentary loads EVERY time Home mounts
+  useEffect(() => {
+    async function fetchCommentary() {
       try {
         const { corn, wheat, soybeans } = await loadCommentary();
         setCornCommentary(corn);
@@ -63,13 +72,9 @@ export default function Home() {
       } catch (err) {
         console.error("Commentary failed:", err);
       }
-
-      setTimeout(() => {
-        setLoading(false);
-      }, 10900);
     }
 
-    load();
+    fetchCommentary();
   }, []);
 
   if (loading) {

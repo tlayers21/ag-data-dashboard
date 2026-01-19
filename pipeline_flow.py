@@ -22,9 +22,9 @@ def run_pipeline():
         fetch_psd_data(usda_api_key=USDA_API_KEY, marketing_year=year) 
 
     print("--------------------")
-    fetch_inspections()
     clean_all_esr()
     clean_all_psd()
+    fetch_inspections()
     clean_all_inspections()
     init_database()
     generate_charts()
