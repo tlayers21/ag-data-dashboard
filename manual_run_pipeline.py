@@ -42,6 +42,7 @@ if __name__ == "__main__":
         
     if not restart:
         print("--------------------")
+
     fetch_inspections()
     clean_all_esr()
     clean_all_psd()
