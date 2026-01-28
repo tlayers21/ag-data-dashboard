@@ -123,6 +123,13 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
   if (variant === "home") {
     layout = {
       ...layout,
+      title: {
+        ...(layout.title || {}),
+        font: {
+          ...(layout.title?.font || {}),
+          size: 14
+        }
+      },
       legend: {
         ...(layout.legend || {}),
         orientation: "h",
@@ -171,14 +178,12 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
   const chartHeight = isCommodityPage ? "520px" : "480px";
 
   return (
-    <div className={variant === "home" ? "home-chart" : ""}>
-      <Plot
-        data={figure.data}
-        layout={layout}
-        config={figure.config || {}}
-        style={{ width: "100%", height: chartHeight }}
-        useResizeHandler={true}
-      />
-    </div>
+    <Plot
+      data={figure.data}
+      layout={layout}
+      config={figure.config || {}}
+      style={{ width: "100%", height: chartHeight }}
+      useResizeHandler={true}
+    />
   );
 }
