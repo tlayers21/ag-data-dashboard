@@ -159,6 +159,11 @@ html {
   height: 700px !important;
 }
 
+.home-chart .js-plotly-plot {
+  height: 360px !important;
+}
+
+
 .js-plotly-plot {
   min-width: 550px !important;
 }
