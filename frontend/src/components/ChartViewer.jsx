@@ -120,7 +120,6 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
 
   let layout = { ...figure.layout };
 
-  // HOME CHARTS
   if (variant === "home") {
     layout = {
       ...layout,
