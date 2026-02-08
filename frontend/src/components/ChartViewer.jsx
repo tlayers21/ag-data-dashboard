@@ -122,11 +122,11 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
 
   let layout = { ...figure.layout };
 
-  const SAFARI_HOME_STANDOFF = 18;
-  const SAFARI_COMMODITY_STANDOFF = 22;
+  const SAFARI_HOME_STANDOFF = 14;
+  const SAFARI_COMMODITY_STANDOFF = 16;
 
-  const CHROMIUM_HOME_STANDOFF = 33;
-  const CHROMIUM_COMMODITY_STANDOFF = 40;
+  const CHROMIUM_HOME_STANDOFF = 40;
+  const CHROMIUM_COMMODITY_STANDOFF = 70;
 
   const standoff = isSafari
     ? (variant === "home" ? SAFARI_HOME_STANDOFF : SAFARI_COMMODITY_STANDOFF)
