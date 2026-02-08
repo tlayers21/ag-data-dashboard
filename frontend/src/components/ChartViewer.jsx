@@ -120,6 +120,7 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
 
   let layout = { ...figure.layout };
 
+  // HOME CHARTS
   if (variant === "home") {
     layout = {
       ...layout,
@@ -151,7 +152,7 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
         automargin: true,
         title: {
           ...(layout.xaxis?.title || {}),
-          standoff: 22
+          standoff: 30
         }
       }
     };
@@ -177,7 +178,7 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
         automargin: true,
         title: {
           ...(layout.xaxis?.title || {}),
-          standoff: 22
+          standoff: 30
         }
       }
     };
