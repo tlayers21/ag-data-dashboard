@@ -148,7 +148,11 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
       xaxis: {
         ...(layout.xaxis || {}),
         tickangle: -45,
-        automargin: true
+        automargin: true,
+        title: {
+          ...(layout.xaxis?.title || {}),
+          standoff: 22
+        }
       }
     };
   }
@@ -170,7 +174,11 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
       xaxis: {
         ...(layout.xaxis || {}),
         tickangle: -45,
-        automargin: true
+        automargin: true,
+        title: {
+          ...(layout.xaxis?.title || {}),
+          standoff: 22
+        }
       }
     };
   }
