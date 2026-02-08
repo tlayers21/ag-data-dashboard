@@ -5,6 +5,8 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
   const [figure, setFigure] = useState(null);
   const [error, setError] = useState(false);
 
+  const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
   useEffect(() => {
     setError(false);
     setFigure(null);
@@ -120,6 +122,17 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
 
   let layout = { ...figure.layout };
 
+  const SAFARI_HOME_STANDOFF = 18;
+  const SAFARI_COMMODITY_STANDOFF = 22;
+
+  const CHROMIUM_HOME_STANDOFF = 33;
+  const CHROMIUM_COMMODITY_STANDOFF = 40;
+
+  const standoff = isSafari
+    ? (variant === "home" ? SAFARI_HOME_STANDOFF : SAFARI_COMMODITY_STANDOFF)
+    : (variant === "home" ? CHROMIUM_HOME_STANDOFF : CHROMIUM_COMMODITY_STANDOFF);
+
+  // HOME CHARTS
   if (variant === "home") {
     layout = {
       ...layout,
@@ -151,12 +164,13 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
         automargin: true,
         title: {
           ...(layout.xaxis?.title || {}),
-          standoff: 30
+          standoff
         }
       }
     };
   }
 
+  // COMMODITY PAGES
   if (isCommodityPage) {
     layout = {
       ...layout,
@@ -177,7 +191,7 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
         automargin: true,
         title: {
           ...(layout.xaxis?.title || {}),
-          standoff: 30
+          standoff
         }
       }
     };
