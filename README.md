@@ -43,7 +43,7 @@ The frontend is a **React-based dashboard** designed for clarity, speed, and eas
 The dashboard supports the following countries
 
 - World (All country data combined)
-- United States (For PSD, for ESR data is from U.S.)
+- United States (For PSD - for ESR data is exclusively from the U.S.)
 - Mexico
 - Japan
 - South Korea
