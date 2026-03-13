@@ -60,6 +60,8 @@ def generate_weekly_esr_or_inspections_chart(
     latest_date = df["date_collected"].iloc[0]
     latest_date = pd.to_datetime(latest_date).strftime("%m/%d/%Y")
 
+    commodity_display = commodity.replace("srw", "SRW").replace("hrw", "HRW")
+
     figure = px.line(
         df,
         x=x_axis,
@@ -68,7 +70,7 @@ def generate_weekly_esr_or_inspections_chart(
         markers=True,
         custom_data=["week_ending_date", value_column],
         title=(
-            f"Weekly U.S. {commodity.replace("-", " ").title()} {value_column.replace('_', ' ').title()}<br>"
+            f"Weekly U.S. {commodity_display.replace("-", " ").title()} {value_column.replace('_', ' ').title()}<br>"
             f"to {country.replace("-", " ").title()} (as of {latest_date})"
         ),
         labels={
