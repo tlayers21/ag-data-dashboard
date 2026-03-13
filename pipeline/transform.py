@@ -79,7 +79,11 @@ PSD_UNIT_MAP = {
     26: "Yield (Metric Tons per Hectare)"
 }
 
-PSD_COMMODITY_LOOKUP = {data["psd"]["commodity"]: commodity for commodity, data in COMMODITIES.items()}
+PSD_COMMODITY_LOOKUP = {
+    data["psd"]["commodity"]: commodity
+    for commodity, data in COMMODITIES.items()
+    if "psd" in data
+}
 
 # Cleans an ESR all file, aggregates data in order to produce ESR world data
 def clean_esr_all_file(path: Path) -> pd.DataFrame:

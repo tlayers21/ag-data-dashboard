@@ -6,9 +6,8 @@ __pycache__/
 api/__pycache__/
 pipeline/__pycache__
 
-# Data (excluding inspections which must be there)
-data/clean
-data/raw/fas
+# Data
+data
 
 # Commentary
 frontend/src/commentary
@@ -18,8 +17,3 @@ api/charts
 
 # Commentary TXT files
 api/commentary
-
-# Deploy my using Prefect
-deploy_from_github.py
-apply_deployments.py
-prefect.yaml

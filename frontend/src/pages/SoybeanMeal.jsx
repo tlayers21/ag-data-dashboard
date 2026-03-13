@@ -13,18 +13,46 @@ const DATA_SOURCES = ["ESR", "PSD", "Forecasts"];
 const BASE_COUNTRIES = [
   { label: "World", slug: "world" },
   { label: "Mexico", slug: "mexico" },
+  { label: "Japan", slug: "japan" },
+  { label: "South Korea", slug: "south-korea" },
+  { label: "Colombia", slug: "colombia" },
   { label: "European Union", slug: "european-union" },
+  { label: "Taiwan", slug: "taiwan" },
+  { label: "Guatemala", slug: "guatemala" },
+  { label: "Vietnam", slug: "vietnam" },
+  { label: "Canada", slug: "canada" },
+  { label: "Honduras", slug: "honduras" },
+  { label: "Philippines", slug: "philippines" },
+  { label: "Nigeria", slug: "nigeria" },
+  { label: "Indonesia", slug: "indonesia" },
+  { label: "Thailand", slug: "thailand" },
   { label: "China", slug: "china" },
-  { label: "Japan", slug: "japan" }
+  { label: "Egypt", slug: "egypt" },
+  { label: "Pakistan", slug: "pakistan" },
+  { label: "Bangladesh", slug: "bangladesh" }
 ];
 
 const PSD_COUNTRIES = [
   { label: "World", slug: "world" },
   { label: "United States", slug: "united-states" },
   { label: "Mexico", slug: "mexico" },
+  { label: "Japan", slug: "japan" },
+  { label: "South Korea", slug: "south-korea" },
+  { label: "Colombia", slug: "colombia" },
   { label: "European Union", slug: "european-union" },
+  { label: "Taiwan", slug: "taiwan" },
+  { label: "Guatemala", slug: "guatemala" },
+  { label: "Vietnam", slug: "vietnam" },
+  { label: "Canada", slug: "canada" },
+  { label: "Honduras", slug: "honduras" },
+  { label: "Philippines", slug: "philippines" },
+  { label: "Nigeria", slug: "nigeria" },
+  { label: "Indonesia", slug: "indonesia" },
+  { label: "Thailand", slug: "thailand" },
   { label: "China", slug: "china" },
-  { label: "Japan", slug: "japan" }
+  { label: "Egypt", slug: "egypt" },
+  { label: "Pakistan", slug: "pakistan" },
+  { label: "Bangladesh", slug: "bangladesh" }
 ];
 
 // -----------------------------

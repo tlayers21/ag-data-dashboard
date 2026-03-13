@@ -17,12 +17,12 @@ def generate_weekly_esr_or_inspections_chart(
     database_data = AgDataClient()
     df_data = database_data.get(data_type, commodity, country)
 
-    if df_data is None:
+    # If data is empty or doesn't exist
+    if not df_data:
         return
     
     df = pd.DataFrame(df_data)
 
-    # For debugging
     if value_column not in df.columns:
         print(f"Missing column: {value_column} for {data_type}, {commodity}, {country}")
         print("Columns returned:", df.columns.tolist())
@@ -194,7 +194,8 @@ def generate_weekly_psd_chart(
     database_data = AgDataClient()
     df_data = database_data.get(data_type, commodity, country)
 
-    if df_data is None:
+    # If data is empty or doesn't exist
+    if not df_data:
         return
 
     df = pd.DataFrame(df_data)
@@ -207,11 +208,13 @@ def generate_weekly_psd_chart(
 
     df = df[df["attribute_norm"] == attribute]
 
+    # Attribute doesn't exist
     if df.empty:
         return
 
     df = df.drop(columns=["attribute_norm"])
 
+    # Attribute exists but all amounts are 0
     if (df["amount"] == 0).all():
         return
 
@@ -305,7 +308,8 @@ def generate_weekly_psd_chart(
 
     pio.write_json(figure, str(json_path))
 
-# Generates every single chart possible for all commodities and marketing/calendar years if applicable
+# Generates every single chart possible for all commodities and marketing/calendar years if applicable - for debugging
+"""
 def generate_charts() -> None:
     print("Generating All Specific Page Charts...")
 
@@ -379,24 +383,24 @@ def generate_charts() -> None:
                             year_type=year_type,
                             home=False
                         )
-        
-        # PSD data only releases once per marketing year, so plotting by calendar year doesn't make sense
-        
-        for attribute in psd_attributes:
-            generate_weekly_psd_chart(
-                data_type="psd",
-                commodity=commodity,
-                country="world",
-                attribute=attribute
-            )
 
-            for country in psd_countries:
+        # PSD data only releases once per marketing year, so plotting by calendar year doesn't make sense
+        for attribute in psd_attributes:
+            if commodity not in ["srw-wheat", "hrw-wheat"]:
                 generate_weekly_psd_chart(
-                data_type="psd",
-                commodity=commodity,
-                country=country,
-                attribute=attribute
-            )
+                    data_type="psd",
+                    commodity=commodity,
+                    country="world",
+                    attribute=attribute
+                )
+
+                for country in psd_countries:
+                    generate_weekly_psd_chart(
+                    data_type="psd",
+                    commodity=commodity,
+                    country=country,
+                    attribute=attribute
+                )
         
     print("Done.\n==========")
 
@@ -437,3 +441,4 @@ def generate_home_page_charts() -> None:
             )
 
     print("Done.\n==========")
+"""

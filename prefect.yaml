@@ -1,0 +1,23 @@
+version: 3.0
+
+deployments:
+
+  - name: agdatadashboard-weekly
+    flow_name: agdatadashboard-pipeline
+    entrypoint: pipeline_flow.py:agdatadashboard_pipeline
+    work_pool:
+      name: agdatadashboard-pool
+    schedules:
+
+      # Monday (Inspections)
+      - cron: "15 11 * * MON"
+        timezone: "America/New_York"
+      - cron: "00 12 * * MON"
+
+      # Thursday (ESR)
+      - cron: "00 09 * * THU"  
+      - cron: "00 12 * * THU"
+
+      # Every other day at 12 PM (Tue, Wed, Fri, Sat, Sun)
+      - cron: "00 12 * * TUE,WED,FRI,SAT,SUN"
+        timezone: "America/New_York"

@@ -1,6 +1,6 @@
 from pathlib import Path
 
-# Root directroy for project
+# Root directory for project
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # For raw ESR and PSD data

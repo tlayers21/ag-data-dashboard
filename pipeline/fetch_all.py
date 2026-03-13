@@ -61,6 +61,10 @@ def fetch_psd_data(usda_api_key: str, marketing_year: int) -> None:
 
     print(f"Starting PSD Data Fetching Process For Marketing Year {marketing_year}...")
     for name, cfg in COMMODITIES.items():
+        if "psd" not in cfg:
+            print(f"Skipping {name.title()} - no PSD configuration found.")
+            continue
+
         print(f"Fetching: {name.title()} For Marketing Year {marketing_year}")
         dash_commodity_name = name.replace(' ', '-')
 

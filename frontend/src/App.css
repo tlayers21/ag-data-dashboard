@@ -153,6 +153,8 @@ html {
 
 .corn-chart .js-plotly-plot,
 .wheat-chart .js-plotly-plot,
+.hrw-wheat-chart .js-plotly-plot,
+.srw-wheat-chart .js-plotly-plot,
 .soybeans-chart .js-plotly-plot,
 .soybean-oil-chart .js-plotly-plot,
 .soybean-meal-chart .js-plotly-plot {

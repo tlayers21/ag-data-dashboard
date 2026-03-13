@@ -7,7 +7,6 @@ import BackArrow from "./components/BackArrow";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import DataOverview from "./pages/DataOverview";
-import Placeholder from "./pages/Placeholder";
 
 import Corn from "./pages/Corn";
 import Ethanol from "./pages/Ethanol";
@@ -36,42 +35,45 @@ function App() {
 
           {/* Corn */}
           <Route path="/corn" element={<Corn />} />
-          <Route path="/corn/inspections" element={<Placeholder />} />
-          <Route path="/corn/esr" element={<Placeholder />} />
-          <Route path="/corn/psd" element={<Placeholder />} />
-          <Route path="/corn/forecasts" element={<Placeholder />} />
+          <Route path="/corn/inspections" element={<Corn />} />
+          <Route path="/corn/esr" element={<Corn />} />
+          <Route path="/corn/forecasts" element={<Corn />} />
+
+          {/* Ethanol */}
           <Route path="/ethanol" element={<Ethanol />} />
-          <Route path="/ethanol/forecasts" element={<Placeholder />} />
+          <Route path="/ethanol/forecasts" element={<Ethanol />} />
 
           {/* Wheat */}
           <Route path="/wheat" element={<Wheat />} />
-          <Route path="/wheat/inspections" element={<Placeholder />} />
-          <Route path="/wheat/esr" element={<Placeholder />} />
-          <Route path="/wheat/psd" element={<Placeholder />} />
-          <Route path="/wheat/forecasts" element={<Placeholder />} />
+          <Route path="/wheat/inspections" element={<Wheat />} />
+          <Route path="/wheat/esr" element={<Wheat />} />
+          <Route path="/wheat/forecasts" element={<Wheat />} />
+
+          {/* SRW Wheat */}
           <Route path="/srw-wheat" element={<SRWWheat />} />
-          <Route path="/srw-wheat/esr" element={<Placeholder />} />
-          <Route path="/srw-wheat/psd" element={<Placeholder />} />
-          <Route path="/srw-wheat/forecasts" element={<Placeholder />} />
+          <Route path="/srw-wheat/esr" element={<SRWWheat />} />
+          <Route path="/srw-wheat/forecasts" element={<SRWWheat />} />
+
+          {/* HRW Wheat */}
           <Route path="/hrw-wheat" element={<HRWWheat />} />
-          <Route path="/hrw-wheat/esr" element={<Placeholder />} />
-          <Route path="/hrw-wheat/psd" element={<Placeholder />} />
-          <Route path="/hrw-wheat/forecasts" element={<Placeholder />} />
+          <Route path="/hrw-wheat/esr" element={<HRWWheat />} />
+          <Route path="/hrw-wheat/forecasts" element={<HRWWheat />} />
 
           {/* Soybeans */}
           <Route path="/soybeans" element={<Soybeans />} />
-          <Route path="/soybeans/inspections" element={<Placeholder />} />
-          <Route path="/soybeans/esr" element={<Placeholder />} />
-          <Route path="/soybeans/psd" element={<Placeholder />} />
-          <Route path="/soybeans/forecasts" element={<Placeholder />} />
+          <Route path="/soybeans/inspections" element={<Soybeans />} />
+          <Route path="/soybeans/esr" element={<Soybeans />} />
+          <Route path="/soybeans/forecasts" element={<Soybeans />} />
+
+          {/* Soybean Meal */}
           <Route path="/soybean-meal" element={<SoybeanMeal />} />
-          <Route path="/soybean-meal/esr" element={<Placeholder />} />
-          <Route path="/soybean-meal/psd" element={<Placeholder />} />
-          <Route path="/soybean-meal/forecasts" element={<Placeholder />} />
+          <Route path="/soybean-meal/esr" element={<SoybeanMeal />} />
+          <Route path="/soybean-meal/forecasts" element={<SoybeanMeal />} />
+
+          {/* Soybean Oil */}
           <Route path="/soybean-oil" element={<SoybeanOil />} />
-          <Route path="/soybean-oil/esr" element={<Placeholder />} />
-          <Route path="/soybean-oil/psd" element={<Placeholder />} />
-          <Route path="/soybean-oil/forecasts" element={<Placeholder />} />
+          <Route path="/soybean-oil/esr" element={<SoybeanOil />} />
+          <Route path="/soybean-oil/forecasts" element={<SoybeanOil />} />
         </Routes>
       </div>
     </>

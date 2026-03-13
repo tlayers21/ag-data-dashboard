@@ -4,6 +4,8 @@ import pandas as pd
 MARKETING_YEAR_START = {
     "corn": 9,
     "soybeans": 9,
+    "srw wheat": 6,
+    "hrw wheat": 6,
     "wheat": 6,
     "soybean meal": 10,
     "soybean oil": 10
