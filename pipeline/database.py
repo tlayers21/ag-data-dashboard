@@ -88,7 +88,6 @@ CREATE_INSPECTIONS_INDEXES = [
     "CREATE INDEX IF NOT EXISTS idx_inspections_commodity ON inspections(commodity);"
 ]
 
-# Unique keys for checking duplicates
 UNIQUE_KEYS = {
     "esr": ["date_collected", "commodity", "country"],
     "psd": ["date_collected", "commodity", "country", "attribute"],

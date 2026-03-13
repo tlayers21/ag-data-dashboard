@@ -30,12 +30,38 @@ The frontend is a **React-based dashboard** designed for clarity, speed, and eas
 - Built with **React**, **React Router**, and **Plotly**
 - Commodity-specific pages for:
   - Corn
-  - Wheat
+  - Wheat (All)
+  - SRW Wheat
+  - HRW Wheat
   - Soybeans
   - Soybean Meal
   - Soybean Oil
 - Dynamic chart rendering with multiple data sources
 - Country and metric selectors
+
+### Countries Available
+The dashboard supports the following countries
+
+- World (All country data combined)
+- United States (For PSD, for ESR data is from U.S.)
+- Mexico
+- Japan
+- South Korea
+- Colombia
+- European Union
+- Taiwan
+- Guatemala
+- Vietnam
+- Canada
+- Honduras
+- Philippines
+- Nigeria
+- Indonesia
+- Thailand
+- China
+- Egypt
+- Pakistan
+- Bangladesh
 
 ### Data Overview Page
 - A dedicated page explaining all ESR, PSD, and Inspections fields
