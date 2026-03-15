@@ -1,0 +1,132 @@
+[
+  {
+    "commodityCode": "2222000",
+    "countryCode": "NI",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "12",
+    "attributeId": 4,
+    "unitId": 4,
+    "value": 1200.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "NI",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "12",
+    "attributeId": 20,
+    "unitId": 8,
+    "value": 173.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "NI",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "12",
+    "attributeId": 28,
+    "unitId": 8,
+    "value": 1320.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "NI",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "12",
+    "attributeId": 57,
+    "unitId": 8,
+    "value": 0.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "NI",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "12",
+    "attributeId": 86,
+    "unitId": 8,
+    "value": 1493.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "NI",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "12",
+    "attributeId": 88,
+    "unitId": 8,
+    "value": 39.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "NI",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "12",
+    "attributeId": 7,
+    "unitId": 8,
+    "value": 950.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "NI",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "12",
+    "attributeId": 149,
+    "unitId": 8,
+    "value": 200.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "NI",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "12",
+    "attributeId": 161,
+    "unitId": 8,
+    "value": 175.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "NI",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "12",
+    "attributeId": 125,
+    "unitId": 8,
+    "value": 1325.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "NI",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "12",
+    "attributeId": 176,
+    "unitId": 8,
+    "value": 129.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "NI",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "12",
+    "attributeId": 178,
+    "unitId": 8,
+    "value": 1493.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "NI",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "12",
+    "attributeId": 184,
+    "unitId": 26,
+    "value": 1.1
+  }
+]

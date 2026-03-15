@@ -1,0 +1,132 @@
+[
+  {
+    "commodityCode": "2222000",
+    "countryCode": "CH",
+    "marketYear": "2024",
+    "calendarYear": "2025",
+    "month": "11",
+    "attributeId": 4,
+    "unitId": 4,
+    "value": 10333.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "CH",
+    "marketYear": "2024",
+    "calendarYear": "2025",
+    "month": "11",
+    "attributeId": 20,
+    "unitId": 8,
+    "value": 43310.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "CH",
+    "marketYear": "2024",
+    "calendarYear": "2025",
+    "month": "11",
+    "attributeId": 28,
+    "unitId": 8,
+    "value": 20650.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "CH",
+    "marketYear": "2024",
+    "calendarYear": "2025",
+    "month": "11",
+    "attributeId": 57,
+    "unitId": 8,
+    "value": 108000.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "CH",
+    "marketYear": "2024",
+    "calendarYear": "2025",
+    "month": "11",
+    "attributeId": 86,
+    "unitId": 8,
+    "value": 171960.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "CH",
+    "marketYear": "2024",
+    "calendarYear": "2025",
+    "month": "11",
+    "attributeId": 88,
+    "unitId": 8,
+    "value": 72.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "CH",
+    "marketYear": "2024",
+    "calendarYear": "2025",
+    "month": "11",
+    "attributeId": 7,
+    "unitId": 8,
+    "value": 103500.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "CH",
+    "marketYear": "2024",
+    "calendarYear": "2025",
+    "month": "11",
+    "attributeId": 149,
+    "unitId": 8,
+    "value": 17600.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "CH",
+    "marketYear": "2024",
+    "calendarYear": "2025",
+    "month": "11",
+    "attributeId": 161,
+    "unitId": 8,
+    "value": 6300.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "CH",
+    "marketYear": "2024",
+    "calendarYear": "2025",
+    "month": "11",
+    "attributeId": 125,
+    "unitId": 8,
+    "value": 127400.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "CH",
+    "marketYear": "2024",
+    "calendarYear": "2025",
+    "month": "11",
+    "attributeId": 176,
+    "unitId": 8,
+    "value": 44488.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "CH",
+    "marketYear": "2024",
+    "calendarYear": "2025",
+    "month": "11",
+    "attributeId": 178,
+    "unitId": 8,
+    "value": 171960.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "CH",
+    "marketYear": "2024",
+    "calendarYear": "2025",
+    "month": "11",
+    "attributeId": 184,
+    "unitId": 26,
+    "value": 1.9985
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "commodityCode": 102,
+    "countryCode": 5650,
+    "weeklyExports": 0,
+    "accumulatedExports": 0,
+    "outstandingSales": 0,
+    "grossNewSales": 0,
+    "currentMYNetSales": 0,
+    "currentMYTotalCommitment": 0,
+    "nextMYOutstandingSales": 0,
+    "nextMYNetSales": 0,
+    "unitId": 1,
+    "weekEndingDate": "2026-03-05T00:00:00"
+  }
+]

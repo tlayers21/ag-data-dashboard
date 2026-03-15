@@ -6,9 +6,6 @@ __pycache__/
 api/__pycache__/
 pipeline/__pycache__
 
-# Data
-data
-
 # Commentary
 frontend/src/commentary
 

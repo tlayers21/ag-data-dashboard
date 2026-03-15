@@ -1,0 +1,58 @@
+[
+  {
+    "commodityCode": 102,
+    "countryCode": 7290,
+    "weeklyExports": 0,
+    "accumulatedExports": 0,
+    "outstandingSales": 0,
+    "grossNewSales": 0,
+    "currentMYNetSales": 0,
+    "currentMYTotalCommitment": 0,
+    "nextMYOutstandingSales": 0,
+    "nextMYNetSales": 0,
+    "unitId": 1,
+    "weekEndingDate": "2025-06-26T00:00:00"
+  },
+  {
+    "commodityCode": 102,
+    "countryCode": 7290,
+    "weeklyExports": 0,
+    "accumulatedExports": 0,
+    "outstandingSales": 0,
+    "grossNewSales": 0,
+    "currentMYNetSales": 0,
+    "currentMYTotalCommitment": 0,
+    "nextMYOutstandingSales": 0,
+    "nextMYNetSales": 0,
+    "unitId": 1,
+    "weekEndingDate": "2025-07-03T00:00:00"
+  },
+  {
+    "commodityCode": 102,
+    "countryCode": 7290,
+    "weeklyExports": 0,
+    "accumulatedExports": 0,
+    "outstandingSales": 0,
+    "grossNewSales": 0,
+    "currentMYNetSales": 0,
+    "currentMYTotalCommitment": 0,
+    "nextMYOutstandingSales": 0,
+    "nextMYNetSales": 0,
+    "unitId": 1,
+    "weekEndingDate": "2025-07-10T00:00:00"
+  },
+  {
+    "commodityCode": 102,
+    "countryCode": 7290,
+    "weeklyExports": 0,
+    "accumulatedExports": 0,
+    "outstandingSales": 0,
+    "grossNewSales": 0,
+    "currentMYNetSales": 0,
+    "currentMYTotalCommitment": 0,
+    "nextMYOutstandingSales": 0,
+    "nextMYNetSales": 0,
+    "unitId": 1,
+    "weekEndingDate": "2025-07-17T00:00:00"
+  }
+]

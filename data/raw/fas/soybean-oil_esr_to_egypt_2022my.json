@@ -1,0 +1,44 @@
+[
+  {
+    "commodityCode": 902,
+    "countryCode": 7290,
+    "weeklyExports": 0,
+    "accumulatedExports": 0,
+    "outstandingSales": 0,
+    "grossNewSales": 0,
+    "currentMYNetSales": 0,
+    "currentMYTotalCommitment": 0,
+    "nextMYOutstandingSales": 0,
+    "nextMYNetSales": 0,
+    "unitId": 1,
+    "weekEndingDate": "2022-01-27T00:00:00"
+  },
+  {
+    "commodityCode": 902,
+    "countryCode": 7290,
+    "weeklyExports": 0,
+    "accumulatedExports": 0,
+    "outstandingSales": 0,
+    "grossNewSales": 0,
+    "currentMYNetSales": 0,
+    "currentMYTotalCommitment": 0,
+    "nextMYOutstandingSales": 0,
+    "nextMYNetSales": 0,
+    "unitId": 1,
+    "weekEndingDate": "2022-02-03T00:00:00"
+  },
+  {
+    "commodityCode": 902,
+    "countryCode": 7290,
+    "weeklyExports": 0,
+    "accumulatedExports": 0,
+    "outstandingSales": 0,
+    "grossNewSales": 0,
+    "currentMYNetSales": 0,
+    "currentMYTotalCommitment": 0,
+    "nextMYOutstandingSales": 0,
+    "nextMYNetSales": 0,
+    "unitId": 1,
+    "weekEndingDate": "2022-02-10T00:00:00"
+  }
+]

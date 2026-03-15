@@ -1,0 +1,132 @@
+[
+  {
+    "commodityCode": "2222000",
+    "countryCode": "RP",
+    "marketYear": "2023",
+    "calendarYear": "2025",
+    "month": "05",
+    "attributeId": 4,
+    "unitId": 4,
+    "value": 1.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "RP",
+    "marketYear": "2023",
+    "calendarYear": "2025",
+    "month": "05",
+    "attributeId": 20,
+    "unitId": 8,
+    "value": 17.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "RP",
+    "marketYear": "2023",
+    "calendarYear": "2025",
+    "month": "05",
+    "attributeId": 28,
+    "unitId": 8,
+    "value": 1.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "RP",
+    "marketYear": "2023",
+    "calendarYear": "2025",
+    "month": "05",
+    "attributeId": 57,
+    "unitId": 8,
+    "value": 151.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "RP",
+    "marketYear": "2023",
+    "calendarYear": "2025",
+    "month": "05",
+    "attributeId": 86,
+    "unitId": 8,
+    "value": 169.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "RP",
+    "marketYear": "2023",
+    "calendarYear": "2025",
+    "month": "05",
+    "attributeId": 88,
+    "unitId": 8,
+    "value": 0.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "RP",
+    "marketYear": "2023",
+    "calendarYear": "2025",
+    "month": "05",
+    "attributeId": 7,
+    "unitId": 8,
+    "value": 65.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "RP",
+    "marketYear": "2023",
+    "calendarYear": "2025",
+    "month": "05",
+    "attributeId": 149,
+    "unitId": 8,
+    "value": 40.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "RP",
+    "marketYear": "2023",
+    "calendarYear": "2025",
+    "month": "05",
+    "attributeId": 161,
+    "unitId": 8,
+    "value": 50.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "RP",
+    "marketYear": "2023",
+    "calendarYear": "2025",
+    "month": "05",
+    "attributeId": 125,
+    "unitId": 8,
+    "value": 155.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "RP",
+    "marketYear": "2023",
+    "calendarYear": "2025",
+    "month": "05",
+    "attributeId": 176,
+    "unitId": 8,
+    "value": 14.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "RP",
+    "marketYear": "2023",
+    "calendarYear": "2025",
+    "month": "05",
+    "attributeId": 178,
+    "unitId": 8,
+    "value": 169.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "RP",
+    "marketYear": "2023",
+    "calendarYear": "2025",
+    "month": "05",
+    "attributeId": 184,
+    "unitId": 26,
+    "value": 1.0
+  }
+]

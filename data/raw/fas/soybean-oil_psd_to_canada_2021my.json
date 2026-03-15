@@ -1,0 +1,132 @@
+[
+  {
+    "commodityCode": "4232000",
+    "countryCode": "CA",
+    "marketYear": "2021",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 7,
+    "unitId": 8,
+    "value": 1845.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "CA",
+    "marketYear": "2021",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 181,
+    "unitId": 23,
+    "value": 0.1859
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "CA",
+    "marketYear": "2021",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 20,
+    "unitId": 8,
+    "value": 15.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "CA",
+    "marketYear": "2021",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 28,
+    "unitId": 8,
+    "value": 343.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "CA",
+    "marketYear": "2021",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 57,
+    "unitId": 8,
+    "value": 63.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "CA",
+    "marketYear": "2021",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 86,
+    "unitId": 8,
+    "value": 421.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "CA",
+    "marketYear": "2021",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 88,
+    "unitId": 8,
+    "value": 153.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "CA",
+    "marketYear": "2021",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 140,
+    "unitId": 8,
+    "value": 0.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "CA",
+    "marketYear": "2021",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 149,
+    "unitId": 8,
+    "value": 240.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "CA",
+    "marketYear": "2021",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 161,
+    "unitId": 8,
+    "value": 0.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "CA",
+    "marketYear": "2021",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 125,
+    "unitId": 8,
+    "value": 240.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "CA",
+    "marketYear": "2021",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 176,
+    "unitId": 8,
+    "value": 28.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "CA",
+    "marketYear": "2021",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 178,
+    "unitId": 8,
+    "value": 421.0
+  }
+]

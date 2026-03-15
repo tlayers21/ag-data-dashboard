@@ -1,0 +1,152 @@
+[
+  {
+    "commodityCode": "0410000",
+    "countryCode": "TW",
+    "marketYear": "2023",
+    "calendarYear": "2024",
+    "month": "12",
+    "attributeId": 4,
+    "unitId": 4,
+    "value": 2.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "TW",
+    "marketYear": "2023",
+    "calendarYear": "2024",
+    "month": "12",
+    "attributeId": 20,
+    "unitId": 8,
+    "value": 109.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "TW",
+    "marketYear": "2023",
+    "calendarYear": "2024",
+    "month": "12",
+    "attributeId": 28,
+    "unitId": 8,
+    "value": 4.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "TW",
+    "marketYear": "2023",
+    "calendarYear": "2024",
+    "month": "12",
+    "attributeId": 57,
+    "unitId": 8,
+    "value": 1353.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "TW",
+    "marketYear": "2023",
+    "calendarYear": "2024",
+    "month": "12",
+    "attributeId": 81,
+    "unitId": 8,
+    "value": 1353.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "TW",
+    "marketYear": "2023",
+    "calendarYear": "2024",
+    "month": "12",
+    "attributeId": 84,
+    "unitId": 8,
+    "value": 1009.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "TW",
+    "marketYear": "2023",
+    "calendarYear": "2024",
+    "month": "12",
+    "attributeId": 86,
+    "unitId": 8,
+    "value": 1466.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "TW",
+    "marketYear": "2023",
+    "calendarYear": "2024",
+    "month": "12",
+    "attributeId": 88,
+    "unitId": 8,
+    "value": 72.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "TW",
+    "marketYear": "2023",
+    "calendarYear": "2024",
+    "month": "12",
+    "attributeId": 113,
+    "unitId": 8,
+    "value": 72.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "TW",
+    "marketYear": "2023",
+    "calendarYear": "2024",
+    "month": "12",
+    "attributeId": 130,
+    "unitId": 8,
+    "value": 75.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "TW",
+    "marketYear": "2023",
+    "calendarYear": "2024",
+    "month": "12",
+    "attributeId": 192,
+    "unitId": 8,
+    "value": 1200.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "TW",
+    "marketYear": "2023",
+    "calendarYear": "2024",
+    "month": "12",
+    "attributeId": 125,
+    "unitId": 8,
+    "value": 1275.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "TW",
+    "marketYear": "2023",
+    "calendarYear": "2024",
+    "month": "12",
+    "attributeId": 176,
+    "unitId": 8,
+    "value": 119.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "TW",
+    "marketYear": "2023",
+    "calendarYear": "2024",
+    "month": "12",
+    "attributeId": 178,
+    "unitId": 8,
+    "value": 1466.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "TW",
+    "marketYear": "2023",
+    "calendarYear": "2024",
+    "month": "12",
+    "attributeId": 184,
+    "unitId": 26,
+    "value": 2.0
+  }
+]

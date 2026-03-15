@@ -1,0 +1,152 @@
+[
+  {
+    "commodityCode": "0410000",
+    "countryCode": "CA",
+    "marketYear": "2022",
+    "calendarYear": "2026",
+    "month": "02",
+    "attributeId": 4,
+    "unitId": 4,
+    "value": 10111.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "CA",
+    "marketYear": "2022",
+    "calendarYear": "2026",
+    "month": "02",
+    "attributeId": 20,
+    "unitId": 8,
+    "value": 4169.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "CA",
+    "marketYear": "2022",
+    "calendarYear": "2026",
+    "month": "02",
+    "attributeId": 28,
+    "unitId": 8,
+    "value": 34879.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "CA",
+    "marketYear": "2022",
+    "calendarYear": "2026",
+    "month": "02",
+    "attributeId": 57,
+    "unitId": 8,
+    "value": 552.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "CA",
+    "marketYear": "2022",
+    "calendarYear": "2026",
+    "month": "02",
+    "attributeId": 81,
+    "unitId": 8,
+    "value": 545.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "CA",
+    "marketYear": "2022",
+    "calendarYear": "2026",
+    "month": "02",
+    "attributeId": 84,
+    "unitId": 8,
+    "value": 306.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "CA",
+    "marketYear": "2022",
+    "calendarYear": "2026",
+    "month": "02",
+    "attributeId": 86,
+    "unitId": 8,
+    "value": 39600.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "CA",
+    "marketYear": "2022",
+    "calendarYear": "2026",
+    "month": "02",
+    "attributeId": 88,
+    "unitId": 8,
+    "value": 25615.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "CA",
+    "marketYear": "2022",
+    "calendarYear": "2026",
+    "month": "02",
+    "attributeId": 113,
+    "unitId": 8,
+    "value": 25334.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "CA",
+    "marketYear": "2022",
+    "calendarYear": "2026",
+    "month": "02",
+    "attributeId": 130,
+    "unitId": 8,
+    "value": 3139.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "CA",
+    "marketYear": "2022",
+    "calendarYear": "2026",
+    "month": "02",
+    "attributeId": 192,
+    "unitId": 8,
+    "value": 5140.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "CA",
+    "marketYear": "2022",
+    "calendarYear": "2026",
+    "month": "02",
+    "attributeId": 125,
+    "unitId": 8,
+    "value": 8279.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "CA",
+    "marketYear": "2022",
+    "calendarYear": "2026",
+    "month": "02",
+    "attributeId": 176,
+    "unitId": 8,
+    "value": 5706.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "CA",
+    "marketYear": "2022",
+    "calendarYear": "2026",
+    "month": "02",
+    "attributeId": 178,
+    "unitId": 8,
+    "value": 39600.0
+  },
+  {
+    "commodityCode": "0410000",
+    "countryCode": "CA",
+    "marketYear": "2022",
+    "calendarYear": "2026",
+    "month": "02",
+    "attributeId": 184,
+    "unitId": 26,
+    "value": 3.4496
+  }
+]

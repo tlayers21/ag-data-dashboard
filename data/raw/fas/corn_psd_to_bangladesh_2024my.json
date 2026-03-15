@@ -1,0 +1,152 @@
+[
+  {
+    "commodityCode": "0440000",
+    "countryCode": "BG",
+    "marketYear": "2024",
+    "calendarYear": "2025",
+    "month": "12",
+    "attributeId": 4,
+    "unitId": 4,
+    "value": 650.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "BG",
+    "marketYear": "2024",
+    "calendarYear": "2025",
+    "month": "12",
+    "attributeId": 20,
+    "unitId": 8,
+    "value": 154.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "BG",
+    "marketYear": "2024",
+    "calendarYear": "2025",
+    "month": "12",
+    "attributeId": 28,
+    "unitId": 8,
+    "value": 5700.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "BG",
+    "marketYear": "2024",
+    "calendarYear": "2025",
+    "month": "12",
+    "attributeId": 57,
+    "unitId": 8,
+    "value": 1380.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "BG",
+    "marketYear": "2024",
+    "calendarYear": "2025",
+    "month": "12",
+    "attributeId": 81,
+    "unitId": 8,
+    "value": 1176.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "BG",
+    "marketYear": "2024",
+    "calendarYear": "2025",
+    "month": "12",
+    "attributeId": 84,
+    "unitId": 8,
+    "value": 0.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "BG",
+    "marketYear": "2024",
+    "calendarYear": "2025",
+    "month": "12",
+    "attributeId": 86,
+    "unitId": 8,
+    "value": 7234.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "BG",
+    "marketYear": "2024",
+    "calendarYear": "2025",
+    "month": "12",
+    "attributeId": 88,
+    "unitId": 8,
+    "value": 0.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "BG",
+    "marketYear": "2024",
+    "calendarYear": "2025",
+    "month": "12",
+    "attributeId": 113,
+    "unitId": 8,
+    "value": 0.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "BG",
+    "marketYear": "2024",
+    "calendarYear": "2025",
+    "month": "12",
+    "attributeId": 130,
+    "unitId": 8,
+    "value": 6700.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "BG",
+    "marketYear": "2024",
+    "calendarYear": "2025",
+    "month": "12",
+    "attributeId": 192,
+    "unitId": 8,
+    "value": 400.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "BG",
+    "marketYear": "2024",
+    "calendarYear": "2025",
+    "month": "12",
+    "attributeId": 125,
+    "unitId": 8,
+    "value": 7100.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "BG",
+    "marketYear": "2024",
+    "calendarYear": "2025",
+    "month": "12",
+    "attributeId": 176,
+    "unitId": 8,
+    "value": 134.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "BG",
+    "marketYear": "2024",
+    "calendarYear": "2025",
+    "month": "12",
+    "attributeId": 178,
+    "unitId": 8,
+    "value": 7234.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "BG",
+    "marketYear": "2024",
+    "calendarYear": "2025",
+    "month": "12",
+    "attributeId": 184,
+    "unitId": 26,
+    "value": 8.7692
+  }
+]

@@ -1,0 +1,132 @@
+[
+  {
+    "commodityCode": "4232000",
+    "countryCode": "PK",
+    "marketYear": "2021",
+    "calendarYear": "2025",
+    "month": "09",
+    "attributeId": 7,
+    "unitId": 8,
+    "value": 1780.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "PK",
+    "marketYear": "2021",
+    "calendarYear": "2025",
+    "month": "09",
+    "attributeId": 181,
+    "unitId": 23,
+    "value": 0.1876
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "PK",
+    "marketYear": "2021",
+    "calendarYear": "2025",
+    "month": "09",
+    "attributeId": 20,
+    "unitId": 8,
+    "value": 74.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "PK",
+    "marketYear": "2021",
+    "calendarYear": "2025",
+    "month": "09",
+    "attributeId": 28,
+    "unitId": 8,
+    "value": 334.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "PK",
+    "marketYear": "2021",
+    "calendarYear": "2025",
+    "month": "09",
+    "attributeId": 57,
+    "unitId": 8,
+    "value": 183.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "PK",
+    "marketYear": "2021",
+    "calendarYear": "2025",
+    "month": "09",
+    "attributeId": 86,
+    "unitId": 8,
+    "value": 591.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "PK",
+    "marketYear": "2021",
+    "calendarYear": "2025",
+    "month": "09",
+    "attributeId": 88,
+    "unitId": 8,
+    "value": 0.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "PK",
+    "marketYear": "2021",
+    "calendarYear": "2025",
+    "month": "09",
+    "attributeId": 140,
+    "unitId": 8,
+    "value": 10.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "PK",
+    "marketYear": "2021",
+    "calendarYear": "2025",
+    "month": "09",
+    "attributeId": 149,
+    "unitId": 8,
+    "value": 515.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "PK",
+    "marketYear": "2021",
+    "calendarYear": "2025",
+    "month": "09",
+    "attributeId": 161,
+    "unitId": 8,
+    "value": 0.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "PK",
+    "marketYear": "2021",
+    "calendarYear": "2025",
+    "month": "09",
+    "attributeId": 125,
+    "unitId": 8,
+    "value": 525.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "PK",
+    "marketYear": "2021",
+    "calendarYear": "2025",
+    "month": "09",
+    "attributeId": 176,
+    "unitId": 8,
+    "value": 66.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "PK",
+    "marketYear": "2021",
+    "calendarYear": "2025",
+    "month": "09",
+    "attributeId": 178,
+    "unitId": 8,
+    "value": 591.0
+  }
+]

@@ -1,0 +1,132 @@
+[
+  {
+    "commodityCode": "4232000",
+    "countryCode": "EG",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 7,
+    "unitId": 8,
+    "value": 2200.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "EG",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 181,
+    "unitId": 23,
+    "value": 0.1823
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "EG",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 20,
+    "unitId": 8,
+    "value": 98.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "EG",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 28,
+    "unitId": 8,
+    "value": 401.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "EG",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 57,
+    "unitId": 8,
+    "value": 192.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "EG",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 86,
+    "unitId": 8,
+    "value": 691.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "EG",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 88,
+    "unitId": 8,
+    "value": 41.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "EG",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 140,
+    "unitId": 8,
+    "value": 10.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "EG",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 149,
+    "unitId": 8,
+    "value": 550.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "EG",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 161,
+    "unitId": 8,
+    "value": 0.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "EG",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 125,
+    "unitId": 8,
+    "value": 560.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "EG",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 176,
+    "unitId": 8,
+    "value": 90.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "EG",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 178,
+    "unitId": 8,
+    "value": 691.0
+  }
+]

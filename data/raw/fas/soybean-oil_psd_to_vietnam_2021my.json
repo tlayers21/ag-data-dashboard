@@ -1,0 +1,132 @@
+[
+  {
+    "commodityCode": "4232000",
+    "countryCode": "VM",
+    "marketYear": "2021",
+    "calendarYear": "2024",
+    "month": "04",
+    "attributeId": 7,
+    "unitId": 8,
+    "value": 1350.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "VM",
+    "marketYear": "2021",
+    "calendarYear": "2024",
+    "month": "04",
+    "attributeId": 181,
+    "unitId": 23,
+    "value": 0.1904
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "VM",
+    "marketYear": "2021",
+    "calendarYear": "2024",
+    "month": "04",
+    "attributeId": 20,
+    "unitId": 8,
+    "value": 66.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "VM",
+    "marketYear": "2021",
+    "calendarYear": "2024",
+    "month": "04",
+    "attributeId": 28,
+    "unitId": 8,
+    "value": 257.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "VM",
+    "marketYear": "2021",
+    "calendarYear": "2024",
+    "month": "04",
+    "attributeId": 57,
+    "unitId": 8,
+    "value": 60.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "VM",
+    "marketYear": "2021",
+    "calendarYear": "2024",
+    "month": "04",
+    "attributeId": 86,
+    "unitId": 8,
+    "value": 383.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "VM",
+    "marketYear": "2021",
+    "calendarYear": "2024",
+    "month": "04",
+    "attributeId": 88,
+    "unitId": 8,
+    "value": 59.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "VM",
+    "marketYear": "2021",
+    "calendarYear": "2024",
+    "month": "04",
+    "attributeId": 140,
+    "unitId": 8,
+    "value": 0.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "VM",
+    "marketYear": "2021",
+    "calendarYear": "2024",
+    "month": "04",
+    "attributeId": 149,
+    "unitId": 8,
+    "value": 270.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "VM",
+    "marketYear": "2021",
+    "calendarYear": "2024",
+    "month": "04",
+    "attributeId": 161,
+    "unitId": 8,
+    "value": 0.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "VM",
+    "marketYear": "2021",
+    "calendarYear": "2024",
+    "month": "04",
+    "attributeId": 125,
+    "unitId": 8,
+    "value": 270.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "VM",
+    "marketYear": "2021",
+    "calendarYear": "2024",
+    "month": "04",
+    "attributeId": 176,
+    "unitId": 8,
+    "value": 54.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "VM",
+    "marketYear": "2021",
+    "calendarYear": "2024",
+    "month": "04",
+    "attributeId": 178,
+    "unitId": 8,
+    "value": 383.0
+  }
+]

@@ -1,0 +1,297 @@
+WA_GR101
+Washington, DC    Mon   Dec 07, 2020   USDA Market News
+
+COUNTRY OF DESTINATION IS REPORTED AS KNOWN AT THE TIME OF EXPORTATION.
+INFORMATION CONTAINED IN THIS REPORT REFLECTS EXPORTED GRAIN INSPECTED AND WEIGHED
+THROUGH THE AUTHORITY UNDER THE U.S. GRAIN STANDARDS ACT.  NO ADDITIONAL ANALYSIS,
+COMPILATIONS OR DATA IS AVAILABLE. SOURCE:  USDA, FGIS;
+
+               GRAINS INSPECTED AND/OR WEIGHED FOR EXPORT
+                  REPORTED IN WEEK ENDING DEC 03, 2020
+                            -- METRIC TONS --
+-------------------------------------------------------------------------
+                                                   CURRENT     PREVIOUS  
+             ----------- WEEK ENDING ----------  MARKET YEAR  MARKET YEAR
+  GRAIN      12/03/2020  11/26/2020  12/05/2019    TO DATE     TO DATE   
+
+BARLEY          1,397           0           0       17,751       15,914  
+CORN          734,079   1,034,505     489,612   11,027,000    6,541,641  
+FLAXSEED           24           0          24          437          196  
+MIXED               0           0           0            0            0  
+OATS                0           0         200        1,395        1,497  
+RYE                 0           0           0            0            0  
+SORGHUM             0     355,681      45,149    1,451,798      630,960  
+SOYBEANS    2,297,316   2,423,867   1,402,627   29,420,290   17,374,538  
+SUNFLOWER           0           0           0            0            0  
+WHEAT         530,781     534,387     366,014   13,466,903   13,055,166  
+Total       3,563,597   4,348,440   2,303,626   55,385,574   37,619,912  
+-------------------------------------------------------------------------
+CROP MARKETING YEARS BEGIN JUNE 1 FOR WHEAT, RYE, OATS, BARLEY AND
+FLAXSEED;  SEPTEMBER 1 FOR CORN, SORGHUM, SOYBEANS AND SUNFLOWER SEEDS.
+INCLUDES WATERWAY SHIPMENTS TO CANADA.
+
+        SOYBEANS INSPECTED AND/OR WEIGHED FOR EXPORT
+           BY PORT AREA AND COUNTRY OF DESTINATION
+            REPORTED IN WEEK ENDING DEC 03, 2020
+                      -- METRIC TONS --
+------------------------------------------------------------
+CHICAGO       
+       PORTUGAL      21291
+
+TOLEDO        
+       CANADA        29416       EGYPT         27725
+       NETHERLANDS   44740
+
+N. ATLANTIC   
+       CHINA MAIN     1470       CHINA T         980
+       MALAYSIA        171       PHILIPPINES     440
+       THAILAND        465
+
+S. ATLANTIC   
+       BANGLADESH      490       CHINA MAIN    50125
+       CHINA T       12246       INDONESIA       882
+       MALAYSIA       1470       NEPAL          2547
+       PHILIPPINES     465       THAILAND       3136
+       TUNISIA       32118       VIETNAM         735
+
+MISSISSIPPI R.
+       CHINA MAIN   687929       COSTA RICA    14960
+       EGYPT        126421       JAPAN         52387
+       MEXICO        15950       NETHERLANDS   70503
+       THAILAND      71299
+
+EAST GULF     
+       CHINA MAIN    58578
+
+N. TEXAS      
+       EGYPT        101995
+
+COLUMBIA R.   
+       CHINA MAIN   395218
+
+PUGET SOUND   
+       CHINA MAIN   344821
+
+INTERIOR      
+       BANGLADESH      490       BURMA          1052
+       CHINA MAIN    13075       CHINA T       30310
+       INDONESIA     28720       JAPAN           683
+       KOREA REP       342       MALAYSIA       4471
+       MEXICO        23451       NEPAL          1568
+       PHILIPPINES     979       THAILAND      10431
+       VIETNAM       10771
+
+TOTAL         
+                  2297316
+-----------------------------------------------------------
+INCLUDES SHIPMENTS TO CANADA.
+
+        WHEAT INSPECTED AND/OR WEIGHED FOR EXPORT BY CLASS, REGION AND PORT AREA
+                          REPORTED IN WEEK ENDING DEC 03, 2020
+                                    -- METRIC TONS --
+---------------------------------------------------------------------------------------
+                             HARD RED  HARD RED  SOFT RED      SOFT                             
+  REGION       PORT AREA       SPRING    WINTER    WINTER     WHITE   DURUM   TOTALS 
+
+
+ST LAWR SWY  MONTREAL               0         0         0         0       0        0  
+             SEAWAY                 0         0         0         0       0        0  
+               SUBTOTAL             0         0         0         0       0        0  
+
+LAKES        CHICAGO                0         0         0         0       0        0  
+             DULUTH-SUP             0         0         0         0  30,999   30,999  
+             TOLEDO                 0         0         0         0       0        0  
+             PORT HURON             0         0         0         0       0        0  
+             LAKE ONTARIO           0         0         0         0       0        0  
+             LAKE SUPERIOR          0         0         0         0       0        0  
+             LAKE ERIE              0         0         0         0       0        0  
+               SUBTOTAL             0         0         0         0  30,999   30,999  
+
+ATLANTIC     N. ATLANTIC            0         0         0         0       0        0  
+             S. ATLANTIC            0         0         0         0       0        0  
+               SUBTOTAL             0         0         0         0       0        0  
+
+GULF         MISSISSIPPI R.         0     7,197    14,390         0       0   21,587  
+             EAST GULF              0         0         0         0       0        0  
+             N. TEXAS           3,145    42,686         0         0       0   45,831  
+             S. TEXAS               0         0         0         0       0        0  
+               SUBTOTAL         3,145    49,883    14,390         0       0   67,418  
+
+PACIFIC      COLUMBIA R.      125,188   107,486         0   123,215       0  355,889  
+             PUGET SOUND            0         0         0       489     343      832  
+             CALIFORNIA             0         0         0         0       0        0  
+               SUBTOTAL       125,188   107,486         0   123,704     343  356,721  
+
+INTERIOR     INTERIOR          12,774    60,873     1,996         0       0   75,643  
+               SUBTOTAL        12,774    60,873     1,996         0       0   75,643  
+
+  TOTAL                       141,107   218,242    16,386   123,704  31,342  530,781  
+
+
+TOTAL
+SHIPMENTS TO CANADA*
+                                    0         0         0         0       0   29,416  
+-----------------------------------------------------------------------------------------
+*NOT INCLUDED IN TOTAL INSPECTION FOR EXPORTS
+WHEAT SHIPPED FOR STORAGE IN CANADA IS REPORTED AT TIME OF SHIPMENT FROM ST LAWR SWY PORTS
+PRIOR TO MAY 1, 1990, ALL HARD AND SOFT WHITE WHEAT VARIETIES WERE CLASSIFIED AS WHITE WHEAT.
+
+              GRAINS INSPECTED AND/OR WEIGHED FOR EXPORT BY REGION AND PORT AREA
+                             REPORTED IN WEEK ENDING DEC 03, 2020
+                                       -- METRIC TONS --
+----------------------------------------------------------------------------------------------
+                                      CORN    CORN                                                            
+  REGION    PORT AREA       WHEAT   YELLOW   WHITE  BARLEY   SOYBEANS  FLAXSEED      TOTALS   
+
+
+LAKES     TOLEDO                0        0       0       0    101,881         0     101,881  
+          CHICAGO               0        0       0       0     21,291         0      21,291  
+          DULUTH-SUP       30,999        0       0       0          0         0      30,999  
+            SUBTOTAL       30,999        0       0       0    123,172         0     154,171  
+
+ATLANTIC  S. ATLANTIC           0        0       0       0    104,214         0     104,214  
+          N. ATLANTIC           0        0       0       0      3,526         0       3,526  
+            SUBTOTAL            0        0       0       0    107,740         0     107,740  
+
+GULF      N. TEXAS         45,831        0       0       0    101,995         0     147,826  
+          MISSISSIPPI R.   21,587  262,250  49,471       0  1,039,449         0   1,372,757  
+          EAST GULF             0        0       0       0     58,578         0      58,578  
+            SUBTOTAL       67,418  262,250  49,471       0  1,200,022         0   1,579,161  
+
+PACIFIC   COLUMBIA R.     355,889  200,336       0       0    395,218         0     951,443  
+          CALIFORNIA            0      392     245       0          0         0       1,470  
+          PUGET SOUND         832        0       0       0    344,821         0     345,653  
+            SUBTOTAL      356,721  200,728     245       0    740,039         0   1,298,566  
+
+INTERIOR  INTERIOR         75,643  217,858   2,694   1,397    126,343        24     423,959  
+            SUBTOTAL       75,643  217,858   2,694   1,397    126,343        24     423,959  
+
+  TOTAL                   530,781  680,836  52,410   1,397  2,297,316        24   3,563,597  
+-----------------------------------------------------------------------------------------------
+INCLUDES SHIPMENTS TO CANADA AND DOES NOT INCLUDE SHIPMENTS OF U.S. GRAIN FROM THE
+ST. LAWRENCE SEAWAY.
+MIXED CORN IS INCLUDED IN YELLOW CORN.
+
+      GRAINS INSPECTED AND/OR WEIGHED FOR EXPORT BY REGION AND COUNTRY OF DESTINATION
+                           REPORTED IN WEEK ENDING DEC 03, 2020
+                                     -- METRIC TONS --
+---------------------------------------------------------------------------------------------
+                                   CORN    CORN                                                               
+  REGION    COUNTRY      WHEAT   YELLOW   WHITE   BARLEY   SOYBEANS  FLAXSEED      TOTALS   
+
+
+LAKES     EGYPT              0        0       0       0      27,725         0      27,725  
+          ITALY         22,018        0       0       0           0         0      22,018  
+          NETHERLANDS        0        0       0       0      44,740         0      44,740  
+          PORTUGAL       8,981        0       0       0      21,291         0      30,272  
+            SUBTOTAL    30,999        0       0       0      93,756         0     124,755  
+
+ATLANTIC  BANGLADESH         0        0       0       0         490         0         490  
+          CHINA MAIN         0        0       0       0      51,595         0      51,595  
+          CHINA T            0        0       0       0      13,226         0      13,226  
+          INDONESIA          0        0       0       0         882         0         882  
+          MALAYSIA           0        0       0       0       1,641         0       1,641  
+          NEPAL              0        0       0       0       2,547         0       2,547  
+          PHILIPPINES        0        0       0       0         905         0         905  
+          THAILAND           0        0       0       0       3,601         0       3,601  
+          TUNISIA            0        0       0       0      32,118         0      32,118  
+          VIETNAM            0        0       0       0         735         0         735  
+            SUBTOTAL         0        0       0       0     107,740         0     107,740  
+
+GULF      CHINA MAIN         0   70,999       0       0     746,507         0     817,506  
+          COSTA RICA    14,390   44,753  13,155       0      14,960         0      87,258  
+          EGYPT              0        0       0       0     228,416         0     228,416  
+          GUATEMALA          0   34,635       0       0           0         0      34,635  
+          HAITI         12,831        0       0       0           0         0      12,831  
+          JAPAN              0        0       0       0      52,387         0      52,387  
+          MEXICO         7,197   90,968  36,316       0      15,950         0     150,431  
+          NETHERLANDS        0        0       0       0      70,503         0      70,503  
+          NIGERIA       33,000        0       0       0           0         0      33,000  
+          PANAMA             0   20,895       0       0           0         0      20,895  
+          THAILAND           0        0       0       0      71,299         0      71,299  
+            SUBTOTAL    67,418  262,250  49,471       0   1,200,022         0   1,579,161  
+
+PACIFIC   CHINA MAIN    68,249  200,336       0       0     740,039         0   1,008,624  
+          CHINA T       29,652        0       0       0           0         0      29,652  
+          GUATEMALA     15,750        0       0       0           0         0      15,750  
+          JAPAN         90,568        0       0       0           0         0      90,568  
+          KOREA REP     31,460    1,225     245       0           0         0      32,930  
+          PERU          30,680        0       0       0           0         0      30,680  
+          PHILIPPINES   35,200        0       0       0           0         0      35,200  
+          SRI LANKA        489        0       0       0           0         0         489  
+          THAILAND      54,673        0       0       0           0         0      54,673  
+            SUBTOTAL   356,721  201,561     245       0     740,039         0   1,298,566  
+
+INTERIOR  BANGLADESH         0        0       0       0         490         0         490  
+          BURMA              0        0       0       0       1,052         0       1,052  
+          CHINA MAIN         0        0       0       0      13,075         0      13,075  
+          CHINA T            0   30,137       0       0      30,310         0      60,447  
+          COLOMBIA           0        0       0       0           0        24          24  
+          HONG KONG          0    1,467       0       0           0         0       1,467  
+          INDONESIA          0        0       0       0      28,720         0      28,720  
+          JAPAN              0      240       0       0         683         0         923  
+          KOREA REP          0      416       0       0         342         0         758  
+          MALAYSIA           0      805       0       0       4,471         0       5,276  
+          MEXICO        75,643  184,793   2,694   1,397      23,451         0     287,978  
+          NEPAL              0        0       0       0       1,568         0       1,568  
+          PHILIPPINES        0        0       0       0         979         0         979  
+          THAILAND           0        0       0       0      10,431         0      10,431  
+          VIETNAM            0        0       0       0      10,771         0      10,771  
+            SUBTOTAL    75,643  217,858   2,694   1,397     126,343        24     423,959  
+
+  TOTAL                530,781  681,669  52,410   1,397   2,267,900        24   3,534,181  
+
+
+TOTAL
+SHIPMENTS TO CANADA*
+                             0        0       0       0      29,416         0      29,416  
+-------------------------------------------------------------------------------------------
+*NOT INCLUDED IN TOTAL INSPECTION FOR EXPORTS
+GRAIN SHIPPED FOR STORAGE IN CANADA IS REPORTED AT TIME OF SHIPMENT FROM ST LAWR SWY PORTS
+
+Monday DECEMBER 7, 2020
+CORRECTIONS TO PREVIOUS PUBLICATIONS:
+
+FOR CERTDATE 10/02/20 ADD   7454 YC   CORN     FROM INTERIOR       TO MEXICO      
+FOR CERTDATE 11/09/20 ADD    602 HRW  WHEAT    FROM INTERIOR       TO MEXICO      
+FOR CERTDATE 11/16/20 ADD     24 S    SORGHUM  FROM CALIFORNIA     TO KOREA REP   
+FOR CERTDATE 11/16/20 ADD    367 WHC  CORN     FROM CALIFORNIA     TO KOREA REP   
+FOR CERTDATE 11/16/20 ADD     24 WHC  CORN     FROM CALIFORNIA     TO UN KINGDOM  
+FOR CERTDATE 11/16/20 ADD     24 WHS  SORGHUM  FROM CALIFORNIA     TO UN KINGDOM  
+FOR CERTDATE 11/16/20 ADD     24 YC   CORN     FROM CALIFORNIA     TO KOREA REP   
+FOR CERTDATE 11/17/20 ADD     98 DUWH WHEAT    FROM PUGET SOUND    TO UN ARAB EM  
+FOR CERTDATE 11/17/20 ADD  56145 YSB  SOYBEANS FROM N. TEXAS       TO CHINA MAIN  
+FOR CERTDATE 11/20/20 ADD    612 S    SORGHUM  FROM N. TEXAS       TO MADAGASCAR  
+FOR CERTDATE 11/20/20 ADD  66145 YC   CORN     FROM MISSISSIPPI R. TO CHINA MAIN  
+FOR CERTDATE 11/23/20 ADD    245 WHS  SORGHUM  FROM CALIFORNIA     TO HAITI       
+FOR CERTDATE 11/23/20 ADD  70044 YC   CORN     FROM MISSISSIPPI R. TO CHINA MAIN  
+FOR CERTDATE 11/23/20 ADD    416 YSB  SOYBEANS FROM INTERIOR       TO INDONESIA   
+FOR CERTDATE 11/23/20 ADD  76280 YSB  SOYBEANS FROM MISSISSIPPI R. TO CHINA MAIN  
+FOR CERTDATE 11/23/20 ADD    881 YSB  SOYBEANS FROM S. ATLANTIC    TO THAILAND    
+FOR CERTDATE 11/24/20 ADD  60499 S    SORGHUM  FROM N. TEXAS       TO CHINA MAIN  
+FOR CERTDATE 11/24/20 ADD   8283 YC   CORN     FROM INTERIOR       TO MEXICO      
+FOR CERTDATE 11/24/20 ADD    220 YSB  SOYBEANS FROM INTERIOR       TO CHINA T     
+FOR CERTDATE 11/24/20 ADD   1225 YSB  SOYBEANS FROM INTERIOR       TO INDONESIA   
+FOR CERTDATE 11/25/20 ADD  30800 HRS  WHEAT    FROM COLUMBIA R.    TO PHILIPPINES 
+FOR CERTDATE 11/25/20 ADD    799 HRW  WHEAT    FROM INTERIOR       TO MEXICO      
+FOR CERTDATE 11/25/20 ADD  48478 S    SORGHUM  FROM N. TEXAS       TO CHINA MAIN  
+FOR CERTDATE 11/25/20 ADD  68499 YSB  SOYBEANS FROM COLUMBIA R.    TO CHINA MAIN  
+FOR CERTDATE 11/25/20 ADD   1151 YSB  SOYBEANS FROM INTERIOR       TO INDONESIA   
+FOR CERTDATE 11/25/20 ADD    196 YSB  SOYBEANS FROM INTERIOR       TO MALAYSIA    
+FOR CERTDATE 11/25/20 ADD 139306 YSB  SOYBEANS FROM MISSISSIPPI R. TO CHINA MAIN  
+FOR CERTDATE 11/25/20 ADD  31061 YSB  SOYBEANS FROM N. TEXAS       TO TUNISIA     
+FOR CERTDATE 11/25/20 ADD   1225 YSB  SOYBEANS FROM S. ATLANTIC    TO THAILAND    
+FOR CERTDATE 11/26/20 ADD  66923 YSB  SOYBEANS FROM MISSISSIPPI R. TO ROMANIA     
+
+
+Note the following west coast ship and elevator names:
+
+RENAISSANCE           KALAMA, WA (TEMCO)            30800 HRS   PHILIPPINES 
+TANGERINE ISLAND      KALAMA, WA (KALAMA EXPORT C   68499 YSB   CHINA MAIN 
+
+Source:  USDA, FGIS
+         USDA Market News Service, St Joseph, MO
+         Melissa Gregory  816-676-7000  StJoseph.LPGMN@usda.gov
+         www.ams.usda.gov/mnreports/wa_gr101.txt
+         http://www.ams.usda.gov/market-news/livestock-poultry-grain
+

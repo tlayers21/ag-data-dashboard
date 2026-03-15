@@ -1,0 +1,132 @@
+[
+  {
+    "commodityCode": "2222000",
+    "countryCode": "EG",
+    "marketYear": "2020",
+    "calendarYear": "2024",
+    "month": "04",
+    "attributeId": 4,
+    "unitId": 4,
+    "value": 13.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "EG",
+    "marketYear": "2020",
+    "calendarYear": "2024",
+    "month": "04",
+    "attributeId": 20,
+    "unitId": 8,
+    "value": 386.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "EG",
+    "marketYear": "2020",
+    "calendarYear": "2024",
+    "month": "04",
+    "attributeId": 28,
+    "unitId": 8,
+    "value": 36.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "EG",
+    "marketYear": "2020",
+    "calendarYear": "2024",
+    "month": "04",
+    "attributeId": 57,
+    "unitId": 8,
+    "value": 3607.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "EG",
+    "marketYear": "2020",
+    "calendarYear": "2024",
+    "month": "04",
+    "attributeId": 86,
+    "unitId": 8,
+    "value": 4029.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "EG",
+    "marketYear": "2020",
+    "calendarYear": "2024",
+    "month": "04",
+    "attributeId": 88,
+    "unitId": 8,
+    "value": 2.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "EG",
+    "marketYear": "2020",
+    "calendarYear": "2024",
+    "month": "04",
+    "attributeId": 7,
+    "unitId": 8,
+    "value": 3700.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "EG",
+    "marketYear": "2020",
+    "calendarYear": "2024",
+    "month": "04",
+    "attributeId": 149,
+    "unitId": 8,
+    "value": 17.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "EG",
+    "marketYear": "2020",
+    "calendarYear": "2024",
+    "month": "04",
+    "attributeId": 161,
+    "unitId": 8,
+    "value": 25.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "EG",
+    "marketYear": "2020",
+    "calendarYear": "2024",
+    "month": "04",
+    "attributeId": 125,
+    "unitId": 8,
+    "value": 3742.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "EG",
+    "marketYear": "2020",
+    "calendarYear": "2024",
+    "month": "04",
+    "attributeId": 176,
+    "unitId": 8,
+    "value": 285.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "EG",
+    "marketYear": "2020",
+    "calendarYear": "2024",
+    "month": "04",
+    "attributeId": 178,
+    "unitId": 8,
+    "value": 4029.0
+  },
+  {
+    "commodityCode": "2222000",
+    "countryCode": "EG",
+    "marketYear": "2020",
+    "calendarYear": "2024",
+    "month": "04",
+    "attributeId": 184,
+    "unitId": 26,
+    "value": 2.7692
+  }
+]

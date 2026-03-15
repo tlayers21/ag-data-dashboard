@@ -1,0 +1,152 @@
+[
+  {
+    "commodityCode": "0440000",
+    "countryCode": "JA",
+    "marketYear": "2022",
+    "calendarYear": "2024",
+    "month": "01",
+    "attributeId": 4,
+    "unitId": 4,
+    "value": 2.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "JA",
+    "marketYear": "2022",
+    "calendarYear": "2024",
+    "month": "01",
+    "attributeId": 20,
+    "unitId": 8,
+    "value": 1360.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "JA",
+    "marketYear": "2022",
+    "calendarYear": "2024",
+    "month": "01",
+    "attributeId": 28,
+    "unitId": 8,
+    "value": 9.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "JA",
+    "marketYear": "2022",
+    "calendarYear": "2024",
+    "month": "01",
+    "attributeId": 57,
+    "unitId": 8,
+    "value": 14927.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "JA",
+    "marketYear": "2022",
+    "calendarYear": "2024",
+    "month": "01",
+    "attributeId": 81,
+    "unitId": 8,
+    "value": 14927.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "JA",
+    "marketYear": "2022",
+    "calendarYear": "2024",
+    "month": "01",
+    "attributeId": 84,
+    "unitId": 8,
+    "value": 6869.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "JA",
+    "marketYear": "2022",
+    "calendarYear": "2024",
+    "month": "01",
+    "attributeId": 86,
+    "unitId": 8,
+    "value": 16296.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "JA",
+    "marketYear": "2022",
+    "calendarYear": "2024",
+    "month": "01",
+    "attributeId": 88,
+    "unitId": 8,
+    "value": 0.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "JA",
+    "marketYear": "2022",
+    "calendarYear": "2024",
+    "month": "01",
+    "attributeId": 113,
+    "unitId": 8,
+    "value": 0.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "JA",
+    "marketYear": "2022",
+    "calendarYear": "2024",
+    "month": "01",
+    "attributeId": 130,
+    "unitId": 8,
+    "value": 11700.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "JA",
+    "marketYear": "2022",
+    "calendarYear": "2024",
+    "month": "01",
+    "attributeId": 192,
+    "unitId": 8,
+    "value": 3300.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "JA",
+    "marketYear": "2022",
+    "calendarYear": "2024",
+    "month": "01",
+    "attributeId": 125,
+    "unitId": 8,
+    "value": 15000.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "JA",
+    "marketYear": "2022",
+    "calendarYear": "2024",
+    "month": "01",
+    "attributeId": 176,
+    "unitId": 8,
+    "value": 1296.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "JA",
+    "marketYear": "2022",
+    "calendarYear": "2024",
+    "month": "01",
+    "attributeId": 178,
+    "unitId": 8,
+    "value": 16296.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "JA",
+    "marketYear": "2022",
+    "calendarYear": "2024",
+    "month": "01",
+    "attributeId": 184,
+    "unitId": 26,
+    "value": 4.5
+  }
+]

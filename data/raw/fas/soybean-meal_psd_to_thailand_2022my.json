@@ -1,0 +1,142 @@
+[
+  {
+    "commodityCode": "0813100",
+    "countryCode": "TH",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 7,
+    "unitId": 8,
+    "value": 2100.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "TH",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 181,
+    "unitId": 23,
+    "value": 0.7776
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "TH",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 20,
+    "unitId": 8,
+    "value": 216.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "TH",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 28,
+    "unitId": 8,
+    "value": 1633.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "TH",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 57,
+    "unitId": 8,
+    "value": 3141.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "TH",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 86,
+    "unitId": 8,
+    "value": 4990.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "TH",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 88,
+    "unitId": 8,
+    "value": 101.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "TH",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 140,
+    "unitId": 8,
+    "value": 0.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "TH",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 149,
+    "unitId": 8,
+    "value": 0.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "TH",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 161,
+    "unitId": 8,
+    "value": 4750.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "TH",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 125,
+    "unitId": 8,
+    "value": 4750.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "TH",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 176,
+    "unitId": 8,
+    "value": 139.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "TH",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 178,
+    "unitId": 8,
+    "value": 4990.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "TH",
+    "marketYear": "2022",
+    "calendarYear": "2025",
+    "month": "04",
+    "attributeId": 194,
+    "unitId": 8,
+    "value": 4750.0
+  }
+]

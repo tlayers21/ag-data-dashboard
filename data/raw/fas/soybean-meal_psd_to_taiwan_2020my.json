@@ -1,0 +1,142 @@
+[
+  {
+    "commodityCode": "0813100",
+    "countryCode": "TW",
+    "marketYear": "2020",
+    "calendarYear": "2022",
+    "month": "05",
+    "attributeId": 7,
+    "unitId": 8,
+    "value": 2050.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "TW",
+    "marketYear": "2020",
+    "calendarYear": "2022",
+    "month": "05",
+    "attributeId": 181,
+    "unitId": 23,
+    "value": 0.7854
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "TW",
+    "marketYear": "2020",
+    "calendarYear": "2022",
+    "month": "05",
+    "attributeId": 20,
+    "unitId": 8,
+    "value": 60.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "TW",
+    "marketYear": "2020",
+    "calendarYear": "2022",
+    "month": "05",
+    "attributeId": 28,
+    "unitId": 8,
+    "value": 1610.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "TW",
+    "marketYear": "2020",
+    "calendarYear": "2022",
+    "month": "05",
+    "attributeId": 57,
+    "unitId": 8,
+    "value": 53.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "TW",
+    "marketYear": "2020",
+    "calendarYear": "2022",
+    "month": "05",
+    "attributeId": 86,
+    "unitId": 8,
+    "value": 1723.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "TW",
+    "marketYear": "2020",
+    "calendarYear": "2022",
+    "month": "05",
+    "attributeId": 88,
+    "unitId": 8,
+    "value": 15.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "TW",
+    "marketYear": "2020",
+    "calendarYear": "2022",
+    "month": "05",
+    "attributeId": 140,
+    "unitId": 8,
+    "value": 0.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "TW",
+    "marketYear": "2020",
+    "calendarYear": "2022",
+    "month": "05",
+    "attributeId": 149,
+    "unitId": 8,
+    "value": 0.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "TW",
+    "marketYear": "2020",
+    "calendarYear": "2022",
+    "month": "05",
+    "attributeId": 161,
+    "unitId": 8,
+    "value": 1650.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "TW",
+    "marketYear": "2020",
+    "calendarYear": "2022",
+    "month": "05",
+    "attributeId": 125,
+    "unitId": 8,
+    "value": 1650.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "TW",
+    "marketYear": "2020",
+    "calendarYear": "2022",
+    "month": "05",
+    "attributeId": 176,
+    "unitId": 8,
+    "value": 58.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "TW",
+    "marketYear": "2020",
+    "calendarYear": "2022",
+    "month": "05",
+    "attributeId": 178,
+    "unitId": 8,
+    "value": 1723.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "TW",
+    "marketYear": "2020",
+    "calendarYear": "2022",
+    "month": "05",
+    "attributeId": 194,
+    "unitId": 8,
+    "value": 1650.0
+  }
+]

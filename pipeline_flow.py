@@ -13,6 +13,8 @@ PSD_YEARS = [current_year - i for i in range(7)]
 load_dotenv()
 USDA_API_KEY = os.getenv("USDA_API_KEY")
 
+# TODO: Figure out how to run pipeline without having to upload all data files onto GitHub
+
 @task
 def run_pipeline():
     print("--------------------")

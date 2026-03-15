@@ -1,0 +1,253 @@
+WA_GR101
+Washington, DC    Mon Mar 28, 2022   USDA Market News
+
+*CORRECTIONS AT BOTTOM OF REPORT ARE INCLUDED IN CURRENT MARKET YEAR TO DATE*
+
+COUNTRY OF DESTINATION IS REPORTED AS KNOWN AT THE TIME OF EXPORTATION.
+INFORMATION CONTAINED IN THIS REPORT REFLECTS EXPORTED GRAIN INSPECTED AND WEIGHED
+THROUGH THE AUTHORITY UNDER THE U.S. GRAIN STANDARDS ACT.  NO ADDITIONAL ANALYSIS,
+COMPILATIONS OR DATA IS AVAILABLE.
+
+               GRAINS INSPECTED AND/OR WEIGHED FOR EXPORT
+                  REPORTED IN WEEK ENDING MAR 24, 2022
+                            -- METRIC TONS --
+---------------------------------------------------------------------------
+                                                   CURRENT     PREVIOUS  
+             ----------- WEEK ENDING ----------  MARKET YEAR  MARKET YEAR
+  GRAIN      03/24/2022  03/17/2022  03/25/2021    TO DATE     TO DATE   
+
+BARLEY              0           0       1,497       10,010       32,520  
+CORN        1,606,535   1,496,798   1,789,432   29,030,547   34,006,675  
+FLAXSEED            0           0           0          324          509  
+MIXED               0           0           0            0            0  
+OATS                0           0         399          400        4,815  
+RYE                 0           0           0            0            0  
+SORGHUM       342,326     335,599     244,739    4,165,410    4,449,284  
+SOYBEANS      628,819     553,582     450,807   43,428,819   54,269,171  
+SUNFLOWER           0           0           0          532            0  
+WHEAT         341,191     333,970     307,167   16,894,292   20,347,102  
+Total       2,918,871   2,719,949   2,794,041   93,530,334  113,110,076  
+--------------------------------------------------------------------------
+CROP MARKETING YEARS BEGIN JUNE 1 FOR WHEAT, RYE, OATS, BARLEY AND
+FLAXSEED;  SEPTEMBER 1 FOR CORN, SORGHUM, SOYBEANS AND SUNFLOWER SEEDS.
+INCLUDES WATERWAY SHIPMENTS TO CANADA.
+
+               SOYBEANS INSPECTED AND/OR WEIGHED FOR EXPORT
+                  BY PORT AREA AND COUNTRY OF DESTINATION
+                   REPORTED IN WEEK ENDING MAR 24, 2022
+                             -- METRIC TONS --
+---------------------------------------------------------------------------
+N. ATLANTIC   
+       CHINA          490       PHILIPPINES    196
+
+S. ATLANTIC   
+       CHINA         2205       INDONESIA     1102
+       MALAYSIA      2155       NEPAL         3453
+       PHILIPPINES    416       TAIWAN        3624
+       THAILAND       980       VIETNAM       1690
+
+MISSISSIPPI R.
+       CHINA       124496       COLOMBIA     16644
+       EGYPT        57070       GERMANY      56027
+       JAPAN        30907       VIETNAM      59233
+
+COLUMBIA R.   
+       CHINA        65388
+
+PUGET SOUND   
+       CHINA        69299
+
+INTERIOR      
+       CHINA        26400       INDONESIA    23853
+       JAPAN         1028       KOREA REP     2277
+       MALAYSIA      7519       MEXICO       53812
+       NEPAL         2008       PHILIPPINES    733
+       TAIWAN        9793       THAILAND      2153
+       VIETNAM       3868
+
+TOTAL         
+                  628819
+------------------------------------------------------------
+INCLUDES SHIPMENTS TO CANADA.
+
+        WHEAT INSPECTED AND/OR WEIGHED FOR EXPORT BY CLASS, REGION AND PORT AREA
+                          REPORTED IN WEEK ENDING MAR 24, 2022
+                                    -- METRIC TONS --
+---------------------------------------------------------------------------------------------
+                             HARD RED  HARD RED  SOFT RED        SOFT                           
+  REGION       PORT AREA       SPRING    WINTER    WINTER       WHITE  DURUM      TOTALS 
+
+
+ST LAWR SWY  MONTREAL               0         0         0           0      0           0  
+             SEAWAY                 0         0         0           0      0           0  
+               SUBTOTAL             0         0         0           0      0           0  
+
+LAKES        CHICAGO                0         0       998           0      0         998  
+             DULUTH-SUP             0         0         0           0      0           0  
+             TOLEDO                 0         0         0           0      0           0  
+             PORT HURON             0         0         0           0      0           0  
+             LAKE ONTARIO           0         0         0           0      0           0  
+             LAKE SUPERIOR          0         0         0           0      0           0  
+             LAKE ERIE              0         0         0           0      0           0  
+               SUBTOTAL             0         0       998           0      0         998  
+
+ATLANTIC     N. ATLANTIC            0         0         0           0      0           0  
+             S. ATLANTIC            0         0         0           0      0           0  
+               SUBTOTAL             0         0         0           0      0           0  
+
+GULF         MISSISSIPPI R.         0    30,101    50,772           0      0      80,873  
+             EAST GULF              0         0         0           0      0           0  
+             N. TEXAS               0    66,065         0           0      0      66,065  
+             S. TEXAS               0         0         0           0      0           0  
+               SUBTOTAL             0    96,166    50,772           0      0     146,938  
+
+PACIFIC      COLUMBIA R.       97,853    57,701         0      17,816      0     173,370  
+             PUGET SOUND            0         0         0           0      0           0  
+             CALIFORNIA             0         0         0           0    661         661  
+               SUBTOTAL        97,853    57,701         0      17,816    661     174,031  
+
+INTERIOR     INTERIOR           5,090    12,573       998         563      0      19,224  
+               SUBTOTAL         5,090    12,573       998         563      0      19,224  
+
+  TOTAL                       102,943   166,440    52,768      18,379    661     341,191  
+------------------------------------------------------------------------------------------------
+*NOT INCLUDED IN TOTAL INSPECTION FOR EXPORTS
+WHEAT SHIPPED FOR STORAGE IN CANADA IS REPORTED AT TIME OF SHIPMENT FROM ST LAWR SWY PORTS
+PRIOR TO MAY 1, 1990, ALL HARD AND SOFT WHITE WHEAT VARIETIES WERE CLASSIFIED AS WHITE WHEAT.
+
+               GRAINS INSPECTED AND/OR WEIGHED FOR EXPORT BY REGION AND PORT AREA
+                              REPORTED IN WEEK ENDING MAR 24, 2022
+                                        -- METRIC TONS --
+----------------------------------------------------------------------------------------------------
+                                            CORN    CORN                                                 
+  REGION    PORT AREA       WHEAT         YELLOW   WHITE      SORGHUM  SOYBEANS          TOTALS   
+
+
+LAKES     CHICAGO             998              0       0            0         0             998  
+            SUBTOTAL          998              0       0            0         0             998  
+
+ATLANTIC  N. ATLANTIC           0              0       0            0       686             686  
+          S. ATLANTIC           0            490       0            0    15,625          16,115  
+            SUBTOTAL            0            490       0            0    16,311          16,801  
+
+GULF      S. TEXAS              0              0       0       70,577         0          70,577  
+          N. TEXAS         66,065              0       0        3,895         0          69,960  
+          MISSISSIPPI R.   80,873        883,943  56,059      139,226   344,377       1,504,478  
+            SUBTOTAL      146,938        883,943  56,059      213,698   344,377       1,645,015  
+
+PACIFIC   CALIFORNIA          661             73      73          220         0           1,027  
+          COLUMBIA R.     173,370        262,547       0       67,150    65,388         568,455  
+          PUGET SOUND           0        197,308       0       56,705    69,299         323,312  
+            SUBTOTAL      174,031        459,928      73      124,075   134,687         892,794  
+
+INTERIOR  INTERIOR         19,224        206,018      24        4,553   133,444         363,263  
+            SUBTOTAL       19,224        206,018      24        4,553   133,444         363,263  
+
+  TOTAL                   341,191      1,550,379  56,156      342,326   628,819       2,918,871  
+----------------------------------------------------------------------------------------------------
+INCLUDES SHIPMENTS TO CANADA AND DOES NOT INCLUDE SHIPMENTS OF U.S. GRAIN FROM THE
+ST. LAWRENCE SEAWAY.
+MIXED CORN IS INCLUDED IN YELLOW CORN.
+
+          GRAINS INSPECTED AND/OR WEIGHED FOR EXPORT BY REGION AND COUNTRY OF DESTINATION
+                               REPORTED IN WEEK ENDING MAR 24, 2022
+                                         -- METRIC TONS --
+--------------------------------------------------------------------------------------------------
+                                     CORN    CORN                                                              
+  REGION    COUNTRY      WHEAT     YELLOW   WHITE      SORGHUM  SOYBEANS         TOTALS   
+
+
+LAKES     MEXICO           998          0       0            0         0            998  
+            SUBTOTAL       998          0       0            0         0            998  
+
+ATLANTIC  CHINA              0          0       0            0     2,695          2,695  
+          INDONESIA          0          0       0            0     1,102          1,102  
+          KOREA REP          0        490       0            0         0            490  
+          MALAYSIA           0          0       0            0     2,155          2,155  
+          NEPAL              0          0       0            0     3,453          3,453  
+          PHILIPPINES        0          0       0            0       612            612  
+          TAIWAN             0          0       0            0     3,624          3,624  
+          THAILAND           0          0       0            0       980            980  
+          VIETNAM            0          0       0            0     1,690          1,690  
+            SUBTOTAL         0        490       0            0    16,311         16,801  
+
+GULF      CAMEROON           0          0       0        3,895         0          3,895  
+          CHINA              0    260,305       0      209,803   124,496        594,604  
+          COLOMBIA      44,560    166,395   4,400            0    16,644        231,999  
+          EGYPT              0          0       0            0    57,070         57,070  
+          GERMANY            0          0       0            0    56,027         56,027  
+          GUATEMALA          0     19,249       0            0         0         19,249  
+          HONDURAS       4,082     21,999  51,659            0         0         77,740  
+          ISRAEL             0     59,287       0            0         0         59,287  
+          JAPAN              0    168,528       0            0    30,907        199,435  
+          MEXICO        65,231    106,656       0            0         0        171,887  
+          NICARAGUA          0     27,146       0            0         0         27,146  
+          NIGERIA       33,065          0       0            0         0         33,065  
+          SPAIN              0     54,378       0            0         0         54,378  
+          VIETNAM            0          0       0            0    59,233         59,233  
+            SUBTOTAL   146,938    883,943  56,059      213,698   344,377      1,645,015  
+
+PACIFIC   CHINA              0    197,308       0      113,405   134,687        445,400  
+          HAITI              0          0       0          220         0            220  
+          JAPAN         83,434    203,219       0       10,450         0        297,103  
+          KOREA REP          0     59,401      73            0         0         59,474  
+          PHILIPPINES   65,450          0       0            0         0         65,450  
+          THAILAND      25,147          0       0            0         0         25,147  
+            SUBTOTAL   174,031    459,928      73      124,075   134,687        892,794  
+
+INTERIOR  CHINA              0          0       0        2,205    26,400         28,605  
+          COSTA RICA         0         49       0            0         0             49  
+          FRENCH POLY        0        245       0            0         0            245  
+          HONG KONG          0        196       0            0         0            196  
+          INDONESIA          0          0       0            0    23,853         23,853  
+          IRELAND            0          0      24            0         0             24  
+          JAPAN              0          0       0            0     1,028          1,028  
+          KOREA REP          0      1,175       0            0     2,277          3,452  
+          MALAYSIA           0          0       0            0     7,519          7,519  
+          MEXICO        18,661    199,189       0        2,348    53,812        274,010  
+          NEPAL              0          0       0            0     2,008          2,008  
+          PHILIPPINES        0        171       0            0       733            904  
+          TAIWAN             0      4,993       0            0     9,793         14,786  
+          THAILAND         563          0       0            0     2,153          2,716  
+          VIETNAM            0          0       0            0     3,868          3,868  
+            SUBTOTAL    19,224    206,018      24        4,553   133,444        363,263  
+
+  TOTAL                341,191  1,550,379  56,156      342,326   628,819      2,918,871  
+------------------------------------------------------------------------------------------------
+*NOT INCLUDED IN TOTAL INSPECTION FOR EXPORTS
+GRAIN SHIPPED FOR STORAGE IN CANADA IS REPORTED AT TIME OF SHIPMENT FROM ST LAWR SWY PORTS
+
+
+
+Monday MARCH 28, 2022
+
+CORRECTIONS TO PREVIOUS PUBLICATIONS:
+
+FOR CERTDATE 02/06/22 ADD 70510 YSB SOYBEANS FROM MISSISSIPPI R. TO ITALY     
+FOR CERTDATE 03/11/22 ADD   441 YSB SOYBEANS FROM INTERIOR       TO CHINA     
+FOR CERTDATE 03/14/22 ADD   245 SWW WHEAT    FROM INTERIOR       TO MALAYSIA  
+FOR CERTDATE 03/14/22 ADD   294 YSB SOYBEANS FROM INTERIOR       TO TAIWAN    
+FOR CERTDATE 03/14/22 ADD   514 YSB SOYBEANS FROM INTERIOR       TO CHINA     
+FOR CERTDATE 03/14/22 ADD   490 YSB SOYBEANS FROM INTERIOR       TO INDONESIA 
+FOR CERTDATE 03/15/22 ADD   490 YSB SOYBEANS FROM INTERIOR       TO INDONESIA 
+FOR CERTDATE 03/15/22 ADD   416 YSB SOYBEANS FROM INTERIOR       TO MALAYSIA  
+FOR CERTDATE 03/15/22 ADD   490 YSB SOYBEANS FROM INTERIOR       TO TAIWAN    
+FOR CERTDATE 03/16/22 ADD  2794 HRW WHEAT    FROM INTERIOR       TO MEXICO    
+FOR CERTDATE 03/16/22 ADD   416 YC  CORN     FROM INTERIOR       TO TAIWAN    
+FOR CERTDATE 03/16/22 ADD  1298 YSB SOYBEANS FROM INTERIOR       TO CHINA     
+FOR CERTDATE 03/16/22 ADD   857 YSB SOYBEANS FROM INTERIOR       TO INDONESIA 
+FOR CERTDATE 03/16/22 ADD   416 YSB SOYBEANS FROM INTERIOR       TO TAIWAN    
+FOR CERTDATE 03/17/22 ADD   299 HRS WHEAT    FROM INTERIOR       TO MEXICO    
+FOR CERTDATE 03/17/22 ADD   538 YC  CORN     FROM INTERIOR       TO TAIWAN    
+FOR CERTDATE 03/17/22 ADD 29533 YC  CORN     FROM MISSISSIPPI R. TO HONDURAS  
+FOR CERTDATE 03/17/22 ADD  1911 YSB SOYBEANS FROM INTERIOR       TO CHINA     
+FOR CERTDATE 03/17/22 ADD   979 YSB SOYBEANS FROM INTERIOR       TO INDONESIA 
+
+
+
+Source:  USDA, FGIS
+         USDA Market News Service, St Joseph, MO
+         Melissa Gregory  816-676-7000  StJoe.LPGMN@usda.gov
+         www.ams.usda.gov/mnreports/wa_gr101.txt
+         http://www.ams.usda.gov/market-news/livestock-poultry-grain
+

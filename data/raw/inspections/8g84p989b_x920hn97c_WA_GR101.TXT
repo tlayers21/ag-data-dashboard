@@ -1,0 +1,413 @@
+WA_GR101    
+Washington, DC    Mon   May 20, 2024   USDA Market News
+
+*CORRECTIONS AT BOTTOM OF REPORT ARE INCLUDED IN CURRENT MARKET YEAR TO DATE*
+
+COUNTRY OF DESTINATION IS REPORTED AS KNOWN AT THE TIME OF EXPORTATION.
+INFORMATION CONTAINED IN THIS REPORT REFLECTS EXPORTED GRAIN INSPECTED AND WEIGHED
+THROUGH THE AUTHORITY UNDER THE U.S. GRAIN STANDARDS ACT.  NO ADDITIONAL ANALYSIS,
+COMPILATIONS OR DATA IS AVAILABLE.
+
+                GRAINS INSPECTED AND/OR WEIGHED FOR EXPORT
+                  REPORTED IN WEEK ENDING MAY 16, 2024
+                            -- METRIC TONS --
+
+-------------------------------------------------------------------------
+                                                   CURRENT     PREVIOUS  
+             ----------- WEEK ENDING ----------  MARKET YEAR  MARKET YEAR
+  GRAIN      05/16/2024  05/09/2024  05/18/2023    TO DATE     TO DATE   
+
+BARLEY              0         648           0        2,828        2,154  
+CORN        1,210,541   1,004,571   1,328,829   35,211,044   27,380,440  
+FLAXSEED            0           0           0           48          200  
+MIXED               0           0           0          572            0  
+OATS                0           0           0        3,994        6,686  
+RYE                 0           0           0           72            0  
+SORGHUM       124,289     140,105     116,048    4,844,685    1,636,657  
+SOYBEANS      184,128     433,068     170,092   39,748,806   48,215,771  
+SUNFLOWER          96         480           0        6,101        2,508  
+WHEAT         205,612     383,058     440,094   17,870,795   19,175,858  
+Total       1,724,666   1,961,930   2,055,063   97,688,945   96,420,274  
+
+
+CROP MARKETING YEARS BEGIN JUNE 1 FOR WHEAT, RYE, OATS, BARLEY AND
+FLAXSEED;  SEPTEMBER 1 FOR CORN, SORGHUM, SOYBEANS AND SUNFLOWER SEEDS.
+INCLUDES WATERWAY SHIPMENTS TO CANADA.
+
+               SOYBEANS INSPECTED AND/OR WEIGHED FOR EXPORT
+                  BY PORT AREA AND COUNTRY OF DESTINATION
+                   REPORTED IN WEEK ENDING MAY 16, 2024
+                             -- METRIC TONS --
+
+---------------------------------------------------------------------------
+
+PUGET SOUND   
+       TAIWAN          24
+
+INTERIOR      
+       CAMBODIA       220       CHINA         7223
+       INDONESIA    24091       JAPAN         1344
+       KOREA REP      636       MALAYSIA      2081
+       MEXICO       32831       NEPAL         1028
+       PHILIPPINES    955       TAIWAN        4334
+       THAILAND      3453       VIETNAM       7883
+
+TOLEDO        
+       CANADA       10004
+
+S. ATLANTIC   
+       PHILIPPINES    489       TAIWAN         490
+       THAILAND      1959
+
+MISSISSIPPI R.
+       COLOMBIA      8256       JAPAN        57622
+       KOREA REP    19205
+
+TOTAL         
+                  184128
+
+INCLUDES SHIPMENTS TO CANADA.
+
+      WHEAT INSPECTED AND/OR WEIGHED FOR EXPORT BY CLASS, REGION AND PORT AREA
+                        REPORTED IN WEEK ENDING MAY 16, 2024
+                                  -- METRIC TONS --
+
+-----------------------------------------------------------------------------------
+
+                             HARD RED  HARD RED  SOFT RED       SOFT               
+  REGION       PORT AREA       SPRING    WINTER    WINTER      WHITE       TOTALS 
+
+
+ST LAWR SWY  MONTREAL               0         0         0          0            0  
+             SEAWAY                 0         0         0          0            0  
+               SUBTOTAL             0         0         0          0            0  
+
+LAKES        CHICAGO                0         0         0          0            0  
+             DULUTH-SUP             0         0         0          0            0  
+             TOLEDO                 0         0         0          0            0  
+             PORT HURON             0         0         0          0            0  
+             LAKE ONTARIO           0         0         0          0            0  
+             LAKE SUPERIOR          0         0         0          0            0  
+             LAKE ERIE              0         0         0          0            0  
+               SUBTOTAL             0         0         0          0            0  
+
+ATLANTIC     N. ATLANTIC            0         0         0          0            0  
+             S. ATLANTIC            0         0         0          0            0  
+               SUBTOTAL             0         0         0          0            0  
+
+GULF         MISSISSIPPI R.         0    12,099         0          0       12,099  
+             EAST GULF              0         0         0          0            0  
+             N. TEXAS               0         0         0          0            0  
+             S. TEXAS               0        48         0          0           48  
+               SUBTOTAL             0    12,147         0          0       12,147  
+
+PACIFIC      COLUMBIA R.       40,699    43,985         0     63,105      147,789  
+             PUGET SOUND            0         0         0        563          563  
+             CALIFORNIA             0         0         0          0            0  
+               SUBTOTAL        40,699    43,985         0     63,668      148,352  
+
+INTERIOR     INTERIOR          11,576    30,336     3,201          0       45,113  
+               SUBTOTAL        11,576    30,336     3,201          0       45,113  
+
+  TOTAL                        52,275    86,468     3,201     63,668      205,612  
+
+
+TOTAL
+SHIPMENTS TO CANADA*
+                                    0         0         0          0       10,004  
+
+-----------------------------------------------------------------------------------
+
+*NOT INCLUDED IN TOTAL INSPECTION FOR EXPORTS
+WHEAT SHIPPED FOR STORAGE IN CANADA IS REPORTED AT TIME OF SHIPMENT FROM ST LAWR SWY PORTS
+PRIOR TO MAY 1, 1990, ALL HARD AND SOFT WHITE WHEAT VARIETIES WERE CLASSIFIED AS WHITE WHEAT.
+
+                   GRAINS INSPECTED AND/OR WEIGHED FOR EXPORT BY REGION AND PORT AREA
+                                  REPORTED IN WEEK ENDING MAY 16, 2024
+                                            -- METRIC TONS --
+
+--------------------------------------------------------------------------------------------------------------
+
+                                            CORN    CORN                             SUN                    
+  REGION    PORT AREA       WHEAT         YELLOW   WHITE     SORGHUM  SOYBEANS    FLOWER   CANOLA     TOTALS   
+
+
+LAKES     TOLEDO                0              0       0           0    10,004         0        0     10,004  
+            SUBTOTAL            0              0       0           0    10,004         0        0     10,004  
+
+ATLANTIC  S. ATLANTIC           0          6,867       0           0     2,938         0        0      9,805  
+            SUBTOTAL            0          6,867       0           0     2,938         0        0      9,805  
+
+GULF      MISSISSIPPI R.   12,099        474,541  50,874           0    85,083         0        0    622,597  
+          N. TEXAS              0            686       0           0         0         0        0        686  
+          S. TEXAS             48          7,785       0      56,999         0        96        0     64,928  
+            SUBTOTAL       12,147        483,012  50,874      56,999    85,083        96        0    688,211  
+
+PACIFIC   PUGET SOUND         563        251,915       0           0        24         0        0    252,502  
+          COLUMBIA R.     147,789        132,992       0      67,290         0         0        0    348,071  
+            SUBTOTAL      148,352        384,907       0      67,290        24         0        0    600,573  
+
+INTERIOR  INTERIOR         45,113        284,636     245           0    86,079         0      399    416,472  
+            SUBTOTAL       45,113        284,636     245           0    86,079         0      399    416,472  
+
+  TOTAL                   205,612      1,159,422  51,119     124,289   184,128        96      399  1,725,065  
+
+--------------------------------------------------------------------------------------------------------------
+
+INCLUDES SHIPMENTS TO CANADA AND DOES NOT INCLUDE SHIPMENTS OF U.S. GRAIN FROM THE
+ST. LAWRENCE SEAWAY.
+MIXED CORN IS INCLUDED IN YELLOW CORN.
+
+
+                 GRAINS INSPECTED AND/OR WEIGHED FOR EXPORT BY REGION AND COUNTRY OF DESTINATION
+                                      REPORTED IN WEEK ENDING MAY 16, 2024
+                                                -- METRIC TONS --
+
+--------------------------------------------------------------------------------------------------
+
+                                      CORN    CORN                                               
+  REGION    COUNTRY       WHEAT     YELLOW   WHITE      SORGHUM  SOYBEANS     CANOLA     TOTALS   
+
+
+ATLANTIC  PHILIPPINES         0          0       0            0       489          0        489  
+          TAIWAN              0          0       0            0       490          0        490  
+          THAILAND            0          0       0            0     1,959          0      1,959  
+          VENEZUELA           0      6,867       0            0         0          0      6,867  
+            SUBTOTAL          0      6,867       0            0     2,938          0      9,805  
+
+GULF      CHINA               0     71,003       0       56,999         0          0    128,002  
+          COLOMBIA            0          0       0            0     8,256          0      8,256  
+          CONGO (BRAZ)        0        686       0            0         0          0        686  
+          DOMINICN REP        0     24,058       0            0         0          0     24,058  
+          EL SALVADOR         0          0  21,899            0         0          0     21,899  
+          HAITI          12,099          0       0            0         0          0     12,099  
+          HONDURAS            0     47,849       0            0         0          0     47,849  
+          JAMAICA             0      7,159       0            0         0          0      7,159  
+          JAPAN               0     89,894       0            0    57,622          0    147,516  
+          KOREA REP           0     34,099       0            0    19,205          0     53,304  
+          MEXICO             48    125,855  28,975            0         0          0    154,974  
+          SAUDI ARABIA        0     72,620       0            0         0          0     72,620  
+          ST. LUCIA           0      9,789       0            0         0          0      9,789  
+            SUBTOTAL     12,147    483,012  50,874       56,999    85,083          0    688,211  
+
+PACIFIC   CHINA               0    202,849       0       67,290         0          0    270,139  
+          JAPAN          25,904    121,759       0            0         0          0    147,663  
+          PHILIPPINES    64,099          0       0            0         0          0     64,099  
+          TAIWAN              0     60,299       0            0        24          0     60,323  
+          THAILAND       58,349          0       0            0         0          0     58,349  
+            SUBTOTAL    148,352    384,907       0       67,290        24          0    600,573  
+
+INTERIOR  CAMBODIA            0          0       0            0       220          0        220  
+          CHINA               0          0       0            0     7,223          0      7,223  
+          FRENCH POLY         0        122       0            0         0          0        122  
+          HONG KONG           0        538       0            0         0          0        538  
+          INDONESIA           0          0       0            0    24,091          0     24,091  
+          JAPAN               0        367       0            0     1,344          0      1,711  
+          KOREA REP         465        245     147            0       636          0      1,493  
+          MALAYSIA            0        930       0            0     2,081          0      3,011  
+          MEXICO         44,207    266,642       0            0    32,831        399    344,079  
+          NEPAL               0          0       0            0     1,028          0      1,028  
+          PHILIPPINES         0          0      98            0       955          0      1,053  
+          TAIWAN            441     15,792       0            0     4,334          0     20,567  
+          THAILAND            0          0       0            0     3,453          0      3,453  
+          VIETNAM             0          0       0            0     7,883          0      7,883  
+            SUBTOTAL     45,113    284,636     245            0    86,079        399    416,472  
+
+  TOTAL                 205,612  1,159,422  51,119      124,289   174,124        399  1,715,061  
+
+
+TOTAL
+SHIPMENTS TO CANADA*
+                              0          0       0            0    10,004          0     10,004  
+
+-------------------------------------------------------------------------------------------------
+
+*NOT INCLUDED IN TOTAL INSPECTION FOR EXPORTS
+GRAIN SHIPPED FOR STORAGE IN CANADA IS REPORTED AT TIME OF SHIPMENT FROM ST LAWR SWY PORTS
+
+Monday MAY 20, 2024
+
+CORRECTIONS TO PREVIOUS PUBLICATIONS:
+
+FOR CERTDATE 04/09/23 SUBTRACT 11720 DUWH WHEAT    FROM S. TEXAS       TO NIGERIA      
+FOR CERTDATE 04/09/23 ADD      11720 DUWH WHEAT    FROM N. TEXAS       TO NIGERIA      
+FOR CERTDATE 04/09/23 SUBTRACT 13201 HRS  WHEAT    FROM S. TEXAS       TO NIGERIA      
+FOR CERTDATE 04/09/23 ADD      13201 HRS  WHEAT    FROM N. TEXAS       TO NIGERIA      
+FOR CERTDATE 04/11/23 SUBTRACT 14502 HRS  WHEAT    FROM S. TEXAS       TO NIGERIA      
+FOR CERTDATE 04/11/23 ADD      14502 HRS  WHEAT    FROM N. TEXAS       TO NIGERIA      
+FOR CERTDATE 04/11/23 SUBTRACT 11916 HRW  WHEAT    FROM S. TEXAS       TO NIGERIA      
+FOR CERTDATE 04/11/23 ADD      11916 HRW  WHEAT    FROM N. TEXAS       TO NIGERIA      
+FOR CERTDATE 04/15/23 SUBTRACT 15000 HRS  WHEAT    FROM S. TEXAS       TO KENYA        
+FOR CERTDATE 04/15/23 ADD      15000 HRS  WHEAT    FROM N. TEXAS       TO KENYA        
+FOR CERTDATE 04/16/23 SUBTRACT 52999 HRW  WHEAT    FROM S. TEXAS       TO SOMALIA      
+FOR CERTDATE 04/16/23 SUBTRACT 31620 HRW  WHEAT    FROM S. TEXAS       TO KENYA        
+FOR CERTDATE 04/16/23 ADD      52999 HRW  WHEAT    FROM N. TEXAS       TO SOMALIA      
+FOR CERTDATE 04/16/23 ADD      31620 HRW  WHEAT    FROM N. TEXAS       TO KENYA        
+FOR CERTDATE 04/21/23 SUBTRACT 46000 HRW  WHEAT    FROM S. TEXAS       TO ETHIOPIA     
+FOR CERTDATE 04/21/23 ADD      46000 HRW  WHEAT    FROM N. TEXAS       TO ETHIOPIA     
+FOR CERTDATE 04/26/23 SUBTRACT 48000 HRW  WHEAT    FROM S. TEXAS       TO KENYA        
+FOR CERTDATE 04/26/23 ADD      48000 HRW  WHEAT    FROM N. TEXAS       TO KENYA        
+FOR CERTDATE 04/28/23 SUBTRACT 11550 HRW  WHEAT    FROM S. TEXAS       TO HONDURAS     
+FOR CERTDATE 04/28/23 ADD      11550 HRW  WHEAT    FROM N. TEXAS       TO HONDURAS     
+FOR CERTDATE 04/28/23 SUBTRACT 20535 WHC  CORN     FROM S. TEXAS       TO COLOMBIA     
+FOR CERTDATE 04/28/23 ADD      20535 WHC  CORN     FROM N. TEXAS       TO COLOMBIA     
+FOR CERTDATE 04/30/23 SUBTRACT 10000 HRW  WHEAT    FROM S. TEXAS       TO ETHIOPIA     
+FOR CERTDATE 04/30/23 ADD      10000 HRW  WHEAT    FROM N. TEXAS       TO ETHIOPIA     
+FOR CERTDATE 05/04/23 SUBTRACT 29750 HRW  WHEAT    FROM S. TEXAS       TO ETHIOPIA     
+FOR CERTDATE 05/04/23 ADD      29750 HRW  WHEAT    FROM N. TEXAS       TO ETHIOPIA     
+FOR CERTDATE 05/05/23 SUBTRACT 25055 HRW  WHEAT    FROM S. TEXAS       TO NIGERIA      
+FOR CERTDATE 05/05/23 ADD      25055 HRW  WHEAT    FROM N. TEXAS       TO NIGERIA      
+FOR CERTDATE 05/08/23 SUBTRACT 33200 DUWH WHEAT    FROM S. TEXAS       TO ALGERIA      
+FOR CERTDATE 05/08/23 ADD      33200 DUWH WHEAT    FROM N. TEXAS       TO ALGERIA      
+FOR CERTDATE 05/12/23 SUBTRACT 15315 HRS  WHEAT    FROM S. TEXAS       TO NIGERIA      
+FOR CERTDATE 05/12/23 ADD      15315 HRS  WHEAT    FROM N. TEXAS       TO NIGERIA      
+FOR CERTDATE 05/12/23 SUBTRACT 12630 HRW  WHEAT    FROM S. TEXAS       TO NIGERIA      
+FOR CERTDATE 05/12/23 ADD      12630 HRW  WHEAT    FROM N. TEXAS       TO NIGERIA      
+FOR CERTDATE 05/13/23 SUBTRACT 23214 DUWH WHEAT    FROM S. TEXAS       TO NIGERIA      
+FOR CERTDATE 05/13/23 ADD      23214 DUWH WHEAT    FROM N. TEXAS       TO NIGERIA      
+FOR CERTDATE 05/15/23 SUBTRACT 55205 S    SORGHUM  FROM S. TEXAS       TO CHINA        
+FOR CERTDATE 05/15/23 ADD      55205 S    SORGHUM  FROM N. TEXAS       TO CHINA        
+FOR CERTDATE 05/23/23 SUBTRACT 24150 HRW  WHEAT    FROM S. TEXAS       TO ETHIOPIA     
+FOR CERTDATE 05/23/23 ADD      24150 HRW  WHEAT    FROM N. TEXAS       TO ETHIOPIA     
+FOR CERTDATE 05/24/23 SUBTRACT 22850 HRW  WHEAT    FROM S. TEXAS       TO DJIBOUTI     
+FOR CERTDATE 05/24/23 ADD      22850 HRW  WHEAT    FROM N. TEXAS       TO DJIBOUTI     
+FOR CERTDATE 05/25/23 SUBTRACT 10645 WHC  CORN     FROM S. TEXAS       TO VENEZUELA    
+FOR CERTDATE 05/25/23 ADD      10645 WHC  CORN     FROM N. TEXAS       TO VENEZUELA    
+FOR CERTDATE 05/26/23 SUBTRACT 21000 HRW  WHEAT    FROM S. TEXAS       TO VENEZUELA    
+FOR CERTDATE 05/26/23 ADD      21000 HRW  WHEAT    FROM N. TEXAS       TO VENEZUELA    
+FOR CERTDATE 05/31/23 SUBTRACT 22000 HRS  WHEAT    FROM S. TEXAS       TO HONDURAS     
+FOR CERTDATE 05/31/23 ADD      22000 HRS  WHEAT    FROM N. TEXAS       TO HONDURAS     
+FOR CERTDATE 05/31/23 SUBTRACT 11000 WHC  CORN     FROM S. TEXAS       TO COLOMBIA     
+FOR CERTDATE 05/31/23 ADD      11000 WHC  CORN     FROM N. TEXAS       TO COLOMBIA     
+FOR CERTDATE 06/27/23 SUBTRACT 11100 WHC  CORN     FROM S. TEXAS       TO HONDURAS     
+FOR CERTDATE 06/27/23 ADD      11100 WHC  CORN     FROM N. TEXAS       TO HONDURAS     
+FOR CERTDATE 06/28/23 SUBTRACT 23141 HRW  WHEAT    FROM S. TEXAS       TO NIGERIA      
+FOR CERTDATE 06/28/23 ADD      23141 HRW  WHEAT    FROM N. TEXAS       TO NIGERIA      
+FOR CERTDATE 07/01/23 SUBTRACT 21795 WHC  CORN     FROM S. TEXAS       TO COLOMBIA     
+FOR CERTDATE 07/01/23 ADD      21795 WHC  CORN     FROM N. TEXAS       TO COLOMBIA     
+FOR CERTDATE 07/20/23 SUBTRACT 57349 S    SORGHUM  FROM S. TEXAS       TO CHINA        
+FOR CERTDATE 07/20/23 ADD      57349 S    SORGHUM  FROM N. TEXAS       TO CHINA        
+FOR CERTDATE 07/27/23 SUBTRACT 15305 WHC  CORN     FROM S. TEXAS       TO HONDURAS     
+FOR CERTDATE 07/27/23 ADD      15305 WHC  CORN     FROM N. TEXAS       TO HONDURAS     
+FOR CERTDATE 07/30/23 SUBTRACT 30941 S    SORGHUM  FROM S. TEXAS       TO REP S AFRICA 
+FOR CERTDATE 07/30/23 ADD      30941 S    SORGHUM  FROM N. TEXAS       TO REP S AFRICA 
+FOR CERTDATE 08/02/23 SUBTRACT  7259 YC   CORN     FROM S. TEXAS       TO JAMAICA      
+FOR CERTDATE 08/02/23 ADD       7259 YC   CORN     FROM N. TEXAS       TO JAMAICA      
+FOR CERTDATE 08/05/23 SUBTRACT  5000 HRW  WHEAT    FROM S. TEXAS       TO VENEZUELA    
+FOR CERTDATE 08/05/23 ADD       5000 HRW  WHEAT    FROM N. TEXAS       TO VENEZUELA    
+FOR CERTDATE 08/05/23 SUBTRACT 26000 WHC  CORN     FROM S. TEXAS       TO VENEZUELA    
+FOR CERTDATE 08/05/23 ADD      26000 WHC  CORN     FROM N. TEXAS       TO VENEZUELA    
+FOR CERTDATE 08/14/23 SUBTRACT  2000 HRW  WHEAT    FROM S. TEXAS       TO HAITI        
+FOR CERTDATE 08/14/23 ADD       2000 HRW  WHEAT    FROM N. TEXAS       TO HAITI        
+FOR CERTDATE 08/21/23 SUBTRACT 22781 WHC  CORN     FROM S. TEXAS       TO COLOMBIA     
+FOR CERTDATE 08/21/23 ADD      22781 WHC  CORN     FROM N. TEXAS       TO COLOMBIA     
+FOR CERTDATE 09/05/23 SUBTRACT 60499 S    SORGHUM  FROM S. TEXAS       TO CHINA        
+FOR CERTDATE 09/05/23 ADD      60499 S    SORGHUM  FROM N. TEXAS       TO CHINA        
+FOR CERTDATE 09/07/23 SUBTRACT 28110 HRW  WHEAT    FROM S. TEXAS       TO NIGERIA      
+FOR CERTDATE 09/07/23 ADD      28110 HRW  WHEAT    FROM N. TEXAS       TO NIGERIA      
+FOR CERTDATE 09/20/23 SUBTRACT 10536 DUWH WHEAT    FROM S. TEXAS       TO BELGIUM      
+FOR CERTDATE 09/20/23 ADD      10536 DUWH WHEAT    FROM N. TEXAS       TO BELGIUM      
+FOR CERTDATE 09/21/23 SUBTRACT 22343 HRS  WHEAT    FROM S. TEXAS       TO BELGIUM      
+FOR CERTDATE 09/21/23 ADD      22343 HRS  WHEAT    FROM N. TEXAS       TO BELGIUM      
+FOR CERTDATE 09/26/23 SUBTRACT 20900 DUWH WHEAT    FROM S. TEXAS       TO ITALY        
+FOR CERTDATE 09/26/23 ADD      20900 DUWH WHEAT    FROM N. TEXAS       TO ITALY        
+FOR CERTDATE 09/30/23 SUBTRACT 55045 S    SORGHUM  FROM S. TEXAS       TO CHINA        
+FOR CERTDATE 09/30/23 ADD      55045 S    SORGHUM  FROM N. TEXAS       TO CHINA        
+FOR CERTDATE 10/06/23 SUBTRACT 24934 HRW  WHEAT    FROM S. TEXAS       TO NIGERIA      
+FOR CERTDATE 10/06/23 ADD      24934 HRW  WHEAT    FROM N. TEXAS       TO NIGERIA      
+FOR CERTDATE 10/11/23 SUBTRACT 52532 YSB  SOYBEANS FROM S. TEXAS       TO CHINA        
+FOR CERTDATE 10/11/23 ADD      52532 YSB  SOYBEANS FROM N. TEXAS       TO CHINA        
+FOR CERTDATE 10/22/23 SUBTRACT 57105 YSB  SOYBEANS FROM S. TEXAS       TO CHINA        
+FOR CERTDATE 10/22/23 ADD      57105 YSB  SOYBEANS FROM N. TEXAS       TO CHINA        
+FOR CERTDATE 10/28/23 SUBTRACT 53942 YSB  SOYBEANS FROM S. TEXAS       TO CHINA        
+FOR CERTDATE 10/28/23 ADD      53942 YSB  SOYBEANS FROM N. TEXAS       TO CHINA        
+FOR CERTDATE 11/14/23 SUBTRACT 58299 S    SORGHUM  FROM S. TEXAS       TO CHINA        
+FOR CERTDATE 11/14/23 ADD      58299 S    SORGHUM  FROM N. TEXAS       TO CHINA        
+FOR CERTDATE 11/16/23 SUBTRACT 10450 HRS  WHEAT    FROM S. TEXAS       TO HONDURAS     
+FOR CERTDATE 11/16/23 ADD      10450 HRS  WHEAT    FROM N. TEXAS       TO HONDURAS     
+FOR CERTDATE 11/16/23 SUBTRACT 11000 WHC  CORN     FROM S. TEXAS       TO COLOMBIA     
+FOR CERTDATE 11/16/23 ADD      11000 WHC  CORN     FROM N. TEXAS       TO COLOMBIA     
+FOR CERTDATE 11/17/23 SUBTRACT 51499 S    SORGHUM  FROM S. TEXAS       TO CHINA        
+FOR CERTDATE 11/17/23 ADD      51499 S    SORGHUM  FROM N. TEXAS       TO CHINA        
+FOR CERTDATE 11/20/23 SUBTRACT 57724 S    SORGHUM  FROM S. TEXAS       TO CHINA        
+FOR CERTDATE 11/20/23 ADD      57724 S    SORGHUM  FROM N. TEXAS       TO CHINA        
+FOR CERTDATE 12/04/23 SUBTRACT 57927 S    SORGHUM  FROM S. TEXAS       TO CHINA        
+FOR CERTDATE 12/04/23 ADD      57927 S    SORGHUM  FROM N. TEXAS       TO CHINA        
+FOR CERTDATE 12/08/23 SUBTRACT 22000 S    SORGHUM  FROM S. TEXAS       TO DJIBOUTI     
+FOR CERTDATE 12/08/23 ADD      22000 S    SORGHUM  FROM N. TEXAS       TO DJIBOUTI     
+FOR CERTDATE 12/10/23 SUBTRACT 14248 HRS  WHEAT    FROM S. TEXAS       TO HONDURAS     
+FOR CERTDATE 12/10/23 ADD      14248 HRS  WHEAT    FROM N. TEXAS       TO HONDURAS     
+FOR CERTDATE 12/10/23 SUBTRACT  6187 HRW  WHEAT    FROM S. TEXAS       TO HONDURAS     
+FOR CERTDATE 12/10/23 ADD       6187 HRW  WHEAT    FROM N. TEXAS       TO HONDURAS     
+FOR CERTDATE 12/10/23 SUBTRACT 10302 WHC  CORN     FROM S. TEXAS       TO COLOMBIA     
+FOR CERTDATE 12/10/23 ADD      10302 WHC  CORN     FROM N. TEXAS       TO COLOMBIA     
+FOR CERTDATE 12/11/23 SUBTRACT 56629 S    SORGHUM  FROM S. TEXAS       TO CHINA        
+FOR CERTDATE 12/11/23 ADD      56629 S    SORGHUM  FROM N. TEXAS       TO CHINA        
+FOR CERTDATE 12/12/23 SUBTRACT  4400 HRS  WHEAT    FROM S. TEXAS       TO JAMAICA      
+FOR CERTDATE 12/12/23 ADD       4400 HRS  WHEAT    FROM N. TEXAS       TO JAMAICA      
+FOR CERTDATE 12/12/23 SUBTRACT  2660 SRW  WHEAT    FROM S. TEXAS       TO JAMAICA      
+FOR CERTDATE 12/12/23 ADD       2660 SRW  WHEAT    FROM N. TEXAS       TO JAMAICA      
+FOR CERTDATE 12/18/23 SUBTRACT 27500 HRW  WHEAT    FROM S. TEXAS       TO COLOMBIA     
+FOR CERTDATE 12/18/23 ADD      27500 HRW  WHEAT    FROM N. TEXAS       TO COLOMBIA     
+FOR CERTDATE 12/20/23 SUBTRACT 57599 S    SORGHUM  FROM S. TEXAS       TO CHINA        
+FOR CERTDATE 12/20/23 ADD      57599 S    SORGHUM  FROM N. TEXAS       TO CHINA        
+FOR CERTDATE 12/21/23 SUBTRACT  4400 HRS  WHEAT    FROM S. TEXAS       TO JAMAICA      
+FOR CERTDATE 12/21/23 ADD       4400 HRS  WHEAT    FROM N. TEXAS       TO JAMAICA      
+FOR CERTDATE 12/21/23 SUBTRACT  3850 HRW  WHEAT    FROM S. TEXAS       TO GUYANA       
+FOR CERTDATE 12/21/23 ADD       3850 HRW  WHEAT    FROM N. TEXAS       TO GUYANA       
+FOR CERTDATE 12/22/23 SUBTRACT  2620 SRW  WHEAT    FROM S. TEXAS       TO JAMAICA      
+FOR CERTDATE 12/22/23 ADD       2620 SRW  WHEAT    FROM N. TEXAS       TO JAMAICA      
+FOR CERTDATE 01/10/24 SUBTRACT 61081 S    SORGHUM  FROM S. TEXAS       TO CHINA        
+FOR CERTDATE 01/10/24 ADD      61081 S    SORGHUM  FROM N. TEXAS       TO CHINA        
+FOR CERTDATE 01/19/24 SUBTRACT  8400 HRS  WHEAT    FROM S. TEXAS       TO HONDURAS     
+FOR CERTDATE 01/19/24 ADD       8400 HRS  WHEAT    FROM N. TEXAS       TO HONDURAS     
+FOR CERTDATE 01/28/24 SUBTRACT 13201 HRS  WHEAT    FROM S. TEXAS       TO NIGERIA      
+FOR CERTDATE 01/28/24 ADD      13201 HRS  WHEAT    FROM N. TEXAS       TO NIGERIA      
+FOR CERTDATE 01/29/24 SUBTRACT 26401 HRW  WHEAT    FROM S. TEXAS       TO NIGERIA      
+FOR CERTDATE 01/29/24 ADD      26401 HRW  WHEAT    FROM N. TEXAS       TO NIGERIA      
+FOR CERTDATE 02/06/24 SUBTRACT 54286 S    SORGHUM  FROM S. TEXAS       TO CHINA        
+FOR CERTDATE 02/06/24 ADD      54286 S    SORGHUM  FROM N. TEXAS       TO CHINA        
+FOR CERTDATE 02/17/24 SUBTRACT 32938 DUWH WHEAT    FROM S. TEXAS       TO ALGERIA      
+FOR CERTDATE 02/17/24 ADD      32938 DUWH WHEAT    FROM N. TEXAS       TO ALGERIA      
+FOR CERTDATE 02/21/24 SUBTRACT 36692 HRS  WHEAT    FROM S. TEXAS       TO EGYPT        
+FOR CERTDATE 02/21/24 ADD      36692 HRS  WHEAT    FROM N. TEXAS       TO EGYPT        
+FOR CERTDATE 03/09/24 SUBTRACT 34155 DUWH WHEAT    FROM S. TEXAS       TO ALGERIA      
+FOR CERTDATE 03/09/24 ADD      34155 DUWH WHEAT    FROM N. TEXAS       TO ALGERIA      
+FOR CERTDATE 03/28/24 SUBTRACT 33500 DUWH WHEAT    FROM S. TEXAS       TO ALGERIA      
+FOR CERTDATE 03/28/24 ADD      33500 DUWH WHEAT    FROM N. TEXAS       TO ALGERIA      
+FOR CERTDATE 03/30/24 SUBTRACT 35337 HRS  WHEAT    FROM S. TEXAS       TO EGYPT        
+FOR CERTDATE 03/30/24 ADD      35337 HRS  WHEAT    FROM N. TEXAS       TO EGYPT        
+FOR CERTDATE 04/11/24 SUBTRACT 14300 HRS  WHEAT    FROM S. TEXAS       TO HONDURAS     
+FOR CERTDATE 04/11/24 ADD      14300 HRS  WHEAT    FROM N. TEXAS       TO HONDURAS     
+FOR CERTDATE 04/11/24 SUBTRACT  7700 HRW  WHEAT    FROM S. TEXAS       TO HONDURAS     
+FOR CERTDATE 04/11/24 ADD       7700 HRW  WHEAT    FROM N. TEXAS       TO HONDURAS     
+FOR CERTDATE 04/11/24 SUBTRACT 15818 WHC  CORN     FROM S. TEXAS       TO COLOMBIA     
+FOR CERTDATE 04/11/24 ADD      15818 WHC  CORN     FROM N. TEXAS       TO COLOMBIA     
+FOR CERTDATE 04/23/24 SUBTRACT 33000 HRW  WHEAT    FROM S. TEXAS       TO NIGERIA      
+FOR CERTDATE 04/23/24 ADD      33000 HRW  WHEAT    FROM N. TEXAS       TO NIGERIA      
+FOR CERTDATE 05/01/24 ADD         24 YSB  SOYBEANS FROM INTERIOR       TO INDONESIA    
+FOR CERTDATE 05/03/24 ADD        147 YSB  SOYBEANS FROM INTERIOR       TO VIETNAM      
+FOR CERTDATE 05/07/24 ADD        367 YC   CORN     FROM INTERIOR       TO TAIWAN       
+FOR CERTDATE 05/07/24 ADD       1028 YSB  SOYBEANS FROM INTERIOR       TO VIETNAM      
+FOR CERTDATE 05/07/24 ADD        465 YSB  SOYBEANS FROM INTERIOR       TO CHINA        
+FOR CERTDATE 05/07/24 ADD       1886 YSB  SOYBEANS FROM INTERIOR       TO INDONESIA    
+FOR CERTDATE 05/08/24 ADD        499 SRW  WHEAT    FROM INTERIOR       TO MEXICO       
+FOR CERTDATE 05/08/24 ADD      32999 YC   CORN     FROM MISSISSIPPI R. TO COLOMBIA     
+FOR CERTDATE 05/08/24 ADD        440 YC   CORN     FROM INTERIOR       TO TAIWAN       
+FOR CERTDATE 05/08/24 ADD       1592 YSB  SOYBEANS FROM INTERIOR       TO INDONESIA    
+FOR CERTDATE 05/08/24 ADD      15581 YSB  SOYBEANS FROM MISSISSIPPI R. TO COLOMBIA     
+FOR CERTDATE 05/08/24 ADD        245 YSB  SOYBEANS FROM INTERIOR       TO VIETNAM      
+FOR CERTDATE 05/09/24 ADD      16220 HRW  WHEAT    FROM MISSISSIPPI R. TO DOMINICN REP 
+FOR CERTDATE 05/09/24 ADD      31886 YC   CORN     FROM MISSISSIPPI R. TO PANAMA       
+FOR CERTDATE 05/09/24 ADD       1150 YC   CORN     FROM INTERIOR       TO TAIWAN       
+FOR CERTDATE 05/09/24 ADD        930 YSB  SOYBEANS FROM INTERIOR       TO VIETNAM      
+FOR CERTDATE 05/09/24 ADD        490 YSB  SOYBEANS FROM INTERIOR       TO CHINA        
+FOR CERTDATE 05/09/24 ADD       4163 YSB  SOYBEANS FROM INTERIOR       TO INDONESIA    
+FOR CERTDATE 05/09/24 ADD        489 YSB  SOYBEANS FROM INTERIOR       TO PHILIPPINES  
+
+
+Source:  USDA, FGIS
+         USDA Market News Service, St Joseph, MO
+         John Ervin  816-676-7000  StJoseph.LPGMN@usda.gov
+         www.ams.usda.gov/mnreports/wa_gr101.txt
+         http://www.ams.usda.gov/market-news/livestock-poultry-grain
