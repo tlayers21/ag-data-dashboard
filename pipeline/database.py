@@ -1,6 +1,7 @@
 import pandas as pd
 import os
 from dotenv import load_dotenv
+from datetime import datetime
 from sqlalchemy import create_engine, text
 from sqlalchemy.engine import Engine
 from pathlib import Path
@@ -97,7 +98,10 @@ UNIQUE_KEYS = {
 def load_csv(engine: Engine, path: Path) -> None:
     table_name = path.stem.replace("_clean", "")
     df = pd.read_csv(path)
-    df["date_collected"] = pd.to_datetime(df["date_collected"])
+    
+    # Always overwrite date_collected with today's date
+    today = datetime.now().strftime("%m-%d-%Y")
+    df["date_collected"] = pd.to_datetime(today, format="%m-%d-%Y")
 
     # Keep only rows that don't already exist in the database
     unique_cols = UNIQUE_KEYS.get(table_name, None)
