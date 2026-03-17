@@ -8,14 +8,16 @@ def generate_weekly_commentary(
     commodity: str,
     country: str,
     value_column: str,
+    df_data=None,
 ) -> str:
-    database_data = AgDataClient()
-    df_data = database_data.get(data_type, commodity, country)
+    if df_data is None:
+        database_data = AgDataClient()
+        df_data = database_data.get(data_type, commodity, country)
 
     df = pd.DataFrame(df_data)
 
     if df.empty:
-        return f"There is no {data_type} data available for {commodity.replace("-", " ")} {value_column.replace('_', ' ')} to {country.replace("-", " ")}."
+        return f"There is no {data_type} data available for {commodity.replace('-', ' ')} {value_column.replace('_', ' ')} to {country.replace('-', ' ')}."
     
     df["date_collected"] = pd.to_datetime(df["date_collected"])
     df = df.sort_values("date_collected", ascending=False)
@@ -36,7 +38,7 @@ def generate_weekly_commentary(
         suffix = "th"
     else:
         suffix = ["st", "nd", "rd"][day % 10 - 1]
-    latest_week_ending = f"{latest_week_ending.strftime("%B")} {day}{suffix}"
+    latest_week_ending = f"{latest_week_ending.strftime('%B')} {day}{suffix}"
 
     # WoW
     if len(df) > 1:
@@ -72,10 +74,10 @@ def generate_weekly_commentary(
 
     # Actual commentary
     commentary = (
-        f"{latest_date}: {commodity.replace("-", " ").capitalize()} {value_column.replace('_', ' ')} to " 
-        f"{"the world" if country == "world" else country.title()} "
+        f"{latest_date}: {commodity.replace('-', ' ').capitalize()} {value_column.replace('_', ' ')} to " 
+        f"{'the world' if country == 'world' else country.title()} "
         f"for the week ending on {latest_week_ending} "
-        f"{"was" if "commitment" in value_column else "were"}"
+        f"{'was' if 'commitment' in value_column else 'were'}"
         f" {int(latest_value):,} {unit.replace('_', ' ').lower()} ("
     )
 
@@ -92,9 +94,9 @@ def generate_weekly_commentary(
         commentary += f"YoY: not available, "
     
     # 5-year average
-    if yoy_change is not None:
+    if avg_change is not None:
         commentary += f"{avg_change * 100:+.2f}% "
-        commentary += f"{"above" if avg_change >= 0 else "below"}"
+        commentary += f"{'above' if avg_change >= 0 else 'below'}"
         commentary += " the 5-year average)."
     
     commentary_dir = Path("api/commentary").resolve()
@@ -122,20 +124,28 @@ def generate_home_page_commentary() -> None:
         "next_marketing_year_outstanding_sales"
     ]
 
+    client = AgDataClient()
+
     for commodity in home_page_commodities:
+        inspections_data = client.get("inspections", commodity, "world")
+
         generate_weekly_commentary(
             data_type="inspections",
             commodity=commodity,
             country="world",
-            value_column="export_inspections"
+            value_column="export_inspections",
+            df_data=inspections_data
         )
+
+        esr_data = client.get("esr", commodity, "world")
 
         for val_col in home_page_esr_value_columns:
             generate_weekly_commentary(
                 data_type="esr",
                 commodity=commodity,
                 country="world",
-                value_column=val_col
+                value_column=val_col,
+                df_data=esr_data
             )
 
     print("Done.")
