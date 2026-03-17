@@ -5,6 +5,7 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
   const [figure, setFigure] = useState(null);
   const [error, setError] = useState(false);
 
+  // Detect Safari
   const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
   useEffect(() => {
@@ -62,9 +63,8 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
 
   const isCommodityPage =
     variant !== "home" &&
-    ["corn", "wheat", "srw-wheat", "hrw-wheat", "soybeans", "soybean-oil", "soybean-meal"].includes(
-      variant
-    );
+    ["corn", "wheat", "srw-wheat", "hrw-wheat", "soybeans", "soybean-oil", "soybean-meal"]
+      .includes(variant);
 
   if (error && isCommodityPage) {
     return (
@@ -122,6 +122,7 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
 
   let layout = { ...figure.layout };
 
+  // Independent standoff values
   const SAFARI_HOME_STANDOFF = 14;
   const SAFARI_COMMODITY_STANDOFF = 16;
 
@@ -201,9 +202,20 @@ export default function ChartViewer({ jsonPath, variant = "home" }) {
 
   return (
     <Plot
-      data={figure.data}
+      data={
+        figure.data.map(trace => ({
+          ...trace,
+          // Force SVG rendering by removing WebGL trace types
+          type: trace.type === "scattergl" ? "scatter" : trace.type
+        }))
+      }
       layout={layout}
-      config={figure.config || {}}
+      config={{
+        ...figure.config,
+        renderMode: "svg",
+        displayModeBar: false,
+        responsive: true
+      }}
       style={{ width: "100%", height: chartHeight }}
       useResizeHandler={true}
     />
