@@ -6,7 +6,7 @@
     "accumulatedExports": 0,
     "outstandingSales": 38795,
     "grossNewSales": 10325,
-    "currentMYNetSales": 0,
+    "currentMYNetSales": 10325,
     "currentMYTotalCommitment": 38795,
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
@@ -572,5 +572,19 @@
     "nextMYNetSales": 0,
     "unitId": 1,
     "weekEndingDate": "2026-03-12T00:00:00"
+  },
+  {
+    "commodityCode": 101,
+    "countryCode": 5830,
+    "weeklyExports": 12416,
+    "accumulatedExports": 171147,
+    "outstandingSales": 48750,
+    "grossNewSales": 25241,
+    "currentMYNetSales": 25241,
+    "currentMYTotalCommitment": 219897,
+    "nextMYOutstandingSales": 0,
+    "nextMYNetSales": 0,
+    "unitId": 1,
+    "weekEndingDate": "2026-03-19T00:00:00"
   }
 ]
