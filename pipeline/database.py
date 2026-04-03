@@ -92,15 +92,21 @@ CREATE_INSPECTIONS_INDEXES = [
 ]
 
 UNIQUE_KEYS = {
-    "esr": ["commodity", "country"],
-    "psd": ["commodity", "country", "attribute"],
-    "inspections": ["commodity", "country"],
+    "esr": ["commodity", "country", "week_ending_date"],       
+    "inspections": ["commodity", "country", "week_ending_date"], 
+    "psd": ["commodity", "country", "attribute", "calendar_year"],
 }
 
 
 def load_csv(engine: Engine, path: Path) -> None:
     table_name = path.stem.replace("_clean", "")
     df = pd.read_csv(path)
+
+    # So merge works correctly
+    if "week_ending_date" in df.columns:
+        df["week_ending_date"] = pd.to_datetime(df["week_ending_date"])
+    if "date_collected" in df.columns:
+        df["date_collected"] = pd.to_datetime(df["date_collected"])
 
     # Keep only rows that don't already exist in the database
     unique_cols = UNIQUE_KEYS.get(table_name, None)
@@ -142,13 +148,5 @@ def init_database() -> None:
             connection.execute(text(statement))
         for statement in CREATE_INSPECTIONS_INDEXES:
             connection.execute(text(statement))
-
-    today = datetime.now().date()
-    with engine.begin() as connection:
-        for table in ["esr", "psd", "inspections"]:
-            connection.execute(
-                text(f"UPDATE {table} SET date_collected = :today"), {"today": today}
-            )
-            print(f"{table}: date_collected updated to {today}.")
 
     print("Done.\n==========")
