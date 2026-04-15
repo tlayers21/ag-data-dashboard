@@ -6,7 +6,7 @@
     "accumulatedExports": 0,
     "outstandingSales": 10590,
     "grossNewSales": 10590,
-    "currentMYNetSales": 0,
+    "currentMYNetSales": 10590,
     "currentMYTotalCommitment": 10590,
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
@@ -334,5 +334,47 @@
     "nextMYNetSales": 0,
     "unitId": 1,
     "weekEndingDate": "2026-03-12T00:00:00"
+  },
+  {
+    "commodityCode": 901,
+    "countryCode": 1,
+    "weeklyExports": 401,
+    "accumulatedExports": 372550,
+    "outstandingSales": 171822,
+    "grossNewSales": 79604,
+    "currentMYNetSales": 79132,
+    "currentMYTotalCommitment": 544372,
+    "nextMYOutstandingSales": 0,
+    "nextMYNetSales": 0,
+    "unitId": 1,
+    "weekEndingDate": "2026-03-19T00:00:00"
+  },
+  {
+    "commodityCode": 901,
+    "countryCode": 1,
+    "weeklyExports": 66004,
+    "accumulatedExports": 438554,
+    "outstandingSales": 127752,
+    "grossNewSales": 22998,
+    "currentMYNetSales": 21934,
+    "currentMYTotalCommitment": 566306,
+    "nextMYOutstandingSales": 0,
+    "nextMYNetSales": 0,
+    "unitId": 1,
+    "weekEndingDate": "2026-03-26T00:00:00"
+  },
+  {
+    "commodityCode": 901,
+    "countryCode": 1,
+    "weeklyExports": 226,
+    "accumulatedExports": 438780,
+    "outstandingSales": 130180,
+    "grossNewSales": 2654,
+    "currentMYNetSales": 2654,
+    "currentMYTotalCommitment": 568960,
+    "nextMYOutstandingSales": 0,
+    "nextMYNetSales": 0,
+    "unitId": 1,
+    "weekEndingDate": "2026-04-02T00:00:00"
   }
 ]
