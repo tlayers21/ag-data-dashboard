@@ -642,5 +642,61 @@
     "nextMYNetSales": 0,
     "unitId": 1,
     "weekEndingDate": "2026-04-16T00:00:00"
+  },
+  {
+    "commodityCode": 101,
+    "countryCode": 5830,
+    "weeklyExports": 0,
+    "accumulatedExports": 183642,
+    "outstandingSales": 36550,
+    "grossNewSales": 0,
+    "currentMYNetSales": 0,
+    "currentMYTotalCommitment": 220192,
+    "nextMYOutstandingSales": 27700,
+    "nextMYNetSales": 27700,
+    "unitId": 1,
+    "weekEndingDate": "2026-04-23T00:00:00"
+  },
+  {
+    "commodityCode": 101,
+    "countryCode": 5830,
+    "weeklyExports": 0,
+    "accumulatedExports": 183642,
+    "outstandingSales": 36550,
+    "grossNewSales": 0,
+    "currentMYNetSales": 0,
+    "currentMYTotalCommitment": 220192,
+    "nextMYOutstandingSales": 27700,
+    "nextMYNetSales": 0,
+    "unitId": 1,
+    "weekEndingDate": "2026-04-30T00:00:00"
+  },
+  {
+    "commodityCode": 101,
+    "countryCode": 5830,
+    "weeklyExports": 12486,
+    "accumulatedExports": 196128,
+    "outstandingSales": 24650,
+    "grossNewSales": 586,
+    "currentMYNetSales": 586,
+    "currentMYTotalCommitment": 220778,
+    "nextMYOutstandingSales": 27700,
+    "nextMYNetSales": 0,
+    "unitId": 1,
+    "weekEndingDate": "2026-05-07T00:00:00"
+  },
+  {
+    "commodityCode": 101,
+    "countryCode": 5830,
+    "weeklyExports": 0,
+    "accumulatedExports": 196128,
+    "outstandingSales": 24650,
+    "grossNewSales": 0,
+    "currentMYNetSales": 0,
+    "currentMYTotalCommitment": 220778,
+    "nextMYOutstandingSales": 27700,
+    "nextMYNetSales": 0,
+    "unitId": 1,
+    "weekEndingDate": "2026-05-14T00:00:00"
   }
 ]

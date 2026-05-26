@@ -1,0 +1,152 @@
+[
+  {
+    "commodityCode": "0440000",
+    "countryCode": "MX",
+    "marketYear": "2026",
+    "calendarYear": "2026",
+    "month": "05",
+    "attributeId": 4,
+    "unitId": 4,
+    "value": 6400.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "MX",
+    "marketYear": "2026",
+    "calendarYear": "2026",
+    "month": "05",
+    "attributeId": 20,
+    "unitId": 8,
+    "value": 6101.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "MX",
+    "marketYear": "2026",
+    "calendarYear": "2026",
+    "month": "05",
+    "attributeId": 28,
+    "unitId": 8,
+    "value": 24600.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "MX",
+    "marketYear": "2026",
+    "calendarYear": "2026",
+    "month": "05",
+    "attributeId": 57,
+    "unitId": 8,
+    "value": 27000.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "MX",
+    "marketYear": "2026",
+    "calendarYear": "2026",
+    "month": "05",
+    "attributeId": 81,
+    "unitId": 8,
+    "value": 27000.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "MX",
+    "marketYear": "2026",
+    "calendarYear": "2026",
+    "month": "05",
+    "attributeId": 84,
+    "unitId": 8,
+    "value": 0.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "MX",
+    "marketYear": "2026",
+    "calendarYear": "2026",
+    "month": "05",
+    "attributeId": 86,
+    "unitId": 8,
+    "value": 57701.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "MX",
+    "marketYear": "2026",
+    "calendarYear": "2026",
+    "month": "05",
+    "attributeId": 88,
+    "unitId": 8,
+    "value": 20.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "MX",
+    "marketYear": "2026",
+    "calendarYear": "2026",
+    "month": "05",
+    "attributeId": 113,
+    "unitId": 8,
+    "value": 20.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "MX",
+    "marketYear": "2026",
+    "calendarYear": "2026",
+    "month": "05",
+    "attributeId": 130,
+    "unitId": 8,
+    "value": 30500.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "MX",
+    "marketYear": "2026",
+    "calendarYear": "2026",
+    "month": "05",
+    "attributeId": 192,
+    "unitId": 8,
+    "value": 22300.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "MX",
+    "marketYear": "2026",
+    "calendarYear": "2026",
+    "month": "05",
+    "attributeId": 125,
+    "unitId": 8,
+    "value": 52800.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "MX",
+    "marketYear": "2026",
+    "calendarYear": "2026",
+    "month": "05",
+    "attributeId": 176,
+    "unitId": 8,
+    "value": 4881.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "MX",
+    "marketYear": "2026",
+    "calendarYear": "2026",
+    "month": "05",
+    "attributeId": 178,
+    "unitId": 8,
+    "value": 57701.0
+  },
+  {
+    "commodityCode": "0440000",
+    "countryCode": "MX",
+    "marketYear": "2026",
+    "calendarYear": "2026",
+    "month": "05",
+    "attributeId": 184,
+    "unitId": 26,
+    "value": 3.8438
+  }
+]
