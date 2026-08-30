@@ -1,6 +1,9 @@
 # Environment files
 .env
 
+# Virtual environment
+.venv/
+
 # Python cache
 __pycache__/
 api/__pycache__/
