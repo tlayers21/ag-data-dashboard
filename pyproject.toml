@@ -1,0 +1,27 @@
+[project]
+name = "ag-data-dashboard"
+version = "1.0.0"
+description = "Automated USDA ESR / PSD / Export Inspections analytics platform"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.12"
+dependencies = [
+    # everything api/main.py reaches, directly or via pipeline.*
+    "fastapi",
+    "uvicorn[standard]",
+    "pydantic",
+    "pandas>=2.2,<3",
+    "plotly>=6,<7",
+    "sqlalchemy",
+    "psycopg2-binary",
+    "requests",
+    "python-dotenv",
+]
+
+[dependency-groups]
+pipeline = ["prefect"]
+dev = ["jupyter", "ipykernel"]
+
+[tool.uv]
+package = false
+default-groups = ["dev", "pipeline"]
