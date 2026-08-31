@@ -201,6 +201,11 @@ def clean_psd_world_file(path: Path) -> pd.DataFrame:
 
     df = df.rename(columns=PSD_RENAME_MAP)
 
+    # USDA reports a PSD marketYear as the year the marketing year STARTS in, while ESR,
+    # inspections and compute_marketing_year all use the year it ENDS in. Convert here so
+    # every table means the same thing and the charts can share one labeling helper.
+    df["marketing_year"] = df["marketing_year"].astype(int) + 1
+
     commodity_code = str(df["commodity_code"].iloc[0])
     commodity_name = PSD_COMMODITY_LOOKUP.get(commodity_code)
     df["calendar_month"] = df["calendar_month"].astype(int)

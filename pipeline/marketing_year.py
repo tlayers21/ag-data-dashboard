@@ -1,4 +1,5 @@
 import pandas as pd
+from datetime import date, timedelta
 
 # When each marketing year starts for each commodity
 MARKETING_YEAR_START = {
@@ -10,6 +11,46 @@ MARKETING_YEAR_START = {
     "soybean meal": 10,
     "soybean oil": 10
 }
+
+# Normalizes a commodity name to the keys used in MARKETING_YEAR_START
+def _normalize_commodity(commodity: str) -> str:
+    return commodity.strip().lower().replace("-", " ").replace("_", " ")
+
+# Scalar twin of compute_marketing_year: the end-year label of the marketing year in progress
+def current_marketing_year(commodity: str, today: date | None = None) -> int:
+    if today is None:
+        today = date.today()
+
+    start_month = MARKETING_YEAR_START[_normalize_commodity(commodity)]
+    return today.year + 1 if today.month >= start_month else today.year
+
+# First calendar day of a marketing year, given its end-year label
+def marketing_year_start_date(marketing_year: int, commodity: str) -> date:
+    start_month = MARKETING_YEAR_START[_normalize_commodity(commodity)]
+    return date(marketing_year - 1, start_month, 1)
+
+# Last calendar day of a marketing year, given its end-year label
+def marketing_year_end_date(marketing_year: int, commodity: str) -> date:
+    return marketing_year_start_date(marketing_year + 1, commodity) - timedelta(days=1)
+
+# Where a marketing year sits relative to today
+def marketing_year_status(marketing_year: int, commodity: str, today: date | None = None) -> str:
+    if today is None:
+        today = date.today()
+
+    if today < marketing_year_start_date(marketing_year, commodity):
+        return "projection"
+
+    if today <= marketing_year_end_date(marketing_year, commodity):
+        return "estimate"
+
+    return "final"
+
+# Turns end-year marketing year values into "YYYY/YYYY" display labels
+def format_marketing_year_labels(years: pd.Series) -> pd.Series:
+    return years.map(
+        lambda year: f"{int(year) - 1}/{int(year)}" if pd.notna(year) else None
+    )
 
 # Calculates the marketing year based on the calendar year
 def compute_marketing_year(date: pd.Series, start_month: int) -> pd.Series:

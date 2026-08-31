@@ -1,7 +1,6 @@
 import pandas as pd
 import os
 from dotenv import load_dotenv
-from datetime import datetime
 from sqlalchemy import create_engine, text
 from sqlalchemy.engine import Engine
 from pathlib import Path
@@ -94,7 +93,7 @@ CREATE_INSPECTIONS_INDEXES = [
 UNIQUE_KEYS = {
     "esr": ["commodity", "country", "week_ending_date"],       
     "inspections": ["commodity", "country", "week_ending_date"], 
-    "psd": ["commodity", "country", "attribute", "calendar_year"],
+    "psd": ["commodity", "country", "attribute", "marketing_year"],
 }
 
 
@@ -114,6 +113,7 @@ def load_csv(engine: Engine, path: Path) -> None:
         existing_keys = pd.read_sql(
             f"SELECT {', '.join(unique_cols)} FROM {table_name}", engine
         )
+        existing_keys = existing_keys.drop_duplicates()
         df = df.merge(existing_keys, on=unique_cols, how="left", indicator=True)
         df = df[df["_merge"] == "left_only"].drop(columns="_merge")
 

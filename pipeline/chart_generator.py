@@ -3,6 +3,23 @@ import plotly.express as px
 import plotly.io as pio
 from pathlib import Path
 from .agdata_api_client import AgDataClient
+from .marketing_year import format_marketing_year_labels, marketing_year_status
+
+# How many years (marketing or calendar) each chart shows, newest included
+YEARS_SHOWN = 5
+
+# A PSD marketing year is a new-crop projection months before it starts and an estimate
+# while it runs, so bars for years that have not ended yet say so rather than reading as
+# settled figures. Hatching carries the same signal for anyone skimming the shapes.
+MARKETING_YEAR_SUFFIXES = {"projection": " (proj.)", "estimate": " (est.)", "final": ""}
+NOT_FINAL_PATTERN = "/"
+
+# Keeps only the most recent YEARS_SHOWN years so charts roll over on their own.
+# "YYYY/YYYY" labels and 4-digit calendar years both sort chronologically as strings.
+def trim_to_recent_years(df, year_column: str):
+    recent = sorted(df[year_column].dropna().unique())[-YEARS_SHOWN:]
+    return df[df[year_column].isin(recent)]
+
 
 # Generates a weekly ESR or inspections chart for a given data set
 def generate_weekly_esr_or_inspections_chart(
@@ -44,11 +61,14 @@ def generate_weekly_esr_or_inspections_chart(
         title_year = "Marketing Year"
 
         # Built from the data so a new marketing year never falls outside the labels
-        df[color_axis] = df[color_axis].map(
-            lambda year: f"{int(year) - 1}/{int(year)}" if pd.notna(year) else None
-        )
+        df[color_axis] = format_marketing_year_labels(df[color_axis])
     else:
         raise ValueError("year_type must be either 'calendar' or 'marketing'")
+
+    df = trim_to_recent_years(df, color_axis)
+
+    if df.empty:
+        return
 
     unit = df["unit"].iloc[0]
     latest_date = df["date_collected"].iloc[0]
@@ -215,20 +235,30 @@ def generate_weekly_psd_chart(
     if (df["amount"] == 0).all():
         return
 
-    mapping = {
-        2026: "2025/2026",
-        2025: "2024/2025",
-        2024: "2023/2024",
-        2023: "2022/2023",
-        2022: "2021/2022",
-        2021: "2020/2021",
-    }
-        
-    df["marketing_year"] = df["marketing_year"].map(mapping)
+    # Derived from the data so a new marketing year never falls outside the labels
+    df["marketing_year"] = format_marketing_year_labels(df["marketing_year"])
     df = df.dropna(subset=["marketing_year"])
     df["marketing_year"] = df["marketing_year"].astype(str)
 
+    df = trim_to_recent_years(df, "marketing_year")
+
+    if df.empty:
+        return
+
+    # Suffixes are added after trimming so the sort and the trim both see plain labels
+    statuses = {
+        label: marketing_year_status(int(label.split("/")[1]), commodity)
+        for label in df["marketing_year"].unique()
+    }
     df = df.sort_values(by="marketing_year")
+    df["marketing_year"] = df["marketing_year"].map(
+        lambda label: label + MARKETING_YEAR_SUFFIXES[statuses[label]]
+    )
+    not_final = {
+        label + MARKETING_YEAR_SUFFIXES[status]
+        for label, status in statuses.items()
+        if status != "final"
+    }
 
     unit = df["unit"].iloc[0]
     latest_date = pd.to_datetime(df["date_collected"].iloc[0]).strftime("%m/%d/%Y")
@@ -273,6 +303,10 @@ def generate_weekly_psd_chart(
             trace.update(marker=dict(color="red"))
         else:
             trace.update(opacity=0.7)
+
+        # Marks the years USDA has not settled yet, so a projection never reads as final
+        if trace_label in not_final:
+            trace.update(marker=dict(pattern=dict(shape=NOT_FINAL_PATTERN, solidity=0.25)))
 
     if attribute in ["yield", "extraction_rate"]:
         figure.update_traces(texttemplate="%{text:,.3f}", textposition="outside")

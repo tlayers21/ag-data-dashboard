@@ -11,6 +11,27 @@ from .transform import (
 
 CLEAN_DIR = Path(__file__).parent.parent / "data" / "clean"
 
+DEDUPE_KEYS = {
+    "esr": ["commodity", "country", "week_ending_date"],
+    "psd": ["commodity", "country", "attribute", "marketing_year"],
+    "inspections": ["commodity", "country", "week_ending_date"],
+}
+
+# Orders raw files oldest-fetched first so the newest copy of a row is the one kept
+def by_fetch_time(files: list[Path]) -> list[Path]:
+    return sorted(files, key=lambda file: file.stat().st_mtime)
+
+# Drops rows that describe an observation already seen
+def drop_duplicate_rows(df: pd.DataFrame, data_type: str) -> pd.DataFrame:
+    before = len(df)
+    df = df.drop_duplicates(subset=DEDUPE_KEYS[data_type], keep="last")
+
+    dropped = before - len(df)
+    if dropped:
+        print(f"Dropped {dropped} Duplicate {data_type.upper()} Rows")
+
+    return df
+
 # Cleans all ESR files and combines the result into 1 CSV file
 def clean_all_esr() -> None:
     CLEAN_DIR.mkdir(parents=True, exist_ok=True)
@@ -18,14 +39,14 @@ def clean_all_esr() -> None:
     print("Starting ESR Data Cleaning Process...")
     fas_dir = BASE_DIR / "data" / "raw" / "fas"
 
-    world_files = list(fas_dir.glob("*_esr_all_*.json"))
+    world_files = by_fetch_time(list(fas_dir.glob("*_esr_all_*.json")))
     
     if not world_files:
         raise FileNotFoundError("No ESR World Files Found In data/raw/fas")
     
     print(f"Processing {len(world_files)} ESR World Files...")
 
-    country_files = list(fas_dir.glob("*_esr_to_*.json"))
+    country_files = by_fetch_time(list(fas_dir.glob("*_esr_to_*.json")))
     print(f"Processing {len(country_files)} ESR Country Files...")
 
     if not country_files:
@@ -50,6 +71,7 @@ def clean_all_esr() -> None:
         combined_country_df = pd.concat(country_dfs, ignore_index=True)
     
     esr_df = pd.concat([combined_world_df, combined_country_df], ignore_index=True)
+    esr_df = drop_duplicate_rows(esr_df, "esr")
     esr_df = esr_df.sort_values(by="week_ending_date", ascending=False)
     
     output_path = clean_data_path("esr_clean.csv")
@@ -64,14 +86,16 @@ def clean_all_psd() -> None:
     print("Starting PSD Data Cleaning Process...")
 
     fas_dir = BASE_DIR / "data" / "raw" / "fas"
-    world_files = list(fas_dir.glob("*_psd_world_*.json"))
+    world_files = by_fetch_time(list(fas_dir.glob("*_psd_world_*.json")))
 
     if not world_files:
         raise FileNotFoundError("No PSD World Files Found in data/raw/fas")
 
     print(f"Processing {len(world_files)} PSD World Files...")
 
-    country_files = [file for file in fas_dir.glob("*_psd_*_*.json") if "world" not in file.name]
+    country_files = by_fetch_time(
+        [file for file in fas_dir.glob("*_psd_*_*.json") if "world" not in file.name]
+    )
 
     if not country_files:
         raise FileNotFoundError("No PSD Country Files found in data/raw/fas")
@@ -97,6 +121,7 @@ def clean_all_psd() -> None:
         combined_country_df = pd.concat(country_dfs, ignore_index=True)
     
     psd_df = pd.concat([combined_world_df, combined_country_df], ignore_index=True)
+    psd_df = drop_duplicate_rows(psd_df, "psd")
     psd_df = psd_df.sort_values(by="marketing_year", ascending=False)
 
     output_path = clean_data_path("psd_clean.csv")
@@ -110,7 +135,7 @@ def clean_all_inspections() -> None:
 
     print("Starting Inspections Data Cleaning Process...")
     inspections_dir = BASE_DIR / "data" / "raw" / "inspections"
-    inspections_files = list(inspections_dir.glob("*"))
+    inspections_files = by_fetch_time(list(inspections_dir.glob("*")))
 
     if not inspections_files:
         raise FileNotFoundError("No Export Inspections Files Found in data/raw/inspections")
@@ -124,6 +149,7 @@ def clean_all_inspections() -> None:
         
     
     combined_inspections_df = pd.concat(inspections_dfs, ignore_index=True)
+    combined_inspections_df = drop_duplicate_rows(combined_inspections_df, "inspections")
     output_path = clean_data_path("inspections_clean.csv")
     combined_inspections_df = combined_inspections_df.sort_values(by="week_ending_date", ascending=False)
     combined_inspections_df.to_csv(output_path, index=False)
