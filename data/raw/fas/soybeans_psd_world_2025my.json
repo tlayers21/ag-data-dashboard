@@ -4,129 +4,129 @@
     "countryCode": "00",
     "marketYear": "2025",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "08",
     "attributeId": 4,
     "unitId": 4,
-    "value": 144177.0
+    "value": 142740.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "00",
     "marketYear": "2025",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "08",
     "attributeId": 20,
     "unitId": 8,
-    "value": 123841.0
+    "value": 125950.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "00",
     "marketYear": "2025",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "08",
     "attributeId": 28,
     "unitId": 8,
-    "value": 427178.0
+    "value": 429461.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "00",
     "marketYear": "2025",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "08",
     "attributeId": 57,
     "unitId": 8,
-    "value": 185610.0
+    "value": 187166.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "00",
     "marketYear": "2025",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "08",
     "attributeId": 86,
     "unitId": 8,
-    "value": 736629.0
+    "value": 742577.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "00",
     "marketYear": "2025",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "08",
     "attributeId": 88,
     "unitId": 8,
-    "value": 187168.0
+    "value": 187186.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "00",
     "marketYear": "2025",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "08",
     "attributeId": 7,
     "unitId": 8,
-    "value": 367958.0
+    "value": 373922.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "00",
     "marketYear": "2025",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "08",
     "attributeId": 149,
     "unitId": 8,
-    "value": 25766.0
+    "value": 25701.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "00",
     "marketYear": "2025",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "08",
     "attributeId": 161,
     "unitId": 8,
-    "value": 30432.0
+    "value": 30646.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "00",
     "marketYear": "2025",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "08",
     "attributeId": 125,
     "unitId": 8,
-    "value": 424156.0
+    "value": 430269.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "00",
     "marketYear": "2025",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "08",
     "attributeId": 176,
     "unitId": 8,
-    "value": 125305.0
+    "value": 125122.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "00",
     "marketYear": "2025",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "08",
     "attributeId": 178,
     "unitId": 8,
-    "value": 736629.0
+    "value": 742577.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "00",
     "marketYear": "2025",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "08",
     "attributeId": 184,
     "unitId": 26,
-    "value": 2.9629
+    "value": 3.0087
   }
 ]

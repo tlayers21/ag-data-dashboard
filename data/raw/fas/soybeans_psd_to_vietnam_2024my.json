@@ -4,7 +4,7 @@
     "countryCode": "VM",
     "marketYear": "2024",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "05",
     "attributeId": 4,
     "unitId": 4,
     "value": 26.0
@@ -14,7 +14,7 @@
     "countryCode": "VM",
     "marketYear": "2024",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "05",
     "attributeId": 20,
     "unitId": 8,
     "value": 460.0
@@ -24,17 +24,17 @@
     "countryCode": "VM",
     "marketYear": "2024",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "05",
     "attributeId": 28,
     "unitId": 8,
-    "value": 42.0
+    "value": 43.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "VM",
     "marketYear": "2024",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "05",
     "attributeId": 57,
     "unitId": 8,
     "value": 2609.0
@@ -44,17 +44,17 @@
     "countryCode": "VM",
     "marketYear": "2024",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "05",
     "attributeId": 86,
     "unitId": 8,
-    "value": 3111.0
+    "value": 3112.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "VM",
     "marketYear": "2024",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "05",
     "attributeId": 88,
     "unitId": 8,
     "value": 0.0
@@ -64,7 +64,7 @@
     "countryCode": "VM",
     "marketYear": "2024",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "05",
     "attributeId": 7,
     "unitId": 8,
     "value": 1850.0
@@ -74,7 +74,7 @@
     "countryCode": "VM",
     "marketYear": "2024",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "05",
     "attributeId": 149,
     "unitId": 8,
     "value": 540.0
@@ -84,7 +84,7 @@
     "countryCode": "VM",
     "marketYear": "2024",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "05",
     "attributeId": 161,
     "unitId": 8,
     "value": 270.0
@@ -94,7 +94,7 @@
     "countryCode": "VM",
     "marketYear": "2024",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "05",
     "attributeId": 125,
     "unitId": 8,
     "value": 2660.0
@@ -104,29 +104,29 @@
     "countryCode": "VM",
     "marketYear": "2024",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "05",
     "attributeId": 176,
     "unitId": 8,
-    "value": 451.0
+    "value": 452.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "VM",
     "marketYear": "2024",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "05",
     "attributeId": 178,
     "unitId": 8,
-    "value": 3111.0
+    "value": 3112.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "VM",
     "marketYear": "2024",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "05",
     "attributeId": 184,
     "unitId": 26,
-    "value": 1.6154
+    "value": 1.6538
   }
 ]

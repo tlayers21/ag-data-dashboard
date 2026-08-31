@@ -4,27 +4,27 @@
     "countryCode": "TW",
     "marketYear": "2025",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "05",
     "attributeId": 7,
     "unitId": 8,
-    "value": 2330.0
+    "value": 2180.0
   },
   {
     "commodityCode": "4232000",
     "countryCode": "TW",
     "marketYear": "2025",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "05",
     "attributeId": 181,
     "unitId": 23,
-    "value": 0.1781
+    "value": 0.178
   },
   {
     "commodityCode": "4232000",
     "countryCode": "TW",
     "marketYear": "2025",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "05",
     "attributeId": 20,
     "unitId": 8,
     "value": 29.0
@@ -34,17 +34,17 @@
     "countryCode": "TW",
     "marketYear": "2025",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "05",
     "attributeId": 28,
     "unitId": 8,
-    "value": 415.0
+    "value": 388.0
   },
   {
     "commodityCode": "4232000",
     "countryCode": "TW",
     "marketYear": "2025",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "05",
     "attributeId": 57,
     "unitId": 8,
     "value": 0.0
@@ -54,27 +54,27 @@
     "countryCode": "TW",
     "marketYear": "2025",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "05",
     "attributeId": 86,
     "unitId": 8,
-    "value": 444.0
+    "value": 417.0
   },
   {
     "commodityCode": "4232000",
     "countryCode": "TW",
     "marketYear": "2025",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "05",
     "attributeId": 88,
     "unitId": 8,
-    "value": 30.0
+    "value": 25.0
   },
   {
     "commodityCode": "4232000",
     "countryCode": "TW",
     "marketYear": "2025",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "05",
     "attributeId": 140,
     "unitId": 8,
     "value": 20.0
@@ -84,17 +84,17 @@
     "countryCode": "TW",
     "marketYear": "2025",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "05",
     "attributeId": 149,
     "unitId": 8,
-    "value": 365.0
+    "value": 350.0
   },
   {
     "commodityCode": "4232000",
     "countryCode": "TW",
     "marketYear": "2025",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "05",
     "attributeId": 161,
     "unitId": 8,
     "value": 0.0
@@ -104,29 +104,29 @@
     "countryCode": "TW",
     "marketYear": "2025",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "05",
     "attributeId": 125,
     "unitId": 8,
-    "value": 385.0
+    "value": 370.0
   },
   {
     "commodityCode": "4232000",
     "countryCode": "TW",
     "marketYear": "2025",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "05",
     "attributeId": 176,
     "unitId": 8,
-    "value": 29.0
+    "value": 22.0
   },
   {
     "commodityCode": "4232000",
     "countryCode": "TW",
     "marketYear": "2025",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "05",
     "attributeId": 178,
     "unitId": 8,
-    "value": 444.0
+    "value": 417.0
   }
 ]

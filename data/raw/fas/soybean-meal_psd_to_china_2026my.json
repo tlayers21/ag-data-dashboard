@@ -4,17 +4,17 @@
     "countryCode": "CH",
     "marketYear": "2026",
     "calendarYear": "2026",
-    "month": "05",
+    "month": "08",
     "attributeId": 7,
     "unitId": 8,
-    "value": 110000.0
+    "value": 111000.0
   },
   {
     "commodityCode": "0813100",
     "countryCode": "CH",
     "marketYear": "2026",
     "calendarYear": "2026",
-    "month": "05",
+    "month": "08",
     "attributeId": 181,
     "unitId": 23,
     "value": 0.792
@@ -24,27 +24,27 @@
     "countryCode": "CH",
     "marketYear": "2026",
     "calendarYear": "2026",
-    "month": "05",
+    "month": "08",
     "attributeId": 20,
     "unitId": 8,
-    "value": 1279.0
+    "value": 1271.0
   },
   {
     "commodityCode": "0813100",
     "countryCode": "CH",
     "marketYear": "2026",
     "calendarYear": "2026",
-    "month": "05",
+    "month": "08",
     "attributeId": 28,
     "unitId": 8,
-    "value": 87120.0
+    "value": 87912.0
   },
   {
     "commodityCode": "0813100",
     "countryCode": "CH",
     "marketYear": "2026",
     "calendarYear": "2026",
-    "month": "05",
+    "month": "08",
     "attributeId": 57,
     "unitId": 8,
     "value": 100.0
@@ -54,27 +54,27 @@
     "countryCode": "CH",
     "marketYear": "2026",
     "calendarYear": "2026",
-    "month": "05",
+    "month": "08",
     "attributeId": 86,
     "unitId": 8,
-    "value": 88499.0
+    "value": 89283.0
   },
   {
     "commodityCode": "0813100",
     "countryCode": "CH",
     "marketYear": "2026",
     "calendarYear": "2026",
-    "month": "05",
+    "month": "08",
     "attributeId": 88,
     "unitId": 8,
-    "value": 1200.0
+    "value": 1100.0
   },
   {
     "commodityCode": "0813100",
     "countryCode": "CH",
     "marketYear": "2026",
     "calendarYear": "2026",
-    "month": "05",
+    "month": "08",
     "attributeId": 140,
     "unitId": 8,
     "value": 1150.0
@@ -84,7 +84,7 @@
     "countryCode": "CH",
     "marketYear": "2026",
     "calendarYear": "2026",
-    "month": "05",
+    "month": "08",
     "attributeId": 149,
     "unitId": 8,
     "value": 0.0
@@ -94,49 +94,49 @@
     "countryCode": "CH",
     "marketYear": "2026",
     "calendarYear": "2026",
-    "month": "05",
+    "month": "08",
     "attributeId": 161,
     "unitId": 8,
-    "value": 84700.0
+    "value": 85600.0
   },
   {
     "commodityCode": "0813100",
     "countryCode": "CH",
     "marketYear": "2026",
     "calendarYear": "2026",
-    "month": "05",
+    "month": "08",
     "attributeId": 125,
     "unitId": 8,
-    "value": 85850.0
+    "value": 86750.0
   },
   {
     "commodityCode": "0813100",
     "countryCode": "CH",
     "marketYear": "2026",
     "calendarYear": "2026",
-    "month": "05",
+    "month": "08",
     "attributeId": 176,
     "unitId": 8,
-    "value": 1449.0
+    "value": 1433.0
   },
   {
     "commodityCode": "0813100",
     "countryCode": "CH",
     "marketYear": "2026",
     "calendarYear": "2026",
-    "month": "05",
+    "month": "08",
     "attributeId": 178,
     "unitId": 8,
-    "value": 88499.0
+    "value": 89283.0
   },
   {
     "commodityCode": "0813100",
     "countryCode": "CH",
     "marketYear": "2026",
     "calendarYear": "2026",
-    "month": "05",
+    "month": "08",
     "attributeId": 194,
     "unitId": 8,
-    "value": 84700.0
+    "value": 85600.0
   }
 ]

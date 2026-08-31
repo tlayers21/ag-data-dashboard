@@ -1,0 +1,260 @@
+WA_GR101
+Washington, DC    Mon   Aug 31, 2026   USDA Market News
+
+*CORRECTIONS AT BOTTOM OF REPORT ARE INCLUDED IN CURRENT MARKET YEAR TO DATE*
+
+COUNTRY OF DESTINATION IS REPORTED AS KNOWN AT THE TIME OF EXPORTATION.
+INFORMATION CONTAINED IN THIS REPORT REFLECTS EXPORTED GRAIN INSPECTED AND WEIGHED
+THROUGH THE AUTHORITY UNDER THE U.S. GRAIN STANDARDS ACT.  NO ADDITIONAL ANALYSIS,
+COMPILATIONS OR DATA IS AVAILABLE.
+
+               GRAINS INSPECTED AND/OR WEIGHED FOR EXPORT
+                  REPORTED IN WEEK ENDING AUG 27, 2026
+                            -- METRIC TONS --
+
+-------------------------------------------------------------------------
+                                                   CURRENT     PREVIOUS  
+             ----------- WEEK ENDING ----------  MARKET YEAR  MARKET YEAR
+  GRAIN      08/27/2026  08/20/2026  08/28/2025    TO DATE     TO DATE   
+
+BARLEY              0           0       1,534          244        3,432  
+CORN        1,496,034   1,322,594   1,409,720   83,805,596   66,968,828  
+FLAXSEED            0           0           0           96          144  
+MIXED               0           0         998            0        1,120  
+OATS                0           0           0          998        2,095  
+RYE                 0           0           0            0            0  
+SORGHUM        48,376         979      65,862    4,915,724    2,225,784  
+SOYBEANS      250,801     430,079     491,966   40,744,315   49,810,744  
+SUNFLOWER           0           0           0           40            0  
+WHEAT         430,925     432,538     804,913    4,776,858    6,671,297  
+Total       2,226,136   2,186,190   2,774,993  134,243,871  125,683,444  
+
+
+CROP MARKETING YEARS BEGIN JUNE 1 FOR WHEAT, RYE, OATS, BARLEY AND
+FLAXSEED;  SEPTEMBER 1 FOR CORN, SORGHUM, SOYBEANS AND SUNFLOWER SEEDS.
+INCLUDES WATERWAY SHIPMENTS TO CANADA.
+
+               SOYBEANS INSPECTED AND/OR WEIGHED FOR EXPORT
+                  BY PORT AREA AND COUNTRY OF DESTINATION
+                   REPORTED IN WEEK ENDING AUG 27, 2026
+                             -- METRIC TONS --
+
+---------------------------------------------------------------------------
+
+PUGET SOUND   
+       JAPAN           24
+
+INTERIOR      
+       INDONESIA    18853       JAPAN         1199
+       KOREA REP      220       MALAYSIA      3917
+       MEXICO       42012       PHILIPPINES   1053
+       TAIWAN       16556       THAILAND      1028
+       VIETNAM      15375
+
+MISSISSIPPI R.
+       ALGERIA      43299       EGYPT        42394
+       ITALY        41986       MEXICO       11884
+       PANAMA       11001
+
+TOTAL         
+                  250801
+
+INCLUDES SHIPMENTS TO CANADA.
+
+              WHEAT INSPECTED AND/OR WEIGHED FOR EXPORT BY CLASS, REGION AND PORT AREA
+                                REPORTED IN WEEK ENDING AUG 27, 2026
+                                          -- METRIC TONS --
+
+-----------------------------------------------------------------------------------------------------
+
+                               HARD RED  HARD RED  SOFT RED     SOFT                    
+  REGION       PORT AREA        SPRING    WINTER    WINTER      WHITE   DURUM    TOTALS 
+
+
+ST LAWR SWY  MONTREAL               0         0         0          0       0         0  
+             SEAWAY                 0         0         0          0       0         0  
+               SUBTOTAL             0         0         0          0       0         0  
+
+LAKES        CHICAGO                0         0         0          0       0         0  
+             DULUTH-SUP        10,007         0         0          0  21,146    31,153  
+             TOLEDO                 0         0         0          0       0         0  
+             PORT HURON             0         0         0          0       0         0  
+             LAKE ONTARIO           0         0         0          0       0         0  
+             LAKE SUPERIOR          0         0         0          0       0         0  
+             LAKE ERIE              0         0         0          0       0         0  
+               SUBTOTAL        10,007         0         0          0  21,146    31,153  
+
+ATLANTIC     N. ATLANTIC            0         0         0          0       0         0  
+             S. ATLANTIC            0         0     3,991          0       0     3,991  
+               SUBTOTAL             0         0     3,991          0       0     3,991  
+
+GULF         MISSISSIPPI R.     8,280         0    15,529          0       0    23,809  
+             EAST GULF              0         0         0          0       0         0  
+             N. TEXAS               0    13,198         0          0       0    13,198  
+             S. TEXAS               0         0         0          0       0         0  
+               SUBTOTAL         8,280    13,198    15,529          0       0    37,007  
+
+PACIFIC      COLUMBIA R.      177,429    15,850         0     90,698       0   283,977  
+             PUGET SOUND            0         0         0      2,008       0     2,008  
+             CALIFORNIA             0         0         0          0       0         0  
+               SUBTOTAL       177,429    15,850         0     92,706       0   285,985  
+
+INTERIOR     INTERIOR          17,446    24,850    28,777      1,398     318    72,789  
+               SUBTOTAL        17,446    24,850    28,777      1,398     318    72,789  
+
+  TOTAL                       213,162    53,898    48,297     94,104  21,464   430,925  
+
+----------------------------------------------------------------------------------------
+
+*NOT INCLUDED IN TOTAL INSPECTION FOR EXPORTS
+WHEAT SHIPPED FOR STORAGE IN CANADA IS REPORTED AT TIME OF SHIPMENT FROM ST LAWR SWY PORTS
+PRIOR TO MAY 1, 1990, ALL HARD AND SOFT WHITE WHEAT VARIETIES WERE CLASSIFIED AS WHITE WHEAT.
+
+                              GRAINS INSPECTED AND/OR WEIGHED FOR EXPORT BY REGION AND PORT AREA
+                                             REPORTED IN WEEK ENDING AUG 27, 2026
+                                                       -- METRIC TONS --
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+                                       CORN      CORN                                             
+  REGION    PORT AREA       WHEAT     YELLOW     WHITE     SORGHUM  SOYBEANS    CANOLA   TOTALS   
+
+
+LAKES     DULUTH-SUP       31,153           0       0          0         0          0     31,153  
+            SUBTOTAL       31,153           0       0          0         0          0     31,153  
+
+ATLANTIC  S. ATLANTIC       3,991      49,869       0          0         0          0     53,860  
+            SUBTOTAL        3,991      49,869       0          0         0          0     53,860  
+
+GULF      MISSISSIPPI R.   23,809     581,111   5,914     46,100   150,564          0    807,498  
+          N. TEXAS         13,198      88,400       0          0         0          0    101,598  
+            SUBTOTAL       37,007     669,511   5,914     46,100   150,564          0    909,096  
+
+PACIFIC   PUGET SOUND       2,008           0       0          0        24          0      2,032  
+          COLUMBIA R.     283,977     386,567       0          0         0          0    670,544  
+            SUBTOTAL      285,985     386,567       0          0        24          0    672,576  
+
+INTERIOR  INTERIOR         72,789     380,036   4,137      2,276   100,213     11,476    570,927  
+            SUBTOTAL       72,789     380,036   4,137      2,276   100,213     11,476    570,927  
+
+  TOTAL                   430,925   1,485,983  10,051     48,376   250,801     11,476  2,237,612  
+
+--------------------------------------------------------------------------------------------------
+
+INCLUDES SHIPMENTS TO CANADA AND DOES NOT INCLUDE SHIPMENTS OF U.S. GRAIN FROM THE
+ST. LAWRENCE SEAWAY.
+MIXED CORN IS INCLUDED IN YELLOW CORN.
+
+                GRAINS INSPECTED AND/OR WEIGHED FOR EXPORT BY REGION AND COUNTRY OF DESTINATION
+                                     REPORTED IN WEEK ENDING AUG 27, 2026
+                                               -- METRIC TONS --
+
+---------------------------------------------------------------------------------------------------------------
+
+                                   CORN      CORN                                                 
+  REGION    COUNTRY      WHEAT    YELLOW     WHITE    SORGHUM  SOYBEANS    CANOLA   TOTALS   
+
+
+LAKES     ITALY         31,153          0       0         0         0         0     31,153  
+            SUBTOTAL    31,153          0       0         0         0         0     31,153  
+
+ATLANTIC  INDONESIA      1,837          0       0         0         0         0      1,837  
+          ITALY              0     49,869       0         0         0         0     49,869  
+          KOREA REP        563          0       0         0         0         0        563  
+          MALAYSIA       1,591          0       0         0         0         0      1,591  
+            SUBTOTAL     3,991     49,869       0         0         0         0     53,860  
+
+GULF      ALGERIA            0          0       0         0    43,299         0     43,299  
+          CHINA              0          0       0    46,100         0         0     46,100  
+          COLOMBIA       8,609    157,483       0         0         0         0    166,092  
+          EGYPT              0          0       0         0    42,394         0     42,394  
+          GUATEMALA          0     81,887   5,914         0         0         0     87,801  
+          HAITI         13,198          0       0         0         0         0     13,198  
+          ITALY              0     11,549       0         0    41,986         0     53,535  
+          JAMAICA       15,200          0       0         0         0         0     15,200  
+          JAPAN              0     49,891       0         0         0         0     49,891  
+          MEXICO             0    146,916       0         0    11,884         0    158,800  
+          PANAMA             0     56,858       0         0    11,001         0     67,859  
+          SPAIN              0    164,927       0         0         0         0    164,927  
+            SUBTOTAL    37,007    669,511   5,914    46,100   150,564         0    909,096  
+
+PACIFIC   ECUADOR       30,280          0       0         0         0         0     30,280  
+          JAPAN              0    123,195       0         0        24         0    123,219  
+          KOREA REP     21,322    263,372       0         0         0         0    284,694  
+          PHILIPPINES  131,831          0       0         0         0         0    131,831  
+          TAIWAN       100,544          0       0         0         0         0    100,544  
+          THAILAND       2,008          0       0         0         0         0      2,008  
+            SUBTOTAL   285,985    386,567       0         0        24         0    672,576  
+
+INTERIOR  CHINA              0          0       0     2,276         0         0      2,276  
+          INDONESIA        490          0       0         0    18,853         0     19,343  
+          JAPAN            318          0       0         0     1,199         0      1,517  
+          KOREA REP          0      1,102       0         0       220         0      1,322  
+          MALAYSIA         245      1,933       0         0     3,917         0      6,095  
+          MEXICO        70,756    359,645   3,892         0    42,012    11,476    487,781  
+          PHILIPPINES        0        833     245         0     1,053         0      2,131  
+          TAIWAN             0     15,470       0         0    16,556         0     32,026  
+          THAILAND         980          0       0         0     1,028         0      2,008  
+          VIETNAM            0      1,053       0         0    15,375         0     16,428  
+            SUBTOTAL    72,789    380,036   4,137     2,276   100,213    11,476    570,927  
+
+  TOTAL                430,925  1,485,983  10,051    48,376   250,801    11,476  2,237,612  
+
+--------------------------------------------------------------------------------------------
+
+*NOT INCLUDED IN TOTAL INSPECTION FOR EXPORTS
+GRAIN SHIPPED FOR STORAGE IN CANADA IS REPORTED AT TIME OF SHIPMENT FROM ST LAWR SWY PORTS
+
+Monday AUGUST 31, 2026
+
+CORRECTIONS TO PREVIOUS PUBLICATIONS:
+
+FOR CERTDATE 07/29/26 ADD   441 YC   CORN     FROM INTERIOR TO VIETNAM     
+FOR CERTDATE 08/02/26 ADD   269 YC   CORN     FROM INTERIOR TO VIETNAM     
+FOR CERTDATE 08/04/26 ADD   294 YC   CORN     FROM INTERIOR TO VIETNAM     
+FOR CERTDATE 08/05/26 ADD    49 YSB  SOYBEANS FROM INTERIOR TO MALAYSIA    
+FOR CERTDATE 08/07/26 ADD   220 YC   CORN     FROM INTERIOR TO VIETNAM     
+FOR CERTDATE 08/08/26 ADD    24 HRS  WHEAT    FROM INTERIOR TO VIETNAM     
+FOR CERTDATE 08/10/26 ADD   147 DUWH WHEAT    FROM INTERIOR TO VIETNAM     
+FOR CERTDATE 08/10/26 ADD  1798 HRW  WHEAT    FROM INTERIOR TO MEXICO      
+FOR CERTDATE 08/10/26 ADD   195 XWHT WHEAT    FROM INTERIOR TO VIETNAM     
+FOR CERTDATE 08/11/26 ADD    24 S    SORGHUM  FROM INTERIOR TO TAIWAN      
+FOR CERTDATE 08/11/26 ADD   490 YC   CORN     FROM INTERIOR TO VIETNAM     
+FOR CERTDATE 08/13/26 ADD   954 YSB  SOYBEANS FROM INTERIOR TO MALAYSIA    
+FOR CERTDATE 08/13/26 ADD  1052 YSB  SOYBEANS FROM INTERIOR TO TAIWAN      
+FOR CERTDATE 08/14/26 ADD   147 YC   CORN     FROM INTERIOR TO PHILIPPINES 
+FOR CERTDATE 08/14/26 ADD   196 YC   CORN     FROM INTERIOR TO VIETNAM     
+FOR CERTDATE 08/15/26 ADD   980 HRS  WHEAT    FROM INTERIOR TO VIETNAM     
+FOR CERTDATE 08/15/26 ADD   465 YC   CORN     FROM INTERIOR TO VIETNAM     
+FOR CERTDATE 08/15/26 ADD   735 YSB  SOYBEANS FROM INTERIOR TO MALAYSIA    
+FOR CERTDATE 08/17/26 ADD  1497 SRW  WHEAT    FROM INTERIOR TO MEXICO      
+FOR CERTDATE 08/18/26 ADD   200 HRW  WHEAT    FROM INTERIOR TO MEXICO      
+FOR CERTDATE 08/18/26 ADD  2495 SRW  WHEAT    FROM INTERIOR TO MEXICO      
+FOR CERTDATE 08/18/26 ADD  1126 YC   CORN     FROM INTERIOR TO VIETNAM     
+FOR CERTDATE 08/18/26 ADD    24 YC   CORN     FROM INTERIOR TO TAIWAN      
+FOR CERTDATE 08/18/26 ADD   299 YC   CORN     FROM INTERIOR TO MEXICO      
+FOR CERTDATE 08/18/26 ADD   367 YSB  SOYBEANS FROM INTERIOR TO VIETNAM     
+FOR CERTDATE 08/18/26 ADD   931 YSB  SOYBEANS FROM INTERIOR TO MALAYSIA    
+FOR CERTDATE 08/18/26 ADD  1078 YSB  SOYBEANS FROM INTERIOR TO INDONESIA   
+FOR CERTDATE 08/19/26 ADD  1698 HRW  WHEAT    FROM INTERIOR TO MEXICO      
+FOR CERTDATE 08/19/26 ADD 11376 YC   CORN     FROM INTERIOR TO MEXICO      
+FOR CERTDATE 08/19/26 ADD   465 YC   CORN     FROM INTERIOR TO MALAYSIA    
+FOR CERTDATE 08/19/26 ADD  2938 YSB  SOYBEANS FROM INTERIOR TO INDONESIA   
+FOR CERTDATE 08/19/26 ADD   490 YSB  SOYBEANS FROM INTERIOR TO MALAYSIA    
+FOR CERTDATE 08/19/26 ADD   245 YSB  SOYBEANS FROM INTERIOR TO VIETNAM     
+FOR CERTDATE 08/20/26 ADD   465 YC   CORN     FROM INTERIOR TO ITALY       
+FOR CERTDATE 08/20/26 ADD  1470 YC   CORN     FROM INTERIOR TO TAIWAN      
+FOR CERTDATE 08/20/26 ADD   465 YC   CORN     FROM INTERIOR TO VIETNAM     
+FOR CERTDATE 08/20/26 ADD  9580 YC   CORN     FROM INTERIOR TO MEXICO      
+FOR CERTDATE 08/20/26 ADD   245 YC   CORN     FROM INTERIOR TO HONG KONG   
+FOR CERTDATE 08/20/26 ADD    73 YSB  SOYBEANS FROM INTERIOR TO JAPAN       
+FOR CERTDATE 08/20/26 ADD  1249 YSB  SOYBEANS FROM INTERIOR TO INDONESIA   
+FOR CERTDATE 08/20/26 ADD    98 YSB  SOYBEANS FROM INTERIOR TO KOREA REP   
+FOR CERTDATE 08/20/26 ADD   490 YSB  SOYBEANS FROM INTERIOR TO TAIWAN      
+FOR CERTDATE 08/20/26 ADD   490 YSB  SOYBEANS FROM INTERIOR TO VIETNAM     
+
+USDA Market News Service, St Joseph, MO
+816-676-7000  StJoseph.LPGMN@usda.gov
+www.ams.usda.gov/mnreports/wa_gr101.txt
+http://www.ams.usda.gov/market-news/livestock-poultry-grain
+https://fgisonline.ams.usda.gov/ExportGrainReport/default.aspx

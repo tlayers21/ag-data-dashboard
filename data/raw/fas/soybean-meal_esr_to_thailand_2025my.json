@@ -4,34 +4,6 @@
     "countryCode": 5490,
     "weeklyExports": 0,
     "accumulatedExports": 0,
-    "outstandingSales": 0,
-    "grossNewSales": 0,
-    "currentMYNetSales": 0,
-    "currentMYTotalCommitment": 0,
-    "nextMYOutstandingSales": 0,
-    "nextMYNetSales": 0,
-    "unitId": 1,
-    "weekEndingDate": "2024-10-10T00:00:00"
-  },
-  {
-    "commodityCode": 901,
-    "countryCode": 5490,
-    "weeklyExports": 0,
-    "accumulatedExports": 0,
-    "outstandingSales": 0,
-    "grossNewSales": 0,
-    "currentMYNetSales": 0,
-    "currentMYTotalCommitment": 0,
-    "nextMYOutstandingSales": 0,
-    "nextMYNetSales": 0,
-    "unitId": 1,
-    "weekEndingDate": "2024-10-17T00:00:00"
-  },
-  {
-    "commodityCode": 901,
-    "countryCode": 5490,
-    "weeklyExports": 0,
-    "accumulatedExports": 0,
     "outstandingSales": 200,
     "grossNewSales": 200,
     "currentMYNetSales": 200,
@@ -723,7 +695,7 @@
     "currentMYNetSales": 0,
     "currentMYTotalCommitment": 23740,
     "nextMYOutstandingSales": 1005,
-    "nextMYNetSales": 0,
+    "nextMYNetSales": 1250,
     "unitId": 1,
     "weekEndingDate": "2025-10-02T00:00:00"
   }

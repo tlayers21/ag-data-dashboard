@@ -3,28 +3,28 @@
     "commodityCode": "0813100",
     "countryCode": "JA",
     "marketYear": "2024",
-    "calendarYear": "2025",
-    "month": "11",
+    "calendarYear": "2026",
+    "month": "05",
     "attributeId": 7,
     "unitId": 8,
-    "value": 2485.0
+    "value": 2512.0
   },
   {
     "commodityCode": "0813100",
     "countryCode": "JA",
     "marketYear": "2024",
-    "calendarYear": "2025",
-    "month": "11",
+    "calendarYear": "2026",
+    "month": "05",
     "attributeId": 181,
     "unitId": 23,
-    "value": 0.7501
+    "value": 0.7532
   },
   {
     "commodityCode": "0813100",
     "countryCode": "JA",
     "marketYear": "2024",
-    "calendarYear": "2025",
-    "month": "11",
+    "calendarYear": "2026",
+    "month": "05",
     "attributeId": 20,
     "unitId": 8,
     "value": 112.0
@@ -33,18 +33,18 @@
     "commodityCode": "0813100",
     "countryCode": "JA",
     "marketYear": "2024",
-    "calendarYear": "2025",
-    "month": "11",
+    "calendarYear": "2026",
+    "month": "05",
     "attributeId": 28,
     "unitId": 8,
-    "value": 1864.0
+    "value": 1892.0
   },
   {
     "commodityCode": "0813100",
     "countryCode": "JA",
     "marketYear": "2024",
-    "calendarYear": "2025",
-    "month": "11",
+    "calendarYear": "2026",
+    "month": "05",
     "attributeId": 57,
     "unitId": 8,
     "value": 1621.0
@@ -53,18 +53,18 @@
     "commodityCode": "0813100",
     "countryCode": "JA",
     "marketYear": "2024",
-    "calendarYear": "2025",
-    "month": "11",
+    "calendarYear": "2026",
+    "month": "05",
     "attributeId": 86,
     "unitId": 8,
-    "value": 3597.0
+    "value": 3625.0
   },
   {
     "commodityCode": "0813100",
     "countryCode": "JA",
     "marketYear": "2024",
-    "calendarYear": "2025",
-    "month": "11",
+    "calendarYear": "2026",
+    "month": "05",
     "attributeId": 88,
     "unitId": 8,
     "value": 1.0
@@ -73,8 +73,8 @@
     "commodityCode": "0813100",
     "countryCode": "JA",
     "marketYear": "2024",
-    "calendarYear": "2025",
-    "month": "11",
+    "calendarYear": "2026",
+    "month": "05",
     "attributeId": 140,
     "unitId": 8,
     "value": 200.0
@@ -83,60 +83,60 @@
     "commodityCode": "0813100",
     "countryCode": "JA",
     "marketYear": "2024",
-    "calendarYear": "2025",
-    "month": "11",
+    "calendarYear": "2026",
+    "month": "05",
     "attributeId": 149,
     "unitId": 8,
-    "value": 200.0
+    "value": 205.0
   },
   {
     "commodityCode": "0813100",
     "countryCode": "JA",
     "marketYear": "2024",
-    "calendarYear": "2025",
-    "month": "11",
+    "calendarYear": "2026",
+    "month": "05",
     "attributeId": 161,
     "unitId": 8,
-    "value": 3080.0
+    "value": 3100.0
   },
   {
     "commodityCode": "0813100",
     "countryCode": "JA",
     "marketYear": "2024",
-    "calendarYear": "2025",
-    "month": "11",
+    "calendarYear": "2026",
+    "month": "05",
     "attributeId": 125,
     "unitId": 8,
-    "value": 3480.0
+    "value": 3505.0
   },
   {
     "commodityCode": "0813100",
     "countryCode": "JA",
     "marketYear": "2024",
-    "calendarYear": "2025",
-    "month": "11",
+    "calendarYear": "2026",
+    "month": "05",
     "attributeId": 176,
     "unitId": 8,
-    "value": 116.0
+    "value": 119.0
   },
   {
     "commodityCode": "0813100",
     "countryCode": "JA",
     "marketYear": "2024",
-    "calendarYear": "2025",
-    "month": "11",
+    "calendarYear": "2026",
+    "month": "05",
     "attributeId": 178,
     "unitId": 8,
-    "value": 3597.0
+    "value": 3625.0
   },
   {
     "commodityCode": "0813100",
     "countryCode": "JA",
     "marketYear": "2024",
-    "calendarYear": "2025",
-    "month": "11",
+    "calendarYear": "2026",
+    "month": "05",
     "attributeId": 194,
     "unitId": 8,
-    "value": 3080.0
+    "value": 3100.0
   }
 ]

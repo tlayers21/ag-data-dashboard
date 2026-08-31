@@ -737,7 +737,7 @@
     "currentMYNetSales": 0,
     "currentMYTotalCommitment": 54626,
     "nextMYOutstandingSales": 1528,
-    "nextMYNetSales": 0,
+    "nextMYNetSales": 1528,
     "unitId": 1,
     "weekEndingDate": "2022-10-06T00:00:00"
   }

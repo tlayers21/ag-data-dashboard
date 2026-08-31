@@ -4,7 +4,7 @@
     "countryCode": "MX",
     "marketYear": "2025",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "04",
     "attributeId": 4,
     "unitId": 4,
     "value": 145.0
@@ -14,27 +14,27 @@
     "countryCode": "MX",
     "marketYear": "2025",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "04",
     "attributeId": 20,
     "unitId": 8,
-    "value": 592.0
+    "value": 587.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "MX",
     "marketYear": "2025",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "04",
     "attributeId": 28,
     "unitId": 8,
-    "value": 280.0
+    "value": 305.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "MX",
     "marketYear": "2025",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "04",
     "attributeId": 57,
     "unitId": 8,
     "value": 6700.0
@@ -44,17 +44,17 @@
     "countryCode": "MX",
     "marketYear": "2025",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "04",
     "attributeId": 86,
     "unitId": 8,
-    "value": 7572.0
+    "value": 7592.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "MX",
     "marketYear": "2025",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "04",
     "attributeId": 88,
     "unitId": 8,
     "value": 10.0
@@ -64,17 +64,17 @@
     "countryCode": "MX",
     "marketYear": "2025",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "04",
     "attributeId": 7,
     "unitId": 8,
-    "value": 6800.0
+    "value": 6850.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "MX",
     "marketYear": "2025",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "04",
     "attributeId": 149,
     "unitId": 8,
     "value": 0.0
@@ -84,49 +84,49 @@
     "countryCode": "MX",
     "marketYear": "2025",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "04",
     "attributeId": 161,
     "unitId": 8,
-    "value": 85.0
+    "value": 95.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "MX",
     "marketYear": "2025",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "04",
     "attributeId": 125,
     "unitId": 8,
-    "value": 6885.0
+    "value": 6945.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "MX",
     "marketYear": "2025",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "04",
     "attributeId": 176,
     "unitId": 8,
-    "value": 677.0
+    "value": 637.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "MX",
     "marketYear": "2025",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "04",
     "attributeId": 178,
     "unitId": 8,
-    "value": 7572.0
+    "value": 7592.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "MX",
     "marketYear": "2025",
     "calendarYear": "2026",
-    "month": "03",
+    "month": "04",
     "attributeId": 184,
     "unitId": 26,
-    "value": 1.931
+    "value": 2.1034
   }
 ]

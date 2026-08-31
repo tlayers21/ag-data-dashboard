@@ -4,37 +4,37 @@
     "countryCode": "CA",
     "marketYear": "2026",
     "calendarYear": "2026",
-    "month": "05",
+    "month": "08",
     "attributeId": 4,
     "unitId": 4,
-    "value": 2350.0
+    "value": 2400.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "CA",
     "marketYear": "2026",
     "calendarYear": "2026",
-    "month": "05",
+    "month": "08",
     "attributeId": 20,
     "unitId": 8,
-    "value": 551.0
+    "value": 371.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "CA",
     "marketYear": "2026",
     "calendarYear": "2026",
-    "month": "05",
+    "month": "08",
     "attributeId": 28,
     "unitId": 8,
-    "value": 7300.0
+    "value": 7400.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "CA",
     "marketYear": "2026",
     "calendarYear": "2026",
-    "month": "05",
+    "month": "08",
     "attributeId": 57,
     "unitId": 8,
     "value": 300.0
@@ -44,37 +44,37 @@
     "countryCode": "CA",
     "marketYear": "2026",
     "calendarYear": "2026",
-    "month": "05",
+    "month": "08",
     "attributeId": 86,
     "unitId": 8,
-    "value": 8151.0
+    "value": 8071.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "CA",
     "marketYear": "2026",
     "calendarYear": "2026",
-    "month": "05",
+    "month": "08",
     "attributeId": 88,
     "unitId": 8,
-    "value": 5300.0
+    "value": 5400.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "CA",
     "marketYear": "2026",
     "calendarYear": "2026",
-    "month": "05",
+    "month": "08",
     "attributeId": 7,
     "unitId": 8,
-    "value": 1500.0
+    "value": 1600.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "CA",
     "marketYear": "2026",
     "calendarYear": "2026",
-    "month": "05",
+    "month": "08",
     "attributeId": 149,
     "unitId": 8,
     "value": 0.0
@@ -84,17 +84,17 @@
     "countryCode": "CA",
     "marketYear": "2026",
     "calendarYear": "2026",
-    "month": "05",
+    "month": "08",
     "attributeId": 161,
     "unitId": 8,
-    "value": 750.0
+    "value": 650.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "CA",
     "marketYear": "2026",
     "calendarYear": "2026",
-    "month": "05",
+    "month": "08",
     "attributeId": 125,
     "unitId": 8,
     "value": 2250.0
@@ -104,29 +104,29 @@
     "countryCode": "CA",
     "marketYear": "2026",
     "calendarYear": "2026",
-    "month": "05",
+    "month": "08",
     "attributeId": 176,
     "unitId": 8,
-    "value": 601.0
+    "value": 421.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "CA",
     "marketYear": "2026",
     "calendarYear": "2026",
-    "month": "05",
+    "month": "08",
     "attributeId": 178,
     "unitId": 8,
-    "value": 8151.0
+    "value": 8071.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "CA",
     "marketYear": "2026",
     "calendarYear": "2026",
-    "month": "05",
+    "month": "08",
     "attributeId": 184,
     "unitId": 26,
-    "value": 3.1064
+    "value": 3.0833
   }
 ]

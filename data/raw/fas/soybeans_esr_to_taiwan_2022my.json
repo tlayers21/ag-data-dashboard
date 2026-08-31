@@ -6,7 +6,7 @@
     "accumulatedExports": 0,
     "outstandingSales": 571497,
     "grossNewSales": 117672,
-    "currentMYNetSales": 16163,
+    "currentMYNetSales": 117672,
     "currentMYTotalCommitment": 571497,
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
@@ -737,7 +737,7 @@
     "currentMYNetSales": -5281,
     "currentMYTotalCommitment": 1472669,
     "nextMYOutstandingSales": 273939,
-    "nextMYNetSales": 40441,
+    "nextMYNetSales": 144059,
     "unitId": 1,
     "weekEndingDate": "2022-09-01T00:00:00"
   }
