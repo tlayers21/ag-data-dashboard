@@ -69,7 +69,7 @@ def generate_weekly_esr_or_inspections_chart(
             f"to {country.replace("-", " ").title()} (as of {latest_date})"
         ),
         labels={
-            x_axis: f"Week Ending Date",
+            x_axis: "Week Ending Date",
             value_column: f"{unit}",
             color_axis: title_year
         }
@@ -250,7 +250,7 @@ def generate_weekly_psd_chart(
     )
 
     figure.add_annotation(
-        text=f"Source: <b>USDA PSD API<b>",
+        text="Source: <b>USDA PSD API<b>",
         xref="paper", yref="paper",
         x=1,
         y=1.05,
