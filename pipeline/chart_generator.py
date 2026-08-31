@@ -3,7 +3,6 @@ import plotly.express as px
 import plotly.io as pio
 from pathlib import Path
 from .agdata_api_client import AgDataClient
-from .config import COMMODITIES, ESR_COUNTRY_NAMES, PSD_COUNTRY_NAMES
 
 # Generates a weekly ESR or inspections chart for a given data set
 def generate_weekly_esr_or_inspections_chart(
