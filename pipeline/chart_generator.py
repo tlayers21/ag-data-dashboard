@@ -44,15 +44,10 @@ def generate_weekly_esr_or_inspections_chart(
         file_suffix = "my"
         title_year = "Marketing Year"
 
-        mapping = {
-            2026: "2025/2026",
-            2025: "2024/2025",
-            2024: "2023/2024",
-            2023: "2022/2023",
-            2022: "2021/2022",
-            2021: "2020/2021",
-        }
-        df[color_axis] = df[color_axis].map(mapping)
+        # Built from the data so a new marketing year never falls outside the labels
+        df[color_axis] = df[color_axis].map(
+            lambda year: f"{int(year) - 1}/{int(year)}" if pd.notna(year) else None
+        )
     else:
         raise ValueError("year_type must be either 'calendar' or 'marketing'")
 
