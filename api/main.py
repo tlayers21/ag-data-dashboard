@@ -7,8 +7,13 @@ import time
 from pathlib import Path
 from sqlalchemy import create_engine, text
 import pandas as pd
-from datetime import datetime, timedelta
-from pipeline.chart_generator import generate_weekly_esr_or_inspections_chart, generate_weekly_psd_chart
+from datetime import datetime
+from pipeline.chart_generator import (
+    YEARS_SHOWN,
+    generate_weekly_esr_or_inspections_chart,
+    generate_weekly_psd_chart,
+)
+from pipeline.marketing_year import current_marketing_year, marketing_year_start_date
 from pipeline.commentary_generator import generate_home_page_commentary
 
 load_dotenv()
@@ -101,11 +106,15 @@ def validate_params(commodity: str, country: str, datatype: str | None = None) -
 
 TABLE_DATE_COLUMNS = {
     "esr": "week_ending_date",
-    "psd": "calendar_year",
+    "psd": "marketing_year",
     "inspections": "week_ending_date",
 }
 
-# Fetches data from last 5 years dependent on the 3 types of data: ESR, PSD, and inspections (allows for some leeway)
+# Fetches data from the last few marketing years dependent on the 3 types of data:
+# ESR, PSD, and inspections. The window is anchored to the commodity's own marketing
+# year rather than a rolling day count, so it never slices a year in half. One extra
+# year of slack is included so the calendar-year charts still have YEARS_SHOWN full
+# calendar years to trim down from.
 def fetch_last_5_years(data: str, commodity: str, country: str):
     data_column = TABLE_DATE_COLUMNS.get(data)
     if data_column is None:
@@ -115,12 +124,16 @@ def fetch_last_5_years(data: str, commodity: str, country: str):
     country = country.strip().lower()
     validate_params(commodity, country)
 
+    current_year = current_marketing_year(commodity)
+
     if data == "psd":
-        cutoff = datetime.now().year - 6
+        # marketing_year is normalized to the end-year convention at ingest. Forecast
+        # years run ahead of the current one, so only the lower bound is applied here.
+        cutoff = current_year - YEARS_SHOWN
     else:
-        # Midnight of the cutoff day, matching the old date-only comparison
-        cutoff = (datetime.now() - timedelta(days=5*365 + 134)).replace(
-            hour=0, minute=0, second=0, microsecond=0
+        cutoff = datetime.combine(
+            marketing_year_start_date(current_year - (YEARS_SHOWN + 1), commodity),
+            datetime.min.time(),
         )
 
     query = text(f"""
