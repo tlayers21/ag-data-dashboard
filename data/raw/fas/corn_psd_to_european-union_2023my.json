@@ -3,8 +3,8 @@
     "commodityCode": "0440000",
     "countryCode": "E4",
     "marketYear": "2023",
-    "calendarYear": "2025",
-    "month": "12",
+    "calendarYear": "2026",
+    "month": "08",
     "attributeId": 4,
     "unitId": 4,
     "value": 8283.0
@@ -13,8 +13,8 @@
     "commodityCode": "0440000",
     "countryCode": "E4",
     "marketYear": "2023",
-    "calendarYear": "2025",
-    "month": "12",
+    "calendarYear": "2026",
+    "month": "08",
     "attributeId": 20,
     "unitId": 8,
     "value": 8024.0
@@ -23,8 +23,8 @@
     "commodityCode": "0440000",
     "countryCode": "E4",
     "marketYear": "2023",
-    "calendarYear": "2025",
-    "month": "12",
+    "calendarYear": "2026",
+    "month": "08",
     "attributeId": 28,
     "unitId": 8,
     "value": 61947.0
@@ -33,28 +33,28 @@
     "commodityCode": "0440000",
     "countryCode": "E4",
     "marketYear": "2023",
-    "calendarYear": "2025",
-    "month": "12",
+    "calendarYear": "2026",
+    "month": "08",
     "attributeId": 57,
     "unitId": 8,
-    "value": 19812.0
+    "value": 19877.0
   },
   {
     "commodityCode": "0440000",
     "countryCode": "E4",
     "marketYear": "2023",
-    "calendarYear": "2025",
-    "month": "12",
+    "calendarYear": "2026",
+    "month": "08",
     "attributeId": 81,
     "unitId": 8,
-    "value": 19812.0
+    "value": 19877.0
   },
   {
     "commodityCode": "0440000",
     "countryCode": "E4",
     "marketYear": "2023",
-    "calendarYear": "2025",
-    "month": "12",
+    "calendarYear": "2026",
+    "month": "08",
     "attributeId": 84,
     "unitId": 8,
     "value": 1333.0
@@ -63,18 +63,18 @@
     "commodityCode": "0440000",
     "countryCode": "E4",
     "marketYear": "2023",
-    "calendarYear": "2025",
-    "month": "12",
+    "calendarYear": "2026",
+    "month": "08",
     "attributeId": 86,
     "unitId": 8,
-    "value": 89783.0
+    "value": 89848.0
   },
   {
     "commodityCode": "0440000",
     "countryCode": "E4",
     "marketYear": "2023",
-    "calendarYear": "2025",
-    "month": "12",
+    "calendarYear": "2026",
+    "month": "08",
     "attributeId": 88,
     "unitId": 8,
     "value": 4389.0
@@ -83,8 +83,8 @@
     "commodityCode": "0440000",
     "countryCode": "E4",
     "marketYear": "2023",
-    "calendarYear": "2025",
-    "month": "12",
+    "calendarYear": "2026",
+    "month": "08",
     "attributeId": 113,
     "unitId": 8,
     "value": 4389.0
@@ -93,18 +93,18 @@
     "commodityCode": "0440000",
     "countryCode": "E4",
     "marketYear": "2023",
-    "calendarYear": "2025",
-    "month": "12",
+    "calendarYear": "2026",
+    "month": "08",
     "attributeId": 130,
     "unitId": 8,
-    "value": 58100.0
+    "value": 58200.0
   },
   {
     "commodityCode": "0440000",
     "countryCode": "E4",
     "marketYear": "2023",
-    "calendarYear": "2025",
-    "month": "12",
+    "calendarYear": "2026",
+    "month": "08",
     "attributeId": 192,
     "unitId": 8,
     "value": 20000.0
@@ -113,38 +113,38 @@
     "commodityCode": "0440000",
     "countryCode": "E4",
     "marketYear": "2023",
-    "calendarYear": "2025",
-    "month": "12",
+    "calendarYear": "2026",
+    "month": "08",
     "attributeId": 125,
     "unitId": 8,
-    "value": 78100.0
+    "value": 78200.0
   },
   {
     "commodityCode": "0440000",
     "countryCode": "E4",
     "marketYear": "2023",
-    "calendarYear": "2025",
-    "month": "12",
+    "calendarYear": "2026",
+    "month": "08",
     "attributeId": 176,
     "unitId": 8,
-    "value": 7294.0
+    "value": 7259.0
   },
   {
     "commodityCode": "0440000",
     "countryCode": "E4",
     "marketYear": "2023",
-    "calendarYear": "2025",
-    "month": "12",
+    "calendarYear": "2026",
+    "month": "08",
     "attributeId": 178,
     "unitId": 8,
-    "value": 89783.0
+    "value": 89848.0
   },
   {
     "commodityCode": "0440000",
     "countryCode": "E4",
     "marketYear": "2023",
-    "calendarYear": "2025",
-    "month": "12",
+    "calendarYear": "2026",
+    "month": "08",
     "attributeId": 184,
     "unitId": 26,
     "value": 7.4788

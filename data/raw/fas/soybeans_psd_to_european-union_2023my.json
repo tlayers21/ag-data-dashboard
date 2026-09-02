@@ -4,7 +4,7 @@
     "countryCode": "E4",
     "marketYear": "2023",
     "calendarYear": "2026",
-    "month": "01",
+    "month": "04",
     "attributeId": 4,
     "unitId": 4,
     "value": 1017.0
@@ -14,17 +14,17 @@
     "countryCode": "E4",
     "marketYear": "2023",
     "calendarYear": "2026",
-    "month": "01",
+    "month": "04",
     "attributeId": 20,
     "unitId": 8,
-    "value": 1259.0
+    "value": 1262.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "E4",
     "marketYear": "2023",
     "calendarYear": "2026",
-    "month": "01",
+    "month": "04",
     "attributeId": 28,
     "unitId": 8,
     "value": 2811.0
@@ -34,27 +34,27 @@
     "countryCode": "E4",
     "marketYear": "2023",
     "calendarYear": "2026",
-    "month": "01",
+    "month": "04",
     "attributeId": 57,
     "unitId": 8,
-    "value": 13466.0
+    "value": 13550.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "E4",
     "marketYear": "2023",
     "calendarYear": "2026",
-    "month": "01",
+    "month": "04",
     "attributeId": 86,
     "unitId": 8,
-    "value": 17536.0
+    "value": 17623.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "E4",
     "marketYear": "2023",
     "calendarYear": "2026",
-    "month": "01",
+    "month": "04",
     "attributeId": 88,
     "unitId": 8,
     "value": 253.0
@@ -64,7 +64,7 @@
     "countryCode": "E4",
     "marketYear": "2023",
     "calendarYear": "2026",
-    "month": "01",
+    "month": "04",
     "attributeId": 7,
     "unitId": 8,
     "value": 14500.0
@@ -74,7 +74,7 @@
     "countryCode": "E4",
     "marketYear": "2023",
     "calendarYear": "2026",
-    "month": "01",
+    "month": "04",
     "attributeId": 149,
     "unitId": 8,
     "value": 220.0
@@ -84,47 +84,47 @@
     "countryCode": "E4",
     "marketYear": "2023",
     "calendarYear": "2026",
-    "month": "01",
+    "month": "04",
     "attributeId": 161,
     "unitId": 8,
-    "value": 1275.0
+    "value": 1350.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "E4",
     "marketYear": "2023",
     "calendarYear": "2026",
-    "month": "01",
+    "month": "04",
     "attributeId": 125,
     "unitId": 8,
-    "value": 15995.0
+    "value": 16070.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "E4",
     "marketYear": "2023",
     "calendarYear": "2026",
-    "month": "01",
+    "month": "04",
     "attributeId": 176,
     "unitId": 8,
-    "value": 1288.0
+    "value": 1300.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "E4",
     "marketYear": "2023",
     "calendarYear": "2026",
-    "month": "01",
+    "month": "04",
     "attributeId": 178,
     "unitId": 8,
-    "value": 17536.0
+    "value": 17623.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "E4",
     "marketYear": "2023",
     "calendarYear": "2026",
-    "month": "01",
+    "month": "04",
     "attributeId": 184,
     "unitId": 26,
     "value": 2.764
