@@ -1,15 +1,30 @@
 import json
 import requests
 from .config import COMMODITIES, ESR_COUNTRY_NAMES, PSD_COUNTRY_NAMES
-from .usda_client import USDAClient
+from .usda_client import USDAClient, REQUEST_TIMEOUT
 from pathlib import Path
 from .utils import fas_data_path, inspections_data_path
-from .marketing_year import current_marketing_year
-from datetime import datetime, timedelta
+from .marketing_year import (
+    current_marketing_year,
+    marketing_year_start_date,
+    marketing_year_status,
+)
+from datetime import date, datetime, timedelta
 import time
 
 FAS_DIR = Path(__file__).parent.parent / "data" / "raw" / "fas"
 INSPECTIONS_DIR = Path(__file__).parent.parent / "data" / "raw" / "inspections"
+
+# FAS publishes ESR weekly with a roughly one week lag, so the first report of a
+# new marketing year does not land until a couple of weeks into it
+ESR_NEW_YEAR_GRACE_DAYS = 21
+
+def _esr_year_too_new(commodity: str, marketing_year: int) -> bool:
+    if marketing_year_status(marketing_year, commodity) == "projection":
+        return True
+
+    start_date = marketing_year_start_date(marketing_year, commodity)
+    return date.today() < start_date + timedelta(days=ESR_NEW_YEAR_GRACE_DAYS)
     
 # Fetches both esr all and country data for each commodity
 def fetch_esr_data(usda_api_key: str, marketing_year: int | None = None, years_back: int = 2) -> None:
@@ -25,12 +40,22 @@ def fetch_esr_data(usda_api_key: str, marketing_year: int | None = None, years_b
 
         if marketing_year is None:
             esr_years = [current_marketing_year(name) - offset for offset in range(years_back)]
+            unreported_years = {
+                year for year in esr_years if _esr_year_too_new(name, year)
+            }
         else:
             esr_years = [marketing_year]
+            unreported_years = set()
 
         for esr_year in esr_years:
             _fetch_esr_marketing_year(
-                usda_data, name, dash_commodity_name, esr_code, esr_countries, esr_year
+                usda_data,
+                name,
+                dash_commodity_name,
+                esr_code,
+                esr_countries,
+                esr_year,
+                warn_if_missing=esr_year not in unreported_years,
             )
 
     print("Done.\n==========")
@@ -42,7 +67,8 @@ def _fetch_esr_marketing_year(
         dash_commodity_name: str,
         esr_code: str,
         esr_countries: list,
-        marketing_year: int
+        marketing_year: int,
+        warn_if_missing: bool = True
 ) -> None:
     print(f"Fetching: {name.title()} For Marketing Year {marketing_year}")
 
@@ -53,11 +79,15 @@ def _fetch_esr_marketing_year(
     if esr_all_data:   
         with open(fas_data_path(f"{dash_commodity_name}_esr_all_{marketing_year}my.json"), "w") as file:
             json.dump(esr_all_data, file, indent=2)
-    else:
+    elif warn_if_missing:
         print(
             f"----------\nWARNING: No ESR All Data For {name.title()} " 
             f"For {marketing_year} Marketing Year\n----------"
         )
+    else:
+        # Nothing reported for this marketing year yet, so no country has it either
+        print(f"{name.title()} {marketing_year} Marketing Year Not Reported Yet - Skipping")
+        return
 
     # For to individual countries
     for country_code in esr_countries:
@@ -69,7 +99,7 @@ def _fetch_esr_marketing_year(
         if country_data:
             with open(fas_data_path(f"{dash_commodity_name}_esr_to_{dash_country_name}_{marketing_year}my.json"), "w") as file:
                 json.dump(country_data, file, indent=2)
-        else:
+        elif warn_if_missing:
             print(
                 f"----------\nWARNING: No ESR Country Data For {name.title()} To {country_name.title()} "
                 f"For {marketing_year} Marketing Year\n----------"
@@ -180,7 +210,7 @@ def fetch_inspections() -> None:
     filename = f"{timestamp}_WA_GR101_.txt"
     filepath = inspections_data_path(filename)
 
-    response = requests.get(url)
+    response = requests.get(url, timeout=REQUEST_TIMEOUT)
     if response.status_code == 200:
         new_content = response.content
 
