@@ -1,6 +1,7 @@
 import pandas as pd
 from pathlib import Path
 from .utils import BASE_DIR, clean_data_path
+from .config import COMMODITIES
 from .transform import (
     clean_esr_all_file,
     clean_esr_country_file,
@@ -16,6 +17,16 @@ DEDUPE_KEYS = {
     "psd": ["commodity", "country", "attribute", "marketing_year"],
     "inspections": ["commodity", "country", "week_ending_date"],
 }
+
+# The commodity slugs raw filenames are written with today
+COMMODITY_SLUGS = {name.replace(" ", "-") for name in COMMODITIES}
+
+# Drops raw files left over from an older naming scheme
+def current_naming_only(files: list[Path], data_type: str) -> list[Path]:
+    return [
+        file for file in files
+        if file.name.split(f"_{data_type}_")[0] in COMMODITY_SLUGS
+    ]
 
 # Orders raw files oldest-fetched first so the newest copy of a row is the one kept
 def by_fetch_time(files: list[Path]) -> list[Path]:
@@ -39,14 +50,14 @@ def clean_all_esr() -> None:
     print("Starting ESR Data Cleaning Process...")
     fas_dir = BASE_DIR / "data" / "raw" / "fas"
 
-    world_files = by_fetch_time(list(fas_dir.glob("*_esr_all_*.json")))
+    world_files = by_fetch_time(current_naming_only(list(fas_dir.glob("*_esr_all_*.json")), "esr"))
     
     if not world_files:
         raise FileNotFoundError("No ESR World Files Found In data/raw/fas")
     
     print(f"Processing {len(world_files)} ESR World Files...")
 
-    country_files = by_fetch_time(list(fas_dir.glob("*_esr_to_*.json")))
+    country_files = by_fetch_time(current_naming_only(list(fas_dir.glob("*_esr_to_*.json")), "esr"))
     print(f"Processing {len(country_files)} ESR Country Files...")
 
     if not country_files:
@@ -86,16 +97,16 @@ def clean_all_psd() -> None:
     print("Starting PSD Data Cleaning Process...")
 
     fas_dir = BASE_DIR / "data" / "raw" / "fas"
-    world_files = by_fetch_time(list(fas_dir.glob("*_psd_world_*.json")))
+    world_files = by_fetch_time(current_naming_only(list(fas_dir.glob("*_psd_world_*.json")), "psd"))
 
     if not world_files:
         raise FileNotFoundError("No PSD World Files Found in data/raw/fas")
 
     print(f"Processing {len(world_files)} PSD World Files...")
 
-    country_files = by_fetch_time(
-        [file for file in fas_dir.glob("*_psd_*_*.json") if "world" not in file.name]
-    )
+    country_files = by_fetch_time(current_naming_only(
+        [file for file in fas_dir.glob("*_psd_*_*.json") if "world" not in file.name], "psd"
+    ))
 
     if not country_files:
         raise FileNotFoundError("No PSD Country Files found in data/raw/fas")

@@ -5,12 +5,11 @@ from pathlib import Path
 from .agdata_api_client import AgDataClient
 from .marketing_year import format_marketing_year_labels, marketing_year_status
 
+CHART_DIR = Path(__file__).parent.parent / "api" / "charts"
+
 # How many years (marketing or calendar) each chart shows, newest included
 YEARS_SHOWN = 5
 
-# A PSD marketing year is a new-crop projection months before it starts and an estimate
-# while it runs, so bars for years that have not ended yet say so rather than reading as
-# settled figures. Hatching carries the same signal for anyone skimming the shapes.
 MARKETING_YEAR_SUFFIXES = {"projection": " (proj.)", "estimate": " (est.)", "final": ""}
 NOT_FINAL_PATTERN = "/"
 
@@ -29,23 +28,25 @@ def generate_weekly_esr_or_inspections_chart(
         value_column: str,
         year_type: str,
         home: bool
-) -> None:
+) -> bool:
     database_data = AgDataClient()
     df_data = database_data.get(data_type, commodity, country)
 
     # If data is empty or doesn't exist
     if not df_data:
-        return
-    
+        print(f"No {data_type} data for {commodity}/{country} - chart not written")
+        return False
+
     df = pd.DataFrame(df_data)
 
     if value_column not in df.columns:
         print(f"Missing column: {value_column} for {data_type}, {commodity}, {country}")
         print("Columns returned:", df.columns.tolist())
-        return
+        return False
 
     if (df[value_column] == 0).all():
-        return
+        print(f"Every {value_column} is 0 for {commodity}/{country} - chart not written")
+        return False
 
     if year_type == "calendar":
         x_axis = "calendar_week"
@@ -68,11 +69,13 @@ def generate_weekly_esr_or_inspections_chart(
     df = trim_to_recent_years(df, color_axis)
 
     if df.empty:
-        return
+        print(f"No rows left after trimming {commodity}/{country} - chart not written")
+        return False
 
     unit = df["unit"].iloc[0]
-    latest_date = df["date_collected"].iloc[0]
-    latest_date = pd.to_datetime(latest_date).strftime("%m/%d/%Y")
+    # The newest collection date in the window. Reading row 0 instead made the "as of" date
+    # depend on the order the database happened to return rows in
+    latest_date = pd.to_datetime(df["date_collected"]).max().strftime("%m/%d/%Y")
 
     commodity_display = commodity.replace("-", " ").title()
     commodity_display = commodity_display.replace("Srw", "SRW").replace("Hrw", "HRW")
@@ -185,7 +188,7 @@ def generate_weekly_esr_or_inspections_chart(
         f"Week ending: %{{customdata[0]|%b-%d-%Y}}<extra></extra>"
     )
 
-    json_dir = Path("api/charts").resolve()
+    json_dir = CHART_DIR
     json_dir.mkdir(parents=True, exist_ok=True)
 
     if home:
@@ -200,6 +203,7 @@ def generate_weekly_esr_or_inspections_chart(
         )
 
     pio.write_json(figure, str(json_path))
+    return True
 
 # Generates a weekly ESR or inspections chart for a given data set
 def generate_weekly_psd_chart(
@@ -207,13 +211,14 @@ def generate_weekly_psd_chart(
         commodity: str,
         country: str,
         attribute: str,
-) -> None:
+) -> bool:
     database_data = AgDataClient()
     df_data = database_data.get(data_type, commodity, country)
 
     # If data is empty or doesn't exist
     if not df_data:
-        return
+        print(f"No {data_type} data for {commodity}/{country} - chart not written")
+        return False
 
     df = pd.DataFrame(df_data)
 
@@ -227,13 +232,15 @@ def generate_weekly_psd_chart(
 
     # Attribute doesn't exist
     if df.empty:
-        return
+        print(f"No {attribute} rows for {commodity}/{country} - chart not written")
+        return False
 
     df = df.drop(columns=["attribute_norm"])
 
     # Attribute exists but all amounts are 0
     if (df["amount"] == 0).all():
-        return
+        print(f"Every {attribute} amount is 0 for {commodity}/{country} - chart not written")
+        return False
 
     # Derived from the data so a new marketing year never falls outside the labels
     df["marketing_year"] = format_marketing_year_labels(df["marketing_year"])
@@ -243,7 +250,8 @@ def generate_weekly_psd_chart(
     df = trim_to_recent_years(df, "marketing_year")
 
     if df.empty:
-        return
+        print(f"No rows left after trimming {commodity}/{country} - chart not written")
+        return False
 
     # Suffixes are added after trimming so the sort and the trim both see plain labels
     statuses = {
@@ -261,7 +269,7 @@ def generate_weekly_psd_chart(
     }
 
     unit = df["unit"].iloc[0]
-    latest_date = pd.to_datetime(df["date_collected"].iloc[0]).strftime("%m/%d/%Y")
+    latest_date = pd.to_datetime(df["date_collected"]).max().strftime("%m/%d/%Y")
 
     figure = px.bar(
         df,
@@ -327,7 +335,7 @@ def generate_weekly_psd_chart(
         f"{"Marketing Year"}: %{{x}}<extra></extra>"
     )
 
-    json_dir = Path("api/charts").resolve()
+    json_dir = CHART_DIR
     json_dir.mkdir(parents=True, exist_ok=True)
     commodity_slug = commodity.lower()
     country_slug = country.lower()
@@ -338,6 +346,7 @@ def generate_weekly_psd_chart(
     )
 
     pio.write_json(figure, str(json_path))
+    return True
 
 # Generates every single chart possible for all commodities and marketing/calendar years if applicable - for debugging
 """

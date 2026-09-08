@@ -11,7 +11,8 @@ POSTGRES_URL = os.getenv("POSTGRES_URL")
 
 
 def get_engine() -> Engine:
-    return create_engine(POSTGRES_URL)
+    # Neon closes idle connections, so check one is still alive before handing it out
+    return create_engine(POSTGRES_URL, pool_pre_ping=True, pool_recycle=300)
 
 
 CREATE_ESR_TABLE = """
@@ -96,7 +97,17 @@ UNIQUE_KEYS = {
     "psd": ["commodity", "country", "attribute", "marketing_year"],
 }
 
+# ON CONFLICT needs a unique index to target. These also stop a re-run from stacking a
+# second copy of a week on top of the one already stored, which is how the tables ended up
+# holding several rows per observation.
+CREATE_UNIQUE_INDEXES = [
+    f"CREATE UNIQUE INDEX IF NOT EXISTS idx_{table}_unique "
+    f"ON {table}({', '.join(columns)});"
+    for table, columns in UNIQUE_KEYS.items()
+]
 
+
+# USDA revises published figures
 def load_csv(engine: Engine, path: Path) -> None:
     table_name = path.stem.replace("_clean", "")
     df = pd.read_csv(path)
@@ -107,21 +118,51 @@ def load_csv(engine: Engine, path: Path) -> None:
     if "date_collected" in df.columns:
         df["date_collected"] = pd.to_datetime(df["date_collected"])
 
-    # Keep only rows that don't already exist in the database
-    unique_cols = UNIQUE_KEYS.get(table_name, None)
-    if unique_cols:
-        existing_keys = pd.read_sql(
-            f"SELECT {', '.join(unique_cols)} FROM {table_name}", engine
-        )
-        existing_keys = existing_keys.drop_duplicates()
-        df = df.merge(existing_keys, on=unique_cols, how="left", indicator=True)
-        df = df[df["_merge"] == "left_only"].drop(columns="_merge")
+    unique_cols = UNIQUE_KEYS.get(table_name)
 
-    if not df.empty:
+    if not unique_cols:
         df.to_sql(table_name, engine, if_exists="append", index=False)
-        print(f"{table_name}.csv appended to PostgreSQL ({len(df)} new rows).")
-    else:
-        print(f"No new rows to append for {table_name}.csv")
+        print(f"{table_name}.csv appended to PostgreSQL ({len(df)} rows).")
+        return
+
+    # One statement cannot touch the same row twice, so the newest copy wins here instead
+    before = len(df)
+    df = df.drop_duplicates(subset=unique_cols, keep="last")
+    if before != len(df):
+        print(f"Dropped {before - len(df)} Duplicate {table_name.upper()} Rows Before Loading")
+
+    if df.empty:
+        print(f"No rows to load for {table_name}.csv")
+        return
+
+    columns = list(df.columns)
+    updatable = [column for column in columns if column not in unique_cols]
+    stage_name = f"{table_name}_stage"
+
+    quoted = ", ".join(f'"{column}"' for column in columns)
+    conflict = ", ".join(f'"{column}"' for column in unique_cols)
+    assignments = ", ".join(f'"{column}" = EXCLUDED."{column}"' for column in updatable)
+
+    df.to_sql(stage_name, engine, if_exists="replace", index=False)
+
+    try:
+        with engine.begin() as connection:
+            result = connection.execute(text(f"""
+                INSERT INTO {table_name} ({quoted})
+                SELECT {quoted} FROM {stage_name}
+                ON CONFLICT ({conflict}) DO UPDATE SET {assignments}
+                RETURNING (xmax = 0) AS inserted;
+            """))
+            flags = [row[0] for row in result]
+    finally:
+        with engine.begin() as connection:
+            connection.execute(text(f"DROP TABLE IF EXISTS {stage_name}"))
+
+    inserted = sum(flags)
+    print(
+        f"{table_name}.csv loaded into PostgreSQL "
+        f"({inserted} inserted, {len(flags) - inserted} updated)."
+    )
 
 
 def init_database() -> None:
@@ -135,18 +176,21 @@ def init_database() -> None:
         connection.execute(text(CREATE_PSD_TABLE))
         connection.execute(text(CREATE_INSPECTIONS_TABLE))
 
-    # Load CSVs
-    csv_path = BASE_DIR / "data" / "clean"
-    for file in csv_path.glob("*"):
-        load_csv(engine, file)
-
-    # Create indexes
+    # Create indexes. The unique ones come first because load_csv upserts against them,
+    # and a table still holding duplicate rows has to fail here rather than quietly load
     with engine.begin() as connection:
+        for statement in CREATE_UNIQUE_INDEXES:
+            connection.execute(text(statement))
         for statement in CREATE_ESR_INDEXES:
             connection.execute(text(statement))
         for statement in CREATE_PSD_INDEXES:
             connection.execute(text(statement))
         for statement in CREATE_INSPECTIONS_INDEXES:
             connection.execute(text(statement))
+
+    # Load CSVs
+    csv_path = BASE_DIR / "data" / "clean"
+    for file in csv_path.glob("*"):
+        load_csv(engine, file)
 
     print("Done.\n==========")

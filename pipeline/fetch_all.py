@@ -1,23 +1,22 @@
 import json
 import requests
 from .config import COMMODITIES, ESR_COUNTRY_NAMES, PSD_COUNTRY_NAMES
-from .usda_client import USDAClient, REQUEST_TIMEOUT
+from .usda_client import USDAClient, USDAFetchError, REQUEST_TIMEOUT
 from pathlib import Path
 from .utils import fas_data_path, inspections_data_path
 from .marketing_year import (
     current_marketing_year,
+    marketing_year_end_date,
     marketing_year_start_date,
     marketing_year_status,
 )
 from datetime import date, datetime, timedelta
-import time
 
 FAS_DIR = Path(__file__).parent.parent / "data" / "raw" / "fas"
 INSPECTIONS_DIR = Path(__file__).parent.parent / "data" / "raw" / "inspections"
 
-# FAS publishes ESR weekly with a roughly one week lag, so the first report of a
-# new marketing year does not land until a couple of weeks into it
 ESR_NEW_YEAR_GRACE_DAYS = 21
+ESR_SETTLED_GRACE_DAYS = 30
 
 def _esr_year_too_new(commodity: str, marketing_year: int) -> bool:
     if marketing_year_status(marketing_year, commodity) == "projection":
@@ -25,7 +24,26 @@ def _esr_year_too_new(commodity: str, marketing_year: int) -> bool:
 
     start_date = marketing_year_start_date(marketing_year, commodity)
     return date.today() < start_date + timedelta(days=ESR_NEW_YEAR_GRACE_DAYS)
-    
+
+# A marketing year that closed a while ago and was fetched after it closed has nothing left
+# to give, so its ~19 requests are spent re-downloading files already on disk
+def _esr_year_settled(commodity: str, dash_commodity_name: str, marketing_year: int) -> bool:
+    if marketing_year_status(marketing_year, commodity) != "final":
+        return False
+
+    settled_on = (
+        marketing_year_end_date(marketing_year, commodity)
+        + timedelta(days=ESR_SETTLED_GRACE_DAYS)
+    )
+    if date.today() < settled_on:
+        return False
+
+    all_countries_file = fas_data_path(f"{dash_commodity_name}_esr_all_{marketing_year}my.json")
+    if not all_countries_file.exists():
+        return False
+
+    return date.fromtimestamp(all_countries_file.stat().st_mtime) >= settled_on
+
 # Fetches both esr all and country data for each commodity
 def fetch_esr_data(usda_api_key: str, marketing_year: int | None = None, years_back: int = 2) -> None:
     usda_data = USDAClient(usda_api_key)
@@ -48,6 +66,10 @@ def fetch_esr_data(usda_api_key: str, marketing_year: int | None = None, years_b
             unreported_years = set()
 
         for esr_year in esr_years:
+            if _esr_year_settled(name, dash_commodity_name, esr_year):
+                print(f"{name.title()} {esr_year} Marketing Year Already Settled - Skipping")
+                continue
+
             _fetch_esr_marketing_year(
                 usda_data,
                 name,
@@ -72,13 +94,25 @@ def _fetch_esr_marketing_year(
 ) -> None:
     print(f"Fetching: {name.title()} For Marketing Year {marketing_year}")
 
-    # For to all countries
-    esr_all_data = usda_data.esr_all_countries(esr_code, marketing_year)
-    time.sleep(1)
+    # For to all countries. A failed endpoint is reported and stepped over rather than
+    # raised, so one flaky request cannot cost the run every later commodity and the load
+    try:
+        esr_all_data = usda_data.esr_all_countries(esr_code, marketing_year)
+        all_countries_failed = False
+    except USDAFetchError as error:
+        print(
+            f"----------\nWARNING: ESR All Fetch Failed For {name.title()} "
+            f"For {marketing_year} Marketing Year: {error}\n----------"
+        )
+        esr_all_data = None
+        all_countries_failed = True
 
-    if esr_all_data:   
+    if esr_all_data:
         with open(fas_data_path(f"{dash_commodity_name}_esr_all_{marketing_year}my.json"), "w") as file:
             json.dump(esr_all_data, file, indent=2)
+    elif all_countries_failed:
+        # The fetch broke rather than came back empty, so the countries are still worth trying
+        pass
     elif warn_if_missing:
         print(
             f"----------\nWARNING: No ESR All Data For {name.title()} " 
@@ -91,10 +125,17 @@ def _fetch_esr_marketing_year(
 
     # For to individual countries
     for country_code in esr_countries:
-        country_data = usda_data.esr_country(esr_code, country_code, marketing_year)
-        time.sleep(1)
         country_name = ESR_COUNTRY_NAMES.get(country_code, country_code)
         dash_country_name = country_name.replace(' ', '-')
+
+        try:
+            country_data = usda_data.esr_country(esr_code, country_code, marketing_year)
+        except USDAFetchError as error:
+            print(
+                f"----------\nWARNING: ESR Country Fetch Failed For {name.title()} "
+                f"To {country_name.title()} For {marketing_year} Marketing Year: {error}\n----------"
+            )
+            continue
 
         if country_data:
             with open(fas_data_path(f"{dash_commodity_name}_esr_to_{dash_country_name}_{marketing_year}my.json"), "w") as file:
@@ -162,12 +203,23 @@ def _fetch_psd_marketing_year(
     print(f"Fetching: {name.title()} For Marketing Year {marketing_year}")
 
     # For world data
-    psd_world_data = usda_data.psd_world(psd_code, marketing_year)
-    time.sleep(1)
+    try:
+        psd_world_data = usda_data.psd_world(psd_code, marketing_year)
+        world_failed = False
+    except USDAFetchError as error:
+        print(
+            f"----------\nWARNING: PSD World Fetch Failed For {name.title()} "
+            f"For {marketing_year} Marketing Year: {error}\n----------"
+        )
+        psd_world_data = None
+        world_failed = True
 
-    if psd_world_data:   
+    if psd_world_data:
         with open(fas_data_path(f"{dash_commodity_name}_psd_world_{marketing_year}my.json"), "w") as file:
             json.dump(psd_world_data, file, indent=2)
+    elif world_failed:
+        # The fetch broke rather than came back empty, so the countries are still worth trying
+        pass
     elif warn_if_missing:
         print(
             f"----------\nWARNING: No PSD World Data For {name.title()} " 
@@ -180,10 +232,17 @@ def _fetch_psd_marketing_year(
 
     # For to individual countries
     for country_code in psd_countries:
-        country_data = usda_data.psd_country(psd_code, country_code, marketing_year)
-        time.sleep(1)
         country_name = PSD_COUNTRY_NAMES.get(country_code, country_code)
         dash_country_name = country_name.replace(' ', '-')
+
+        try:
+            country_data = usda_data.psd_country(psd_code, country_code, marketing_year)
+        except USDAFetchError as error:
+            print(
+                f"----------\nWARNING: PSD Country Fetch Failed For {name.title()} "
+                f"To {country_name.title()} For {marketing_year} Marketing Year: {error}\n----------"
+            )
+            continue
 
         if country_data:
             with open(fas_data_path(f"{dash_commodity_name}_psd_to_{dash_country_name}_{marketing_year}my.json"), "w") as file:

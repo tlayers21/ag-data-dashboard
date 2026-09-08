@@ -132,7 +132,6 @@ def clean_esr_all_file(path: Path) -> pd.DataFrame:
         aggregated_data["week_ending_date"], aggregated_data["first_week_ending"]
     )
 
-    #TODO: Fix marketing year week logic to not lose edge case data (see comment in marketing_year.py) so this line can be removed
     aggregated_data = aggregated_data[aggregated_data["marketing_year_week"].notna()]
 
     aggregated_data = aggregated_data.drop(columns=["marketing_year_start_date", "first_week_ending"])
