@@ -10,7 +10,7 @@ USDA_API_KEY = os.getenv("USDA_API_KEY")
 
 # TODO: Figure out how to run pipeline without having to upload all data files onto GitHub
 
-@task
+@task(retries=2, retry_delay_seconds=300)
 def run_pipeline():
     print("--------------------")
     fetch_esr_data(usda_api_key=USDA_API_KEY)
