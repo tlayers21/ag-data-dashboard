@@ -7,11 +7,14 @@ source = GitRepository(
 )
 
 schedules = [
-    CronSchedule(cron="15 11 * * MON", timezone="America/New_York"),  
-    CronSchedule(cron="00 12 * * MON", timezone="America/New_York"), 
-    CronSchedule(cron="00 09 * * THU", timezone="America/New_York"),  
-    CronSchedule(cron="00 12 * * THU", timezone="America/New_York"), 
-    CronSchedule(cron="00 12 * * TUE,WED,FRI,SAT,SUN", timezone="America/New_York") 
+    # Export Inspections - USDA AMS publishes Monday late morning
+    CronSchedule(cron="15 11 * * MON", timezone="America/New_York"),
+    CronSchedule(cron="00 12 * * MON", timezone="America/New_York"),
+    # ESR - USDA FAS publishes Thursday morning
+    CronSchedule(cron="00 09 * * THU", timezone="America/New_York"),
+    CronSchedule(cron="00 12 * * THU", timezone="America/New_York"),
+    # PSD - revised monthly with WASDE, around the 12th
+    CronSchedule(cron="00 13 12 * *", timezone="America/New_York"),
 ]
 
 flow.from_source(
