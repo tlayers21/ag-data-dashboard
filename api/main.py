@@ -9,6 +9,7 @@ from sqlalchemy import create_engine, text
 import pandas as pd
 from datetime import datetime
 from pipeline.chart_generator import (
+    CHART_DIR,
     YEARS_SHOWN,
     generate_weekly_esr_or_inspections_chart,
     generate_weekly_psd_chart,
@@ -19,7 +20,6 @@ from pipeline.commentary_generator import generate_home_page_commentary
 load_dotenv()
 POSTGRES_URL = os.getenv("POSTGRES_URL")
 
-CHART_DIR = Path(__file__).parent / "charts"
 CHART_DIR.mkdir(parents=True, exist_ok=True)
 COMMENTARY_DIR = Path(__file__).parent / "commentary"
 CHART_TTL_SECONDS = int(os.getenv("CHART_TTL_SECONDS", "3600"))
@@ -35,7 +35,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-engine = create_engine(POSTGRES_URL)
+engine = create_engine(POSTGRES_URL, pool_pre_ping=True, pool_recycle=300)
 
 @app.get("/health")
 def health():
@@ -142,7 +142,7 @@ def fetch_last_5_years(data: str, commodity: str, country: str):
         WHERE {data_column} >= :cutoff
         AND commodity = :commodity
         AND country = :country
-        ORDER BY {data_column} DESC;
+        ORDER BY {data_column} DESC, date_collected DESC;
     """)
 
     params = {
@@ -201,14 +201,14 @@ def get_chart(commodity: str, source: str, country: str, datatype: str, year: st
 
     if not is_fresh(file_path):
         if source == "psd":
-            generate_weekly_psd_chart(
+            written = generate_weekly_psd_chart(
                 source,
                 commodity,
                 country,
                 datatype
             )
         else:
-            generate_weekly_esr_or_inspections_chart(
+            written = generate_weekly_esr_or_inspections_chart(
                 source,
                 commodity,
                 country,
@@ -216,6 +216,9 @@ def get_chart(commodity: str, source: str, country: str, datatype: str, year: st
                 year_type,
                 home=False
             )
+
+        if not written and file_path.exists():
+            print(f"WARNING: Serving stale chart, regeneration produced nothing: {filename}")
 
     if not file_path.exists():
         return {"error": f"Chart not found: {filename}"}
@@ -225,6 +228,11 @@ def get_chart(commodity: str, source: str, country: str, datatype: str, year: st
 # Fetches JSON file to build Plotly chart for specific home page
 @app.get("/api/home/{commodity}/{source}/{country}/{datatype}/{year}")
 def get_home_chart(commodity: str, source: str, country: str, datatype: str, year: str):
+    source = source.lower()
+    commodity = commodity.lower()
+    country = country.lower()
+    datatype = datatype.lower()
+    year = year.lower()
     year_type = "marketing" if year == "my" else "calendar"
 
     if source not in TABLE_DATE_COLUMNS:
@@ -237,7 +245,7 @@ def get_home_chart(commodity: str, source: str, country: str, datatype: str, yea
     file_path = CHART_DIR / filename
 
     if not is_fresh(file_path):
-        generate_weekly_esr_or_inspections_chart(
+        written = generate_weekly_esr_or_inspections_chart(
             source,
             commodity,
             country,
@@ -245,6 +253,9 @@ def get_home_chart(commodity: str, source: str, country: str, datatype: str, yea
             year_type,
             home=True
         )
+
+        if not written and file_path.exists():
+            print(f"WARNING: Serving stale chart, regeneration produced nothing: {filename}")
 
     if not file_path.exists():
         return {"error": f"Chart not found: {filename}"}
