@@ -92,7 +92,9 @@ CREATE_INSPECTIONS_INDEXES = [
 ]
 
 UNIQUE_KEYS = {
-    "esr": ["commodity", "country", "week_ending_date"],       
+    # marketing_year is part of the key because USDA reports the changeover week under
+    # both the marketing year it closes and the one it opens
+    "esr": ["commodity", "country", "marketing_year", "week_ending_date"],
     "inspections": ["commodity", "country", "week_ending_date"], 
     "psd": ["commodity", "country", "attribute", "marketing_year"],
 }
@@ -164,6 +166,32 @@ def load_csv(engine: Engine, path: Path) -> None:
         f"({inserted} inserted, {len(flags) - inserted} updated)."
     )
 
+def drop_outdated_unique_indexes(connection) -> None:
+    for table, columns in UNIQUE_KEYS.items():
+        index_name = f"idx_{table}_unique"
+
+        definition = connection.execute(
+            text("""
+                SELECT indexdef FROM pg_indexes
+                WHERE schemaname = current_schema() AND indexname = :index_name
+            """),
+            {"index_name": index_name},
+        ).scalar()
+
+        if definition is None:
+            continue
+
+        indexed = [
+            column.strip().strip('"')
+            for column in definition[definition.rindex("(") + 1:definition.rindex(")")].split(",")
+        ]
+
+        if indexed == columns:
+            continue
+
+        print(f"Rebuilding {index_name}: {indexed} -> {columns}")
+        connection.execute(text(f"DROP INDEX IF EXISTS {index_name}"))
+
 
 def init_database() -> None:
     print("Initializing PostgreSQL Database...")
@@ -179,6 +207,7 @@ def init_database() -> None:
     # Create indexes. The unique ones come first because load_csv upserts against them,
     # and a table still holding duplicate rows has to fail here rather than quietly load
     with engine.begin() as connection:
+        drop_outdated_unique_indexes(connection)
         for statement in CREATE_UNIQUE_INDEXES:
             connection.execute(text(statement))
         for statement in CREATE_ESR_INDEXES:

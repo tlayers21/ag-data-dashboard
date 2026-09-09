@@ -13,7 +13,7 @@ from .transform import (
 CLEAN_DIR = Path(__file__).parent.parent / "data" / "clean"
 
 DEDUPE_KEYS = {
-    "esr": ["commodity", "country", "week_ending_date"],
+    "esr": ["commodity", "country", "marketing_year", "week_ending_date"],
     "psd": ["commodity", "country", "attribute", "marketing_year"],
     "inspections": ["commodity", "country", "week_ending_date"],
 }

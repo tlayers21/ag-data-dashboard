@@ -33,6 +33,11 @@ def marketing_year_start_date(marketing_year: int, commodity: str) -> date:
 def marketing_year_end_date(marketing_year: int, commodity: str) -> date:
     return marketing_year_start_date(marketing_year + 1, commodity) - timedelta(days=1)
 
+# First ESR week ending date of a marketing year, given its end-year label
+def marketing_year_first_week_ending(marketing_year: int, commodity: str, weekday: int) -> pd.Timestamp:
+    start_date = marketing_year_start_date(marketing_year, commodity)
+    return first_weekday_on_or_after(pd.Timestamp(start_date), weekday)
+
 # Where a marketing year sits relative to today
 def marketing_year_status(marketing_year: int, commodity: str, today: date | None = None) -> str:
     if today is None:

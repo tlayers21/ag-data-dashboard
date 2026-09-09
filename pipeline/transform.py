@@ -4,6 +4,7 @@ from pathlib import Path
 import re
 from datetime import datetime
 from .config import COMMODITIES
+from .utils import marketing_year_from_filename
 
 # Mainly used to figure out calendar and marketing year week logic for graphing
 from .marketing_year import (
@@ -13,7 +14,8 @@ from .marketing_year import (
     compute_first_week_ending,
     compute_marketing_year_week_esr,
     compute_marketing_year_week_inspections,
-    compute_marketing_year_month
+    compute_marketing_year_month,
+    marketing_year_first_week_ending
 )
 
 ESR_RENAME_MAP = {
@@ -86,7 +88,10 @@ PSD_COMMODITY_LOOKUP = {
 }
 
 # Cleans an ESR all file, aggregates data in order to produce ESR world data
-def clean_esr_all_file(path: Path) -> pd.DataFrame:
+def clean_esr_all_file(path: Path, marketing_year: int | None = None) -> pd.DataFrame:
+    if marketing_year is None:
+        marketing_year = marketing_year_from_filename(path)
+
     with open(path, "r") as file:
         raw_data = json.load(file)
     
@@ -118,23 +123,20 @@ def clean_esr_all_file(path: Path) -> pd.DataFrame:
     aggregated_data["calendar_month"] = aggregated_data["week_ending_date"].dt.month
     aggregated_data["calendar_week"] = aggregated_data["week_ending_date"].dt.isocalendar().week
 
-    # Determine marketing year, month, and week
-    aggregated_data["marketing_year"] = compute_marketing_year(aggregated_data["week_ending_date"], start_month)
-    aggregated_data["marketing_year_start_date"] = compute_marketing_year_start_date(aggregated_data["week_ending_date"], start_month)
-
-    # ESR weeks end on Thursdays
-    aggregated_data["first_week_ending"] = compute_first_week_ending(aggregated_data["marketing_year_start_date"], weekday=3)
+    # Determine marketing year, month, and week. ESR weeks end on Thursdays, so week 1 is
+    # the first Thursday on or after the marketing year starts
+    aggregated_data["marketing_year"] = marketing_year
+    first_week_ending = marketing_year_first_week_ending(marketing_year, commodity_name, weekday=3)
 
     aggregated_data["marketing_year_month"] = compute_marketing_year_month(
         aggregated_data["week_ending_date"], start_month
     )
     aggregated_data["marketing_year_week"] = compute_marketing_year_week_esr(
-        aggregated_data["week_ending_date"], aggregated_data["first_week_ending"]
+        aggregated_data["week_ending_date"],
+        pd.Series(first_week_ending, index=aggregated_data.index)
     )
 
     aggregated_data = aggregated_data[aggregated_data["marketing_year_week"].notna()]
-
-    aggregated_data = aggregated_data.drop(columns=["marketing_year_start_date", "first_week_ending"])
     aggregated_data["date_collected"] = datetime.now().strftime("%m-%d-%Y")
     aggregated_data["commodity"] = aggregated_data["commodity"].str.replace(" ", "-")
 
@@ -163,8 +165,8 @@ def clean_esr_all_file(path: Path) -> pd.DataFrame:
     return aggregated_data[column_order]
 
 # Cleans an ESR country file by using same logic in ESR all file (aggregates data for marketing year)
-def clean_esr_country_file(path: Path, country_name: str) -> pd.DataFrame:
-    df = clean_esr_all_file(path)
+def clean_esr_country_file(path: Path, country_name: str, marketing_year: int | None = None) -> pd.DataFrame:
+    df = clean_esr_all_file(path, marketing_year)
     df["country"] = country_name
 
     column_order = [
