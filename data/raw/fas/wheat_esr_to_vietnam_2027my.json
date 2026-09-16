@@ -170,15 +170,29 @@
   {
     "commodityCode": 107,
     "countryCode": 5520,
-    "weeklyExports": 30387,
-    "accumulatedExports": 79243,
+    "weeklyExports": 28339,
+    "accumulatedExports": 77195,
     "outstandingSales": 127500,
     "grossNewSales": 2233,
-    "currentMYNetSales": 29887,
-    "currentMYTotalCommitment": 206743,
+    "currentMYNetSales": 27839,
+    "currentMYTotalCommitment": 204695,
     "nextMYOutstandingSales": 0,
     "nextMYNetSales": 0,
     "unitId": 1,
     "weekEndingDate": "2026-08-27T00:00:00"
+  },
+  {
+    "commodityCode": 107,
+    "countryCode": 5520,
+    "weeklyExports": 65886,
+    "accumulatedExports": 143081,
+    "outstandingSales": 67000,
+    "grossNewSales": 5386,
+    "currentMYNetSales": 5386,
+    "currentMYTotalCommitment": 210081,
+    "nextMYOutstandingSales": 0,
+    "nextMYNetSales": 0,
+    "unitId": 1,
+    "weekEndingDate": "2026-09-03T00:00:00"
   }
 ]

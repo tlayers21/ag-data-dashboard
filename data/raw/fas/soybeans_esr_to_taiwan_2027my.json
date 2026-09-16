@@ -1,0 +1,16 @@
+[
+  {
+    "commodityCode": 801,
+    "countryCode": 5830,
+    "weeklyExports": 635,
+    "accumulatedExports": 635,
+    "outstandingSales": 252650,
+    "grossNewSales": 122694,
+    "currentMYNetSales": 122694,
+    "currentMYTotalCommitment": 253285,
+    "nextMYOutstandingSales": 0,
+    "nextMYNetSales": 0,
+    "unitId": 1,
+    "weekEndingDate": "2026-09-03T00:00:00"
+  }
+]

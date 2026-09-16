@@ -3,8 +3,8 @@
     "commodityCode": "0410000",
     "countryCode": "PK",
     "marketYear": "2024",
-    "calendarYear": "2025",
-    "month": "08",
+    "calendarYear": "2026",
+    "month": "07",
     "attributeId": 4,
     "unitId": 4,
     "value": 9734.0
@@ -13,8 +13,8 @@
     "commodityCode": "0410000",
     "countryCode": "PK",
     "marketYear": "2024",
-    "calendarYear": "2025",
-    "month": "08",
+    "calendarYear": "2026",
+    "month": "07",
     "attributeId": 20,
     "unitId": 8,
     "value": 4970.0
@@ -23,18 +23,18 @@
     "commodityCode": "0410000",
     "countryCode": "PK",
     "marketYear": "2024",
-    "calendarYear": "2025",
-    "month": "08",
+    "calendarYear": "2026",
+    "month": "07",
     "attributeId": 28,
     "unitId": 8,
-    "value": 31438.0
+    "value": 31814.0
   },
   {
     "commodityCode": "0410000",
     "countryCode": "PK",
     "marketYear": "2024",
-    "calendarYear": "2025",
-    "month": "08",
+    "calendarYear": "2026",
+    "month": "07",
     "attributeId": 57,
     "unitId": 8,
     "value": 3.0
@@ -43,8 +43,8 @@
     "commodityCode": "0410000",
     "countryCode": "PK",
     "marketYear": "2024",
-    "calendarYear": "2025",
-    "month": "08",
+    "calendarYear": "2026",
+    "month": "07",
     "attributeId": 81,
     "unitId": 8,
     "value": 3.0
@@ -53,8 +53,8 @@
     "commodityCode": "0410000",
     "countryCode": "PK",
     "marketYear": "2024",
-    "calendarYear": "2025",
-    "month": "08",
+    "calendarYear": "2026",
+    "month": "07",
     "attributeId": 84,
     "unitId": 8,
     "value": 0.0
@@ -63,18 +63,18 @@
     "commodityCode": "0410000",
     "countryCode": "PK",
     "marketYear": "2024",
-    "calendarYear": "2025",
-    "month": "08",
+    "calendarYear": "2026",
+    "month": "07",
     "attributeId": 86,
     "unitId": 8,
-    "value": 36411.0
+    "value": 36787.0
   },
   {
     "commodityCode": "0410000",
     "countryCode": "PK",
     "marketYear": "2024",
-    "calendarYear": "2025",
-    "month": "08",
+    "calendarYear": "2026",
+    "month": "07",
     "attributeId": 88,
     "unitId": 8,
     "value": 500.0
@@ -83,8 +83,8 @@
     "commodityCode": "0410000",
     "countryCode": "PK",
     "marketYear": "2024",
-    "calendarYear": "2025",
-    "month": "08",
+    "calendarYear": "2026",
+    "month": "07",
     "attributeId": 113,
     "unitId": 8,
     "value": 500.0
@@ -93,8 +93,8 @@
     "commodityCode": "0410000",
     "countryCode": "PK",
     "marketYear": "2024",
-    "calendarYear": "2025",
-    "month": "08",
+    "calendarYear": "2026",
+    "month": "07",
     "attributeId": 130,
     "unitId": 8,
     "value": 2200.0
@@ -103,50 +103,50 @@
     "commodityCode": "0410000",
     "countryCode": "PK",
     "marketYear": "2024",
-    "calendarYear": "2025",
-    "month": "08",
+    "calendarYear": "2026",
+    "month": "07",
     "attributeId": 192,
     "unitId": 8,
-    "value": 29000.0
+    "value": 28800.0
   },
   {
     "commodityCode": "0410000",
     "countryCode": "PK",
     "marketYear": "2024",
-    "calendarYear": "2025",
-    "month": "08",
+    "calendarYear": "2026",
+    "month": "07",
     "attributeId": 125,
     "unitId": 8,
-    "value": 31200.0
+    "value": 31000.0
   },
   {
     "commodityCode": "0410000",
     "countryCode": "PK",
     "marketYear": "2024",
-    "calendarYear": "2025",
-    "month": "08",
+    "calendarYear": "2026",
+    "month": "07",
     "attributeId": 176,
     "unitId": 8,
-    "value": 4711.0
+    "value": 5287.0
   },
   {
     "commodityCode": "0410000",
     "countryCode": "PK",
     "marketYear": "2024",
-    "calendarYear": "2025",
-    "month": "08",
+    "calendarYear": "2026",
+    "month": "07",
     "attributeId": 178,
     "unitId": 8,
-    "value": 36411.0
+    "value": 36787.0
   },
   {
     "commodityCode": "0410000",
     "countryCode": "PK",
     "marketYear": "2024",
-    "calendarYear": "2025",
-    "month": "08",
+    "calendarYear": "2026",
+    "month": "07",
     "attributeId": 184,
     "unitId": 26,
-    "value": 3.2297
+    "value": 3.2683
   }
 ]

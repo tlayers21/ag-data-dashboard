@@ -1,0 +1,16 @@
+[
+  {
+    "commodityCode": 401,
+    "countryCode": 5880,
+    "weeklyExports": 61500,
+    "accumulatedExports": 61500,
+    "outstandingSales": 2539190,
+    "grossNewSales": 356270,
+    "currentMYNetSales": 294270,
+    "currentMYTotalCommitment": 2600690,
+    "nextMYOutstandingSales": 24000,
+    "nextMYNetSales": 0,
+    "unitId": 1,
+    "weekEndingDate": "2026-09-03T00:00:00"
+  }
+]

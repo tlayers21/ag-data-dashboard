@@ -1,0 +1,132 @@
+[
+  {
+    "commodityCode": "4232000",
+    "countryCode": "MX",
+    "marketYear": "2019",
+    "calendarYear": "2022",
+    "month": "03",
+    "attributeId": 7,
+    "unitId": 8,
+    "value": 6000.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "MX",
+    "marketYear": "2019",
+    "calendarYear": "2022",
+    "month": "03",
+    "attributeId": 181,
+    "unitId": 23,
+    "value": 0.185
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "MX",
+    "marketYear": "2019",
+    "calendarYear": "2022",
+    "month": "03",
+    "attributeId": 20,
+    "unitId": 8,
+    "value": 290.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "MX",
+    "marketYear": "2019",
+    "calendarYear": "2022",
+    "month": "03",
+    "attributeId": 28,
+    "unitId": 8,
+    "value": 1110.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "MX",
+    "marketYear": "2019",
+    "calendarYear": "2022",
+    "month": "03",
+    "attributeId": 57,
+    "unitId": 8,
+    "value": 151.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "MX",
+    "marketYear": "2019",
+    "calendarYear": "2022",
+    "month": "03",
+    "attributeId": 86,
+    "unitId": 8,
+    "value": 1551.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "MX",
+    "marketYear": "2019",
+    "calendarYear": "2022",
+    "month": "03",
+    "attributeId": 88,
+    "unitId": 8,
+    "value": 14.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "MX",
+    "marketYear": "2019",
+    "calendarYear": "2022",
+    "month": "03",
+    "attributeId": 140,
+    "unitId": 8,
+    "value": 0.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "MX",
+    "marketYear": "2019",
+    "calendarYear": "2022",
+    "month": "03",
+    "attributeId": 149,
+    "unitId": 8,
+    "value": 1285.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "MX",
+    "marketYear": "2019",
+    "calendarYear": "2022",
+    "month": "03",
+    "attributeId": 161,
+    "unitId": 8,
+    "value": 0.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "MX",
+    "marketYear": "2019",
+    "calendarYear": "2022",
+    "month": "03",
+    "attributeId": 125,
+    "unitId": 8,
+    "value": 1285.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "MX",
+    "marketYear": "2019",
+    "calendarYear": "2022",
+    "month": "03",
+    "attributeId": 176,
+    "unitId": 8,
+    "value": 252.0
+  },
+  {
+    "commodityCode": "4232000",
+    "countryCode": "MX",
+    "marketYear": "2019",
+    "calendarYear": "2022",
+    "month": "03",
+    "attributeId": 178,
+    "unitId": 8,
+    "value": 1551.0
+  }
+]

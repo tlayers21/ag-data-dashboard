@@ -1,0 +1,142 @@
+[
+  {
+    "commodityCode": "0813100",
+    "countryCode": "CO",
+    "marketYear": "2019",
+    "calendarYear": "2022",
+    "month": "11",
+    "attributeId": 7,
+    "unitId": 8,
+    "value": 530.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "CO",
+    "marketYear": "2019",
+    "calendarYear": "2022",
+    "month": "11",
+    "attributeId": 181,
+    "unitId": 23,
+    "value": 0.7849
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "CO",
+    "marketYear": "2019",
+    "calendarYear": "2022",
+    "month": "11",
+    "attributeId": 20,
+    "unitId": 8,
+    "value": 161.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "CO",
+    "marketYear": "2019",
+    "calendarYear": "2022",
+    "month": "11",
+    "attributeId": 28,
+    "unitId": 8,
+    "value": 416.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "CO",
+    "marketYear": "2019",
+    "calendarYear": "2022",
+    "month": "11",
+    "attributeId": 57,
+    "unitId": 8,
+    "value": 1509.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "CO",
+    "marketYear": "2019",
+    "calendarYear": "2022",
+    "month": "11",
+    "attributeId": 86,
+    "unitId": 8,
+    "value": 2086.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "CO",
+    "marketYear": "2019",
+    "calendarYear": "2022",
+    "month": "11",
+    "attributeId": 88,
+    "unitId": 8,
+    "value": 1.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "CO",
+    "marketYear": "2019",
+    "calendarYear": "2022",
+    "month": "11",
+    "attributeId": 140,
+    "unitId": 8,
+    "value": 0.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "CO",
+    "marketYear": "2019",
+    "calendarYear": "2022",
+    "month": "11",
+    "attributeId": 149,
+    "unitId": 8,
+    "value": 0.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "CO",
+    "marketYear": "2019",
+    "calendarYear": "2022",
+    "month": "11",
+    "attributeId": 161,
+    "unitId": 8,
+    "value": 1925.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "CO",
+    "marketYear": "2019",
+    "calendarYear": "2022",
+    "month": "11",
+    "attributeId": 125,
+    "unitId": 8,
+    "value": 1925.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "CO",
+    "marketYear": "2019",
+    "calendarYear": "2022",
+    "month": "11",
+    "attributeId": 176,
+    "unitId": 8,
+    "value": 160.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "CO",
+    "marketYear": "2019",
+    "calendarYear": "2022",
+    "month": "11",
+    "attributeId": 178,
+    "unitId": 8,
+    "value": 2086.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "CO",
+    "marketYear": "2019",
+    "calendarYear": "2022",
+    "month": "11",
+    "attributeId": 194,
+    "unitId": 8,
+    "value": 1925.0
+  }
+]

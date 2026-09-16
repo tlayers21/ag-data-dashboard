@@ -1,0 +1,142 @@
+[
+  {
+    "commodityCode": "0813100",
+    "countryCode": "CH",
+    "marketYear": "2019",
+    "calendarYear": "2024",
+    "month": "03",
+    "attributeId": 7,
+    "unitId": 8,
+    "value": 91500.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "CH",
+    "marketYear": "2019",
+    "calendarYear": "2024",
+    "month": "03",
+    "attributeId": 181,
+    "unitId": 23,
+    "value": 0.792
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "CH",
+    "marketYear": "2019",
+    "calendarYear": "2024",
+    "month": "03",
+    "attributeId": 20,
+    "unitId": 8,
+    "value": 729.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "CH",
+    "marketYear": "2019",
+    "calendarYear": "2024",
+    "month": "03",
+    "attributeId": 28,
+    "unitId": 8,
+    "value": 72468.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "CH",
+    "marketYear": "2019",
+    "calendarYear": "2024",
+    "month": "03",
+    "attributeId": 57,
+    "unitId": 8,
+    "value": 51.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "CH",
+    "marketYear": "2019",
+    "calendarYear": "2024",
+    "month": "03",
+    "attributeId": 86,
+    "unitId": 8,
+    "value": 73248.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "CH",
+    "marketYear": "2019",
+    "calendarYear": "2024",
+    "month": "03",
+    "attributeId": 88,
+    "unitId": 8,
+    "value": 1012.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "CH",
+    "marketYear": "2019",
+    "calendarYear": "2024",
+    "month": "03",
+    "attributeId": 140,
+    "unitId": 8,
+    "value": 1115.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "CH",
+    "marketYear": "2019",
+    "calendarYear": "2024",
+    "month": "03",
+    "attributeId": 149,
+    "unitId": 8,
+    "value": 0.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "CH",
+    "marketYear": "2019",
+    "calendarYear": "2024",
+    "month": "03",
+    "attributeId": 161,
+    "unitId": 8,
+    "value": 70000.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "CH",
+    "marketYear": "2019",
+    "calendarYear": "2024",
+    "month": "03",
+    "attributeId": 125,
+    "unitId": 8,
+    "value": 71115.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "CH",
+    "marketYear": "2019",
+    "calendarYear": "2024",
+    "month": "03",
+    "attributeId": 176,
+    "unitId": 8,
+    "value": 1121.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "CH",
+    "marketYear": "2019",
+    "calendarYear": "2024",
+    "month": "03",
+    "attributeId": 178,
+    "unitId": 8,
+    "value": 73248.0
+  },
+  {
+    "commodityCode": "0813100",
+    "countryCode": "CH",
+    "marketYear": "2019",
+    "calendarYear": "2024",
+    "month": "03",
+    "attributeId": 194,
+    "unitId": 8,
+    "value": 70000.0
+  }
+]
