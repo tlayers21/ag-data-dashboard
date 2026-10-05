@@ -10,8 +10,10 @@ USDA_API_KEY = os.getenv("USDA_API_KEY")
 
 # TODO: Figure out how to run pipeline without having to upload all data files onto GitHub
 
-@task(retries=2, retry_delay_seconds=300)
-def run_pipeline():
+# No task retries here - the USDA client already retries each request, and rerunning this
+# whole task re-sends ~566 requests against a 1000/hour key quota
+@task
+def fetch_data():
     print("--------------------")
     fetch_esr_data(usda_api_key=USDA_API_KEY)
     fetch_psd_data(usda_api_key=USDA_API_KEY)
@@ -19,9 +21,13 @@ def run_pipeline():
     clean_all_esr()
     clean_all_psd()
     clean_all_inspections()
+
+@task(retries=2, retry_delay_seconds=300)
+def load_database():
     init_database()
     print("--------------------")
 
 @flow(name="agdatadashboard-pipeline")
 def agdatadashboard_pipeline():
-    run_pipeline()
+    fetch_data()
+    load_database()

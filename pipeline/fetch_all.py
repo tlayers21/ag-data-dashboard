@@ -1,7 +1,7 @@
 import json
 import requests
 from .config import COMMODITIES, ESR_COUNTRY_NAMES, PSD_COUNTRY_NAMES
-from .usda_client import USDAClient, USDAFetchError, REQUEST_TIMEOUT
+from .usda_client import USDAClient, USDAFetchError, USDARateLimitError, REQUEST_TIMEOUT
 from pathlib import Path
 from .utils import fas_data_path, inspections_data_path
 from .marketing_year import (
@@ -50,35 +50,38 @@ def fetch_esr_data(usda_api_key: str, marketing_year: int | None = None, years_b
     FAS_DIR.mkdir(parents=True, exist_ok=True)
 
     print("Starting ESR Data Fetching Process...")
-    for name, cfg in COMMODITIES.items():
-        dash_commodity_name = name.replace(' ', '-')
+    try:
+        for name, cfg in COMMODITIES.items():
+            dash_commodity_name = name.replace(' ', '-')
 
-        esr_code = cfg["esr"]["commodity"]
-        esr_countries = cfg["esr"]["countries"]
+            esr_code = cfg["esr"]["commodity"]
+            esr_countries = cfg["esr"]["countries"]
 
-        if marketing_year is None:
-            esr_years = [current_marketing_year(name) - offset for offset in range(years_back)]
-            unreported_years = {
-                year for year in esr_years if _esr_year_too_new(name, year)
-            }
-        else:
-            esr_years = [marketing_year]
-            unreported_years = set()
+            if marketing_year is None:
+                esr_years = [current_marketing_year(name) - offset for offset in range(years_back)]
+                unreported_years = {
+                    year for year in esr_years if _esr_year_too_new(name, year)
+                }
+            else:
+                esr_years = [marketing_year]
+                unreported_years = set()
 
-        for esr_year in esr_years:
-            if _esr_year_settled(name, dash_commodity_name, esr_year):
-                print(f"{name.title()} {esr_year} Marketing Year Already Settled - Skipping")
-                continue
+            for esr_year in esr_years:
+                if _esr_year_settled(name, dash_commodity_name, esr_year):
+                    print(f"{name.title()} {esr_year} Marketing Year Already Settled - Skipping")
+                    continue
 
-            _fetch_esr_marketing_year(
-                usda_data,
-                name,
-                dash_commodity_name,
-                esr_code,
-                esr_countries,
-                esr_year,
-                warn_if_missing=esr_year not in unreported_years,
-            )
+                _fetch_esr_marketing_year(
+                    usda_data,
+                    name,
+                    dash_commodity_name,
+                    esr_code,
+                    esr_countries,
+                    esr_year,
+                    warn_if_missing=esr_year not in unreported_years,
+                )
+    except USDARateLimitError as error:
+        print(f"----------\nWARNING: {error}; Skipping Remaining USDA Fetches\n----------")
 
     print("Done.\n==========")
 
@@ -152,41 +155,41 @@ def fetch_psd_data(usda_api_key: str, marketing_year: int | None = None, years_b
     FAS_DIR.mkdir(parents=True, exist_ok=True)
 
     print("Starting PSD Data Fetching Process...")
-    for name, cfg in COMMODITIES.items():
-        if "psd" not in cfg:
-            print(f"Skipping {name.title()} - no PSD configuration found.")
-            continue
+    # Once the hourly quota is gone every later request would just fail too, so stop here
+    # and let the run carry on with the files already on disk
+    try:
+        for name, cfg in COMMODITIES.items():
+            if "psd" not in cfg:
+                print(f"Skipping {name.title()} - no PSD configuration found.")
+                continue
 
-        dash_commodity_name = name.replace(' ', '-')
+            dash_commodity_name = name.replace(' ', '-')
 
-        psd_code = cfg["psd"]["commodity"]
-        psd_countries = cfg["psd"]["countries"]
+            psd_code = cfg["psd"]["commodity"]
+            psd_countries = cfg["psd"]["countries"]
 
-        if marketing_year is None:
-            # current_marketing_year is an end year, so -1 converts it to PSD's start year.
-            # The extra +1 year on the front picks up the new-crop projection, which USDA
-            # starts publishing around May, months before that marketing year begins.
-            current_psd_year = current_marketing_year(name) - 1
-            psd_years = [
-                current_psd_year + 1 - offset for offset in range(years_back + 1)
-            ]
-            # Outside roughly May-August that new-crop year has not been published yet, so
-            # an empty response is the expected answer rather than something to warn about
-            unpublished_years = {current_psd_year + 1}
-        else:
-            psd_years = [marketing_year]
-            unpublished_years = set()
+            if marketing_year is None:
+                current_psd_year = current_marketing_year(name) - 1
+                psd_years = [
+                    current_psd_year + 1 - offset for offset in range(years_back + 1)
+                ]
+                unpublished_years = {current_psd_year + 1}
+            else:
+                psd_years = [marketing_year]
+                unpublished_years = set()
 
-        for psd_year in psd_years:
-            _fetch_psd_marketing_year(
-                usda_data,
-                name,
-                dash_commodity_name,
-                psd_code,
-                psd_countries,
-                psd_year,
-                warn_if_missing=psd_year not in unpublished_years,
-            )
+            for psd_year in psd_years:
+                _fetch_psd_marketing_year(
+                    usda_data,
+                    name,
+                    dash_commodity_name,
+                    psd_code,
+                    psd_countries,
+                    psd_year,
+                    warn_if_missing=psd_year not in unpublished_years,
+                )
+    except USDARateLimitError as error:
+        print(f"----------\nWARNING: {error}; Skipping Remaining USDA Fetches\n----------")
 
     print("Done.\n==========")
 

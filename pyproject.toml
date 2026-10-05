@@ -12,7 +12,7 @@ dependencies = [
     "pydantic",
     "pandas>=2.2,<3",
     "plotly>=6,<7",
-    "sqlalchemy",
+    "sqlalchemy>=2.0,<2.1",  # 2.1 makes postgresql:// default to psycopg 3, not psycopg2
     "psycopg2-binary",
     "requests",
     "python-dotenv",

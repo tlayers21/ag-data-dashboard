@@ -208,5 +208,33 @@
     "nextMYNetSales": 0,
     "unitId": 1,
     "weekEndingDate": "2026-09-10T00:00:00"
+  },
+  {
+    "commodityCode": 107,
+    "countryCode": 3010,
+    "weeklyExports": 6050,
+    "accumulatedExports": 185621,
+    "outstandingSales": 24800,
+    "grossNewSales": 4550,
+    "currentMYNetSales": 4550,
+    "currentMYTotalCommitment": 210421,
+    "nextMYOutstandingSales": 0,
+    "nextMYNetSales": 0,
+    "unitId": 1,
+    "weekEndingDate": "2026-09-17T00:00:00"
+  },
+  {
+    "commodityCode": 107,
+    "countryCode": 3010,
+    "weeklyExports": 17765,
+    "accumulatedExports": 203386,
+    "outstandingSales": 20800,
+    "grossNewSales": 0,
+    "currentMYNetSales": 13765,
+    "currentMYTotalCommitment": 224186,
+    "nextMYOutstandingSales": 0,
+    "nextMYNetSales": 0,
+    "unitId": 1,
+    "weekEndingDate": "2026-09-24T00:00:00"
   }
 ]

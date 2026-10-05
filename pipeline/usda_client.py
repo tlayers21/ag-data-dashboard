@@ -33,6 +33,19 @@ MAX_RETRY_AFTER = 120.0
 class USDAFetchError(Exception):
     """A USDA endpoint could not be fetched after repeated attempts."""
 
+# Deliberately not a USDAFetchError, so the per-endpoint handlers in fetch_all let it through
+# and the whole fetch stops instead of burning minutes of retries on every remaining endpoint
+class USDARateLimitError(Exception):
+    """The API key's hourly quota is used up, so no request will succeed until it resets."""
+
+    def __init__(self, reset_in: float | None) -> None:
+        self.reset_in = reset_in
+        if reset_in is None:
+            when = "later"
+        else:
+            when = f"in ~{max(1, round(reset_in / 60))} min"
+        super().__init__(f"USDA hourly quota exhausted - resets {when}")
+
 class USDAClient:
     def __init__(self, usda_api_key: str) -> None:
         self.usda_api_key = usda_api_key
@@ -70,7 +83,7 @@ class USDAClient:
             return None
 
         try:
-            return min(float(value), MAX_RETRY_AFTER)
+            return max(float(value), 0.0)
         except ValueError:
             pass
 
@@ -83,7 +96,7 @@ class USDAClient:
             retry_at = retry_at.replace(tzinfo=timezone.utc)
 
         delay = (retry_at - datetime.now(timezone.utc)).total_seconds()
-        return min(max(delay, 0.0), MAX_RETRY_AFTER)
+        return max(delay, 0.0)
 
     # Fetches data from USDA FAS API, retrying transient failures and throttling
     def _get(self, endpoint: str) -> List[Dict[str, Any]]:
@@ -127,9 +140,18 @@ class USDAClient:
                 reason = f"HTTP {response.status_code}"
 
                 if response.status_code in THROTTLE_STATUSES:
-                    self._register_throttle()
                     retry_after = self._parse_retry_after(response)
+
+                    # api.data.gov's hourly quota is spent - retrying cannot help until it resets
+                    if response.status_code == 429 and (
+                        response.headers.get("X-RateLimit-Remaining") == "0"
+                        or (retry_after is not None and retry_after > MAX_RETRY_AFTER)
+                    ):
+                        raise USDARateLimitError(retry_after)
+
+                    self._register_throttle()
                     if retry_after is not None:
+                        retry_after = min(retry_after, MAX_RETRY_AFTER)
                         delay = retry_after
                         reason = f"HTTP {response.status_code}, Retry-After {retry_after:.0f}s"
 
