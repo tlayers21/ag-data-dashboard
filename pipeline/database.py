@@ -71,6 +71,19 @@ CREATE TABLE IF NOT EXISTS inspections (
 );
 """
 
+# One row stamped at the end of every load, so the API knows when its cached charts went stale
+CREATE_DATA_LOADS_TABLE = """
+CREATE TABLE IF NOT EXISTS data_loads (
+    id INTEGER PRIMARY KEY,
+    loaded_at TIMESTAMPTZ NOT NULL
+);
+"""
+
+RECORD_DATA_LOAD = """
+INSERT INTO data_loads (id, loaded_at) VALUES (1, now())
+ON CONFLICT (id) DO UPDATE SET loaded_at = EXCLUDED.loaded_at;
+"""
+
 CREATE_ESR_INDEXES = [
     "CREATE INDEX IF NOT EXISTS idx_esr_calendar_week ON esr(calendar_week);",
     "CREATE INDEX IF NOT EXISTS idx_esr_marketing_year_week ON esr(marketing_year_week);",
@@ -203,6 +216,7 @@ def init_database() -> None:
         connection.execute(text(CREATE_ESR_TABLE))
         connection.execute(text(CREATE_PSD_TABLE))
         connection.execute(text(CREATE_INSPECTIONS_TABLE))
+        connection.execute(text(CREATE_DATA_LOADS_TABLE))
 
     # Create indexes. The unique ones come first because load_csv upserts against them,
     # and a table still holding duplicate rows has to fail here rather than quietly load
@@ -221,5 +235,9 @@ def init_database() -> None:
     csv_path = BASE_DIR / "data" / "clean"
     for file in csv_path.glob("*"):
         load_csv(engine, file)
+
+    # Only reached when every CSV loaded, so a failed run never invalidates the charts
+    with engine.begin() as connection:
+        connection.execute(text(RECORD_DATA_LOAD))
 
     print("Done.\n==========")

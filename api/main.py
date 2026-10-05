@@ -6,6 +6,7 @@ import os
 import time
 from pathlib import Path
 from sqlalchemy import create_engine, text
+from sqlalchemy.exc import ProgrammingError
 import pandas as pd
 from datetime import datetime
 from pipeline.chart_generator import (
@@ -24,6 +25,7 @@ CHART_DIR.mkdir(parents=True, exist_ok=True)
 COMMENTARY_DIR = Path(__file__).parent / "commentary"
 CHART_TTL_SECONDS = int(os.getenv("CHART_TTL_SECONDS", "3600"))
 CATALOG_TTL_SECONDS = int(os.getenv("CATALOG_TTL_SECONDS", "3600"))
+LOAD_CHECK_TTL_SECONDS = int(os.getenv("LOAD_CHECK_TTL_SECONDS", "60"))
 
 app = FastAPI()
 
@@ -41,9 +43,39 @@ engine = create_engine(POSTGRES_URL, pool_pre_ping=True, pool_recycle=300)
 def health():
     return {"status": "ok"}
 
-# Charts only change when the pipeline reloads the tables, so reuse a recent file
+_data_load = {}
+
+# When the pipeline last finished loading the tables, as a Unix timestamp. Checked at most
+# once per LOAD_CHECK_TTL_SECONDS so chart requests don't each pay a database round trip.
+# 0.0 until the pipeline has written its first row, which leaves only the TTL in charge.
+def get_data_loaded_at() -> float:
+    if _data_load and time.time() - _data_load["checked_at"] < LOAD_CHECK_TTL_SECONDS:
+        return _data_load["loaded_at"]
+
+    try:
+        with engine.begin() as conn:
+            loaded_at = conn.execute(
+                text("SELECT EXTRACT(EPOCH FROM loaded_at) FROM data_loads WHERE id = 1")
+            ).scalar()
+    except ProgrammingError:
+        loaded_at = None
+
+    _data_load.update(
+        checked_at=time.time(),
+        loaded_at=float(loaded_at) if loaded_at is not None else 0.0,
+    )
+    return _data_load["loaded_at"]
+
+# Charts only change when the pipeline reloads the tables, so reuse a file written since
+# the last load. The TTL is a backstop for loads that happen outside the pipeline.
 def is_fresh(path: Path) -> bool:
-    return path.exists() and (time.time() - path.stat().st_mtime) < CHART_TTL_SECONDS
+    if not path.exists():
+        return False
+    modified = path.stat().st_mtime
+    return (
+        time.time() - modified < CHART_TTL_SECONDS
+        and modified >= get_data_loaded_at()
+    )
 
 # Columns that describe a row rather than hold a plottable value
 DIMENSION_COLUMNS = {
@@ -57,7 +89,11 @@ _catalog = {}
 # The values that actually exist in the database, so unknown ones are rejected
 # before they reach a query or create a cache entry
 def get_catalog() -> dict:
-    if _catalog and time.time() - _catalog["loaded_at"] < CATALOG_TTL_SECONDS:
+    if (
+        _catalog
+        and time.time() - _catalog["loaded_at"] < CATALOG_TTL_SECONDS
+        and _catalog["loaded_at"] >= get_data_loaded_at()
+    ):
         return _catalog
 
     commodities, countries, datatypes = set(), set(), set()
@@ -223,7 +259,7 @@ def get_chart(commodity: str, source: str, country: str, datatype: str, year: st
     if not file_path.exists():
         return {"error": f"Chart not found: {filename}"}
 
-    return FileResponse(file_path)
+    return FileResponse(file_path, headers={"Cache-Control": "no-cache"})
 
 # Fetches JSON file to build Plotly chart for specific home page
 @app.get("/api/home/{commodity}/{source}/{country}/{datatype}/{year}")
@@ -260,7 +296,7 @@ def get_home_chart(commodity: str, source: str, country: str, datatype: str, yea
     if not file_path.exists():
         return {"error": f"Chart not found: {filename}"}
 
-    return FileResponse(file_path)
+    return FileResponse(file_path, headers={"Cache-Control": "no-cache"})
 
 # Fetches commentary for home page
 @app.get("/commentary")
