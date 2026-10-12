@@ -4,7 +4,7 @@
     "countryCode": "NI",
     "marketYear": "2026",
     "calendarYear": "2026",
-    "month": "09",
+    "month": "10",
     "attributeId": 4,
     "unitId": 4,
     "value": 1400.0
@@ -14,7 +14,7 @@
     "countryCode": "NI",
     "marketYear": "2026",
     "calendarYear": "2026",
-    "month": "09",
+    "month": "10",
     "attributeId": 20,
     "unitId": 8,
     "value": 147.0
@@ -24,7 +24,7 @@
     "countryCode": "NI",
     "marketYear": "2026",
     "calendarYear": "2026",
-    "month": "09",
+    "month": "10",
     "attributeId": 28,
     "unitId": 8,
     "value": 1500.0
@@ -34,7 +34,7 @@
     "countryCode": "NI",
     "marketYear": "2026",
     "calendarYear": "2026",
-    "month": "09",
+    "month": "10",
     "attributeId": 57,
     "unitId": 8,
     "value": 1.0
@@ -44,7 +44,7 @@
     "countryCode": "NI",
     "marketYear": "2026",
     "calendarYear": "2026",
-    "month": "09",
+    "month": "10",
     "attributeId": 86,
     "unitId": 8,
     "value": 1648.0
@@ -54,17 +54,17 @@
     "countryCode": "NI",
     "marketYear": "2026",
     "calendarYear": "2026",
-    "month": "09",
+    "month": "10",
     "attributeId": 88,
     "unitId": 8,
-    "value": 50.0
+    "value": 200.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "NI",
     "marketYear": "2026",
     "calendarYear": "2026",
-    "month": "09",
+    "month": "10",
     "attributeId": 7,
     "unitId": 8,
     "value": 975.0
@@ -74,37 +74,37 @@
     "countryCode": "NI",
     "marketYear": "2026",
     "calendarYear": "2026",
-    "month": "09",
+    "month": "10",
     "attributeId": 149,
     "unitId": 8,
-    "value": 225.0
+    "value": 175.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "NI",
     "marketYear": "2026",
     "calendarYear": "2026",
-    "month": "09",
+    "month": "10",
     "attributeId": 161,
     "unitId": 8,
-    "value": 250.0
+    "value": 150.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "NI",
     "marketYear": "2026",
     "calendarYear": "2026",
-    "month": "09",
+    "month": "10",
     "attributeId": 125,
     "unitId": 8,
-    "value": 1450.0
+    "value": 1300.0
   },
   {
     "commodityCode": "2222000",
     "countryCode": "NI",
     "marketYear": "2026",
     "calendarYear": "2026",
-    "month": "09",
+    "month": "10",
     "attributeId": 176,
     "unitId": 8,
     "value": 148.0
@@ -114,7 +114,7 @@
     "countryCode": "NI",
     "marketYear": "2026",
     "calendarYear": "2026",
-    "month": "09",
+    "month": "10",
     "attributeId": 178,
     "unitId": 8,
     "value": 1648.0
@@ -124,7 +124,7 @@
     "countryCode": "NI",
     "marketYear": "2026",
     "calendarYear": "2026",
-    "month": "09",
+    "month": "10",
     "attributeId": 184,
     "unitId": 26,
     "value": 1.0714

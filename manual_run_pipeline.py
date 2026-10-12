@@ -25,7 +25,7 @@ if __name__ == "__main__":
     print("--------------------")
 
     if restart:
-        fetch_esr_data(usda_api_key=USDA_API_KEY, years_back=RESTORE_YEARS_BACK)
+        fetch_esr_data(usda_api_key=USDA_API_KEY, years_back=RESTORE_YEARS_BACK, force=True)
         fetch_psd_data(usda_api_key=USDA_API_KEY, years_back=RESTORE_YEARS_BACK)
     else:
         fetch_esr_data(usda_api_key=USDA_API_KEY)

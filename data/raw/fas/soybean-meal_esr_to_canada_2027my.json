@@ -1,0 +1,16 @@
+[
+  {
+    "commodityCode": 901,
+    "countryCode": 1220,
+    "weeklyExports": 1795,
+    "accumulatedExports": 1795,
+    "outstandingSales": 418422,
+    "grossNewSales": 120174,
+    "currentMYNetSales": 120174,
+    "currentMYTotalCommitment": 420217,
+    "nextMYOutstandingSales": 0,
+    "nextMYNetSales": 0,
+    "unitId": 1,
+    "weekEndingDate": "2026-10-01T00:00:00"
+  }
+]

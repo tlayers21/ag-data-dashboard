@@ -716,15 +716,29 @@
   {
     "commodityCode": 901,
     "countryCode": 2150,
-    "weeklyExports": 0,
-    "accumulatedExports": 438768,
-    "outstandingSales": 40747,
-    "grossNewSales": 0,
-    "currentMYNetSales": 0,
-    "currentMYTotalCommitment": 479515,
+    "weeklyExports": 11093,
+    "accumulatedExports": 449861,
+    "outstandingSales": 49002,
+    "grossNewSales": 11093,
+    "currentMYNetSales": 11093,
+    "currentMYTotalCommitment": 498863,
     "nextMYOutstandingSales": 99094,
     "nextMYNetSales": 5386,
     "unitId": 1,
     "weekEndingDate": "2026-09-24T00:00:00"
+  },
+  {
+    "commodityCode": 901,
+    "countryCode": 2150,
+    "weeklyExports": 879,
+    "accumulatedExports": 450740,
+    "outstandingSales": 48123,
+    "grossNewSales": 0,
+    "currentMYNetSales": 0,
+    "currentMYTotalCommitment": 498863,
+    "nextMYOutstandingSales": 138813,
+    "nextMYNetSales": 43668,
+    "unitId": 1,
+    "weekEndingDate": "2026-10-01T00:00:00"
   }
 ]

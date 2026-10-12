@@ -54,5 +54,19 @@
     "nextMYNetSales": 0,
     "unitId": 1,
     "weekEndingDate": "2026-09-24T00:00:00"
+  },
+  {
+    "commodityCode": 401,
+    "countryCode": 5830,
+    "weeklyExports": 13836,
+    "accumulatedExports": 52674,
+    "outstandingSales": 240673,
+    "grossNewSales": 3567,
+    "currentMYNetSales": 3430,
+    "currentMYTotalCommitment": 293347,
+    "nextMYOutstandingSales": 0,
+    "nextMYNetSales": 0,
+    "unitId": 1,
+    "weekEndingDate": "2026-10-01T00:00:00"
   }
 ]

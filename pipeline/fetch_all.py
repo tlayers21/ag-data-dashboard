@@ -44,8 +44,14 @@ def _esr_year_settled(commodity: str, dash_commodity_name: str, marketing_year: 
 
     return date.fromtimestamp(all_countries_file.stat().st_mtime) >= settled_on
 
-# Fetches both esr all and country data for each commodity
-def fetch_esr_data(usda_api_key: str, marketing_year: int | None = None, years_back: int = 2) -> None:
+# Fetches both esr all and country data for each commodity. force refetches settled years
+# too, for when the files on disk are suspect (a collection bug, a changed schema)
+def fetch_esr_data(
+        usda_api_key: str,
+        marketing_year: int | None = None,
+        years_back: int = 2,
+        force: bool = False
+) -> None:
     usda_data = USDAClient(usda_api_key)
     FAS_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -67,7 +73,7 @@ def fetch_esr_data(usda_api_key: str, marketing_year: int | None = None, years_b
                 unreported_years = set()
 
             for esr_year in esr_years:
-                if _esr_year_settled(name, dash_commodity_name, esr_year):
+                if not force and _esr_year_settled(name, dash_commodity_name, esr_year):
                     print(f"{name.title()} {esr_year} Marketing Year Already Settled - Skipping")
                     continue
 
