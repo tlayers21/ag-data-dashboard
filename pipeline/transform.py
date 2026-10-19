@@ -33,6 +33,14 @@ ESR_RENAME_MAP = {
     "weekEndingDate": "week_ending_date"
 }
 
+ESR_VALUE_COLUMNS = [
+    "weekly_exports", "accumulated_exports", "outstanding_sales",
+    "gross_new_sales", "current_marketing_year_net_sales",
+    "current_marketing_year_total_commitment",
+    "next_marketing_year_outstanding_sales",
+    "next_marketing_year_net_sales"
+]
+
 ESR_UNIT_MAP = {
     1: "Metric Tons"
 }
@@ -105,15 +113,7 @@ def clean_esr_all_file(path: Path, marketing_year: int | None = None) -> pd.Data
     commodity_name = ESR_COMMODITY_LOOKUP.get(commodity_code)
     start_month = MARKETING_YEAR_START[commodity_name]
 
-    data_columns = [
-        "weekly_exports", "accumulated_exports", "outstanding_sales",
-        "gross_new_sales", "current_marketing_year_net_sales",
-        "current_marketing_year_total_commitment",
-        "next_marketing_year_outstanding_sales",
-        "next_marketing_year_net_sales"
-    ]
-
-    aggregated_data = df.groupby("week_ending_date")[data_columns].sum().reset_index()
+    aggregated_data = df.groupby("week_ending_date")[ESR_VALUE_COLUMNS].sum().reset_index()
     aggregated_data["unit"] = df["unit_id"].map(ESR_UNIT_MAP)
     aggregated_data["commodity"] = commodity_name
     aggregated_data["country"] = "world"

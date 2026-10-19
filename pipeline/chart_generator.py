@@ -79,6 +79,7 @@ def generate_weekly_esr_or_inspections_chart(
 
     commodity_display = commodity.replace("-", " ").title()
     commodity_display = commodity_display.replace("Srw", "SRW").replace("Hrw", "HRW")
+    value_display = value_column.removeprefix("weekly_").replace("_", " ").title()
 
     figure = px.line(
         df,
@@ -88,7 +89,7 @@ def generate_weekly_esr_or_inspections_chart(
         markers=True,
         custom_data=["week_ending_date", value_column],
         title=(
-            f"Weekly U.S. {commodity_display} {value_column.replace('_', ' ').title()}<br>"
+            f"Weekly U.S. {commodity_display} {value_display}<br>"
             f"to {country.replace("-", " ").title()} (as of {latest_date})"
         ),
         labels={

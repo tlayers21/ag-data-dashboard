@@ -1,8 +1,10 @@
+import json
 import pandas as pd
 from pathlib import Path
-from .utils import BASE_DIR, clean_data_path
-from .config import COMMODITIES
+from .utils import BASE_DIR, clean_data_path, marketing_year_from_filename
+from .config import COMMODITIES, ESR_COUNTRY_NAMES
 from .transform import (
+    ESR_VALUE_COLUMNS,
     clean_esr_all_file,
     clean_esr_country_file,
     clean_psd_world_file,
@@ -43,6 +45,44 @@ def drop_duplicate_rows(df: pd.DataFrame, data_type: str) -> pd.DataFrame:
 
     return df
 
+def fill_missing_country_weeks(
+        world_file: Path,
+        world_df: pd.DataFrame,
+        cleaned_countries: dict[tuple[str, str, int], pd.DataFrame]
+) -> list[pd.DataFrame]:
+    commodity_slug = world_file.name.split("_esr_")[0]
+    marketing_year = marketing_year_from_filename(world_file)
+
+    with open(world_file, "r") as file:
+        reported_codes = {str(row["countryCode"]) for row in json.load(file)}
+
+    zero_dfs = []
+    for country_code in COMMODITIES[commodity_slug.replace("-", " ")]["esr"]["countries"]:
+        dash_country_name = ESR_COUNTRY_NAMES.get(country_code, country_code).replace(" ", "-")
+        country_df = cleaned_countries.get((commodity_slug, dash_country_name, marketing_year))
+
+        if country_df is None:
+            if country_code in reported_codes:
+                continue
+            missing = world_df
+        else:
+            active = country_df[(country_df[ESR_VALUE_COLUMNS] != 0).any(axis=1)]
+            first_active = active["week_ending_date"].min() if not active.empty else pd.Timestamp.max
+            missing = world_df[
+                ~world_df["week_ending_date"].isin(country_df["week_ending_date"])
+                & (world_df["week_ending_date"] < first_active)
+            ]
+
+        if missing.empty:
+            continue
+
+        zero_df = missing.copy()
+        zero_df["country"] = dash_country_name
+        zero_df[ESR_VALUE_COLUMNS] = 0
+        zero_dfs.append(zero_df)
+
+    return zero_dfs
+
 # Cleans all ESR files and combines the result into 1 CSV file
 def clean_all_esr() -> None:
     CLEAN_DIR.mkdir(parents=True, exist_ok=True)
@@ -69,14 +109,18 @@ def clean_all_esr() -> None:
     if len(world_dfs) > 0:
         combined_world_df = pd.concat(world_dfs, ignore_index=True)
     
-    # ESR country files
-    country_dfs = []
+    cleaned_countries = {}
     for file in country_files:
         parts = file.stem.split('_')
         to_index = parts.index("to")
         country = parts[to_index + 1]
         cleaned_df = clean_esr_country_file(file, country)
-        country_dfs.append(cleaned_df)
+        cleaned_countries[(parts[0], country, marketing_year_from_filename(file))] = cleaned_df
+
+    country_dfs = []
+    for world_file, world_df in zip(world_files, world_dfs):
+        country_dfs.extend(fill_missing_country_weeks(world_file, world_df, cleaned_countries))
+    country_dfs.extend(cleaned_countries.values())
     
     if len(country_dfs) > 0:
         combined_country_df = pd.concat(country_dfs, ignore_index=True)
