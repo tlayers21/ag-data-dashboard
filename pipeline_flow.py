@@ -10,8 +10,6 @@ USDA_API_KEY = os.getenv("USDA_API_KEY")
 
 # TODO: Figure out how to run pipeline without having to upload all data files onto GitHub
 
-# No task retries here - the USDA client already retries each request, and rerunning this
-# whole task re-sends ~566 requests against a 1000/hour key quota
 @task
 def fetch_data():
     print("--------------------")

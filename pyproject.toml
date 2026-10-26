@@ -6,7 +6,6 @@ readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.12"
 dependencies = [
-    # everything api/main.py reaches, directly or via pipeline.*
     "fastapi",
     "uvicorn[standard]",
     "pydantic",
