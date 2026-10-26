@@ -300,8 +300,24 @@ def clean_inspections_file(path: Path) -> pd.DataFrame:
             "unit": "Metric Tons"
         })
     
-    df = pd.DataFrame(rows)
+    return finish_inspections_rows(pd.DataFrame(rows))
 
+# Cleans the weekly FGIS totals that fill weeks missing from the WA_GR101 reports
+def clean_fgis_weekly_file(path: Path) -> pd.DataFrame:
+    df = pd.read_csv(path, dtype={"Thursday": str})
+
+    df = pd.DataFrame({
+        "commodity": df["Grain"].str.lower(),
+        "country": "world",
+        "week_ending_date": pd.to_datetime(df["Thursday"], format="%Y%m%d"),
+        "export_inspections": df["Metric Ton"].astype(int),
+        "unit": "Metric Tons"
+    })
+
+    return finish_inspections_rows(df)
+
+# Adds the calendar and marketing year columns to inspections rows
+def finish_inspections_rows(df: pd.DataFrame) -> pd.DataFrame:
     # Determine calendar year, month, and week
     df["calendar_year"] = df["week_ending_date"].dt.year
     df["calendar_month"] = df["week_ending_date"].dt.month

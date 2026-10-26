@@ -1,9 +1,11 @@
+import io
 import json
+import pandas as pd
 import requests
 from .config import COMMODITIES, ESR_COUNTRY_NAMES, PSD_COUNTRY_NAMES
 from .usda_client import USDAClient, USDAFetchError, USDARateLimitError, REQUEST_TIMEOUT
 from pathlib import Path
-from .utils import fas_data_path, inspections_data_path
+from .utils import fas_data_path, fgis_data_path, inspections_data_path
 from .marketing_year import (
     current_marketing_year,
     marketing_year_end_date,
@@ -14,6 +16,12 @@ from datetime import date, datetime, timedelta
 
 FAS_DIR = Path(__file__).parent.parent / "data" / "raw" / "fas"
 INSPECTIONS_DIR = Path(__file__).parent.parent / "data" / "raw" / "inspections"
+FGIS_DIR = Path(__file__).parent.parent / "data" / "raw" / "fgis"
+
+# FGIS names for the grains the dashboard tracks
+FGIS_GRAINS = ["CORN", "WHEAT", "SOYBEANS"]
+FGIS_TIMEOUT = (10, 120)
+FGIS_ATTEMPTS = 3
 
 ESR_NEW_YEAR_GRACE_DAYS = 21
 ESR_SETTLED_GRACE_DAYS = 30
@@ -290,3 +298,48 @@ def fetch_inspections() -> None:
         filepath.write_bytes(response.content)
     else:
         print("WARNING: Failed To Download Weekly Export Inspections File")
+
+def _download_fgis_year(year: int) -> pd.DataFrame:
+    url = f"https://fgisonline.ams.usda.gov/ExportGrainReport/CY{year}.csv"
+
+    for attempt in range(1, FGIS_ATTEMPTS + 1):
+        print(f"Downloading FGIS Inspections For {year}...")
+        try:
+            response = requests.get(url, timeout=FGIS_TIMEOUT)
+            response.raise_for_status()
+            return pd.read_csv(
+                io.BytesIO(response.content),
+                encoding="latin-1",
+                usecols=["Thursday", "Grain", "Metric Ton"],
+                dtype={"Thursday": str}
+            )
+        except (requests.RequestException, ValueError) as e:
+            if attempt == FGIS_ATTEMPTS:
+                raise
+            print(f"WARNING: FGIS Download For {year} Failed ({e}), Retrying...")
+
+def fetch_inspections_backfill(years_back: int) -> None:
+    FGIS_DIR.mkdir(parents=True, exist_ok=True)
+
+    print("Fetching FGIS Export Inspections Totals...")
+
+    first_day = min(
+        marketing_year_start_date(current_marketing_year(name) - (years_back - 1), name)
+        for name in COMMODITIES
+    )
+
+    yearly_dfs = []
+    for year in range(first_day.year, date.today().year + 1):
+        yearly_dfs.append(_download_fgis_year(year))
+
+    df = pd.concat(yearly_dfs, ignore_index=True)
+    df = df[df["Grain"].isin(FGIS_GRAINS)]
+    df["Metric Ton"] = pd.to_numeric(df["Metric Ton"], errors="coerce")
+
+    # A week that starts before first_day is missing certificates from a year not downloaded
+    week_ending = pd.to_datetime(df["Thursday"], format="%Y%m%d")
+    df = df[week_ending - timedelta(days=6) >= pd.Timestamp(first_day)]
+
+    weekly_df = df.groupby(["Thursday", "Grain"], as_index=False)["Metric Ton"].sum()
+    weekly_df["Metric Ton"] = weekly_df["Metric Ton"].round().astype(int)
+    weekly_df.to_csv(fgis_data_path("fgis_weekly_inspections.csv"), index=False)

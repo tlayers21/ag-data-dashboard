@@ -1,7 +1,7 @@
 import json
 import pandas as pd
 from pathlib import Path
-from .utils import BASE_DIR, clean_data_path, marketing_year_from_filename
+from .utils import BASE_DIR, clean_data_path, fgis_data_path, marketing_year_from_filename
 from .config import COMMODITIES, ESR_COUNTRY_NAMES
 from .transform import (
     ESR_VALUE_COLUMNS,
@@ -9,7 +9,8 @@ from .transform import (
     clean_esr_country_file,
     clean_psd_world_file,
     clean_psd_country_file,
-    clean_inspections_file
+    clean_inspections_file,
+    clean_fgis_weekly_file
 )
 
 CLEAN_DIR = Path(__file__).parent.parent / "data" / "clean"
@@ -184,6 +185,29 @@ def clean_all_psd() -> None:
     
     print("Done.\n==========")
 
+# Adds FGIS totals for weeks no WA_GR101 report covered. Weeks a report did cover keep the
+# report's number, and weeks after the newest report are left for the live report to fill
+def backfill_inspections(reports_df: pd.DataFrame) -> pd.DataFrame:
+    fgis_file = fgis_data_path("fgis_weekly_inspections.csv")
+    if not fgis_file.exists():
+        return reports_df
+
+    fgis_df = clean_fgis_weekly_file(fgis_file)
+    keys = DEDUPE_KEYS["inspections"]
+
+    reported = reports_df.set_index(keys).index
+    missing = (
+        ~fgis_df.set_index(keys).index.isin(reported)
+        & (fgis_df["week_ending_date"] < reports_df["week_ending_date"].max())
+    )
+    backfill_df = fgis_df[missing]
+
+    if backfill_df.empty:
+        return reports_df
+
+    print(f"Backfilled {len(backfill_df)} Inspections Rows From FGIS")
+    return pd.concat([reports_df, backfill_df], ignore_index=True)
+
 # Cleans all export inspections files and combines the result into 1 CSV file
 def clean_all_inspections() -> None:
     CLEAN_DIR.mkdir(parents=True, exist_ok=True)
@@ -205,6 +229,7 @@ def clean_all_inspections() -> None:
     
     combined_inspections_df = pd.concat(inspections_dfs, ignore_index=True)
     combined_inspections_df = drop_duplicate_rows(combined_inspections_df, "inspections")
+    combined_inspections_df = backfill_inspections(combined_inspections_df)
     output_path = clean_data_path("inspections_clean.csv")
     combined_inspections_df = combined_inspections_df.sort_values(by="week_ending_date", ascending=False)
     combined_inspections_df.to_csv(output_path, index=False)

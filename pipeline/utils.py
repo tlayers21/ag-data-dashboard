@@ -12,6 +12,10 @@ def fas_data_path(filename: str) -> Path:
 def inspections_data_path(filename: str) -> Path:
     return BASE_DIR / "data" / "raw" / "inspections" / filename
 
+# For weekly FGIS inspections totals
+def fgis_data_path(filename: str) -> Path:
+    return BASE_DIR / "data" / "raw" / "fgis" / filename
+
 # For cleaned CSVs
 def clean_data_path(filename: str) -> Path:
     return BASE_DIR / "data" / "clean" / filename
