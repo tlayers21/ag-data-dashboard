@@ -2,6 +2,10 @@
    GLOBAL
 ------------------------------ */
 
+html {
+  zoom: 0.9;
+}
+
 html, body {
   min-width: 1200px;
   overflow-x: auto;
@@ -121,10 +125,6 @@ header {
   padding: 0 20px;
 }
 
-html {
-  zoom: 0.9;
-}
-
 
 /* ------------------------------
    CHART CARDS
@@ -151,13 +151,7 @@ html {
   min-width: 750px;
 }
 
-.corn-chart .js-plotly-plot,
-.wheat-chart .js-plotly-plot,
-.hrw-wheat-chart .js-plotly-plot,
-.srw-wheat-chart .js-plotly-plot,
-.soybeans-chart .js-plotly-plot,
-.soybean-oil-chart .js-plotly-plot,
-.soybean-meal-chart .js-plotly-plot {
+.commodity-chart .js-plotly-plot {
   height: 700px !important;
 }
 
@@ -170,6 +164,32 @@ html {
   max-width: 1350px;
   margin: 1.5rem auto 0 auto;
   padding: 1rem 1.5rem;
+}
+
+.chart-area {
+  height: 700px;
+  width: 100%;
+  max-width: 95%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.chart-area-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.chart-message {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  color: #777;
 }
 
 
@@ -200,30 +220,6 @@ html {
   0% { opacity: 0.4; }
   50% { opacity: 1; }
   100% { opacity: 0.4; }
-}
-
-
-/* ------------------------------
-   SUBNAV
------------------------------- */
-
-.subnav {
-  display: flex;
-  gap: 1rem;
-  margin: 1rem 0 2rem 0;
-}
-
-.subnav a {
-  padding: 0.5rem 1rem;
-  background: #f2f2f2;
-  border-radius: 6px;
-  text-decoration: none;
-  color: #333;
-  font-size: 0.95rem;
-}
-
-.subnav a:hover {
-  background: #e0e0e0;
 }
 
 
@@ -314,14 +310,9 @@ html {
   background-color: #e8eef3;
 }
 
-.filter-dropdown .dropdown-item,
-.filter-dropdown .dropdown-item a {
+.filter-dropdown .dropdown-item {
   color: #000;
   font-size: 0.85rem;
-}
-
-.filter-dropdown .dropdown-item:hover {
-  background-color: #f0f4f7;
 }
 
 
@@ -373,7 +364,7 @@ html {
   width: 0%;
   background: linear-gradient(90deg, #4a90e2, #6ab0ff);
   border-radius: 6px;
-  animation: fillProgress var(--loading-duration, 15s) cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation: fillProgress 18s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 @keyframes fillProgress {

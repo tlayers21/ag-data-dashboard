@@ -51,10 +51,7 @@ export async function loadCommentary() {
       const ordered = orderSentences(items);
       if (ordered.length === 0) return "";
 
-      const first = ordered[0] || "";
-      const rest = ordered.slice(1).map(s => s.replace(dateRegex, "").trim());
-
-      const body = [first.replace(dateRegex, "").trim(), ...rest].join(" ");
+      const body = ordered.join(" ");
 
       return date ? `<strong>${date}:</strong> ${body}` : body;
     };

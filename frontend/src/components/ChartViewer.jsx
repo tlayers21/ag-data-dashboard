@@ -1,223 +1,94 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Plot from "react-plotly.js";
+
+const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+// x-axis title spacing differs between Safari and Chromium
+const STANDOFF = isSafari
+  ? { home: 14, commodity: 16 }
+  : { home: 40, commodity: 70 };
 
 export default function ChartViewer({ jsonPath, variant = "home" }) {
   const [figure, setFigure] = useState(null);
   const [error, setError] = useState(false);
 
-  // Detect Safari
-  const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-
   useEffect(() => {
+    // Ignore responses for a previous selection that arrive after a newer one
+    let stale = false;
     setError(false);
     setFigure(null);
 
     fetch(jsonPath)
-      .then(async (res) => {
+      .then((res) => {
         if (!res.ok) throw new Error("Bad response");
-
-        const raw = await res.text();
-        try {
-          return JSON.parse(raw);
-        } catch {
-          throw new Error("Invalid JSON");
-        }
+        return res.json();
       })
       .then((data) => {
+        if (stale) return;
         if (!data || data.error) {
           setError(true);
-          return;
+        } else if (data.data) {
+          setFigure({ data: data.data, layout: data.layout || {}, config: data.config || {} });
+        } else {
+          // A bare trace or list of traces
+          setFigure({ data: [data].flat(), layout: {}, config: {} });
         }
-
-        if (data.data && data.layout) {
-          setFigure({
-            data: data.data,
-            layout: data.layout,
-            config: data.config || {}
-          });
-          return;
-        }
-
-        if (Array.isArray(data)) {
-          setFigure({
-            data: data,
-            layout: {},
-            config: {}
-          });
-          return;
-        }
-
-        if (typeof data === "object" && !data.data && !data.layout) {
-          setFigure({
-            data: [data],
-            layout: {},
-            config: {}
-          });
-          return;
-        }
-
-        setFigure(data);
       })
-      .catch(() => setError(true));
-  }, [jsonPath, variant]);
+      .catch(() => !stale && setError(true));
 
-  const isCommodityPage =
-    variant !== "home" &&
-    ["corn", "wheat", "srw-wheat", "hrw-wheat", "soybeans", "soybean-oil", "soybean-meal"]
-      .includes(variant);
+    return () => {
+      stale = true;
+    };
+  }, [jsonPath]);
 
-  if (error && isCommodityPage) {
+  const isHome = variant === "home";
+
+  if (error) {
     return (
-      <div
-        style={{
-          height: "100%",
-          width: "100%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          fontSize: "1.1rem",
-          color: "#666",
-          textAlign: "center",
-          padding: "1rem"
-        }}
-      >
-        Data for this selection is not available.
-      </div>
-    );
-  }
-
-  if (error && !isCommodityPage) {
-    return (
-      <div
-        style={{
-          height: "100%",
-          width: "100%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          fontSize: "1rem",
-          color: "#999"
-        }}
-      >
-        Chart unavailable.
+      <div className="chart-message">
+        {isHome ? "Chart unavailable." : "Data for this selection is not available."}
       </div>
     );
   }
 
   if (!figure) {
-    return (
-      <div
-        style={{
-          height: "100%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          color: "#777"
-        }}
-      >
-        Loading chart…
-      </div>
-    );
+    return <div className="chart-message">Loading chart…</div>;
   }
 
-  let layout = { ...figure.layout };
+  const { layout } = figure;
+  const xaxis = {
+    ...layout.xaxis,
+    tickangle: -45,
+    automargin: true,
+    title: { ...layout.xaxis?.title, standoff: isHome ? STANDOFF.home : STANDOFF.commodity }
+  };
 
-  // Independent standoff values
-  const SAFARI_HOME_STANDOFF = 14;
-  const SAFARI_COMMODITY_STANDOFF = 16;
-
-  const CHROMIUM_HOME_STANDOFF = 40;
-  const CHROMIUM_COMMODITY_STANDOFF = 70;
-
-  const standoff = isSafari
-    ? (variant === "home" ? SAFARI_HOME_STANDOFF : SAFARI_COMMODITY_STANDOFF)
-    : (variant === "home" ? CHROMIUM_HOME_STANDOFF : CHROMIUM_COMMODITY_STANDOFF);
-
-  // HOME CHARTS
-  if (variant === "home") {
-    layout = {
-      ...layout,
-      title: {
-        ...(layout.title || {}),
-        font: {
-          ...(layout.title?.font || {}),
-          size: 14
-        }
-      },
-      legend: {
-        ...(layout.legend || {}),
-        orientation: "h",
-        y: -0.34,
-        yanchor: "top",
-        x: 0.5,
-        xanchor: "center"
-      },
-      margin: {
-        ...(layout.margin || {}),
-        b: 140,
-        t: 60,
-        l: 60,
-        r: 40
-      },
-      xaxis: {
-        ...(layout.xaxis || {}),
-        tickangle: -45,
-        automargin: true,
-        title: {
-          ...(layout.xaxis?.title || {}),
-          standoff
-        }
+  const adjustedLayout = isHome
+    ? {
+        ...layout,
+        title: { ...layout.title, font: { ...layout.title?.font, size: 14 } },
+        legend: { ...layout.legend, orientation: "h", y: -0.34, yanchor: "top", x: 0.5, xanchor: "center" },
+        margin: { ...layout.margin, b: 140, t: 60, l: 60, r: 40 },
+        xaxis
       }
-    };
-  }
-
-  // COMMODITY PAGES
-  if (isCommodityPage) {
-    layout = {
-      ...layout,
-      legend: {
-        ...(layout.legend || {}),
-        orientation: "h",
-        y: -0.2,
-        x: 0.5,
-        xanchor: "center"
-      },
-      margin: {
-        ...(layout.margin || {}),
-        b: 120
-      },
-      xaxis: {
-        ...(layout.xaxis || {}),
-        tickangle: -45,
-        automargin: true,
-        title: {
-          ...(layout.xaxis?.title || {}),
-          standoff
-        }
-      }
-    };
-  }
-
-  const chartHeight = isCommodityPage ? "520px" : "480px";
+    : {
+        ...layout,
+        legend: { ...layout.legend, orientation: "h", y: -0.2, x: 0.5, xanchor: "center" },
+        margin: { ...layout.margin, b: 120 },
+        xaxis
+      };
 
   return (
     <Plot
-      data={
-        figure.data.map(trace => ({
-          ...trace,
-          // Force SVG rendering by removing WebGL trace types
-          type: trace.type === "scattergl" ? "scatter" : trace.type
-        }))
-      }
-      layout={layout}
-      config={{
-        ...figure.config,
-        renderMode: "svg",
-        displayModeBar: false,
-        responsive: true
-      }}
-      style={{ width: "100%", height: chartHeight }}
-      useResizeHandler={true}
+      // Force SVG rendering by swapping WebGL traces for regular ones
+      data={figure.data.map((trace) => ({
+        ...trace,
+        type: trace.type === "scattergl" ? "scatter" : trace.type
+      }))}
+      layout={adjustedLayout}
+      config={{ ...figure.config, renderMode: "svg", displayModeBar: false, responsive: true }}
+      style={{ width: "100%", height: isHome ? "480px" : "520px" }}
+      useResizeHandler
     />
   );
 }

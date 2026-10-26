@@ -1,87 +1,56 @@
-import { useEffect, useState, useRef } from "react";
-import { useLocation } from "react-router-dom";
+import { Fragment, useEffect, useState } from "react";
 import ChartViewer from "../components/ChartViewer";
 import { loadCommentary } from "../utils/loadCommentary";
 
+const API = process.env.REACT_APP_API_BASE;
+
+const LOADING_MESSAGES = [
+  "Warming up the data engine…",
+  "Retrieving export sales report metrics…",
+  "Loading production, supply and distribution numbers…",
+  "Parsing the latest inspections data…",
+  "Processing and transforming raw datasets…",
+  "Generating charts and commentary…",
+  "Almost ready. Charts may take 1-2 minutes to fully load…"
+];
+
+const SECTIONS = [
+  { slug: "corn", title: "Recent Corn Charts", commentaryTitle: "Corn Commentary:" },
+  { slug: "wheat", title: "Recent Wheat Charts", commentaryTitle: "Wheat Commentary:" },
+  { slug: "soybeans", title: "Recent Soybean Charts", commentaryTitle: "Soybean Commentary:" }
+];
+
+const CHARTS = [
+  { title: "Export Inspections", path: "inspections/world/export_inspections/my" },
+  { title: "Total Commitment", path: "esr/world/current_marketing_year_total_commitment/my" },
+  { title: "Gross New Sales", path: "esr/world/gross_new_sales/my" },
+  { title: "Next Marketing Year Outstanding Sales", path: "esr/world/next_marketing_year_outstanding_sales/my" }
+];
+
 export default function Home() {
-  const firstLoadRef = useRef(sessionStorage.getItem("homeLoaded") !== "true");
-
-  const location = useLocation();
-
-  const [loading, setLoading] = useState(true);
-  const [loadingMessage, setLoadingMessage] = useState("Warming up the data engine…");
-
-  const [cornCommentary, setCornCommentary] = useState(null);
-  const [wheatCommentary, setWheatCommentary] = useState(null);
-  const [soyCommentary, setSoyCommentary] = useState(null);
-
-  const API = process.env.REACT_APP_API_BASE;
-
-  const messages = [
-    "Warming up the data engine…",
-    "Retrieving export sales report metrics…",
-    "Loading production, supply and distribution numbers…",
-    "Parsing the latest inspections data…",
-    "Processing and transforming raw datasets…",
-    "Generating charts and commentary…",
-    "Almost ready. Charts may take 1-2 minutes to fully load…"
-  ];
+  // Only show the loading screen on the first visit of the session
+  const [loading, setLoading] = useState(() => sessionStorage.getItem("homeLoaded") !== "true");
+  const [messageIndex, setMessageIndex] = useState(0);
+  const [commentary, setCommentary] = useState(null);
 
   useEffect(() => {
-    let messageIndex = 0;
-
-    const interval = setInterval(() => {
-      messageIndex++;
-
-      if (messageIndex >= messages.length - 1) {
-        setLoadingMessage(messages[messages.length - 1]);
-        clearInterval(interval);
-        return;
-      }
-
-      setLoadingMessage(messages[messageIndex]);
-    }, 2000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  // First-load-only loading animation
-  useEffect(() => {
-    if (!firstLoadRef.current) {
-      setLoading(false);
-      return;
-    }
-
-    firstLoadRef.current = false;
+    if (!loading) return;
     sessionStorage.setItem("homeLoaded", "true");
 
-    document.documentElement.style.setProperty("--loading-duration", "18s");
+    const interval = setInterval(() => {
+      setMessageIndex((i) => Math.min(i + 1, LOADING_MESSAGES.length - 1));
+    }, 2000);
+    const timeout = setTimeout(() => setLoading(false), 10900);
 
-    setTimeout(() => {
-      setLoading(false);
-    }, 10900);
-  }, []);
+    return () => {
+      clearInterval(interval);
+      clearTimeout(timeout);
+    };
+  }, [loading]);
 
   useEffect(() => {
-    async function fetchCommentary() {
-      setCornCommentary(null);
-      setWheatCommentary(null);
-      setSoyCommentary(null);
-
-      try {
-        const { corn, wheat, soybeans } = await loadCommentary();
-        setCornCommentary(corn);
-        setWheatCommentary(wheat);
-        setSoyCommentary(soybeans);
-      } catch (err) {
-        console.error("Commentary failed:", err);
-      }
-    }
-
-    if (location.pathname === "/") {
-      fetchCommentary();
-    }
-  }, [location.pathname]);
+    loadCommentary().then(setCommentary);
+  }, []);
 
   if (loading) {
     return (
@@ -92,140 +61,35 @@ export default function Home() {
           <div className="progress-bar"></div>
         </div>
 
-        <p className="loading-message">{loadingMessage}</p>
+        <p className="loading-message">{LOADING_MESSAGES[messageIndex]}</p>
       </div>
     );
   }
 
   return (
     <div className="main-content">
+      {SECTIONS.map((section, i) => (
+        <Fragment key={section.slug}>
+          <h2 style={i > 0 ? { marginTop: "3rem" } : undefined}>{section.title}</h2>
+          <div className="card-grid-2">
+            {CHARTS.map((chart) => (
+              <div className="card" key={chart.path}>
+                <h3>{chart.title}</h3>
+                <ChartViewer jsonPath={`${API}/home/${section.slug}/${chart.path}`} variant="home" />
+              </div>
+            ))}
+          </div>
 
-      {/* CORN */}
-      <h2>Recent Corn Charts</h2>
-      <div className="card-grid-2">
-        <div className="card">
-          <h3>Export Inspections</h3>
-          <ChartViewer
-            jsonPath={`${API}/home/corn/inspections/world/export_inspections/my`}
-            variant="home"
-          />
-        </div>
-        <div className="card">
-          <h3>Total Commitment</h3>
-          <ChartViewer
-            jsonPath={`${API}/home/corn/esr/world/current_marketing_year_total_commitment/my`}
-            variant="home"
-          />
-        </div>
-        <div className="card">
-          <h3>Gross New Sales</h3>
-          <ChartViewer
-            jsonPath={`${API}/home/corn/esr/world/gross_new_sales/my`}
-            variant="home"
-          />
-        </div>
-        <div className="card">
-          <h3>Next Marketing Year Outstanding Sales</h3>
-          <ChartViewer
-            jsonPath={`${API}/home/corn/esr/world/next_marketing_year_outstanding_sales/my`}
-            variant="home"
-          />
-        </div>
-      </div>
-
-      <div className="commentary-box">
-        <h3>Corn Commentary:</h3>
-        {cornCommentary === null ? (
-          <p className="commentary-loading">Loading commentary…</p>
-        ) : (
-          <div dangerouslySetInnerHTML={{ __html: cornCommentary }} />
-        )}
-      </div>
-
-      {/* WHEAT */}
-      <h2 style={{ marginTop: "3rem" }}>Recent Wheat Charts</h2>
-      <div className="card-grid-2">
-        <div className="card">
-          <h3>Export Inspections</h3>
-          <ChartViewer
-            jsonPath={`${API}/home/wheat/inspections/world/export_inspections/my`}
-            variant="home"
-          />
-        </div>
-        <div className="card">
-          <h3>Total Commitment</h3>
-          <ChartViewer
-            jsonPath={`${API}/home/wheat/esr/world/current_marketing_year_total_commitment/my`}
-            variant="home"
-          />
-        </div>
-        <div className="card">
-          <h3>Gross New Sales</h3>
-          <ChartViewer
-            jsonPath={`${API}/home/wheat/esr/world/gross_new_sales/my`}
-            variant="home"
-          />
-        </div>
-        <div className="card">
-          <h3>Next Marketing Year Outstanding Sales</h3>
-          <ChartViewer
-            jsonPath={`${API}/home/wheat/esr/world/next_marketing_year_outstanding_sales/my`}
-            variant="home"
-          />
-        </div>
-      </div>
-
-      <div className="commentary-box">
-        <h3>Wheat Commentary:</h3>
-        {wheatCommentary === null ? (
-          <p className="commentary-loading">Loading commentary…</p>
-        ) : (
-          <div dangerouslySetInnerHTML={{ __html: wheatCommentary }} />
-        )}
-      </div>
-
-      {/* SOYBEANS */}
-      <h2 style={{ marginTop: "3rem" }}>Recent Soybean Charts</h2>
-      <div className="card-grid-2">
-        <div className="card">
-          <h3>Export Inspections</h3>
-          <ChartViewer
-            jsonPath={`${API}/home/soybeans/inspections/world/export_inspections/my`}
-            variant="home"
-          />
-        </div>
-        <div className="card">
-          <h3>Total Commitment</h3>
-          <ChartViewer
-            jsonPath={`${API}/home/soybeans/esr/world/current_marketing_year_total_commitment/my`}
-            variant="home"
-          />
-        </div>
-        <div className="card">
-          <h3>Gross New Sales</h3>
-          <ChartViewer
-            jsonPath={`${API}/home/soybeans/esr/world/gross_new_sales/my`}
-            variant="home"
-          />
-        </div>
-        <div className="card">
-          <h3>Next Marketing Year Outstanding Sales</h3>
-          <ChartViewer
-            jsonPath={`${API}/home/soybeans/esr/world/next_marketing_year_outstanding_sales/my`}
-            variant="home"
-          />
-        </div>
-      </div>
-
-      <div className="commentary-box">
-        <h3>Soybean Commentary:</h3>
-        {soyCommentary === null ? (
-          <p className="commentary-loading">Loading commentary…</p>
-        ) : (
-          <div dangerouslySetInnerHTML={{ __html: soyCommentary }} />
-        )}
-      </div>
-
+          <div className="commentary-box">
+            <h3>{section.commentaryTitle}</h3>
+            {commentary === null ? (
+              <p className="commentary-loading">Loading commentary…</p>
+            ) : (
+              <div dangerouslySetInnerHTML={{ __html: commentary[section.slug] }} />
+            )}
+          </div>
+        </Fragment>
+      ))}
     </div>
   );
 }
