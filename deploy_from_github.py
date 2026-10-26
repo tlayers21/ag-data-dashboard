@@ -23,5 +23,20 @@ flow.from_source(
 ).deploy(
     name="ag-data-dashboard",
     work_pool_name="agdatadashboard-pool",
-    schedules=schedules
+    schedules=schedules,
+    # The managed pool installs these at runtime instead of reading pyproject.toml,
+    # so the sqlalchemy pin from pyproject.toml has to be repeated here
+    job_variables={
+        "pip_packages": [
+            "fastapi",
+            "uvicorn[standard]",
+            "pydantic",
+            "sqlalchemy>=2.0,<2.1",
+            "psycopg2-binary",
+            "python-dotenv",
+            "requests",
+            "pandas",
+            "plotly",
+        ]
+    },
 )
